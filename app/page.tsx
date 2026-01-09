@@ -32,26 +32,26 @@ const services = [
     title: 'Exterior Painting',
     description: 'Professional exterior house painting with complete prep work and two coats of premium paint.',
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
-    href: '#exterior-painting',
+    href: '/services/exterior-painting',
     featured: true,
   },
   {
     title: 'Interior Painting',
     description: 'Transform your home\'s interior with premium low-VOC paints and meticulous attention to detail.',
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',
-    href: '#interior-painting',
+    href: '/services/interior-painting',
   },
   {
     title: 'Cabinet Refinishing',
     description: 'Upgrade your kitchen with professional cabinet refinishing. Save up to 70% vs replacement.',
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png',
-    href: '#cabinet-refinishing',
+    href: '/services/cabinet-painting',
   },
   {
     title: 'Floor Refinishing',
     description: 'Restore hardwood floors with expert sanding, staining, and sealing services.',
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg',
-    href: '#floor-refinishing',
+    href: '/services/residential-painting',
   },
 ]
 
@@ -410,7 +410,7 @@ export default function HomePage() {
 
             <div className="services-grid">
               {services.map((service, index) => (
-                <a href={service.href} key={index} className="service-card">
+                <Link href={service.href} key={index} className="service-card">
                   {service.featured && <span className="service-card-featured">Featured Service</span>}
                   <div className="service-card-image">
                     <Image
@@ -428,7 +428,7 @@ export default function HomePage() {
                       Learn More <ChevronRight size={16} />
                     </span>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
