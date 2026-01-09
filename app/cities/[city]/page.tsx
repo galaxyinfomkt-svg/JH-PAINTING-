@@ -298,7 +298,7 @@ export default function CityPage({ params }: Props) {
             <div className="top-bar-left">
               <span className="top-bar-item">
                 <MapPin size={12} />
-                Serving All Massachusetts
+                <span className="top-bar-city-name">Serving {city.name}, MA</span>
               </span>
               <a href="mailto:contact@jhpaintingservices.com" className="top-bar-item">
                 <Mail size={12} />

@@ -1,16 +1,114 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 import { notFound } from 'next/navigation'
-import { Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles } from 'lucide-react'
-import { cities, getCityBySlug } from '@/app/data/cities'
+import { Phone, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Sparkles } from 'lucide-react'
+import { getCityBySlug } from '@/app/data/cities'
 
 interface Props {
   params: {
     city: string
     service: string
+  }
+}
+
+// Generate Schema JSON-LD for city+service pages
+function generateCityServiceSchema(cityName: string, serviceName: string, serviceSlug: string, citySlug: string) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `https://jhpaintingservices.com/cities/${citySlug}/${serviceSlug}#service`,
+        "name": `${serviceName} in ${cityName}, MA`,
+        "serviceType": serviceName,
+        "description": `Professional ${serviceName.toLowerCase()} services in ${cityName}, Massachusetts. Expert painters, premium materials, licensed & insured. Free estimates available.`,
+        "provider": {
+          "@type": "LocalBusiness",
+          "@id": "https://jhpaintingservices.com/#localbusiness",
+          "name": "JH Painting Services",
+          "telephone": "+1-508-690-8886",
+          "email": "contact@jhpaintingservices.com",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": cityName,
+            "addressRegion": "MA",
+            "addressCountry": "US"
+          }
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": cityName,
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Massachusetts"
+          }
+        },
+        "url": `https://jhpaintingservices.com/cities/${citySlug}/${serviceSlug}`,
+        "image": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://jhpaintingservices.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Service Areas",
+            "item": "https://jhpaintingservices.com/cities"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": `${cityName} Painters`,
+            "item": `https://jhpaintingservices.com/cities/${citySlug}`
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": `${serviceName} in ${cityName}`,
+            "item": `https://jhpaintingservices.com/cities/${citySlug}/${serviceSlug}`
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": `How much does ${serviceName.toLowerCase()} cost in ${cityName}?`,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": `${serviceName} costs in ${cityName}, MA vary based on project size, preparation needed, and paint quality. We provide free, detailed estimates for all ${cityName} projects. Contact JH Painting at (508) 690-8886 for an accurate quote.`
+            }
+          },
+          {
+            "@type": "Question",
+            "name": `Are you licensed for ${serviceName.toLowerCase()} in ${cityName}?`,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": `Yes! JH Painting Services is fully licensed and insured to provide ${serviceName.toLowerCase()} in ${cityName} and throughout Massachusetts. We carry $1 million in liability coverage and workers' compensation for all employees.`
+            }
+          },
+          {
+            "@type": "Question",
+            "name": `Do you offer free estimates for ${serviceName.toLowerCase()} in ${cityName}?`,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": `Absolutely! We provide free, no-obligation estimates for all ${serviceName.toLowerCase()} projects in ${cityName}. Call (508) 690-8886 or fill out our online form to schedule your free consultation.`
+            }
+          }
+        ]
+      }
+    ]
   }
 }
 
@@ -75,8 +173,19 @@ export default function CityServicePage({ params }: Props) {
     notFound()
   }
 
+  const cityServiceSchema = generateCityServiceSchema(city.name, service.name, params.service, params.city)
+
   return (
     <>
+      {/* Schema JSON-LD for SEO */}
+      <Script
+        id={`city-service-schema-${params.city}-${params.service}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(cityServiceSchema)
+        }}
+      />
+
       {/* Luxury Hero Section */}
       <section style={{ position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
