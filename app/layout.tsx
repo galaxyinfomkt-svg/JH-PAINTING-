@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import FloatingPhoneButton from './components/FloatingPhoneButton'
 
@@ -115,6 +116,7 @@ export default function RootLayout({
       <body>
         {children}
         <FloatingPhoneButton />
+        <Analytics />
       </body>
     </html>
   )
