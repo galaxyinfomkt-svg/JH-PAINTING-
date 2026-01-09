@@ -132,7 +132,10 @@ export const cities: City[] = [
   { name: 'Sharon', slug: 'sharon', distance: 24.39, county: 'Norfolk County', population: '18,000+', zipCodes: ['02067'], landmarks: ['Lake Massapoag', 'Sharon Town Center'], neighborhoods: ['Sharon Center', 'East Sharon'] },
   { name: 'Stoneham', slug: 'stoneham', distance: 24.48, county: 'Middlesex County', population: '23,000+', zipCodes: ['02180'], landmarks: ['Stoneham Square', 'Spot Pond'], neighborhoods: ['Stoneham Square', 'South Stoneham'] },
   { name: 'Boston', slug: 'boston', distance: 24.81, county: 'Suffolk County', population: '675,000+', zipCodes: ['02108', '02109', '02110', '02111', '02113', '02114', '02115', '02116', '02118', '02119', '02120', '02121', '02122', '02124', '02125', '02126', '02127', '02128', '02129', '02130', '02131', '02132', '02134', '02135', '02136', '02163', '02199', '02203', '02210', '02215'], landmarks: ['Freedom Trail', 'Fenway Park', 'Boston Common', 'Faneuil Hall'], neighborhoods: ['Back Bay', 'Beacon Hill', 'North End', 'South End', 'Charlestown', 'South Boston', 'Dorchester', 'Roxbury'] },
-  { name: 'Foxborough', slug: 'foxborough', distance: 24.83, county: 'Norfolk County', population: '18,000+', zipCodes: ['02035'], landmarks: ['Gillette Stadium', 'Patriot Place'], neighborhoods: ['Foxborough Center'] }
+  { name: 'Foxborough', slug: 'foxborough', distance: 24.83, county: 'Norfolk County', population: '18,000+', zipCodes: ['02035'], landmarks: ['Gillette Stadium', 'Patriot Place'], neighborhoods: ['Foxborough Center'] },
+
+  // 50+ MILES - Extended Service Area
+  { name: 'New Bedford', slug: 'new-bedford', distance: 55.0, county: 'Bristol County', population: '101,000+', zipCodes: ['02740', '02741', '02742', '02743', '02744', '02745', '02746'], landmarks: ['New Bedford Whaling Museum', 'Buttonwood Park Zoo', 'Fort Taber Park'], neighborhoods: ['Downtown New Bedford', 'South End', 'North End', 'West End', 'Acushnet Heights'] }
 ]
 
 export function getCityBySlug(slug: string): City | undefined {
