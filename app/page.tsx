@@ -65,8 +65,10 @@ const galleryImages = [
 ]
 
 const videos = [
-  { id: 'F_lreXzNlUI', title: 'Historic Church Transformation' },
-  { id: 'LkT_HLyKibY', title: 'Interior Painting' },
+  { id: 'F_lreXzNlUI', title: 'Exterior Painting', type: 'YouTube Short' },
+  { id: 'LkT_HLyKibY', title: 'Interior Painting', type: 'YouTube Short' },
+  { id: 'F_lreXzNlUI', title: 'Cabinet Refinishing', type: 'YouTube Short' },
+  { id: 'LkT_HLyKibY', title: 'Floor Restoration', type: 'YouTube Short' },
 ]
 
 // Menu data
@@ -370,12 +372,40 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Google Reviews Bar */}
+        <div className="google-reviews-bar">
+          <div className="container">
+            <div className="google-reviews-bar-content">
+              <svg className="google-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+              <span>Google Reviews</span>
+              <div className="stars">
+                <Star size={16} fill="currentColor" />
+                <Star size={16} fill="currentColor" />
+                <Star size={16} fill="currentColor" />
+                <Star size={16} fill="currentColor" />
+                <Star size={16} fill="currentColor" />
+              </div>
+              <span className="rating">5</span>
+              <a href="#reviews">
+                See Our Reviews
+                <ChevronRight size={14} />
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Services Section */}
         <section id="services" className="section">
           <div className="container">
-            <div className="section-header">
-              <h2>Our Services</h2>
-              <p>From expert painting to complete home exteriors, we deliver quality craftsmanship on every project.</p>
+            <div className="services-section-header">
+              <h2>Our <span>Services</span></h2>
+              <p>From expert <strong>painting and finishing work</strong> to complete home exteriors, we deliver quality craftsmanship on every project.</p>
+              <div className="underline"></div>
             </div>
 
             <div className="services-grid">
@@ -404,37 +434,22 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* About Section */}
-        <section id="about" className="section about-section">
+        {/* About Section - Dark RS Style */}
+        <section id="about" className="section about-section-dark">
           <div className="container">
             <div className="about-grid">
               <div className="about-content">
-                <h2>About JH Painting Services</h2>
+                <div className="about-underline"></div>
+                <h2>About <span>JH Painting Services</span></h2>
                 <p>
                   Founded by <strong>Jafet</strong>, JH Painting Services is a premier painting contractor based in Waltham, Massachusetts. With years of hands-on experience in the painting industry, Jafet and his team have built a reputation on delivering exceptional craftsmanship, honest pricing, and reliable service to homeowners across the state.
                 </p>
                 <p>
-                  We specialize in <strong>exterior and interior painting</strong>, cabinet refinishing, and floor restoration. From complete home transformations to single room refreshes, we ensure that every project is completed with attention to detail and using quality materials.
+                  Under Jafet&apos;s leadership, our team specializes in <strong>exterior and interior painting</strong> - the foundation of every beautiful home. From complete home transformations to single room refreshes, we ensure that every project is completed with attention to detail and using quality materials.
                 </p>
-
-                <div className="about-stats">
-                  <div className="about-stat">
-                    <span className="about-stat-value">20+</span>
-                    <span className="about-stat-label">Cities Served</span>
-                  </div>
-                  <div className="about-stat">
-                    <span className="about-stat-value">200+</span>
-                    <span className="about-stat-label">5-Star Reviews</span>
-                  </div>
-                  <div className="about-stat">
-                    <span className="about-stat-value">100%</span>
-                    <span className="about-stat-label">Licensed & Insured</span>
-                  </div>
-                  <div className="about-stat">
-                    <span className="about-stat-value">24hr</span>
-                    <span className="about-stat-label">Response Time</span>
-                  </div>
-                </div>
+                <p>
+                  Beyond painting, we offer comprehensive home improvement services including cabinet refinishing, floor restoration, and deck staining. Whether you&apos;re updating your home&apos;s curb appeal, refreshing a single room, or planning a full renovation, we have the skills and experience to deliver outstanding results.
+                </p>
               </div>
 
               <div className="about-image-wrapper">
@@ -444,19 +459,15 @@ export default function HomePage() {
                     alt="Jafet - Owner of JH Painting Services Massachusetts"
                     width={600}
                     height={450}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'cover', borderRadius: '16px' }}
                   />
-                </div>
-                <div className="about-badge">
-                  <span>Trusted Contractor</span>
-                  <span>Massachusetts Licensed</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Process Section */}
+        {/* Process Section - RS Style */}
         <section className="section">
           <div className="container">
             <div className="section-header">
@@ -464,15 +475,18 @@ export default function HomePage() {
               <p>From initial consultation to project completion, we make the painting process simple and stress-free.</p>
             </div>
 
-            <div className="process-grid">
+            <div className="process-grid-home">
               {[
-                { num: '01', title: 'Free Consultation', desc: 'Call us or fill out our form. We\'ll discuss your project needs and schedule a site visit.' },
-                { num: '02', title: 'Detailed Estimate', desc: 'We provide a comprehensive written estimate with transparent pricing. No hidden fees.' },
-                { num: '03', title: 'Expert Painting', desc: 'Our skilled team executes your project with precision, keeping you informed every step.' },
-                { num: '04', title: 'Final Walkthrough', desc: 'We walk through the completed project together, ensuring everything meets your expectations.' },
+                { num: '01', icon: Phone, title: 'Free Consultation', desc: 'Call us or fill out our form. We\'ll discuss your project needs and schedule a site visit at your convenience.' },
+                { num: '02', icon: DollarSign, title: 'Detailed Estimate', desc: 'We provide a comprehensive written estimate with transparent pricing. No hidden fees, no surprises.' },
+                { num: '03', icon: HardHat, title: 'Expert Painting', desc: 'Our skilled team executes your project with precision, keeping you informed every step of the way.' },
+                { num: '04', icon: Check, title: 'Final Walkthrough', desc: 'We walk through the completed project together, ensuring everything meets your expectations.' },
               ].map((step, index) => (
-                <div key={index} className="process-step">
-                  <div className="process-number">{step.num}</div>
+                <div key={index} className="process-card-home">
+                  <div className="process-card-home-num">{step.num}</div>
+                  <div className="process-card-home-icon">
+                    <step.icon size={24} />
+                  </div>
                   <h3>{step.title}</h3>
                   <p>{step.desc}</p>
                 </div>
@@ -481,18 +495,34 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Exterior Painting Detail */}
-        <section id="exterior-painting" className="section detail-section">
+        {/* Exterior Painting Detail - RS Style */}
+        <section id="exterior-painting" className="section detail-section detail-section-rs">
           <div className="container">
             <div className="detail-grid">
+              <div className="detail-image-wrapper">
+                <span className="detail-badge">
+                  <Star size={14} fill="currentColor" />
+                  Our Specialty
+                </span>
+                <Image
+                  src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
+                  alt="Exterior Painting Massachusetts"
+                  width={600}
+                  height={450}
+                  style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '16px' }}
+                />
+              </div>
+
               <div className="detail-content">
-                <h3>Our Specialty</h3>
-                <h2>Exterior House Painting</h2>
+                <h2>
+                  <Paintbrush size={28} />
+                  Exterior House Painting
+                </h2>
                 <p>
                   Looking to boost your home&apos;s curb appeal? JH Painting Services delivers professional exterior house painting that transforms your property and protects it from New England&apos;s harsh weather conditions.
                 </p>
                 <p>
-                  Our comprehensive process includes thorough surface preparation—power washing, scraping, sanding, caulking, and priming—followed by two coats of premium grade A paint.
+                  Our comprehensive process includes thorough surface preparation—power washing, scraping, sanding, caulking, and priming—followed by two coats of premium grade A paint. We specialize in:
                 </p>
 
                 <ul className="detail-list">
@@ -504,17 +534,10 @@ export default function HomePage() {
                   <li><Check size={18} /> Trim & Shutters</li>
                 </ul>
 
-                <a href="#contact" className="btn btn-primary">Get Free Estimate</a>
-              </div>
-
-              <div className="detail-image">
-                <Image
-                  src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
-                  alt="Exterior Painting Massachusetts"
-                  width={600}
-                  height={450}
-                  style={{ objectFit: 'cover' }}
-                />
+                <a href="#contact" className="btn btn-primary">
+                  Learn More About Exterior Painting
+                  <ChevronRight size={18} />
+                </a>
               </div>
             </div>
           </div>
@@ -586,22 +609,22 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Video Section */}
-        <section className="section" style={{ background: 'var(--jh-gray-50)' }}>
+        {/* Video Section - RS Style Dark */}
+        <section className="section video-section-rs">
           <div className="container">
             <div className="section-header">
               <h2>See Our Work in Action</h2>
               <p>Watch our expert team tackle painting projects across Massachusetts.</p>
             </div>
 
-            <div className="video-grid" style={{ maxWidth: '800px', margin: '0 auto', gridTemplateColumns: 'repeat(2, 1fr)' }}>
+            <div className="video-grid-rs">
               {videos.map((video, index) => (
-                <a 
-                  key={index} 
+                <a
+                  key={index}
                   href={`https://www.youtube.com/watch?v=${video.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="video-card"
+                  className="video-card-rs"
                 >
                   <Image
                     src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
@@ -609,15 +632,30 @@ export default function HomePage() {
                     fill
                     style={{ objectFit: 'cover' }}
                   />
-                  <div className="video-card-overlay">
-                    <div className="video-card-play">
+                  <div className="video-card-rs-overlay">
+                    <div className="video-card-rs-play">
                       <Play size={20} />
                     </div>
                     <h4>{video.title}</h4>
-                    <span>YouTube</span>
+                    <span>
+                      <Play size={12} />
+                      {video.type}
+                    </span>
                   </div>
                 </a>
               ))}
+            </div>
+
+            <div className="video-section-cta">
+              <a
+                href="https://www.youtube.com/@JHPaintingServices-br9wh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-lg"
+              >
+                <Play size={18} />
+                Watch More on YouTube
+              </a>
             </div>
           </div>
         </section>
