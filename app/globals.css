@@ -954,10 +954,6 @@ p {
   display: none !important;
 }
 
-.header-cta {
-  display: none !important;
-}
-
 /* Mobile Menu - Enhanced */
 .mobile-menu-overlay {
   position: fixed;
@@ -1402,23 +1398,26 @@ p {
   align-items: center;
   gap: 0.5rem;
   padding: 0.625rem 1.25rem;
-  background: var(--jh-gold);
-  color: var(--jh-navy);
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #fff;
   border-radius: var(--radius-full);
   font-size: 0.875rem;
   font-weight: 600;
   transition: var(--transition-base);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .hero-location-badge:hover {
-  background: var(--jh-gold-dark);
+  background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
 }
 
 .hero-location-badge svg {
   width: 16px;
   height: 16px;
-  color: var(--jh-navy);
+  color: #fff;
 }
 
 .hero-rating-badge {
@@ -1426,7 +1425,7 @@ p {
   align-items: center;
   gap: 0.375rem;
   padding: 0.625rem 1.25rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
   border-radius: var(--radius-full);
   font-size: 0.875rem;
   font-weight: 700;
@@ -1436,7 +1435,7 @@ p {
 .hero-rating-badge svg {
   width: 14px;
   height: 14px;
-  color: var(--jh-gold);
+  color: #fff;
 }
 
 .hero-rating-text {
