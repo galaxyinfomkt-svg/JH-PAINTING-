@@ -900,7 +900,7 @@ p {
   }
 }
 
-/* Mobile Menu Button - Always visible like RS Development */
+/* Mobile Menu Button */
 .menu-btn,
 .mobile-menu-btn {
   display: flex;
@@ -909,7 +909,7 @@ p {
   width: 44px;
   height: 44px;
   background: transparent;
-  color: #fff;
+  color: var(--jh-navy);
   border: none;
   cursor: pointer;
   transition: var(--transition-base);
@@ -949,18 +949,7 @@ p {
   opacity: 0.8;
 }
 
-/* Mobile: hide nav, show hamburger. Desktop: show nav, hide hamburger */
-.nav,
-.nav-desktop {
-  display: none;
-}
-
 @media (min-width: 1024px) {
-  .nav,
-  .nav-desktop {
-    display: flex !important;
-  }
-
   .menu-btn,
   .mobile-menu-btn {
     display: none !important;
@@ -2717,22 +2706,6 @@ button:focus,
 a:focus:not(:focus-visible),
 button:focus:not(:focus-visible) {
   outline: none;
-}
-
-.skip-link {
-  position: absolute;
-  top: -60px;
-  left: 0;
-  background: var(--jh-navy);
-  color: #fff;
-  padding: 1rem 2rem;
-  z-index: 200;
-  transition: top var(--transition-smooth);
-  border-radius: 0 0 var(--radius-md) 0;
-}
-
-.skip-link:focus {
-  top: 0;
 }
 
 /* ============================================

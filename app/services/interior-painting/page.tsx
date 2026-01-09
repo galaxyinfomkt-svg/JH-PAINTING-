@@ -192,9 +192,6 @@ export default function InteriorPaintingPage() {
         }}
       />
 
-      {/* Skip Link */}
-      <a href="#main-content" className="skip-link">Skip to main content</a>
-
       {/* Header */}
       <Header />
 

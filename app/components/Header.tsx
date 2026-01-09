@@ -81,9 +81,6 @@ export default function Header({ variant = 'default' }: HeaderProps) {
 
   return (
     <>
-      {/* Skip Link */}
-      <a href="#main-content" className="skip-link">Skip to main content</a>
-
       {/* Top Bar */}
       <div className={`top-bar ${scrolled ? 'hidden' : ''}`}>
         <div className="container">

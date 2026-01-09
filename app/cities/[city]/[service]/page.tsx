@@ -295,9 +295,6 @@ export default function CityServicePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(cityServiceSchema) }}
       />
 
-      {/* Skip Link */}
-      <a href="#main-content" className="skip-link">Skip to main content</a>
-
       {/* Top Bar - Shows specific city */}
       <div className={`top-bar ${scrolled ? 'hidden' : ''}`}>
         <div className="container">
