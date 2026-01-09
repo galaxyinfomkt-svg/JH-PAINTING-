@@ -67,8 +67,6 @@ const galleryImages = [
 const videos = [
   { id: 'F_lreXzNlUI', title: 'Exterior Painting', type: 'YouTube Short' },
   { id: 'LkT_HLyKibY', title: 'Interior Painting', type: 'YouTube Short' },
-  { id: 'F_lreXzNlUI', title: 'Cabinet Refinishing', type: 'YouTube Short' },
-  { id: 'LkT_HLyKibY', title: 'Floor Restoration', type: 'YouTube Short' },
 ]
 
 // Menu data
@@ -208,11 +206,6 @@ export default function HomePage() {
               <a href="#reviews">Reviews</a>
               <a href="#contact">Contact</a>
             </nav>
-
-            <a href="tel:+15086908886" className="btn btn-primary header-cta">
-              <Phone size={18} />
-              (508) 690-8886
-            </a>
 
             <button className="menu-btn" onClick={toggleMenu} aria-label="Open menu">
               <Menu size={28} />

@@ -374,11 +374,6 @@ export default function CityServicePage({ params }: Props) {
               <Link href="/#contact">Contact</Link>
             </nav>
 
-            <a href="tel:+15086908886" className="btn btn-primary header-cta">
-              <Phone size={18} />
-              (508) 690-8886
-            </a>
-
             <button className="menu-btn" onClick={toggleMenu} aria-label="Open menu">
               <Menu size={28} />
             </button>
