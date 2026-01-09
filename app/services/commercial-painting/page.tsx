@@ -228,8 +228,13 @@ export default function CommercialPaintingPage() {
       <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
         <div className="container header-content">
           <Link href="/" className="logo">
-            <span className="logo-jh">JH</span>
-            <span className="logo-text">Painting Services</span>
+            <Image
+              src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
+              alt="JH Painting Services Logo"
+              width={160}
+              height={64}
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
