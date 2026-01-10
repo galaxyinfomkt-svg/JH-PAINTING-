@@ -22,7 +22,8 @@ import {
   Palette,
   HardHat,
   Building2,
-  PaintBucket
+  PaintBucket,
+  Award
 } from 'lucide-react'
 import { cities } from './data/cities'
 
@@ -56,17 +57,17 @@ const services = [
 ]
 
 const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Exterior painting project', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'House painters Massachusetts', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Interior painting', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Interior painting bedroom', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Cabinet refinishing', category: 'Cabinets' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Floor refinishing', category: 'Floors' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Professional exterior house painting services in Massachusetts by JH Painting', category: 'Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Expert house painters in Waltham MA - exterior painting project', category: 'Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Professional interior painting contractors in Massachusetts', category: 'Interior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Bedroom interior painting services in Massachusetts by JH Painting', category: 'Interior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Kitchen cabinet refinishing and painting services in MA', category: 'Cabinets' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Hardwood floor refinishing services in Massachusetts by JH Painting', category: 'Floors' },
 ]
 
 const videos = [
-  { id: 'F_lreXzNlUI', title: 'Exterior Painting', type: 'YouTube Short' },
-  { id: 'LkT_HLyKibY', title: 'Interior Painting', type: 'YouTube Short' },
+  { id: 'F_lreXzNlUI', title: 'Exterior Painting in Massachusetts', type: 'YouTube Short' },
+  { id: 'LkT_HLyKibY', title: 'Interior Painting in Massachusetts', type: 'YouTube Short' },
 ]
 
 // Menu data
@@ -307,7 +308,7 @@ export default function HomePage() {
                     <Star size={14} fill="currentColor" />
                     <Star size={14} fill="currentColor" />
                     <Star size={14} fill="currentColor" />
-                    <span className="hero-rating-text">5 (47 reviews)</span>
+                    <span className="hero-rating-text">5.0 (40 Google reviews)</span>
                   </span>
                 </div>
 
@@ -316,7 +317,7 @@ export default function HomePage() {
                 </h1>
 
                 <p className="hero-subtitle">
-                  Expert <strong>exterior & interior painting</strong>, cabinet refinishing, and floor restoration. Licensed & insured contractor serving Waltham and 20+ cities across Massachusetts.
+                  Expert <strong>exterior & interior painting</strong>, cabinet refinishing, and floor restoration. Licensed & insured contractor serving Waltham and 114+ cities across Massachusetts.
                 </p>
 
                 <div className="hero-buttons">
@@ -453,13 +454,13 @@ export default function HomePage() {
                     src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp"
                     alt="Jafet - Owner of JH Painting Services Massachusetts"
                     width={600}
-                    height={450}
-                    style={{ objectFit: 'cover', borderRadius: '16px' }}
+                    height={600}
+                    style={{ objectFit: 'contain', borderRadius: '16px', width: '100%', height: 'auto' }}
                   />
                 </div>
                 <div className="trusted-contractor-badge">
                   <div className="trusted-contractor-badge-icon">
-                    <MapPin size={20} />
+                    <Award size={20} />
                   </div>
                   <div className="trusted-contractor-badge-content">
                     <span className="trusted-contractor-badge-title">Trusted Contractor</span>
@@ -597,7 +598,7 @@ export default function HomePage() {
             <div className="why-grid">
               {[
                 { icon: Shield, title: 'Licensed & Insured', desc: 'Fully licensed with comprehensive insurance' },
-                { icon: Star, title: '5-Star Rated', desc: '200+ verified Google reviews' },
+                { icon: Star, title: '5-Star Rated', desc: '40+ verified Google reviews' },
                 { icon: Clock, title: 'On-Time Completion', desc: 'We deliver projects on schedule' },
                 { icon: DollarSign, title: 'Free Estimates', desc: 'Transparent pricing, no obligation' },
               ].map((item, index) => (
@@ -700,9 +701,11 @@ export default function HomePage() {
             </div>
 
             <iframe
-              className="reviews-widget"
+              className="lc_reviews_widget reviews-widget"
               src="https://reputationhub.site/reputation/widgets/review_widget/0Def8kzJShLPuKrPk5Jw"
-              style={{ border: 'none' }}
+              frameBorder={0}
+              scrolling="no"
+              style={{ minWidth: '100%', width: '100%', border: 'none' }}
               loading="lazy"
               title="Customer Reviews"
             />
@@ -758,7 +761,7 @@ export default function HomePage() {
                     </div>
                     <div className="contact-item-content">
                       <h4>Service Area</h4>
-                      <p>Serving 20+ cities across Massachusetts</p>
+                      <p>Serving 114+ cities across Massachusetts</p>
                     </div>
                   </div>
 
@@ -775,11 +778,11 @@ export default function HomePage() {
 
                 <div className="map-container">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1517205.5747339479!2d-71.68353554999999!3d42.0369155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60c735e8062f080f%3A0xecd39bea9de17cbf!2sJH%20Painting%20Services!5e0!3m2!1sen!2sbr!4v1765464338095!5m2!1sen!2sbr"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1517205.5747339479!2d-71.68353554999999!3d42.0369155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60c735e8062f080f%3A0xecd39bea9de17cbf!2sJH%20Painting%20Services!5e0!3m2!1sen!2sbr!4v1768058870291!5m2!1sen!2sbr"
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="JH Painting Services Location"
+                    title="JH Painting Services Location - Serving All of Massachusetts"
                   />
                 </div>
               </div>

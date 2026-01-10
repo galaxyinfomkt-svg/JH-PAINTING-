@@ -6,7 +6,7 @@ import Script from 'next/script'
 import { Phone, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, Building2, Briefcase, TrendingUp } from 'lucide-react'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
-import { BUSINESS, ALL_CITY_NAMES, VIDEOS, FORM_IDS } from '@/lib/constants'
+import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 
 // Schema JSON-LD for Commercial Painting Service
 const commercialPaintingSchema = {
@@ -140,12 +140,12 @@ const commercialPaintingSchema = {
 }
 
 const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Commercial office painting', category: 'Office' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Retail store painting', category: 'Retail' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Restaurant painting', category: 'Restaurant' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Warehouse painting', category: 'Industrial' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Commercial exterior', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Professional commercial work', category: 'Commercial' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Commercial office painting services in Massachusetts by JH Painting', category: 'Office' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Retail store and storefront painting Waltham MA', category: 'Retail' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Restaurant and hospitality painting services Massachusetts', category: 'Restaurant' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Warehouse and industrial facility painting MA', category: 'Industrial' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Commercial building exterior painting Massachusetts', category: 'Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Professional commercial painting contractors in MA', category: 'Commercial' },
 ]
 
 const painPoints = [
@@ -406,9 +406,10 @@ export default function CommercialPaintingPage() {
               <div className="service-about-image">
                 <Image
                   src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac03fd033dc1.png"
-                  alt="Jafet Herra - Owner of JH Painting Services"
+                  alt="Jafet Henrique - Owner of JH Painting Services in Massachusetts"
                   fill
                   className="object-cover"
+                  style={{ objectPosition: 'top center' }}
                 />
               </div>
               <div className="service-about-experience">
@@ -461,36 +462,6 @@ export default function CommercialPaintingPage() {
         </div>
       </section>
 
-      {/* Service Areas */}
-      <section className="service-areas-section">
-        <div className="container">
-          <div className="service-section-header">
-            <h2 className="service-areas-title">Commercial Painting Service Areas</h2>
-            <p className="service-section-subtitle">
-              Serving 117 cities across Massachusetts
-            </p>
-          </div>
-
-          <div className="service-areas-grid">
-            {ALL_CITY_NAMES.map((city, idx) => (
-              <Link
-                key={idx}
-                href={`/cities/${city.toLowerCase().replace(/\s+/g, '-')}/commercial-painting`}
-                className="service-area-tag"
-              >
-                {city}
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link href="/cities" className="service-view-all-btn">
-              View All 117 Cities
-              <ChevronRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
       </main>
 
       {/* Footer */}

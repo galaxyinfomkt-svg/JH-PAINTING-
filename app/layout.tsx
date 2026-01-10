@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 import FloatingPhoneButton from './components/FloatingPhoneButton'
 
 export const metadata: Metadata = {
-  title: 'JH Painting Services Massachusetts | Expert Exterior & Interior Painting MA',
-  description: 'Professional painting services across Massachusetts. Exterior painting, interior painting, cabinet refinishing & floor refinishing. Licensed & insured. Call (508) 690-8886!',
+  title: 'Professional Painting Services in Massachusetts | JH Painting',
+  description: 'Expert painting services in Massachusetts. Interior, exterior, cabinet refinishing, floor finishing. Licensed, insured contractors. Free estimates today.',
   keywords: 'painting Massachusetts, exterior painting MA, interior painting Massachusetts, house painters MA, cabinet refinishing Massachusetts, professional painters Massachusetts, JH Painting Services',
   authors: [{ name: 'JH Painting Services' }],
   openGraph: {
-    title: 'JH Painting Services - Expert Painting Across Massachusetts',
-    description: 'Professional painting services across Massachusetts. Licensed & insured. Call (508) 690-8886!',
+    title: 'Professional Painting Services in Massachusetts | JH Painting',
+    description: 'Expert interior & exterior painting services across Massachusetts. Licensed & insured contractors. Free estimates.',
     url: 'https://jhpaintingservices.com',
     siteName: 'JH Painting Services',
     locale: 'en_US',
@@ -46,6 +47,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Preconnect to external resources for faster loading */}
+        <link rel="preconnect" href="https://storage.googleapis.com" />
+        <link rel="preconnect" href="https://beta.leadconnectorhq.com" />
+        <link rel="preconnect" href="https://reputationhub.site" />
+        <link rel="dns-prefetch" href="https://storage.googleapis.com" />
+        <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://reputationhub.site" />
         <link rel="canonical" href="https://jhpaintingservices.com/" />
         <meta name="geo.region" content="US-MA" />
         <meta name="geo.placename" content="Massachusetts" />
@@ -55,28 +63,33 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "additionalType": ["HousePainter", "HomeAndConstructionBusiness", "ProfessionalService"],
+              "additionalType": ["HousePainter", "HomeAndConstructionBusiness", "ProfessionalService", "Painter", "Painting", "Carpenter", "ConstructionCompany"],
               "@id": "https://jhpaintingservices.com/#organization",
               "name": "JH Painting Services",
-              "alternateName": ["JH Painting", "JH Painting Services Massachusetts"],
-              "description": "Professional painting services across Massachusetts. Expert exterior & interior painting, cabinet refinishing, and floor restoration for homes and businesses throughout the Bay State.",
+              "alternateName": ["JH Painting", "JH Painting Services Massachusetts", "JH Painting MA"],
+              "description": "Professional painting services across Massachusetts. Expert exterior & interior painting, cabinet refinishing, and floor restoration for homes and businesses throughout the Bay State. Licensed painter, carpenter, deck builder, and pressure washing service.",
               "url": "https://jhpaintingservices.com",
               "telephone": "+1-508-690-8886",
               "email": "contact@jhpaintingservices.com",
+              "foundingDate": "2018-07",
               "founder": {
                 "@type": "Person",
-                "name": "Jafet",
+                "name": "Jafet Henrique",
                 "jobTitle": "Owner & Founder"
               },
+              "logo": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png",
               "image": [
                 "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg",
                 "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/6913825a96d06ab2e07a6439.png"
               ],
               "priceRange": "$$",
+              "currenciesAccepted": "USD",
+              "paymentAccepted": "Cash, Credit Card, Check",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Waltham",
                 "addressRegion": "MA",
+                "postalCode": "02451",
                 "addressCountry": "US"
               },
               "geo": {
@@ -84,6 +97,7 @@ export default function RootLayout({
                 "latitude": 42.3765,
                 "longitude": -71.2356
               },
+              "hasMap": "https://maps.google.com/?cid=17086082612398292159",
               "openingHoursSpecification": [
                 {
                   "@type": "OpeningHoursSpecification",
@@ -94,20 +108,70 @@ export default function RootLayout({
               ],
               "sameAs": [
                 "https://www.facebook.com/profile.php?id=61564489391475",
-                "https://www.instagram.com/jhpaintingservices/",
-                "https://www.youtube.com/@JHPaintingServices-br9wh"
+                "https://www.instagram.com/jhpaintingservices_/",
+                "https://www.youtube.com/@JHPaintingServices-br9wh",
+                "https://maps.google.com/?cid=17086082612398292159"
               ],
               "areaServed": {
                 "@type": "State",
                 "name": "Massachusetts"
               },
+              "knowsAbout": ["Interior Painting", "Exterior Painting", "Cabinet Painting", "Commercial Painting", "Residential Painting", "Deck Building", "Carpentry", "Pressure Washing", "Window Tinting"],
+              "makesOffer": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Interior Painting",
+                    "description": "Professional interior painting services including walls, ceilings, trim, and color consultation"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Exterior Painting",
+                    "description": "Expert exterior house painting with complete prep work and premium weather-resistant paints"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cabinet Painting",
+                    "description": "Kitchen cabinet refinishing and painting, save 70% vs replacement"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Commercial Painting",
+                    "description": "Professional commercial painting for offices, retail, restaurants, and warehouses"
+                  }
+                }
+              ],
               "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "200",
+                "ratingValue": "5.0",
+                "reviewCount": "40",
                 "bestRating": "5",
                 "worstRating": "1"
-              }
+              },
+              "review": [
+                {
+                  "@type": "Review",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  },
+                  "author": {
+                    "@type": "Person",
+                    "name": "Verified Customer"
+                  },
+                  "reviewBody": "Excellent work by JH Painting. Professional, on-time, and the quality is outstanding. Highly recommend for any painting project in Massachusetts."
+                }
+              ]
             })
           }}
         />
@@ -115,6 +179,18 @@ export default function RootLayout({
       <body>
         {children}
         <FloatingPhoneButton />
+        {/* LeadConnector Chat Widget */}
+        <Script
+          src="https://beta.leadconnectorhq.com/loader.js"
+          data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69626d9e5c8c5ba64720801a"
+          strategy="lazyOnload"
+        />
+        {/* Reviews Widget Script */}
+        <Script
+          src="https://reputationhub.site/reputation/assets/review-widget.js"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   )

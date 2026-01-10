@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Commercial Painting Services Massachusetts | Business Painters | JH Painting',
-  description: 'Professional commercial painting services across Massachusetts. Office buildings, retail stores, restaurants, warehouses. Minimal disruption, on-time completion. Licensed & insured. Call (508) 690-8886 for free estimate!',
+  title: 'Commercial Painting Services in Massachusetts | JH Painting',
+  description: 'Professional commercial painting in Massachusetts. Office, retail, restaurant, warehouse painting. Minimal disruption. Licensed contractors. Free quotes.',
   keywords: 'commercial painting Massachusetts, business painters MA, office painting, retail store painting, commercial painter Massachusetts, industrial painting, professional painters, JH Painting Services',
   openGraph: {
     title: 'Commercial Painting Services Massachusetts | JH Painting',

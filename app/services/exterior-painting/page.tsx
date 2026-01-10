@@ -6,7 +6,7 @@ import Script from 'next/script'
 import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Sun, Home, Droplets } from 'lucide-react'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
-import { BUSINESS, ALL_CITY_NAMES, VIDEOS, FORM_IDS } from '@/lib/constants'
+import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 
 // Schema JSON-LD for Exterior Painting Service
 const exteriorPaintingSchema = {
@@ -140,12 +140,12 @@ const exteriorPaintingSchema = {
 }
 
 const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Exterior house painting Massachusetts', category: 'House Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Professional exterior painters', category: 'Siding' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Quality exterior painting work', category: 'Full Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Exterior trim painting', category: 'Trim Work' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Deck staining services', category: 'Deck Staining' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Weather resistant painting', category: 'Weather Protection' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Professional exterior house painting services in Massachusetts by JH Painting', category: 'House Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Expert siding painting contractors in Waltham MA', category: 'Siding' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Complete exterior home painting transformation Massachusetts', category: 'Full Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Exterior trim and fascia painting in Massachusetts', category: 'Trim Work' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Professional deck staining and sealing services MA', category: 'Deck Staining' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Weather resistant exterior painting for New England homes', category: 'Weather Protection' },
 ]
 
 const painPoints = [
@@ -489,10 +489,10 @@ export default function ExteriorPaintingPage() {
               <div className="service-about-image">
                 <Image
                   src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac03fd033dc1.png"
-                  alt="Jafet Herra - Owner of JH Painting Services"
-                  width={500}
-                  height={600}
+                  alt="Jafet Henrique - Owner of JH Painting Services in Massachusetts"
+                  fill
                   className="object-cover"
+                  style={{ objectPosition: 'top center' }}
                 />
               </div>
               <div className="service-about-experience">
@@ -504,10 +504,10 @@ export default function ExteriorPaintingPage() {
             <div>
               <span className="service-badge-red">About Us</span>
               <h2 className="service-about-title">
-                Meet Jafet Herra, Your Exterior Painting Expert
+                Meet Jafet Henrique, Your Exterior Painting Expert
               </h2>
               <p className="service-about-desc">
-                With over 15 years of experience protecting Massachusetts homes from the elements, JH Painting Services understands what it takes to deliver exterior paint jobs that last. Owner Jafet Herra leads every project with dedication to quality and weather-resistant finishes.
+                With over 15 years of experience protecting Massachusetts homes from the elements, JH Painting Services understands what it takes to deliver exterior paint jobs that last. Owner Jafet Henrique leads every project with dedication to quality and weather-resistant finishes.
               </p>
               <p className="service-about-desc">
                 We know Massachusetts weather—harsh winters, humid summers, and everything in between. That's why we use premium, weather-resistant paints and follow meticulous preparation processes that ensure your exterior paint job protects your home for 10-15 years.
@@ -543,39 +543,6 @@ export default function ExteriorPaintingPage() {
             </a>
             <Link href="/#contact" className="service-cta-btn-outline">
               Request Free Quote
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Areas */}
-      <section className="service-areas-section">
-        <div className="container">
-          <div className="service-section-header">
-            <h2 className="service-section-title">
-              Exterior Painting Service Areas
-            </h2>
-            <p className="service-section-subtitle">
-              Serving 114 cities across Massachusetts
-            </p>
-          </div>
-
-          <div className="service-areas-grid">
-            {ALL_CITY_NAMES.map((city, idx) => (
-              <Link
-                key={idx}
-                href={`/cities/${city.toLowerCase().replace(/\s+/g, '-')}/exterior-painting`}
-                className="service-area-link"
-              >
-                {city}
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link href="/cities" className="service-areas-btn">
-              View All 114 Cities
-              <ChevronRight size={18} />
             </Link>
           </div>
         </div>

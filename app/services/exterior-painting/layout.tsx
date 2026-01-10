@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Exterior Painting Services Massachusetts | House Painters | JH Painting',
-  description: 'Professional exterior house painting services across Massachusetts. Complete prep work, power washing, premium paints. Protect and beautify your home. Licensed & insured. Call (508) 690-8886 for free estimate!',
+  title: 'Exterior House Painting in Massachusetts | JH Painting',
+  description: 'Professional exterior painting in Massachusetts. Complete prep, power washing, premium paints. Protect your home. Licensed contractors. Free estimates.',
   keywords: 'exterior painting Massachusetts, house painters MA, exterior house painting, siding painting, home exterior painting Massachusetts, professional painters, power washing, JH Painting Services',
   openGraph: {
     title: 'Exterior Painting Services Massachusetts | JH Painting',

@@ -67,7 +67,7 @@ function generateCitySchema(cityName: string, countyName: string, citySlug: stri
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5.0",
-          "reviewCount": "200",
+          "reviewCount": "40",
           "bestRating": "5",
           "worstRating": "1"
         },
@@ -223,24 +223,21 @@ function generateCitySchema(cityName: string, countyName: string, citySlug: stri
 }
 
 const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Exterior painting project', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'House painters Massachusetts', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Interior painting', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Interior painting bedroom', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Cabinet refinishing', category: 'Cabinets' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Floor refinishing', category: 'Floors' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Professional exterior house painting services in Massachusetts by JH Painting', category: 'Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Expert house painters in Massachusetts - exterior painting contractors', category: 'Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Professional interior painting contractors serving Massachusetts', category: 'Interior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Bedroom interior painting services in MA by JH Painting', category: 'Interior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Kitchen cabinet refinishing and painting services in Massachusetts', category: 'Cabinets' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Hardwood floor refinishing services in Massachusetts by JH Painting', category: 'Floors' },
 ]
 
 const videos = [
-  { id: 'F_lreXzNlUI', title: 'Historic Church Transformation' },
-  { id: 'LkT_HLyKibY', title: 'Interior Painting Process' },
+  { id: 'F_lreXzNlUI', title: 'Exterior Painting in Massachusetts' },
+  { id: 'LkT_HLyKibY', title: 'Interior Painting in Massachusetts' },
 ]
 
-const footerCities = [
-  'Boston', 'Worcester', 'Springfield', 'Cambridge', 'Lowell', 'Brockton',
-  'New Bedford', 'Quincy', 'Lynn', 'Fall River', 'Newton', 'Somerville',
-  'Framingham', 'Waltham', 'Brookline', 'Medford', 'Malden', 'Revere'
-]
+// Use first 18 cities from the actual cities list
+const footerCities = cities.slice(0, 18).map(c => c.name)
 
 const servicesList = [
   { slug: 'interior-painting', name: 'Interior Painting', icon: Brush },
@@ -578,7 +575,7 @@ export default function CityPage({ params }: Props) {
                 {[
                   { icon: Shield, text: 'Licensed & Insured' },
                   { icon: Clock, text: 'Same Day Response' },
-                  { icon: Award, text: '200+ 5-Star Reviews' }
+                  { icon: Award, text: '40+ 5-Star Google Reviews' }
                 ].map((item, idx) => (
                   <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255, 255, 255, 0.9)' }}>
                     <item.icon size={18} color="#DC2626" />
@@ -675,64 +672,37 @@ export default function CityPage({ params }: Props) {
       </section>
 
       {/* Services in City Section */}
-      <section style={{ padding: '5rem 0', background: '#fff' }}>
+      <section className="city-section city-section-white">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem' }}>
-            <span style={{
-              display: 'inline-block',
-              padding: '0.5rem 1.25rem',
-              background: 'linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%)',
-              borderRadius: '100px',
-              color: '#92400E',
-              fontSize: '0.875rem',
-              fontWeight: '600',
-              marginBottom: '1.25rem'
-            }}>
+          <div className="city-section-header">
+            <span className="city-badge city-badge-gold">
               Our Services in {city.name}
             </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: '800', color: '#0F172A', lineHeight: '1.2', marginBottom: '1rem' }}>
+            <h2 className="city-section-title">
               Professional Painting Services
             </h2>
-            <p style={{ fontSize: '1.125rem', color: '#64748B', lineHeight: '1.7' }}>
+            <p className="city-section-subtitle">
               Expert painting solutions tailored for {city.name} homes and businesses
             </p>
           </div>
 
-          <div style={{ display: 'grid', gap: '1.5rem', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', maxWidth: '1200px', margin: '0 auto' }}>
+          <div className="city-services-grid">
             {servicesList.map((service, idx) => (
               <Link
                 key={idx}
                 href={`/cities/${params.city}/${service.slug}`}
-                style={{
-                  padding: '2rem',
-                  background: 'linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%)',
-                  borderRadius: '20px',
-                  border: '1px solid #E2E8F0',
-                  textDecoration: 'none',
-                  transition: 'all 0.3s ease',
-                  display: 'block'
-                }}
+                className="city-service-card"
               >
-                <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-                  borderRadius: '16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginBottom: '1.5rem',
-                  boxShadow: '0 8px 24px rgba(220, 38, 38, 0.3)'
-                }}>
-                  <service.icon size={28} color="#fff" />
+                <div className="city-service-icon">
+                  <service.icon size={32} color="#fff" />
                 </div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#0F172A', marginBottom: '0.75rem' }}>
+                <h3 className="city-service-title">
                   {service.name}
                 </h3>
-                <p style={{ fontSize: '1rem', color: '#64748B', lineHeight: '1.6', marginBottom: '1rem' }}>
+                <p className="city-service-desc">
                   Professional {service.name.toLowerCase()} services in {city.name}, MA
                 </p>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#DC2626', fontWeight: '600' }}>
+                <span className="city-service-link">
                   Learn More <ChevronRight size={18} />
                 </span>
               </Link>
@@ -742,73 +712,35 @@ export default function CityPage({ params }: Props) {
       </section>
 
       {/* Photo Gallery Section */}
-      <section style={{ padding: '5rem 0', background: '#0F172A' }}>
+      <section className="city-section city-section-dark">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem' }}>
-            <span style={{
-              display: 'inline-block',
-              padding: '0.5rem 1.25rem',
-              background: 'rgba(245, 158, 11, 0.2)',
-              borderRadius: '100px',
-              color: '#DC2626',
-              fontSize: '0.875rem',
-              fontWeight: '600',
-              marginBottom: '1.25rem',
-              border: '1px solid rgba(245, 158, 11, 0.3)'
-            }}>
+          <div className="city-section-header">
+            <span className="city-badge city-badge-dark">
               Our Portfolio
             </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: '800', color: '#fff', lineHeight: '1.2', marginBottom: '1rem' }}>
+            <h2 className="city-section-title">
               {city.name} Project Gallery
             </h2>
-            <p style={{ fontSize: '1.125rem', color: 'rgba(255, 255, 255, 0.7)', lineHeight: '1.7' }}>
+            <p className="city-section-subtitle">
               See the quality transformations we've delivered throughout {city.name} and Massachusetts
             </p>
           </div>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '1.5rem',
-            maxWidth: '1200px',
-            margin: '0 auto'
-          }}>
+          <div className="city-gallery-grid">
             {galleryImages.map((img, idx) => (
-              <div key={idx} style={{
-                position: 'relative',
-                borderRadius: '16px',
-                overflow: 'hidden',
-                aspectRatio: '4/3',
-                cursor: 'pointer'
-              }}>
+              <div key={idx} className="city-gallery-item">
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  style={{ objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                  style={{ objectFit: 'cover' }}
                 />
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%)',
-                  display: 'flex',
-                  alignItems: 'flex-end',
-                  padding: '1.5rem'
-                }}>
+                <div className="city-gallery-overlay">
                   <div>
-                    <span style={{
-                      display: 'inline-block',
-                      padding: '0.25rem 0.75rem',
-                      background: '#DC2626',
-                      borderRadius: '100px',
-                      color: '#fff',
-                      fontSize: '0.75rem',
-                      fontWeight: '600',
-                      marginBottom: '0.5rem'
-                    }}>
+                    <span className="city-gallery-category">
                       {img.category}
                     </span>
-                    <p style={{ color: '#fff', fontSize: '1rem', fontWeight: '500' }}>{img.alt}</p>
+                    <p className="city-gallery-text">{img.alt}</p>
                   </div>
                 </div>
               </div>
@@ -817,20 +749,8 @@ export default function CityPage({ params }: Props) {
 
           {/* CTA after Gallery */}
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <p style={{ color: '#64748B', marginBottom: '1rem' }}>Like what you see?</p>
-            <a href="tel:+15086908886" style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.75rem',
-              padding: '1rem 2rem',
-              background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-              color: '#fff',
-              borderRadius: '12px',
-              fontSize: '1.125rem',
-              fontWeight: '700',
-              textDecoration: 'none',
-              boxShadow: '0 10px 30px rgba(220, 38, 38, 0.3)'
-            }}>
+            <p style={{ color: 'rgba(255, 255, 255, 0.6)', marginBottom: '1rem' }}>Like what you see?</p>
+            <a href="tel:+15086908886" className="city-cta-btn">
               <Phone size={20} />
               Get a Free Quote
             </a>
@@ -839,50 +759,28 @@ export default function CityPage({ params }: Props) {
       </section>
 
       {/* Video Section */}
-      <section style={{ padding: '5rem 0', background: '#F8FAFC' }}>
+      <section className="city-section city-section-gray">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem' }}>
-            <span style={{
-              display: 'inline-block',
-              padding: '0.5rem 1.25rem',
-              background: 'linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%)',
-              borderRadius: '100px',
-              color: '#1D4ED8',
-              fontSize: '0.875rem',
-              fontWeight: '600',
-              marginBottom: '1.25rem'
-            }}>
+          <div className="city-section-header">
+            <span className="city-badge city-badge-blue">
               Watch Our Work
             </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: '800', color: '#0F172A', lineHeight: '1.2', marginBottom: '1rem' }}>
+            <h2 className="city-section-title">
               See Our Team in Action
             </h2>
-            <p style={{ fontSize: '1.125rem', color: '#64748B', lineHeight: '1.7' }}>
+            <p className="city-section-subtitle">
               Watch how we transform properties with precision and care
             </p>
           </div>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
-            gap: '2rem',
-            maxWidth: '1000px',
-            margin: '0 auto'
-          }}>
+          <div className="city-videos-grid">
             {videos.map((video, idx) => (
               <a
                 key={idx}
                 href={`https://www.youtube.com/watch?v=${video.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{
-                  position: 'relative',
-                  borderRadius: '20px',
-                  overflow: 'hidden',
-                  aspectRatio: '16/9',
-                  display: 'block',
-                  boxShadow: '0 20px 50px rgba(0, 0, 0, 0.15)'
-                }}
+                className="city-video-card"
               >
                 <Image
                   src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
@@ -890,31 +788,12 @@ export default function CityPage({ params }: Props) {
                   fill
                   style={{ objectFit: 'cover' }}
                 />
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'rgba(0, 0, 0, 0.4)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  transition: 'background 0.3s ease'
-                }}>
-                  <div style={{
-                    width: '80px',
-                    height: '80px',
-                    background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: '1rem',
-                    boxShadow: '0 10px 30px rgba(220, 38, 38, 0.5)'
-                  }}>
+                <div className="city-video-overlay">
+                  <div className="city-video-play">
                     <Play size={32} color="#fff" fill="#fff" />
                   </div>
-                  <h3 style={{ color: '#fff', fontSize: '1.25rem', fontWeight: '700' }}>{video.title}</h3>
-                  <span style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.9375rem', marginTop: '0.25rem' }}>Watch on YouTube</span>
+                  <h3 className="city-video-title">{video.title}</h3>
+                  <span className="city-video-subtitle">Watch on YouTube</span>
                 </div>
               </a>
             ))}
@@ -923,110 +802,61 @@ export default function CityPage({ params }: Props) {
       </section>
 
       {/* About Us Section */}
-      <section style={{ padding: '5rem 0', background: '#fff' }}>
+      <section className="city-section city-section-white">
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
-            gap: '4rem',
-            alignItems: 'center',
-            maxWidth: '1200px',
-            margin: '0 auto'
-          }}>
+          <div className="city-about-grid">
             {/* About Image */}
-            <div style={{ position: 'relative' }}>
-              <div style={{
-                position: 'relative',
-                borderRadius: '24px',
-                overflow: 'hidden',
-                boxShadow: '0 25px 60px rgba(0, 0, 0, 0.15)'
-              }}>
+            <div className="city-about-image-wrapper">
+              <div className="city-about-image">
                 <Image
                   src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp"
-                  alt="Jafet - Owner of JH Painting Services"
+                  alt="Jafet Henrique - Owner of JH Painting Services in Massachusetts"
                   width={600}
                   height={500}
                   style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                 />
               </div>
-              <div style={{
-                position: 'absolute',
-                bottom: '-20px',
-                right: '-20px',
-                background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-                padding: '1.5rem 2rem',
-                borderRadius: '16px',
-                boxShadow: '0 15px 40px rgba(220, 38, 38, 0.4)'
-              }}>
-                <div style={{ color: '#fff', fontSize: '2rem', fontWeight: '800' }}>200+</div>
-                <div style={{ color: 'rgba(255, 255, 255, 0.9)', fontSize: '0.875rem', fontWeight: '500' }}>5-Star Reviews</div>
+              <div className="city-about-badge">
+                <div className="city-about-badge-number">40+</div>
+                <div className="city-about-badge-label">5-Star Google Reviews</div>
               </div>
             </div>
 
             {/* About Content */}
-            <div>
-              <span style={{
-                display: 'inline-block',
-                padding: '0.5rem 1.25rem',
-                background: 'linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%)',
-                borderRadius: '100px',
-                color: '#DC2626',
-                fontSize: '0.875rem',
-                fontWeight: '600',
-                marginBottom: '1.25rem'
-              }}>
+            <div className="city-about-content">
+              <span className="city-badge city-badge-red">
                 About JH Painting Services
               </span>
-              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: '800', color: '#0F172A', lineHeight: '1.2', marginBottom: '1.5rem' }}>
+              <h2>
                 Your Trusted {city.name} Painting Contractor
               </h2>
-              <p style={{ fontSize: '1.125rem', color: '#475569', lineHeight: '1.8', marginBottom: '1.5rem' }}>
+              <p>
                 Founded by <strong>Jafet</strong>, JH Painting Services is a premier painting contractor based in Waltham, Massachusetts.
                 With years of hands-on experience, we've built our reputation on delivering exceptional craftsmanship,
                 honest pricing, and reliable service to homeowners across {city.name} and all of {city.county}.
               </p>
-              <p style={{ fontSize: '1.125rem', color: '#475569', lineHeight: '1.8', marginBottom: '2rem' }}>
+              <p>
                 We specialize in interior and exterior painting, using only premium materials designed to withstand
                 Massachusetts weather. Our meticulous attention to detail ensures results that exceed expectations.
               </p>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem', marginBottom: '2rem' }}>
+              <div className="city-about-features">
                 {[
                   { icon: Shield, title: 'Licensed & Insured' },
                   { icon: Award, title: 'Expert Craftsmen' },
                   { icon: Users, title: `Local ${city.name} Team` },
                   { icon: Heart, title: '100% Satisfaction' }
                 ].map((item, idx) => (
-                  <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <div style={{
-                      width: '48px',
-                      height: '48px',
-                      background: 'linear-gradient(135deg, #FEF3F2 0%, #FEE2E2 100%)',
-                      borderRadius: '12px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center'
-                    }}>
+                  <div key={idx} className="city-about-feature">
+                    <div className="city-about-feature-icon">
                       <item.icon size={24} color="#DC2626" />
                     </div>
-                    <span style={{ fontSize: '1rem', fontWeight: '600', color: '#0F172A' }}>{item.title}</span>
+                    <span className="city-about-feature-text">{item.title}</span>
                   </div>
                 ))}
               </div>
 
-              <a href="tel:+15086908886" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.75rem',
-                padding: '1rem 2rem',
-                background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-                color: '#fff',
-                borderRadius: '12px',
-                fontSize: '1.125rem',
-                fontWeight: '700',
-                textDecoration: 'none',
-                boxShadow: '0 10px 30px rgba(220, 38, 38, 0.3)'
-              }}>
+              <a href="tel:+15086908886" className="city-cta-btn">
                 <Phone size={20} />
                 Call (508) 690-8886
               </a>
@@ -1036,36 +866,23 @@ export default function CityPage({ params }: Props) {
       </section>
 
       {/* Pain Points Section - Expanded */}
-      <section style={{ padding: '5rem 0', background: '#F8FAFC' }}>
+      <section className="city-section city-section-gray">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 4rem' }}>
-            <span style={{
-              display: 'inline-block',
-              padding: '0.5rem 1.25rem',
-              background: 'linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%)',
-              borderRadius: '100px',
-              color: '#DC2626',
-              fontSize: '0.875rem',
-              fontWeight: '600',
-              marginBottom: '1.25rem'
-            }}>
+          <div className="city-section-header">
+            <span className="city-badge city-badge-red">
               We Understand Your Frustrations
             </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: '800', color: '#0F172A', lineHeight: '1.2', marginBottom: '1rem' }}>
+            <h2 className="city-section-title">
               Tired of Painters Who Disappoint?
             </h2>
-            <p style={{ fontSize: '1.125rem', color: '#64748B', lineHeight: '1.8', marginBottom: '1rem' }}>
+            <p className="city-section-subtitle">
               If you've hired painters before in {city.name}, you've probably experienced the frustration:
               contractors who show up late (or not at all), sloppy work that starts peeling within months,
               or that dreaded phone call about "unexpected costs." It's exhausting, and you deserve better.
             </p>
-            <p style={{ fontSize: '1.0625rem', color: '#475569', lineHeight: '1.7' }}>
-              At JH Painting Services, we've built our entire business around solving these exact problems.
-              Here's how we're different:
-            </p>
           </div>
 
-          <div style={{ display: 'grid', gap: '2rem', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', maxWidth: '1200px', margin: '0 auto 4rem' }}>
+          <div className="city-pain-grid" style={{ marginBottom: '4rem' }}>
             {[
               {
                 problem: "Contractors who ghost you or show up whenever they feel like it",
@@ -1098,70 +915,34 @@ export default function CityPage({ params }: Props) {
                 icon: Award
               }
             ].map((item, idx) => (
-              <div key={idx} style={{
-                padding: '2.5rem',
-                background: '#fff',
-                borderRadius: '20px',
-                border: '1px solid #E2E8F0',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
-              }}>
-                <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-                  borderRadius: '16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginBottom: '1.5rem',
-                  boxShadow: '0 8px 24px rgba(220, 38, 38, 0.3)'
-                }}>
+              <div key={idx} className="city-pain-card">
+                <div className="city-pain-icon">
                   <item.icon size={28} color="#fff" />
                 </div>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: '700', color: '#DC2626', marginBottom: '1rem' }}>
+                <h3 className="city-pain-problem">
                   "{item.problem}"
                 </h3>
-                <p style={{ fontSize: '1rem', color: '#475569', lineHeight: '1.7' }}>
-                  <strong style={{ color: '#0F172A' }}>Our Promise:</strong> {item.solution}
+                <p className="city-pain-solution">
+                  <strong>Our Promise:</strong> {item.solution}
                 </p>
               </div>
             ))}
           </div>
 
           {/* Testimonial in Pain Points */}
-          <div style={{
-            maxWidth: '800px',
-            margin: '0 auto',
-            padding: '2.5rem',
-            background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
-            borderRadius: '24px',
-            textAlign: 'center'
-          }}>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '0.25rem', marginBottom: '1rem' }}>
+          <div className="city-testimonial">
+            <div className="city-testimonial-stars">
               {[1,2,3,4,5].map(i => <Star key={i} size={24} fill="#DC2626" color="#DC2626" />)}
             </div>
-            <blockquote style={{ fontSize: '1.25rem', color: '#fff', fontStyle: 'italic', lineHeight: '1.8', marginBottom: '1.5rem' }}>
+            <blockquote className="city-testimonial-quote">
               "After two bad experiences with other painters in {city.name}, I was skeptical. But JH Painting
               completely changed my mind. They showed up on time, kept my house spotless, and the quality
               is incredible. Three years later, it still looks brand new. I recommend them to everyone!"
             </blockquote>
-            <div style={{ color: 'rgba(255, 255, 255, 0.9)', fontWeight: '600', marginBottom: '1.5rem' }}>
+            <div className="city-testimonial-author">
               — Sarah M., {city.name} Homeowner
             </div>
-            <a href="tel:+15086908886" style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.75rem',
-              padding: '1rem 2rem',
-              background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-              color: '#fff',
-              borderRadius: '12px',
-              fontSize: '1rem',
-              fontWeight: '700',
-              textDecoration: 'none',
-              boxShadow: '0 8px 24px rgba(220, 38, 38, 0.4)'
-            }}>
+            <a href="tel:+15086908886" className="city-cta-btn" style={{ marginTop: '1.5rem' }}>
               <Phone size={18} />
               Get Your Free Estimate Today
             </a>
@@ -1170,30 +951,21 @@ export default function CityPage({ params }: Props) {
       </section>
 
       {/* Our Process Section */}
-      <section style={{ padding: '5rem 0', background: '#fff' }}>
+      <section className="city-section city-section-white">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 4rem' }}>
-            <span style={{
-              display: 'inline-block',
-              padding: '0.5rem 1.25rem',
-              background: 'linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%)',
-              borderRadius: '100px',
-              color: '#1D4ED8',
-              fontSize: '0.875rem',
-              fontWeight: '600',
-              marginBottom: '1.25rem'
-            }}>
+          <div className="city-section-header">
+            <span className="city-badge city-badge-blue">
               Our Proven Process
             </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: '800', color: '#0F172A', lineHeight: '1.2', marginBottom: '1rem' }}>
+            <h2 className="city-section-title">
               How We Transform Your {city.name} Property
             </h2>
-            <p style={{ fontSize: '1.125rem', color: '#64748B', lineHeight: '1.8' }}>
+            <p className="city-section-subtitle">
               Every successful painting project follows a proven process. Here's exactly what happens when you choose JH Painting Services—no surprises, no guesswork, just professional results.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gap: '2rem', maxWidth: '1000px', margin: '0 auto' }}>
+          <div className="city-process-grid">
             {[
               {
                 step: '1',
@@ -1232,41 +1004,14 @@ export default function CityPage({ params }: Props) {
                 duration: 'Same day as project completion'
               }
             ].map((process, idx) => (
-              <div key={idx} style={{
-                display: 'grid',
-                gridTemplateColumns: 'auto 1fr',
-                gap: '2rem',
-                padding: '2rem',
-                background: idx % 2 === 0 ? '#F8FAFC' : '#fff',
-                borderRadius: '20px',
-                border: '1px solid #E2E8F0'
-              }}>
-                <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#fff',
-                  fontSize: '1.5rem',
-                  fontWeight: '800',
-                  boxShadow: '0 8px 24px rgba(220, 38, 38, 0.3)',
-                  flexShrink: 0
-                }}>
+              <div key={idx} className="city-process-card">
+                <div className="city-process-number">
                   {process.step}
                 </div>
-                <div>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#0F172A', marginBottom: '0.75rem' }}>
-                    {process.title}
-                  </h3>
-                  <p style={{ fontSize: '1rem', color: '#475569', lineHeight: '1.7', marginBottom: '0.75rem' }}>
-                    {process.description}
-                  </p>
-                  <span style={{ fontSize: '0.875rem', color: '#DC2626', fontWeight: '600' }}>
-                    {process.duration}
-                  </span>
+                <div className="city-process-content">
+                  <h3>{process.title}</h3>
+                  <p>{process.description}</p>
+                  <span className="city-process-duration">{process.duration}</span>
                 </div>
               </div>
             ))}
@@ -1274,39 +1019,15 @@ export default function CityPage({ params }: Props) {
 
           {/* CTA after Process */}
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <p style={{ fontSize: '1.125rem', color: '#64748B', marginBottom: '1.5rem' }}>
+            <p className="city-section-subtitle" style={{ marginBottom: '1.5rem' }}>
               Ready to start your {city.name} painting project?
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href="tel:+15086908886" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.75rem',
-                padding: '1rem 2rem',
-                background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-                color: '#fff',
-                borderRadius: '12px',
-                fontSize: '1.125rem',
-                fontWeight: '700',
-                textDecoration: 'none',
-                boxShadow: '0 10px 30px rgba(220, 38, 38, 0.3)'
-              }}>
+              <a href="tel:+15086908886" className="city-cta-btn">
                 <Phone size={20} />
                 Call (508) 690-8886
               </a>
-              <a href="#quote-form" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.75rem',
-                padding: '1rem 2rem',
-                background: '#0F172A',
-                color: '#fff',
-                borderRadius: '12px',
-                fontSize: '1.125rem',
-                fontWeight: '600',
-                textDecoration: 'none',
-                border: '2px solid #E2E8F0'
-              }}>
+              <a href="#quote-form" className="city-cta-btn-outline city-cta-btn-dark">
                 Request Free Estimate
                 <ChevronRight size={20} />
               </a>
@@ -1316,31 +1037,21 @@ export default function CityPage({ params }: Props) {
       </section>
 
       {/* Expanded FAQ Section */}
-      <section style={{ padding: '5rem 0', background: '#0F172A' }}>
+      <section className="city-section city-section-dark">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem' }}>
-            <span style={{
-              display: 'inline-block',
-              padding: '0.5rem 1.25rem',
-              background: 'rgba(220, 38, 38, 0.2)',
-              borderRadius: '100px',
-              color: '#DC2626',
-              fontSize: '0.875rem',
-              fontWeight: '600',
-              marginBottom: '1.25rem',
-              border: '1px solid rgba(220, 38, 38, 0.3)'
-            }}>
+          <div className="city-section-header">
+            <span className="city-badge city-badge-dark">
               Frequently Asked Questions
             </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: '800', color: '#fff', lineHeight: '1.2', marginBottom: '1rem' }}>
+            <h2 className="city-section-title">
               Your {city.name} Painting Questions Answered
             </h2>
-            <p style={{ fontSize: '1.125rem', color: 'rgba(255, 255, 255, 0.7)', lineHeight: '1.7' }}>
+            <p className="city-section-subtitle">
               We believe in transparency. Here are answers to the questions {city.name} homeowners ask most often.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gap: '1.5rem', maxWidth: '900px', margin: '0 auto' }}>
+          <div className="city-faq-grid">
             {[
               {
                 question: `How much does it cost to paint a house in ${city.name}?`,
@@ -1383,35 +1094,17 @@ export default function CityPage({ params }: Props) {
                 answer: `Getting a free estimate is easy! Call us at (508) 690-8886 or fill out the form on this page. We'll schedule a convenient time to visit your ${city.name} property, discuss your project, and provide a detailed written estimate—usually within 24-48 hours. There's no obligation and no pressure. We're confident our quality and pricing will earn your business.`
               }
             ].map((faq, idx) => (
-              <div key={idx} style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                borderRadius: '16px',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                overflow: 'hidden'
-              }}>
+              <div key={idx} className={`city-faq-item ${openFaqIndex === idx ? 'open' : ''}`}>
                 <button
+                  type="button"
                   onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
-                  style={{
-                    width: '100%',
-                    padding: '1.5rem 2rem',
-                    background: 'transparent',
-                    border: 'none',
-                    cursor: 'pointer',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    gap: '1rem',
-                    textAlign: 'left'
-                  }}
+                  className="city-faq-question"
                 >
-                  <h3 style={{ fontSize: '1.125rem', fontWeight: '700', color: '#fff', margin: 0 }}>
-                    {faq.question}
-                  </h3>
+                  <h3>{faq.question}</h3>
                   <ChevronDown
                     size={24}
                     color="#DC2626"
                     style={{
-                      flexShrink: 0,
                       transition: 'transform 0.3s ease',
                       transform: openFaqIndex === idx ? 'rotate(180deg)' : 'rotate(0deg)'
                     }}
@@ -1422,37 +1115,17 @@ export default function CityPage({ params }: Props) {
                   overflow: 'hidden',
                   transition: 'max-height 0.3s ease'
                 }}>
-                  <p style={{
-                    fontSize: '1rem',
-                    color: 'rgba(255, 255, 255, 0.8)',
-                    lineHeight: '1.7',
-                    padding: '0 2rem 1.5rem 2rem',
-                    margin: 0
-                  }}>
-                    {faq.answer}
-                  </p>
+                  <p className="city-faq-answer">{faq.answer}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <p style={{ color: 'rgba(255, 255, 255, 0.7)', marginBottom: '1.5rem' }}>
+            <p className="city-section-subtitle" style={{ marginBottom: '1.5rem' }}>
               Have a question we didn't answer? We're here to help!
             </p>
-            <a href="tel:+15086908886" style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.75rem',
-              padding: '1rem 2rem',
-              background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-              color: '#fff',
-              borderRadius: '12px',
-              fontSize: '1.125rem',
-              fontWeight: '700',
-              textDecoration: 'none',
-              boxShadow: '0 10px 30px rgba(220, 38, 38, 0.4)'
-            }}>
+            <a href="tel:+15086908886" className="city-cta-btn">
               <Phone size={20} />
               Call (508) 690-8886
             </a>
@@ -1461,30 +1134,21 @@ export default function CityPage({ params }: Props) {
       </section>
 
       {/* Why Choose Us Section */}
-      <section style={{ padding: '5rem 0', background: '#F8FAFC' }}>
+      <section className="city-section city-section-gray">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 4rem' }}>
-            <span style={{
-              display: 'inline-block',
-              padding: '0.5rem 1.25rem',
-              background: 'linear-gradient(135deg, #DCFCE7 0%, #BBF7D0 100%)',
-              borderRadius: '100px',
-              color: '#166534',
-              fontSize: '0.875rem',
-              fontWeight: '600',
-              marginBottom: '1.25rem'
-            }}>
+          <div className="city-section-header">
+            <span className="city-badge city-badge-green">
               The JH Painting Difference
             </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: '800', color: '#0F172A', lineHeight: '1.2', marginBottom: '1rem' }}>
+            <h2 className="city-section-title">
               Why {city.name} Homeowners Choose JH Painting
             </h2>
-            <p style={{ fontSize: '1.125rem', color: '#64748B', lineHeight: '1.8' }}>
+            <p className="city-section-subtitle">
               With dozens of painting contractors in the {city.name} area, why do homeowners consistently choose us? Here's what sets JH Painting Services apart.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gap: '2rem', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', maxWidth: '1200px', margin: '0 auto' }}>
+          <div className="city-why-grid">
             {[
               {
                 title: 'Owner-Operated Quality',
@@ -1517,50 +1181,19 @@ export default function CityPage({ params }: Props) {
                 icon: Heart
               }
             ].map((item, idx) => (
-              <div key={idx} style={{
-                padding: '2rem',
-                background: '#fff',
-                borderRadius: '20px',
-                border: '1px solid #E2E8F0',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
-              }}>
-                <div style={{
-                  width: '56px',
-                  height: '56px',
-                  background: 'linear-gradient(135deg, #DCFCE7 0%, #BBF7D0 100%)',
-                  borderRadius: '14px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginBottom: '1.5rem'
-                }}>
-                  <item.icon size={28} color="#166534" />
+              <div key={idx} className="city-why-card">
+                <div className="city-why-icon">
+                  <item.icon size={28} color="#fff" />
                 </div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#0F172A', marginBottom: '0.75rem' }}>
-                  {item.title}
-                </h3>
-                <p style={{ fontSize: '1rem', color: '#475569', lineHeight: '1.7' }}>
-                  {item.description}
-                </p>
+                <h3 className="city-why-title">{item.title}</h3>
+                <p className="city-why-desc">{item.description}</p>
               </div>
             ))}
           </div>
 
           {/* CTA after Why Choose Us */}
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <a href="tel:+15086908886" style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.75rem',
-              padding: '1rem 2.5rem',
-              background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-              color: '#fff',
-              borderRadius: '12px',
-              fontSize: '1.125rem',
-              fontWeight: '700',
-              textDecoration: 'none',
-              boxShadow: '0 10px 30px rgba(220, 38, 38, 0.3)'
-            }}>
+            <a href="tel:+15086908886" className="city-cta-btn">
               <Phone size={20} />
               Call for Your Free Estimate
             </a>
@@ -1569,92 +1202,63 @@ export default function CityPage({ params }: Props) {
       </section>
 
       {/* Local SEO Content Section */}
-      <section style={{ padding: '5rem 0', background: '#fff' }}>
+      <section className="city-seo-section">
         <div className="container">
-          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)', fontWeight: '800', color: '#0F172A', lineHeight: '1.3', marginBottom: '1.5rem' }}>
+          <div className="city-seo-content">
+            <h2 className="city-seo-title">
               Professional Painting Services for {city.name}, Massachusetts Homes
             </h2>
 
-            <div style={{ fontSize: '1.0625rem', color: '#475569', lineHeight: '1.8' }}>
-              <p style={{ marginBottom: '1.5rem' }}>
+            <div className="city-seo-text">
+              <p>
                 As a trusted painting contractor serving {city.name} and the greater {city.county} area, JH Painting Services understands the unique needs of Massachusetts homeowners. Our New England climate—with its harsh winters, humid summers, and dramatic temperature swings—demands painting solutions that go beyond what works in milder regions.
               </p>
 
-              <p style={{ marginBottom: '1.5rem' }}>
+              <p>
                 {city.name} homes, whether historic properties or modern constructions, each present their own painting challenges. Older homes often have lead paint concerns, multiple layers of previous paint, and architectural details requiring careful attention. Newer homes may have different substrate materials and finishes. Our experienced crews have worked on all types of {city.name} properties and know exactly how to approach each situation.
               </p>
 
-              <h3 style={{ fontSize: '1.375rem', fontWeight: '700', color: '#0F172A', marginTop: '2rem', marginBottom: '1rem' }}>
+              <h3 className="city-seo-subtitle">
                 Interior Painting in {city.name}
               </h3>
-              <p style={{ marginBottom: '1.5rem' }}>
+              <p>
                 Transform your {city.name} home's interior with professional painting that enhances your living space. We paint living rooms, bedrooms, kitchens, bathrooms, hallways, ceilings, trim, and doors. Our interior services include complete color consultation, furniture protection, thorough surface preparation, premium paint application, and meticulous cleanup. Whether you're refreshing a single room or repainting your entire home, we deliver stunning results that last.
               </p>
 
-              <h3 style={{ fontSize: '1.375rem', fontWeight: '700', color: '#0F172A', marginTop: '2rem', marginBottom: '1rem' }}>
+              <h3 className="city-seo-subtitle">
                 Exterior Painting in {city.name}
               </h3>
-              <p style={{ marginBottom: '1.5rem' }}>
+              <p>
                 Protect your {city.name} home from the elements while boosting curb appeal with professional exterior painting. Massachusetts weather is tough on exterior surfaces—freeze-thaw cycles, snow, ice, rain, and intense summer sun all take their toll. We use premium exterior paints specifically formulated to withstand these conditions, properly prepare all surfaces, and apply the right products for each material type (wood siding, vinyl, stucco, brick, trim).
               </p>
 
-              <h3 style={{ fontSize: '1.375rem', fontWeight: '700', color: '#0F172A', marginTop: '2rem', marginBottom: '1rem' }}>
+              <h3 className="city-seo-subtitle">
                 Cabinet Painting & Refinishing
               </h3>
-              <p style={{ marginBottom: '1.5rem' }}>
+              <p>
                 Want to transform your {city.name} kitchen without the cost of new cabinets? Our cabinet painting service delivers a factory-finish look at a fraction of replacement cost. We properly prepare cabinet surfaces, apply primer and multiple coats of durable cabinet-specific paint, and reinstall hardware for a complete transformation. Most kitchen cabinet projects are completed in 5-7 days.
               </p>
 
-              <h3 style={{ fontSize: '1.375rem', fontWeight: '700', color: '#0F172A', marginTop: '2rem', marginBottom: '1rem' }}>
+              <h3 className="city-seo-subtitle">
                 Commercial Painting Services
               </h3>
-              <p style={{ marginBottom: '1.5rem' }}>
+              <p>
                 {city.name} businesses trust JH Painting for professional commercial painting that minimizes disruption to operations. We work around your schedule—evenings, weekends, or overnight—to complete projects without affecting your business. From offices and retail spaces to restaurants and medical facilities, we deliver commercial-quality results that enhance your professional image.
               </p>
 
-              <div style={{
-                marginTop: '2.5rem',
-                padding: '2rem',
-                background: 'linear-gradient(135deg, #FEF3F2 0%, #FEE2E2 100%)',
-                borderRadius: '16px',
-                border: '1px solid #FECACA'
-              }}>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#DC2626', marginBottom: '1rem' }}>
+              <div className="city-seo-cta-box">
+                <h3 className="city-seo-cta-title">
                   Ready to Get Started?
                 </h3>
-                <p style={{ color: '#7F1D1D', marginBottom: '1.5rem' }}>
+                <p className="city-seo-cta-text">
                   Join the hundreds of {city.name} homeowners who have trusted JH Painting Services to transform their properties. Call today for your free, no-obligation estimate.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                  <a href="tel:+15086908886" style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    padding: '0.875rem 1.5rem',
-                    background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-                    color: '#fff',
-                    borderRadius: '10px',
-                    fontSize: '1rem',
-                    fontWeight: '600',
-                    textDecoration: 'none'
-                  }}>
+                <div className="city-seo-cta-buttons">
+                  <a href="tel:+15086908886" className="city-cta-btn">
                     <Phone size={18} />
                     (508) 690-8886
                   </a>
-                  <a href="#quote-form" style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    padding: '0.875rem 1.5rem',
-                    background: '#fff',
-                    color: '#DC2626',
-                    borderRadius: '10px',
-                    fontSize: '1rem',
-                    fontWeight: '600',
-                    textDecoration: 'none',
-                    border: '2px solid #DC2626'
-                  }}>
+                  <a href="#quote-form" className="city-cta-btn-outline">
                     Get Free Estimate
                     <ChevronRight size={18} />
                   </a>
@@ -1666,58 +1270,23 @@ export default function CityPage({ params }: Props) {
       </section>
 
       {/* CTA Section */}
-      <section style={{
-        padding: '5rem 0',
-        background: 'linear-gradient(135deg, #DC2626 0%, #991B1B 100%)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          opacity: 0.1,
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
-        }} />
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '800', color: '#fff', marginBottom: '1.5rem' }}>
+      <section className="city-cta-section">
+        <div className="city-cta-pattern" />
+        <div className="container">
+          <div className="city-cta-content">
+            <h2 className="city-cta-title">
               Ready to Transform Your {city.name} Property?
             </h2>
-            <p style={{ fontSize: '1.25rem', color: 'rgba(255, 255, 255, 0.9)', marginBottom: '2.5rem', lineHeight: '1.7' }}>
+            <p className="city-cta-subtitle">
               Get a free, detailed estimate for your painting project today.
               No obligation, no pressure—just honest advice and transparent pricing.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href="tel:+15086908886" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.75rem',
-                padding: '1.25rem 2.5rem',
-                background: '#fff',
-                color: '#DC2626',
-                borderRadius: '12px',
-                fontSize: '1.25rem',
-                fontWeight: '700',
-                textDecoration: 'none',
-                boxShadow: '0 10px 40px rgba(0, 0, 0, 0.2)'
-              }}>
+            <div className="city-cta-buttons">
+              <a href="tel:+15086908886" className="city-cta-btn-white">
                 <Phone size={24} />
                 (508) 690-8886
               </a>
-              <a href="#quote-form" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.75rem',
-                padding: '1.25rem 2.5rem',
-                background: 'rgba(255, 255, 255, 0.15)',
-                backdropFilter: 'blur(10px)',
-                color: '#fff',
-                borderRadius: '12px',
-                fontSize: '1.25rem',
-                fontWeight: '600',
-                textDecoration: 'none',
-                border: '2px solid rgba(255, 255, 255, 0.3)'
-              }}>
+              <a href="#quote-form" className="city-cta-btn-glass">
                 <Mail size={24} />
                 Request Quote
               </a>
@@ -1727,53 +1296,29 @@ export default function CityPage({ params }: Props) {
       </section>
 
       {/* Service Areas Section */}
-      <section style={{ padding: '4rem 0', background: '#0F172A' }}>
+      <section className="city-areas-section">
         <div className="container">
-          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: '1.75rem', fontWeight: '700', color: '#fff', marginBottom: '0.75rem' }}>
+          <div className="city-areas-content">
+            <div className="city-areas-header">
+              <h2 className="city-areas-title">
                 Serving 114+ Cities Across Massachusetts
               </h2>
-              <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1rem' }}>
+              <p className="city-areas-subtitle">
                 Professional painting services throughout the state
               </p>
             </div>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'center' }}>
+            <div className="city-areas-grid">
               {footerCities.map((footerCity, idx) => (
                 <Link
                   key={idx}
                   href={`/cities/${footerCity.toLowerCase().replace(/ /g, '-')}`}
-                  style={{
-                    padding: '0.5rem 1rem',
-                    background: footerCity === city.name ? 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)' : 'rgba(255, 255, 255, 0.1)',
-                    borderRadius: '100px',
-                    color: '#fff',
-                    fontSize: '0.875rem',
-                    fontWeight: '500',
-                    textDecoration: 'none',
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                    transition: 'all 0.3s ease'
-                  }}
+                  className={`city-areas-link ${footerCity === city.name ? 'city-areas-link-active' : ''}`}
                 >
                   {footerCity}
                 </Link>
               ))}
-              <Link
-                href="/cities"
-                style={{
-                  padding: '0.5rem 1rem',
-                  background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-                  borderRadius: '100px',
-                  color: '#fff',
-                  fontSize: '0.875rem',
-                  fontWeight: '600',
-                  textDecoration: 'none',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.5rem'
-                }}
-              >
+              <Link href="/cities" className="city-areas-link-all">
                 View All Cities <ChevronRight size={16} />
               </Link>
             </div>
@@ -1783,31 +1328,23 @@ export default function CityPage({ params }: Props) {
       </main>
 
       {/* Footer */}
-      <footer style={{ background: '#030712', padding: '4rem 0 2rem' }}>
+      <footer className="city-footer">
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '3rem',
-            maxWidth: '1200px',
-            margin: '0 auto',
-            paddingBottom: '3rem',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-          }}>
+          <div className="city-footer-grid">
             {/* Brand */}
-            <div>
+            <div className="city-footer-brand">
               <Image
                 src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
                 alt="JH Painting Services"
                 width={160}
                 height={64}
-                style={{ filter: 'brightness(0) invert(1)', marginBottom: '1.5rem' }}
+                className="city-footer-logo"
               />
-              <p style={{ color: 'rgba(255, 255, 255, 0.7)', lineHeight: '1.7', marginBottom: '1.5rem' }}>
+              <p className="city-footer-desc">
                 Professional painting services for homes and businesses across Massachusetts.
                 Licensed, insured, and dedicated to excellence.
               </p>
-              <div style={{ display: 'flex', gap: '1rem' }}>
+              <div className="city-footer-social">
                 {[
                   { href: 'https://www.facebook.com/profile.php?id=61564489391475', label: 'Facebook' },
                   { href: 'https://www.instagram.com/jhpaintingservices_/', label: 'Instagram' },
@@ -1818,17 +1355,7 @@ export default function CityPage({ params }: Props) {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      width: '40px',
-                      height: '40px',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      borderRadius: '10px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: '#fff',
-                      transition: 'all 0.3s ease'
-                    }}
+                    className="city-footer-social-link"
                     aria-label={social.label}
                   >
                     {social.label === 'Facebook' && (
@@ -1847,8 +1374,8 @@ export default function CityPage({ params }: Props) {
 
             {/* Quick Links */}
             <div>
-              <h4 style={{ color: '#fff', fontSize: '1.125rem', fontWeight: '700', marginBottom: '1.5rem' }}>Quick Links</h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <h4 className="city-footer-title">Quick Links</h4>
+              <ul className="city-footer-links">
                 {[
                   { label: 'Home', href: '/' },
                   { label: 'About Us', href: '/#about' },
@@ -1857,8 +1384,8 @@ export default function CityPage({ params }: Props) {
                   { label: 'Reviews', href: '/#reviews' },
                   { label: 'Contact', href: '/#contact' }
                 ].map((link, idx) => (
-                  <li key={idx} style={{ marginBottom: '0.75rem' }}>
-                    <Link href={link.href} style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none', fontSize: '0.9375rem' }}>
+                  <li key={idx}>
+                    <Link href={link.href}>
                       {link.label}
                     </Link>
                   </li>
@@ -1868,11 +1395,11 @@ export default function CityPage({ params }: Props) {
 
             {/* Services */}
             <div>
-              <h4 style={{ color: '#fff', fontSize: '1.125rem', fontWeight: '700', marginBottom: '1.5rem' }}>Our Services</h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <h4 className="city-footer-title">Our Services</h4>
+              <ul className="city-footer-links">
                 {servicesList.map((svc, idx) => (
-                  <li key={idx} style={{ marginBottom: '0.75rem' }}>
-                    <Link href={`/services/${svc.slug}`} style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none', fontSize: '0.9375rem' }}>
+                  <li key={idx}>
+                    <Link href={`/services/${svc.slug}`}>
                       {svc.name}
                     </Link>
                   </li>
@@ -1882,31 +1409,41 @@ export default function CityPage({ params }: Props) {
 
             {/* Contact */}
             <div>
-              <h4 style={{ color: '#fff', fontSize: '1.125rem', fontWeight: '700', marginBottom: '1.5rem' }}>Contact Us</h4>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <a href="tel:+15086908886" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none' }}>
-                  <Phone size={18} color="#DC2626" />
+              <h4 className="city-footer-title">Contact Us</h4>
+              <div className="city-footer-contact-item">
+                <span className="city-footer-contact-icon">
+                  <Phone size={18} />
+                </span>
+                <a href="tel:+15086908886" className="city-footer-contact-link">
                   (508) 690-8886
                 </a>
-                <a href="mailto:contact@jhpaintingservices.com" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none' }}>
-                  <Mail size={18} color="#DC2626" />
+              </div>
+              <div className="city-footer-contact-item">
+                <span className="city-footer-contact-icon">
+                  <Mail size={18} />
+                </span>
+                <a href="mailto:contact@jhpaintingservices.com" className="city-footer-contact-link">
                   contact@jhpaintingservices.com
                 </a>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'rgba(255, 255, 255, 0.7)' }}>
-                  <MapPin size={18} color="#DC2626" />
-                  Serving All of Massachusetts
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'rgba(255, 255, 255, 0.7)' }}>
-                  <Clock size={18} color="#DC2626" />
-                  Mon-Sat: 7AM - 6PM
-                </div>
+              </div>
+              <div className="city-footer-contact-item">
+                <span className="city-footer-contact-icon">
+                  <MapPin size={18} />
+                </span>
+                <span>Serving All of Massachusetts</span>
+              </div>
+              <div className="city-footer-contact-item">
+                <span className="city-footer-contact-icon">
+                  <Clock size={18} />
+                </span>
+                <span>Mon-Sat: 7AM - 6PM</span>
               </div>
             </div>
           </div>
 
           {/* Footer Bottom */}
-          <div style={{ textAlign: 'center', paddingTop: '2rem' }}>
-            <p style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.875rem' }}>
+          <div className="city-footer-bottom">
+            <p className="city-footer-copyright">
               © 2025 JH Painting Services. All Rights Reserved. Licensed Painting Contractor | Serving Massachusetts
             </p>
           </div>

@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const countyName = city.county || 'Massachusetts'
 
   return {
-    title: `Professional Painters in ${cityName} MA | House Painting Services | JH Painting`,
-    description: `Looking for professional painters in ${cityName}, Massachusetts? JH Painting offers expert interior & exterior painting, cabinet refinishing in ${cityName} ${countyName}. Licensed & insured. Free estimates! Call (508) 690-8886.`,
+    title: `Professional Painters in ${cityName}, MA | JH Painting Services`,
+    description: `Expert painting services in ${cityName}, MA. Interior, exterior, cabinet refinishing. Licensed & insured contractors serving ${countyName}. Free estimates.`,
     keywords: `painters ${cityName} MA, house painters ${cityName}, painting contractors ${cityName} Massachusetts, interior painting ${cityName}, exterior painting ${cityName}, ${cityName} painting company, best painters in ${cityName}, residential painting ${cityName} MA, commercial painting ${cityName}, cabinet painting ${cityName}`,
     openGraph: {
       title: `Professional Painters in ${cityName} MA | JH Painting Services`,

@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "JH Painting Services",
+  "name_for_model": "jh_painting_services",
+  "description_for_human": "Professional painting services in Massachusetts. Interior, exterior, cabinet painting, and floor refinishing.",
+  "description_for_model": "JH Painting Services is a professional painting contractor based in Waltham, Massachusetts, serving 114+ cities across the state. Founded in July 2018 by Jafet Henrique, they specialize in interior painting, exterior painting, commercial painting, residential painting, cabinet refinishing, and floor restoration. They use premium Sherwin-Williams and Benjamin Moore paints, are fully licensed and insured in Massachusetts, and have a 5-star Google rating with 40+ reviews. Contact: (508) 690-8886, website: jhpaintingservices.com. They offer free estimates and have a 2-year workmanship warranty.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://jhpaintingservices.com/openapi.yaml"
+  },
+  "logo_url": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png",
+  "contact_email": "contact@jhpaintingservices.com",
+  "legal_info_url": "https://jhpaintingservices.com"
+}

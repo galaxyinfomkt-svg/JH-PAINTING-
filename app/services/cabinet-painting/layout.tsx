@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cabinet Painting Services Massachusetts | Kitchen Cabinet Refinishing | JH Painting',
-  description: 'Professional cabinet painting and refinishing services in Massachusetts. Transform your kitchen cabinets for 70% less than replacement. Expert spray finishing, premium materials. Licensed & insured. Call (508) 690-8886 for free estimate!',
+  title: 'Cabinet Painting & Refinishing in Massachusetts | JH Painting',
+  description: 'Professional cabinet painting in Massachusetts. Transform kitchen cabinets for 70% less than replacement. Expert spray finishing. Free estimates.',
   keywords: 'cabinet painting Massachusetts, kitchen cabinet refinishing MA, cabinet spray painting, cabinet transformation, kitchen makeover Massachusetts, professional cabinet painters, JH Painting Services',
   openGraph: {
     title: 'Cabinet Painting Services Massachusetts | JH Painting',

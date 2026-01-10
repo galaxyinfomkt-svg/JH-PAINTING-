@@ -6,7 +6,7 @@ import Script from 'next/script'
 import { Phone, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles } from 'lucide-react'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
-import { BUSINESS, ALL_CITY_NAMES, VIDEOS, FORM_IDS } from '@/lib/constants'
+import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 
 // Schema JSON-LD for Interior Painting Service
 const interiorPaintingSchema = {
@@ -140,12 +140,12 @@ const interiorPaintingSchema = {
 }
 
 const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Interior painting living room', category: 'Living Room' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Interior painting bedroom', category: 'Bedroom' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Interior floor refinishing', category: 'Floors' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Cabinet painting', category: 'Cabinets' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Professional painting work', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'House painters Massachusetts', category: 'Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Professional interior living room painting in Massachusetts by JH Painting', category: 'Living Room' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Expert bedroom painting services in Waltham MA', category: 'Bedroom' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Hardwood floor refinishing services Massachusetts', category: 'Floors' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Kitchen cabinet painting and refinishing MA', category: 'Cabinets' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Professional house painting contractors Massachusetts', category: 'Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Licensed house painters serving Massachusetts homes', category: 'Exterior' },
 ]
 
 const painPoints = [
@@ -406,9 +406,10 @@ export default function InteriorPaintingPage() {
               <div className="service-about-image">
                 <Image
                   src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac03fd033dc1.png"
-                  alt="Jafet Herra - Owner of JH Painting Services"
+                  alt="Jafet Henrique - Owner of JH Painting Services in Massachusetts"
                   fill
                   className="object-cover"
+                  style={{ objectPosition: 'top center' }}
                 />
               </div>
               <div className="service-about-experience">
@@ -419,9 +420,9 @@ export default function InteriorPaintingPage() {
 
             <div className="service-about-content">
               <span className="service-section-badge">About Us</span>
-              <h2>Meet Jafet Herra, Your Interior Painting Expert</h2>
+              <h2>Meet Jafet Henrique, Your Interior Painting Expert</h2>
               <p>
-                Founded with a passion for perfection, JH Painting Services has been transforming interiors across Massachusetts for over 15 years. Owner Jafet Herra leads every project with dedication to quality and customer satisfaction.
+                Founded with a passion for perfection, JH Painting Services has been transforming interiors across Massachusetts for over 15 years. Owner Jafet Henrique leads every project with dedication to quality and customer satisfaction.
               </p>
               <p>
                 We understand that your interior reflects your personality. From cozy bedrooms to professional offices, we deliver flawless finishes that exceed expectations. Our attention to detail, clean work practices, and premium materials set us apart.
@@ -461,36 +462,6 @@ export default function InteriorPaintingPage() {
         </div>
       </section>
 
-      {/* Service Areas */}
-      <section className="service-areas-section">
-        <div className="container">
-          <div className="service-section-header">
-            <h2 className="service-areas-title">Interior Painting Service Areas</h2>
-            <p className="service-section-subtitle">
-              Serving 117 cities across Massachusetts
-            </p>
-          </div>
-
-          <div className="service-areas-grid">
-            {ALL_CITY_NAMES.map((city, idx) => (
-              <Link
-                key={idx}
-                href={`/cities/${city.toLowerCase().replace(/\s+/g, '-')}/interior-painting`}
-                className="service-area-tag"
-              >
-                {city}
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link href="/cities" className="service-view-all-btn">
-              View All 117 Cities
-              <ChevronRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
       </main>
 
       {/* Footer */}

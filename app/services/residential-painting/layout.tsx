@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Residential Painting Services Massachusetts | Home Painters | JH Painting',
-  description: 'Professional residential painting services for Massachusetts homes. Expert interior and exterior house painting. Quality finishes, fair prices. Licensed & insured. Call (508) 690-8886 for free estimate!',
+  title: 'Residential Painting Services in Massachusetts | JH Painting',
+  description: 'Professional home painting in Massachusetts. Expert interior & exterior painting. Quality finishes, fair prices. Licensed contractors. Free estimates.',
   keywords: 'residential painting Massachusetts, home painters MA, house painting services, interior house painting, exterior house painting, residential paint contractors, home improvement painting, JH Painting Services',
   openGraph: {
     title: 'Residential Painting Services Massachusetts | JH Painting',

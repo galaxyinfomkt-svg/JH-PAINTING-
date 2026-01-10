@@ -6,7 +6,7 @@ import Script from 'next/script'
 import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Palette, DollarSign, Timer } from 'lucide-react'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
-import { BUSINESS, ALL_CITY_NAMES, VIDEOS, FORM_IDS } from '@/lib/constants'
+import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 
 // Schema JSON-LD for Cabinet Painting Service
 const cabinetPaintingSchema = {
@@ -140,12 +140,12 @@ const cabinetPaintingSchema = {
 }
 
 const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Luxury white kitchen cabinet transformation', category: 'Kitchen Cabinets' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Modern gray cabinet refinishing', category: 'Cabinet Refinishing' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Professional spray finish cabinets', category: 'Spray Finishing' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Custom cabinet color matching', category: 'Custom Colors' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Cabinet door and drawer painting', category: 'Door Refinishing' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Complete kitchen cabinet makeover', category: 'Full Makeover' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Luxury white kitchen cabinet painting transformation in Massachusetts', category: 'Kitchen Cabinets' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Modern gray cabinet refinishing services Waltham MA', category: 'Cabinet Refinishing' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Professional spray finish cabinet painting Massachusetts', category: 'Spray Finishing' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Custom cabinet color matching and painting MA', category: 'Custom Colors' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Cabinet door and drawer refinishing in Massachusetts', category: 'Door Refinishing' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Complete kitchen cabinet makeover by JH Painting MA', category: 'Full Makeover' },
 ]
 
 const painPoints = [
@@ -488,10 +488,10 @@ export default function CabinetPaintingPage() {
               <div className="service-about-image">
                 <Image
                   src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac03fd033dc1.png"
-                  alt="Jafet Herra - Owner of JH Painting Services"
-                  width={500}
-                  height={600}
+                  alt="Jafet Henrique - Owner of JH Painting Services in Massachusetts"
+                  fill
                   className="object-cover"
+                  style={{ objectPosition: 'top center' }}
                 />
               </div>
               <div className="service-about-experience">
@@ -503,10 +503,10 @@ export default function CabinetPaintingPage() {
             <div>
               <span className="service-badge-red">About Us</span>
               <h2 className="service-about-title">
-                Meet Jafet Herra, Your Cabinet Painting Expert
+                Meet Jafet Henrique, Your Cabinet Painting Expert
               </h2>
               <p className="service-about-desc">
-                With over 15 years of experience transforming kitchens across Massachusetts, JH Painting Services has perfected the art of cabinet refinishing. Owner Jafet Herra leads every project with dedication to achieving factory-quality finishes.
+                With over 15 years of experience transforming kitchens across Massachusetts, JH Painting Services has perfected the art of cabinet refinishing. Owner Jafet Henrique leads every project with dedication to achieving factory-quality finishes.
               </p>
               <p className="service-about-desc">
                 We understand that your kitchen is the heart of your home. That's why we use premium cabinet-grade paints and professional spray equipment to deliver smooth, durable finishes that look beautiful and stand up to daily use for years to come.
@@ -542,39 +542,6 @@ export default function CabinetPaintingPage() {
             </a>
             <Link href="/#contact" className="service-cta-btn-outline">
               Request Free Quote
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Areas */}
-      <section className="service-areas-section">
-        <div className="container">
-          <div className="service-section-header">
-            <h2 className="service-section-title">
-              Cabinet Painting Service Areas
-            </h2>
-            <p className="service-section-subtitle">
-              Serving 114 cities across Massachusetts
-            </p>
-          </div>
-
-          <div className="service-areas-grid">
-            {ALL_CITY_NAMES.map((city, idx) => (
-              <Link
-                key={idx}
-                href={`/cities/${city.toLowerCase().replace(/\s+/g, '-')}/cabinet-painting`}
-                className="service-area-link"
-              >
-                {city}
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link href="/cities" className="service-areas-btn">
-              View All 114 Cities
-              <ChevronRight size={18} />
             </Link>
           </div>
         </div>

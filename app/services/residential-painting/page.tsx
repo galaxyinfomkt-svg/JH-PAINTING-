@@ -6,7 +6,7 @@ import Script from 'next/script'
 import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Paintbrush, Home } from 'lucide-react'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
-import { BUSINESS, ALL_CITY_NAMES, VIDEOS, FORM_IDS } from '@/lib/constants'
+import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 
 // Schema JSON-LD for Residential Painting Service
 const residentialPaintingSchema = {
@@ -140,12 +140,12 @@ const residentialPaintingSchema = {
 }
 
 const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Modern living room painting', category: 'Living Room' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Elegant bedroom transformation', category: 'Bedroom' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Kitchen cabinet and wall painting', category: 'Kitchen' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Exterior house painting', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Full home makeover', category: 'Whole House' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Fresh bathroom painting', category: 'Bathroom' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Modern living room painting services in Massachusetts by JH Painting', category: 'Living Room' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Elegant bedroom painting transformation Waltham MA', category: 'Bedroom' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Kitchen cabinet and wall painting services Massachusetts', category: 'Kitchen' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Professional exterior house painting in Massachusetts', category: 'Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Complete residential home makeover by JH Painting MA', category: 'Whole House' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Fresh bathroom painting and renovation Massachusetts', category: 'Bathroom' },
 ]
 
 const painPoints = [
@@ -494,10 +494,10 @@ export default function ResidentialPaintingPage() {
               <div className="service-about-image">
                 <Image
                   src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac03fd033dc1.png"
-                  alt="Jafet Herra - Owner of JH Painting Services"
-                  width={500}
-                  height={600}
+                  alt="Jafet Henrique - Owner of JH Painting Services in Massachusetts"
+                  fill
                   className="object-cover"
+                  style={{ objectPosition: 'top center' }}
                 />
               </div>
               <div className="service-about-experience">
@@ -548,39 +548,6 @@ export default function ResidentialPaintingPage() {
             </a>
             <Link href="/#contact" className="service-cta-btn-outline">
               Get Free Quote
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Areas */}
-      <section className="service-areas-section">
-        <div className="container">
-          <div className="service-section-header">
-            <h2 className="service-section-title">
-              Serving Homeowners Across Massachusetts
-            </h2>
-            <p className="service-section-subtitle">
-              Professional residential painting services available throughout 114 cities
-            </p>
-          </div>
-
-          <div className="service-areas-grid">
-            {ALL_CITY_NAMES.map((city, idx) => (
-              <Link
-                key={idx}
-                href={`/cities/${city.toLowerCase().replace(/\s+/g, '-')}/residential-painting`}
-                className="service-area-link"
-              >
-                {city}
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link href="/cities" className="service-areas-btn">
-              View All 114 Cities
-              <ChevronRight size={18} />
             </Link>
           </div>
         </div>
