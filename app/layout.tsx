@@ -48,13 +48,20 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Preconnect to external resources for faster loading */}
-        <link rel="preconnect" href="https://storage.googleapis.com" />
-        <link rel="preconnect" href="https://beta.leadconnectorhq.com" />
-        <link rel="preconnect" href="https://reputationhub.site" />
+        <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://storage.googleapis.com" />
         <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://reputationhub.site" />
         <link rel="canonical" href="https://jhpaintingservices.com/" />
+        {/* Preload LCP image for faster first paint */}
+        <link
+          rel="preload"
+          as="image"
+          href="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
+          fetchPriority="high"
+        />
         <meta name="geo.region" content="US-MA" />
         <meta name="geo.placename" content="Massachusetts" />
         <script

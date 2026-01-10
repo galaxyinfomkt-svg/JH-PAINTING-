@@ -2,17 +2,17 @@
    CSS VARIABLES & RESET - LUXURY MODERN 2025
 ============================================ */
 :root {
-  /* PRIMARY - Navy Blue (Autoridade & Luxo) */
-  --jh-navy: #0B1F3B;
-  --jh-navy-light: #1A365D;
-  --jh-navy-dark: #071428;
+  /* PRIMARY - Navy Blue (Matching ampainterinc.com) */
+  --jh-navy: #0A1F44;
+  --jh-navy-light: #142952;
+  --jh-navy-dark: #061430;
 
-  /* ACCENT - Red CTA (Ação) */
-  --jh-red: #E02020;
+  /* ACCENT - Red CTA (Strong brand color) */
+  --jh-red: #DC2626;
   --jh-red-light: #EF4444;
   --jh-red-dark: #B91C1C;
-  --jh-red-gradient: linear-gradient(135deg, #E02020 0%, #B91C1C 100%);
-  --jh-red-glow: 0 0 40px rgba(224, 32, 32, 0.4);
+  --jh-red-gradient: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+  --jh-red-glow: 0 0 40px rgba(220, 38, 38, 0.4);
 
   /* TEXT - Charcoal/Ink (Premium) */
   --jh-dark: #0F172A;
@@ -33,9 +33,9 @@
   --jh-green: #10B981;
 
   /* Legacy aliases */
-  --jh-blue: #0B1F3B;
-  --jh-blue-light: #1A365D;
-  --jh-blue-dark: #071428;
+  --jh-blue: #0A1F44;
+  --jh-blue-light: #142952;
+  --jh-blue-dark: #061430;
 
   /* Modern font stack */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -96,6 +96,12 @@ body {
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern" 1, "liga" 1;
   font-kerning: normal;
+  max-width: 100vw;
+}
+
+/* Prevent horizontal overflow globally */
+main, section, article, header, footer, nav, aside, div {
+  max-width: 100%;
 }
 
 img {
@@ -116,36 +122,51 @@ button {
 }
 
 /* ============================================
-   TYPOGRAPHY - MODERN
+   TYPOGRAPHY - MODERN (Enhanced to match ampainterinc.com)
 ============================================ */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.1;
   color: var(--jh-dark);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
+  line-height: 1.05;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 800;
   letter-spacing: -0.025em;
+  line-height: 1.1;
 }
 
 h3 {
-  font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.375rem;
+  font-weight: 700;
 }
 
 p {
   margin-bottom: 1rem;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #374151;
+}
+
+/* Enhanced paragraph for hero/lead sections */
+.lead-text, .hero-desc {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #4B5563;
 }
 
 /* Gradient text utility */
@@ -310,6 +331,23 @@ p {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+/* Performance: Reduce animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Performance: Use GPU acceleration for animated elements */
+.animate-float,
+.floating-phone-btn,
+[class*="animate-"] {
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 /* ============================================
@@ -3461,7 +3499,7 @@ button:focus:not(:focus-visible) {
 .floating-phone-btn {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  left: 24px;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -3502,7 +3540,7 @@ button:focus:not(:focus-visible) {
 @media (max-width: 768px) {
   .floating-phone-btn {
     bottom: 16px;
-    right: 16px;
+    left: 16px;
     width: 56px;
     height: 56px;
   }
@@ -4870,6 +4908,7 @@ button:focus:not(:focus-visible) {
 
   .hero-trust-badges {
     justify-content: flex-start;
+
     flex-wrap: wrap;
   }
 
@@ -4881,7 +4920,7 @@ button:focus:not(:focus-visible) {
 
 @media (max-width: 576px) {
   .hero {
-    min-height: unset;
+    min-height: 100svh;
     padding: 6rem 0 3rem;
   }
 
@@ -5868,9 +5907,10 @@ a:focus-visible {
 /* About Section */
 .service-about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
   gap: 4rem;
   align-items: center;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -6158,19 +6198,22 @@ a:focus-visible {
   position: relative;
 }
 
-.service-about-image {
+/* This is the modernized version of service-about-image */
+.service-about-image-wrapper .service-about-image {
   position: relative;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.2);
   min-height: 500px;
+  aspect-ratio: 3/4;
+  width: 100%;
 }
 
-.service-about-image img {
+.service-about-image-wrapper .service-about-image img {
   object-position: top center !important;
 }
 
-.service-about-image::before {
+.service-about-image-wrapper .service-about-image::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -6182,6 +6225,7 @@ a:focus-visible {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+  z-index: 1;
 }
 
 .service-about-title {
@@ -6881,7 +6925,7 @@ a:focus-visible {
 .city-pain-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -7075,7 +7119,7 @@ a:focus-visible {
 .city-why-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -7123,7 +7167,7 @@ a:focus-visible {
 /* City Videos Section */
 .city-videos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr));
   gap: 2rem;
   max-width: 1040px;
   margin: 0 auto;
@@ -7640,7 +7684,7 @@ a:focus-visible {
 
 .city-footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;

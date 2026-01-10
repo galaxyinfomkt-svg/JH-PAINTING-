@@ -290,8 +290,10 @@ export default function HomePage() {
               src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
               alt="Professional Painting Services Massachusetts"
               fill
+              sizes="100vw"
               style={{ objectFit: 'cover' }}
               priority
+              fetchPriority="high"
             />
           </div>
           <div className="hero-overlay" />
@@ -457,6 +459,7 @@ export default function HomePage() {
                     alt="Jafet - Owner of JH Painting Services Massachusetts"
                     width={600}
                     height={600}
+                    loading="lazy"
                     style={{ objectFit: 'contain', borderRadius: '16px', width: '100%', height: 'auto' }}
                   />
                 </div>
@@ -516,6 +519,7 @@ export default function HomePage() {
                   alt="Exterior Painting Massachusetts"
                   width={600}
                   height={450}
+                  loading="lazy"
                   style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '16px' }}
                 />
               </div>
@@ -582,6 +586,7 @@ export default function HomePage() {
                   alt="Interior Painting Massachusetts"
                   width={600}
                   height={450}
+                  loading="lazy"
                   style={{ objectFit: 'cover' }}
                 />
               </div>
@@ -637,6 +642,7 @@ export default function HomePage() {
                     src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                     alt={video.title}
                     fill
+                    loading="lazy"
                     style={{ objectFit: 'cover' }}
                   />
                   <div className="video-card-rs-overlay">
