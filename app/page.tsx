@@ -204,6 +204,11 @@ export default function HomePage() {
               <a href="#contact">Contact</a>
             </nav>
 
+            <a href="tel:+15086908886" className="header-cta">
+              <Phone size={18} />
+              (508) 690-8886
+            </a>
+
             <button className="menu-btn" onClick={toggleMenu} aria-label="Open menu">
               <Menu size={28} />
             </button>
@@ -451,6 +456,15 @@ export default function HomePage() {
                     height={450}
                     style={{ objectFit: 'cover', borderRadius: '16px' }}
                   />
+                </div>
+                <div className="trusted-contractor-badge">
+                  <div className="trusted-contractor-badge-icon">
+                    <MapPin size={20} />
+                  </div>
+                  <div className="trusted-contractor-badge-content">
+                    <span className="trusted-contractor-badge-title">Trusted Contractor</span>
+                    <span className="trusted-contractor-badge-subtitle">Massachusetts Licensed</span>
+                  </div>
                 </div>
               </div>
             </div>

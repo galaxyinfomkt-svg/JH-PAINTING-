@@ -549,9 +549,9 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4.5rem;
-  padding: 0.5rem 0;
-  gap: 0.5rem;
+  height: 5rem;
+  padding: 0.75rem 0;
+  gap: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -2383,6 +2383,71 @@ p {
   font-weight: 800;
 }
 
+/* Trusted Contractor Badge - RS Style */
+.trusted-contractor-badge {
+  position: absolute;
+  bottom: -1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  color: var(--jh-dark);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.trusted-contractor-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--jh-gold);
+  border-radius: 50%;
+  color: var(--jh-dark);
+}
+
+.trusted-contractor-badge-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.trusted-contractor-badge-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--jh-dark);
+}
+
+.trusted-contractor-badge-subtitle {
+  font-size: 0.8125rem;
+  color: var(--jh-text-light);
+}
+
+@media (max-width: 768px) {
+  .trusted-contractor-badge {
+    bottom: -1rem;
+    right: 1rem;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .trusted-contractor-badge-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .trusted-contractor-badge-title {
+    font-size: 0.875rem;
+  }
+
+  .trusted-contractor-badge-subtitle {
+    font-size: 0.75rem;
+  }
+}
+
 /* ============================================
    GALLERY SECTION - ENHANCED
 ============================================ */
@@ -2693,6 +2758,81 @@ p {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 0;
+}
+
+/* Footer RS Style */
+.footer-rs {
+  background: var(--jh-navy);
+  color: #fff;
+}
+
+.footer-service-areas {
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-service-areas-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--jh-gold);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.footer-cities-list {
+  text-align: center;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9375rem;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+}
+
+.footer-city-link-rs {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color var(--transition-base);
+}
+
+.footer-city-link-rs:hover {
+  color: var(--jh-gold);
+}
+
+.footer-cta-link {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9375rem;
+}
+
+.footer-cta-link-highlight {
+  color: var(--jh-red);
+  font-weight: 600;
+  transition: color var(--transition-base);
+}
+
+.footer-cta-link-highlight:hover {
+  color: var(--jh-red-light);
+}
+
+.footer-bottom-rs {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer-bottom-rs p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.25rem;
+}
+
+.footer-bottom-sub {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* ============================================

@@ -181,6 +181,11 @@ export default function Header({ variant = 'default' }: HeaderProps) {
               )}
             </nav>
 
+            <a href={`tel:${BUSINESS.phoneRaw}`} className="header-cta">
+              <Phone size={18} />
+              {BUSINESS.phone}
+            </a>
+
             <button className="menu-btn" onClick={toggleMenu} aria-label="Open menu">
               <Menu size={28} />
             </button>
