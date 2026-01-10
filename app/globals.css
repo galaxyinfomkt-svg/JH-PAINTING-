@@ -4685,21 +4685,21 @@ button:focus:not(:focus-visible) {
   }
 
   .hero-text {
-    text-align: center;
+    text-align: left;
   }
 
   .hero-top-badges {
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
   .hero-buttons {
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
   .hero-trust-badges {
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
@@ -4716,12 +4716,13 @@ button:focus:not(:focus-visible) {
   }
 
   .hero-title {
-    font-size: 1.75rem;
-    line-height: 1.2;
+    font-size: 2.25rem;
+    line-height: 1.15;
   }
 
   .hero-subtitle {
-    font-size: 0.9375rem;
+    font-size: 1.0625rem;
+    line-height: 1.6;
   }
 
   .hero-top-badges {
