@@ -169,6 +169,7 @@ export default function Header({ variant = 'default' }: HeaderProps) {
               ) : (
                 <a href="#gallery">Gallery</a>
               )}
+              <Link href="/blog">Blog</Link>
               {isServicePage ? (
                 <Link href="/#reviews">Reviews</Link>
               ) : (
@@ -257,6 +258,7 @@ export default function Header({ variant = 'default' }: HeaderProps) {
             ) : (
               <a href="#gallery" onClick={closeMenu}>Gallery</a>
             )}
+            <Link href="/blog" onClick={closeMenu}>Blog</Link>
             {isServicePage ? (
               <Link href="/#reviews" onClick={closeMenu}>Reviews</Link>
             ) : (

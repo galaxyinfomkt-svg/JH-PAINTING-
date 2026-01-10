@@ -19,12 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const countyName = city.county || 'Massachusetts'
 
   return {
-    title: `Professional Painters in ${cityName}, MA | JH Painting Services`,
-    description: `Expert painting services in ${cityName}, MA. Interior, exterior, cabinet refinishing. Licensed & insured contractors serving ${countyName}. Free estimates.`,
+    title: `#1 Painting Contractor in ${cityName}, MA | JH Painting Services`,
+    description: `#1 rated painting contractor in ${cityName}, MA. Expert interior & exterior painting, cabinet refinishing. Licensed & insured. 5-star rated with 40+ reviews. Free estimates.`,
     keywords: `painters ${cityName} MA, house painters ${cityName}, painting contractors ${cityName} Massachusetts, interior painting ${cityName}, exterior painting ${cityName}, ${cityName} painting company, best painters in ${cityName}, residential painting ${cityName} MA, commercial painting ${cityName}, cabinet painting ${cityName}`,
     openGraph: {
-      title: `Professional Painters in ${cityName} MA | JH Painting Services`,
-      description: `Expert painting services in ${cityName}, Massachusetts. Interior, exterior, cabinet painting. Licensed & insured. Free estimates!`,
+      title: `#1 Painting Contractor in ${cityName}, MA | JH Painting`,
+      description: `#1 rated painting contractor in ${cityName}, Massachusetts. Interior, exterior, cabinet painting. Licensed & insured. Free estimates!`,
       url: `https://jhpaintingservices.com/cities/${params.city}`,
       siteName: 'JH Painting Services',
       locale: 'en_US',
@@ -40,8 +40,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `Professional Painters in ${cityName} MA | JH Painting`,
-      description: `Expert painting services in ${cityName}, Massachusetts. Call (508) 690-8886!`,
+      title: `#1 Painting Contractor in ${cityName}, MA | JH Painting`,
+      description: `#1 rated painting contractor in ${cityName}, MA. Call (508) 690-8886!`,
       images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
     },
     alternates: {

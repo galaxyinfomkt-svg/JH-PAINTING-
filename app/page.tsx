@@ -26,6 +26,7 @@ import {
   Award
 } from 'lucide-react'
 import { cities } from './data/cities'
+import LazyIframe from './components/LazyIframe'
 
 // Data
 const services = [
@@ -294,6 +295,8 @@ export default function HomePage() {
               style={{ objectFit: 'cover' }}
               priority
               fetchPriority="high"
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LC0yMi4xODY6NT04Mj4uQkJCLkpKTk5OWlpVVV5eXl5eXl7/2wBDARUXFx4aHh4lISElXkI2Ql5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl7/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAHxAAAgICAgMBAAAAAAAAAAAAAQIAAwQREiExQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/ANmNkY9lJx8ipLKm5KyuAQNb8H2JTU"
             />
           </div>
           <div className="hero-overlay" />
@@ -317,11 +320,20 @@ export default function HomePage() {
                 </div>
 
                 <h1 className="hero-title">
-                  Professional <strong>Painting</strong> & Construction Contractor in Massachusetts
+                  <span className="hero-title-number">#1</span> <span className="hero-title-highlight">Painting</span><br />
+                  <span className="hero-title-highlight">Contractor</span> <span className="hero-title-in">in</span><br />
+                  <span className="hero-title-state">Massachusetts</span>
                 </h1>
 
-                <p className="hero-subtitle">
-                  Expert <strong>exterior & interior painting</strong>, cabinet refinishing, and floor restoration. Licensed & insured contractor serving Waltham and 114+ cities across Massachusetts.
+                <p className="hero-subtitle hero-cities">
+                  Waltham, Boston, Cambridge,<br />
+                  Worcester & Beyond
+                </p>
+
+                <p className="hero-description">
+                  Professional interior and exterior painting services for homes and businesses across Massachusetts.
+                  Licensed, insured, and trusted by 200+ families. Premium paints, expert craftsmanship, and
+                  100% satisfaction guaranteed. Get your free estimate today.
                 </p>
 
                 <div className="hero-buttons">
@@ -418,6 +430,7 @@ export default function HomePage() {
                       alt={service.title}
                       width={600}
                       height={400}
+                      loading="lazy"
                       style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                     />
                   </div>
@@ -689,6 +702,7 @@ export default function HomePage() {
                     alt={img.alt}
                     width={400}
                     height={300}
+                    loading="lazy"
                     style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                   />
                   <div className="gallery-item-overlay">
@@ -708,13 +722,12 @@ export default function HomePage() {
               <p>Trusted by homeowners across Massachusetts.</p>
             </div>
 
-            <iframe
+            <LazyIframe
               className="lc_reviews_widget reviews-widget"
               src="https://reputationhub.site/reputation/widgets/review_widget/0Def8kzJShLPuKrPk5Jw"
               frameBorder={0}
               scrolling="no"
-              style={{ minWidth: '100%', width: '100%', border: 'none' }}
-              loading="lazy"
+              style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '400px' }}
               title="Customer Reviews"
             />
           </div>
@@ -731,11 +744,11 @@ export default function HomePage() {
             <div className="contact-grid">
               <div className="contact-form-card">
                 <h3>Request Your Free Estimate</h3>
-                <iframe
+                <LazyIframe
                   className="contact-form-iframe"
                   src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
                   title="Contact Form"
-                  loading="lazy"
+                  style={{ minHeight: '500px' }}
                 />
               </div>
 
@@ -785,12 +798,12 @@ export default function HomePage() {
                 </div>
 
                 <div className="map-container">
-                  <iframe
+                  <LazyIframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1517205.5747339479!2d-71.68353554999999!3d42.0369155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60c735e8062f080f%3A0xecd39bea9de17cbf!2sJH%20Painting%20Services!5e0!3m2!1sen!2sbr!4v1768058870291!5m2!1sen!2sbr"
                     allowFullScreen
-                    loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="JH Painting Services Location - Serving All of Massachusetts"
+                    style={{ minHeight: '300px' }}
                   />
                 </div>
               </div>

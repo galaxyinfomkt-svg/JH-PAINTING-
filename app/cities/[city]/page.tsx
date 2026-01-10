@@ -7,6 +7,7 @@ import Script from 'next/script'
 import { notFound } from 'next/navigation'
 import { Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, Home, Building2, PaintBucket, Brush, Menu, X, ChevronDown, Paintbrush, Palette, DollarSign } from 'lucide-react'
 import { getCityBySlug, cities } from '@/app/data/cities'
+import LazyIframe from '@/app/components/LazyIframe'
 
 // Menu data
 const menuServices = [
@@ -232,12 +233,12 @@ const galleryImages = [
 ]
 
 const videos = [
-  { id: 'F_lreXzNlUI', title: 'Exterior Painting in Massachusetts' },
-  { id: 'LkT_HLyKibY', title: 'Interior Painting in Massachusetts' },
+  { id: 'F_lreXzNlUI', title: 'Exterior Painting in Massachusetts', type: 'YouTube Short' },
+  { id: 'LkT_HLyKibY', title: 'Interior Painting in Massachusetts', type: 'YouTube Short' },
 ]
 
-// Use first 18 cities from the actual cities list
-const footerCities = cities.slice(0, 18).map(c => c.name)
+// Use all cities from the actual cities list
+const footerCities = cities.map(c => c.name)
 
 const servicesList = [
   { slug: 'interior-painting', name: 'Interior Painting', icon: Brush },
@@ -299,7 +300,7 @@ export default function CityPage({ params }: Props) {
                 contact@jhpaintingservices.com
               </a>
             </div>
-            <a href="tel:+15086908886" className="top-bar-phone-btn">
+            <a href="tel:+15086908886" className="top-bar-phone-btn" aria-label="Call JH Painting Services at 508-690-8886">
               <Phone size={12} />
               (508) 690-8886
             </a>
@@ -331,7 +332,7 @@ export default function CityPage({ params }: Props) {
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
-                <button className="nav-dropdown-toggle">
+                <button className="nav-dropdown-toggle" aria-expanded={servicesOpen ? "true" : "false"} aria-haspopup="true">
                   Services
                   <ChevronDown size={16} className={`nav-dropdown-icon ${servicesOpen ? 'open' : ''}`} />
                 </button>
@@ -365,7 +366,7 @@ export default function CityPage({ params }: Props) {
               <Link href="/#contact">Contact</Link>
             </nav>
 
-            <a href="tel:+15086908886" className="header-cta">
+            <a href="tel:+15086908886" className="header-cta" aria-label="Call JH Painting Services at 508-690-8886">
               <Phone size={18} />
               (508) 690-8886
             </a>
@@ -447,10 +448,13 @@ export default function CityPage({ params }: Props) {
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
           <Image
             src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
-            alt={`Professional Painting Services in ${city.name}`}
+            alt={`Professional Painting Services in ${city.name}, Massachusetts`}
             fill
             style={{ objectFit: 'cover' }}
             priority
+            fetchPriority="high"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LC0yMi4xODY6NT04Mj4uQkJCLkpKTk5OWlpVVV5eXl5eXl7/2wBDARUXFx4aHh4lISElXkI2Ql5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl7/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAHxAAAgICAgMBAAAAAAAAAAAAAQIAAwQREiExQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/ANmNkY9lJx8ipLKm5KyuAQNb8H2JTU"
           />
           <div style={{
             position: 'absolute',
@@ -485,7 +489,7 @@ export default function CityPage({ params }: Props) {
                   alignItems: 'center',
                   gap: '0.375rem',
                   padding: '0.5rem 1rem',
-                  background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
+                  background: 'linear-gradient(135deg, #D20404 0%, #A80303 100%)',
                   borderRadius: '100px',
                   color: '#fff',
                   fontSize: '0.875rem',
@@ -500,37 +504,39 @@ export default function CityPage({ params }: Props) {
                 </span>
               </div>
 
-              <h1 style={{
-                fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              <h1 className="hero-title" style={{
+                fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
                 fontWeight: '800',
                 color: '#fff',
-                lineHeight: '1.1',
+                lineHeight: '1.05',
                 marginBottom: '1.5rem',
                 letterSpacing: '-0.02em'
               }}>
-                Premium <span style={{ color: '#DC2626' }}>Painting Services</span> in {city.name}
+                <span className="hero-title-number">#1</span> <span className="hero-title-highlight">Painting</span><br />
+                <span className="hero-title-highlight">Contractor</span> <span className="hero-title-in">in</span><br />
+                <span className="hero-title-city">{city.name}, MA</span>
               </h1>
 
-              <p style={{
-                fontSize: '1.25rem',
-                color: 'rgba(255, 255, 255, 0.9)',
-                lineHeight: '1.7',
+              <p className="hero-cities" style={{
+                fontSize: 'clamp(1.125rem, 2.5vw, 1.5rem)',
+                color: 'rgba(255, 255, 255, 0.95)',
+                lineHeight: '1.5',
                 marginBottom: '1rem',
-                maxWidth: '600px'
+                fontWeight: '500'
               }}>
-                Are you tired of looking at faded, peeling paint that makes your {city.name} home look neglected?
-                Frustrated by contractors who don't show up or deliver subpar work? You're not alone.
+                Interior & Exterior Painting<br />
+                Cabinet Refinishing & More
               </p>
-              <p style={{
-                fontSize: '1.125rem',
-                color: 'rgba(255, 255, 255, 0.8)',
+              <p className="hero-description" style={{
+                fontSize: '1.0625rem',
+                color: 'rgba(255, 255, 255, 0.85)',
                 lineHeight: '1.7',
                 marginBottom: '2rem',
                 maxWidth: '600px'
               }}>
-                JH Painting Services transforms properties throughout {city.name} and {city.county} with
-                premium craftsmanship, transparent pricing, and the reliability you deserve.
-                Over 200 homeowners have trusted us with their most valuable investment—their home.
+                Looking for professional painters in {city.name}, MA? JH Painting Services delivers premium interior and exterior painting,
+                cabinet refinishing, and deck staining for {city.name} homeowners. Fully licensed, insured, and backed by 40+ five-star
+                Google reviews. We use Sherwin-Williams and Benjamin Moore paints for lasting results. Free estimates, no hidden fees.
               </p>
 
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
@@ -539,7 +545,7 @@ export default function CityPage({ params }: Props) {
                   alignItems: 'center',
                   gap: '0.75rem',
                   padding: '1rem 2rem',
-                  background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
+                  background: 'linear-gradient(135deg, #D20404 0%, #A80303 100%)',
                   color: '#fff',
                   borderRadius: '12px',
                   fontSize: '1.125rem',
@@ -578,7 +584,7 @@ export default function CityPage({ params }: Props) {
                   { icon: Award, text: '40+ 5-Star Google Reviews' }
                 ].map((item, idx) => (
                   <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255, 255, 255, 0.9)' }}>
-                    <item.icon size={18} color="#DC2626" />
+                    <item.icon size={18} color="#D20404" />
                     <span style={{ fontSize: '0.9375rem', fontWeight: '500' }}>{item.text}</span>
                   </div>
                 ))}
@@ -611,19 +617,18 @@ export default function CityPage({ params }: Props) {
                   <Sparkles size={16} />
                   Free Estimate
                 </div>
-                <h2 style={{ fontSize: '1.75rem', fontWeight: '700', color: '#fff', marginBottom: '0.5rem' }}>
+                <h3 style={{ fontSize: '1.75rem', fontWeight: '700', color: '#fff', marginBottom: '0.5rem' }}>
                   Get Your Free Quote
-                </h2>
+                </h3>
                 <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.9375rem' }}>
                   We'll respond within 24 hours
                 </p>
               </div>
 
-              <iframe
+              <LazyIframe
                 src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
                 style={{ width: '100%', height: '450px', border: 'none', borderRadius: '12px' }}
-                title="Contact Form"
-                loading="lazy"
+                title="Contact Form - Request Free Painting Estimate"
               />
 
               <div style={{
@@ -637,7 +642,7 @@ export default function CityPage({ params }: Props) {
                 borderRadius: '12px'
               }}>
                 <div style={{ display: 'flex', gap: '0.25rem' }}>
-                  {[1,2,3,4,5].map(i => <Star key={i} size={16} fill="#DC2626" color="#DC2626" />)}
+                  {[1,2,3,4,5].map(i => <Star key={i} size={16} fill="#D20404" color="#D20404" />)}
                 </div>
                 <span style={{ color: 'rgba(255, 255, 255, 0.9)', fontSize: '0.875rem' }}>5.0 on Google Reviews</span>
               </div>
@@ -645,6 +650,33 @@ export default function CityPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Google Reviews Bar */}
+      <div className="google-reviews-bar">
+        <div className="container">
+          <div className="google-reviews-bar-content">
+            <svg className="google-icon" viewBox="0 0 24 24" fill="none">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+            <span>Google Reviews</span>
+            <div className="stars">
+              <Star size={16} fill="currentColor" />
+              <Star size={16} fill="currentColor" />
+              <Star size={16} fill="currentColor" />
+              <Star size={16} fill="currentColor" />
+              <Star size={16} fill="currentColor" />
+            </div>
+            <span className="rating">5</span>
+            <Link href="/#reviews">
+              See Our Reviews
+              <ChevronRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </div>
 
       {/* Trust Indicators Bar */}
       <section style={{ background: '#0F172A', padding: '1.5rem 0' }}>
@@ -663,7 +695,7 @@ export default function CityPage({ params }: Props) {
               { value: '100%', label: 'Satisfaction' }
             ].map((stat, idx) => (
               <div key={idx} style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#DC2626' }}>{stat.value}</div>
+                <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#D20404' }}>{stat.value}</div>
                 <div style={{ fontSize: '0.875rem', color: 'rgba(255, 255, 255, 0.7)', fontWeight: '500' }}>{stat.label}</div>
               </div>
             ))}
@@ -675,7 +707,7 @@ export default function CityPage({ params }: Props) {
       <section className="city-section city-section-white">
         <div className="container">
           <div className="city-section-header">
-            <span className="city-badge city-badge-gold">
+            <span className="city-badge city-badge-red">
               Our Services in {city.name}
             </span>
             <h2 className="city-section-title">
@@ -733,6 +765,7 @@ export default function CityPage({ params }: Props) {
                   src={img.src}
                   alt={img.alt}
                   fill
+                  loading="lazy"
                   style={{ objectFit: 'cover' }}
                 />
                 <div className="city-gallery-overlay">
@@ -758,45 +791,54 @@ export default function CityPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="city-section city-section-gray">
+      {/* Video Section - Modern RS Style */}
+      <section className="section video-section-rs">
         <div className="container">
-          <div className="city-section-header">
-            <span className="city-badge city-badge-blue">
-              Watch Our Work
-            </span>
-            <h2 className="city-section-title">
-              See Our Team in Action
-            </h2>
-            <p className="city-section-subtitle">
-              Watch how we transform properties with precision and care
-            </p>
+          <div className="section-header">
+            <h2>See Our Work in Action</h2>
+            <p>Watch our expert team tackle painting projects across Massachusetts.</p>
           </div>
 
-          <div className="city-videos-grid">
+          <div className="video-grid-rs">
             {videos.map((video, idx) => (
               <a
                 key={idx}
                 href={`https://www.youtube.com/watch?v=${video.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="city-video-card"
+                className="video-card-rs"
               >
                 <Image
                   src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                   alt={video.title}
                   fill
+                  loading="lazy"
                   style={{ objectFit: 'cover' }}
                 />
-                <div className="city-video-overlay">
-                  <div className="city-video-play">
-                    <Play size={32} color="#fff" fill="#fff" />
+                <div className="video-card-rs-overlay">
+                  <div className="video-card-rs-play">
+                    <Play size={20} />
                   </div>
-                  <h3 className="city-video-title">{video.title}</h3>
-                  <span className="city-video-subtitle">Watch on YouTube</span>
+                  <h4>{video.title}</h4>
+                  <span>
+                    <Play size={12} />
+                    {video.type}
+                  </span>
                 </div>
               </a>
             ))}
+          </div>
+
+          <div className="video-section-cta">
+            <a
+              href="https://www.youtube.com/@JHPaintingServices-br9wh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-lg"
+            >
+              <Play size={18} />
+              Watch More on YouTube
+            </a>
           </div>
         </div>
       </section>
@@ -813,6 +855,7 @@ export default function CityPage({ params }: Props) {
                   alt="Jafet Henrique - Owner of JH Painting Services in Massachusetts"
                   width={600}
                   height={500}
+                  loading="lazy"
                   style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                 />
               </div>
@@ -849,7 +892,7 @@ export default function CityPage({ params }: Props) {
                 ].map((item, idx) => (
                   <div key={idx} className="city-about-feature">
                     <div className="city-about-feature-icon">
-                      <item.icon size={24} color="#DC2626" />
+                      <item.icon size={24} color="#D20404" />
                     </div>
                     <span className="city-about-feature-text">{item.title}</span>
                   </div>
@@ -932,7 +975,7 @@ export default function CityPage({ params }: Props) {
           {/* Testimonial in Pain Points */}
           <div className="city-testimonial">
             <div className="city-testimonial-stars">
-              {[1,2,3,4,5].map(i => <Star key={i} size={24} fill="#DC2626" color="#DC2626" />)}
+              {[1,2,3,4,5].map(i => <Star key={i} size={24} fill="#D20404" color="#D20404" />)}
             </div>
             <blockquote className="city-testimonial-quote">
               "After two bad experiences with other painters in {city.name}, I was skeptical. But JH Painting
@@ -1103,7 +1146,7 @@ export default function CityPage({ params }: Props) {
                   <h3>{faq.question}</h3>
                   <ChevronDown
                     size={24}
-                    color="#DC2626"
+                    color="#D20404"
                     style={{
                       transition: 'transform 0.3s ease',
                       transform: openFaqIndex === idx ? 'rotate(180deg)' : 'rotate(0deg)'
@@ -1338,6 +1381,7 @@ export default function CityPage({ params }: Props) {
                 alt="JH Painting Services"
                 width={160}
                 height={64}
+                loading="lazy"
                 className="city-footer-logo"
               />
               <p className="city-footer-desc">
