@@ -1,14 +1,7 @@
 import { MetadataRoute } from 'next'
 import { cities } from './data/cities'
 import { blogPosts } from './data/blogPosts'
-
-const services = [
-  'interior-painting',
-  'exterior-painting',
-  'commercial-painting',
-  'residential-painting',
-  'cabinet-painting',
-]
+import { getCityPageSlug, getCityServicePageSlug, servicesSlugs } from '@/lib/seo-urls'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://jhpaintingservices.com'
@@ -68,18 +61,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // City pages
+  // City pages with SEO-friendly URLs: /waltham-ma-painters
   const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
-    url: `${baseUrl}/cities/${city.slug}`,
+    url: `${baseUrl}/${getCityPageSlug(city.slug)}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 
-  // City + Service pages
+  // City + Service pages with SEO-friendly URLs: /waltham-ma-interior-painting-services
   const cityServicePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
-    services.map((service) => ({
-      url: `${baseUrl}/cities/${city.slug}/${service}`,
+    servicesSlugs.map((service) => ({
+      url: `${baseUrl}/${getCityServicePageSlug(city.slug, service)}`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.6,
