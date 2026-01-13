@@ -12,6 +12,7 @@ import {
   Search, CheckSquare, ThumbsUp
 } from 'lucide-react'
 import { getCityBySlug, cities, City } from '@/app/data/cities'
+import { getCityContent } from '@/app/data/cityContent'
 import LazyIframe from '@/app/components/LazyIframe'
 import { parseSeoUrl, getCityPageSlug, getCityServicePageSlug, serviceNameMap } from '@/lib/seo-urls'
 
@@ -246,6 +247,9 @@ export default function SeoPage({ params }: Props) {
   if (!city) {
     notFound()
   }
+
+  // Get unique content for this city
+  const cityContent = getCityContent(city.slug)
 
   const isServicePage = !!parsed.serviceSlug
   const service = parsed.serviceSlug ? servicesData[parsed.serviceSlug] : null
@@ -565,26 +569,92 @@ export default function SeoPage({ params }: Props) {
           <div className="container">
             <div className="footer-grid">
               <div className="footer-brand">
-                <Image src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png" alt="JH Painting" width={150} height={60} />
-                <p>Professional painting services in {city.name} and Massachusetts. Licensed, insured, and committed to excellence.</p>
+                <Image
+                  src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
+                  alt="JH Painting Services"
+                  width={160}
+                  height={64}
+                  style={{ filter: 'brightness(0) invert(1)' }}
+                />
+                <p>Professional painting services for homes and businesses across Massachusetts. Licensed, insured, and dedicated to excellence.</p>
+                <div className="footer-social">
+                  <a href="https://www.facebook.com/profile.php?id=61564489391475" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  </a>
+                  <a href="https://www.instagram.com/jhpaintingservices_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+                  </a>
+                  <a href="https://www.youtube.com/@JHPaintingServices-br9wh" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  </a>
+                  <a href="https://g.co/kgs/hc9Rfmv" target="_blank" rel="noopener noreferrer" aria-label="Google">
+                    <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                  </a>
+                </div>
               </div>
-              <div className="footer-links">
+
+              <div className="footer-col">
                 <h4>Quick Links</h4>
-                <Link href="/">Home</Link>
-                <Link href="/#about">About Us</Link>
-                <Link href="/#services">Services</Link>
-                <Link href="/#gallery">Gallery</Link>
-                <Link href="/#contact">Contact</Link>
+                <ul className="footer-links">
+                  <li><Link href="/">Home</Link></li>
+                  <li><Link href="/#about">About</Link></li>
+                  <li><Link href="/#services">Services</Link></li>
+                  <li><Link href="/blog">Blog</Link></li>
+                  <li><Link href="/#gallery">Gallery</Link></li>
+                  <li><Link href="/#reviews">Reviews</Link></li>
+                  <li><Link href="/#contact">Contact</Link></li>
+                </ul>
               </div>
-              <div className="footer-contact">
+
+              <div className="footer-col">
+                <h4>Our Services</h4>
+                <ul className="footer-links">
+                  <li><Link href="/services/interior-painting">Interior Painting</Link></li>
+                  <li><Link href="/services/exterior-painting">Exterior Painting</Link></li>
+                  <li><Link href="/services/commercial-painting">Commercial Painting</Link></li>
+                  <li><Link href="/services/residential-painting">Residential Painting</Link></li>
+                  <li><Link href="/services/cabinet-painting">Cabinet Painting</Link></li>
+                </ul>
+              </div>
+
+              <div className="footer-col">
                 <h4>Contact Us</h4>
-                <p><Phone size={16} /> (508) 690-8886</p>
-                <p><Mail size={16} /> contact@jhpaintingservices.com</p>
-                <p><MapPin size={16} /> Serving {city.name}, MA</p>
+                <div className="footer-contact-item">
+                  <Phone size={16} />
+                  <a href="tel:+15086908886">(508) 690-8886</a>
+                </div>
+                <div className="footer-contact-item">
+                  <Mail size={16} />
+                  <a href="mailto:contact@jhpaintingservices.com">contact@jhpaintingservices.com</a>
+                </div>
+                <div className="footer-contact-item">
+                  <MapPin size={16} />
+                  <span>Serving All of Massachusetts</span>
+                </div>
+                <div className="footer-contact-item">
+                  <Clock size={16} />
+                  <span>Mon-Sat: 7AM - 6PM</span>
+                </div>
               </div>
             </div>
+
+            <div className="footer-cities">
+              <h4>Service Areas - {cities.length}+ Cities in Massachusetts</h4>
+              <div className="footer-cities-grid">
+                {cities.map((cityItem) => (
+                  <Link
+                    key={cityItem.slug}
+                    href={`/cities/${cityItem.slug}`}
+                    className="footer-city-link"
+                  >
+                    {cityItem.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             <div className="footer-bottom">
-              <p>&copy; {new Date().getFullYear()} JH Painting Services. All rights reserved.</p>
+              <p>© 2025 JH Painting Services. All Rights Reserved. Licensed Painting Contractor | Serving Massachusetts</p>
             </div>
           </div>
         </footer>
@@ -726,12 +796,12 @@ export default function SeoPage({ params }: Props) {
                 </div>
 
                 <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: '800', color: '#fff', lineHeight: '1.1', marginBottom: '1.5rem' }}>
-                  Professional Painters in<br />
-                  <span style={{ color: '#D20404' }}>{city.name}, MA</span>
+                  {cityContent.heroHeadline.includes(city.name) ? cityContent.heroHeadline : `Professional Painters in`}<br />
+                  <span style={{ color: '#D20404' }}>{cityContent.heroHeadline.includes(city.name) ? '' : `${city.name}, MA`}</span>
                 </h1>
 
                 <p style={{ fontSize: '1.125rem', color: 'rgba(255, 255, 255, 0.9)', lineHeight: '1.7', marginBottom: '2rem', maxWidth: '540px' }}>
-                  Transform your home with {city.name}&apos;s most trusted painting contractors. Interior & exterior painting, cabinet refinishing, and more. Licensed, insured, and committed to excellence.
+                  {cityContent.heroSubheadline}
                 </p>
 
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
@@ -807,8 +877,76 @@ export default function SeoPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Services Section */}
+        {/* Why Homeowners Choose Us - Pain Points & Solutions */}
         <section className="city-section city-section-white">
+          <div className="container">
+            <div className="city-section-header">
+              <span className="city-badge city-badge-red">Why {city.name} Homeowners Choose Us</span>
+              <h2 className="city-section-title">We Understand Your Painting Challenges</h2>
+              <p className="city-section-subtitle">{cityContent.localContext}</p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))', gap: '3rem', marginTop: '3rem' }}>
+              {/* Pain Points */}
+              <div style={{ background: 'linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%)', borderRadius: '20px', padding: '2rem', border: '1px solid rgba(210, 4, 4, 0.1)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'linear-gradient(135deg, #D20404 0%, #B91C1C 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <AlertCircle size={24} color="#fff" />
+                  </div>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#1F2937' }}>Common Problems in {city.name}</h3>
+                </div>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  {cityContent.painPoints.slice(0, 4).map((pain, idx) => (
+                    <li key={idx} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                      <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: '#FCA5A5', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
+                        <span style={{ color: '#DC2626', fontWeight: '700', fontSize: '0.75rem' }}>{idx + 1}</span>
+                      </div>
+                      <p style={{ color: '#4B5563', lineHeight: '1.6', margin: 0 }}>{pain}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Solutions */}
+              <div style={{ background: 'linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%)', borderRadius: '20px', padding: '2rem', border: '1px solid rgba(22, 163, 74, 0.1)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'linear-gradient(135deg, #16A34A 0%, #15803D 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <CheckCircle2 size={24} color="#fff" />
+                  </div>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#1F2937' }}>Our Solutions for You</h3>
+                </div>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  {cityContent.solutions.slice(0, 4).map((solution, idx) => (
+                    <li key={idx} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                      <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: '#86EFAC', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
+                        <CheckCircle2 size={14} color="#16A34A" />
+                      </div>
+                      <p style={{ color: '#4B5563', lineHeight: '1.6', margin: 0 }}>{solution}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Why Choose Us List */}
+            <div style={{ marginTop: '3rem', background: '#F9FAFB', borderRadius: '20px', padding: '2rem' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#1F2937', marginBottom: '1.5rem', textAlign: 'center' }}>
+                Why {city.name} Residents Trust JH Painting Services
+              </h3>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+                {cityContent.whyChooseUs.map((reason, idx) => (
+                  <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '1rem', background: '#fff', borderRadius: '12px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
+                    <CheckCircle2 size={20} color="#D20404" />
+                    <span style={{ color: '#374151', fontSize: '0.9375rem', fontWeight: '500' }}>{reason}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="city-section city-section-gray">
           <div className="container">
             <div className="city-section-header">
               <span className="city-badge city-badge-red">Our Services in {city.name}</span>
@@ -948,6 +1086,65 @@ export default function SeoPage({ params }: Props) {
           </div>
         </section>
 
+        {/* FAQ Section - Unique for each city */}
+        <section className="city-section city-section-gray">
+          <div className="container">
+            <div className="city-section-header">
+              <span className="city-badge city-badge-red">Frequently Asked Questions</span>
+              <h2 className="city-section-title">Questions About Painting in {city.name}</h2>
+              <p className="city-section-subtitle">Get answers to common questions from {city.name} homeowners</p>
+            </div>
+
+            <div style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {cityContent.faq.map((item, idx) => (
+                <div key={idx} style={{ background: '#fff', borderRadius: '16px', padding: '1.5rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
+                  <h3 style={{ fontSize: '1.125rem', fontWeight: '600', color: '#1F2937', marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', borderRadius: '50%', background: 'linear-gradient(135deg, #D20404 0%, #B91C1C 100%)', color: '#fff', fontSize: '0.875rem', fontWeight: '700', flexShrink: 0 }}>Q</span>
+                    {item.question}
+                  </h3>
+                  <p style={{ color: '#4B5563', lineHeight: '1.7', margin: 0, paddingLeft: '2.75rem' }}>{item.answer}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Local Tip */}
+            <div style={{ marginTop: '2rem', maxWidth: '800px', margin: '2rem auto 0', background: 'linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%)', borderRadius: '16px', padding: '1.5rem', border: '1px solid rgba(245, 158, 11, 0.3)' }}>
+              <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <Sparkles size={20} color="#fff" />
+                </div>
+                <div>
+                  <h4 style={{ fontSize: '1rem', fontWeight: '600', color: '#92400E', marginBottom: '0.5rem' }}>Pro Tip for {city.name} Homeowners</h4>
+                  <p style={{ color: '#78350F', lineHeight: '1.6', margin: 0 }}>{cityContent.localTip}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Nearby Areas */}
+            <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+              <p style={{ color: '#6B7280', fontSize: '0.9375rem', marginBottom: '1rem' }}>We also serve nearby areas:</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center' }}>
+                {cityContent.nearbyAreas.map((area, idx) => {
+                  const nearbyCity = cities.find(c => c.name === area)
+                  return nearbyCity ? (
+                    <Link
+                      key={idx}
+                      href={`/${getCityPageSlug(nearbyCity.slug)}`}
+                      style={{ padding: '0.5rem 1rem', background: '#fff', borderRadius: '100px', color: '#374151', fontSize: '0.875rem', fontWeight: '500', textDecoration: 'none', border: '1px solid #E5E7EB', transition: 'all 0.2s ease' }}
+                    >
+                      {area}, MA
+                    </Link>
+                  ) : (
+                    <span key={idx} style={{ padding: '0.5rem 1rem', background: '#fff', borderRadius: '100px', color: '#374151', fontSize: '0.875rem', fontWeight: '500', border: '1px solid #E5E7EB' }}>
+                      {area}, MA
+                    </span>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="section" style={{ background: 'var(--jh-red)', padding: '4rem 0' }}>
           <div className="container" style={{ textAlign: 'center' }}>
@@ -969,26 +1166,77 @@ export default function SeoPage({ params }: Props) {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <Image src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png" alt="JH Painting" width={150} height={60} />
-              <p>Professional painting services in {city.name} and Massachusetts. Licensed, insured, and committed to excellence.</p>
+              <Image
+                src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
+                alt="JH Painting Services - Professional Painters in Massachusetts"
+                width={150}
+                height={60}
+                loading="lazy"
+              />
+              <p>Professional painting services in {city.name} and across Massachusetts. Licensed, insured, and committed to excellence since day one.</p>
+              <div className="footer-social">
+                <a href="https://www.facebook.com/jhpaintingservicesMA/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/jhpaintingservices/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@JHPaintingServices-br9wh" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+                <a href="https://g.co/kgs/hc9Rfmv" target="_blank" rel="noopener noreferrer" aria-label="Google">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                </a>
+              </div>
             </div>
-            <div className="footer-links">
+
+            <div className="footer-col">
               <h4>Quick Links</h4>
-              <Link href="/">Home</Link>
-              <Link href="/#about">About Us</Link>
-              <Link href="/#services">Services</Link>
-              <Link href="/#gallery">Gallery</Link>
-              <Link href="/#contact">Contact</Link>
+              <ul className="footer-links">
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/#about">About Us</Link></li>
+                <li><Link href="/#services">Services</Link></li>
+                <li><Link href="/#gallery">Gallery</Link></li>
+                <li><Link href="/#reviews">Reviews</Link></li>
+                <li><Link href="/#contact">Contact</Link></li>
+              </ul>
             </div>
-            <div className="footer-contact">
+
+            <div className="footer-col">
+              <h4>Our Services</h4>
+              <ul className="footer-links">
+                <li><Link href="/services/interior-painting">Interior Painting</Link></li>
+                <li><Link href="/services/exterior-painting">Exterior Painting</Link></li>
+                <li><Link href="/services/cabinet-painting">Cabinet Painting</Link></li>
+                <li><Link href="/services/commercial-painting">Commercial Painting</Link></li>
+                <li><Link href="/services/residential-painting">Residential Painting</Link></li>
+              </ul>
+            </div>
+
+            <div className="footer-col">
               <h4>Contact Us</h4>
-              <p><Phone size={16} /> (508) 690-8886</p>
-              <p><Mail size={16} /> contact@jhpaintingservices.com</p>
-              <p><MapPin size={16} /> Serving {city.name}, MA</p>
+              <div className="footer-contact-info">
+                <p><Phone size={16} /> <a href="tel:+15086908886">(508) 690-8886</a></p>
+                <p><Mail size={16} /> <a href="mailto:contact@jhpaintingservices.com">contact@jhpaintingservices.com</a></p>
+                <p><MapPin size={16} /> Serving {city.name} &amp; All MA</p>
+                <p><Clock size={16} /> Mon-Sat: 7AM - 7PM</p>
+              </div>
             </div>
           </div>
+
+          <div className="footer-cities">
+            <h4>Service Areas - {cities.length}+ Cities in Massachusetts</h4>
+            <div className="footer-cities-grid">
+              {cities.map((c) => (
+                <Link key={c.slug} href={`/painters-${c.slug}-ma`}>
+                  {c.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} JH Painting Services. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} JH Painting Services. All rights reserved. | Professional Painters in Massachusetts</p>
           </div>
         </div>
       </footer>
