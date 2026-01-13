@@ -9094,29 +9094,7 @@ a:focus-visible {
    PERFORMANCE OPTIMIZATIONS
 ============================================ */
 
-/* Content visibility for below-the-fold sections */
-#services,
-#about,
-#gallery,
-#reviews,
-#contact,
-.video-section-rs,
-.cta-section,
-.footer {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 800px;
-}
-
-/* Reduce paint areas */
-.service-card,
-.gallery-item,
-.why-card,
-.process-card-home {
-  will-change: transform;
-  contain: layout style paint;
-}
-
-/* Optimize animations */
+/* Optimize animations for accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -9128,26 +9106,6 @@ a:focus-visible {
   }
 }
 
-/* Hardware acceleration for transforms */
-.btn,
-.service-card,
-.gallery-item,
-.nav-dropdown-item,
-.mobile-nav-dropdown-item {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-/* Lazy load images below fold */
-img[loading="lazy"] {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-img[loading="lazy"].loaded,
-img[loading="lazy"][data-loaded="true"] {
-  opacity: 1;
-}
 
 /* Optimize font rendering */
 body {
