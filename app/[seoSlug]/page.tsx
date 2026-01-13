@@ -1228,7 +1228,7 @@ export default function SeoPage({ params }: Props) {
             <h4>Service Areas - {cities.length}+ Cities in Massachusetts</h4>
             <div className="footer-cities-grid">
               {cities.map((c) => (
-                <Link key={c.slug} href={`/painters-${c.slug}-ma`}>
+                <Link key={c.slug} href={`/cities/${c.slug}`} className="footer-city-link">
                   {c.name}
                 </Link>
               ))}
