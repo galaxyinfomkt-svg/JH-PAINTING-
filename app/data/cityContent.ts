@@ -13,6 +13,10 @@ export interface CityContent {
   faq: { question: string; answer: string }[]
   nearbyAreas: string[]
   localTip: string
+  // Extended SEO content fields
+  introText?: string // Long intro paragraph for SEO
+  serviceDescription?: string // Detailed service description for the city
+  closingPitch?: string // Persuasive closing paragraph
 }
 
 // Weather and climate challenges specific to Massachusetts regions
@@ -39,45 +43,74 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'marlborough',
     heroHeadline: 'Marlborough\'s Most Trusted Painters Since Day One',
     heroSubheadline: 'Your neighbors in Marlborough trust us with their homes. Based right here in your community.',
+    introText: 'When it comes to professional painting services in Marlborough, Massachusetts, no one understands your home better than a company that calls this city home. JH Painting Services was founded right here in Marlborough, and we\'ve spent years perfecting our craft while serving the families and businesses that make up our community. From the charming Victorian homes lining Main Street to the modern developments near Solomon Pond Mall, we\'ve transformed countless properties across every neighborhood in our beloved city. Our deep roots in Marlborough mean we understand the unique architectural styles, weather challenges, and aesthetic preferences that define homes in our area. We\'re not just contractors passing through – we\'re your neighbors, committed to maintaining the beauty and value of Marlborough properties for generations to come.',
     painPoints: [
-      'Your Victorian home on Main Street is showing its age with peeling paint and faded colors',
-      'The harsh Massachusetts winters have left your exterior looking weathered and worn',
-      'You\'ve had bad experiences with out-of-town contractors who don\'t understand Marlborough homes',
-      'Your kitchen cabinets from the 90s are dated but replacement costs are astronomical',
-      'Previous painters left drips, uneven coverage, and didn\'t properly prep surfaces'
+      'Your Victorian home on Main Street is showing its age with peeling paint and faded colors that diminish your curb appeal',
+      'The harsh Massachusetts winters with freezing temperatures, ice, and snow have left your exterior looking weathered, cracked, and worn',
+      'You\'ve had frustrating experiences with out-of-town contractors who don\'t show up on time, don\'t understand Marlborough\'s historic homes, and leave jobs half-finished',
+      'Your kitchen cabinets from the 90s are desperately dated with worn finishes and scratches, but full replacement costs of $15,000-$30,000 are astronomical',
+      'Previous painters left visible drips, brush marks, uneven coverage, and didn\'t properly prep surfaces – now the paint is already peeling after just two years',
+      'You\'re worried about lead paint in your older Marlborough home and need painters who handle it safely and legally',
+      'The constant temperature swings in Massachusetts cause wood to expand and contract, leading to cracks and gaps that let moisture damage your home'
     ],
     solutions: [
-      'We live and work in Marlborough - we\'re your neighbors, not strangers passing through',
-      'Our crews know the unique challenges of Marlborough\'s historic downtown buildings',
-      'We use premium Benjamin Moore and Sherwin-Williams paints rated for New England weather',
-      'Cabinet refinishing saves you 70% vs replacement with a showroom-quality spray finish',
-      'Meticulous prep work including power washing, scraping, sanding, and priming before any paint'
+      'We live and work in Marlborough – we\'re your neighbors invested in our community, not strangers passing through who disappear after cashing your check',
+      'Our crews have painted hundreds of Marlborough homes and know the unique challenges of our historic downtown buildings, including proper techniques for period-accurate restoration',
+      'We exclusively use premium Benjamin Moore Aura, Regal Select, and Sherwin-Williams Duration paints specifically formulated for New England\'s extreme weather conditions',
+      'Our cabinet refinishing service saves you 60-70% compared to replacement while delivering a factory-smooth, spray-applied finish that looks brand new and lasts 10+ years',
+      'Our 7-step preparation process includes power washing, scraping, sanding, caulking, priming, and two coats of premium paint – because proper prep is 80% of a lasting paint job',
+      'We\'re EPA Lead-Safe Certified and follow all Massachusetts regulations for lead paint handling, keeping your family safe during and after the project',
+      'We use premium flexible caulks and elastomeric coatings that move with your home through seasonal temperature changes, preventing cracks and moisture intrusion'
     ],
-    localContext: 'As Marlborough\'s hometown painters, we understand the unique character of our city - from the historic buildings along Main Street to the newer developments near Solomon Pond Mall. We\'ve painted homes in Downtown Marlborough, East Marlborough, and West Marlborough, and we take pride in maintaining the beauty of our community.',
+    localContext: 'As Marlborough\'s hometown painters, we understand every corner of our city intimately. We\'ve beautified historic properties along Main Street, refreshed homes in the established neighborhoods of East Marlborough and West Marlborough, painted new construction near Solomon Pond Mall, and transformed condos in downtown developments. We know which neighborhoods have older homes requiring lead paint expertise, which areas have strict HOA requirements, and where the mature tree coverage creates moisture challenges. Our trucks are a familiar sight on Marlborough streets, and we take enormous pride in contributing to the beauty of the community where we live and raise our families.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing services tailored specifically for Marlborough homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes for every room in your home. For exteriors, we provide complete house painting including siding, trim, shutters, doors, porches, and decks with proper New England weather protection. Our cabinet refinishing service transforms dated kitchens and bathrooms with a durable, spray-applied finish at a fraction of replacement cost. We also offer commercial painting for Marlborough businesses, deck staining and restoration, and specialty services like wallpaper removal and drywall repair. Every project begins with a thorough assessment, detailed written estimate, and clear timeline so you know exactly what to expect.',
     whyChooseUs: [
-      'Marlborough-based company - we\'re your neighbors',
-      'Deep knowledge of local architecture from 1800s Colonials to modern builds',
-      'Trusted by Marlborough families for over a decade',
-      'Same-day response for Marlborough residents',
-      'We support local Marlborough businesses and community events'
+      'Marlborough-based company since founding – we\'re your neighbors, not a franchise',
+      'Deep knowledge of local architecture from 1800s Colonials to 2020s new construction',
+      'Trusted by over 200 Marlborough families with 5-star reviews on Google',
+      'Same-day estimates and priority scheduling for Marlborough residents',
+      'We actively support local Marlborough businesses, schools, and community events',
+      'Fully licensed, insured, and EPA Lead-Safe Certified for your protection',
+      'Written 5-year warranty on all exterior work and 3-year warranty on interiors'
     ],
-    testimonialContext: 'Marlborough homeowners consistently praise our attention to detail and respect for their properties.',
+    testimonialContext: 'Marlborough homeowners consistently praise our meticulous attention to detail, respect for their properties, clear communication throughout projects, and the lasting quality of our work. Many of our Marlborough clients have become repeat customers who call us every time they need painting done right.',
     faq: [
       {
         question: 'Are you actually located in Marlborough?',
-        answer: 'Yes! JH Painting Services is headquartered right here in Marlborough, MA. We\'re not a franchise or out-of-town company - we\'re your neighbors who take pride in our community.'
+        answer: 'Yes! JH Painting Services is headquartered right here in Marlborough, MA. We\'re not a franchise or out-of-town company – we\'re your neighbors who take pride in our community. Our owner Jafet lives in Marlborough, and many of our crew members are local residents. When you hire us, you\'re supporting a local business that\'s invested in keeping Marlborough beautiful.'
       },
       {
         question: 'Do you work on the historic homes in downtown Marlborough?',
-        answer: 'Absolutely. We have extensive experience with Marlborough\'s historic properties, understanding the special techniques needed for older woodwork, lead paint considerations, and period-appropriate color selections.'
+        answer: 'Absolutely, and we love working on Marlborough\'s historic properties! We have extensive experience with homes dating back to the 1800s, understanding the special techniques needed for older woodwork, proper lead paint protocols (we\'re EPA Lead-Safe Certified), period-appropriate color selections, and restoration of historic architectural details. We treat these homes with the respect they deserve.'
       },
       {
         question: 'How quickly can you start a project in Marlborough?',
-        answer: 'Being based in Marlborough means we can often start within days, not weeks. For Marlborough residents, we prioritize scheduling and offer same-day estimates.'
+        answer: 'Being based in Marlborough means we can often start within days, not weeks. For Marlborough residents, we offer same-day estimates and priority scheduling. During our peak season (May-September), we recommend booking 2-3 weeks in advance, but we always try to accommodate urgent requests for our hometown neighbors.'
+      },
+      {
+        question: 'What paint brands do you use for Marlborough homes?',
+        answer: 'We exclusively use premium paints from Benjamin Moore and Sherwin-Williams that are specifically formulated for New England\'s extreme weather conditions. For exteriors, we typically recommend Benjamin Moore Aura or Sherwin-Williams Duration for their superior durability against Massachusetts winters. For interiors, we use low-VOC and zero-VOC options that are safe for your family.'
+      },
+      {
+        question: 'Do you offer free estimates in Marlborough?',
+        answer: 'Yes! We provide free, detailed written estimates for all Marlborough projects. Being local, we can usually schedule your estimate within 24-48 hours. Our estimates include a complete scope of work, materials specifications, timeline, and transparent pricing with no hidden fees. We believe in upfront honesty – the price we quote is the price you pay.'
+      },
+      {
+        question: 'How do you handle Massachusetts weather when painting exteriors?',
+        answer: 'We\'ve been painting in Massachusetts for years and know exactly how to work with our challenging climate. We only paint exteriors when temperatures are between 50-85°F with low humidity and no rain in the forecast. We use paints specifically formulated for temperature extremes, apply proper primers for moisture protection, and ensure adequate dry time between coats. Our scheduling accounts for weather, and we\'ll proactively communicate any weather-related adjustments.'
+      },
+      {
+        question: 'What is your warranty on painting work in Marlborough?',
+        answer: 'We stand behind our work with comprehensive warranties: 5 years on exterior painting and 3 years on interior painting. Our warranty covers peeling, blistering, flaking, and fading under normal conditions. Because we\'re local, warranty service is easy – just call us and we\'ll be there promptly to address any concerns. We\'ve built our reputation on quality work that lasts, and we protect that reputation with strong warranties.'
+      },
+      {
+        question: 'Can you match colors from my existing paint or help me choose new colors?',
+        answer: 'Absolutely! We offer professional color matching using spectrophotometer technology to perfectly match existing colors. We also provide complimentary color consultation services to help you choose new colors that complement your home\'s architecture, your neighborhood\'s aesthetic, and current design trends. We can show you how colors will look in different lighting conditions and bring large samples to your home before you commit.'
       }
     ],
     nearbyAreas: ['Hudson', 'Southborough', 'Northborough', 'Westborough', 'Berlin', 'Framingham'],
-    localTip: 'Pro tip for Marlborough homeowners: The best time to paint exterior surfaces is late spring through early fall when temperatures are consistently above 50°F. We recommend scheduling your exterior project early to secure the best dates.'
+    localTip: 'Pro tip for Marlborough homeowners: The best time to paint exterior surfaces is late spring through early fall when temperatures are consistently above 50°F. We recommend scheduling your exterior project by March or April to secure prime dates before our schedule fills up. For interior projects, winter is actually ideal – lower humidity means faster drying times and we often have more scheduling flexibility.',
+    closingPitch: 'Ready to transform your Marlborough home with a fresh coat of paint? As your neighbors and fellow Marlborough residents, we take personal pride in every project we complete in our hometown. We\'ve built our reputation one satisfied customer at a time, and we\'d love the opportunity to earn your trust. Contact JH Painting Services today for your free estimate and discover why hundreds of Marlborough families have made us their go-to painting contractor. Call (508) 690-8886 or fill out our online form – we\'ll get back to you within hours, not days.'
   },
 
   // HUDSON - Very close, historic mill town
@@ -85,41 +118,74 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'hudson',
     heroHeadline: 'Hudson\'s Premier House Painters',
     heroSubheadline: 'Expert painting services for Hudson\'s historic mill town character and modern homes alike.',
+    introText: 'Hudson, Massachusetts holds a special place in our hearts at JH Painting Services. Just three miles from our Marlborough headquarters, Hudson\'s charming downtown, rich industrial heritage, and tight-knit community make it one of our favorite towns to work in. From the beautifully restored mill buildings along the Assabet River to the classic New England colonials near Lake Boon, Hudson offers an incredible diversity of architectural styles that challenge and inspire us. We\'ve painted historic homes on Main Street, refreshed lakeside cottages, transformed converted loft condos, and updated countless family homes throughout Hudson\'s neighborhoods. The town\'s ongoing revitalization – with its thriving restaurant scene, beloved Rail Trail, and strong community spirit – reminds us why we love serving MetroWest communities.',
     painPoints: [
-      'Your historic Hudson home needs painters who understand pre-1900s construction',
-      'The Assabet River humidity is causing paint to peel faster than expected',
-      'Finding reliable painters who will actually show up has been frustrating',
-      'Your wood siding is showing signs of rot and needs proper assessment before painting',
-      'You want to update your home\'s look while respecting Hudson\'s historic character'
+      'Your historic Hudson home dating back to the shoe manufacturing era needs painters who truly understand pre-1900s construction techniques and materials',
+      'The Assabet River\'s humidity and Hudson\'s low-lying areas are causing your paint to peel, bubble, and fail faster than it should',
+      'You\'ve wasted time and money on unreliable painters who don\'t show up when promised, leave jobs incomplete, or produce sloppy work',
+      'Your wood siding, trim, and window frames are showing alarming signs of rot that previous painters ignored or painted over',
+      'You want to update your home\'s appearance with fresh, modern colors while still respecting Hudson\'s historic New England character',
+      'The converted mill condo you purchased has unique painting challenges that typical residential painters don\'t understand',
+      'Your lakeside property near Lake Boon faces intense sun exposure and moisture that demands specialized paint solutions'
     ],
     solutions: [
-      'We specialize in Hudson\'s unique mix of historic mills-turned-residences and classic New England homes',
-      'Our moisture-blocking primers and premium paints are specifically chosen for riverside communities',
-      'As your neighbors from nearby Marlborough, we\'re always close by and accountable',
-      'We identify and address wood rot before painting, ensuring long-lasting results',
-      'Expert color consultation to complement Hudson\'s charming downtown aesthetic'
+      'We\'ve painted hundreds of Hudson homes and specialize in the town\'s unique mix of historic mills-turned-residences, Victorian-era homes, and classic New England colonials',
+      'Our moisture-blocking primers, mold-resistant paints, and proper ventilation techniques are specifically chosen for riverside and lakeside communities like Hudson',
+      'As your neighbors from Marlborough – just 3 miles away – we\'re always close by, accountable, and invested in our reputation throughout the region',
+      'Our thorough inspection process identifies and addresses wood rot before any paint is applied, ensuring lasting results instead of cosmetic cover-ups',
+      'Our expert color consultation service helps you choose colors that complement Hudson\'s charming downtown aesthetic while expressing your personal style',
+      'We have extensive experience with mill conversions, understanding the unique requirements of exposed brick, industrial windows, and shared building systems',
+      'For Lake Boon properties, we use UV-resistant paints with superior fade resistance and apply extra coats to sun-exposed surfaces'
     ],
-    localContext: 'Hudson\'s transformation from a thriving shoe manufacturing town to a vibrant community with a beloved downtown makes it special. From the historic buildings along Main Street to the beautiful homes near Lake Boon, we understand what makes Hudson unique. We frequently work in Downtown Hudson, Hudson Center, and the areas along the Assabet River Rail Trail.',
+    localContext: 'Hudson\'s transformation from a thriving shoe manufacturing town to today\'s vibrant community with a beloved downtown is one of MetroWest\'s great success stories. We\'ve watched and contributed to this revitalization, painting homes and businesses that are part of Hudson\'s renaissance. From the historic buildings along Main Street and the gorgeous homes overlooking Lake Boon to the family neighborhoods of Hudson Center and the trendy converted mill lofts, we know every corner of this wonderful town. We\'ve painted properties along the Assabet River Rail Trail, refreshed homes in the Washington Street Historic District, and updated countless family homes throughout Hudson\'s diverse neighborhoods.',
+    serviceDescription: 'JH Painting Services provides complete painting solutions for Hudson\'s diverse housing stock. Our services include interior painting for historic homes with their unique plaster walls and ornate trim, exterior painting with proper moisture management for riverside properties, cabinet refinishing to update your kitchen without the cost of replacement, mill conversion painting that respects industrial character while creating comfortable living spaces, and deck staining for your outdoor living areas. We also offer commercial painting for Hudson\'s thriving downtown businesses, helping to maintain the attractive storefronts that make Main Street special.',
     whyChooseUs: [
-      'Just 3 miles from our Marlborough headquarters - fast response times',
-      'Experience with Hudson\'s historic mill buildings and converted lofts',
-      'Familiar with local HOA requirements and historic district guidelines',
-      'Trusted by Hudson families throughout the community',
-      'We love grabbing coffee at Rail Trail after completing projects!'
+      'Just 3 miles from our Marlborough headquarters – we can be at your Hudson home in minutes, not hours',
+      'Extensive experience with Hudson\'s historic mill buildings, converted lofts, and century-old homes',
+      'Thoroughly familiar with local HOA requirements, historic district guidelines, and building regulations',
+      'Trusted by Hudson families throughout the community with dozens of 5-star reviews',
+      'We\'re regulars on the Rail Trail and in Hudson\'s downtown – we\'re invested in this community',
+      'Specialized knowledge of moisture management for properties near the Assabet River and Lake Boon',
+      'EPA Lead-Safe Certified for Hudson\'s many older homes built before 1978'
     ],
-    testimonialContext: 'Hudson homeowners appreciate our understanding of their town\'s unique architectural heritage.',
+    testimonialContext: 'Hudson homeowners consistently tell us they appreciate our understanding of their town\'s unique architectural heritage, our reliability compared to other contractors, and our genuine care for the community we serve.',
     faq: [
       {
-        question: 'Do you have experience with Hudson\'s older homes?',
-        answer: 'Yes! Many Hudson homes date back to the town\'s industrial heyday. We\'re experienced with the challenges of older construction including proper lead paint protocols, working with historic trim details, and matching period-appropriate colors.'
+        question: 'Do you have experience with Hudson\'s older historic homes?',
+        answer: 'Absolutely! Many Hudson homes date back to the town\'s industrial heyday in the 1800s and early 1900s. We\'re extensively experienced with the challenges of older construction including proper lead paint protocols (we\'re EPA Lead-Safe Certified), working with historic trim details and plaster walls, matching period-appropriate colors, and using techniques that respect original craftsmanship while providing modern durability.'
       },
       {
-        question: 'Can you paint the exterior of mill-converted condos?',
-        answer: 'We work on all types of Hudson properties including converted mill buildings. We coordinate with HOAs and property managers to ensure smooth project execution while respecting shared spaces.'
+        question: 'Can you paint the exterior of mill-converted condos in Hudson?',
+        answer: 'Yes, we work on all types of Hudson properties including the converted mill buildings along the Assabet River. We understand the unique requirements of these properties and coordinate closely with HOAs and property managers to ensure smooth project execution while respecting shared spaces and minimizing disruption to other residents. We\'re familiar with the specific requirements of many Hudson condo associations.'
+      },
+      {
+        question: 'How do you handle the humidity issues near the Assabet River?',
+        answer: 'Hudson\'s riverside location creates unique moisture challenges that require specialized solutions. We use moisture-blocking primers, mold and mildew-resistant paints, and proper application techniques that ensure paint adhesion even in high-humidity conditions. For properties directly on the river, we often recommend extra primer coats and specific paint formulations designed for marine environments.'
+      },
+      {
+        question: 'What areas of Hudson do you serve?',
+        answer: 'We serve all of Hudson including Downtown Hudson, Hudson Center, the Lake Boon area, the Washington Street Historic District, areas along the Assabet River Rail Trail, and all surrounding neighborhoods. No part of Hudson is outside our service area – we\'re just 3 miles away in Marlborough and can reach any Hudson address quickly.'
+      },
+      {
+        question: 'Do you offer color consultation for Hudson homes?',
+        answer: 'Yes! We provide complimentary color consultation for all Hudson projects. Our consultants understand Hudson\'s architectural character and can help you choose colors that complement your home\'s style, respect neighborhood aesthetics, and express your personal taste. We bring large samples to your home so you can see colors in your actual lighting conditions before making a decision.'
+      },
+      {
+        question: 'How quickly can you provide an estimate for my Hudson home?',
+        answer: 'Being based just 3 miles away in Marlborough, we can typically provide same-day or next-day estimates for Hudson properties. We prioritize our neighboring communities, and Hudson is one of our most frequently served towns. Contact us in the morning and we can often be at your home that afternoon.'
+      },
+      {
+        question: 'Are you familiar with Hudson\'s historic district requirements?',
+        answer: 'Yes, we\'re thoroughly familiar with the guidelines for Hudson\'s historic areas including the Washington Street Historic District. We understand the color palettes, materials, and techniques that are appropriate for historic properties and can help you navigate any approval processes. Our work consistently meets or exceeds historic preservation standards.'
+      },
+      {
+        question: 'Do you paint properties near Lake Boon?',
+        answer: 'Absolutely! We\'ve painted many homes in the Lake Boon area and understand the unique challenges of lakeside properties – intense sun exposure, moisture from the lake, and the need for colors that complement the natural setting. We use UV-resistant paints that resist fading and apply additional coats to sun-exposed surfaces for longer-lasting results.'
       }
     ],
     nearbyAreas: ['Marlborough', 'Stow', 'Bolton', 'Berlin', 'Maynard', 'Sudbury'],
-    localTip: 'Hudson homeowners: The humid climate near the Assabet River means exterior paint selection is crucial. We recommend paints with superior moisture resistance and always apply a quality primer to prevent peeling.'
+    localTip: 'Hudson homeowners: The humid climate near the Assabet River and Lake Boon means exterior paint selection is absolutely crucial. We recommend paints with superior moisture resistance and always apply a quality moisture-blocking primer to prevent peeling. For lakeside properties, consider scheduling your exterior painting for late summer when humidity levels are typically lower.',
+    closingPitch: 'Ready to give your Hudson home the quality paint job it deserves? Whether you own a historic Victorian on Main Street, a converted mill loft, a lakeside cottage on Lake Boon, or a family home anywhere in town, JH Painting Services has the expertise and local knowledge to deliver exceptional results. We\'re proud to be Hudson\'s neighbor and honored every time a Hudson family trusts us with their home. Call (508) 690-8886 today for your free estimate, or fill out our online form – as your neighbors, we\'ll get back to you quickly and treat your home like it\'s our own.'
   },
 
   // SOUTHBOROUGH - Affluent, historic
@@ -127,41 +193,74 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'southborough',
     heroHeadline: 'Southborough\'s Trusted Painting Professionals',
     heroSubheadline: 'Premium painting services matching the quality Southborough homeowners expect.',
+    introText: 'Southborough represents the finest of Massachusetts living – prestigious estates, top-rated schools, and a community that values excellence in everything. At JH Painting Services, we understand that Southborough homeowners have high standards, and we\'ve built our premium painting services specifically to meet and exceed those expectations. From the stately homes along Route 85 and the elegant properties near St. Mark\'s School to the beautiful family neighborhoods of Southborough Center and Cordaville, we bring white-glove service and meticulous craftsmanship to every project. Our experience with Southborough\'s distinctive architecture – from historic Colonials to contemporary estates – means we understand exactly what it takes to maintain and enhance property values in one of Massachusetts\' most desirable communities.',
     painPoints: [
-      'Your executive home deserves painters who match your high standards',
-      'Previous contractors left your property messy and didn\'t protect your landscaping',
-      'The large windows and high ceilings in your home require experienced painters',
-      'You need painters who can work around your busy family schedule',
-      'Your home near St. Mark\'s needs painting that maintains property values'
+      'Your executive home deserves painters who truly match your high standards for quality and professionalism – not budget contractors cutting corners',
+      'Previous contractors left your property messy, didn\'t protect your expensive landscaping, and tracked paint onto your hardwood floors',
+      'The large windows, vaulted ceilings, and two-story foyers in your Southborough home require experienced painters with proper equipment',
+      'Your demanding professional and family schedule means you need painters who can work around you, not the other way around',
+      'Your home near St. Mark\'s or in a premium Southborough neighborhood needs painting that maintains or increases property values',
+      'You\'ve invested significantly in your Southborough home and worry about trusting it to contractors who may not appreciate its value',
+      'Finding painters who understand specialty finishes, custom millwork, and architectural details has been nearly impossible'
     ],
     solutions: [
-      'White-glove service with meticulous attention to detail and premium finishes',
-      'We protect your property like it\'s our own - careful masking, drop cloths, and daily cleanup',
-      'Experienced with large, high-end homes including vaulted ceilings and specialty finishes',
-      'Flexible scheduling with minimal disruption to your household',
-      'Color consultation services to enhance curb appeal and property value'
+      'White-glove service with meticulous attention to detail, premium finishes, and the professionalism your Southborough home deserves',
+      'We protect your property obsessively – furniture wrapped in plastic, floors covered with drop cloths, landscaping shielded, and daily cleanup that leaves your home spotless',
+      'Our crews are equipped with professional scaffolding, extension ladders, and spray equipment for large homes with high ceilings and complex architectural features',
+      'Completely flexible scheduling designed for busy professionals – we work when it\'s convenient for you and manage projects to minimize household disruption',
+      'Professional color consultation and premium paint selections that enhance your home\'s curb appeal and protect your significant investment',
+      'Fully licensed, comprehensively insured ($2M liability coverage), and experienced specifically with high-value Southborough properties',
+      'Expertise with faux finishes, custom glazes, lacquered trim, and all the specialty techniques that distinguish fine homes'
     ],
-    localContext: 'Southborough\'s beautiful estates, excellent schools, and proximity to Boston make it one of Massachusetts\' most desirable communities. From the grand homes near St. Mark\'s School to the family neighborhoods of Southborough Center and Cordaville, we bring the quality craftsmanship that discerning Southborough homeowners expect.',
+    localContext: 'Southborough\'s beautiful estates, award-winning schools, and convenient commute to Boston make it one of Massachusetts\' most prestigious communities. We\'ve painted grand homes along Route 85, elegant properties in the St. Mark\'s area, stately residences near the Southborough Country Club, and countless family homes throughout Southborough Center, Cordaville, and Fayville. We understand the architectural diversity here – from historic 18th-century Colonials to expansive modern estates – and we bring the quality craftsmanship that discerning Southborough homeowners rightfully expect.',
+    serviceDescription: 'JH Painting Services offers premium painting solutions tailored for Southborough\'s luxury homes. Our services include interior painting with specialty finishes and custom color matching, exterior painting with proper preparation for New England\'s climate, cabinet refinishing with spray-applied lacquer finishes, and commercial painting for Southborough businesses. We specialize in working with high-end materials, coordinating with interior designers and architects, and delivering results that meet the exacting standards of Southborough\'s most discerning homeowners.',
     whyChooseUs: [
-      'Experience with Southborough\'s luxury homes and demanding clientele',
-      'Premium paints and finishes appropriate for high-end properties',
-      'Fully insured with coverage appropriate for valuable homes',
-      'References from satisfied Southborough homeowners available',
-      'Understanding of Southborough\'s architectural guidelines'
+      'Extensive experience with Southborough\'s luxury homes, demanding clientele, and high expectations',
+      'Premium paints from Benjamin Moore and Sherwin-Williams in their finest product lines',
+      'Fully insured with $2M liability coverage appropriate for valuable properties',
+      'Impeccable references from satisfied Southborough homeowners available upon request',
+      'Complete understanding of Southborough\'s architectural guidelines and neighborhood aesthetics',
+      'White-glove service from estimate through final walkthrough with project manager oversight',
+      'Expertise with specialty finishes, faux techniques, and custom millwork painting'
     ],
-    testimonialContext: 'Southborough\'s discerning homeowners trust us for flawless results.',
+    testimonialContext: 'Southborough\'s most discerning homeowners trust us for flawless results that protect their investment and enhance their home\'s beauty. Our attention to detail and professional service have earned us repeat business throughout Southborough\'s finest neighborhoods.',
     faq: [
       {
         question: 'Do you have experience with large Southborough homes?',
-        answer: 'Absolutely. We regularly work on Southborough\'s larger properties, including multi-story homes with complex architectural details. Our crews are equipped and experienced for projects of any scale.'
+        answer: 'Absolutely. We regularly work on Southborough\'s larger properties, including 5,000+ square foot homes with complex architectural details, multi-story foyers, and extensive trim work. Our crews are equipped with professional scaffolding, spray equipment, and all necessary tools for projects of any scale. We maintain a portfolio of completed Southborough projects we\'re happy to share.'
       },
       {
         question: 'Can you match the quality expected in Southborough?',
-        answer: 'Our premium services are designed for homeowners who won\'t settle for average. We use top-tier paints, proper preparation, and skilled craftsmen to deliver results that meet Southborough\'s high standards.'
+        answer: 'Our premium services are specifically designed for homeowners who won\'t settle for average. We use Benjamin Moore Aura and Regal Select, Sherwin-Williams Emerald and Duration – the finest paints available. We apply proper preparation that lesser contractors skip, employ skilled craftsmen with years of experience, and provide project manager oversight to ensure results that meet Southborough\'s exacting standards.'
+      },
+      {
+        question: 'What is your insurance coverage for high-value homes?',
+        answer: 'We carry $2 million in general liability insurance specifically because we work on valuable properties like those in Southborough. We\'re also fully bonded and carry workers\' compensation insurance. We\'re happy to provide certificates of insurance to you or your homeowner\'s insurance company before beginning any work.'
+      },
+      {
+        question: 'Do you offer specialty finishes and faux painting techniques?',
+        answer: 'Yes, we offer a full range of specialty finishes including faux finishes, custom glazes, Venetian plaster, lacquered trim and cabinetry, metallic finishes, and textured treatments. Our craftsmen are trained in these techniques and can help you achieve any custom look you desire for your Southborough home.'
+      },
+      {
+        question: 'How do you protect our property during the painting project?',
+        answer: 'We take property protection extremely seriously. Every project includes comprehensive furniture and floor protection with drop cloths and plastic sheeting, careful masking of all fixtures and hardware, protection of landscaping and outdoor features, daily cleanup throughout the project, and a thorough final cleaning. We treat your home as if it were our own – because our reputation depends on it.'
+      },
+      {
+        question: 'Can you coordinate with our interior designer or architect?',
+        answer: 'Absolutely. We regularly work alongside interior designers, architects, and general contractors on Southborough projects. We\'re comfortable with design specifications, can match colors precisely, execute detailed finishing schedules, and communicate professionally with all parties involved in your project.'
+      },
+      {
+        question: 'What is your process for providing estimates in Southborough?',
+        answer: 'We provide comprehensive written estimates after an in-person consultation at your home. Our estimator will thoroughly assess your project, discuss your goals and preferences, and provide a detailed proposal including scope of work, materials specifications, timeline, and transparent pricing. There\'s never any obligation, and we\'re happy to answer any questions about our process or approach.'
+      },
+      {
+        question: 'Do you offer color consultation services?',
+        answer: 'Yes, we offer professional color consultation as part of our premium service. We can help you select colors that complement your home\'s architecture, work with your existing furnishings, suit Southborough\'s neighborhood aesthetics, and achieve your design vision. We bring large samples to view in your actual lighting conditions before you commit to any colors.'
       }
     ],
     nearbyAreas: ['Marlborough', 'Framingham', 'Westborough', 'Hopkinton', 'Ashland', 'Sudbury'],
-    localTip: 'Southborough homeowners often choose timeless color palettes that complement the town\'s traditional New England character. Our color consultants can help you select colors that enhance your home\'s architecture while fitting the neighborhood aesthetic.'
+    localTip: 'Southborough homeowners often choose timeless color palettes – classic whites, sophisticated grays, and elegant blues – that complement the town\'s traditional New England character while standing the test of time. Our color consultants specialize in selecting colors that enhance your home\'s architecture, coordinate with neighborhood aesthetics, and maintain strong curb appeal for years to come.',
+    closingPitch: 'Your Southborough home represents a significant investment and deserves painting services that match its quality. At JH Painting Services, we\'ve built our reputation by exceeding the high expectations of Southborough\'s most discerning homeowners. From our premium materials and meticulous preparation to our white-glove service and attention to detail, we deliver results worthy of your beautiful home. Contact us today for a complimentary consultation and discover why Southborough families trust JH Painting Services with their most important investment. Call (508) 690-8886 or schedule your estimate online.'
   },
 
   // FRAMINGHAM - Large city, diverse housing
@@ -169,41 +268,74 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'framingham',
     heroHeadline: 'Framingham\'s Go-To Painting Contractors',
     heroSubheadline: 'From Downtown to Saxonville, we\'ve painted homes across every Framingham neighborhood.',
+    introText: 'As MetroWest\'s largest and most diverse city, Framingham presents unique opportunities and challenges that JH Painting Services understands intimately. From our base in neighboring Marlborough, we\'ve spent years painting homes across every Framingham neighborhood – from the historic villages of Saxonville and Nobscot to the vibrant downtown, from the established neighborhoods near Framingham State University to the bustling commercial areas around Shoppers World. Framingham\'s incredible diversity of housing stock – spanning nearly 400 years of architectural history – requires painters who can adapt their approach to each unique property. Whether you own a century-old Victorian with ornate trim, a classic mid-century ranch, a converted mill building, or a modern condominium, we bring the expertise and flexibility to deliver exceptional results.',
     painPoints: [
-      'Your older Framingham home has multiple layers of old paint that need proper removal',
-      'The diversity of housing styles in Framingham requires adaptable painting expertise',
-      'You\'ve struggled to find painters available during convenient hours',
-      'Your multi-family property needs painters who understand the unique requirements',
-      'Budget constraints make it hard to find quality painting at fair prices'
+      'Your older Framingham home has multiple layers of old paint, including potentially lead paint, that need proper removal before any new coating',
+      'The incredible diversity of housing styles in Framingham – from 1800s Victorians to 1950s ranches to modern condos – requires adaptable painting expertise',
+      'You\'ve struggled to find painters available during convenient hours who respect your busy schedule',
+      'Your multi-family property in Framingham needs painters who understand the unique requirements of coordinating work across multiple units',
+      'Budget constraints make it seem impossible to find quality painting at fair prices in the competitive MetroWest market',
+      'Previous painters didn\'t understand the specific needs of your Framingham neighborhood\'s architectural style',
+      'Your home in Saxonville, Nobscot, or another historic area needs painters who respect its heritage while providing modern protection'
     ],
     solutions: [
-      'Expert paint removal and surface preparation for Framingham\'s many older homes',
-      'Experience with every style - from Saxonville\'s historic homes to South Framingham\'s Victorians',
-      'Flexible scheduling including weekends to accommodate working families',
-      'Multi-unit expertise with minimal disruption to tenants and efficient project management',
-      'Competitive pricing without sacrificing quality - we pass savings from efficiency to you'
+      'Expert paint removal and surface preparation for Framingham\'s many older homes, including EPA Lead-Safe certified work on pre-1978 properties',
+      'Extensive experience with every Framingham style – from Saxonville\'s historic homes to South Framingham\'s Victorians to Downtown\'s converted mills',
+      'Flexible scheduling including weekends and evenings to accommodate working families and busy professionals',
+      'Multi-unit expertise with efficient project management that minimizes disruption to tenants while keeping projects on schedule',
+      'Competitive pricing without sacrificing quality – our efficiency and local presence allow us to pass savings to you',
+      'Neighborhood-specific expertise that respects the architectural character of Saxonville, Nobscot, Framingham Centre, and other distinct areas',
+      'Premium paints and proper preparation that protect your Framingham home against Massachusetts\' challenging climate'
     ],
-    localContext: 'As MetroWest\'s largest city, Framingham offers incredible diversity - from the historic charm of Saxonville and Nobscot to the bustling energy of Downtown and South Framingham. We\'ve painted everything from century-old Victorians to modern condos near Shoppers World, understanding each neighborhood\'s unique character.',
+    localContext: 'Framingham\'s remarkable diversity makes it one of MetroWest\'s most interesting places to work. We\'ve painted homes in the historic village of Saxonville with its mill heritage, the charming neighborhoods of Nobscot and Framingham Centre, the diverse communities of South Framingham and Downtown, and everywhere in between. We understand the different needs of each area – the historic sensibilities of the older villages, the family focus of the school-adjacent neighborhoods, and the urban energy of downtown. This knowledge allows us to provide recommendations and services tailored to your specific Framingham neighborhood.',
+    serviceDescription: 'JH Painting Services provides comprehensive painting solutions for Framingham\'s incredibly diverse housing stock. Our services include interior painting for every style from historic plaster walls to modern drywall, exterior painting with proper preparation for New England weather, multi-family and investment property painting with tenant coordination, cabinet refinishing to update kitchens without replacement cost, and commercial painting for Framingham businesses. We also offer deck staining, power washing, and specialty services. Our experience across all Framingham neighborhoods means we understand exactly what your home needs.',
     whyChooseUs: [
-      'Extensive experience across all Framingham neighborhoods',
-      'Competitive rates appropriate for Framingham\'s diverse market',
-      'Large enough team to handle any size Framingham project',
-      'Quick response times - just minutes from our Marlborough base',
-      'Multi-language crews for Framingham\'s diverse community'
+      'Extensive experience across all Framingham neighborhoods from Saxonville to South Framingham',
+      'Competitive rates appropriate for Framingham\'s diverse market without sacrificing quality',
+      'Large enough team to handle any size Framingham project – from studio apartments to large estates',
+      'Quick response times – just 10 minutes from our Marlborough headquarters',
+      'Multi-language crews serving Framingham\'s wonderfully diverse community',
+      'EPA Lead-Safe Certified for Framingham\'s many pre-1978 homes',
+      'Neighborhood-specific expertise and sensitivity to local architectural character'
     ],
-    testimonialContext: 'Framingham residents value our combination of quality and value.',
+    testimonialContext: 'Framingham residents from every neighborhood value our combination of quality work, fair pricing, and understanding of their diverse community. We\'ve earned repeat business across the city by delivering consistent results regardless of project size or location.',
     faq: [
       {
         question: 'Do you serve all areas of Framingham?',
-        answer: 'Yes! We work throughout Framingham including Downtown, South Framingham, Saxonville, Nobscot, Framingham Centre, and all surrounding neighborhoods. No area of Framingham is too far.'
+        answer: 'Yes! We work throughout Framingham including Downtown, South Framingham, Saxonville, Nobscot, Framingham Centre, the areas near Framingham State University, and all surrounding neighborhoods. No area of Framingham is outside our service area – we\'re just 10 minutes away in Marlborough and can reach any Framingham address quickly.'
       },
       {
         question: 'Can you paint my multi-family property in Framingham?',
-        answer: 'Absolutely. We have extensive experience with multi-family properties and understand how to coordinate work efficiently while minimizing disruption to tenants.'
+        answer: 'Absolutely. Multi-family properties are a specialty of ours in Framingham. We have extensive experience with two-families, three-families, and small apartment buildings. We understand how to coordinate work efficiently across units, communicate with tenants, and manage projects to minimize disruption while delivering quality results.'
+      },
+      {
+        question: 'How do you handle lead paint in older Framingham homes?',
+        answer: 'We\'re EPA Lead-Safe Certified, which is essential for work on Framingham\'s many homes built before 1978. Our crews follow all required protocols for lead paint disturbance, including proper containment, personal protective equipment, and thorough cleanup. We protect your family and our workers while meeting all regulatory requirements.'
+      },
+      {
+        question: 'What paint brands do you use for Framingham homes?',
+        answer: 'We use premium paints from Benjamin Moore and Sherwin-Williams, selected for their durability in Massachusetts weather. For Framingham\'s diverse housing stock, we match products to specific needs – historic formulations for older homes, mildew-resistant options for shaded properties, and low-VOC choices for families with health sensitivities.'
+      },
+      {
+        question: 'Do you offer free estimates in Framingham?',
+        answer: 'Yes! We provide free, detailed estimates for all Framingham projects. Being just 10 minutes away, we can typically schedule your estimate within 24-48 hours. Our comprehensive proposals include scope of work, materials, timeline, and transparent pricing with no hidden fees.'
+      },
+      {
+        question: 'Can you work around my schedule in Framingham?',
+        answer: 'Absolutely. We understand Framingham residents are busy, and we offer flexible scheduling to accommodate your life. We can work while you\'re at work, schedule around children\'s activities, and even offer weekend appointments for estimates. Our goal is to make the painting process convenient for you.'
+      },
+      {
+        question: 'Do you paint commercial properties in Framingham?',
+        answer: 'Yes, we provide commercial painting services throughout Framingham. From retail storefronts downtown to offices near Shoppers World to industrial spaces, we understand the unique requirements of commercial painting including after-hours work, minimal business disruption, and quick turnaround times.'
+      },
+      {
+        question: 'What is your experience with Framingham\'s historic homes?',
+        answer: 'We have extensive experience with Framingham\'s historic properties, particularly in Saxonville and Nobscot. We understand period-appropriate preparation techniques, how to work with plaster walls and detailed trim, and how to select colors that honor a home\'s heritage while providing modern durability.'
       }
     ],
     nearbyAreas: ['Marlborough', 'Natick', 'Ashland', 'Sudbury', 'Wayland', 'Sherborn'],
-    localTip: 'Framingham\'s varied housing stock means different homes need different approaches. Colonial-era homes in Saxonville require different prep than 1950s ranches. We assess each property individually to determine the best approach.'
+    localTip: 'Framingham\'s varied housing stock means different homes need very different approaches. Colonial-era homes in Saxonville require different prep than 1950s ranches in Nobscot or modern condos downtown. We assess each Framingham property individually to determine the best approach, materials, and timeline for optimal results.',
+    closingPitch: 'Whether you\'re in historic Saxonville, family-friendly Nobscot, vibrant Downtown, or anywhere else in Framingham, JH Painting Services has the experience and expertise to transform your home. We\'ve built our reputation across every Framingham neighborhood by delivering quality work at fair prices with genuine respect for this diverse community. Contact us today at (508) 690-8886 for your free estimate and discover why Framingham homeowners have made us their trusted painting partner.'
   },
 
   // NATICK - Affluent, family-oriented
@@ -211,41 +343,74 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'natick',
     heroHeadline: 'Natick\'s Choice for Professional Painting',
     heroSubheadline: 'Premium painting services for Natick\'s beautiful homes and growing families.',
+    introText: 'Natick families choose JH Painting Services because we understand what matters most to this wonderful community – quality, trust, and a home that reflects your family\'s values. From the historic charm of South Natick with its beautiful antique homes along the Charles River to the bustling energy near the Natick Mall, from the tree-lined streets near Natick High School to the established neighborhoods of Natick Center, we\'ve earned the trust of families throughout this exceptional town. Our commitment to using family-safe paints, working around busy school schedules, and treating your home with the respect it deserves has made us the go-to painting contractor for Natick\'s most discerning homeowners. Whether you\'re refreshing nurseries, updating common areas, or protecting your exterior from New England weather, we bring the expertise and care that Natick families expect.',
     painPoints: [
-      'Your Natick home\'s exterior hasn\'t been painted since you moved in years ago',
-      'Balancing home projects with kids\' activities at Natick schools is challenging',
-      'You want a fresh interior look but worry about fumes with young children at home',
-      'Your South Natick historic home needs painters who respect its character',
-      'Finding painters you can trust in your home while you\'re at work is difficult'
+      'Your Natick home\'s exterior hasn\'t been painted in years and is showing serious wear from harsh New England winters',
+      'Balancing home improvement projects with kids\' activities, school schedules, and work commitments feels impossible',
+      'You want a fresh interior look but worry about toxic paint fumes with young children, babies, or pets at home',
+      'Your South Natick historic home near the Charles River needs painters who truly understand and respect its character',
+      'Finding trustworthy painters you feel comfortable leaving in your home while you\'re at work has been challenging',
+      'Previous painters left your home a mess with paint splatters, didn\'t protect your floors, and caused more stress than help',
+      'Your home near the Natick Mall area has strict HOA color guidelines that make choosing exterior colors complicated'
     ],
     solutions: [
-      'Comprehensive exterior painting that protects and beautifies for years to come',
-      'Family-friendly scheduling that works around school calendars and activities',
-      'Low-VOC and zero-VOC paint options safe for families with children and pets',
-      'Historic home expertise for South Natick\'s treasured older properties',
-      'Background-checked crews you can trust in your home unsupervised'
+      'Comprehensive exterior painting with premium weather-resistant paints that protect and beautify for 8-10 years',
+      'Family-friendly scheduling designed around school calendars, sports, activities, and your busy professional life',
+      'Full range of low-VOC and zero-VOC paint options that are completely safe for children, babies, pets, and sensitive family members',
+      'Historic home expertise with proper techniques for South Natick\'s treasured antique properties near the Charles River',
+      'Background-checked, trustworthy crews you can confidently leave in your home while you\'re away',
+      'Meticulous job site protection and cleanup – we treat your home with the same care we\'d give our own family\'s home',
+      'HOA expertise to navigate Natick\'s color approval processes and ensure your choices comply while expressing your style'
     ],
-    localContext: 'Natick combines excellent schools, beautiful neighborhoods, and convenient access to Boston - making it perfect for families. From the historic charm of South Natick and the Natick Common area to the family neighborhoods near Natick High School, we understand what Natick homeowners value most.',
+    localContext: 'Natick combines award-winning schools, beautiful neighborhoods, convenient shopping at the Natick Mall, and easy access to Boston – making it one of Massachusetts\' most desirable communities for families. From the historic charm of South Natick with its antique homes and peaceful Charles River views to the bustling Natick Center, from the family neighborhoods near Kennedy Middle School to the estates of West Natick, we understand what Natick homeowners value most. Our team has painted homes near the Natick Common, updated kitchens in South Natick\'s historic district, and refreshed countless family homes throughout this vibrant community.',
+    serviceDescription: 'JH Painting Services offers complete painting solutions tailored to Natick\'s family-focused community. Our interior painting services use low-VOC and zero-VOC paints safe for children and pets, with expert color consultation to help you create the perfect family home atmosphere. For exteriors, we provide thorough preparation and premium weather-resistant paints that stand up to New England\'s challenging climate. Our cabinet refinishing service transforms dated kitchens at 60-70% less than replacement cost – perfect for growing families who want an updated look without the major renovation disruption. We also offer deck staining, commercial painting, and specialty services including accent walls, nursery painting, and playroom-safe finishes.',
     whyChooseUs: [
-      'Family-owned company serving family-focused Natick',
-      'Convenient scheduling around school and activity calendars',
-      'Low-VOC options for homes with children and pets',
-      'Experience with Natick\'s mix of historic and modern homes',
-      'Trusted by numerous Natick families'
+      'Family-owned company that truly understands family-focused Natick',
+      'Convenient scheduling around school calendars, sports, and activities',
+      'Full range of low-VOC and zero-VOC options safe for children and pets',
+      'Extensive experience with Natick\'s mix of historic South Natick homes and modern construction',
+      'Trusted by hundreds of Natick families with outstanding reviews',
+      'HOA color approval expertise for Natick\'s various neighborhood associations',
+      'Background-checked crews you can trust in your home'
     ],
-    testimonialContext: 'Natick families appreciate our flexible scheduling and family-safe paint options.',
+    testimonialContext: 'Natick families consistently praise our family-friendly approach, from our safe paint options and flexible scheduling to our trustworthy crews and meticulous cleanup. Many Natick parents have told us they appreciate being able to continue their daily routines while we transform their homes.',
     faq: [
       {
-        question: 'Do you offer low-VOC paints for homes with children?',
-        answer: 'Yes! We offer a full range of low-VOC and zero-VOC paints that are safe for families with children and pets. These premium paints provide excellent coverage and durability without the harsh chemical odors.'
+        question: 'Do you offer low-VOC paints safe for homes with children and babies?',
+        answer: 'Absolutely! Family safety is our priority, especially in family-focused Natick. We offer a complete range of low-VOC and zero-VOC paints from Benjamin Moore and Sherwin-Williams that are completely safe for children, babies, and pets. These premium paints provide excellent coverage and durability without harsh chemical odors. Many Natick families choose our zero-VOC options for nurseries, playrooms, and children\'s bedrooms for complete peace of mind.'
       },
       {
-        question: 'Can you work around our family\'s busy schedule?',
-        answer: 'Absolutely. We understand Natick families are busy with schools, sports, and activities. We offer flexible scheduling and can work while you\'re away to minimize disruption.'
+        question: 'Can you work around our family\'s busy Natick schedule?',
+        answer: 'We specialize in accommodating busy Natick families! We can work while your kids are at school, schedule around sports practices and games, and complete projects before important family events. Our flexible scheduling ensures your painting project fits your life – not the other way around. We communicate clearly about timing and always respect your family\'s routine.'
+      },
+      {
+        question: 'Do you have experience with South Natick\'s historic homes?',
+        answer: 'Yes! South Natick\'s beautiful historic homes near the Charles River are some of our favorite projects. We understand the unique requirements of antique homes including proper surface preparation for old plaster and woodwork, lead paint protocols (we\'re EPA Lead-Safe Certified), period-appropriate color selections, and techniques that respect original craftsmanship while providing modern protection.'
+      },
+      {
+        question: 'How do you protect our home and belongings during painting?',
+        answer: 'We take property protection extremely seriously – especially in homes with children where things need to stay clean and safe. Every Natick project includes comprehensive furniture protection with clean drop cloths and plastic sheeting, careful masking of fixtures and hardware, floor protection appropriate for your flooring type, daily cleanup, and a thorough final cleaning. We leave your home ready for your family to enjoy immediately.'
+      },
+      {
+        question: 'Can you help us navigate Natick HOA color requirements?',
+        answer: 'Absolutely! Many Natick neighborhoods have HOA color guidelines, and we\'re experienced in working within these requirements. We can help you select colors that comply with your HOA\'s approved palette while still expressing your personal style. We provide color samples and documentation to support your approval process, making the whole experience stress-free.'
+      },
+      {
+        question: 'How long does interior painting typically take for Natick homes?',
+        answer: 'Timing varies based on project scope, but we provide accurate estimates during our consultation. A single room typically takes 1-2 days, while a full home interior might take 5-7 days. We understand Natick families need minimal disruption, so we work efficiently while maintaining our quality standards. We\'ll give you a detailed timeline so you can plan around your family\'s schedule.'
+      },
+      {
+        question: 'Do you offer cabinet refinishing in Natick?',
+        answer: 'Yes! Cabinet refinishing is one of our most popular services for Natick families looking to update their kitchens without the cost and disruption of full replacement. Our spray-applied finish delivers a factory-smooth look at 60-70% less than new cabinets. This is perfect for busy families who want a beautiful updated kitchen without weeks of renovation chaos.'
+      },
+      {
+        question: 'What is your warranty on painting work in Natick?',
+        answer: 'We stand behind all our work with comprehensive warranties: 5 years on exterior painting and 3 years on interior painting. Our warranty covers peeling, blistering, flaking, and fading under normal conditions. Being locally based in nearby Marlborough, warranty service is convenient – just call and we\'ll promptly address any concerns. We\'ve built our reputation on quality work that lasts.'
       }
     ],
     nearbyAreas: ['Framingham', 'Wellesley', 'Sherborn', 'Wayland', 'Dover', 'Needham'],
-    localTip: 'Natick\'s family-oriented neighborhoods often have HOA color guidelines. We can help navigate these requirements and suggest colors that comply while still expressing your personal style.'
+    localTip: 'Natick\'s family-oriented neighborhoods often have HOA color guidelines that vary by development. Before selecting exterior colors, check with your association and consider colors that complement the neighborhood aesthetic. We\'re happy to help navigate these requirements and suggest beautiful options that comply while expressing your family\'s personality.',
+    closingPitch: 'Your Natick home is where your family creates memories, gathers for holidays, and builds your life together – it deserves painting services that understand what matters to families like yours. At JH Painting Services, we\'ve earned the trust of Natick families by delivering beautiful results with family-safe products, accommodating schedules, and crews you can trust. From your child\'s bedroom to your home\'s exterior, we treat every project with the care and attention your family deserves. Contact us today at (508) 690-8886 for your free estimate and discover why Natick families choose JH Painting Services for all their painting needs.'
   },
 
   // WORCESTER - Large city, urban challenges
@@ -253,41 +418,74 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'worcester',
     heroHeadline: 'Worcester\'s Professional Painting Experts',
     heroSubheadline: 'Serving Worcester\'s diverse neighborhoods from Downtown to the West Side.',
+    introText: 'As New England\'s second-largest city, Worcester demands painting contractors who understand urban challenges, diverse housing stock, and the unique needs of a working-class city with deep historical roots. JH Painting Services has spent years mastering the art of painting Worcester\'s iconic triple-deckers, revitalizing historic Victorian mansions, updating commercial properties in the Canal District, and transforming family homes across the West Side, Tatnuck, and beyond. We understand Worcester\'s character – a city of neighborhoods, each with its own personality and architectural heritage. From the ornate mansions of Crown Hill to the classic multi-family homes throughout Main South, from the revitalized Downtown to the suburban feel of Holden-adjacent areas, we bring professional quality painting at prices that make sense for Worcester\'s hardworking families and property owners.',
     painPoints: [
-      'Your Worcester triple-decker needs painters who understand multi-family challenges',
-      'Urban pollution and traffic have left your home\'s exterior grimy and faded',
-      'You\'ve had unreliable contractors who started work but never finished',
-      'The lead paint in your older Worcester home is a concern during renovations',
-      'Finding affordable quality painting in Worcester seems impossible'
+      'Your Worcester triple-decker needs painters who truly understand multi-family logistics, tenant coordination, and efficient scheduling',
+      'Years of urban pollution, road salt, and traffic grime have left your home\'s exterior looking neglected and weathered',
+      'You\'ve been burned by unreliable contractors who took deposits, started work, and then disappeared to chase bigger jobs',
+      'The lead paint in your older Worcester home built before 1978 is a serious health concern that requires proper handling',
+      'Finding affordable quality painting in Worcester that doesn\'t sacrifice craftsmanship for low prices has proven nearly impossible',
+      'Your rental property needs painting between tenants but time is tight and you need a crew that can work efficiently',
+      'The ornate Victorian details on your Worcester home require skilled painters, not handymen who cut corners'
     ],
     solutions: [
-      'Extensive multi-family experience - triple-deckers, duplexes, and apartment buildings',
-      'Thorough power washing and prep to remove years of urban grime before painting',
-      'Reliable crews who complete projects on schedule - our reputation depends on it',
-      'EPA-certified lead-safe work practices for Worcester\'s many pre-1978 homes',
-      'Competitive pricing structured for Worcester\'s market without compromising quality'
+      'Extensive multi-family experience with triple-deckers, duplexes, and apartment buildings – including seamless tenant coordination',
+      'Thorough power washing, scraping, and prep that removes years of urban grime before any paint touches your surfaces',
+      'Reliable crews who show up when promised and complete projects on schedule – our reputation is built on dependability',
+      'EPA Lead-Safe Certified crews who follow all proper protocols to protect your family, tenants, and our workers during renovation',
+      'Competitive Worcester-market pricing that delivers quality craftsmanship without the premium suburb markup',
+      'Fast-turnaround rental property painting to minimize vacancy time and get your units income-producing quickly',
+      'Skilled craftsmen experienced with Worcester\'s beautiful Victorian trim, ornate details, and historic millwork'
     ],
-    localContext: 'As New England\'s second-largest city, Worcester offers incredible diversity - from the historic architecture of Main South and the East Side to the thriving neighborhoods of the West Side and Tatnuck. We\'ve painted everything from iconic triple-deckers to modern condos near Union Station.',
+    localContext: 'Worcester\'s incredible diversity is reflected in its neighborhoods – from the grand Victorian mansions of Crown Hill and the historic streets of Main South to the thriving Canal District, the family neighborhoods of the West Side and Tatnuck, and the classic triple-decker-lined streets of the East Side. We\'ve painted properties near WPI and Clark University, transformed commercial spaces in Downtown Worcester, and refreshed countless family homes throughout this proud city. We understand that Worcester homeowners and landlords need reliable, quality work at fair prices – and that\'s exactly what we deliver.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting solutions designed for Worcester\'s unique housing stock and property needs. Our services include interior and exterior painting for single-family homes, multi-family specialists for triple-deckers and apartment buildings, commercial painting for Worcester businesses, cabinet refinishing, deck staining, and specialty services. We excel at tenant coordination for occupied properties, fast-turnaround work for rental units, and the careful preparation that Worcester\'s older homes require. Our EPA Lead-Safe certification means we can safely work on Worcester\'s many pre-1978 properties.',
     whyChooseUs: [
-      'Experience with Worcester\'s unique multi-family housing stock',
-      'EPA lead-safe certified for older Worcester homes',
-      'Competitive rates structured for Worcester\'s market',
-      'Large crew capacity for Worcester\'s bigger projects',
-      'Understanding of Worcester\'s diverse neighborhoods and their needs'
+      'Unmatched experience with Worcester\'s unique multi-family housing stock including triple-deckers',
+      'EPA Lead-Safe Certified for safe work on Worcester\'s many older properties',
+      'Competitive pricing structured for Worcester\'s market – quality without premium suburb markups',
+      'Large crew capacity to handle Worcester\'s bigger multi-family and commercial projects',
+      'Deep understanding of Worcester\'s diverse neighborhoods and their specific architectural needs',
+      'Fast, efficient service for rental property turnovers to minimize your vacancy time',
+      'Reliable, dependable crews who show up and finish what they start'
     ],
-    testimonialContext: 'Worcester property owners trust us for reliable, quality work at fair prices.',
+    testimonialContext: 'Worcester property owners – from homeowners to landlords managing multiple properties – trust us for reliable, quality work at fair prices. Our reputation in Worcester has been built one satisfied customer at a time, with many landlords using us for all their properties because they know we\'ll deliver consistent results.',
     faq: [
       {
         question: 'Do you paint Worcester\'s triple-decker homes?',
-        answer: 'Yes! Triple-deckers are a Worcester specialty of ours. We understand the logistics of multi-family painting including tenant coordination, working on multiple floors, and efficient project management.'
+        answer: 'Absolutely – triple-deckers are a Worcester specialty of ours! We understand the unique logistics of multi-family painting including tenant coordination and communication, working efficiently across multiple floors, proper scaffolding and safety for three-story structures, and project management that minimizes disruption. We\'ve painted hundreds of triple-deckers throughout Worcester and understand exactly what these iconic buildings need.'
       },
       {
         question: 'Are you certified for lead paint work in older Worcester homes?',
-        answer: 'Absolutely. Our crews are EPA Lead-Safe certified, which is required for work on pre-1978 homes. We follow all proper protocols to protect your family and our workers.'
+        answer: 'Yes, we\'re EPA Lead-Safe Certified, which is legally required for renovation work on pre-1978 homes – and that includes most of Worcester\'s housing stock. Our crews follow all proper containment, protective equipment, and cleanup protocols to protect your family, tenants, and our workers. We take lead safety seriously and never cut corners on this critical issue.'
+      },
+      {
+        question: 'How do you handle painting occupied rental properties?',
+        answer: 'We\'re experts at painting occupied multi-family properties with minimal tenant disruption. We communicate clearly with tenants about scheduling, work efficiently to complete units quickly, maintain clean and safe work areas, and respect tenants\' privacy and property. Many Worcester landlords use us exclusively because we handle tenant relations professionally.'
+      },
+      {
+        question: 'What areas of Worcester do you serve?',
+        answer: 'We serve all of Worcester including Downtown, the Canal District, Main South, the East Side, the West Side, Tatnuck, Greendale, Burncoat, Crown Hill, and all surrounding neighborhoods. No area of Worcester is outside our service area, and we understand the unique character and needs of each neighborhood.'
+      },
+      {
+        question: 'Can you do fast turnaround painting for rental units?',
+        answer: 'Yes! We understand that vacancy time costs Worcester landlords money. We offer expedited scheduling for rental turnovers and work efficiently to get your units painted and ready for new tenants as quickly as possible. Contact us as soon as you know a unit will be available and we\'ll prioritize your project.'
+      },
+      {
+        question: 'Do you paint commercial properties in Worcester?',
+        answer: 'Absolutely. We provide commercial painting services throughout Worcester including offices, retail spaces, restaurants, and industrial facilities. We understand commercial requirements including working around business hours, minimizing disruption to operations, and meeting tight deadlines. The revitalized Canal District and Downtown have kept us busy with commercial projects.'
+      },
+      {
+        question: 'What makes your pricing competitive for Worcester?',
+        answer: 'We structure our pricing for Worcester\'s market – quality craftsmanship without the premium suburb markups. Our efficiency, experienced crews, and streamlined operations allow us to deliver excellent results at prices that make sense for Worcester property owners. We provide detailed written estimates with no hidden fees so you know exactly what to expect.'
+      },
+      {
+        question: 'Do you offer free estimates in Worcester?',
+        answer: 'Yes! We provide free, detailed estimates for all Worcester projects. We\'ll visit your property, assess the scope of work, discuss your needs and timeline, and provide a comprehensive written proposal. There\'s no obligation, and we\'re happy to answer any questions about our process or materials.'
       }
     ],
     nearbyAreas: ['Shrewsbury', 'Auburn', 'Holden', 'West Boylston', 'Grafton', 'Millbury'],
-    localTip: 'Worcester\'s diverse neighborhoods have different painting needs. Historic areas like Crown Hill benefit from period-appropriate colors, while newer developments have more flexibility. We help you choose colors that fit your neighborhood.'
+    localTip: 'Worcester\'s diverse neighborhoods have very different painting needs. Historic areas like Crown Hill benefit from period-appropriate colors and careful prep work for ornate Victorian details. Multi-family properties need efficient scheduling and tenant coordination. Newer developments have more flexibility. We assess each Worcester property individually and tailor our approach to your specific situation.',
+    closingPitch: 'Worcester deserves painting contractors who understand this city – its diverse neighborhoods, its iconic triple-deckers, its hardworking families and property owners. JH Painting Services has built our Worcester reputation by delivering reliable, quality work at fair prices, showing up when we say we will, and treating every property with respect. Whether you own a single-family home, manage multiple rental properties, or need commercial painting services, we\'d be honored to earn your trust. Contact us today at (508) 690-8886 for your free estimate and experience the difference a truly dependable painting contractor makes.'
   },
 
   // BOSTON - Major market, premium services
@@ -295,41 +493,74 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'boston',
     heroHeadline: 'Boston\'s Trusted Painting Professionals',
     heroSubheadline: 'From Beacon Hill brownstones to South Boston condos, we bring suburban quality to the city.',
+    introText: 'Boston is a world-class city with world-class architecture – from the iconic Federal-style brownstones of Beacon Hill and the elegant Victorian row houses of the South End to the sleek modern condos of the Seaport and the charming triple-deckers of Dorchester. JH Painting Services brings our renowned suburban attention to detail and craftsmanship to every Boston neighborhood, handling the unique challenges of urban painting with efficiency and expertise. We understand that Boston homeowners face particular obstacles – limited parking and access, strict building management requirements, historic district regulations, and the difficulty of finding reliable contractors willing to work in urban environments. That\'s why we\'ve built our Boston practice around solving these challenges, delivering premium results without the inflated city pricing that makes quality work inaccessible.',
     painPoints: [
-      'Finding reliable painters willing to work in Boston\'s challenging urban environment',
-      'Your brownstone or historic building has strict architectural guidelines',
-      'Coordinating painting in your condo requires building management approval',
-      'Limited parking and access makes Boston painting projects complicated',
-      'Previous city painters charged premium prices but delivered average work'
+      'Finding reliable painters genuinely willing to work in Boston\'s challenging urban environment with limited parking and difficult access',
+      'Your brownstone or historic building in Beacon Hill, Back Bay, or South End has strict architectural guidelines you must follow',
+      'Coordinating painting in your condo requires building management approval, insurance certificates, elevator reservations, and strict work hours',
+      'Limited parking and narrow access means most painters either won\'t take the job or charge enormous premiums',
+      'Previous city painters charged premium prices but delivered mediocre work with excuses instead of results',
+      'Your historic building\'s ornate details and original features require skilled craftsmen, not rushed painters',
+      'Scheduling work in your Boston co-op or condo building requires coordination with neighbors that most contractors won\'t bother with'
     ],
     solutions: [
-      'Experienced with Boston\'s unique urban painting challenges and logistics',
-      'Historic building expertise including Beacon Hill and Back Bay guidelines',
-      'Condo and HOA experience - we handle coordination with building management',
-      'Efficient crews skilled at working in limited-access urban environments',
-      'Premium results at competitive rates - quality doesn\'t require city pricing markups'
+      'Experienced crews who embrace Boston\'s unique urban painting challenges – we know how to work efficiently in city environments',
+      'Historic building expertise including deep knowledge of Beacon Hill, Back Bay, and South End guidelines and approval processes',
+      'Full condo and HOA coordination – we handle building management requirements, insurance paperwork, elevator booking, and scheduling',
+      'Efficient, skilled crews experienced in limited-access urban environments who complete projects without unnecessary delays',
+      'Premium results at competitive rates – exceptional quality doesn\'t require inflated city pricing markups',
+      'Skilled craftsmen who excel at ornate Victorian trim, historic millwork, and the detailed work Boston\'s beautiful buildings deserve',
+      'Professional coordination with building management and neighbors to ensure smooth project execution in shared buildings'
     ],
-    localContext: 'Boston\'s incredible neighborhoods each have unique character - from the Federal-style brownstones of Beacon Hill to the Victorian row houses of the South End, the waterfront condos of the Seaport to the family homes of West Roxbury. We bring our suburban attention to detail to every Boston project.',
+    localContext: 'Boston\'s incredible neighborhoods each have their own unique character and requirements. We\'ve painted Federal-style brownstones on Beacon Hill with their strict historic guidelines, elegant Victorian row houses throughout the South End, waterfront luxury condos in the Seaport, classic triple-deckers in Dorchester and South Boston, family homes in West Roxbury and Jamaica Plain, and everything in between. Our teams know the requirements for each neighborhood – from the Beacon Hill Civic Association guidelines to the specific insurance requirements of Boston\'s premier condo buildings.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting solutions tailored to Boston\'s unique urban environment. Our services include interior and exterior painting for all building types, historic property expertise with proper techniques for period buildings, condo and co-op painting with full building management coordination, commercial painting for Boston businesses, and specialty services including cabinet refinishing, deck staining, and restoration work. We handle all the urban logistics that make Boston painting challenging – from parking permits to building access to insurance requirements – so you can focus on enjoying your beautiful results.',
     whyChooseUs: [
-      'Experience across Boston\'s diverse neighborhoods and building types',
-      'Historic district expertise for Beacon Hill, Back Bay, and South End',
-      'Condo and co-op experience with building management coordination',
-      'Efficient crews skilled in urban painting logistics',
-      'Competitive rates without the "city premium"'
+      'Deep experience across all Boston neighborhoods from Beacon Hill to Dorchester',
+      'Historic district expertise for Beacon Hill, Back Bay, South End, and Charlestown',
+      'Complete condo and co-op coordination including insurance, access, and scheduling',
+      'Efficient crews skilled in navigating Boston\'s urban painting logistics',
+      'Competitive pricing without the inflated "Boston premium" – quality work at fair rates',
+      'Proper insurance coverage meeting Boston building requirements',
+      'Reliable, professional service that respects your time and your property'
     ],
-    testimonialContext: 'Boston homeowners appreciate our suburban quality at competitive prices.',
+    testimonialContext: 'Boston homeowners and condo owners consistently praise our ability to deliver suburban-quality craftsmanship in the urban environment – handling all the logistics that make city projects challenging while delivering beautiful, lasting results at competitive prices.',
     faq: [
       {
-        question: 'Do you work in historic districts like Beacon Hill?',
-        answer: 'Yes! We understand the strict guidelines for Boston\'s historic districts and work within required color palettes and preservation standards. We can help navigate the approval process for exterior painting in regulated areas.'
+        question: 'Do you work in historic districts like Beacon Hill and Back Bay?',
+        answer: 'Absolutely! We have extensive experience with Boston\'s historic districts including Beacon Hill, Back Bay, South End, and Charlestown. We understand the strict guidelines for these areas, work within required color palettes and preservation standards, and can help you navigate the approval process for exterior work. Our crews are experienced with historic building techniques and materials.'
       },
       {
         question: 'Can you paint my Boston condo?',
-        answer: 'Absolutely. We regularly work in Boston condominiums and handle all coordination with building management, including elevator reservations, approved work hours, and insurance requirements.'
+        answer: 'Yes – condo painting is one of our Boston specialties. We handle all coordination with building management including providing certificates of insurance, reserving elevators, working within approved hours, and communicating with neighboring units. We understand that condo buildings have specific requirements, and we make the process seamless for both you and your building management.'
+      },
+      {
+        question: 'How do you handle parking and access in Boston?',
+        answer: 'We\'re experienced with all aspects of Boston urban logistics. Depending on your location, we coordinate with building management for loading zones, obtain parking permits when needed, schedule deliveries to minimize disruption, and use efficient work practices to reduce the number of site visits. We won\'t let parking challenges prevent you from getting quality painting work.'
+      },
+      {
+        question: 'What insurance do you carry for Boston buildings?',
+        answer: 'We carry $2 million in general liability insurance, which meets the requirements of virtually all Boston condo buildings and property management companies. We also carry full workers\' compensation coverage. We\'re happy to provide certificates of insurance to building management or your unit\'s insurer before beginning work.'
+      },
+      {
+        question: 'Do you paint exterior brownstones and row houses?',
+        answer: 'Yes! Boston\'s beautiful brownstones, row houses, and multi-family buildings are some of our favorite projects. We understand the proper techniques for these historic structures, from appropriate preparation to compatible primers and paints. For buildings in historic districts, we ensure all work complies with local guidelines and can assist with the approval process.'
+      },
+      {
+        question: 'Can you work around my building\'s restricted hours?',
+        answer: 'Absolutely. Most Boston buildings have specific work hours, and we schedule our projects to comply. Whether your building allows work only during business hours or has weekend restrictions, we\'ll create a schedule that works within your building\'s rules while completing your project efficiently.'
+      },
+      {
+        question: 'What Boston neighborhoods do you serve?',
+        answer: 'We serve all of Boston including Beacon Hill, Back Bay, South End, Seaport, North End, Charlestown, South Boston, Dorchester, Jamaica Plain, West Roxbury, Roslindale, Hyde Park, Allston-Brighton, and all other neighborhoods. No Boston location is outside our service area.'
+      },
+      {
+        question: 'Are your prices higher for Boston than surrounding suburbs?',
+        answer: 'We don\'t believe in inflated "city premiums." While urban projects sometimes require additional coordination time, we keep our pricing competitive with suburban rates. Our efficiency in urban environments means we can deliver premium results without the excessive markups that Boston homeowners often encounter. We provide transparent, detailed estimates with no hidden fees.'
       }
     ],
     nearbyAreas: ['Cambridge', 'Somerville', 'Brookline', 'Newton', 'Watertown', 'Jamaica Plain'],
-    localTip: 'Boston\'s historic neighborhoods often have specific approved color palettes. Before selecting exterior colors, check with the Landmarks Commission or your building\'s HOA. We can help guide you through this process.'
+    localTip: 'Boston\'s historic neighborhoods – Beacon Hill, Back Bay, South End, and Charlestown – have specific approved color palettes and approval processes for exterior painting. Before selecting colors, check with the relevant historic commission or your building\'s HOA. We\'re experienced with these requirements and can help guide you through the process to ensure your project proceeds smoothly.',
+    closingPitch: 'Boston deserves painting contractors who embrace the city rather than avoiding it – who understand urban logistics, respect historic guidelines, and deliver premium craftsmanship without the inflated city pricing. JH Painting Services has built our Boston reputation by solving the challenges that make urban painting difficult and delivering beautiful results that Boston homeowners can be proud of. From Beacon Hill brownstones to Seaport condos, we\'d be honored to bring our expertise to your Boston home. Contact us today at (508) 690-8886 for your free estimate and experience the difference professional urban painting makes.'
   },
 
   // CAMBRIDGE - Academic, historic, diverse
@@ -337,41 +568,74 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'cambridge',
     heroHeadline: 'Cambridge\'s Professional Painting Services',
     heroSubheadline: 'From Harvard Square Victorians to Kendall Square condos, quality painting for Cambridge.',
+    introText: 'Cambridge is unlike any other city – home to two of the world\'s greatest universities, a thriving innovation ecosystem, stunning historic architecture, and residents who value quality, sustainability, and thoughtful craftsmanship. JH Painting Services has built our Cambridge practice around understanding what makes this community unique: the beautiful Victorian and Colonial homes throughout Cambridge\'s neighborhoods require skilled detail work, the environmentally conscious residents want eco-friendly paint options, the busy professionals and academics need flexible scheduling, and everyone expects excellence. From the grand homes near Harvard to the converted industrial spaces of Kendall Square, from family neighborhoods in West Cambridge to the vibrant streets of Central Square, we bring the precision, environmental responsibility, and quality that Cambridge residents rightfully demand.',
     painPoints: [
-      'Your Cambridge Victorian has intricate trim that previous painters botched',
-      'Living near Harvard or MIT means high expectations for quality work',
-      'Your rental property needs painting that satisfies discerning tenants',
-      'Environmental concerns make you want eco-friendly paint options',
-      'Coordinating painting work around your demanding schedule is difficult'
+      'Your Cambridge Victorian has intricate trim, ornate details, and architectural features that previous painters either botched or avoided entirely',
+      'Living in Cambridge – surrounded by Harvard, MIT, and world-class institutions – means you have high expectations that average contractors consistently fail to meet',
+      'Your investment or rental property needs painting that attracts and retains the discerning tenants Cambridge\'s competitive market demands',
+      'Environmental concerns are important to you, and you want genuinely eco-friendly paint options, not greenwashed marketing claims',
+      'Coordinating painting work around your demanding professional or academic schedule has proven nearly impossible with unreliable contractors',
+      'Your historic Cambridge home has lead paint that requires proper handling, but finding certified contractors is challenging',
+      'Parking restrictions and urban logistics in Cambridge make home improvement projects complicated for most contractors'
     ],
     solutions: [
-      'Expert detail work for Cambridge\'s beautiful Victorian and Colonial homes',
-      'Quality craftsmanship that meets the expectations of an academic community',
-      'Investment property painting that helps attract and retain quality tenants',
-      'Full range of eco-friendly, low-VOC, and zero-VOC paint options',
-      'Flexible scheduling for busy professionals and academics'
+      'Expert detail work for Cambridge\'s beautiful Victorian and Colonial homes – we have the patience and skill for intricate trim, multi-color schemes, and architectural details',
+      'Quality craftsmanship that consistently meets the high expectations of Cambridge\'s academic and professional community',
+      'Investment property painting designed to attract premium tenants – quality finishes that justify top-market rents',
+      'Genuine eco-friendly options including low-VOC, zero-VOC, and natural paint products from premium manufacturers',
+      'Flexible scheduling that respects your demanding professional life – we work around your calendar, not the reverse',
+      'EPA Lead-Safe Certified crews for safe work on Cambridge\'s many historic pre-1978 homes',
+      'Urban project expertise – we handle Cambridge\'s parking restrictions and logistics efficiently and professionally'
     ],
-    localContext: 'Cambridge\'s unique blend of world-class academics, historic architecture, and progressive values shapes every neighborhood. From the tree-lined streets of Harvard Square to the innovation hub of Kendall Square, from family-friendly Porter Square to the vibrant diversity of Central Square, we bring quality painting to all of Cambridge.',
+    localContext: 'Cambridge\'s neighborhoods each have their own distinct character, and we\'ve painted in all of them. Harvard Square\'s grand homes and historic buildings, Kendall Square\'s modern condos and converted industrial spaces, Porter Square\'s family-friendly streets, Central Square\'s eclectic mix, the elegant homes of Brattle Street and West Cambridge, the classic triple-deckers of East Cambridge – we understand the specific needs of each area. Our Cambridge clients include professors, tech executives, property investors, longtime residents, and newcomers alike, all united by their appreciation for quality work.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting solutions designed for Cambridge\'s sophisticated homeowners and property investors. Our services include interior painting with eco-friendly low-VOC and zero-VOC options, exterior painting for Cambridge\'s diverse building types, Victorian detail work requiring skilled craftsmen, condo painting with building coordination, investment property services designed to maximize rental appeal, cabinet refinishing, and commercial painting for Cambridge businesses. We handle all aspects of urban project management including parking logistics and building access.',
     whyChooseUs: [
-      'Detail-oriented work for Cambridge\'s historic homes',
-      'Eco-friendly options for environmentally conscious residents',
-      'Experience with rental properties and investment real estate',
-      'Flexible scheduling for busy professionals',
-      'Understanding of Cambridge\'s diverse neighborhoods'
+      'Meticulous detail work worthy of Cambridge\'s beautiful historic homes',
+      'Genuine eco-friendly paint options from premium manufacturers – not greenwashing',
+      'Investment property expertise that helps maximize your rental returns',
+      'Flexible scheduling respecting demanding professional and academic calendars',
+      'EPA Lead-Safe Certified for Cambridge\'s many historic homes',
+      'Urban project expertise handling Cambridge\'s parking and logistics challenges',
+      'Quality and professionalism matching Cambridge\'s high standards'
     ],
-    testimonialContext: 'Cambridge residents value our attention to detail and eco-conscious options.',
+    testimonialContext: 'Cambridge residents – from Harvard professors to tech entrepreneurs to longtime homeowners – value our attention to detail, eco-conscious paint options, and ability to deliver quality work that matches the standards of this exceptional community.',
     faq: [
       {
-        question: 'Do you offer eco-friendly paint options?',
-        answer: 'Yes! We offer a complete range of environmentally friendly paints including low-VOC, zero-VOC, and natural paint options. These provide excellent quality while aligning with Cambridge\'s environmental values.'
+        question: 'Do you offer genuine eco-friendly paint options?',
+        answer: 'Absolutely – we take environmental responsibility seriously, not as a marketing claim but as a genuine commitment. We offer a complete range of truly eco-friendly paints including low-VOC and zero-VOC options from Benjamin Moore and Sherwin-Williams, as well as natural paint products for clients seeking the most environmentally responsible choices. We\'re happy to discuss the environmental attributes of different products to help you make an informed decision.'
       },
       {
         question: 'Can you handle the detailed trim on Cambridge Victorians?',
-        answer: 'Absolutely. Cambridge\'s Victorian homes are some of our favorite projects. We have the skills and patience for intricate gingerbread trim, detailed cornices, and multi-color schemes that highlight architectural features.'
+        answer: 'Victorian detail work is one of our specialties – Cambridge\'s beautiful Victorians deserve skilled craftsmen, not rushed painters. We have the patience, skill, and experience for intricate gingerbread trim, detailed cornices, ornate brackets, and multi-color schemes that highlight architectural features. Many Cambridge homeowners come to us specifically because their previous painters couldn\'t handle Victorian complexity.'
+      },
+      {
+        question: 'Do you work with rental property owners and investors?',
+        answer: 'Yes – we work with many Cambridge property investors and understand the specific needs of investment properties. We offer efficient scheduling to minimize vacancy time, finishes that withstand tenant turnover, colors that appeal to Cambridge\'s rental market, and coordinated multi-unit work for larger properties. Many Cambridge landlords use us for all their properties.'
+      },
+      {
+        question: 'How do you handle parking and access in Cambridge?',
+        answer: 'Cambridge\'s parking restrictions are familiar territory for us. We coordinate with building management where applicable, time deliveries and equipment setup efficiently, use space wisely during projects, and plan our work to minimize vehicle presence. We won\'t let Cambridge\'s urban logistics prevent you from getting quality painting work.'
+      },
+      {
+        question: 'Are you certified for lead paint work in Cambridge\'s older homes?',
+        answer: 'Yes, we\'re EPA Lead-Safe Certified – essential for work in Cambridge where so many beautiful homes were built before 1978. Our crews follow all proper containment, safety, and cleanup protocols to protect your family, neighbors, and our workers. We take lead safety seriously and never cut corners.'
+      },
+      {
+        question: 'Can you work around my demanding schedule?',
+        answer: 'Absolutely. We understand that Cambridge residents often have demanding professional and academic schedules that don\'t leave room for contractor coordination headaches. We offer flexible scheduling, clear communication about timing, and reliable crews who show up when promised. We work around your calendar, not the reverse.'
+      },
+      {
+        question: 'What Cambridge neighborhoods do you serve?',
+        answer: 'We serve all of Cambridge including Harvard Square, Kendall Square, Central Square, Porter Square, Inman Square, East Cambridge, West Cambridge, North Cambridge, Cambridgeport, Mid-Cambridge, and all other neighborhoods. Our familiarity with each area\'s character helps us deliver appropriate solutions for your specific location.'
+      },
+      {
+        question: 'Do you paint condos and coordinate with building management?',
+        answer: 'Yes – we regularly work in Cambridge condominiums from historic conversions to modern buildings. We handle all coordination with building management including insurance certificates, elevator reservations, work hour compliance, and neighbor communication. We understand condo requirements and make the process seamless.'
       }
     ],
     nearbyAreas: ['Boston', 'Somerville', 'Arlington', 'Belmont', 'Watertown', 'Brookline'],
-    localTip: 'Cambridge\'s historic homes deserve historically appropriate colors. We can help you research period-accurate palettes that honor your home\'s architectural heritage while expressing your personal style.'
+    localTip: 'Cambridge\'s historic homes deserve thoughtfully chosen colors that honor their architectural heritage. For Victorians, multi-color schemes highlighting trim details were historically common and can dramatically enhance curb appeal. We can help you research period-appropriate palettes or find modern interpretations that complement your home\'s era.',
+    closingPitch: 'Cambridge residents don\'t settle for average – in their careers, their education, or their homes. JH Painting Services has built our Cambridge reputation by delivering the quality, attention to detail, and environmental responsibility that this exceptional community expects. Whether you\'re maintaining a grand Victorian, updating a modern condo, or maximizing your investment property\'s appeal, we bring the craftsmanship and professionalism worthy of Cambridge. Contact us today at (508) 690-8886 for your free estimate and experience painting services that meet Cambridge standards.'
   },
 
   // NEWTON - Affluent suburb
@@ -379,41 +643,74 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'newton',
     heroHeadline: 'Newton\'s Premier Painting Professionals',
     heroSubheadline: 'Exceptional painting services for Newton\'s exceptional homes.',
+    introText: 'Newton\'s thirteen villages represent some of Massachusetts\' finest residential real estate – grand estates in Chestnut Hill, elegant homes in Waban and West Newton Hill, charming colonials in Newton Centre, and beautiful properties throughout this prestigious city. At JH Painting Services, we understand that Newton homeowners have invested significantly in their properties and expect painting services that match their home\'s caliber. Our premium approach – from the finest Benjamin Moore and Sherwin-Williams paints to our meticulous preparation and flawless application – is specifically designed for Newton\'s discerning homeowners who won\'t settle for anything less than exceptional. We\'ve painted homes throughout all thirteen Newton villages, understanding the unique architectural character of each and delivering results that protect your investment while enhancing your home\'s beauty.',
     painPoints: [
-      'Your Newton home deserves painters who deliver perfection, not excuses',
-      'High ceilings and large rooms require expertise most painters lack',
-      'You need painters who respect your time and complete work as scheduled',
-      'Your home\'s value demands premium finishes and attention to detail',
-      'Finding painters who won\'t damage your hardwood floors and fine furnishings'
+      'Your Newton home represents a significant investment and deserves painters who deliver perfection, not excuses and shortcuts',
+      'High ceilings, grand foyers, and large rooms require expertise, proper equipment, and experience that most painters simply lack',
+      'You need painters who respect your time, communicate professionally, and actually complete work as scheduled',
+      'Your home\'s considerable value demands premium finishes and the kind of attention to detail that protects your investment',
+      'Finding painters who won\'t damage your hardwood floors, fine furnishings, and carefully maintained landscaping is surprisingly difficult',
+      'Previous painters left visible brush marks, uneven coverage, and sloppy trim work that didn\'t meet Newton standards',
+      'Your custom millwork, built-ins, and architectural details require skilled craftsmen who understand how to paint them properly'
     ],
     solutions: [
-      'Perfectionist approach - we\'re not done until every detail is flawless',
-      'Experienced with large Newton homes including cathedral ceilings and grand rooms',
-      'Professional project management with clear timelines and reliable completion',
-      'Premium paints and expert application that protect and enhance your investment',
-      'Meticulous protection of floors, furnishings, and fixtures throughout the project'
+      'A perfectionist approach where we\'re not satisfied until every detail is flawless – we see what others miss',
+      'Extensive experience with Newton\'s larger homes including cathedral ceilings, grand foyers, two-story rooms, and complex architectural features',
+      'Professional project management with clear timelines, reliable scheduling, and communication that respects your busy life',
+      'Premium paints from Benjamin Moore and Sherwin-Williams\' finest lines, expertly applied to protect and enhance your investment',
+      'Obsessive protection of your floors, furnishings, fixtures, and landscaping – we treat your home with the care it deserves',
+      'Skilled craftsmen who deliver smooth, even, professional finishes that meet Newton\'s exacting standards',
+      'Expert techniques for custom millwork, built-in cabinetry, and architectural details that require special attention'
     ],
-    localContext: 'Newton\'s 13 villages each have their own character - from the bustling shops of Newton Centre and Newtonville to the elegant homes of Chestnut Hill and Waban. We understand that Newton homeowners expect excellence, and we deliver the premium quality this prestigious community deserves.',
+    localContext: 'Newton\'s thirteen villages each have their own character, and we\'ve painted in all of them. The grand estates of Chestnut Hill, the elegant homes of Waban and West Newton Hill, the charming neighborhoods of Newton Centre and Newtonville, the family streets of Auburndale and Newton Highlands, the historic properties of Newton Corner – we understand each village\'s unique architectural character. Our Newton experience spans colonial-era homes with historical significance to contemporary new construction, mid-century moderns to Victorian estates, modest capes to sprawling luxury properties.',
+    serviceDescription: 'JH Painting Services offers premium painting solutions tailored for Newton\'s exceptional homes. Our services include interior painting with the finest paints available and meticulous attention to detail, exterior painting with proper preparation and premium weather-resistant finishes, specialty finishes including lacquer, faux techniques, and custom glazes, cabinet refinishing with spray-applied finishes, and comprehensive color consultation. We specialize in large homes with complex features – cathedral ceilings, grand foyers, custom millwork, and architectural details that require expertise. Every Newton project includes thorough property protection, professional project management, and our commitment to flawless results.',
     whyChooseUs: [
-      'Premium services designed for Newton\'s high-end market',
-      'Experience with Newton\'s large homes and demanding clientele',
-      'Meticulous protection of your property and possessions',
-      'Professional project management with reliable timelines',
-      'References from satisfied Newton homeowners'
+      'Premium services specifically designed for Newton\'s high-end market and discerning homeowners',
+      'Extensive experience with Newton\'s larger homes, complex architectural features, and demanding clientele',
+      'Obsessive protection of your property, possessions, and landscaping throughout every project',
+      'Professional project management with clear communication and reliable timelines',
+      'The finest paints from Benjamin Moore and Sherwin-Williams, expertly applied',
+      'Outstanding references from satisfied Newton homeowners throughout all thirteen villages',
+      'Fully insured with $2M coverage appropriate for Newton\'s valuable properties'
     ],
-    testimonialContext: 'Newton\'s most discerning homeowners trust us for flawless results.',
+    testimonialContext: 'Newton\'s most discerning homeowners trust us for flawless results – from the grand estates of Chestnut Hill to the elegant homes throughout the city\'s villages. Our clients consistently praise our attention to detail, our respect for their property, and our ability to deliver the premium quality their homes deserve.',
     faq: [
       {
-        question: 'Do you have experience with large Newton homes?',
-        answer: 'Yes! We regularly work on Newton\'s larger properties, handling everything from grand foyers with cathedral ceilings to expansive multi-room projects. Our crews are equipped and experienced for any scale.'
+        question: 'Do you have experience with large Newton homes and complex features?',
+        answer: 'Absolutely – Newton\'s larger homes are our specialty. We regularly work on properties with grand foyers, cathedral ceilings, two-story rooms, extensive custom millwork, and complex architectural details. Our crews are equipped with professional scaffolding, spray equipment, and all necessary tools for projects of any scale. We maintain a portfolio of completed Newton homes we\'re happy to share.'
       },
       {
-        question: 'How do you protect fine hardwood floors and furnishings?',
-        answer: 'We use premium drop cloths, careful masking, and furniture protection throughout every project. Our crews are trained to treat your home with the utmost care and respect.'
+        question: 'How do you protect our hardwood floors, fine furnishings, and landscaping?',
+        answer: 'Property protection is an obsession for us. Every Newton project includes premium drop cloths and protective coverings for all floors, careful wrapping and moving of furniture, masking of all fixtures, hardware, and surfaces, protection of landscaping and exterior features, daily cleanup throughout the project, and a thorough final cleaning. We\'ve never damaged a hardwood floor, and we intend to keep it that way.'
+      },
+      {
+        question: 'What paint brands and quality levels do you use?',
+        answer: 'We use only premium paints from Benjamin Moore and Sherwin-Williams – specifically their finest product lines including Benjamin Moore Aura, Regal Select, and Advance, and Sherwin-Williams Emerald and Duration. These paints offer superior coverage, durability, and finish quality appropriate for Newton\'s fine homes. We never use contractor-grade products that might compromise results.'
+      },
+      {
+        question: 'Do you offer specialty finishes for Newton homes?',
+        answer: 'Yes! We offer a complete range of specialty finishes including high-gloss lacquer for trim and cabinetry, faux finishes and decorative techniques, custom glazes, metallic finishes, Venetian plaster, and textured treatments. Our skilled craftsmen can achieve any custom look you desire for your Newton home.'
+      },
+      {
+        question: 'How do you handle custom millwork, built-ins, and architectural details?',
+        answer: 'Custom millwork and architectural details are among our favorite challenges. We understand that these elements require special preparation, often different primers and paints, and precise application techniques. Whether it\'s crown molding, wainscoting, built-in cabinetry, or decorative trim, we have the skills and patience to paint them beautifully.'
+      },
+      {
+        question: 'What is your insurance coverage for Newton\'s valuable properties?',
+        answer: 'We carry $2 million in general liability insurance – appropriate coverage for Newton\'s valuable homes. We\'re also fully bonded and carry workers\' compensation insurance. We\'re happy to provide certificates of insurance to you or your homeowner\'s insurance company before beginning any work.'
+      },
+      {
+        question: 'Do you offer color consultation for Newton homes?',
+        answer: 'Yes! Professional color consultation is part of our premium service. Our consultants understand Newton\'s diverse architecture – from historic colonials to mid-century moderns – and can help you select colors that complement your home\'s specific style. We bring large samples to view in your actual lighting conditions and consider your furnishings, neighborhood aesthetic, and personal preferences.'
+      },
+      {
+        question: 'Which Newton villages do you serve?',
+        answer: 'We serve all thirteen Newton villages: Auburndale, Chestnut Hill, Newton Centre, Newton Corner, Newton Highlands, Newton Lower Falls, Newton Upper Falls, Newtonville, Nonantum, Oak Hill, Thompsonville, Waban, and West Newton. Our familiarity with each village\'s character helps us deliver appropriate solutions for your specific location and home style.'
       }
     ],
     nearbyAreas: ['Brookline', 'Wellesley', 'Needham', 'Waltham', 'Watertown', 'Boston'],
-    localTip: 'Newton\'s diverse architecture - from historic Colonials to mid-century moderns - benefits from color choices that complement each style. Our color consultation helps ensure your paint choices enhance your home\'s specific architectural character.'
+    localTip: 'Newton\'s diverse architecture – from historic Colonials and Victorians to mid-century moderns and contemporary homes – benefits from color choices that complement each style. Historic homes often look best with traditional palettes, while mid-century properties can embrace the era\'s distinctive colors. Our color consultation ensures your choices enhance your home\'s specific architectural character.',
+    closingPitch: 'Your Newton home represents a significant investment in one of Massachusetts\' most prestigious communities – it deserves painting services that match its caliber. At JH Painting Services, we\'ve built our Newton reputation by delivering the flawless results, premium quality, and professional service that discerning homeowners expect. From grand Chestnut Hill estates to charming Newton Centre colonials, we bring the expertise and attention to detail your home deserves. Contact us today at (508) 690-8886 for your complimentary consultation and discover why Newton\'s most discriminating homeowners trust JH Painting Services.'
   },
 
   // WELLESLEY - Very affluent
@@ -421,41 +718,74 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'wellesley',
     heroHeadline: 'Wellesley\'s Painting Craftsmen',
     heroSubheadline: 'Refined painting services for Wellesley\'s refined homes.',
+    introText: 'Wellesley represents the pinnacle of Massachusetts suburban living – world-class schools, stunning architecture, tree-lined streets, and a community that accepts nothing less than excellence. At JH Painting Services, we\'ve developed our premium painting service specifically for communities like Wellesley, where homeowners have discerning taste, high expectations, and homes worthy of exceptional care. From the elegant estates near Wellesley College to the beautiful properties of Wellesley Hills and Wellesley Farms, from the charming homes of Wellesley Square to the grand residences throughout town, we deliver the refined craftsmanship that Wellesley\'s distinguished homeowners expect. Our approach combines the finest materials, meticulous techniques, and the white-glove service appropriate for one of Massachusetts\' most prestigious communities.',
     painPoints: [
-      'Wellesley homes require painters who understand luxury standards',
-      'You\'ve been disappointed by painters who promise quality but deliver mediocrity',
-      'Your home near Wellesley College needs exterior painting that impresses',
-      'Interior painting projects need to work around your family and entertaining schedule',
-      'You want painters who communicate professionally and respect your property'
+      'Wellesley homes represent significant investments and require painters who truly understand luxury standards – not contractors who cut corners',
+      'You\'ve been disappointed by painters who promise quality but deliver mediocrity, leaving brush marks, uneven coverage, and sloppy trim work',
+      'Your beautiful home near Wellesley College or in Wellesley Hills needs exterior painting that genuinely impresses and protects your investment',
+      'Interior painting projects need to work around your family, entertaining schedule, and busy professional life without creating chaos',
+      'You need painters who communicate professionally, show up when promised, and treat your property with the respect it deserves',
+      'Your home\'s fine architectural details, custom millwork, and premium finishes require skilled craftsmen who know how to handle them',
+      'Finding painting contractors whose quality standards match Wellesley\'s expectations has proven surprisingly difficult'
     ],
     solutions: [
-      'Luxury-level service tailored to Wellesley\'s expectations',
-      'Proven track record of premium results - ask for our Wellesley references',
-      'Exceptional exterior work that enhances curb appeal and impresses neighbors',
-      'Flexible scheduling that accommodates entertaining and family needs',
-      'Professional communication from estimate through completion'
+      'Luxury-level service tailored specifically to Wellesley\'s exacting expectations and refined sensibilities',
+      'A proven track record of premium results throughout Wellesley – outstanding references available upon request',
+      'Exceptional exterior work using premium weather-resistant paints that enhance curb appeal and protect your investment for years',
+      'Flexible scheduling that accommodates your entertaining calendar, family needs, and professional demands',
+      'Professional communication from your first consultation through final walkthrough – we respect your time and keep you informed',
+      'Skilled craftsmen experienced with fine architectural details, custom millwork, and the premium finishes Wellesley homes feature',
+      'Quality standards that consistently meet and exceed what Wellesley\'s most discerning homeowners expect'
     ],
-    localContext: 'Wellesley represents the finest in suburban living - excellent schools, beautiful architecture, and a community that values quality. From the stately homes near Wellesley College to the family neighborhoods of Wellesley Hills and Wellesley Farms, we deliver the exceptional painting that Wellesley homeowners expect and deserve.',
+    localContext: 'Wellesley represents the finest in New England suburban living – excellent schools that draw families from around the world, beautiful architecture spanning centuries of American design, and a community that values quality in everything. We\'ve painted homes throughout Wellesley – the elegant properties near Wellesley College, the stately residences of Wellesley Hills and Cliff Estates, the family neighborhoods of Wellesley Farms and Fells, the charming homes near Wellesley Square. Our experience across this distinguished community has taught us exactly what Wellesley homeowners expect, and we deliver it consistently.',
+    serviceDescription: 'JH Painting Services offers refined painting solutions designed for Wellesley\'s distinguished homes. Our services include interior painting with premium paints and meticulous attention to detail, exterior painting with proper preparation and finishes that protect your investment, specialty finishes including lacquers, glazes, and faux techniques, cabinet refinishing with spray-applied finishes, and comprehensive color consultation. We specialize in homes with fine architectural details – custom millwork, built-in cabinetry, ornate trim – that require skilled craftsmen. Every Wellesley project includes thorough property protection, professional project management, and our commitment to results worthy of your home.',
     whyChooseUs: [
-      'Luxury-level service and finishes',
-      'Experience with Wellesley\'s finest homes',
-      'Professional communication throughout the project',
-      'Flexible scheduling for busy families',
-      'Wellesley references available upon request'
+      'Luxury-level service and premium finishes designed for Wellesley\'s refined market',
+      'Extensive experience with Wellesley\'s finest homes and most discerning homeowners',
+      'Professional communication and project management respecting your time',
+      'Flexible scheduling accommodating busy families and entertaining calendars',
+      'The finest paints from Benjamin Moore and Sherwin-Williams, expertly applied',
+      'Outstanding Wellesley references available upon request',
+      'Fully insured with $2M coverage appropriate for Wellesley\'s valuable properties'
     ],
-    testimonialContext: 'Wellesley\'s most distinguished homeowners choose us for uncompromising quality.',
+    testimonialContext: 'Wellesley\'s most distinguished homeowners choose us for uncompromising quality – from the estates near Wellesley College to the elegant homes throughout town. Our clients consistently praise our attention to detail, professional communication, and ability to deliver results that meet Wellesley\'s exacting standards.',
     faq: [
       {
-        question: 'What makes your service appropriate for Wellesley homes?',
-        answer: 'We\'ve developed our premium service specifically for discerning homeowners. From our initial consultation through final walkthrough, we deliver the attention to detail and quality finishes that Wellesley homes deserve.'
+        question: 'What makes your service appropriate for Wellesley\'s luxury homes?',
+        answer: 'We\'ve specifically developed our premium service for discerning communities like Wellesley. This means the finest paints from Benjamin Moore and Sherwin-Williams, meticulous preparation that others skip, skilled craftsmen experienced with fine homes, professional project management, and attention to detail that meets Wellesley\'s exacting standards. From initial consultation through final walkthrough, we deliver quality worthy of your home.'
       },
       {
         question: 'Do you offer color consultation for Wellesley\'s traditional homes?',
-        answer: 'Yes! Our color consultation helps Wellesley homeowners select sophisticated palettes that complement their home\'s architecture and the neighborhood aesthetic. We consider everything from historical appropriateness to current design trends.'
+        answer: 'Absolutely! Professional color consultation is part of our premium service. Our consultants understand Wellesley\'s traditional architecture and can help you select sophisticated palettes that complement your home\'s style and the neighborhood aesthetic. We consider historical appropriateness, current design trends, your personal preferences, and how colors will look in your specific lighting conditions.'
+      },
+      {
+        question: 'How do you protect our property during painting projects?',
+        answer: 'Property protection is paramount in Wellesley\'s fine homes. Every project includes premium drop cloths and coverings for all floors, careful furniture protection and moving, masking of all fixtures and hardware, protection of landscaping and exterior features, daily cleanup, and thorough final cleaning. We treat your home with the same care we would give our own – because our reputation depends on it.'
+      },
+      {
+        question: 'Can you accommodate our entertaining and family schedule?',
+        answer: 'Absolutely. We understand that Wellesley families have busy lives with school events, professional demands, and entertaining calendars. We offer flexible scheduling designed around your needs, clear communication about timing, and efficient work practices that minimize disruption. Whether you need us to complete work before a holiday gathering or work around your children\'s activities, we\'ll make it happen.'
+      },
+      {
+        question: 'Do you have references from other Wellesley homeowners?',
+        answer: 'Yes – we have outstanding references from homeowners throughout Wellesley including Wellesley Hills, Wellesley Farms, Cliff Estates, and other neighborhoods. We\'re happy to provide references from homes similar to yours so you can hear directly from satisfied Wellesley clients about their experience with our work.'
+      },
+      {
+        question: 'What paint brands do you recommend for Wellesley homes?',
+        answer: 'We use exclusively premium paints from Benjamin Moore and Sherwin-Williams – specifically their finest product lines. For Wellesley homes, we typically recommend Benjamin Moore Aura or Regal Select and Sherwin-Williams Emerald or Duration. These paints offer superior coverage, durability, and finish quality appropriate for fine homes. We never use contractor-grade products.'
+      },
+      {
+        question: 'How do you handle custom millwork and fine architectural details?',
+        answer: 'Wellesley\'s beautiful homes often feature custom millwork, built-in cabinetry, and ornate architectural details that require special attention. Our skilled craftsmen understand the proper preparation, primers, and application techniques for these elements. Whether it\'s crown molding, wainscoting, built-ins, or decorative trim, we have the skills to paint them beautifully.'
+      },
+      {
+        question: 'What is your insurance coverage?',
+        answer: 'We carry $2 million in general liability insurance – appropriate coverage for Wellesley\'s valuable properties. We\'re also fully bonded and carry workers\' compensation insurance. We\'re happy to provide certificates of insurance to you or your homeowner\'s insurance company before beginning any work.'
       }
     ],
     nearbyAreas: ['Newton', 'Natick', 'Needham', 'Weston', 'Dover', 'Brookline'],
-    localTip: 'Wellesley\'s traditional architecture often benefits from classic color schemes - think navy shutters, cream trim, and muted body colors. We help you select colors that honor tradition while expressing your personal style.'
+    localTip: 'Wellesley\'s traditional architecture often benefits from classic, sophisticated color schemes – think navy or black shutters, cream or white trim, and refined body colors in muted tones. These timeless palettes honor Wellesley\'s elegant character while maintaining strong curb appeal. Our color consultation helps you select colors that complement your home\'s specific style.',
+    closingPitch: 'Your Wellesley home deserves painting services as refined as the community itself. At JH Painting Services, we\'ve built our reputation by delivering the exceptional quality, professional service, and attention to detail that Wellesley\'s most discerning homeowners expect. From elegant estates to charming family homes, we bring the craftsmanship worthy of this distinguished community. Contact us today at (508) 690-8886 for your complimentary consultation and discover why Wellesley homeowners trust JH Painting Services for their most important painting projects.'
   },
 
   // CONCORD - Historic, affluent, literary heritage
@@ -463,41 +793,74 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'concord',
     heroHeadline: 'Concord\'s Historic Home Painting Specialists',
     heroSubheadline: 'Preserving Concord\'s heritage one brushstroke at a time.',
+    introText: 'Concord holds a unique place in American history – where the Revolutionary War began, where Thoreau wrote at Walden Pond, where Emerson and the Transcendentalists shaped American thought. This remarkable heritage lives in Concord\'s architecture, from Colonial-era homes that witnessed the birth of a nation to the Victorian residences of the town\'s literary golden age. At JH Painting Services, we approach Concord homes with the reverence they deserve, combining historic preservation expertise with modern painting excellence. Whether your home stands near the Old North Bridge, in the shadow of Walden Pond, or along the charming streets of Concord Center, we bring the knowledge, techniques, and respect for history that Concord\'s treasured properties require.',
     painPoints: [
-      'Your historic Concord home needs painters who respect its significance',
-      'Previous painters didn\'t understand proper techniques for historic properties',
-      'You want to update colors while remaining appropriate for Concord\'s character',
-      'The strict historic district guidelines make exterior painting complicated',
-      'Your home near Walden Pond deserves painters who appreciate its setting'
+      'Your historic Concord home represents a piece of American history and needs painters who genuinely understand and respect its significance',
+      'Previous painters didn\'t know proper techniques for historic properties and may have damaged original materials with inappropriate methods',
+      'You want to refresh your home\'s appearance while remaining appropriate for Concord\'s historic character and neighborhood aesthetic',
+      'Concord\'s strict historic district guidelines make exterior painting complicated, requiring specific colors and approval processes',
+      'Your home near Walden Pond or in Concord\'s protected areas deserves painters who appreciate its environmental and historical setting',
+      'Finding contractors who understand the difference between painting modern construction and preserving historic structures is challenging',
+      'Lead paint in your pre-1978 home requires proper handling by certified professionals'
     ],
     solutions: [
-      'Historic preservation expertise - proper techniques for period properties',
-      'Understanding of traditional materials, preparation, and application methods',
-      'Historic color research to select period-appropriate palettes',
-      'Experience navigating Concord\'s historic district approval process',
-      'Environmental sensitivity appropriate for Concord\'s treasured landscapes'
+      'Historic preservation expertise with proper techniques specifically designed for period properties and original materials',
+      'Deep understanding of traditional preparation methods, compatible primers, and application techniques that protect rather than damage',
+      'Historic color research to help you select period-appropriate palettes that honor your home\'s era',
+      'Extensive experience navigating Concord\'s Historic Districts Commission process and approval requirements',
+      'Environmental sensitivity and careful practices appropriate for Concord\'s treasured landscapes and protected areas',
+      'Skilled craftsmen who understand the critical difference between historic preservation and modern painting',
+      'EPA Lead-Safe Certification for safe work on Concord\'s many homes built before 1978'
     ],
-    localContext: 'Concord\'s rich history - from the Revolutionary War to Thoreau and the Transcendentalists - lives in its architecture. From the Colonial homes near the Old North Bridge to the Victorian residences of Concord Center, from the wooded properties near Walden Pond to the family neighborhoods of West Concord, we honor Concord\'s heritage through expert craftsmanship.',
+    localContext: 'Concord\'s rich history – from the Revolutionary War to Thoreau and the Transcendentalists – lives in its remarkable architecture. We\'ve painted Colonial homes near the Old North Bridge where minutemen gathered, Victorian residences in Concord Center where literary giants once walked, wooded properties near Walden Pond where nature and history intertwine, and family homes throughout West Concord. Our understanding of Concord\'s unique character – both its historical significance and its community values of preservation and environmental responsibility – informs every project we undertake.',
+    serviceDescription: 'JH Painting Services offers specialized painting services designed for Concord\'s historic homes and environmentally sensitive locations. Our services include interior painting with techniques appropriate for historic plaster and woodwork, exterior painting with proper preparation for period materials, historic color consultation and research, cabinet refinishing, and deck staining. We\'re experienced with Concord\'s Historic Districts Commission requirements and can guide you through the approval process. Our EPA Lead-Safe certification ensures safe work on older homes, and our environmental practices respect Concord\'s treasured landscapes.',
     whyChooseUs: [
-      'Historic home expertise and preservation techniques',
-      'Experience with Concord\'s historic district requirements',
-      'Period-appropriate color consultation',
-      'Environmental responsibility for this treasured community',
-      'Respect for Concord\'s unique heritage'
+      'Genuine historic home expertise with proper preservation techniques',
+      'Extensive experience with Concord\'s Historic Districts Commission requirements',
+      'Period-appropriate color consultation including historic color research',
+      'Environmental responsibility appropriate for Concord\'s valued landscapes',
+      'EPA Lead-Safe Certified for Concord\'s many pre-1978 homes',
+      'Deep respect for Concord\'s unique historical and cultural heritage',
+      'Premium materials chosen for compatibility with historic structures'
     ],
-    testimonialContext: 'Concord homeowners trust us with their piece of American history.',
+    testimonialContext: 'Concord homeowners trust us with their piece of American history – from Revolutionary-era colonials to Victorian literary landmarks. Our clients appreciate our genuine understanding of historic preservation and our respect for the heritage embodied in their homes.',
     faq: [
       {
-        question: 'Do you understand Concord\'s historic district requirements?',
-        answer: 'Yes! We have extensive experience with Concord\'s historic guidelines and the Historic Districts Commission process. We can help you select appropriate colors and navigate the approval process for exterior changes.'
+        question: 'Do you understand Concord\'s Historic Districts Commission requirements?',
+        answer: 'Yes – we have extensive experience with Concord\'s historic guidelines and the HDC approval process. We understand the requirements for different historic districts, can help you select appropriate colors from approved palettes, and guide you through the approval process for exterior changes. Our experience means fewer delays and smoother approvals.'
       },
       {
-        question: 'What techniques do you use for historic homes?',
-        answer: 'Historic homes require specific approaches - proper surface preparation, compatible primers, and application techniques that protect original materials. We understand the difference between painting modern construction and preserving historic structures.'
+        question: 'What techniques do you use for Concord\'s historic homes?',
+        answer: 'Historic homes require specific approaches that differ significantly from modern construction. We use proper surface preparation that protects original materials, compatible primers designed for historic substrates, and application techniques that preserve rather than damage. We understand issues like old-growth wood, historic plaster, and period millwork that require special handling.'
+      },
+      {
+        question: 'Can you help research my home\'s original historic colors?',
+        answer: 'Absolutely! Historic color research is one of our specialties for Concord homes. We can help you discover what colors your home may have originally worn based on its era and style, or select historically appropriate alternatives that honor the period while meeting your preferences. This research often satisfies Historic Districts Commission requirements as well.'
+      },
+      {
+        question: 'Are you certified for lead paint work in older Concord homes?',
+        answer: 'Yes, we\'re EPA Lead-Safe Certified – essential for work in Concord where so many homes were built before 1978. Our crews follow all proper containment, safety, and cleanup protocols to protect your family and our workers. We take lead safety seriously and never cut corners on this critical issue.'
+      },
+      {
+        question: 'How do you protect historic features during painting?',
+        answer: 'Protecting original historic features is paramount. We carefully mask and protect all original elements – hardware, millwork, glass, and architectural details. We use appropriate methods for each surface type and never use techniques that could damage original materials. Our goal is to enhance your home while preserving its historic integrity.'
+      },
+      {
+        question: 'Do you work on homes near Walden Pond and other protected areas?',
+        answer: 'Yes – we understand the environmental sensitivity of properties near Walden Pond and other protected areas in Concord. We use environmentally responsible practices, proper containment to prevent runoff, and eco-friendly products where appropriate. We respect Concord\'s commitment to environmental stewardship.'
+      },
+      {
+        question: 'What areas of Concord do you serve?',
+        answer: 'We serve all of Concord including Concord Center, West Concord, Nine Acre Corner, the areas near the Old North Bridge and Minuteman National Historical Park, properties near Walden Pond, and all surrounding neighborhoods. Our familiarity with each area\'s character helps us deliver appropriate solutions.'
+      },
+      {
+        question: 'How do you handle the variable New England weather for exterior projects?',
+        answer: 'We carefully monitor weather conditions and schedule exterior work during optimal periods – typically when temperatures are consistently above 50°F with low humidity and no rain forecast. For Concord\'s historic homes, proper drying time between coats is especially important. We communicate proactively about weather-related scheduling adjustments.'
       }
     ],
     nearbyAreas: ['Lincoln', 'Bedford', 'Acton', 'Carlisle', 'Sudbury', 'Lexington'],
-    localTip: 'Concord\'s historic homes benefit from color research. We can help you discover your home\'s original colors or select historically appropriate alternatives that honor its period while meeting your aesthetic preferences.'
+    localTip: 'Concord\'s historic homes benefit greatly from color research. Many Colonial-era homes originally wore earth tones and natural pigments, while Victorian homes often featured more elaborate multi-color schemes. Understanding your home\'s era helps select colors that honor its heritage. We can help you research period-appropriate palettes that satisfy both your preferences and any Historic Districts Commission requirements.',
+    closingPitch: 'Your Concord home represents a piece of American history – whether it witnessed the Revolution, the Transcendentalist movement, or simply carries forward the town\'s remarkable architectural heritage. It deserves painters who approach it with reverence, expertise, and genuine respect for preservation. At JH Painting Services, we\'ve built our historic painting expertise specifically for communities like Concord, where every home tells a story. Contact us today at (508) 690-8886 for your consultation and discover how we can help preserve and enhance your piece of Concord\'s heritage.'
   },
 
   // LEXINGTON - Revolutionary history, affluent
@@ -505,41 +868,74 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'lexington',
     heroHeadline: 'Lexington\'s Trusted Painting Contractors',
     heroSubheadline: 'Professional painting for Lexington\'s historic and modern homes.',
+    introText: 'Lexington – where the "shot heard round the world" launched American independence – proudly preserves its Revolutionary heritage while thriving as one of Massachusetts\' most desirable communities for families. From the historic homes surrounding the Battle Green where minutemen gathered to the beautiful family neighborhoods throughout town, Lexington combines profound historical significance with excellent schools and wonderful quality of life. At JH Painting Services, we approach Lexington homes with the respect this distinguished community deserves, whether we\'re carefully preserving a Revolutionary-era colonial, updating a family home in East Lexington, or refreshing a modern property. Our combination of historic expertise and family-friendly service makes us the trusted choice for Lexington homeowners who value both heritage and quality.',
     painPoints: [
-      'Your Lexington home near the Battle Green has historic significance worth preserving',
-      'Finding painters who understand colonial architecture is challenging',
-      'Your growing family needs a home refresh but disruption is a concern',
-      'High-quality expectations mean previous painters have disappointed',
-      'Coordinating exterior painting in Lexington\'s variable weather is tricky'
+      'Your Lexington home near the Battle Green or in a historic district has genuine historical significance worth preserving with proper techniques',
+      'Finding painters who truly understand Colonial and Federal architecture – not just claim to – has proven challenging',
+      'Your growing family needs a home refresh, but you\'re concerned about disruption to daily routines, school schedules, and children\'s safety',
+      'Lexington\'s high standards mean previous painters have disappointed with quality that didn\'t match your expectations',
+      'Coordinating exterior painting around New England\'s variable weather requires experience and flexibility most contractors lack',
+      'You want painters who will treat your property with respect and leave it clean, not add stress to your already busy life',
+      'Your historic home may have lead paint requiring certified professionals, but finding qualified contractors is difficult'
     ],
     solutions: [
-      'Historic home expertise respecting Lexington\'s Revolutionary heritage',
-      'Deep knowledge of Colonial and Federal architecture painting techniques',
-      'Family-friendly process with minimal disruption and safe paint options',
-      'Quality-first approach that exceeds Lexington\'s high expectations',
-      'Weather-smart scheduling to ensure optimal painting conditions'
+      'Genuine historic home expertise that respects Lexington\'s Revolutionary heritage with proper preservation techniques',
+      'Deep knowledge of Colonial and Federal architecture including appropriate preparation, materials, and application methods',
+      'Family-friendly service designed around your schedule, with low-VOC paint options safe for children and pets',
+      'Quality-first craftsmanship that consistently exceeds Lexington\'s high expectations',
+      'Weather-smart scheduling with contingency planning to ensure optimal painting conditions for exterior projects',
+      'Meticulous property protection and cleanup – we leave your home ready for your family to enjoy',
+      'EPA Lead-Safe Certification for proper handling of lead paint in Lexington\'s many pre-1978 homes'
     ],
-    localContext: 'Where the "shot heard round the world" began, Lexington proudly preserves its Revolutionary heritage while thriving as a modern community. From historic homes near the Battle Green to the family neighborhoods of East Lexington, we bring craftsmanship worthy of Lexington\'s distinguished history.',
+    localContext: 'Lexington\'s history lives in its architecture – from the homes near the Battle Green that witnessed the Revolution to the Federal-era residences along Massachusetts Avenue, from the family neighborhoods of East Lexington to the wooded properties near the Minuteman Bikeway. We\'ve painted historic colonials steps from the Hancock-Clarke House, updated family homes in Lexington\'s excellent school districts, and refreshed properties throughout this remarkable community. Our understanding of Lexington\'s blend of historic significance and family focus informs everything we do.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting solutions for Lexington\'s diverse homes. Our services include interior painting with low-VOC options safe for families, exterior painting with proper techniques for historic and modern properties, historic color consultation, cabinet refinishing, and deck staining. We\'re experienced with Lexington\'s historic district requirements and can guide you through color selection and approval processes. Our family-friendly approach means flexible scheduling around school and activities, minimal disruption to your daily life, and results that make your home a better place for your family.',
     whyChooseUs: [
-      'Understanding of Lexington\'s historic significance',
-      'Colonial and Federal architecture expertise',
-      'Family-focused service with safe paint options',
-      'Weather-smart scheduling for optimal results',
-      'Quality that meets Lexington\'s high standards'
+      'Genuine understanding of Lexington\'s historic significance and preservation requirements',
+      'Colonial and Federal architecture expertise with proper techniques',
+      'Family-focused service with low-VOC paint options and flexible scheduling',
+      'Weather-smart scheduling ensuring optimal conditions for exterior work',
+      'Quality craftsmanship that consistently meets Lexington\'s high standards',
+      'EPA Lead-Safe Certified for safe work on older Lexington homes',
+      'Trusted by Lexington families throughout the community'
     ],
-    testimonialContext: 'Lexington homeowners appreciate our blend of historic sensitivity and modern excellence.',
+    testimonialContext: 'Lexington homeowners appreciate our ability to blend historic sensitivity with modern excellence and family-friendly service. From preserving Revolutionary-era colonials to updating family homes for growing children, we consistently deliver the quality and professionalism Lexington expects.',
     faq: [
       {
         question: 'Can you work on homes in Lexington\'s historic districts?',
-        answer: 'Yes! We understand the historic district requirements and can help with color selection and approval processes. Our experience with Colonial and Federal architecture ensures appropriate techniques for your historic property.'
+        answer: 'Absolutely! We have extensive experience with Lexington\'s historic district requirements. We understand the guidelines for homes near the Battle Green and in designated historic areas, can help with color selection from approved palettes, and guide you through any necessary approval processes. Our Colonial and Federal architecture expertise ensures appropriate techniques for your historic property.'
       },
       {
-        question: 'How do you handle Lexington\'s changeable weather?',
-        answer: 'We carefully monitor weather conditions and schedule exterior work during optimal periods. If weather threatens mid-project, we have contingency plans to protect your property and complete work when conditions improve.'
+        question: 'How do you handle New England\'s changeable weather for exterior painting?',
+        answer: 'Weather management is essential for quality exterior work in Lexington. We carefully monitor conditions and schedule exterior painting during optimal periods – typically when temperatures are consistently above 50°F with low humidity. If weather threatens mid-project, we have contingency plans to protect your property and ensure we can complete work when conditions improve.'
+      },
+      {
+        question: 'Do you offer family-safe paint options for homes with children?',
+        answer: 'Yes! We offer a complete range of low-VOC and zero-VOC paints that are safe for families with children and pets. These premium paints from Benjamin Moore and Sherwin-Williams provide excellent coverage and durability without harsh chemical odors. Many Lexington families choose these options for children\'s rooms, playrooms, and throughout their homes.'
+      },
+      {
+        question: 'Can you work around our family\'s busy schedule?',
+        answer: 'Absolutely. We understand that Lexington families have demanding schedules with school, activities, and professional commitments. We offer flexible scheduling, can work while children are at school, and coordinate around your family\'s routine. Our goal is to deliver beautiful results with minimal disruption to your daily life.'
+      },
+      {
+        question: 'Are you certified for lead paint work in older Lexington homes?',
+        answer: 'Yes, we\'re EPA Lead-Safe Certified – essential for work on Lexington\'s many homes built before 1978. Our crews follow all proper containment, safety, and cleanup protocols to protect your family and our workers. We take lead safety seriously, especially in homes with children.'
+      },
+      {
+        question: 'What paint quality do you use for Lexington homes?',
+        answer: 'We use exclusively premium paints from Benjamin Moore and Sherwin-Williams – brands proven to perform in New England\'s challenging climate. For Lexington exteriors, we typically recommend Benjamin Moore Aura or Sherwin-Williams Duration for superior durability. For interiors, we offer their finest lines with low-VOC options for families. We never use contractor-grade products.'
+      },
+      {
+        question: 'Do you provide color consultation for Lexington homes?',
+        answer: 'Yes! Color consultation is part of our service. For historic homes, we can help research period-appropriate colors or select historically compatible modern options. For family homes, we help you choose colors that work with your furnishings, lighting, and lifestyle. We bring large samples so you can see how colors actually look in your space.'
+      },
+      {
+        question: 'What areas of Lexington do you serve?',
+        answer: 'We serve all of Lexington including the historic center near the Battle Green, East Lexington, areas near the Minuteman Bikeway, Burlington Road corridor, and all residential neighborhoods. Our familiarity with Lexington\'s different areas – from historic districts to family neighborhoods – helps us deliver appropriate solutions for your specific location.'
       }
     ],
     nearbyAreas: ['Arlington', 'Bedford', 'Burlington', 'Concord', 'Lincoln', 'Waltham'],
-    localTip: 'Lexington\'s colonial homes often feature historically significant colors. Research suggests many 18th-century homes used earth tones and natural pigments. We can help you select authentic colors or modern equivalents.'
+    localTip: 'Lexington\'s colonial homes often featured earth tones and natural pigment colors that were available in the 18th century. For historic properties, we can help you research period-appropriate colors or find modern equivalents that honor your home\'s heritage while meeting today\'s aesthetic preferences and any historic district requirements.',
+    closingPitch: 'Your Lexington home – whether it carries the legacy of the Revolution or provides a wonderful setting for your growing family – deserves painters who understand what makes this community special. At JH Painting Services, we combine historic expertise with family-friendly service to deliver results that Lexington homeowners trust. From careful preservation of Revolutionary-era colonials to efficient updates for busy family homes, we bring the quality and professionalism worthy of Lexington. Contact us today at (508) 690-8886 for your free estimate and experience the difference a truly dedicated painting contractor makes.'
   },
 
   // BROOKLINE - Urban/suburban, diverse, historic

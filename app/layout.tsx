@@ -12,6 +12,7 @@ const inter = Inter({
   weight: ['400', '500', '600', '700', '800'],
   fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
   adjustFontFallback: true,
+  preload: true,
 })
 
 export const metadata: Metadata = {
@@ -77,12 +78,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="dns-prefetch" href="https://storage.googleapis.com" />
         <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://reputationhub.site" />
+        <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
         {/* Preload critical LCP image for faster loading */}
         <link
           rel="preload"
           as="image"
           href="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
+          type="image/jpeg"
           fetchPriority="high"
+        />
+        {/* Preload logo image */}
+        <link
+          rel="preload"
+          as="image"
+          href="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
+          type="image/png"
         />
         <link rel="canonical" href="https://jhpaintingservices.com/" />
         <meta name="geo.region" content="US-MA" />
