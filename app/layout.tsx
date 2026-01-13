@@ -4,12 +4,14 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import FloatingPhoneButton from './components/FloatingPhoneButton'
 
-// Optimize font loading with display swap for better FCP
+// Optimize font loading - only load essential weights for better FCP
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
-  preload: true,
+  weight: ['400', '500', '600', '700', '800'],
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
@@ -195,14 +197,14 @@ export default function RootLayout({
       <body>
         {children}
         <FloatingPhoneButton />
-        {/* LeadConnector Chat Widget */}
+        {/* LeadConnector Chat Widget - Load after page is idle */}
         <Script
           src="https://beta.leadconnectorhq.com/loader.js"
           data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
           data-widget-id="69626d9e5c8c5ba64720801a"
           strategy="lazyOnload"
         />
-        {/* Reviews Widget Script */}
+        {/* Reviews Widget Script - Load after page is idle */}
         <Script
           src="https://reputationhub.site/reputation/assets/review-widget.js"
           strategy="lazyOnload"

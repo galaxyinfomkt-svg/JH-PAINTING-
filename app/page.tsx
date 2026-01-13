@@ -27,6 +27,7 @@ import {
 } from 'lucide-react'
 import { cities } from './data/cities'
 import LazyIframe from './components/LazyIframe'
+import LazyHeroForm from './components/LazyHeroForm'
 
 // Data
 const services = [
@@ -367,11 +368,10 @@ export default function HomePage() {
                   <h2 className="hero-form-title">Get Your Free Quote</h2>
                   <p className="hero-form-subtitle">Fill out the form and we'll get back to you within 24 hours.</p>
                 </div>
-                <iframe
+                <LazyHeroForm
                   className="hero-form-iframe"
                   src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
                   title="Contact Form"
-                  loading="lazy"
                 />
                 <div className="hero-google-badge">
                   <span>⭐</span>
@@ -431,6 +431,7 @@ export default function HomePage() {
                       width={600}
                       height={400}
                       loading="lazy"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                     />
                   </div>
@@ -473,6 +474,7 @@ export default function HomePage() {
                     width={600}
                     height={600}
                     loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     style={{ objectFit: 'contain', borderRadius: '16px', width: '100%', height: 'auto' }}
                   />
                 </div>
@@ -656,6 +658,7 @@ export default function HomePage() {
                     alt={video.title}
                     fill
                     loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     style={{ objectFit: 'cover' }}
                   />
                   <div className="video-card-rs-overlay">
@@ -703,6 +706,7 @@ export default function HomePage() {
                     width={400}
                     height={300}
                     loading="lazy"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                   />
                   <div className="gallery-item-overlay">
