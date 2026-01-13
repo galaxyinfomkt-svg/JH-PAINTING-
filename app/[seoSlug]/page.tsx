@@ -363,7 +363,15 @@ export default function SeoPage({ params }: Props) {
           {/* Hero Section */}
           <section className="hero" style={{ minHeight: '90vh' }}>
             <div className="hero-bg">
-              <Image src={service.heroImage} alt={`${service.name} in ${city.name}, MA`} fill style={{ objectFit: 'cover' }} priority />
+              <Image
+                src={service.heroImage}
+                alt={`${service.name} in ${city.name}, MA`}
+                fill
+                style={{ objectFit: 'cover' }}
+                priority
+                sizes="100vw"
+                quality={75}
+              />
               <div className="hero-overlay" />
             </div>
             <div className="container" style={{ position: 'relative', zIndex: 2, paddingTop: '120px' }}>
@@ -697,6 +705,8 @@ export default function SeoPage({ params }: Props) {
               fill
               style={{ objectFit: 'cover' }}
               priority
+              sizes="100vw"
+              quality={75}
             />
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.70) 50%, rgba(0, 0, 0, 0.60) 100%)' }} />
           </div>
@@ -833,7 +843,15 @@ export default function SeoPage({ params }: Props) {
             <div className="city-gallery-grid">
               {galleryImages.map((img, idx) => (
                 <div key={idx} className="city-gallery-item">
-                  <Image src={img.src} alt={img.alt} fill loading="lazy" style={{ objectFit: 'cover' }} />
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    loading="lazy"
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={75}
+                  />
                   <div className="city-gallery-overlay">
                     <div>
                       <span className="city-gallery-category">{img.category}</span>
@@ -857,7 +875,15 @@ export default function SeoPage({ params }: Props) {
             <div className="video-grid-rs">
               {videos.map((video, idx) => (
                 <a key={idx} href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer" className="video-card-rs">
-                  <Image src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`} alt={video.title} fill loading="lazy" style={{ objectFit: 'cover' }} />
+                  <Image
+                    src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                    alt={video.title}
+                    fill
+                    loading="lazy"
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    quality={75}
+                  />
                   <div className="video-card-rs-overlay">
                     <div className="video-card-rs-play"><Play size={20} /></div>
                     <h4>{video.title}</h4>
@@ -889,6 +915,8 @@ export default function SeoPage({ params }: Props) {
                     height={500}
                     loading="lazy"
                     style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    quality={75}
                   />
                 </div>
                 <div className="city-about-badge">
@@ -901,7 +929,7 @@ export default function SeoPage({ params }: Props) {
                 <span className="city-badge city-badge-red">About JH Painting Services</span>
                 <h2>Your Trusted {city.name} Painting Contractor</h2>
                 <p>
-                  Founded by <strong>Jafet</strong>, JH Painting Services is a premier painting contractor based in Waltham, Massachusetts.
+                  Founded by <strong>Jafet</strong>, JH Painting Services is a premier painting contractor based in Marlborough, Massachusetts.
                   With years of hands-on experience, we&apos;ve built our reputation on delivering exceptional craftsmanship,
                   honest pricing, and reliable service to homeowners across {city.name} and all of {city.county}.
                 </p>

@@ -27,8 +27,9 @@ const residentialPaintingSchema = {
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Waltham",
+          "addressLocality": "Marlborough",
           "addressRegion": "MA",
+          "postalCode": "01752",
           "addressCountry": "US"
         }
       },

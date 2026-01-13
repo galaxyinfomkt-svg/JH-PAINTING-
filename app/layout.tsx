@@ -1,7 +1,16 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import FloatingPhoneButton from './components/FloatingPhoneButton'
+
+// Optimize font loading with display swap for better FCP
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+  preload: true,
+})
 
 export const metadata: Metadata = {
   title: 'Professional Painting Services in Massachusetts | JH Painting',
@@ -45,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <head>
         {/* Preconnect to external resources for faster loading */}
         <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
@@ -54,6 +63,13 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://storage.googleapis.com" />
         <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://reputationhub.site" />
+        {/* Preload critical LCP image for faster loading */}
+        <link
+          rel="preload"
+          as="image"
+          href="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
+          fetchPriority="high"
+        />
         <link rel="canonical" href="https://jhpaintingservices.com/" />
         <meta name="geo.region" content="US-MA" />
         <meta name="geo.placename" content="Massachusetts" />
@@ -87,15 +103,15 @@ export default function RootLayout({
               "paymentAccepted": "Cash, Credit Card, Check",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Waltham",
+                "addressLocality": "Marlborough",
                 "addressRegion": "MA",
-                "postalCode": "02451",
+                "postalCode": "01752",
                 "addressCountry": "US"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 42.3765,
-                "longitude": -71.2356
+                "latitude": 42.3459,
+                "longitude": -71.5526
               },
               "hasMap": "https://maps.google.com/?cid=17086082612398292159",
               "openingHoursSpecification": [

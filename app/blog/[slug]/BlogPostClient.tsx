@@ -388,7 +388,7 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
                   <div className="blog-sidebar-contact">
                     <a href="tel:+15086908886"><Phone size={16} /> (508) 690-8886</a>
                     <a href="mailto:contact@jhpaintingservices.com"><Mail size={16} /> contact@jhpaintingservices.com</a>
-                    <span><MapPin size={16} /> Waltham, Massachusetts</span>
+                    <span><MapPin size={16} /> Marlborough, Massachusetts</span>
                   </div>
                 </div>
               </aside>

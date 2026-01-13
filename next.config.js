@@ -1,28 +1,29 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Redirect old URLs to new SEO-friendly URLs
+  // Redirect old URLs to new SEO-friendly URLs - OPTIMIZED TO BEAT COMPETITORS
   async redirects() {
     return [
-      // City page redirects: /cities/[city] -> /[city]-ma-painters
+      // ============================================
+      // LEGACY: /cities/[city] -> NEW SEO URLs
+      // ============================================
       {
         source: '/cities/:city',
-        destination: '/:city-ma-painters',
+        destination: '/:city-ma-painting-contractors',
         permanent: true,
       },
-      // City+Service page redirects: /cities/[city]/[service] -> /[city]-ma-[service]-services
       {
         source: '/cities/:city/interior-painting',
-        destination: '/:city-ma-interior-painting-services',
+        destination: '/:city-ma-interior-house-painting',
         permanent: true,
       },
       {
         source: '/cities/:city/exterior-painting',
-        destination: '/:city-ma-exterior-painting-services',
+        destination: '/:city-ma-exterior-house-painting',
         permanent: true,
       },
       {
         source: '/cities/:city/commercial-painting',
-        destination: '/:city-ma-commercial-painting-services',
+        destination: '/:city-ma-commercial-painting-contractors',
         permanent: true,
       },
       {
@@ -32,7 +33,35 @@ const nextConfig = {
       },
       {
         source: '/cities/:city/cabinet-painting',
-        destination: '/:city-ma-cabinet-painting-refinishing',
+        destination: '/:city-ma-cabinet-refinishing-painters',
+        permanent: true,
+      },
+      // ============================================
+      // FIRST ITERATION URLs -> NEW OPTIMIZED URLs
+      // ============================================
+      {
+        source: '/:city-ma-painters',
+        destination: '/:city-ma-painting-contractors',
+        permanent: true,
+      },
+      {
+        source: '/:city-ma-interior-painting-services',
+        destination: '/:city-ma-interior-house-painting',
+        permanent: true,
+      },
+      {
+        source: '/:city-ma-exterior-painting-services',
+        destination: '/:city-ma-exterior-house-painting',
+        permanent: true,
+      },
+      {
+        source: '/:city-ma-commercial-painting-services',
+        destination: '/:city-ma-commercial-painting-contractors',
+        permanent: true,
+      },
+      {
+        source: '/:city-ma-cabinet-painting-refinishing',
+        destination: '/:city-ma-cabinet-refinishing-painters',
         permanent: true,
       },
     ]

@@ -37,8 +37,8 @@
   --jh-blue-light: #142952;
   --jh-blue-dark: #061430;
 
-  /* Modern font stack */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* Modern font stack - uses Next.js optimized Inter font */
+  --font-sans: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
   /* Enhanced shadows */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);

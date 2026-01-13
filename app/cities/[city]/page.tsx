@@ -874,7 +874,7 @@ export default function CityPage({ params }: Props) {
                 Your Trusted {city.name} Painting Contractor
               </h2>
               <p>
-                Founded by <strong>Jafet</strong>, JH Painting Services is a premier painting contractor based in Waltham, Massachusetts.
+                Founded by <strong>Jafet</strong>, JH Painting Services is a premier painting contractor based in Marlborough, Massachusetts.
                 With years of hands-on experience, we've built our reputation on delivering exceptional craftsmanship,
                 honest pricing, and reliable service to homeowners across {city.name} and all of {city.county}.
               </p>

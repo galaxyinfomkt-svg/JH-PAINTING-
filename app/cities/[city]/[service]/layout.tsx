@@ -5,26 +5,48 @@ interface Props {
   params: { city: string; service: string }
 }
 
-const services: Record<string, { name: string; description: string }> = {
+// SEO-optimized service data with rich descriptions
+const services: Record<string, {
+  name: string
+  seoTitle: string
+  description: string
+  shortDesc: string
+  keywords: string[]
+}> = {
   'interior-painting': {
-    name: 'Interior Painting',
-    description: 'interior painting services including walls, ceilings, trim, and color consultation',
+    name: 'Interior House Painters',
+    seoTitle: 'Interior House Painters',
+    description: 'professional interior painters for walls, ceilings, trim, baseboards, and expert color consultation',
+    shortDesc: 'walls, ceilings, trim painters',
+    keywords: ['interior painters', 'wall painters', 'ceiling painters', 'trim painters', 'room painters', 'house painters'],
   },
   'exterior-painting': {
-    name: 'Exterior Painting',
-    description: 'exterior house painting with power washing, prep work, and premium weather-resistant paints',
+    name: 'Exterior House Painters',
+    seoTitle: 'Exterior House Painters',
+    description: 'expert exterior house painters with power washing, surface preparation, and premium weather-resistant paints',
+    shortDesc: 'siding, trim, deck painters',
+    keywords: ['exterior painters', 'house painters', 'siding painters', 'deck painters', 'outdoor painters'],
   },
   'commercial-painting': {
-    name: 'Commercial Painting',
-    description: 'commercial painting for offices, retail stores, restaurants, and warehouses',
+    name: 'Commercial Painters',
+    seoTitle: 'Commercial Painters',
+    description: 'professional commercial painters for offices, retail stores, restaurants, warehouses, and business facilities',
+    shortDesc: 'office, retail, restaurant painters',
+    keywords: ['commercial painters', 'office painters', 'retail painters', 'business painters', 'industrial painters'],
   },
   'residential-painting': {
-    name: 'Residential Painting',
-    description: 'complete residential painting solutions for homes and apartments',
+    name: 'Residential Painters',
+    seoTitle: 'Residential Painters',
+    description: 'complete residential painters for homes, apartments, condos, and townhouses',
+    shortDesc: 'full home painters',
+    keywords: ['residential painters', 'home painters', 'house painters', 'apartment painters', 'condo painters'],
   },
   'cabinet-painting': {
-    name: 'Cabinet Painting',
-    description: 'kitchen cabinet painting and refinishing for a fraction of replacement cost',
+    name: 'Cabinet Painters',
+    seoTitle: 'Cabinet Painters',
+    description: 'professional cabinet painters and refinishing - save 70% vs replacement with expert spray finish',
+    shortDesc: 'kitchen cabinet painters',
+    keywords: ['cabinet painters', 'cabinet refinishing', 'kitchen cabinet painters', 'cabinet spray painters'],
   },
 }
 
@@ -41,15 +63,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const cityName = city.name
   const countyName = city.county || 'Massachusetts'
-  const serviceName = service.name
+  const zipCode = city.zipCodes?.[0] || ''
+
+  // SEO-optimized title: Service + City + State + ZIP + Phone
+  const title = `${service.seoTitle} ${cityName} MA | Best ${service.name} ${zipCode} | (508) 690-8886`
+
+  // Extended keywords for this city+service combination
+  const extendedKeywords = [
+    `${service.name.toLowerCase()} ${cityName} MA`,
+    `${cityName} ${service.name.toLowerCase()}`,
+    `best ${service.name.toLowerCase()} ${cityName}`,
+    `${service.name.toLowerCase()} near me ${cityName}`,
+    `professional ${service.name.toLowerCase()} ${cityName}`,
+    `${cityName} MA ${service.name.toLowerCase()}`,
+    `affordable ${service.name.toLowerCase()} ${cityName}`,
+    `licensed ${service.name.toLowerCase()} ${cityName}`,
+    `${countyName} ${service.name.toLowerCase()}`,
+    `${service.name.toLowerCase()} ${zipCode}`,
+    ...service.keywords.map(k => `${k} ${cityName}`),
+    ...service.keywords.map(k => `${k} ${cityName} MA`),
+  ]
 
   return {
-    title: `${serviceName} in ${cityName} MA | Professional Painters | JH Painting Services`,
-    description: `Looking for ${serviceName.toLowerCase()} in ${cityName}, Massachusetts? JH Painting offers expert ${service.description} in ${cityName}, ${countyName}. Licensed & insured painters. Free estimates! Call (508) 690-8886.`,
-    keywords: `${serviceName.toLowerCase()} ${cityName} MA, ${cityName} painters, ${serviceName.toLowerCase()} contractors ${cityName}, painting services ${cityName} Massachusetts, best ${serviceName.toLowerCase()} ${cityName}, professional painters ${cityName} MA, house painters ${cityName}`,
+    title,
+    description: `Best ${service.name.toLowerCase()} in ${cityName}, MA ${zipCode}. JH Painting offers ${service.description} in ${cityName}, ${countyName}. Premium paints (Benjamin Moore, Sherwin-Williams). Licensed & insured. 40+ 5-star reviews. FREE estimates - Call (508) 690-8886!`,
+    keywords: extendedKeywords.join(', '),
     openGraph: {
-      title: `${serviceName} in ${cityName} MA | JH Painting Services`,
-      description: `Expert ${serviceName.toLowerCase()} in ${cityName}, Massachusetts. Licensed & insured. Free estimates!`,
+      title: `${service.seoTitle} ${cityName} MA | Best ${service.name} | JH Painting`,
+      description: `#1 rated ${service.name.toLowerCase()} in ${cityName}, Massachusetts. ${service.shortDesc}. Licensed & insured. FREE estimates!`,
       url: `https://jhpaintingservices.com/cities/${params.city}/${params.service}`,
       siteName: 'JH Painting Services',
       locale: 'en_US',
@@ -59,15 +100,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
           width: 1200,
           height: 630,
-          alt: `${serviceName} in ${cityName} MA`,
+          alt: `${service.name} in ${cityName} MA - JH Painting Services`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${serviceName} in ${cityName} MA | JH Painting`,
-      description: `Expert ${serviceName.toLowerCase()} in ${cityName}, Massachusetts. Call (508) 690-8886!`,
+      title: `${service.seoTitle} ${cityName} MA | (508) 690-8886`,
+      description: `Best ${service.name.toLowerCase()} in ${cityName}, MA. Licensed & insured. Call for FREE estimate!`,
       images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
+      creator: '@jhpaintingma',
     },
     alternates: {
       canonical: `https://jhpaintingservices.com/cities/${params.city}/${params.service}`,
@@ -75,6 +117,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    other: {
+      'geo.region': 'US-MA',
+      'geo.placename': cityName,
     },
   }
 }

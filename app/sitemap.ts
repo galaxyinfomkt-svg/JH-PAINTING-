@@ -16,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/contact`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
@@ -61,16 +67,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // City pages with SEO-friendly URLs: /waltham-ma-painters
-  const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
+  // SEO-optimized city pages: /marlborough-ma-painting-contractors
+  const seoFriendlyCityPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${baseUrl}/${getCityPageSlug(city.slug)}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 
-  // City + Service pages with SEO-friendly URLs: /waltham-ma-interior-painting-services
-  const cityServicePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
+  // SEO-optimized city + service pages: /marlborough-ma-interior-house-painting
+  const seoFriendlyCityServicePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
     servicesSlugs.map((service) => ({
       url: `${baseUrl}/${getCityServicePageSlug(city.slug, service)}`,
       lastModified: currentDate,
@@ -79,5 +85,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   )
 
-  return [...staticPages, ...blogPages, ...cityPages, ...cityServicePages]
+  // Legacy city pages: /cities/marlborough (for backwards compatibility and internal linking)
+  const legacyCityPages: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${baseUrl}/cities/${city.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }))
+
+  // Legacy city + service pages: /cities/marlborough/interior-painting
+  const legacyCityServicePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
+    servicesSlugs.map((service) => ({
+      url: `${baseUrl}/cities/${city.slug}/${service}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    }))
+  )
+
+  return [
+    ...staticPages,
+    ...blogPages,
+    ...seoFriendlyCityPages,
+    ...seoFriendlyCityServicePages,
+    ...legacyCityPages,
+    ...legacyCityServicePages,
+  ]
 }
