@@ -877,6 +877,19 @@ export default function SeoPage({ params }: Props) {
           </div>
         </div>
 
+        {/* Intro Text Section - SEO Content */}
+        {cityContent.introText && (
+          <section className="city-section city-section-white" style={{ paddingTop: '4rem', paddingBottom: '2rem' }}>
+            <div className="container">
+              <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+                <p style={{ fontSize: '1.125rem', lineHeight: '1.9', color: '#374151', textAlign: 'left' }}>
+                  {cityContent.introText}
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Why Homeowners Choose Us - Pain Points & Solutions */}
         <section className="city-section city-section-white">
           <div className="container">
@@ -953,6 +966,15 @@ export default function SeoPage({ params }: Props) {
               <h2 className="city-section-title">Professional Painting Services</h2>
               <p className="city-section-subtitle">Expert painting solutions tailored for {city.name} homes and businesses</p>
             </div>
+
+            {/* Service Description - SEO Content */}
+            {cityContent.serviceDescription && (
+              <div style={{ maxWidth: '900px', margin: '0 auto 3rem', background: '#fff', borderRadius: '16px', padding: '2rem', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
+                <p style={{ fontSize: '1.0625rem', lineHeight: '1.85', color: '#4B5563', margin: 0 }}>
+                  {cityContent.serviceDescription}
+                </p>
+              </div>
+            )}
 
             <div className="city-services-grid">
               {servicesList.map((svc, idx) => (
@@ -1144,6 +1166,27 @@ export default function SeoPage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        {/* Closing Pitch Section - SEO Content */}
+        {cityContent.closingPitch && (
+          <section className="city-section city-section-white" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
+            <div className="container">
+              <div style={{ maxWidth: '900px', margin: '0 auto', background: 'linear-gradient(135deg, #FEF2F2 0%, #FFF7ED 100%)', borderRadius: '20px', padding: '2.5rem', border: '1px solid rgba(210, 4, 4, 0.1)' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'linear-gradient(135deg, #D20404 0%, #B91C1C 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <Heart size={24} color="#fff" />
+                  </div>
+                  <div>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#1F2937', marginBottom: '1rem' }}>Why {city.name} Trusts JH Painting Services</h3>
+                    <p style={{ fontSize: '1.0625rem', lineHeight: '1.85', color: '#4B5563', margin: 0 }}>
+                      {cityContent.closingPitch}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* CTA Section */}
         <section className="section" style={{ background: 'var(--jh-red)', padding: '4rem 0' }}>
