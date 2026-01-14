@@ -56,7 +56,9 @@ export default function BlogPage() {
   }
 
   const filteredPosts = blogPosts.filter(post => {
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory
+    // Convert category name to slug format for comparison (e.g., 'Color Guide' -> 'color-guide')
+    const postCategorySlug = post.category.toLowerCase().replace(/ /g, '-')
+    const matchesCategory = selectedCategory === 'all' || postCategorySlug === selectedCategory
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))

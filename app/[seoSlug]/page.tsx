@@ -737,6 +737,7 @@ export default function SeoPage({ params }: Props) {
               </div>
               <Link href="/#gallery">Gallery</Link>
               <Link href="/#reviews">Reviews</Link>
+              <Link href="/blog">Blog</Link>
               <Link href="/#contact">Contact</Link>
             </nav>
 
@@ -760,6 +761,7 @@ export default function SeoPage({ params }: Props) {
             <Link href="/#about" onClick={closeMenu}>About</Link>
             <Link href="/#gallery" onClick={closeMenu}>Gallery</Link>
             <Link href="/#reviews" onClick={closeMenu}>Reviews</Link>
+            <Link href="/blog" onClick={closeMenu}>Blog</Link>
             <Link href="/#contact" onClick={closeMenu}>Contact</Link>
           </div>
           <a href="tel:+15086908886" className="btn btn-primary" style={{ width: '100%', marginTop: '1.5rem' }}>
