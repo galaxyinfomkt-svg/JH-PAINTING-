@@ -111,6 +111,15 @@ export default function HomePage() {
   const [scrolled, setScrolled] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [videoModal, setVideoModal] = useState<{ isOpen: boolean; videoId: string; title: string }>({ isOpen: false, videoId: '', title: '' })
+
+  const openVideoModal = (videoId: string, title: string) => {
+    setVideoModal({ isOpen: true, videoId, title })
+  }
+
+  const closeVideoModal = () => {
+    setVideoModal({ isOpen: false, videoId: '', title: '' })
+  }
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -650,12 +659,11 @@ export default function HomePage() {
 
             <div className="video-grid-rs">
               {videos.map((video, index) => (
-                <a
+                <button
                   key={index}
-                  href={`https://www.youtube.com/watch?v=${video.id}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() => openVideoModal(video.id, video.title)}
                   className="video-card-rs"
+                  type="button"
                 >
                   <Image
                     src={`https://img.youtube.com/vi/${video.id}/${video.thumbnail}.jpg`}
@@ -675,7 +683,7 @@ export default function HomePage() {
                       {video.type}
                     </span>
                   </div>
-                </a>
+                </button>
               ))}
             </div>
 
@@ -915,6 +923,25 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
+      {/* Video Modal */}
+      {videoModal.isOpen && (
+        <div className="video-modal-overlay" onClick={closeVideoModal}>
+          <div className="video-modal" onClick={(e) => e.stopPropagation()}>
+            <button type="button" className="video-modal-close" onClick={closeVideoModal} aria-label="Close video">
+              <X size={24} />
+            </button>
+            <div className="video-modal-content">
+              <iframe
+                src={`https://www.youtube.com/embed/${videoModal.videoId}?autoplay=1&rel=0`}
+                title={videoModal.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }
