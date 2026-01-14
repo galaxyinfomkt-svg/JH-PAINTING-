@@ -18,6 +18,7 @@ export const BUSINESS = {
 export const FORM_IDS = {
   contact: 'JRiO8zZFsJyeWQDs0WtO',
   quote: 'JRiO8zZFsJyeWQDs0WtO',
+  servicePages: 'https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO',
 } as const
 
 // Social Media Links

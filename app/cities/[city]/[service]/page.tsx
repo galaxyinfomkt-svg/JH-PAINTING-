@@ -12,6 +12,7 @@ import {
   Users, DollarSign, Search, CheckSquare, ThumbsUp, Hammer
 } from 'lucide-react'
 import { getCityBySlug, cities } from '@/app/data/cities'
+import { cityContentMap } from '@/app/data/cityContent'
 
 interface Props {
   params: {
@@ -253,6 +254,7 @@ const nearbyCities = ['Boston', 'Cambridge', 'Brookline', 'Newton', 'Waltham', '
 export default function CityServicePage({ params }: Props) {
   const city = getCityBySlug(params.city)
   const service = servicesData[params.service as keyof typeof servicesData]
+  const cityContent = cityContentMap[params.city]
 
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -573,6 +575,69 @@ export default function CityServicePage({ params }: Props) {
           <div className="city-service-layout">
             {/* Main Content Column */}
             <div className="city-service-main">
+
+              {/* Intro Section - Rich SEO Content */}
+              <section className="city-service-section city-intro-section">
+                <h2>Professional {service.name} Services for {city.name} Homeowners</h2>
+                {cityContent?.introText ? (
+                  <p className="city-intro-text">{cityContent.introText}</p>
+                ) : (
+                  <p className="city-intro-text">
+                    Looking for reliable {service.name.toLowerCase()} in {city.name}, Massachusetts? You&apos;ve come to the right place.
+                    JH Painting Services has been serving {city.name} homeowners with exceptional {service.name.toLowerCase()} for years,
+                    building a reputation for quality craftsmanship, honest pricing, and outstanding customer service.
+                    We understand the unique challenges that {city.name} homes face – from New England&apos;s harsh winters and humid summers
+                    to the specific architectural styles common in your neighborhood. Our team doesn&apos;t just paint; we protect your investment,
+                    enhance your home&apos;s beauty, and deliver results that last for years. Whether you&apos;re refreshing a single room or transforming
+                    your entire property, we bring the same dedication to every project in {city.name}.
+                  </p>
+                )}
+
+                {/* Local Context */}
+                {cityContent?.localContext && (
+                  <div className="city-local-context">
+                    <div className="local-context-icon">
+                      <MapPin size={24} />
+                    </div>
+                    <div>
+                      <h3>We Know {city.name}</h3>
+                      <p>{cityContent.localContext}</p>
+                    </div>
+                  </div>
+                )}
+              </section>
+
+              {/* Pain Points Section - Customer Problems */}
+              {cityContent?.painPoints && cityContent.painPoints.length > 0 && (
+                <section className="city-service-section city-pain-points-section">
+                  <div className="section-icon-header">
+                    <AlertCircle size={24} />
+                    <h2>Are You Experiencing These {service.name} Problems in {city.name}?</h2>
+                  </div>
+                  <p style={{ marginBottom: '1.5rem', color: 'var(--jh-text-light)', fontSize: '1.0625rem' }}>
+                    We hear from {city.name} homeowners every day struggling with the same frustrations. If any of these sound familiar, you&apos;re not alone – and we can help:
+                  </p>
+                  <div className="pain-points-grid">
+                    {cityContent.painPoints.slice(0, 4).map((pain, idx) => (
+                      <div key={idx} className="pain-point-card">
+                        <div className="pain-point-number">{idx + 1}</div>
+                        <p>{pain}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Solutions Teaser */}
+                  {cityContent?.solutions && cityContent.solutions.length > 0 && (
+                    <div className="solutions-preview">
+                      <CheckCircle2 size={24} />
+                      <div>
+                        <h4>Good News: We Have Solutions</h4>
+                        <p>{cityContent.solutions[0]}</p>
+                      </div>
+                    </div>
+                  )}
+                </section>
+              )}
 
               {/* Challenges Section */}
               <section className="city-service-section">

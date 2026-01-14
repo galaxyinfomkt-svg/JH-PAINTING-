@@ -23,7 +23,8 @@ import {
   HardHat,
   Building2,
   PaintBucket,
-  Award
+  Award,
+  Hammer
 } from 'lucide-react'
 import { cities } from './data/cities'
 import LazyIframe from './components/LazyIframe'
@@ -89,6 +90,42 @@ const beforeAfterPairs = [
   }
 ]
 
+// FAQ data for homepage
+const homepageFaqs = [
+  {
+    question: "How much does it cost to paint a house in Massachusetts?",
+    answer: "Interior painting typically costs $3-$5 per square foot, while exterior painting runs $4-$7 per square foot depending on your home's size, condition, and complexity. A typical interior project costs $4,000-$8,000, and exteriors run $5,000-$15,000. We provide free, detailed estimates with transparent pricing - no hidden fees or surprises."
+  },
+  {
+    question: "How long does a painting project take?",
+    answer: "Most interior room painting takes 1-2 days per room. A full interior typically takes 3-7 days. Exterior painting usually takes 5-10 days depending on home size and weather conditions. We'll provide a specific timeline during your free estimate and keep you updated throughout the project."
+  },
+  {
+    question: "What paint brands do you use?",
+    answer: "We exclusively use premium paints from Benjamin Moore and Sherwin-Williams. These top-tier paints are specifically formulated to withstand New England's harsh climate - our freeze-thaw cycles, humidity, and intense UV exposure. Quality paint lasts 7-10+ years versus 3-5 years for budget alternatives."
+  },
+  {
+    question: "Are you licensed and insured?",
+    answer: "Yes! JH Painting Services is fully licensed in Massachusetts and carries comprehensive liability insurance and workers' compensation coverage. We're also EPA Lead-Safe Certified for homes built before 1978. Your home and family are fully protected when you work with us."
+  },
+  {
+    question: "Do you offer free estimates?",
+    answer: "Absolutely! We provide free, no-obligation estimates for all projects. We'll visit your property, discuss your vision, assess the scope of work, and provide a detailed written estimate. There's never any pressure to commit - take your time and compare."
+  },
+  {
+    question: "What areas do you serve?",
+    answer: "We serve 114+ cities across Massachusetts including Boston, Cambridge, Worcester, Marlborough, and the entire MetroWest region. Our crews travel throughout the state, and being based in Marlborough, we offer competitive pricing across our service area."
+  },
+  {
+    question: "How do I prepare for my painting project?",
+    answer: "We handle most preparation! For interiors, simply clear small items from surfaces and move furniture away from walls (or we can do this). For exteriors, ensure we have access to your home's perimeter. We'll cover and protect everything else - floors, furniture, landscaping, and fixtures."
+  },
+  {
+    question: "What is your warranty?",
+    answer: "We stand behind our work with strong warranties: 5 years on exterior painting and 3 years on interior painting. Our warranty covers peeling, blistering, cracking, and fading under normal conditions. If something isn't right, we'll fix it - no questions asked."
+  }
+]
+
 // Menu data
 const menuServices = [
   {
@@ -121,6 +158,12 @@ const menuServices = [
     icon: Palette,
     description: 'Upgrade your kitchen cabinets'
   },
+  {
+    name: 'Carpentry',
+    href: '/services/carpentry',
+    icon: Hammer,
+    description: 'Expert wood repairs & trim work'
+  },
 ]
 
 export default function HomePage() {
@@ -129,6 +172,7 @@ export default function HomePage() {
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const [videoModal, setVideoModal] = useState<{ isOpen: boolean; videoId: string; title: string }>({ isOpen: false, videoId: '', title: '' })
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
 
   const openVideoModal = (videoId: string, title: string) => {
     setVideoModal({ isOpen: true, videoId, title })
@@ -427,6 +471,59 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
+        {/* Trust Badges Section - Yelp, Thumbtack, Google */}
+        <section className="trust-badges-section">
+          <div className="container">
+            <div className="trust-badges-wrapper">
+              <span className="trust-badges-label">Trusted & Verified On:</span>
+              <div className="trust-badges-logos">
+                <a
+                  href="https://www.yelp.com/biz/jh-painting-services-marlborough?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="trust-badge-link"
+                  aria-label="View JH Painting on Yelp"
+                >
+                  <svg viewBox="0 0 384 512" fill="currentColor" className="trust-badge-icon yelp-icon">
+                    <path d="M42.9 240.32l99.62 48.61c19.2 9.4 16.2 37.51-4.5 42.71L30.5 358.45a22.79 22.79 0 0 1-28.21-19.6 197.16 197.16 0 0 1 9-85.32 22.8 22.8 0 0 1 31.61-13.21zm44 239.25a199.45 199.45 0 0 0 79.42 32.11A22.78 22.78 0 0 0 192.94 490l3.9-110.82c.7-21.3-25.5-31.91-39.81-16.1l-74.21 82.4a22.82 22.82 0 0 0 4.09 34.09zm145.34-109.92l58.81 94a22.93 22.93 0 0 0 34 5.5 198.36 198.36 0 0 0 52.71-67.61A22.8 22.8 0 0 0 367.61 373.5l-108.51-45.71c-20-8.4-38.91 12.91-27.91 31.81zm148.33-132.23a197.44 197.44 0 0 0-50.41-69.31 22.77 22.77 0 0 0-34 4.4l-62 91.92c-11.9 17.7 4.7 40.61 25.2 34.71L366 268.63a22.82 22.82 0 0 0 14.61-31.21zM62.11 30.18a22.86 22.86 0 0 0-9.9 32l104.12 180.44c11.7 20.2 42.61 11.9 42.61-11.4V22.88a22.67 22.67 0 0 0-24.5-22.8 320.37 320.37 0 0 0-112.33 30.1z"/>
+                  </svg>
+                  <span className="trust-badge-text">Yelp</span>
+                </a>
+                <a
+                  href="https://www.thumbtack.com/ma/marlborough/exterior-painting/jh-painting-services-inc/service/335756687285510374?utm_medium=web&utm_source=txt&surface=sp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="trust-badge-link"
+                  aria-label="View JH Painting on Thumbtack"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" className="trust-badge-icon thumbtack-icon">
+                    <circle cx="12" cy="12" r="12" fill="#009FD9"/>
+                    <path d="M17.5 8.5L15.5 10.5L13.5 8.5L11.5 10.5L9.5 8.5L7.5 10.5L6 9L9 6L12 9L15 6L18 9L16.5 10.5L17.5 8.5Z" fill="white"/>
+                    <path d="M12 11L8 15L9.5 16.5L12 14L14.5 16.5L16 15L12 11Z" fill="white"/>
+                    <path d="M12 14V19" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                  </svg>
+                  <span className="trust-badge-text">Thumbtack</span>
+                </a>
+                <a
+                  href="https://g.co/kgs/hc9Rfmv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="trust-badge-link"
+                  aria-label="View JH Painting on Google"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" className="trust-badge-icon google-badge-icon">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                  </svg>
+                  <span className="trust-badge-text">Google</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Services Section */}
         <section id="services" className="section section-modern">
@@ -845,15 +942,71 @@ export default function HomePage() {
                 </div>
 
                 <div className="map-container">
-                  <LazyIframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1517205.5747339479!2d-71.68353554999999!3d42.0369155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60c735e8062f080f%3A0xecd39bea9de17cbf!2sJH%20Painting%20Services!5e0!3m2!1sen!2sbr!4v1768058870291!5m2!1sen!2sbr"
-                    allowFullScreen
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="JH Painting Services Location - Serving All of Massachusetts"
-                    style={{ minHeight: '300px' }}
-                  />
+                  <a
+                    href="https://g.co/kgs/hc9Rfmv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="static-map-link"
+                    aria-label="View JH Painting Services on Google Maps"
+                  >
+                    <div className="static-map-placeholder">
+                      <MapPin size={32} />
+                      <span className="static-map-title">JH Painting Services</span>
+                      <span className="static-map-address">Serving All of Massachusetts</span>
+                      <span className="static-map-cta">
+                        <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+                          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                        </svg>
+                        View on Google Maps
+                      </span>
+                    </div>
+                  </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section id="faq" className="section faq-section-home">
+          <div className="container">
+            <div className="section-header section-header-enhanced">
+              <span className="section-eyebrow">Got Questions?</span>
+              <h2>Frequently Asked Questions</h2>
+              <p>Everything you need to know about our painting services. Can&apos;t find your answer? Call us at (508) 690-8886.</p>
+            </div>
+
+            <div className="faq-grid-home">
+              {homepageFaqs.map((faq, idx) => (
+                <div key={idx} className={`faq-item-home ${openFaqIndex === idx ? 'open' : ''}`}>
+                  <button
+                    type="button"
+                    onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
+                    className="faq-question-home"
+                    aria-expanded={openFaqIndex === idx ? "true" : "false"}
+                  >
+                    <h3>{faq.question}</h3>
+                    <ChevronDown
+                      size={24}
+                      className={`faq-chevron ${openFaqIndex === idx ? 'open' : ''}`}
+                    />
+                  </button>
+                  <div className={`faq-answer-home ${openFaqIndex === idx ? 'open' : ''}`}>
+                    <p>{faq.answer}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="faq-cta-home">
+              <p>Still have questions? We&apos;re here to help!</p>
+              <a href="tel:+15086908886" className="btn btn-primary">
+                <Phone size={18} />
+                Call (508) 690-8886
+              </a>
             </div>
           </div>
         </section>

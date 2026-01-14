@@ -9,6 +9,7 @@ export const serviceUrlMap: Record<string, string> = {
   'commercial-painting': 'commercial-painters',
   'residential-painting': 'residential-painters',
   'cabinet-painting': 'cabinet-painters',
+  'carpentry': 'carpentry-services',
 }
 
 // Service names for display
@@ -18,6 +19,7 @@ export const serviceNameMap: Record<string, string> = {
   'commercial-painting': 'Commercial Painters',
   'residential-painting': 'Residential Painters',
   'cabinet-painting': 'Cabinet Painters',
+  'carpentry': 'Carpentry Services',
 }
 
 // SEO titles for each service (keyword optimized)
@@ -27,6 +29,7 @@ export const serviceSeoTitles: Record<string, string> = {
   'commercial-painting': 'Commercial Painters',
   'residential-painting': 'Residential Painters',
   'cabinet-painting': 'Cabinet Painters',
+  'carpentry': 'Carpentry Services',
 }
 
 // Generate SEO-friendly URL for city page
@@ -82,6 +85,12 @@ export function parseSeoUrl(seoSlug: string): { citySlug: string; serviceSlug?: 
     return { citySlug: cabinetMatch[1], serviceSlug: 'cabinet-painting' }
   }
 
+  // Pattern: [city]-ma-carpentry-services
+  const carpentryMatch = seoSlug.match(/^(.+)-ma-carpentry-services$/)
+  if (carpentryMatch) {
+    return { citySlug: carpentryMatch[1], serviceSlug: 'carpentry' }
+  }
+
   // Legacy patterns for backward compatibility (old URLs)
   const legacyContractorsMatch = seoSlug.match(/^(.+)-ma-painting-contractors$/)
   if (legacyContractorsMatch) {
@@ -125,4 +134,5 @@ export const servicesSlugs = [
   'commercial-painting',
   'residential-painting',
   'cabinet-painting',
+  'carpentry',
 ]
