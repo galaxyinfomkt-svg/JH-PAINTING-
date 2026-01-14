@@ -108,6 +108,7 @@ const schemaData = {
       "legalName": "JH Painting Services LLC",
       "alternateName": ["JH Painting", "JH Painting Services Massachusetts", "JH Painting MA", "JH Painters"],
       "description": "Award-winning painting contractor serving Massachusetts since 2018. Expert interior & exterior painting, cabinet refinishing, deck staining, and home improvement services. Licensed, $2M insured, EPA Lead-Safe certified. Serving 116+ cities across Massachusetts.",
+      "slogan": "Transforming Massachusetts Homes Since 2018",
       "url": "https://jhpaintingservices.com",
       "telephone": "+1-508-690-8886",
       "email": "contact@jhpaintingservices.com",

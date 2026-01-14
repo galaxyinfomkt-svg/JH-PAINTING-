@@ -413,9 +413,10 @@ export default function HomePage() {
         </div>
 
         {/* Services Section */}
-        <section id="services" className="section">
+        <section id="services" className="section section-modern">
           <div className="container">
-            <div className="services-section-header">
+            <div className="services-section-header section-header-enhanced">
+              <span className="section-eyebrow">What We Offer</span>
               <h2>Our <span>Services</span></h2>
               <p>From expert <strong>painting and finishing work</strong> to complete home exteriors, we deliver quality craftsmanship on every project.</p>
               <div className="underline"></div>
@@ -423,7 +424,7 @@ export default function HomePage() {
 
             <div className="services-grid">
               {services.map((service, index) => (
-                <Link href={service.href} key={index} className="service-card">
+                <Link href={service.href} key={index} className="service-card service-card-enhanced">
                   {service.featured && <span className="service-card-featured">Featured Service</span>}
                   <div className="service-card-image">
                     <Image
@@ -450,7 +451,7 @@ export default function HomePage() {
         </section>
 
         {/* About Section - Dark RS Style */}
-        <section id="about" className="section about-section-dark">
+        <section id="about" className="section section-modern about-section-dark">
           <div className="container">
             <div className="about-grid">
               <div className="about-content">
@@ -494,9 +495,10 @@ export default function HomePage() {
         </section>
 
         {/* Process Section - RS Style */}
-        <section className="section">
+        <section className="section section-modern">
           <div className="container">
-            <div className="section-header">
+            <div className="section-header section-header-enhanced">
+              <span className="section-eyebrow">How It Works</span>
               <h2>Our Process</h2>
               <p>From initial consultation to project completion, we make the painting process simple and stress-free.</p>
             </div>
@@ -508,7 +510,7 @@ export default function HomePage() {
                 { num: '03', icon: HardHat, title: 'Expert Painting', desc: 'Our skilled team executes your project with precision, keeping you informed every step of the way.' },
                 { num: '04', icon: Check, title: 'Final Walkthrough', desc: 'We walk through the completed project together, ensuring everything meets your expectations.' },
               ].map((step, index) => (
-                <div key={index} className="process-card-home">
+                <div key={index} className="process-card-home process-step-enhanced">
                   <div className="process-card-home-num">{step.num}</div>
                   <div className="process-card-home-icon">
                     <step.icon size={24} />
@@ -611,9 +613,10 @@ export default function HomePage() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="section">
+        <section className="section section-modern">
           <div className="container">
-            <div className="section-header">
+            <div className="section-header section-header-enhanced">
+              <span className="section-eyebrow">Why Choose Us</span>
               <h2>Why Choose JH Painting Services</h2>
               <p>Massachusetts trusts us for expert painting services.</p>
             </div>
@@ -625,7 +628,7 @@ export default function HomePage() {
                 { icon: Clock, title: 'On-Time Completion', desc: 'We deliver projects on schedule' },
                 { icon: DollarSign, title: 'Free Estimates', desc: 'Transparent pricing, no obligation' },
               ].map((item, index) => (
-                <div key={index} className="why-card">
+                <div key={index} className="why-card why-card-enhanced">
                   <div className="why-icon">
                     <item.icon size={24} />
                   </div>
@@ -691,16 +694,17 @@ export default function HomePage() {
         </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="section gallery-section">
+        <section id="gallery" className="section section-modern gallery-section">
           <div className="container">
-            <div className="section-header">
+            <div className="section-header section-header-enhanced">
+              <span className="section-eyebrow">Our Portfolio</span>
               <h2>Our Work Gallery</h2>
               <p>Browse through our portfolio of completed projects across Massachusetts.</p>
             </div>
 
             <div className="gallery-grid">
               {galleryImages.map((img, index) => (
-                <div key={index} className="gallery-item">
+                <div key={index} className="gallery-item gallery-item-enhanced">
                   <Image
                     src={img.src}
                     alt={img.alt}
@@ -817,7 +821,7 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="cta-section">
+        <section className="cta-section cta-section-enhanced">
           <div className="container">
             <div className="cta-content">
               <h2>Ready to Start Your Painting Project?</h2>
