@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 import { notFound } from 'next/navigation'
-import { Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, Home, Building2, PaintBucket, Brush, Menu, X, ChevronDown, Paintbrush, Palette, DollarSign } from 'lucide-react'
+import { Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, Home, Building2, PaintBucket, Brush, Menu, X, ChevronDown, Paintbrush, Palette, DollarSign, Hammer } from 'lucide-react'
 import { getCityBySlug, cities } from '@/app/data/cities'
 import { getCityContent } from '@/app/data/cityContent'
 import LazyIframe from '@/app/components/LazyIframe'
@@ -17,6 +17,7 @@ const menuServices = [
   { name: 'Commercial Painting', href: '/services/commercial-painting', icon: Building2, description: 'Professional business painting' },
   { name: 'Residential Painting', href: '/services/residential-painting', icon: PaintBucket, description: 'Complete home painting solutions' },
   { name: 'Cabinet Painting', href: '/services/cabinet-painting', icon: Palette, description: 'Upgrade your kitchen cabinets' },
+  { name: 'Carpentry', href: '/services/carpentry', icon: Hammer, description: 'Expert wood repairs & trim work' },
 ]
 
 interface Props {
@@ -107,6 +108,14 @@ function generateCitySchema(cityName: string, countyName: string, citySlug: stri
                 "@type": "Service",
                 "name": `Commercial Painting in ${cityName}`,
                 "description": `Commercial painting services in ${cityName}, MA`
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": `Carpentry Services in ${cityName}`,
+                "description": `Professional carpentry and wood repairs in ${cityName}, MA`
               }
             }
           ]
@@ -1439,6 +1448,7 @@ export default function CityPage({ params }: Props) {
                 <li><Link href="/services/commercial-painting">Commercial Painting</Link></li>
                 <li><Link href="/services/residential-painting">Residential Painting</Link></li>
                 <li><Link href="/services/cabinet-painting">Cabinet Painting</Link></li>
+                <li><Link href="/services/carpentry">Carpentry</Link></li>
               </ul>
             </div>
 

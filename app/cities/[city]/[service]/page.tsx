@@ -9,7 +9,7 @@ import {
   Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play,
   ChevronRight, ChevronDown, Sparkles, Home as HomeIcon, Building2,
   PaintBucket, Paintbrush, Palette, Menu, X, AlertCircle, Wrench,
-  Users, DollarSign, Search, CheckSquare, ThumbsUp
+  Users, DollarSign, Search, CheckSquare, ThumbsUp, Hammer
 } from 'lucide-react'
 import { getCityBySlug, cities } from '@/app/data/cities'
 
@@ -27,6 +27,7 @@ const menuServices = [
   { name: 'Commercial Painting', href: '/services/commercial-painting', icon: Building2, description: 'Professional business painting' },
   { name: 'Residential Painting', href: '/services/residential-painting', icon: PaintBucket, description: 'Complete home painting solutions' },
   { name: 'Cabinet Painting', href: '/services/cabinet-painting', icon: Palette, description: 'Upgrade your kitchen cabinets' },
+  { name: 'Carpentry', href: '/services/carpentry', icon: Hammer, description: 'Expert wood repairs & trim work' },
 ]
 
 // Generate Schema JSON-LD for city+service pages
@@ -213,6 +214,21 @@ const servicesData: Record<string, {
     offerings: ['Cabinet painting', 'Cabinet refinishing', 'Door replacement', 'Hardware updates', 'Kitchen cabinets', 'Bathroom vanities', 'Built-in cabinets', 'Garage cabinets'],
     neighborhoods: ['Downtown', 'Historic District', 'Suburban Areas', 'Residential Neighborhoods', 'And all surrounding areas'],
     housingTypes: ['Modern kitchens', 'Traditional kitchens', 'Contemporary styles', 'Vintage restoration', 'Custom cabinetry'],
+  },
+  'carpentry': {
+    name: 'Carpentry',
+    title: 'Professional Carpentry Services',
+    description: 'Expert carpentry repairs for window frames, door frames, siding, decks, and trim work. Quality wood repairs before painting ensure lasting results.',
+    heroImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
+    challenges: [
+      { title: 'Rotted window frames', description: 'We have proven solutions for this common problem.' },
+      { title: 'Damaged door frames', description: 'We have proven solutions for this common problem.' },
+      { title: 'Worn siding & trim', description: 'We have proven solutions for this common problem.' },
+      { title: 'Deck repairs needed', description: 'We have proven solutions for this common problem.' },
+    ],
+    offerings: ['Window frame repair', 'Door frame repair', 'Siding repair', 'Deck repair', 'Railing repair', 'Trim & molding', 'Rotted wood replacement', 'Fascia & soffit repair'],
+    neighborhoods: ['Downtown', 'Historic District', 'Suburban Areas', 'Residential Neighborhoods', 'And all surrounding areas'],
+    housingTypes: ['Colonial homes', 'Victorian houses', 'Cape Cod style', 'New construction', 'Multi-family homes'],
   },
 }
 
@@ -860,6 +876,7 @@ export default function CityServicePage({ params }: Props) {
                 <li><Link href="/services/commercial-painting">Commercial Painting</Link></li>
                 <li><Link href="/services/residential-painting">Residential Painting</Link></li>
                 <li><Link href="/services/cabinet-painting">Cabinet Painting</Link></li>
+                <li><Link href="/services/carpentry">Carpentry</Link></li>
               </ul>
             </div>
 

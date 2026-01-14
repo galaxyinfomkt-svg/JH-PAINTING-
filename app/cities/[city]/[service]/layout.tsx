@@ -48,6 +48,13 @@ const services: Record<string, {
     shortDesc: 'kitchen cabinet painters',
     keywords: ['cabinet painters', 'cabinet refinishing', 'kitchen cabinet painters', 'cabinet spray painters'],
   },
+  'carpentry': {
+    name: 'Carpentry Services',
+    seoTitle: 'Carpentry Services',
+    description: 'expert carpentry repairs for window frames, door frames, siding, decks, and trim work before painting',
+    shortDesc: 'wood repair, trim, framing',
+    keywords: ['carpentry services', 'wood repair', 'window frame repair', 'door frame repair', 'siding repair', 'deck repair', 'trim work'],
+  },
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -132,7 +139,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const serviceList = ['interior-painting', 'exterior-painting', 'commercial-painting', 'residential-painting', 'cabinet-painting']
+const serviceList = ['interior-painting', 'exterior-painting', 'commercial-painting', 'residential-painting', 'cabinet-painting', 'carpentry']
 
 export async function generateStaticParams() {
   const params: { city: string; service: string }[] = []
