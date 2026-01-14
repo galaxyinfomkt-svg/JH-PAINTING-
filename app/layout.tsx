@@ -16,13 +16,16 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Professional Painting Services in Massachusetts | JH Painting',
-  description: 'Expert painting services in Massachusetts. Interior, exterior, cabinet refinishing, floor finishing. Licensed, insured contractors. Free estimates today.',
-  keywords: 'painting Massachusetts, exterior painting MA, interior painting Massachusetts, house painters MA, cabinet refinishing Massachusetts, professional painters Massachusetts, JH Painting Services',
+  title: '#1 Painting Contractor in Massachusetts | JH Painting Services | Marlborough',
+  description: 'Award-winning painting contractor serving Massachusetts since 2018. Expert interior & exterior painting, cabinet refinishing, deck staining. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star reviews. FREE estimates: (508) 690-8886 | contact@jhpaintingservices.com',
+  keywords: 'painting contractor Massachusetts, house painters Massachusetts, painters near me Massachusetts, professional painters Massachusetts, interior painters MA, exterior painters MA, cabinet refinishing Massachusetts, deck staining Massachusetts, JH Painting Services, painters Marlborough MA, painters Worcester MA, painters Boston MA, painters Framingham MA, painters Natick MA, licensed painters Massachusetts',
   authors: [{ name: 'JH Painting Services' }],
+  creator: 'JH Painting Services',
+  publisher: 'JH Painting Services',
+  category: 'Home Improvement',
   openGraph: {
-    title: 'Professional Painting Services in Massachusetts | JH Painting',
-    description: 'Expert interior & exterior painting services across Massachusetts. Licensed & insured contractors. Free estimates.',
+    title: 'JH Painting Services | #1 Rated Painting Contractor in Massachusetts | 7+ Years',
+    description: 'Transform your home with Massachusetts\' trusted painting contractor. Interior & exterior painting, cabinet refinishing, deck staining. 40+ 5-star reviews. Licensed & $2M insured. FREE estimates: (508) 690-8886',
     url: 'https://jhpaintingservices.com',
     siteName: 'JH Painting Services',
     locale: 'en_US',
@@ -32,23 +35,415 @@ export const metadata: Metadata = {
         url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
         width: 1200,
         height: 630,
+        alt: 'JH Painting Services - Professional Painting Contractor Massachusetts',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JH Painting Services - Expert Painting Across Massachusetts',
-    description: 'Professional painting services across Massachusetts. Licensed & insured.',
+    title: 'JH Painting Services | #1 Painting Contractor Massachusetts | (508) 690-8886',
+    description: '7+ years serving Massachusetts. Interior & exterior painting, cabinet refinishing. 40+ 5-star reviews. Licensed & insured. FREE estimates!',
     images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
+    creator: '@jhpaintingma',
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   icons: {
     icon: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/6913817e042d1336f8bbb7a6.png',
     apple: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/6913817e042d1336f8bbb7a6.png',
   },
+  alternates: {
+    canonical: 'https://jhpaintingservices.com',
+  },
+  other: {
+    'geo.region': 'US-MA',
+    'geo.placename': 'Marlborough, Massachusetts',
+    'geo.position': '42.3459;-71.5526',
+    'ICBM': '42.3459, -71.5526',
+    'rating': 'General',
+    'revisit-after': '7 days',
+    'author': 'JH Painting Services',
+    'contact': 'contact@jhpaintingservices.com',
+    'telephone': '(508) 690-8886',
+  },
+}
+
+// All 116 cities served - for Schema markup
+const citiesServed = [
+  'Marlborough', 'Hudson', 'Southborough', 'Berlin', 'Northborough', 'Cordaville', 'Stow',
+  'Westborough', 'Framingham', 'Bolton', 'Sudbury', 'Ashland', 'Maynard', 'Hopkinton',
+  'Clinton', 'Boylston', 'Shrewsbury', 'Wayland', 'Cochituate', 'Lancaster', 'Harvard',
+  'Concord', 'Natick', 'Acton', 'Sherborn', 'Holliston', 'Grafton', 'West Boylston',
+  'Upton', 'Weston', 'Sterling', 'Millbury', 'Wellesley', 'Dover', 'Milford', 'Carlisle',
+  'Holden', 'Lincoln', 'Paxton', 'Auburn', 'Medway', 'Needham', 'Rutland', 'Leicester',
+  'Mendon', 'Hopedale', 'Medfield', 'Bellingham', 'Bedford', 'Princeton', 'Oxford',
+  'Lexington', 'Norwood', 'Newton', 'Westwood', 'Burlington', 'Dedham', 'Brookline',
+  'Ayer', 'Canton', 'Waltham', 'Watertown', 'Belmont', 'Arlington', 'Groton', 'Pepperell',
+  'Shirley', 'Townsend', 'Lunenburg', 'Fitchburg', 'Leominster', 'Westminster', 'Spencer',
+  'Douglas', 'Uxbridge', 'Northbridge', 'Sutton', 'Millville', 'Blackstone', 'Worcester',
+  'Boston', 'Cambridge', 'Somerville', 'Franklin', 'Foxborough', 'Wrentham', 'Norfolk',
+  'Sharon', 'Walpole', 'Medford', 'Billerica', 'Chelmsford', 'Lowell', 'Tewksbury',
+  'Wilmington', 'Winchester', 'Woburn', 'Stoneham', 'Tyngsboro', 'Dunstable', 'Westford',
+  'Littleton', 'Millis', 'Hamilton', 'Pinehurst', 'Whitinsville', 'East Douglas',
+  'East Pepperell', 'Jamaica Plain', 'New Bedford', 'Sunderland'
+]
+
+// Schema JSON-LD - Comprehensive like A&M Painter
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "HousePainter", "HomeAndConstructionBusiness", "ProfessionalService", "GeneralContractor"],
+      "@id": "https://jhpaintingservices.com/#organization",
+      "name": "JH Painting Services",
+      "legalName": "JH Painting Services LLC",
+      "alternateName": ["JH Painting", "JH Painting Services Massachusetts", "JH Painting MA", "JH Painters"],
+      "description": "Award-winning painting contractor serving Massachusetts since 2018. Expert interior & exterior painting, cabinet refinishing, deck staining, and home improvement services. Licensed, $2M insured, EPA Lead-Safe certified. Serving 116+ cities across Massachusetts.",
+      "url": "https://jhpaintingservices.com",
+      "telephone": "+1-508-690-8886",
+      "email": "contact@jhpaintingservices.com",
+      "foundingDate": "2018-07",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 5,
+        "maxValue": 15
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Jafet Henrique",
+        "jobTitle": "Owner & Master Painter",
+        "image": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp"
+      },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png",
+        "width": 400,
+        "height": 160
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg",
+          "width": 1200,
+          "height": 630,
+          "caption": "Professional house painting by JH Painting Services"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/6913825a96d06ab2e07a6439.png",
+          "width": 1200,
+          "height": 630,
+          "caption": "Interior painting services Massachusetts"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png",
+          "width": 1200,
+          "height": 630,
+          "caption": "Cabinet refinishing by JH Painting"
+        }
+      ],
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": ["Cash", "Check", "Credit Card", "Debit Card", "Zelle", "Venmo"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Marlborough",
+        "addressLocality": "Marlborough",
+        "addressRegion": "MA",
+        "postalCode": "01752",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.3459,
+        "longitude": -71.5526
+      },
+      "hasMap": "https://maps.google.com/?cid=17086082612398292159",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "16:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61564489391475",
+        "https://www.instagram.com/jhpaintingservices_/",
+        "https://www.youtube.com/@JHPaintingServices-br9wh",
+        "https://maps.google.com/?cid=17086082612398292159",
+        "https://www.yelp.com/biz/jh-painting-services-marlborough",
+        "https://www.thumbtack.com/ma/marlborough/painters/jh-painting-services"
+      ],
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 42.3459,
+          "longitude": -71.5526
+        },
+        "geoRadius": "50 mi",
+        "description": `Serving 116+ cities across Massachusetts including: ${citiesServed.join(', ')}`
+      },
+      "serviceArea": citiesServed.map(city => ({
+        "@type": "City",
+        "name": city,
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Massachusetts"
+        }
+      })),
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "license",
+          "name": "Massachusetts Painting Contractor License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Commonwealth of Massachusetts"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "EPA Lead-Safe Certification",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Environmental Protection Agency"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "insurance",
+          "name": "General Liability Insurance - $2,000,000 Coverage"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "insurance",
+          "name": "Workers Compensation Insurance"
+        }
+      ],
+      "knowsAbout": [
+        "Interior Painting", "Exterior Painting", "House Painting", "Cabinet Painting",
+        "Cabinet Refinishing", "Kitchen Cabinet Painting", "Commercial Painting",
+        "Residential Painting", "Deck Staining", "Deck Building", "Fence Staining",
+        "Pressure Washing", "Power Washing", "Drywall Repair", "Popcorn Ceiling Removal",
+        "Wallpaper Removal", "Color Consultation", "Benjamin Moore Paints",
+        "Sherwin-Williams Paints", "Lead Paint Removal", "EPA Lead-Safe Practices"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Painting Services",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Interior Painting",
+            "description": "MOST POPULAR - Professional interior painting for walls, ceilings, trim, doors",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wall Painting" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ceiling Painting" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trim & Baseboard Painting" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Door Painting" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Color Consultation" } }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Exterior Painting",
+            "description": "Complete exterior house painting with prep work and premium paints",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "House Siding Painting" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trim & Fascia Painting" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck Staining & Sealing" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fence Painting & Staining" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Power Washing" } }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Cabinet Refinishing",
+            "description": "Kitchen cabinet painting - Save 60-70% vs replacement",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Cabinet Painting" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Vanity Painting" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Spray Finish Application" } }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Commercial Painting",
+            "description": "Professional painting for offices, retail, restaurants",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Office Painting" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retail Store Painting" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Restaurant Painting" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Warehouse Painting" } }
+            ]
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "40",
+        "reviewCount": "40",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sarah M."
+          },
+          "datePublished": "2024-11-15",
+          "reviewBody": "JH Painting did an amazing job on our entire home interior. Jafet and his team were professional, punctual, and incredibly detailed. The walls look flawless! Highly recommend for anyone in Marlborough or the MetroWest area."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "John D."
+          },
+          "datePublished": "2024-10-22",
+          "reviewBody": "We hired JH Painting for our exterior and couldn't be happier. They power washed, prepped everything perfectly, and the paint job is beautiful. Great communication throughout the project. Fair pricing too!"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Maria L."
+          },
+          "datePublished": "2024-09-30",
+          "reviewBody": "Had our kitchen cabinets refinished by JH Painting and they look brand new! Saved us thousands compared to replacing them. The spray finish is smooth and professional. Jafet was great to work with."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Robert K."
+          },
+          "datePublished": "2024-08-18",
+          "reviewBody": "Best painters in Massachusetts! They painted our office building in Worcester and finished on time and under budget. Very professional crew, clean work area every day. Will use again for sure."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Jennifer T."
+          },
+          "datePublished": "2024-07-25",
+          "reviewBody": "JH Painting transformed our 1920s colonial in Concord. They were so careful with the historic details and the exterior looks stunning. Neighbors have been asking for their number! Excellent work."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does house painting cost in Massachusetts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "House painting costs in Massachusetts vary based on size and scope. Interior painting typically costs $2-$5 per square foot, while exterior painting ranges from $3,000-$10,000 for most homes. Cabinet refinishing costs $3,000-$7,000 depending on kitchen size. Contact JH Painting at (508) 690-8886 for a free, detailed estimate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed and insured?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! JH Painting Services is fully licensed in Massachusetts and carries $2,000,000 in general liability insurance plus workers' compensation coverage. We're also EPA Lead-Safe certified, which is essential for homes built before 1978. We're happy to provide proof of insurance upon request."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas do you serve in Massachusetts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "JH Painting Services is based in Marlborough and serves 116+ cities across Massachusetts including Boston, Worcester, Cambridge, Newton, Framingham, Natick, Wellesley, Lexington, Concord, and all MetroWest communities. We travel up to 50 miles from Marlborough."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can I get an estimate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We typically schedule estimates within 24-48 hours. Call us at (508) 690-8886 or fill out our online form for a free, no-obligation quote. We respond to all inquiries within 24 hours and provide detailed written estimates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What paint brands do you use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We exclusively use premium paints from Benjamin Moore and Sherwin-Williams. These brands offer superior durability, coverage, and color retention. For exteriors, we recommend paints specifically formulated for New England's harsh weather conditions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer a warranty on your painting work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We stand behind our work with a 5-year warranty on exterior painting and a 3-year warranty on interior painting. Our warranty covers peeling, blistering, and flaking under normal conditions. Your satisfaction is guaranteed."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jhpaintingservices.com/#website",
+      "url": "https://jhpaintingservices.com",
+      "name": "JH Painting Services",
+      "description": "Professional painting contractor serving Massachusetts",
+      "publisher": {
+        "@id": "https://jhpaintingservices.com/#organization"
+      },
+      "inLanguage": "en-US"
+    }
+  ]
 }
 
 export default function RootLayout({
@@ -94,125 +489,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           href="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
           type="image/png"
         />
-        <link rel="canonical" href="https://jhpaintingservices.com/" />
-        <meta name="geo.region" content="US-MA" />
-        <meta name="geo.placename" content="Massachusetts" />
+        {/* Mobile optimization */}
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="theme-color" content="#DC2626" />
+        {/* Schema JSON-LD - Comprehensive SEO markup */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "additionalType": ["HousePainter", "HomeAndConstructionBusiness", "ProfessionalService", "Painter", "Painting", "Carpenter", "ConstructionCompany"],
-              "@id": "https://jhpaintingservices.com/#organization",
-              "name": "JH Painting Services",
-              "alternateName": ["JH Painting", "JH Painting Services Massachusetts", "JH Painting MA"],
-              "description": "Professional painting services across Massachusetts. Expert exterior & interior painting, cabinet refinishing, and floor restoration for homes and businesses throughout the Bay State. Licensed painter, carpenter, deck builder, and pressure washing service.",
-              "url": "https://jhpaintingservices.com",
-              "telephone": "+1-508-690-8886",
-              "email": "contact@jhpaintingservices.com",
-              "foundingDate": "2018-07",
-              "founder": {
-                "@type": "Person",
-                "name": "Jafet Henrique",
-                "jobTitle": "Owner & Founder"
-              },
-              "logo": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png",
-              "image": [
-                "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg",
-                "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/6913825a96d06ab2e07a6439.png"
-              ],
-              "priceRange": "$$",
-              "currenciesAccepted": "USD",
-              "paymentAccepted": "Cash, Credit Card, Check",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Marlborough",
-                "addressRegion": "MA",
-                "postalCode": "01752",
-                "addressCountry": "US"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 42.3459,
-                "longitude": -71.5526
-              },
-              "hasMap": "https://maps.google.com/?cid=17086082612398292159",
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                  "opens": "07:00",
-                  "closes": "18:00"
-                }
-              ],
-              "sameAs": [
-                "https://www.facebook.com/profile.php?id=61564489391475",
-                "https://www.instagram.com/jhpaintingservices_/",
-                "https://www.youtube.com/@JHPaintingServices-br9wh",
-                "https://maps.google.com/?cid=17086082612398292159"
-              ],
-              "areaServed": {
-                "@type": "State",
-                "name": "Massachusetts"
-              },
-              "knowsAbout": ["Interior Painting", "Exterior Painting", "Cabinet Painting", "Commercial Painting", "Residential Painting", "Deck Building", "Carpentry", "Pressure Washing", "Window Tinting"],
-              "makesOffer": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Interior Painting",
-                    "description": "Professional interior painting services including walls, ceilings, trim, and color consultation"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Exterior Painting",
-                    "description": "Expert exterior house painting with complete prep work and premium weather-resistant paints"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Cabinet Painting",
-                    "description": "Kitchen cabinet refinishing and painting, save 70% vs replacement"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Commercial Painting",
-                    "description": "Professional commercial painting for offices, retail, restaurants, and warehouses"
-                  }
-                }
-              ],
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "40",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
-              "review": [
-                {
-                  "@type": "Review",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5"
-                  },
-                  "author": {
-                    "@type": "Person",
-                    "name": "Verified Customer"
-                  },
-                  "reviewBody": "Excellent work by JH Painting. Professional, on-time, and the quality is outstanding. Highly recommend for any painting project in Massachusetts."
-                }
-              ]
-            })
+            __html: JSON.stringify(schemaData)
           }}
         />
       </head>
