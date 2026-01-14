@@ -221,6 +221,7 @@ export default function SeoPage({ params }: Props) {
   const [scrolled, setScrolled] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -1229,12 +1230,44 @@ export default function SeoPage({ params }: Props) {
 
             <div style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {cityContent.faq.map((item, idx) => (
-                <div key={idx} style={{ background: '#fff', borderRadius: '16px', padding: '1.5rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
-                  <h3 style={{ fontSize: '1.125rem', fontWeight: '600', color: '#1F2937', marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', borderRadius: '50%', background: 'linear-gradient(135deg, #D20404 0%, #B91C1C 100%)', color: '#fff', fontSize: '0.875rem', fontWeight: '700', flexShrink: 0 }}>Q</span>
-                    {item.question}
-                  </h3>
-                  <p style={{ color: '#4B5563', lineHeight: '1.7', margin: 0, paddingLeft: '2.75rem' }}>{item.answer}</p>
+                <div key={idx} style={{ background: '#fff', borderRadius: '16px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', overflow: 'hidden' }}>
+                  <button
+                    type="button"
+                    onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
+                    style={{
+                      width: '100%',
+                      padding: '1.5rem',
+                      background: 'transparent',
+                      border: 'none',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      gap: '1rem',
+                      textAlign: 'left'
+                    }}
+                  >
+                    <h3 style={{ fontSize: '1.125rem', fontWeight: '600', color: '#1F2937', margin: 0, display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', borderRadius: '50%', background: 'linear-gradient(135deg, #D20404 0%, #B91C1C 100%)', color: '#fff', fontSize: '0.875rem', fontWeight: '700', flexShrink: 0 }}>Q</span>
+                      {item.question}
+                    </h3>
+                    <ChevronDown
+                      size={24}
+                      color="#D20404"
+                      style={{
+                        transition: 'transform 0.3s ease',
+                        transform: openFaqIndex === idx ? 'rotate(180deg)' : 'rotate(0deg)',
+                        flexShrink: 0
+                      }}
+                    />
+                  </button>
+                  <div style={{
+                    maxHeight: openFaqIndex === idx ? '500px' : '0',
+                    overflow: 'hidden',
+                    transition: 'max-height 0.3s ease'
+                  }}>
+                    <p style={{ color: '#4B5563', lineHeight: '1.7', margin: 0, padding: '0 1.5rem 1.5rem', paddingLeft: '4.25rem' }}>{item.answer}</p>
+                  </div>
                 </div>
               ))}
             </div>
