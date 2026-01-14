@@ -7,6 +7,7 @@ import Script from 'next/script'
 import { notFound } from 'next/navigation'
 import { Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, Home, Building2, PaintBucket, Brush, Menu, X, ChevronDown, Paintbrush, Palette, DollarSign } from 'lucide-react'
 import { getCityBySlug, cities } from '@/app/data/cities'
+import { getCityContent } from '@/app/data/cityContent'
 import LazyIframe from '@/app/components/LazyIframe'
 
 // Menu data
@@ -23,7 +24,7 @@ interface Props {
 }
 
 // Generate Schema JSON-LD for the city page
-function generateCitySchema(cityName: string, countyName: string, citySlug: string) {
+function generateCitySchema(cityName: string, countyName: string, citySlug: string, faqs: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -136,88 +137,14 @@ function generateCitySchema(cityName: string, countyName: string, citySlug: stri
       },
       {
         "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": `How much does it cost to paint a house in ${cityName}?`,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": `House painting costs in ${cityName}, MA depend on several factors: square footage, number of rooms, ceiling height, current wall condition, and paint quality. Interior painting typically ranges from $2-$6 per square foot, while exterior painting ranges from $3-$7 per square foot. For a typical 2,000 sq ft ${cityName} home, interior painting averages $4,000-$8,000, and exterior painting averages $6,000-$12,000. Contact JH Painting for a free, detailed estimate for your ${cityName} home.`
-            }
-          },
-          {
-            "@type": "Question",
-            "name": `Are you licensed and insured to paint in ${cityName}?`,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": `Absolutely. JH Painting Services is fully licensed to operate in ${cityName} and throughout Massachusetts. We carry comprehensive general liability insurance ($1 million coverage) and workers' compensation insurance for all our employees. This protects you from any liability if an accident occurs on your property. We're happy to provide proof of insurance upon request.`
-            }
-          },
-          {
-            "@type": "Question",
-            "name": `How long does it take to paint a house in ${cityName}?`,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": `Project timelines vary based on scope. A single room typically takes 1-2 days. A full interior (3-4 bedrooms) usually takes 4-7 days. Exterior painting for an average ${cityName} home takes 5-10 days, depending on weather and prep work needed. We provide accurate timelines in our estimates and keep you updated throughout the project.`
-            }
-          },
-          {
-            "@type": "Question",
-            "name": `Do you offer free estimates in ${cityName}?`,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": `Absolutely! We offer free, no-obligation estimates for all ${cityName} residents. Call (508) 690-8886 or fill out our online form to schedule your free consultation. We'll visit your property, discuss your project, and provide a detailed written estimate—usually within 24-48 hours.`
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What brands of paint do you use?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We exclusively use premium paints from Sherwin-Williams and Benjamin Moore. These industry-leading brands offer superior coverage, durability, and color retention. For exteriors, we use paints specifically formulated to withstand Massachusetts' harsh winters and humid summers. The slight premium in material cost is far outweighed by the longevity of the finish—often 7-10+ years versus 3-5 years for budget paints."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I need to move my furniture before you start?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No! We handle all furniture moving and protection. Our crews carefully move furniture to the center of each room and cover everything with protective drop cloths. We also cover floors, mask trim, and protect light fixtures. At the end of each day, we return furniture to its original position so your home remains livable during the project."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What's included in surface preparation?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Proper preparation is crucial for a lasting paint job. Our prep work includes: cleaning surfaces to remove dust, dirt, and cobwebs; filling nail holes, cracks, and dents with premium filler; sanding rough spots and previous drips; caulking gaps around trim and windows; scraping loose or peeling paint; priming bare wood, stains, and repaired areas. This prep work is included in our estimates—no hidden charges."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you offer any warranty or guarantee?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! We stand behind every job with our satisfaction guarantee. If you're not completely happy with any aspect of our work, we'll make it right—no arguments, no excuses. Additionally, our workmanship carries a 2-year warranty against peeling, cracking, or bubbling under normal conditions. We're not satisfied until you are."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": `Can you help me choose paint colors for my ${cityName} home?`,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": `Absolutely! Color selection can be overwhelming with thousands of options. We offer complimentary color consultations where we help you choose colors that complement your ${cityName} home's architecture, lighting, and existing décor. We can provide large paint samples to test on your walls so you can see exactly how colors look in your space before committing.`
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do you handle weather delays for exterior painting?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Massachusetts weather can be unpredictable. We monitor forecasts closely and only paint exteriors when conditions are optimal (above 50°F, low humidity, no rain expected). If weather delays your project, we communicate promptly and reschedule at the earliest opportunity. Your home's exterior will be painted under ideal conditions for the best possible result."
-            }
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
           }
-        ]
+        }))
       }
     ]
   }
@@ -250,6 +177,7 @@ const servicesList = [
 
 export default function CityPage({ params }: Props) {
   const city = getCityBySlug(params.city)
+  const cityContent = getCityContent(params.city)
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
@@ -273,7 +201,7 @@ export default function CityPage({ params }: Props) {
     notFound()
   }
 
-  const citySchema = generateCitySchema(city.name, city.county || 'Massachusetts', params.city)
+  const citySchema = generateCitySchema(city.name, city.county || 'Massachusetts', params.city, cityContent.faq)
 
   return (
     <>
@@ -1227,48 +1155,7 @@ export default function CityPage({ params }: Props) {
           </div>
 
           <div className="city-faq-grid">
-            {[
-              {
-                question: `How much does it cost to paint a house in ${city.name}?`,
-                answer: `House painting costs in ${city.name} depend on several factors: square footage, number of rooms, ceiling height, current wall condition, and paint quality. Interior painting typically ranges from $2-$6 per square foot, while exterior painting ranges from $3-$7 per square foot. For a typical 2,000 sq ft ${city.name} home, interior painting averages $4,000-$8,000, and exterior painting averages $6,000-$12,000. We provide free, detailed estimates so you know exactly what to expect.`
-              },
-              {
-                question: `Are you licensed and insured to paint in ${city.name}?`,
-                answer: `Absolutely. JH Painting Services is fully licensed to operate in ${city.name} and throughout Massachusetts. We carry comprehensive general liability insurance ($1 million coverage) and workers' compensation insurance for all our employees. This protects you from any liability if an accident occurs on your property. We're happy to provide proof of insurance upon request.`
-              },
-              {
-                question: `How long does a typical painting project take in ${city.name}?`,
-                answer: `Project timelines vary based on scope. A single room typically takes 1-2 days. A full interior (3-4 bedrooms) usually takes 4-7 days. Exterior painting for an average ${city.name} home takes 5-10 days, depending on weather and prep work needed. We provide accurate timelines in our estimates and keep you updated throughout the project.`
-              },
-              {
-                question: "What brands of paint do you use?",
-                answer: "We exclusively use premium paints from Sherwin-Williams and Benjamin Moore. These industry-leading brands offer superior coverage, durability, and color retention. For exteriors, we use paints specifically formulated to withstand Massachusetts' harsh winters and humid summers. The slight premium in material cost is far outweighed by the longevity of the finish—often 7-10+ years versus 3-5 years for budget paints."
-              },
-              {
-                question: "Do I need to move my furniture before you start?",
-                answer: "No! We handle all furniture moving and protection. Our crews carefully move furniture to the center of each room and cover everything with protective drop cloths. We also cover floors, mask trim, and protect light fixtures. At the end of each day, we return furniture to its original position so your home remains livable during the project."
-              },
-              {
-                question: "What's included in surface preparation?",
-                answer: "Proper preparation is crucial for a lasting paint job. Our prep work includes: cleaning surfaces to remove dust, dirt, and cobwebs; filling nail holes, cracks, and dents with premium filler; sanding rough spots and previous drips; caulking gaps around trim and windows; scraping loose or peeling paint; priming bare wood, stains, and repaired areas. This prep work is included in our estimates—no hidden charges."
-              },
-              {
-                question: "How do you handle weather delays for exterior painting?",
-                answer: `Massachusetts weather can be unpredictable. We monitor forecasts closely and only paint exteriors when conditions are optimal (above 50°F, low humidity, no rain expected). If weather delays your project, we communicate promptly and reschedule at the earliest opportunity. Your ${city.name} home's exterior will be painted under ideal conditions for the best possible result.`
-              },
-              {
-                question: "Do you offer any warranty or guarantee?",
-                answer: "Yes! We stand behind every job with our satisfaction guarantee. If you're not completely happy with any aspect of our work, we'll make it right—no arguments, no excuses. Additionally, our workmanship carries a 2-year warranty against peeling, cracking, or bubbling under normal conditions. We're not satisfied until you are."
-              },
-              {
-                question: "Can you help me choose paint colors?",
-                answer: `Absolutely! Color selection can be overwhelming with thousands of options. We offer complimentary color consultations where we help you choose colors that complement your ${city.name} home's architecture, lighting, and existing décor. We can provide large paint samples to test on your walls so you can see exactly how colors look in your space before committing.`
-              },
-              {
-                question: "How do I get a free estimate?",
-                answer: `Getting a free estimate is easy! Call us at (508) 690-8886 or fill out the form on this page. We'll schedule a convenient time to visit your ${city.name} property, discuss your project, and provide a detailed written estimate—usually within 24-48 hours. There's no obligation and no pressure. We're confident our quality and pricing will earn your business.`
-              }
-            ].map((faq, idx) => (
+            {cityContent.faq.map((faq, idx) => (
               <div key={idx} className={`city-faq-item ${openFaqIndex === idx ? 'open' : ''}`}>
                 <button
                   type="button"
