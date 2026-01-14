@@ -374,21 +374,11 @@ export default function HomePage() {
               </div>
 
               <div className="hero-form-card">
-                <div className="hero-form-header">
-                  <h2 className="hero-form-title">Get Your Free Quote</h2>
-                  <p className="hero-form-subtitle">Fill out the form and we'll get back to you within 24 hours.</p>
-                </div>
                 <LazyHeroForm
                   className="hero-form-iframe"
                   src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
                   title="Contact Form"
                 />
-                <div className="hero-google-badge">
-                  <span>⭐</span>
-                  <span>Google Reviews</span>
-                  <strong>5★</strong>
-                  <span style={{ color: 'var(--jh-text-light)' }}>See Our Reviews</span>
-                </div>
               </div>
             </div>
           </div>
