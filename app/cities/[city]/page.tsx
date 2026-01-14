@@ -703,6 +703,136 @@ export default function CityPage({ params }: Props) {
         </div>
       </section>
 
+      {/* VSL Style Story Section */}
+      <section className="vsl-intro-section">
+        <div className="container">
+          {/* Opening Hook */}
+          <div className="vsl-hook">
+            <div className="vsl-hook-badge">
+              <MapPin size={16} />
+              <span>Local {city.name} Story</span>
+            </div>
+            <h2 className="vsl-hook-title">
+              Why We <span className="vsl-highlight">Love</span> Painting Homes in {city.name}
+            </h2>
+            <p className="vsl-hook-subtitle">
+              (And Why {city.name} Homeowners Keep Coming Back to Us)
+            </p>
+          </div>
+
+          {/* Story Content with Visual Elements */}
+          <div className="vsl-story-grid">
+            {/* Left: Video */}
+            <div className="vsl-media-wrapper">
+              <div className="vsl-video-card">
+                <a
+                  href="https://www.youtube.com/watch?v=F_lreXzNlUI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="vsl-video-link"
+                >
+                  <Image
+                    src="https://img.youtube.com/vi/F_lreXzNlUI/maxresdefault.jpg"
+                    alt={`JH Painting Services working in ${city.name}, MA`}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="vsl-video-overlay">
+                    <div className="vsl-play-button">
+                      <Play size={32} fill="#fff" />
+                    </div>
+                    <span className="vsl-watch-text">Watch Our Work</span>
+                  </div>
+                </a>
+              </div>
+              <div className="vsl-video-caption">
+                <Star size={14} fill="#D20404" color="#D20404" />
+                <span>See why {city.name} homeowners trust us</span>
+              </div>
+            </div>
+
+            {/* Right: Story Text */}
+            <div className="vsl-story-content">
+              <div className="vsl-story-text">
+                <p className="vsl-lead-paragraph">
+                  <span className="vsl-dropcap">W</span>hen you hire a painting contractor, you&apos;re not just getting paint on walls &mdash; you&apos;re trusting someone with your home, your biggest investment.
+                </p>
+
+                <p>
+                  At JH Painting Services, we understand that {city.name} homeowners have high standards. Your home isn&apos;t just a building &mdash; it&apos;s where memories are made, families grow, and life happens. That&apos;s why we approach every project with the care and attention it deserves.
+                </p>
+
+                <div className="vsl-highlight-box">
+                  <div className="vsl-highlight-icon">
+                    <Heart size={24} color="#D20404" />
+                  </div>
+                  <p className="vsl-highlight-text">
+                    <strong>Here&apos;s the thing:</strong> We don&apos;t just paint houses &mdash; we transform homes. And we take that responsibility seriously.
+                  </p>
+                </div>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="vsl-quick-stats">
+                <div className="vsl-stat">
+                  <span className="vsl-stat-number">200+</span>
+                  <span className="vsl-stat-label">Homes Painted</span>
+                </div>
+                <div className="vsl-stat">
+                  <span className="vsl-stat-number">5.0</span>
+                  <span className="vsl-stat-label">Google Rating</span>
+                </div>
+                <div className="vsl-stat">
+                  <span className="vsl-stat-number">100%</span>
+                  <span className="vsl-stat-label">Satisfaction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Curiosity Builder */}
+          <div className="vsl-curiosity-section">
+            <h3 className="vsl-curiosity-title">
+              <Sparkles size={20} color="#D20404" />
+              What Makes Us Different?
+            </h3>
+            <div className="vsl-curiosity-grid">
+              <div className="vsl-curiosity-card">
+                <div className="vsl-curiosity-number">01</div>
+                <h4>We&apos;re Your Neighbors</h4>
+                <p>Based in Marlborough, we&apos;re not a faceless corporation &mdash; we&apos;re local contractors who live and work in your community.</p>
+              </div>
+              <div className="vsl-curiosity-card">
+                <div className="vsl-curiosity-number">02</div>
+                <h4>Premium Materials Only</h4>
+                <p>We use only Sherwin-Williams and Benjamin Moore paints. Why? Because cheap paint means repainting in 3 years. Ours lasts 7-10+.</p>
+              </div>
+              <div className="vsl-curiosity-card">
+                <div className="vsl-curiosity-number">03</div>
+                <h4>No Surprises, Ever</h4>
+                <p>The price we quote is the price you pay. No hidden fees, no &quot;we found more work&quot; excuses. Just honest, transparent pricing.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="vsl-cta-wrapper">
+            <p className="vsl-cta-text">Ready to see what we can do for your {city.name} home?</p>
+            <div className="vsl-cta-buttons">
+              <a href="tel:+15086908886" className="vsl-cta-primary">
+                <Phone size={20} />
+                Call (508) 690-8886
+              </a>
+              <a href="#quote-form" className="vsl-cta-secondary">
+                Get Free Estimate
+                <ChevronRight size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services in City Section */}
       <section className="city-section city-section-white">
         <div className="container">
