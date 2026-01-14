@@ -3,6 +3,7 @@ import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import FloatingPhoneButton from './components/FloatingPhoneButton'
+import FloatingSocial from './components/FloatingSocial'
 
 // Optimize font loading - only load essential weights for better FCP
 const inter = Inter({
@@ -597,6 +598,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {children}
         <FloatingPhoneButton />
+        <FloatingSocial />
         {/* LeadConnector Chat Widget - Load after page is idle */}
         <Script
           src="https://beta.leadconnectorhq.com/loader.js"

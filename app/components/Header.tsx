@@ -16,6 +16,7 @@ import {
   Building2,
   PaintBucket,
   Palette,
+  Hammer,
 } from 'lucide-react'
 import { BUSINESS } from '@/lib/constants'
 
@@ -50,6 +51,12 @@ const menuServices = [
     href: '/services/cabinet-painting',
     icon: Palette,
     description: 'Upgrade your kitchen cabinets',
+  },
+  {
+    name: 'Carpentry',
+    href: '/services/carpentry',
+    icon: Hammer,
+    description: 'Expert wood repairs & trim work',
   },
 ]
 

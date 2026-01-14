@@ -54,6 +54,15 @@ const services = [
     icon: PaintBucket,
     features: ['Kitchen Cabinets', 'Bathroom Vanities', 'Built-in Units', 'Factory Finish'],
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png'
+  },
+  {
+    slug: 'carpentry',
+    name: 'Carpentry',
+    shortDesc: 'Expert wood repairs & trim',
+    description: 'Professional carpentry services for window frames, door frames, siding, decks, and trim. Quality wood repairs before painting ensure lasting results.',
+    icon: Hammer,
+    features: ['Window Frame Repair', 'Door Frame Repair', 'Siding & Deck Repair', 'Trim & Molding'],
+    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'
   }
 ]
 
