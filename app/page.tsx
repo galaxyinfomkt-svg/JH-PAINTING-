@@ -28,6 +28,7 @@ import {
 import { cities } from './data/cities'
 import LazyIframe from './components/LazyIframe'
 import LazyHeroForm from './components/LazyHeroForm'
+import BeforeAfterSlider from './components/BeforeAfterSlider'
 
 // Data
 const services = [
@@ -70,6 +71,22 @@ const galleryImages = [
 const videos = [
   { id: 'F_lreXzNlUI', title: 'Exterior Painting in Massachusetts', type: 'YouTube Short', thumbnail: 'maxresdefault' },
   { id: 'LkT_HLyKibY', title: 'Interior Painting in Massachusetts', type: 'YouTube Short', thumbnail: 'hqdefault' },
+]
+
+// Before/After transformation pairs
+const beforeAfterPairs = [
+  {
+    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png',
+    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg',
+    beforeAlt: 'Kitchen cabinets before refinishing',
+    afterAlt: 'Kitchen cabinets after professional refinishing'
+  },
+  {
+    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg',
+    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
+    beforeAlt: 'House exterior before painting',
+    afterAlt: 'House exterior after professional painting'
+  }
 ]
 
 // Menu data
@@ -716,6 +733,29 @@ export default function HomePage() {
                     <span>{img.category}</span>
                   </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Before/After Section */}
+        <section className="before-after-section">
+          <div className="container">
+            <div className="section-header section-header-enhanced">
+              <span className="section-eyebrow">See The Difference</span>
+              <h2>Before & After Transformations</h2>
+              <p>Drag the slider to see the amazing results we deliver for our Massachusetts clients.</p>
+            </div>
+
+            <div className="before-after-grid">
+              {beforeAfterPairs.map((pair, idx) => (
+                <BeforeAfterSlider
+                  key={idx}
+                  beforeImage={pair.before}
+                  afterImage={pair.after}
+                  beforeAlt={pair.beforeAlt}
+                  afterAlt={pair.afterAlt}
+                />
               ))}
             </div>
           </div>
