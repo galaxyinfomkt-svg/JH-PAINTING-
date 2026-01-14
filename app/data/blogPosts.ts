@@ -7328,6 +7328,325 @@ At JH Painting Services, we stay current with kitchen design trends while respec
     tags: ['kitchen painting', '2025 trends', 'cabinet painting', 'color trends', 'massachusetts'],
     featured: true,
   },
+  {
+    slug: 'victorian-home-transformation-newton-ma-exterior-painting',
+    title: 'Victorian Home Transformation in Newton, MA: Complete Exterior Painting Project',
+    excerpt: 'See how we restored a stunning 1890s Victorian home in Newton with historically accurate colors and premium paints that will last for decades.',
+    content: `
+# Victorian Home Transformation in Newton, MA: Complete Exterior Painting Project
+
+This stunning 1890s Victorian home in Newton, Massachusetts had seen better days. Years of harsh New England weather had taken their toll, leaving the exterior faded, peeling, and in desperate need of attention.
+
+## The Challenge
+
+When the homeowners contacted JH Painting Services, they had specific requirements:
+
+- **Historically accurate colors** that honored the home's Victorian heritage
+- **Premium materials** that could withstand Massachusetts weather
+- **Attention to detail** on ornate trim, brackets, and gingerbread details
+- **Lead paint safety** (the home still had original lead paint)
+
+## Our Approach
+
+### Week 1: Preparation
+
+Our EPA Lead-Safe certified crew began with extensive preparation:
+
+1. Set up full containment systems for lead paint safety
+2. Pressure washed all surfaces at appropriate PSI
+3. Scraped and sanded all peeling areas
+4. Applied wood hardener to any soft or damaged wood
+5. Caulked all gaps and joints with premium flexible caulk
+
+### Week 2-3: Priming and Painting
+
+After thorough preparation:
+
+- Applied Sherwin-Williams Extreme Bond primer to all bare wood
+- Used Benjamin Moore Regal Select in custom-matched Victorian colors
+- Body: A deep burgundy red (historically accurate for 1890s)
+- Trim: Cream white with gold accents on brackets
+- Accent details: Forest green on window frames
+
+### Week 4: Detail Work
+
+The final week focused on the intricate details that make Victorian homes special:
+
+- Hand-painted each bracket and spindle
+- Applied gold leaf accents to decorative elements
+- Multiple coats on all horizontal surfaces for maximum protection
+
+## The Results
+
+The transformation was dramatic. The homeowners were thrilled with the historically accurate color scheme and the quality of our work.
+
+**Before:** Faded, peeling paint with visible damage
+**After:** Stunning Victorian beauty restored to its 1890s glory
+
+## Homeowner Testimonial
+
+*"JH Painting Services exceeded our expectations in every way. They treated our historic home with the respect it deserves, and the results are absolutely stunning. We've had neighbors stopping by just to compliment the transformation!"*
+
+— Sarah M., Newton, MA
+
+## Project Details
+
+- **Location:** Newton, Massachusetts
+- **Home Style:** Victorian (circa 1895)
+- **Square Footage:** Approximately 3,500 sq ft exterior
+- **Duration:** 4 weeks
+- **Products Used:** Benjamin Moore Regal Select, Sherwin-Williams Extreme Bond Primer
+- **Special Considerations:** EPA Lead-Safe protocols, historic color matching
+
+## Ready to Transform Your Home?
+
+Whether you have a Victorian beauty or a modern home, JH Painting Services delivers exceptional results. We bring the same attention to detail and commitment to quality to every project.
+
+**Call (508) 690-8886 for your free consultation!**
+    `,
+    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',
+    category: 'Project Showcase',
+    author: 'Jafet Henrique',
+    authorImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp',
+    date: '2025-01-08',
+    readTime: '8 min read',
+    tags: ['project showcase', 'victorian homes', 'exterior painting', 'newton ma', 'historic homes'],
+    featured: false,
+  },
+  {
+    slug: 'kitchen-cabinet-refinishing-wellesley-ma-before-after',
+    title: 'Kitchen Cabinet Refinishing in Wellesley, MA: Stunning Before & After',
+    excerpt: 'This Wellesley kitchen went from dated oak to modern elegance with professional cabinet refinishing—saving the homeowners over $25,000 compared to replacement.',
+    content: `
+# Kitchen Cabinet Refinishing in Wellesley, MA: Stunning Before & After
+
+When the Johnson family in Wellesley, MA contacted us about their outdated oak kitchen cabinets, they were facing a tough decision: spend $35,000+ on new cabinets or find another solution.
+
+## The Problem
+
+Their 1990s oak cabinets were:
+- Dated honey oak color that screamed "1995"
+- Structurally sound but cosmetically worn
+- Good quality solid wood (worth saving!)
+- Mismatched with their recently updated countertops
+
+## Our Solution: Professional Cabinet Refinishing
+
+Instead of replacing perfectly good cabinets, we proposed our professional refinishing service. Here's why it made sense:
+
+| Option | Cost | Timeline | Disruption |
+|--------|------|----------|------------|
+| New Cabinets | $35,000-45,000 | 6-8 weeks | Major |
+| JH Refinishing | $8,500 | 6 days | Minimal |
+
+**Savings: Over $25,000!**
+
+## The Process
+
+### Day 1: Preparation
+
+- Removed all cabinet doors, drawers, and hardware
+- Labeled every piece for perfect reinstallation
+- Set up our spray booth in the garage
+- Cleaned and degreased all surfaces
+
+### Day 2-3: Sanding and Priming
+
+- Sanded all surfaces to create proper adhesion
+- Applied bonding primer designed for previously finished wood
+- Filled any imperfections with professional wood filler
+- Light sanding between coats
+
+### Day 4-5: Spray Application
+
+Using our professional HVLP spray system:
+- Applied 2 coats of Benjamin Moore Advance (self-leveling for a factory finish)
+- Color: Simply White OC-117
+- Created the smooth, flawless finish you see in showrooms
+
+### Day 6: Reinstallation
+
+- Installed new soft-close hinges (an easy upgrade!)
+- Mounted all doors with precision alignment
+- Added new brushed nickel hardware
+- Final touch-ups and cleaning
+
+## The Transformation
+
+**Before:**
+- Dated honey oak
+- Brass hardware
+- Dark, heavy kitchen feel
+
+**After:**
+- Crisp Simply White finish
+- Modern brushed nickel hardware
+- Bright, airy, contemporary kitchen
+
+## Homeowner Reaction
+
+*"I can't believe this is the same kitchen! We were dreading spending $40,000 on new cabinets, but JH Painting made our existing cabinets look even better than new. The spray finish is absolutely flawless—no brush marks, completely smooth. We're thrilled!"*
+
+— Jennifer T., Wellesley, MA
+
+## Project Breakdown
+
+- **Location:** Wellesley, Massachusetts
+- **Kitchen Size:** 42 cabinet doors, 8 drawers
+- **Duration:** 6 working days
+- **Investment:** $8,500 (vs. $35,000+ for replacement)
+- **Color:** Benjamin Moore Simply White OC-117
+- **Finish:** Semi-gloss for durability and easy cleaning
+
+## Is Cabinet Refinishing Right for You?
+
+Cabinet refinishing is ideal if your cabinets are:
+- Solid wood or high-quality construction
+- Structurally sound (no water damage, delamination)
+- A style you like (or can be modified with new doors)
+- In a layout that works for your kitchen
+
+## Get Your Free Cabinet Assessment
+
+Not sure if refinishing is right for your kitchen? We offer free assessments where we evaluate your cabinets and provide honest recommendations.
+
+**Call (508) 690-8886 to schedule your free cabinet consultation!**
+    `,
+    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png',
+    category: 'Project Showcase',
+    author: 'Jafet Henrique',
+    authorImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp',
+    date: '2025-01-05',
+    readTime: '7 min read',
+    tags: ['project showcase', 'cabinet refinishing', 'kitchen transformation', 'wellesley ma', 'before after'],
+    featured: false,
+  },
+  {
+    slug: 'commercial-office-painting-framingham-business-park',
+    title: 'Commercial Office Painting: Framingham Business Park Complete Renovation',
+    excerpt: 'How we transformed a dated 1980s office building in Framingham into a modern, inviting workspace—completed after hours with zero business disruption.',
+    content: `
+# Commercial Office Painting: Framingham Business Park Complete Renovation
+
+When Framingham Technology Partners needed to update their 15,000 sq ft office space, they had one critical requirement: zero disruption to their 24/5 operations.
+
+## The Challenge
+
+This 1980s office building needed a complete makeover:
+
+- **Dated colors:** Beige walls and mauve accents (very 1987!)
+- **Worn surfaces:** Scuff marks, nail holes, and general wear
+- **Brand alignment:** Colors didn't match their modern tech brand
+- **Tight timeline:** They wanted completion in 2 weeks
+- **No disruption:** Work during business hours was not an option
+
+## Our Commercial Solution
+
+### Planning Phase
+
+Before any paint was purchased, we:
+
+1. Conducted a detailed walkthrough with facility management
+2. Created a color scheme matching their brand guidelines
+3. Developed a night/weekend-only work schedule
+4. Coordinated with building security for after-hours access
+
+### The Color Palette
+
+Working with their marketing team, we selected:
+
+- **Main walls:** Benjamin Moore Gray Owl OC-52 (sophisticated neutral)
+- **Accent walls:** Their brand blue (custom color match)
+- **Trim:** Simply White OC-117
+- **Conference rooms:** Varying accent colors by department
+
+### Execution Schedule
+
+**Week 1:**
+- Nights 1-2: Prep work, patching, and priming
+- Nights 3-5: First floor painting
+- Weekend: Common areas and break rooms
+
+**Week 2:**
+- Nights 1-3: Second floor painting
+- Nights 4-5: Conference rooms and touch-ups
+- Weekend: Final walkthrough and detail work
+
+### Zero Disruption Protocols
+
+Every night, our crew:
+
+1. Arrived at 7 PM after all employees left
+2. Set up drop cloths and protection
+3. Completed designated areas
+4. Cleaned up completely by 5 AM
+5. Left no evidence of our presence (except beautiful new walls!)
+
+## The Results
+
+**Employee Reaction (Monday morning, Week 2):**
+
+*"Wait—when did they paint? I didn't even know they were here! The office looks completely different!"*
+
+This is exactly the reaction we aim for with commercial projects.
+
+## Impact on the Business
+
+After the renovation, Framingham Technology Partners reported:
+
+- **35% increase** in positive feedback from visiting clients
+- **Improved employee satisfaction** (surveyed before/after)
+- **Enhanced brand perception** with cohesive colors
+- **Better lighting efficiency** (lighter colors = better light reflection)
+
+## Project Manager Testimonial
+
+*"JH Painting Services understood our needs perfectly. We couldn't afford any downtime, and they delivered exactly as promised. Every morning, our employees came in to find another section transformed—it was like magic. The quality is exceptional, and they finished two days ahead of schedule."*
+
+— Michael R., Facilities Manager, Framingham Technology Partners
+
+## Project Details
+
+- **Location:** Framingham, Massachusetts
+- **Space:** 15,000 sq ft office (2 floors)
+- **Duration:** 12 nights + 2 weekends
+- **Work Hours:** 7 PM - 5 AM only
+- **Products:** Benjamin Moore Scuff-X (commercial-grade)
+- **Special Features:** Brand color matching, zero disruption guarantee
+
+## Commercial Painting Services
+
+JH Painting Services offers commercial painting for:
+
+- Office buildings
+- Retail spaces
+- Medical facilities
+- Restaurants
+- Industrial spaces
+- HOA common areas
+
+### Our Commercial Guarantee
+
+- **After-hours scheduling** to avoid disruption
+- **Commercial-grade products** for high-traffic durability
+- **Licensed and insured** for commercial projects
+- **Detailed project management** with daily updates
+
+## Ready to Transform Your Business Space?
+
+Contact us for a free commercial painting consultation and quote.
+
+**Call (508) 690-8886 or email contact@jhpaintingservices.com**
+    `,
+    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg',
+    category: 'Project Showcase',
+    author: 'Jafet Henrique',
+    authorImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp',
+    date: '2024-12-28',
+    readTime: '9 min read',
+    tags: ['project showcase', 'commercial painting', 'office renovation', 'framingham ma', 'business'],
+    featured: false,
+  },
 ]
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
