@@ -443,6 +443,89 @@ const schemaData = {
         "@id": "https://jhpaintingservices.com/#organization"
       },
       "inLanguage": "en-US"
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Get Your Home Painted by JH Painting Services",
+      "description": "Step-by-step process for hiring JH Painting Services for your Massachusetts home painting project",
+      "totalTime": "PT7D",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "4000-10000"
+      },
+      "supply": [
+        { "@type": "HowToSupply", "name": "Premium paint (Sherwin-Williams or Benjamin Moore)" },
+        { "@type": "HowToSupply", "name": "Primer" },
+        { "@type": "HowToSupply", "name": "Professional painting equipment" }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Request Free Estimate",
+          "text": "Call JH Painting at (508) 690-8886 or fill out the online form at jhpaintingservices.com. We offer same-day or next-day estimate appointments.",
+          "url": "https://jhpaintingservices.com/#contact"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "On-Site Consultation",
+          "text": "Our team visits your home to assess the project, discuss your vision, and provide color consultation advice.",
+          "url": "https://jhpaintingservices.com"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Receive Detailed Written Estimate",
+          "text": "Get a comprehensive itemized estimate with transparent pricing - no hidden fees or surprise charges.",
+          "url": "https://jhpaintingservices.com"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Professional Preparation",
+          "text": "Our crew protects your furniture, fills holes, sands surfaces, applies primer, and carefully masks all areas.",
+          "url": "https://jhpaintingservices.com/services/interior-painting"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Expert Paint Application",
+          "text": "Professional painters apply 2-3 coats using brush, roll, and spray techniques for perfect coverage and clean lines.",
+          "url": "https://jhpaintingservices.com/services"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Quality Inspection & Walkthrough",
+          "text": "Crew leader inspects all work, performs touch-ups, and conducts final walkthrough with you to ensure satisfaction.",
+          "url": "https://jhpaintingservices.com"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "House Painting",
+      "provider": {
+        "@id": "https://jhpaintingservices.com/#organization"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Massachusetts"
+      },
+      "description": "Professional house painting services in Massachusetts including interior painting, exterior painting, cabinet refinishing, and commercial painting. Licensed, $2M insured, EPA Lead-Safe certified.",
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "2-6",
+          "priceCurrency": "USD",
+          "unitText": "per square foot"
+        },
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-01-01"
+      }
     }
   ]
 }
