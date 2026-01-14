@@ -1084,15 +1084,6 @@ export default function SeoPage({ params }: Props) {
               <p className="city-section-subtitle">Expert painting solutions tailored for {city.name} homes and businesses</p>
             </div>
 
-            {/* Service Description - SEO Content */}
-            {cityContent.serviceDescription && (
-              <div style={{ maxWidth: '900px', margin: '0 auto 3rem', background: '#fff', borderRadius: '16px', padding: '2rem', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
-                <p style={{ fontSize: '1.0625rem', lineHeight: '1.85', color: '#4B5563', margin: 0 }}>
-                  {cityContent.serviceDescription}
-                </p>
-              </div>
-            )}
-
             <div className="city-services-grid">
               {servicesList.map((svc, idx) => (
                 <Link key={idx} href={`/${getCityServicePageSlug(city.slug, svc.slug)}`} className="city-service-card">
