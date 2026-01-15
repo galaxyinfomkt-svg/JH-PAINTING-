@@ -230,6 +230,7 @@ export default function HomePage() {
                 width={160}
                 height={64}
                 priority
+                fetchPriority="high"
               />
             </a>
 
@@ -366,9 +367,11 @@ export default function HomePage() {
               style={{ objectFit: 'cover' }}
               priority
               loading="eager"
-              quality={75}
+              quality={70}
+              fetchPriority="high"
               placeholder="blur"
               blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAIRAAAgICAQQDAAAAAAAAAAAAAQIDBAARBRIhMUFRYXH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABgRAAMBAQAAAAAAAAAAAAAAAAACEQEh/9oADAMBEEUhEEFgAQs6OJo5okkjkV1YZDA6I1/a"
+              unoptimized={false}
             />
           </div>
           <div className="hero-overlay" />

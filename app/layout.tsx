@@ -10,7 +10,7 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '600', '700'],
   fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
   adjustFontFallback: true,
   preload: true,
@@ -539,10 +539,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager - Load after page is interactive to improve TBT */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -559,20 +559,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://reputationhub.site" />
         <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
-        {/* Preload critical LCP image for faster loading */}
+        {/* Preload critical LCP image for faster loading - fetchPriority high */}
         <link
           rel="preload"
           as="image"
           href="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
           type="image/jpeg"
           fetchPriority="high"
-        />
-        {/* Preload logo image */}
-        <link
-          rel="preload"
-          as="image"
-          href="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
-          type="image/png"
+          imageSrcSet="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg 1x"
         />
         {/* Mobile optimization */}
         <meta name="HandheldFriendly" content="True" />

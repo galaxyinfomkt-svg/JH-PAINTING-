@@ -19,14 +19,14 @@ export default function LazyHeroForm({ src, title, className }: LazyHeroFormProp
       setIsVisible(true)
     }
 
-    // Load after LCP is complete (2s is typical for good LCP)
+    // Load after LCP is complete - reduced delay for faster perceived loading
     const timer = setTimeout(() => {
       if ('requestIdleCallback' in window) {
-        (window as Window & { requestIdleCallback: (cb: () => void) => void }).requestIdleCallback(loadForm)
+        (window as Window & { requestIdleCallback: (cb: () => void, options?: { timeout: number }) => void }).requestIdleCallback(loadForm, { timeout: 500 })
       } else {
         loadForm()
       }
-    }, 1500)
+    }, 100)
 
     return () => clearTimeout(timer)
   }, [])
