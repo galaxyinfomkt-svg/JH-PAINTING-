@@ -1,32 +1,119 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, memo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Menu,
-  X,
-  Check,
-  Star,
-  Shield,
-  Clock,
-  DollarSign,
-  ChevronRight,
-  ChevronDown,
-  Play,
-  Home as HomeIcon,
-  Paintbrush,
-  Palette,
-  HardHat,
-  Building2,
-  PaintBucket,
-  Award,
-  Hammer,
-  Droplets
-} from 'lucide-react'
+
+// Inline SVG icons to reduce bundle size and improve TBT
+const PhoneIcon = memo(() => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+))
+PhoneIcon.displayName = 'PhoneIcon'
+
+const MailIcon = memo(() => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+))
+MailIcon.displayName = 'MailIcon'
+
+const MapPinIcon = memo(() => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+))
+MapPinIcon.displayName = 'MapPinIcon'
+
+const MenuIcon = memo(() => (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+))
+MenuIcon.displayName = 'MenuIcon'
+
+const XIcon = memo(() => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+))
+XIcon.displayName = 'XIcon'
+
+const CheckIcon = memo(() => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+))
+CheckIcon.displayName = 'CheckIcon'
+
+const StarIcon = memo(({ size = 16, fill }: { size?: number; fill?: string }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill={fill || "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+))
+StarIcon.displayName = 'StarIcon'
+
+const ShieldIcon = memo(() => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+))
+ShieldIcon.displayName = 'ShieldIcon'
+
+const ClockIcon = memo(() => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+))
+ClockIcon.displayName = 'ClockIcon'
+
+const DollarIcon = memo(() => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+))
+DollarIcon.displayName = 'DollarIcon'
+
+const ChevronRightIcon = memo(({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+))
+ChevronRightIcon.displayName = 'ChevronRightIcon'
+
+const ChevronDownIcon = memo(({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+))
+ChevronDownIcon.displayName = 'ChevronDownIcon'
+
+const PlayIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+))
+PlayIcon.displayName = 'PlayIcon'
+
+const HomeIconSvg = memo(() => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+))
+HomeIconSvg.displayName = 'HomeIconSvg'
+
+const PaintbrushIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14.622 17.897-10.68-2.913"/><path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"/><path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"/></svg>
+))
+PaintbrushIcon.displayName = 'PaintbrushIcon'
+
+const PaletteIcon = memo(() => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.555C21.965 6.012 17.461 2 12 2z"/></svg>
+))
+PaletteIcon.displayName = 'PaletteIcon'
+
+const HardHatIcon = memo(() => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><path d="M14 6a6 6 0 0 1 6 6v3"/></svg>
+))
+HardHatIcon.displayName = 'HardHatIcon'
+
+const Building2Icon = memo(() => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+))
+Building2Icon.displayName = 'Building2Icon'
+
+const PaintBucketIcon = memo(() => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m19 11-8-8-8.6 8.6a2 2 0 0 0 0 2.8l5.2 5.2c.8.8 2 .8 2.8 0L19 11Z"/><path d="m5 2 5 5"/><path d="M2 13h15"/><path d="M22 20a2 2 0 1 1-4 0c0-1.6 1.7-2.4 2-4 .3 1.6 2 2.4 2 4Z"/></svg>
+))
+PaintBucketIcon.displayName = 'PaintBucketIcon'
+
+const AwardIcon = memo(() => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+))
+AwardIcon.displayName = 'AwardIcon'
+
+const HammerIcon = memo(() => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18.7 5.3-7.3 7.3a1 1 0 0 0 0 1.4l.3.3a1 1 0 0 0 1.4 0l7.3-7.3a1 1 0 0 0 0-1.4l-.3-.3a1 1 0 0 0-1.4 0z"/><path d="m9.8 4.2 5.4 5.4"/><path d="M10.3 2.5c.7-.7 1.9-.7 2.6 0l.8.8c.7.7.7 1.9 0 2.6l-2.6-2.6a1.8 1.8 0 0 1 0-2.6"/></svg>
+))
+HammerIcon.displayName = 'HammerIcon'
+
+const DropletsIcon = memo(() => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 14.94c1.32 0 2.4-1.1 2.4-2.43 0-.7-.34-1.36-1.03-1.92s-1.23-1.15-1.37-1.89c-.17.87-.69 1.7-1.37 2.26s-1.03 1.24-1.03 1.55c0 1.34 1.08 2.43 2.4 2.43z"/><path d="M17 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S17.29 6.75 17 5.3c-.29 1.45-1.14 2.84-2.29 3.76S13 11.1 13 12.25c0 2.22 1.8 4.05 4 4.05z"/></svg>
+))
+DropletsIcon.displayName = 'DropletsIcon'
 import { cities } from './data/cities'
 import LazyIframe from './components/LazyIframe'
 import LazyHeroForm from './components/LazyHeroForm'
@@ -156,43 +243,43 @@ const menuServices = [
   {
     name: 'Interior Painting',
     href: '/services/interior-painting',
-    icon: Paintbrush,
+    icon: PaintbrushIcon,
     description: 'Transform your interior spaces'
   },
   {
     name: 'Exterior Painting',
     href: '/services/exterior-painting',
-    icon: HomeIcon,
+    icon: HomeIconSvg,
     description: 'Protect and beautify your exterior'
   },
   {
     name: 'Commercial Painting',
     href: '/services/commercial-painting',
-    icon: Building2,
+    icon: Building2Icon,
     description: 'Professional business painting'
   },
   {
     name: 'Residential Painting',
     href: '/services/residential-painting',
-    icon: PaintBucket,
+    icon: PaintBucketIcon,
     description: 'Complete home painting solutions'
   },
   {
     name: 'Cabinet Painting',
     href: '/services/cabinet-painting',
-    icon: Palette,
+    icon: PaletteIcon,
     description: 'Upgrade your kitchen cabinets'
   },
   {
     name: 'Carpentry',
     href: '/services/carpentry',
-    icon: Hammer,
+    icon: HammerIcon,
     description: 'Expert wood repairs & trim work'
   },
   {
     name: 'Power Washing',
     href: '/services/power-washing',
-    icon: Droplets,
+    icon: DropletsIcon,
     description: 'Professional pressure cleaning'
   },
 ]
@@ -234,16 +321,16 @@ export default function HomePage() {
           <div className="top-bar-content">
             <div className="top-bar-left">
               <span className="top-bar-item">
-                <MapPin size={12} />
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                 Serving All Massachusetts
               </span>
               <a href="mailto:contact@jhpaintingservices.com" className="top-bar-item">
-                <Mail size={12} />
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                 contact@jhpaintingservices.com
               </a>
             </div>
             <a href="tel:+15086908886" className="top-bar-phone-btn">
-              <Phone size={12} />
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               (508) 690-8886
             </a>
           </div>
@@ -277,7 +364,7 @@ export default function HomePage() {
               >
                 <button className="nav-dropdown-toggle">
                   Services
-                  <ChevronDown size={16} className={`nav-dropdown-icon ${servicesOpen ? 'open' : ''}`} />
+                  <ChevronDownIcon size={16} />
                 </button>
 
                 <div className={`nav-dropdown-menu ${servicesOpen ? 'open' : ''}`}>
@@ -287,7 +374,7 @@ export default function HomePage() {
                       return (
                         <a key={index} href={service.href} className="nav-dropdown-item">
                           <div className="nav-dropdown-item-icon">
-                            <Icon size={20} />
+                            <Icon />
                           </div>
                           <div className="nav-dropdown-item-content">
                             <span className="nav-dropdown-item-title">{service.name}</span>
@@ -299,7 +386,7 @@ export default function HomePage() {
                   </div>
                   <a href="/services" className="nav-dropdown-footer">
                     View All Services
-                    <ChevronRight size={16} />
+                    <ChevronRightIcon size={16} />
                   </a>
                 </div>
               </div>
@@ -312,12 +399,12 @@ export default function HomePage() {
             </nav>
 
             <a href="tel:+15086908886" className="header-cta">
-              <Phone size={18} />
+              <PhoneIcon />
               (508) 690-8886
             </a>
 
             <button className="menu-btn" onClick={toggleMenu} aria-label="Open menu">
-              <Menu size={28} />
+              <MenuIcon />
             </button>
           </div>
         </div>
@@ -338,7 +425,7 @@ export default function HomePage() {
               height={48}
             />
             <button className="mobile-menu-close" onClick={closeMenu} aria-label="Close menu">
-              <X size={24} />
+              <XIcon />
             </button>
           </div>
           <div className="mobile-nav">
@@ -353,7 +440,7 @@ export default function HomePage() {
                 onClick={toggleMobileServices}
               >
                 Services
-                <ChevronDown size={18} className={`mobile-nav-dropdown-icon ${mobileServicesOpen ? 'open' : ''}`} />
+                <ChevronDownIcon size={18} />
               </button>
 
               <div className={`mobile-nav-dropdown-content ${mobileServicesOpen ? 'open' : ''}`}>
@@ -362,7 +449,7 @@ export default function HomePage() {
                   return (
                     <a key={index} href={service.href} onClick={closeMenu} className="mobile-nav-dropdown-item">
                       <div className="mobile-nav-dropdown-item-icon">
-                        <Icon size={18} />
+                        <Icon />
                       </div>
                       <div className="mobile-nav-dropdown-item-content">
                         <span className="mobile-nav-dropdown-item-title">{service.name}</span>
@@ -381,7 +468,7 @@ export default function HomePage() {
             <a href="#contact" onClick={closeMenu}>Contact</a>
           </div>
           <a href="tel:+15086908886" className="btn btn-primary" style={{ width: '100%', marginTop: '1.5rem' }}>
-            <Phone size={18} />
+            <PhoneIcon />
             (508) 690-8886
           </a>
         </nav>
@@ -414,15 +501,15 @@ export default function HomePage() {
               <div className="hero-text">
                 <div className="hero-top-badges">
                   <span className="hero-location-badge">
-                    <MapPin size={16} />
+                    <MapPinIcon />
                     Serving 75+ MA Cities
                   </span>
                   <span className="hero-rating-badge">
-                    <Star size={14} fill="currentColor" />
-                    <Star size={14} fill="currentColor" />
-                    <Star size={14} fill="currentColor" />
-                    <Star size={14} fill="currentColor" />
-                    <Star size={14} fill="currentColor" />
+                    <StarIcon size={14} fill="currentColor" />
+                    <StarIcon size={14} fill="currentColor" />
+                    <StarIcon size={14} fill="currentColor" />
+                    <StarIcon size={14} fill="currentColor" />
+                    <StarIcon size={14} fill="currentColor" />
                     <span className="hero-rating-text">5.0 (40 Google reviews)</span>
                   </span>
                 </div>
@@ -446,7 +533,7 @@ export default function HomePage() {
 
                 <div className="hero-buttons">
                   <a href="tel:+15086908886" className="btn btn-primary btn-lg">
-                    <Phone size={20} />
+                    <PhoneIcon />
                     Call (508) 690-8886
                   </a>
                   <a href="#contact" className="btn btn-outline btn-lg" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.3)', color: '#fff' }}>
@@ -456,15 +543,15 @@ export default function HomePage() {
 
                 <div className="hero-trust-badges">
                   <span className="hero-trust-badge">
-                    <Shield size={16} />
+                    <ShieldIcon />
                     Licensed & Insured
                   </span>
                   <span className="hero-trust-badge">
-                    <Clock size={16} />
+                    <ClockIcon />
                     Same Day Response
                   </span>
                   <span className="hero-trust-badge">
-                    <DollarSign size={16} />
+                    <DollarIcon />
                     Free Estimates
                   </span>
                 </div>
@@ -493,16 +580,16 @@ export default function HomePage() {
               </svg>
               <span>Google Reviews</span>
               <div className="stars">
-                <Star size={16} fill="currentColor" />
-                <Star size={16} fill="currentColor" />
-                <Star size={16} fill="currentColor" />
-                <Star size={16} fill="currentColor" />
-                <Star size={16} fill="currentColor" />
+                <StarIcon size={16} fill="currentColor" />
+                <StarIcon size={16} fill="currentColor" />
+                <StarIcon size={16} fill="currentColor" />
+                <StarIcon size={16} fill="currentColor" />
+                <StarIcon size={16} fill="currentColor" />
               </div>
               <span className="rating">5</span>
               <a href="#reviews">
                 See Our Reviews
-                <ChevronRight size={14} />
+                <ChevronRightIcon size={14} />
               </a>
             </div>
           </div>
@@ -590,7 +677,7 @@ export default function HomePage() {
                     <h3>{service.title}</h3>
                     <p>{service.description}</p>
                     <span className="service-link">
-                      Learn More <ChevronRight size={16} />
+                      Learn More <ChevronRightIcon size={16} />
                     </span>
                   </div>
                 </Link>
@@ -631,7 +718,7 @@ export default function HomePage() {
                 </div>
                 <div className="trusted-contractor-badge">
                   <div className="trusted-contractor-badge-icon">
-                    <Award size={20} />
+                    <AwardIcon />
                   </div>
                   <div className="trusted-contractor-badge-content">
                     <span className="trusted-contractor-badge-title">Trusted Contractor</span>
@@ -654,15 +741,15 @@ export default function HomePage() {
 
             <div className="process-grid-home">
               {[
-                { num: '01', icon: Phone, title: 'Free Consultation', desc: 'Call us or fill out our form. We\'ll discuss your project needs and schedule a site visit at your convenience.' },
-                { num: '02', icon: DollarSign, title: 'Detailed Estimate', desc: 'We provide a comprehensive written estimate with transparent pricing. No hidden fees, no surprises.' },
-                { num: '03', icon: HardHat, title: 'Expert Painting', desc: 'Our skilled team executes your project with precision, keeping you informed every step of the way.' },
-                { num: '04', icon: Check, title: 'Final Walkthrough', desc: 'We walk through the completed project together, ensuring everything meets your expectations.' },
+                { num: '01', icon: PhoneIcon, title: 'Free Consultation', desc: 'Call us or fill out our form. We\'ll discuss your project needs and schedule a site visit at your convenience.' },
+                { num: '02', icon: DollarIcon, title: 'Detailed Estimate', desc: 'We provide a comprehensive written estimate with transparent pricing. No hidden fees, no surprises.' },
+                { num: '03', icon: HardHatIcon, title: 'Expert Painting', desc: 'Our skilled team executes your project with precision, keeping you informed every step of the way.' },
+                { num: '04', icon: CheckIcon, title: 'Final Walkthrough', desc: 'We walk through the completed project together, ensuring everything meets your expectations.' },
               ].map((step, index) => (
                 <div key={index} className="process-card-home process-step-enhanced">
                   <div className="process-card-home-num">{step.num}</div>
                   <div className="process-card-home-icon">
-                    <step.icon size={24} />
+                    <step.icon />
                   </div>
                   <h3>{step.title}</h3>
                   <p>{step.desc}</p>
@@ -678,7 +765,7 @@ export default function HomePage() {
             <div className="detail-grid">
               <div className="detail-image-wrapper">
                 <span className="detail-badge">
-                  <Star size={14} fill="currentColor" />
+                  <StarIcon size={14} fill="currentColor" />
                   Our Specialty
                 </span>
                 <Image
@@ -693,7 +780,7 @@ export default function HomePage() {
 
               <div className="detail-content">
                 <h2>
-                  <Paintbrush size={28} />
+                  <PaintbrushIcon size={28} />
                   Exterior House Painting
                 </h2>
                 <p>
@@ -704,17 +791,17 @@ export default function HomePage() {
                 </p>
 
                 <ul className="detail-list">
-                  <li><Check size={18} /> Power Washing</li>
-                  <li><Check size={18} /> Scraping & Sanding</li>
-                  <li><Check size={18} /> Caulking Gaps</li>
-                  <li><Check size={18} /> Premium Primer</li>
-                  <li><Check size={18} /> Two Coats of Paint</li>
-                  <li><Check size={18} /> Trim & Shutters</li>
+                  <li><CheckIcon /> Power Washing</li>
+                  <li><CheckIcon /> Scraping & Sanding</li>
+                  <li><CheckIcon /> Caulking Gaps</li>
+                  <li><CheckIcon /> Premium Primer</li>
+                  <li><CheckIcon /> Two Coats of Paint</li>
+                  <li><CheckIcon /> Trim & Shutters</li>
                 </ul>
 
                 <a href="#contact" className="btn btn-primary">
                   Learn More About Exterior Painting
-                  <ChevronRight size={18} />
+                  <ChevronRightIcon size={18} />
                 </a>
               </div>
             </div>
@@ -736,12 +823,12 @@ export default function HomePage() {
                 </p>
 
                 <ul className="detail-list" style={{ direction: 'ltr' }}>
-                  <li><Check size={18} /> Walls & Ceilings</li>
-                  <li><Check size={18} /> Trim & Baseboards</li>
-                  <li><Check size={18} /> Doors & Frames</li>
-                  <li><Check size={18} /> Accent Walls</li>
-                  <li><Check size={18} /> Drywall Repair</li>
-                  <li><Check size={18} /> Color Consultation</li>
+                  <li><CheckIcon /> Walls & Ceilings</li>
+                  <li><CheckIcon /> Trim & Baseboards</li>
+                  <li><CheckIcon /> Doors & Frames</li>
+                  <li><CheckIcon /> Accent Walls</li>
+                  <li><CheckIcon /> Drywall Repair</li>
+                  <li><CheckIcon /> Color Consultation</li>
                 </ul>
 
                 <a href="#contact" className="btn btn-secondary">Get Free Estimate</a>
@@ -772,14 +859,14 @@ export default function HomePage() {
 
             <div className="why-grid">
               {[
-                { icon: Shield, title: 'Licensed & Insured', desc: 'Fully licensed with comprehensive insurance' },
-                { icon: Star, title: '5-Star Rated', desc: '40+ verified Google reviews' },
-                { icon: Clock, title: 'On-Time Completion', desc: 'We deliver projects on schedule' },
-                { icon: DollarSign, title: 'Free Estimates', desc: 'Transparent pricing, no obligation' },
+                { icon: ShieldIcon, title: 'Licensed & Insured', desc: 'Fully licensed with comprehensive insurance' },
+                { icon: StarIcon, title: '5-Star Rated', desc: '40+ verified Google reviews' },
+                { icon: ClockIcon, title: 'On-Time Completion', desc: 'We deliver projects on schedule' },
+                { icon: DollarIcon, title: 'Free Estimates', desc: 'Transparent pricing, no obligation' },
               ].map((item, index) => (
                 <div key={index} className="why-card why-card-enhanced">
                   <div className="why-icon">
-                    <item.icon size={24} />
+                    <item.icon />
                   </div>
                   <h4>{item.title}</h4>
                   <p>{item.desc}</p>
@@ -815,11 +902,11 @@ export default function HomePage() {
                   />
                   <div className="video-card-rs-overlay">
                     <div className="video-card-rs-play">
-                      <Play size={20} />
+                      <PlayIcon size={20} />
                     </div>
                     <h4>{video.title}</h4>
                     <span>
-                      <Play size={12} />
+                      <PlayIcon size={12} />
                       {video.type}
                     </span>
                   </div>
@@ -834,7 +921,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="btn btn-lg"
               >
-                <Play size={18} />
+                <PlayIcon size={18} />
                 Watch More on YouTube
               </a>
             </div>
@@ -938,7 +1025,7 @@ export default function HomePage() {
 
                   <div className="contact-item">
                     <div className="contact-item-icon">
-                      <Phone size={20} />
+                      <PhoneIcon />
                     </div>
                     <div className="contact-item-content">
                       <h4>Phone</h4>
@@ -948,7 +1035,7 @@ export default function HomePage() {
 
                   <div className="contact-item">
                     <div className="contact-item-icon">
-                      <Mail size={20} />
+                      <MailIcon />
                     </div>
                     <div className="contact-item-content">
                       <h4>Email</h4>
@@ -958,7 +1045,7 @@ export default function HomePage() {
 
                   <div className="contact-item">
                     <div className="contact-item-icon">
-                      <MapPin size={20} />
+                      <MapPinIcon />
                     </div>
                     <div className="contact-item-content">
                       <h4>Service Area</h4>
@@ -968,7 +1055,7 @@ export default function HomePage() {
 
                   <div className="contact-item">
                     <div className="contact-item-icon">
-                      <Clock size={20} />
+                      <ClockIcon />
                     </div>
                     <div className="contact-item-content">
                       <h4>Business Hours</h4>
@@ -986,7 +1073,7 @@ export default function HomePage() {
                     aria-label="View JH Painting Services on Google Maps"
                   >
                     <div className="static-map-placeholder">
-                      <MapPin size={32} />
+                      <MapPinIcon />
                       <span className="static-map-title">JH Painting Services</span>
                       <span className="static-map-address">Serving All of Massachusetts</span>
                       <span className="static-map-cta">
@@ -1025,10 +1112,7 @@ export default function HomePage() {
                     aria-expanded={openFaqIndex === idx ? "true" : "false"}
                   >
                     <h3>{faq.question}</h3>
-                    <ChevronDown
-                      size={24}
-                      className={`faq-chevron ${openFaqIndex === idx ? 'open' : ''}`}
-                    />
+                    <ChevronDownIcon size={24} />
                   </button>
                   <div className={`faq-answer-home ${openFaqIndex === idx ? 'open' : ''}`}>
                     <p>{faq.answer}</p>
@@ -1040,7 +1124,7 @@ export default function HomePage() {
             <div className="faq-cta-home">
               <p>Still have questions? We&apos;re here to help!</p>
               <a href="tel:+15086908886" className="btn btn-primary">
-                <Phone size={18} />
+                <PhoneIcon />
                 Call (508) 690-8886
               </a>
             </div>
@@ -1054,7 +1138,7 @@ export default function HomePage() {
               <h2>Ready to Start Your Painting Project?</h2>
               <p>Expert painting services. Free estimates, no obligation.</p>
               <a href="tel:+15086908886" className="btn btn-lg">
-                <Phone size={20} />
+                <PhoneIcon />
                 Call (508) 690-8886
               </a>
             </div>
@@ -1107,15 +1191,15 @@ export default function HomePage() {
             <div className="footer-col">
               <h4>Contact Us</h4>
               <div className="footer-contact-item">
-                <Phone size={16} />
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <a href="tel:+15086908886">(508) 690-8886</a>
               </div>
               <div className="footer-contact-item">
-                <Mail size={16} />
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                 <a href="mailto:contact@jhpaintingservices.com">contact@jhpaintingservices.com</a>
               </div>
               <div className="footer-contact-item">
-                <MapPin size={16} />
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                 <span>Serving All of Massachusetts</span>
               </div>
             </div>
@@ -1148,7 +1232,7 @@ export default function HomePage() {
         <div className="video-modal-overlay" onClick={closeVideoModal}>
           <div className="video-modal" onClick={(e) => e.stopPropagation()}>
             <button type="button" className="video-modal-close" onClick={closeVideoModal} aria-label="Close video">
-              <X size={24} />
+              <XIcon />
             </button>
             <div className="video-modal-content">
               <iframe

@@ -89,7 +89,7 @@ export default function BeforeAfterSlider({
           fill
           style={{ objectFit: 'cover' }}
           sizes="(max-width: 768px) 100vw, 50vw"
-          priority
+          loading="lazy"
         />
         <span className="before-after-label before-after-label-after">After</span>
       </div>
@@ -105,7 +105,7 @@ export default function BeforeAfterSlider({
           fill
           style={{ objectFit: 'cover' }}
           sizes="(max-width: 768px) 100vw, 50vw"
-          priority
+          loading="lazy"
         />
         <span className="before-after-label before-after-label-before">Before</span>
       </div>

@@ -139,7 +139,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const serviceList = ['interior-painting', 'exterior-painting', 'commercial-painting', 'residential-painting', 'cabinet-painting', 'carpentry']
+const serviceList = ['interior-painting', 'exterior-painting', 'commercial-painting', 'residential-painting', 'cabinet-painting', 'carpentry', 'power-washing']
 
 export async function generateStaticParams() {
   const params: { city: string; service: string }[] = []

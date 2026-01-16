@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 import { notFound } from 'next/navigation'
-import { Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, Home, Building2, PaintBucket, Brush, Menu, X, ChevronDown, Paintbrush, Palette, DollarSign, Hammer } from 'lucide-react'
+import { Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, Home, Building2, PaintBucket, Brush, Menu, X, ChevronDown, Paintbrush, Palette, DollarSign, Hammer, Droplets } from 'lucide-react'
 import { getCityBySlug, cities } from '@/app/data/cities'
 import { getCityContent } from '@/app/data/cityContent'
 import LazyIframe from '@/app/components/LazyIframe'
@@ -19,6 +19,7 @@ const menuServices = [
   { name: 'Residential Painting', href: '/services/residential-painting', icon: PaintBucket, description: 'Complete home painting solutions' },
   { name: 'Cabinet Painting', href: '/services/cabinet-painting', icon: Palette, description: 'Upgrade your kitchen cabinets' },
   { name: 'Carpentry', href: '/services/carpentry', icon: Hammer, description: 'Expert wood repairs & trim work' },
+  { name: 'Power Washing', href: '/services/power-washing', icon: Droplets, description: 'Professional pressure cleaning' },
 ]
 
 interface Props {
@@ -196,7 +197,7 @@ const beforeAfterPairs = [
     afterAlt: 'Deck after professional power washing and staining'
   },
   {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a3027a03db26c93445285.webp',
+    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a30274e42b930842eea35.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a3027a03db26c93445285.webp',
     beforeAlt: 'Staircase before refinishing',
     afterAlt: 'Staircase after professional refinishing'
