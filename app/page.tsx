@@ -298,6 +298,7 @@ export default function HomePage() {
               </div>
 
               <a href="#gallery">Gallery</a>
+              <Link href="/projects">Projects</Link>
               <Link href="/blog">Blog</Link>
               <a href="#reviews">Reviews</a>
               <a href="#contact">Contact</a>
@@ -367,6 +368,7 @@ export default function HomePage() {
             </div>
 
             <a href="#gallery" onClick={closeMenu}>Gallery</a>
+            <Link href="/projects" onClick={closeMenu}>Projects</Link>
             <Link href="/blog" onClick={closeMenu}>Blog</Link>
             <a href="#reviews" onClick={closeMenu}>Reviews</a>
             <a href="#contact" onClick={closeMenu}>Contact</a>
