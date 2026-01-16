@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Force unique build ID to bypass Vercel cache
+  generateBuildId: async () => {
+    return `build-${Date.now()}`
+  },
   // Experimental optimizations for better performance
   experimental: {
     optimizePackageImports: ['lucide-react'],
