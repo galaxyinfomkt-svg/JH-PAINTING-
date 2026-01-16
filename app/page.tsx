@@ -77,16 +77,28 @@ const videos = [
 // Before/After transformation pairs
 const beforeAfterPairs = [
   {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg',
-    beforeAlt: 'Kitchen cabinets before refinishing',
-    afterAlt: 'Kitchen cabinets after professional refinishing'
+    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23ad3443ab5.webp',
+    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg',
+    beforeAlt: 'Historic church interior before restoration in Waltham MA',
+    afterAlt: 'Historic church interior after professional restoration in Waltham MA'
   },
   {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
-    beforeAlt: 'House exterior before painting',
-    afterAlt: 'House exterior after professional painting'
+    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23bb3443ab4.webp',
+    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg',
+    beforeAlt: 'Historic church exterior before painting in Waltham MA',
+    afterAlt: 'Historic church exterior after professional painting in Waltham MA'
+  },
+  {
+    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac7eb2da7db4eacd6a2.webp',
+    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp',
+    beforeAlt: 'Residential exterior before painting',
+    afterAlt: 'Residential exterior after professional painting'
+  },
+  {
+    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a30277f301b94ac7227dc.webp',
+    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp',
+    beforeAlt: 'Deck before power washing and staining',
+    afterAlt: 'Deck after professional power washing and staining'
   }
 ]
 
