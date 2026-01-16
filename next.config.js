@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Experimental optimizations for better performance
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
   // Redirect old URLs to new SEO-friendly URLs - OPTIMIZED TO BEAT COMPETITORS
   async redirects() {
     return [

@@ -1,9 +1,16 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import dynamic from 'next/dynamic'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import FloatingPhoneButton from './components/FloatingPhoneButton'
-import FloatingSocial from './components/FloatingSocial'
+
+// Dynamic imports for non-critical floating components - reduces initial JS bundle
+const FloatingPhoneButton = dynamic(() => import('./components/FloatingPhoneButton'), {
+  ssr: false, // Client-side only - not needed for SEO
+})
+const FloatingSocial = dynamic(() => import('./components/FloatingSocial'), {
+  ssr: false, // Client-side only - not needed for SEO
+})
 
 // Optimize font loading - only load essential weights for better FCP
 const inter = Inter({

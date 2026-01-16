@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import { Phone, CheckCircle2, Star, ArrowRight, Paintbrush, Home, Building2, PaintBucket, Hammer, Clock, Shield, Award, Users, MapPin } from 'lucide-react'
+import { Phone, CheckCircle2, Star, ArrowRight, Paintbrush, Home, Building2, PaintBucket, Hammer, Clock, Shield, Award, Users, MapPin, Droplets } from 'lucide-react'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import LazyIframe from '@/app/components/LazyIframe'
@@ -69,6 +69,16 @@ const services = [
     icon: Hammer,
     features: ['Window Frame Repair', 'Door Frame Repair', 'Siding & Deck Repair', 'Trim & Molding'],
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
+    priceRange: 'Starting at $200'
+  },
+  {
+    slug: 'power-washing',
+    name: 'Power Washing',
+    shortDesc: 'Professional pressure cleaning',
+    description: 'Professional power washing services for homes, decks, driveways, patios, and more. Essential preparation for painting and property maintenance.',
+    icon: Droplets,
+    features: ['House Washing', 'Deck Cleaning', 'Driveway Cleaning', 'Pre-Paint Prep'],
+    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp',
     priceRange: 'Starting at $200'
   }
 ]
