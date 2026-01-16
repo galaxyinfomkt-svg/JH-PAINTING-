@@ -23,7 +23,7 @@ interface Props {
   }
 }
 
-// Generate Schema JSON-LD for city+service pages
+// Generate Schema JSON-LD for city+service pages - VSL Redesign v2
 function generateCityServiceSchema(cityName: string, serviceName: string, serviceSlug: string, citySlug: string, countyName: string) {
   return {
     "@context": "https://schema.org",
