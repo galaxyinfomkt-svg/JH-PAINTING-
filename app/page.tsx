@@ -24,7 +24,8 @@ import {
   Building2,
   PaintBucket,
   Award,
-  Hammer
+  Hammer,
+  Droplets
 } from 'lucide-react'
 import { cities } from './data/cities'
 import LazyIframe from './components/LazyIframe'
@@ -187,6 +188,12 @@ const menuServices = [
     href: '/services/carpentry',
     icon: Hammer,
     description: 'Expert wood repairs & trim work'
+  },
+  {
+    name: 'Power Washing',
+    href: '/services/power-washing',
+    icon: Droplets,
+    description: 'Professional pressure cleaning'
   },
 ]
 

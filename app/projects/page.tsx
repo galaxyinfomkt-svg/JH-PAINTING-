@@ -69,7 +69,7 @@ const beforeAfterPairs = [
     location: 'Massachusetts'
   },
   {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a3027a03db26c93445285.webp',
+    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a30274e42b930842eea35.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a3027a03db26c93445285.webp',
     beforeAlt: 'Staircase before refinishing',
     afterAlt: 'Staircase after professional refinishing',
