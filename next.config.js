@@ -525,15 +525,19 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // HTTP Headers for caching and performance
+  // HTTP Headers for caching and performance - Aggressive caching for better PageSpeed
   async headers() {
     return [
       {
-        source: '/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff|woff2)',
+        source: '/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff|woff2|ttf|otf|eot)',
         headers: [
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          },
+          {
+            key: 'Vary',
+            value: 'Accept-Encoding',
           },
         ],
       },
@@ -544,6 +548,10 @@ const nextConfig = {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
           },
+          {
+            key: 'Vary',
+            value: 'Accept-Encoding',
+          },
         ],
       },
       {
@@ -552,6 +560,27 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        // Cache JS and CSS files aggressively
+        source: '/:path*.(js|css)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        // Cache HTML pages with stale-while-revalidate
+        source: '/:path*',
+        has: [{ type: 'header', key: 'accept', value: '(.*text/html.*)' }],
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, stale-while-revalidate=86400',
           },
         ],
       },

@@ -13,13 +13,14 @@ const FloatingSocial = dynamic(() => import('./components/FloatingSocial'), {
 })
 
 // Optimize font loading - only load essential weights for better FCP
+// Using 'swap' ensures text is visible immediately with fallback font
 const inter = Inter({
   subsets: ['latin'],
-  display: 'swap',
+  display: 'swap', // Critical for font display optimization - prevents FOIT
   variable: '--font-inter',
   weight: ['400', '600', '700'],
   fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-  adjustFontFallback: true,
+  adjustFontFallback: true, // Reduces CLS by matching fallback font metrics
   preload: true,
 })
 
@@ -577,14 +578,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KB89D6QQ');`,
           }}
         />
-        {/* Preconnect to external resources for faster loading */}
+        {/* Preconnect to critical external resources - improves LCP */}
         <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* DNS prefetch for non-critical resources - reduces connection time */}
         <link rel="dns-prefetch" href="https://storage.googleapis.com" />
         <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://reputationhub.site" />
         <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         {/* Preload critical LCP image for faster loading - fetchPriority high */}
         <link
           rel="preload"

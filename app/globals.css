@@ -1,6 +1,27 @@
 /* ============================================
    CSS VARIABLES & RESET - LUXURY MODERN 2025
+   Optimized for Core Web Vitals
 ============================================ */
+
+/* Critical CSS - Above the fold styles loaded first */
+@layer critical {
+  :root {
+    --jh-navy: #0A1F44;
+    --jh-red: #D20404;
+    --jh-text: #0F172A;
+    --jh-gray-50: #F8FAFC;
+    --font-sans: var(--font-inter, 'Inter'), system-ui, -apple-system, sans-serif;
+  }
+
+  html { background: #F8FAFC; }
+  body {
+    font-family: var(--font-sans);
+    background: #F8FAFC;
+    color: #0F172A;
+    margin: 0;
+  }
+}
+
 :root {
   /* PRIMARY - Navy Blue (Matching ampainterinc.com) */
   --jh-navy: #0A1F44;
@@ -112,6 +133,40 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  /* Prevent layout shift - images should have explicit dimensions */
+  content-visibility: auto;
+}
+
+/* Prevent forced reflow and layout shifts */
+.hero-section,
+.header,
+.footer {
+  contain: layout style;
+}
+
+/* Reserve space for lazy-loaded content to prevent CLS */
+iframe {
+  background: var(--jh-gray-100);
+}
+
+/* Optimize animations to use GPU - prevents forced reflow */
+.btn,
+.nav-dropdown-menu,
+.mobile-menu {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 a {
