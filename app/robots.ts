@@ -6,7 +6,21 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/'],
+        disallow: [
+          '/api/',
+          '/_next/',
+          // Block spam URL patterns
+          '/*?*xmcn*',
+          '/*?*nco*',
+          '/*?chiba*',
+          '/*?s={search_term_string}',
+          '/*?40001*',
+          '/*?339*',
+          // Block old URL patterns that should use redirects
+          '/jh-painting-services-*',
+          // Block tag query params (should go to /blog directly)
+          '/blog?tag=*',
+        ],
       },
       {
         userAgent: 'GPTBot',
