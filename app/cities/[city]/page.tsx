@@ -525,7 +525,7 @@ export default function CityPage({ params }: Props) {
                 marginBottom: '1.5rem',
                 letterSpacing: '-0.02em'
               }}>
-                <span className="hero-title-number">#1</span> <span className="hero-title-highlight">Painting</span><br />
+                <span className="hero-title-number">#1</span> <span className="hero-title-highlight">Painter</span><br />
                 <span className="hero-title-highlight">Contractor</span> <span className="hero-title-in">in</span><br />
                 <span className="hero-title-city">{city.name}, MA</span>
               </h1>

@@ -515,7 +515,7 @@ export default function HomePage() {
                 </div>
 
                 <h1 className="hero-title">
-                  <span className="hero-title-number">#1</span> <span className="hero-title-highlight">Painting</span><br />
+                  <span className="hero-title-number">#1</span> <span className="hero-title-highlight">Painter</span><br />
                   <span className="hero-title-highlight">Contractor</span> <span className="hero-title-in">in</span><br />
                   <span className="hero-title-state">Massachusetts</span>
                 </h1>
