@@ -7088,6 +7088,14 @@ a:focus-visible {
   border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 32px 64px rgba(0, 0, 0, 0.18);
+  min-height: 400px;
+  background: #f1f5f9;
+}
+
+.city-about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .city-about-badge {

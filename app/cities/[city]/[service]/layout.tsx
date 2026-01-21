@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getCityBySlug, cities } from '@/app/data/cities'
+import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
 
 interface Props {
   params: { city: string; service: string }
@@ -72,8 +72,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const countyName = city.county || 'Massachusetts'
   const zipCode = city.zipCodes?.[0] || ''
 
-  // SEO-optimized title: Service + City + State + ZIP + Phone
-  const title = `${service.seoTitle} ${cityName} MA | Best ${service.name} ${zipCode} | (508) 690-8886`
+  // SEO-optimized title - max 60 chars for Google display
+  const title = `${service.seoTitle} ${cityName} MA | JH Painting`
 
   // Extended keywords for this city+service combination
   const extendedKeywords = [
@@ -91,14 +91,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ...service.keywords.map(k => `${k} ${cityName} MA`),
   ]
 
+  // Use state suffix in URL for canonical and og:url
+  const citySlugWithState = params.city.endsWith('-ma') || params.city.endsWith('-ri')
+    ? params.city
+    : getCitySlugWithState(city.slug)
+
   return {
     title,
     description: `Best ${service.name.toLowerCase()} in ${cityName}, MA ${zipCode}. JH Painting offers ${service.description} in ${cityName}, ${countyName}. Premium paints (Benjamin Moore, Sherwin-Williams). Licensed & insured. 40+ 5-star reviews. FREE estimates - Call (508) 690-8886!`,
     keywords: extendedKeywords.join(', '),
     openGraph: {
-      title: `${service.seoTitle} ${cityName} MA | Best ${service.name} | JH Painting`,
+      title: `${service.seoTitle} ${cityName} MA | JH Painting`,
       description: `#1 rated ${service.name.toLowerCase()} in ${cityName}, Massachusetts. ${service.shortDesc}. Licensed & insured. FREE estimates!`,
-      url: `https://jhpaintingservices.com/cities/${params.city}/${params.service}`,
+      url: `https://jhpaintingservices.com/cities/${citySlugWithState}/${params.service}`,
       siteName: 'JH Painting Services',
       locale: 'en_US',
       type: 'website',
@@ -119,7 +124,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       creator: '@jhpaintingma',
     },
     alternates: {
-      canonical: `https://jhpaintingservices.com/cities/${params.city}/${params.service}`,
+      canonical: `https://jhpaintingservices.com/cities/${citySlugWithState}/${params.service}`,
     },
     robots: {
       index: true,
@@ -147,7 +152,8 @@ export async function generateStaticParams() {
   for (const city of cities) {
     for (const service of serviceList) {
       params.push({
-        city: city.slug,
+        // Use city slug with state suffix (e.g., "acton-ma")
+        city: getCitySlugWithState(city.slug),
         service: service,
       })
     }

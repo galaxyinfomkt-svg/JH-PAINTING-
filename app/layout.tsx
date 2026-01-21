@@ -24,7 +24,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: '#1 Painting Contractor in Massachusetts | JH Painting Services | Marlborough',
+  title: '#1 Painter Contractor Massachusetts | JH Painting',
   description: 'Award-winning painting contractor serving Massachusetts since 2018. Expert interior & exterior painting, cabinet refinishing, deck staining. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star reviews. FREE estimates: (508) 690-8886 | contact@jhpaintingservices.com',
   keywords: 'painting contractor Massachusetts, house painters Massachusetts, painters near me Massachusetts, professional painters Massachusetts, interior painters MA, exterior painters MA, cabinet refinishing Massachusetts, deck staining Massachusetts, JH Painting Services, painters Marlborough MA, painters Worcester MA, painters Boston MA, painters Framingham MA, painters Natick MA, licensed painters Massachusetts',
   authors: [{ name: 'JH Painting Services' }],
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   publisher: 'JH Painting Services',
   category: 'Home Improvement',
   openGraph: {
-    title: 'JH Painting Services | #1 Rated Painting Contractor in Massachusetts | 7+ Years',
+    title: '#1 Painter Contractor MA | JH Painting Services',
     description: 'Transform your home with Massachusetts\' trusted painting contractor. Interior & exterior painting, cabinet refinishing, deck staining. 40+ 5-star reviews. Licensed & $2M insured. FREE estimates: (508) 690-8886',
     url: 'https://jhpaintingservices.com',
     siteName: 'JH Painting Services',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JH Painting Services | #1 Painting Contractor Massachusetts | (508) 690-8886',
+    title: '#1 Painter Contractor MA | (508) 690-8886',
     description: '7+ years serving Massachusetts. Interior & exterior painting, cabinet refinishing. 40+ 5-star reviews. Licensed & insured. FREE estimates!',
     images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
     creator: '@jhpaintingma',

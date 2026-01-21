@@ -7,17 +7,19 @@ export interface City {
   zipCodes?: string[]
   landmarks?: string[]
   neighborhoods?: string[]
+  latitude?: number
+  longitude?: number
 }
 
 export const cities: City[] = [
   // 0-5 MILES
-  { name: 'Hudson', slug: 'hudson', distance: 3.13, county: 'Middlesex County', population: '20,000+', zipCodes: ['01749'], landmarks: ['Downtown Hudson', 'Assabet River Rail Trail'], neighborhoods: ['Downtown Hudson', 'Hudson Center'] },
-  { name: 'Southborough', slug: 'southborough', distance: 3.19, county: 'Worcester County', population: '10,000+', zipCodes: ['01772'], landmarks: ['St. Mark\'s School', 'Breakneck Hill Conservation Land'], neighborhoods: ['Southborough Center', 'Cordaville'] },
-  { name: 'Berlin', slug: 'berlin', distance: 5.17, county: 'Worcester County', population: '3,000+', zipCodes: ['01503'], landmarks: ['Assabet River National Wildlife Refuge'], neighborhoods: ['Berlin Center', 'South Berlin'] },
+  { name: 'Hudson', slug: 'hudson', distance: 3.13, county: 'Middlesex County', population: '20,000+', zipCodes: ['01749'], landmarks: ['Downtown Hudson', 'Assabet River Rail Trail'], neighborhoods: ['Downtown Hudson', 'Hudson Center'], latitude: 42.3918, longitude: -71.5662 },
+  { name: 'Southborough', slug: 'southborough', distance: 3.19, county: 'Worcester County', population: '10,000+', zipCodes: ['01772'], landmarks: ['St. Mark\'s School', 'Breakneck Hill Conservation Land'], neighborhoods: ['Southborough Center', 'Cordaville'], latitude: 42.3057, longitude: -71.5240 },
+  { name: 'Berlin', slug: 'berlin', distance: 5.17, county: 'Worcester County', population: '3,000+', zipCodes: ['01503'], landmarks: ['Assabet River National Wildlife Refuge'], neighborhoods: ['Berlin Center', 'South Berlin'], latitude: 42.3812, longitude: -71.6370 },
 
   // 5-10 MILES
-  { name: 'Northborough', slug: 'northborough', distance: 5.30, county: 'Worcester County', population: '15,000+', zipCodes: ['01532'], landmarks: ['Assabet River Rail Trail', 'Northborough Crossing'], neighborhoods: ['Northborough Center', 'West Northborough'] },
-  { name: 'Cordaville', slug: 'cordaville', distance: 5.64, county: 'Worcester County', population: '5,000+', zipCodes: ['01772'], landmarks: ['Cordaville Mill', 'Breakneck Hill'], neighborhoods: ['Cordaville Village'] },
+  { name: 'Northborough', slug: 'northborough', distance: 5.30, county: 'Worcester County', population: '15,000+', zipCodes: ['01532'], landmarks: ['Assabet River Rail Trail', 'Northborough Crossing'], neighborhoods: ['Northborough Center', 'West Northborough'], latitude: 42.3195, longitude: -71.6412 },
+  { name: 'Cordaville', slug: 'cordaville', distance: 5.64, county: 'Worcester County', population: '5,000+', zipCodes: ['01772'], landmarks: ['Cordaville Mill', 'Breakneck Hill'], neighborhoods: ['Cordaville Village'], latitude: 42.2857, longitude: -71.5240 },
   { name: 'Stow', slug: 'stow', distance: 6.41, county: 'Middlesex County', population: '7,000+', zipCodes: ['01775'], landmarks: ['Collings Foundation', 'Lake Boon'], neighborhoods: ['Stow Center', 'Gleasondale'] },
   { name: 'Westborough', slug: 'westborough', distance: 6.58, county: 'Worcester County', population: '19,000+', zipCodes: ['01581', '01582'], landmarks: ['Westborough Station', 'Cedar Hill'], neighborhoods: ['Downtown Westborough', 'Westborough Center'] },
   { name: 'Framingham Center', slug: 'framingham-center', distance: 6.59, county: 'Middlesex County', population: '8,000+', zipCodes: ['01701'], landmarks: ['Framingham Centre Common', 'Edgell Memorial Library'], neighborhoods: ['Framingham Center', 'Nobscot'] },
@@ -140,7 +142,29 @@ export const cities: City[] = [
 ]
 
 export function getCityBySlug(slug: string): City | undefined {
-  return cities.find(city => city.slug === slug)
+  // Support both formats: "acton" and "acton-ma"
+  const normalizedSlug = slug.endsWith('-ma') ? slug.slice(0, -3) : slug
+  return cities.find(city => city.slug === normalizedSlug)
+}
+
+// Get city slug with state suffix for URLs (e.g., "acton-ma")
+export function getCitySlugWithState(citySlug: string): string {
+  // Special case for Woonsocket which is in RI
+  if (citySlug === 'woonsocket-ri') {
+    return 'woonsocket-ri' // Already has state
+  }
+  return `${citySlug}-ma`
+}
+
+// Parse city slug from URL (removes -ma suffix if present)
+export function parseCitySlug(urlSlug: string): string {
+  if (urlSlug.endsWith('-ma')) {
+    return urlSlug.slice(0, -3)
+  }
+  if (urlSlug.endsWith('-ri')) {
+    return urlSlug // Keep as-is for RI cities
+  }
+  return urlSlug
 }
 
 export function getCitiesByDistance(maxDistance: number): City[] {

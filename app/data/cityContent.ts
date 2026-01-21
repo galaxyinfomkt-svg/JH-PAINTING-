@@ -8157,9 +8157,105 @@ export const cityContentMap: Record<string, CityContent> = {
   }
 }
 
-// Get content for a city, falling back to default if not found
+// Get content for a city, falling back to dynamically generated content
 export function getCityContent(slug: string): CityContent {
-  return cityContentMap[slug] || { ...cityContentMap['default'], slug }
+  // If we have custom content for this city, use it
+  if (cityContentMap[slug]) {
+    return cityContentMap[slug]
+  }
+
+  // Otherwise, return default with dynamic slug
+  return { ...cityContentMap['default'], slug }
+}
+
+// Generate truly unique content based on city data
+export function generateUniqueCityContent(
+  cityName: string,
+  slug: string,
+  county?: string,
+  population?: string,
+  landmarks?: string[],
+  neighborhoods?: string[],
+  distance?: number
+): CityContent {
+  // If we have custom content, return it
+  if (cityContentMap[slug]) {
+    return cityContentMap[slug]
+  }
+
+  const countyContext = county || 'Massachusetts'
+  const landmarksList = landmarks?.slice(0, 2).join(' and ') || 'local attractions'
+  const neighborhoodsList = neighborhoods?.slice(0, 2).join(', ') || 'neighborhoods throughout'
+  const distanceText = distance && distance < 10
+    ? `just ${distance.toFixed(1)} miles from our Marlborough headquarters`
+    : `serving ${countyContext} from our Marlborough base`
+  const popContext = population || 'growing community'
+
+  // Generate unique content based on city-specific data
+  return {
+    slug,
+    heroHeadline: `${cityName}'s Trusted Professional Painters`,
+    heroSubheadline: `Premium painting services for ${cityName} homes and businesses in ${countyContext}.`,
+    introText: `When ${cityName} homeowners need exceptional painting results, they turn to JH Painting Services. Located ${distanceText}, we've built our reputation serving the ${popContext} of ${cityName} with meticulous craftsmanship and genuine care. From classic New England colonials to modern construction near ${landmarksList}, we understand the unique character of ${cityName} properties. Our deep familiarity with ${countyContext}'s climate challenges – harsh winters, humid summers, and dramatic temperature swings – means we select paints and techniques specifically designed to protect and beautify your ${cityName} home for years to come.`,
+    painPoints: [
+      `Your ${cityName} home's exterior paint is peeling, cracking, or fading from years of New England weather exposure`,
+      `Previous painters in ${cityName} left your project unfinished, missed details, or produced sloppy work that's already failing`,
+      `The demanding ${countyContext} climate has caused moisture damage, mold growth, or wood rot on your ${cityName} property`,
+      `Your ${cityName} kitchen cabinets look dated but full replacement costs of $15,000-$30,000 are out of reach`,
+      `Finding reliable, trustworthy painters in ${cityName} who show up on time and respect your property has been frustrating`,
+      `Your ${cityName} home near ${landmarksList} needs painters who understand the area's architectural character`,
+      `Balancing home improvement with your busy ${cityName} family schedule feels overwhelming`
+    ],
+    solutions: [
+      `Premium Benjamin Moore and Sherwin-Williams paints specifically formulated for ${countyContext}'s extreme weather conditions`,
+      `Meticulous 7-step preparation process that addresses underlying issues before any paint is applied`,
+      `EPA Lead-Safe Certified painting for ${cityName}'s older homes built before 1978`,
+      `Cabinet refinishing that saves 60-70% vs replacement while delivering stunning, factory-quality results`,
+      `Consistent, reliable service – we show up when promised, communicate clearly, and treat your ${cityName} home with respect`,
+      `Local expertise with ${cityName}'s architectural styles from historic properties to new construction`,
+      `Flexible scheduling designed around busy ${cityName} family and work commitments`
+    ],
+    localContext: `We're proud to serve ${cityName} and the surrounding ${countyContext} communities. Our crews are familiar with ${neighborhoodsList} and landmarks like ${landmarksList}. Being ${distanceText} means fast response times and genuine accountability – we're not distant contractors passing through, but neighbors invested in ${cityName}'s community. We understand what ${cityName} homeowners value: quality work, fair prices, and painters who treat their property with care.`,
+    whyChooseUs: [
+      `Located ${distanceText} – your true local ${cityName} painters`,
+      `Deep knowledge of ${cityName}'s architecture and ${countyContext}'s climate challenges`,
+      `Premium paints from Benjamin Moore and Sherwin-Williams`,
+      `40+ five-star Google reviews from satisfied customers`,
+      `Fully licensed, insured, and EPA Lead-Safe Certified`,
+      `Written warranties: 5 years exterior, 3 years interior`,
+      `Free, detailed estimates with transparent, upfront pricing`
+    ],
+    testimonialContext: `${cityName} homeowners consistently praise our attention to detail, reliable communication, and the lasting quality of our work. Our reputation throughout ${countyContext} is built on one satisfied customer at a time.`,
+    faq: [
+      {
+        question: `Do you serve ${cityName}, MA?`,
+        answer: `Absolutely! ${cityName} is ${distance && distance < 10 ? 'one of our closest service areas' : 'well within our service area'}, ${distanceText}. We have many satisfied customers throughout ${cityName} and can typically schedule estimates within 2-3 days. Call (508) 690-8886 for your free ${cityName} estimate!`
+      },
+      {
+        question: `How much does painting cost in ${cityName}?`,
+        answer: `Painting costs in ${cityName} depend on project scope, surface condition, and paint selection. Typical ranges: interior $3-$5/sq ft, exterior $4-$7/sq ft, cabinet refinishing $3,500-$8,000 for average kitchens. We provide free, detailed estimates with no hidden fees. Every ${cityName} project is unique – contact us for your accurate quote.`
+      },
+      {
+        question: `What makes JH Painting the best choice for ${cityName} homeowners?`,
+        answer: `${cityName} homeowners choose us for our local expertise, premium materials, and genuine commitment to quality. We understand ${countyContext}'s climate, ${cityName}'s architectural styles, and what it takes to deliver lasting results. Our 40+ five-star reviews and written warranties give you confidence and protection.`
+      },
+      {
+        question: `How quickly can you start a project in ${cityName}?`,
+        answer: `For ${cityName} projects, we typically schedule estimates within 2-3 days and can often begin work within 1-2 weeks. During peak season (May-September), we recommend booking 2-3 weeks ahead. Call (508) 690-8886 to discuss your ${cityName} project timeline.`
+      },
+      {
+        question: `What paint brands do you use for ${cityName} homes?`,
+        answer: `We exclusively use premium paints from Benjamin Moore (Aura, Regal Select) and Sherwin-Williams (Duration, Emerald) – brands specifically formulated for ${countyContext}'s demanding climate. These paints withstand our freeze-thaw cycles, resist fading, and last 10+ years with proper application.`
+      },
+      {
+        question: `Do you offer warranties on ${cityName} painting projects?`,
+        answer: `Every ${cityName} project includes comprehensive warranties: 5 years on exterior painting, 3 years on interior, covering peeling, cracking, and blistering. Being local means easy warranty service – if something's not right, we're here to make it right.`
+      }
+    ],
+    nearbyAreas: ['Marlborough', 'Framingham', 'Worcester', 'Natick'],
+    localTip: `${cityName} homeowners: The best time for exterior painting is late spring through early fall when temperatures stay between 50-85°F. For ${countyContext}'s older homes, always verify if lead paint testing is needed before any work begins. We recommend scheduling exterior projects by March or April to secure prime dates before our schedule fills.`,
+    closingPitch: `Ready to transform your ${cityName} home? JH Painting Services brings professional expertise, premium materials, and genuine care to every project. We've earned the trust of homeowners throughout ${countyContext} with exceptional results and honest service. Contact us at (508) 690-8886 for your free estimate and discover why ${cityName} families choose us for their painting needs.`
+  }
 }
 
 // Generate unique meta description for a city
@@ -8169,4 +8265,372 @@ export function getCityMetaDescription(cityName: string, slug: string): string {
     return `${content.heroHeadline}. ${content.painPoints[0].replace('Your', `Your ${cityName}`)} ${content.solutions[0]} Call (508) 690-8886 for a FREE estimate!`
   }
   return `Best painters in ${cityName}, MA. Professional interior & exterior house painters. Premium Benjamin Moore & Sherwin-Williams paints. Licensed & insured. 40+ 5-star reviews. FREE estimates - Call (508) 690-8886!`
+}
+
+// ============================================================================
+// SERVICE-SPECIFIC CONTENT GENERATION
+// Creates truly unique content for each city+service combination
+// ============================================================================
+
+export interface ServiceContent {
+  heroIntro: string
+  uniqueDescription: string
+  painPoints: { title: string; desc: string; solution: string }[]
+  localContext: string
+  whyChooseUs: string[]
+  faq: { question: string; answer: string }[]
+  closingPitch: string
+}
+
+// Service-specific templates with variations
+const serviceTemplates: Record<string, {
+  painPointVariants: { title: string; desc: string; solution: string }[][]
+  introTemplates: string[]
+  localContextTemplates: string[]
+  closingTemplates: string[]
+}> = {
+  'interior-painting': {
+    painPointVariants: [
+      [
+        { title: 'Walls Showing Years of Wear?', desc: 'Scuff marks, nail holes, and stains have accumulated over the years, making your rooms look tired and neglected.', solution: 'Complete wall restoration with premium interior paints' },
+        { title: 'Outdated Color Schemes?', desc: "Those paint colors from 10+ years ago don't match your current furniture or lifestyle. Your home feels stuck in the past.", solution: 'Expert color consultation to modernize your space' },
+        { title: 'Worried About Paint Fumes?', desc: 'You have kids, pets, or family members with sensitivities. The idea of toxic paint fumes in your home is concerning.', solution: 'Low-VOC and zero-VOC paint options for family safety' }
+      ],
+      [
+        { title: 'Ceiling Stains & Water Marks?', desc: "Those brown spots and discoloration on your ceiling aren't just ugly – they make your whole room look dirty and neglected.", solution: 'Stain-blocking primers and pristine ceiling restoration' },
+        { title: 'Trim & Baseboards Looking Rough?', desc: 'Chipped, yellowed, or scuffed trim detracts from your entire room. Even freshly painted walls look bad next to worn trim.', solution: 'Detailed trim work with durable semi-gloss finishes' },
+        { title: 'DIY Disasters to Fix?', desc: "Your last paint job has brush marks, roller lines, and uneven coverage. Now you need professionals to fix the mess.", solution: 'Expert prep work to correct previous painting errors' }
+      ],
+      [
+        { title: 'Wallpaper Removal Nightmare?', desc: 'That dated wallpaper has to go, but removing it yourself seems impossible. You need professionals who can handle it right.', solution: 'Complete wallpaper removal and wall restoration' },
+        { title: 'Drywall Damage Visible?', desc: 'Cracks, holes, and imperfections in your walls show through every paint job. Surface prep is clearly lacking.', solution: 'Professional drywall repair before painting' },
+        { title: 'Dark Rooms Need Light?', desc: 'Your rooms feel cramped and gloomy. You want to brighten the space but worry about paint coverage over dark colors.', solution: 'Premium primers for complete color transformation' }
+      ]
+    ],
+    introTemplates: [
+      'Transform your {cityName} home\'s interior with professional painting that brings new life to every room. Our {countyContext} interior painting experts understand how New England\'s dramatic humidity changes affect interior surfaces, and we use paints specifically formulated for these conditions. From living rooms and bedrooms to kitchens and bathrooms, we deliver flawless results that last.',
+      'Interior painting in {cityName} requires understanding local conditions – from the humidity near {landmarksList} to the heating demands of our cold winters. JH Painting brings 15+ years of experience to every {cityName} interior project, ensuring proper surface preparation, premium paint selection, and meticulous application that stands up to daily life.',
+      'Your {cityName} home deserves interior painting that reflects your style and stands up to family life. Whether you\'re refreshing a single room or transforming your entire home, our {countyContext} painting team delivers precise, professional results. We work around your schedule, minimize disruption, and leave your space cleaner than we found it.'
+    ],
+    localContextTemplates: [
+      'We\'ve painted hundreds of {cityName} interiors – from cozy {neighborhoodsList} homes to larger properties throughout {countyContext}. Our familiarity with {cityName}\'s housing stock, from historic colonials to modern construction, means we know exactly how to approach your project for optimal results.',
+      '{cityName} homeowners in {neighborhoodsList} and beyond trust us for interior painting because we understand local homes. The older properties require careful prep and lead-safe practices; newer homes need proper primer selection for modern drywall. We adapt our approach to your specific {cityName} home.',
+      'From the families near {landmarksList} to every neighborhood throughout {cityName}, we\'ve built our interior painting reputation one satisfied customer at a time. Our {countyContext} roots mean we\'re accountable, accessible, and genuinely invested in delivering results that make you proud.'
+    ],
+    closingTemplates: [
+      'Ready for a stunning interior transformation in your {cityName} home? JH Painting delivers professional results with minimal disruption to your daily life. Call (508) 690-8886 for your free estimate and discover why {cityName} families trust us for their interior painting.',
+      'Your {cityName} interior deserves expert attention. From careful prep work to premium paint application, we handle every detail. Contact JH Painting at (508) 690-8886 for a free estimate and see how we can transform your {countyContext} home.',
+      'Transform your {cityName} living spaces with interior painting that exceeds expectations. Our team brings professional expertise and genuine care to every {countyContext} project. Call (508) 690-8886 today for your free interior painting estimate.'
+    ]
+  },
+  'exterior-painting': {
+    painPointVariants: [
+      [
+        { title: 'Paint Peeling in Sheets?', desc: 'New England weather has destroyed your paint job. Large sections are peeling, exposing bare wood to further damage.', solution: 'Complete surface restoration with weather-resistant systems' },
+        { title: 'Faded Curb Appeal?', desc: 'Sun, rain, and harsh winters have left your home looking washed out and tired. Your curb appeal has vanished.', solution: 'UV-resistant premium paints that maintain color for years' },
+        { title: 'Wood Rot Spreading?', desc: 'Moisture has gotten under the paint and now rot is spreading. Simply painting over it will only hide the problem temporarily.', solution: 'Complete wood replacement and rot repair before painting' }
+      ],
+      [
+        { title: 'Chalking & Discoloration?', desc: 'Your exterior paint has broken down, leaving a chalky residue and uneven color. It looks worse every year.', solution: 'Proper power washing and premium exterior paint systems' },
+        { title: 'Caulk Cracked & Failing?', desc: 'The caulk around your windows, doors, and trim has dried out and cracked, letting water damage your home.', solution: 'Complete recaulking with premium flexible sealants' },
+        { title: 'Last Paint Job Failed Early?', desc: "You paid for exterior painting but it's already failing after just 2-3 years. Poor prep and cheap paint are showing.", solution: 'Professional prep work with 10+ year paint systems' }
+      ],
+      [
+        { title: 'Mold & Mildew Growth?', desc: 'Green and black growth on your siding is more than ugly – it\'s damaging your home and can affect indoor air quality.', solution: 'Deep cleaning and mold-resistant exterior paints' },
+        { title: 'Multiple Layers Failing?', desc: 'Years of paint buildup are now failing together. Each new coat peels off the layers below.', solution: 'Complete paint removal to sound substrate' },
+        { title: 'Cedar/Wood Siding Weathered?', desc: 'Your beautiful cedar or wood siding has turned gray and is showing signs of wear. It needs protection before permanent damage occurs.', solution: 'Expert wood restoration and staining services' }
+      ]
+    ],
+    introTemplates: [
+      '{cityName} homes face brutal exterior challenges – freezing winters, summer humidity, and temperature swings of 100+ degrees annually. Our exterior painting services are specifically designed for {countyContext} conditions, using weather-resistant paints and proper techniques that protect your investment.',
+      'Protect and beautify your {cityName} property with exterior painting engineered for New England. Our team understands the specific challenges homes near {landmarksList} face, from salt air exposure to intense sun. We deliver lasting results that boost curb appeal and protect your largest investment.',
+      'Your {cityName} home\'s exterior is constantly battling the elements. From harsh {countyContext} winters to humid summers, your paint is under attack year-round. JH Painting uses premium exterior systems from Benjamin Moore and Sherwin-Williams, applied with meticulous preparation that ensures lasting protection.'
+    ],
+    localContextTemplates: [
+      'We\'ve protected {cityName} homes throughout {neighborhoodsList} with exterior painting that lasts. Our crews know which {cityName} neighborhoods have older homes requiring lead-safe practices, which areas face more sun exposure, and where moisture is a particular challenge.',
+      'From the established neighborhoods near {landmarksList} to newer developments throughout {cityName}, we adapt our exterior painting approach to each property\'s specific needs. Our {countyContext} experience means we understand local conditions that out-of-town contractors miss.',
+      '{cityName}\'s diverse architecture – from historic colonials to contemporary homes – requires versatile exterior painting expertise. We\'ve successfully painted every style in {neighborhoodsList} and throughout {countyContext}, always adapting our techniques for optimal results.'
+    ],
+    closingTemplates: [
+      'Restore your {cityName} home\'s curb appeal with exterior painting that stands up to {countyContext} weather. Our comprehensive approach protects your investment while making your home the pride of the neighborhood. Call (508) 690-8886 for your free estimate.',
+      'Your {cityName} exterior deserves professional protection. From thorough prep to premium paint application, we deliver lasting results that boost property value. Contact JH Painting at (508) 690-8886 to schedule your free exterior painting estimate.',
+      'Don\'t let another {countyContext} winter damage your {cityName} home. Our exterior painting services provide the protection and beauty your property deserves. Call (508) 690-8886 today for a free estimate on your exterior painting project.'
+    ]
+  },
+  'commercial-painting': {
+    painPointVariants: [
+      [
+        { title: 'Need Minimal Business Disruption?', desc: 'Closing for painting means lost revenue. You need painters who can work around your business hours.', solution: 'Flexible scheduling including nights and weekends' },
+        { title: 'Tight Deadline Pressure?', desc: 'New tenant moving in, grand opening approaching, or lease requirement pending. Time is critical.', solution: 'On-time project completion guaranteed' },
+        { title: 'Brand Colors Must Be Exact?', desc: 'Your corporate colors need to match across all locations. Close enough isn\'t good enough.', solution: 'Precise computer color matching technology' }
+      ],
+      [
+        { title: 'Multi-Location Consistency?', desc: 'You manage multiple properties and need consistent quality and appearance at every location.', solution: 'Systematic approach ensuring uniform results' },
+        { title: 'Safety & Compliance Concerns?', desc: 'Your facility has specific requirements – food service, healthcare, or manufacturing. Compliance matters.', solution: 'Industry-specific paints and proper documentation' },
+        { title: 'High-Traffic Durability Needed?', desc: 'Standard residential paints won\'t survive your commercial traffic. Walls get damaged quickly.', solution: 'Commercial-grade, scrubbable paint systems' }
+      ],
+      [
+        { title: 'Budget Constraints Real?', desc: 'You need professional results but have a limited budget. Every dollar counts for your business.', solution: 'Honest pricing with no hidden fees or surprises' },
+        { title: 'Previous Contractor Unreliable?', desc: 'You\'ve been burned by painters who didn\'t show up, dragged out the project, or did subpar work.', solution: 'Dependable scheduling with clear communication' },
+        { title: 'Large Space, Complex Logistics?', desc: 'Your warehouse, retail space, or office building requires careful planning and coordination.', solution: 'Experienced project management for complex jobs' }
+      ]
+    ],
+    introTemplates: [
+      'Your {cityName} business deserves commercial painting that enhances your professional image while minimizing disruption. JH Painting serves {countyContext} businesses with flexible scheduling, premium materials, and reliable execution. From retail to office to industrial, we deliver results that impress your customers.',
+      '{cityName} businesses trust JH Painting for commercial painting that works around their schedule. Whether you\'re near {landmarksList} or anywhere in {countyContext}, we bring professional-grade results to your office, retail space, restaurant, or facility with minimal business interruption.',
+      'Professional commercial painting for {cityName} businesses requires understanding your unique needs – tight schedules, brand consistency, and minimal disruption. Our {countyContext} commercial painting team has transformed businesses throughout {neighborhoodsList}, delivering quality that reflects well on your brand.'
+    ],
+    localContextTemplates: [
+      'We\'ve painted {cityName} businesses from small offices to large retail spaces. Our commercial painting experience throughout {countyContext} includes restaurants, medical facilities, retail stores, and office complexes. We understand commercial requirements and deliver accordingly.',
+      '{cityName}\'s business community near {landmarksList} and throughout {neighborhoodsList} trusts us for commercial painting that meets professional standards. We work around your hours, protect your inventory and equipment, and deliver on schedule.',
+      'From downtown {cityName} offices to {countyContext} retail centers, we bring the same professional approach to every commercial project. Our reputation with {cityName} businesses is built on reliability, quality, and respect for your operations.'
+    ],
+    closingTemplates: [
+      'Upgrade your {cityName} business with commercial painting that impresses customers and clients. We work around your schedule for minimal disruption. Call (508) 690-8886 for your free commercial painting estimate.',
+      'Your {cityName} commercial property deserves professional painting that reflects your business values. Contact JH Painting at (508) 690-8886 for a free estimate and discover our flexible, business-friendly approach.',
+      'Ready to refresh your {cityName} business space? Our commercial painting services deliver professional results on your timeline. Call (508) 690-8886 today for your free {countyContext} commercial painting estimate.'
+    ]
+  },
+  'residential-painting': {
+    painPointVariants: [
+      [
+        { title: 'Whole House Overwhelm?', desc: 'Your entire home needs painting but the scope feels impossible. Where do you even start?', solution: 'Expert project planning from start to finish' },
+        { title: 'Coordinating Interior & Exterior?', desc: 'You want both interior and exterior done, but managing multiple projects is daunting.', solution: 'Single contractor for complete home transformation' },
+        { title: 'Budget for Everything?', desc: 'Full house painting is a major investment. You need honest pricing you can plan around.', solution: 'Transparent pricing with flexible payment options' }
+      ],
+      [
+        { title: 'Selling Your Home Soon?', desc: 'Fresh paint is the best ROI for home sales, but you need it done quickly and professionally.', solution: 'Fast turnaround for real estate timelines' },
+        { title: 'Just Moved In?', desc: 'Your new home needs your colors and style, but you\'re already exhausted from the move.', solution: 'We handle everything while you settle in' },
+        { title: 'Growing Family Needs?', desc: 'Nursery prep, kid-proof finishes, playroom updates – your home needs to adapt to family life.', solution: 'Durable, washable, family-safe paints' }
+      ],
+      [
+        { title: 'Aging-in-Place Updates?', desc: 'You\'re updating your home for the long term. Fresh paint is part of making your space comfortable for years to come.', solution: 'Thoughtful updates for long-term living' },
+        { title: 'Investment Property Refresh?', desc: 'Your rental property needs professional painting between tenants. Time and quality matter.', solution: 'Efficient turnover painting for landlords' },
+        { title: 'Historic Home Preservation?', desc: 'Your older home has character worth preserving. You need painters who respect its history.', solution: 'Period-appropriate techniques and colors' }
+      ]
+    ],
+    introTemplates: [
+      'Complete residential painting for your {cityName} home – inside and out. JH Painting provides comprehensive home painting services throughout {countyContext}, handling everything from single rooms to full property transformations. One contractor, one point of contact, one exceptional result.',
+      '{cityName} homeowners deserve residential painting that simplifies their lives. Whether you need a few rooms refreshed or your entire home transformed, our {countyContext} team manages every detail. We coordinate interior and exterior work for seamless results.',
+      'Transform your {cityName} residence with professional painting that covers every surface. From the bedrooms and living spaces inside to the siding and trim outside, JH Painting delivers complete residential solutions throughout {neighborhoodsList} and all of {countyContext}.'
+    ],
+    localContextTemplates: [
+      'We\'ve transformed {cityName} homes of every size and style – cozy condos, family colonials, and expansive properties throughout {neighborhoodsList}. Our residential painting experience in {countyContext} means we understand what local homes need.',
+      '{cityName} families near {landmarksList} and throughout the community trust us for residential painting because we deliver complete solutions. Interior, exterior, every room, every surface – we handle it all with professional expertise.',
+      'From first-time homebuyers in {cityName} to longtime {countyContext} residents, we\'ve helped families transform their spaces with comprehensive residential painting. Our attention to detail and reliable service have made us a trusted name in {neighborhoodsList}.'
+    ],
+    closingTemplates: [
+      'Simplify your {cityName} home painting project with one trusted contractor for everything. Inside and out, we deliver beautiful results. Call (508) 690-8886 for your free residential painting estimate.',
+      'Your {cityName} home deserves complete residential painting services from a team that cares. Contact JH Painting at (508) 690-8886 for a free estimate on your {countyContext} home transformation.',
+      'Ready to transform your entire {cityName} residence? Our comprehensive painting services cover every room and surface. Call (508) 690-8886 today for your free estimate.'
+    ]
+  },
+  'cabinet-painting': {
+    painPointVariants: [
+      [
+        { title: 'Kitchen Cabinets Dated & Dark?', desc: 'Those oak or cherry cabinets from the 90s drag your whole kitchen down. But new cabinets cost $15,000-$30,000+.', solution: 'Save 70% with professional cabinet refinishing' },
+        { title: 'Want White But Worried?', desc: 'You love the look of white cabinets, but will they chip, peel, or yellow over time?', solution: 'Professional spray finish with 10+ year durability' },
+        { title: 'Tried DIY & Failed?', desc: 'Your cabinet painting attempt left brush marks, drips, and uneven coverage. Now it looks worse than before.', solution: 'We fix DIY disasters and deliver factory-smooth results' }
+      ],
+      [
+        { title: 'Peeling Cabinet Finish?', desc: 'The previous paint or finish is peeling and looks terrible. Every time you open a cabinet, more comes off.', solution: 'Complete stripping and proper refinishing' },
+        { title: 'Greasy, Grimy Buildup?', desc: 'Years of cooking have left residue that seems impossible to clean. The cabinets look dirty no matter what you do.', solution: 'Deep cleaning and degreasing before painting' },
+        { title: 'Hardware Updating Too?', desc: 'You want new handles and knobs, but different hole spacing means drilling new holes in your cabinets.', solution: 'Hardware changes with clean hole filling' }
+      ],
+      [
+        { title: 'Bathroom Vanity Ugly?', desc: 'Your bathroom cabinets are as dated as your kitchen. You want a cohesive, updated look throughout.', solution: 'Cabinet painting for kitchens, baths, and built-ins' },
+        { title: 'Maple Cabinets Orange Tint?', desc: 'Your maple cabinets have that honey-orange color that makes everything else look wrong.', solution: 'Color correction painting for beautiful results' },
+        { title: 'Tired of Brown Everything?', desc: 'Brown wood cabinets everywhere feel heavy and dark. You want something fresh and modern.', solution: 'Complete color transformation to brighten your space' }
+      ]
+    ],
+    introTemplates: [
+      'Transform your {cityName} kitchen with professional cabinet painting that saves 70% compared to replacement. JH Painting brings factory-quality spray finishes to {countyContext} homes, delivering stunning results that last 10+ years. Your outdated cabinets can look brand new.',
+      '{cityName} homeowners are discovering that cabinet painting is the smartest kitchen upgrade. Our {countyContext} cabinet refinishing specialists use professional spray equipment and premium paints for a smooth, durable finish that rivals new cabinetry at a fraction of the cost.',
+      'Why spend $15,000-$30,000 on new cabinets when professional refinishing delivers beautiful results for less? Our {cityName} cabinet painting service transforms dated kitchens throughout {neighborhoodsList} with expert preparation and flawless spray application.'
+    ],
+    localContextTemplates: [
+      'We\'ve refinished cabinets in {cityName} homes from {neighborhoodsList} to every corner of {countyContext}. From 1990s oak to 2010s maple, we know how to transform any cabinet style into something you\'ll love.',
+      '{cityName} kitchens near {landmarksList} and throughout the community have been transformed by our cabinet painting services. Homeowners are amazed at how dramatically cabinet refinishing updates their space without the cost and disruption of replacement.',
+      'The {cityName} homeowners we serve in {countyContext} consistently tell us cabinet painting was their best home improvement decision. The value is incredible – stunning results at 30% of replacement cost, completed in days instead of weeks.'
+    ],
+    closingTemplates: [
+      'Give your {cityName} kitchen a stunning makeover with professional cabinet painting. Save thousands compared to replacement. Call (508) 690-8886 for your free cabinet refinishing estimate.',
+      'Your {cityName} cabinets can look brand new at a fraction of replacement cost. Contact JH Painting at (508) 690-8886 for a free estimate on cabinet painting for your {countyContext} home.',
+      'Transform your dated {cityName} kitchen with cabinet painting that delivers factory-quality results. Call (508) 690-8886 today for your free cabinet refinishing estimate.'
+    ]
+  },
+  'carpentry': {
+    painPointVariants: [
+      [
+        { title: 'Rotted Window Frames?', desc: 'Water has damaged your window frames. The wood is soft, and painting over it is just wasted money.', solution: 'Complete rot repair with new wood before painting' },
+        { title: 'Damaged Exterior Trim?', desc: 'Your fascia, soffits, and trim are deteriorating. Holes and gaps are letting pests and weather in.', solution: 'Expert trim replacement and repair' },
+        { title: 'Door Frames Falling Apart?', desc: 'Kicked-in doors, water damage, or age has destroyed your door frames. Security and appearance suffer.', solution: 'Professional door frame repair and replacement' }
+      ],
+      [
+        { title: 'Deck Boards Splintering?', desc: 'Your deck is becoming dangerous. Splinters, soft spots, and wobbling boards need attention.', solution: 'Deck board replacement and structural repairs' },
+        { title: 'Siding Damage & Gaps?', desc: 'Missing, cracked, or warped siding leaves your home vulnerable to water damage and pests.', solution: 'Siding repair and replacement services' },
+        { title: 'Railing Unsafe?', desc: 'Your porch or deck railing is wobbly and unsafe. It needs repair before someone gets hurt.', solution: 'Railing repair and reinforcement' }
+      ],
+      [
+        { title: 'Crown Molding Missing/Damaged?', desc: 'Your crown molding has gaps, damage, or missing sections. It diminishes your home\'s character.', solution: 'Crown molding repair and installation' },
+        { title: 'Baseboards & Trim Beat Up?', desc: 'Years of vacuum cleaners, furniture, and foot traffic have destroyed your interior trim.', solution: 'Baseboard and trim repair or replacement' },
+        { title: 'Previous Repairs Look Bad?', desc: 'Amateur carpentry repairs are obvious and ugly. The patches and fixes stand out everywhere.', solution: 'Professional repairs that blend seamlessly' }
+      ]
+    ],
+    introTemplates: [
+      'Quality painting starts with solid wood. JH Painting provides expert carpentry services for {cityName} homes, ensuring your paint job has a proper foundation. We repair rot, replace damaged trim, and restore wood surfaces throughout {countyContext}.',
+      '{cityName} homes face constant challenges from {countyContext} weather – rot, moisture damage, and wear. Our carpentry services address these issues properly before painting, ensuring lasting results. Don\'t paint over problems; fix them right.',
+      'Before any paint touches your {cityName} home, underlying carpentry issues must be addressed. Our skilled carpenters repair window frames, door frames, trim, siding, and decks throughout {neighborhoodsList}, preparing surfaces for paint that lasts.'
+    ],
+    localContextTemplates: [
+      'We\'ve repaired carpentry issues on {cityName} homes from {neighborhoodsList} to every neighborhood in {countyContext}. Our crews understand how local weather affects wood and what repairs are needed for lasting results.',
+      '{cityName} homes near {landmarksList} and throughout the community benefit from our comprehensive carpentry services. We see rot repair, trim replacement, and structural fixes as essential preparation for quality painting.',
+      'The older homes throughout {cityName} and {countyContext} often need carpentry work before painting. We\'ve restored countless properties, ensuring the painted finish has a solid, lasting foundation.'
+    ],
+    closingTemplates: [
+      'Don\'t paint over problems. Fix your {cityName} home\'s carpentry issues first for lasting results. Call (508) 690-8886 for your free carpentry and painting estimate.',
+      'Your {cityName} home deserves carpentry repairs done right. Contact JH Painting at (508) 690-8886 for a free estimate on carpentry services for your {countyContext} property.',
+      'Protect your {cityName} investment with proper carpentry repairs before painting. Call (508) 690-8886 today for your free estimate.'
+    ]
+  },
+  'power-washing': {
+    painPointVariants: [
+      [
+        { title: 'Driveway Black & Stained?', desc: 'Oil stains, tire marks, rust, and years of grime make your driveway an eyesore.', solution: 'Deep cleaning restores like-new appearance' },
+        { title: 'Green Mold on Siding?', desc: 'That green and black growth covering your siding is damaging your home and looks terrible.', solution: 'Safe soft washing removes all organic growth' },
+        { title: 'Deck Gray & Weathered?', desc: 'Your deck has lost all its color. The wood looks gray, rough, and uninviting.', solution: 'Power washing preps for staining or sealing' }
+      ],
+      [
+        { title: 'Fence Looking Rough?', desc: 'Your wooden fence has turned gray and green with algae. It diminishes your entire yard\'s appearance.', solution: 'Fence washing and restoration services' },
+        { title: 'Patio Covered in Grime?', desc: 'Your patio or walkway is slippery with algae and dirt. It\'s unsafe and ugly.', solution: 'Complete hardscape cleaning and restoration' },
+        { title: 'Prepping for Paint?', desc: 'You want to paint your home but dirt, mold, and chalking paint need removal first.', solution: 'Professional prep washing for painting projects' }
+      ],
+      [
+        { title: 'Roof Streaks Visible?', desc: 'Black streaks running down your roof are more than ugly – they\'re algae eating your shingles.', solution: 'Gentle roof cleaning preserves shingles' },
+        { title: 'Brick or Stone Dingy?', desc: 'Your beautiful masonry is hidden under years of dirt, pollution, and organic growth.', solution: 'Masonry cleaning reveals natural beauty' },
+        { title: 'Getting Ready to Sell?', desc: 'You\'re selling your home and curb appeal matters. First impressions are everything.', solution: 'Complete property cleaning for real estate' }
+      ]
+    ],
+    introTemplates: [
+      'Restore your {cityName} property\'s appearance with professional power washing services. JH Painting safely removes years of dirt, mold, mildew, and stains from driveways, siding, decks, and more throughout {countyContext}.',
+      '{cityName} homes and hardscapes face constant assault from {countyContext} weather – mold, mildew, algae, and accumulated grime. Our power washing services safely restore surfaces using appropriate pressure and cleaning solutions for each material.',
+      'Professional power washing for {cityName} properties – driveways, walkways, siding, decks, fences, and more. We serve {neighborhoodsList} and all of {countyContext} with thorough cleaning that prepares surfaces for sealing, staining, or simply looking great.'
+    ],
+    localContextTemplates: [
+      'We\'ve cleaned {cityName} properties from {neighborhoodsList} to every corner of {countyContext}. Our power washing services adapt to each surface – soft washing for siding, appropriate pressure for concrete, and gentle treatment for delicate surfaces.',
+      '{cityName} homes near {landmarksList} and throughout the community trust us for power washing that delivers dramatic results safely. We understand which surfaces need soft washing versus pressure washing for optimal cleaning without damage.',
+      'The humid {countyContext} climate promotes mold and algae growth on {cityName} properties. Our power washing services address these issues thoroughly, restoring your home\'s appearance and protecting surfaces from ongoing damage.'
+    ],
+    closingTemplates: [
+      'Restore your {cityName} property\'s curb appeal with professional power washing. Driveways, siding, decks, and more. Call (508) 690-8886 for your free estimate.',
+      'Your {cityName} home will look years younger after professional power washing. Contact JH Painting at (508) 690-8886 for a free estimate on cleaning your {countyContext} property.',
+      'Remove years of dirt and grime from your {cityName} property with professional power washing. Call (508) 690-8886 today for your free estimate.'
+    ]
+  }
+}
+
+// Hash function for deterministic variation selection
+function hashCityService(cityName: string, service: string): number {
+  let hash = 0
+  const str = cityName + service
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i)
+    hash = ((hash << 5) - hash) + char
+    hash = hash & hash
+  }
+  return Math.abs(hash)
+}
+
+// Generate unique service content for a city+service combination
+export function generateServiceContent(
+  cityName: string,
+  slug: string,
+  serviceSlug: string,
+  county?: string,
+  population?: string,
+  landmarks?: string[],
+  neighborhoods?: string[],
+  distance?: number
+): ServiceContent {
+  const template = serviceTemplates[serviceSlug]
+  if (!template) {
+    // Fallback for unknown services
+    return {
+      heroIntro: `Professional ${serviceSlug.replace(/-/g, ' ')} services for your ${cityName} home.`,
+      uniqueDescription: `JH Painting provides expert ${serviceSlug.replace(/-/g, ' ')} throughout ${county || 'Massachusetts'}.`,
+      painPoints: [],
+      localContext: `Serving ${cityName} and surrounding communities.`,
+      whyChooseUs: ['Licensed & insured', 'Premium materials', 'Experienced team'],
+      faq: [],
+      closingPitch: `Contact us for your ${cityName} ${serviceSlug.replace(/-/g, ' ')} needs.`
+    }
+  }
+
+  const countyContext = county || 'Massachusetts'
+  const landmarksList = landmarks?.slice(0, 2).join(' and ') || 'local attractions'
+  const neighborhoodsList = neighborhoods?.slice(0, 2).join(', ') || 'local neighborhoods'
+  const distanceText = distance && distance < 10
+    ? `just ${distance.toFixed(1)} miles from our Marlborough headquarters`
+    : `serving ${countyContext} from our Marlborough base`
+
+  // Use hash to select variations deterministically
+  const hash = hashCityService(cityName, serviceSlug)
+  const painPointIndex = hash % template.painPointVariants.length
+  const introIndex = hash % template.introTemplates.length
+  const localIndex = (hash + 1) % template.localContextTemplates.length
+  const closingIndex = (hash + 2) % template.closingTemplates.length
+
+  // Replace placeholders in templates
+  const replacePlaceholders = (text: string): string => {
+    return text
+      .replace(/{cityName}/g, cityName)
+      .replace(/{countyContext}/g, countyContext)
+      .replace(/{landmarksList}/g, landmarksList)
+      .replace(/{neighborhoodsList}/g, neighborhoodsList)
+      .replace(/{distanceText}/g, distanceText)
+  }
+
+  const heroIntro = replacePlaceholders(template.introTemplates[introIndex])
+  const localContext = replacePlaceholders(template.localContextTemplates[localIndex])
+  const closingPitch = replacePlaceholders(template.closingTemplates[closingIndex])
+
+  // Generate unique FAQ for this city+service
+  const serviceName = serviceSlug.replace(/-/g, ' ')
+  const faq = [
+    {
+      question: `How much does ${serviceName} cost in ${cityName}?`,
+      answer: `${serviceName.charAt(0).toUpperCase() + serviceName.slice(1)} costs in ${cityName} vary based on project scope, surface condition, and material selection. We provide free, detailed estimates with transparent pricing. Contact us at (508) 690-8886 for your accurate ${cityName} quote.`
+    },
+    {
+      question: `Do you provide ${serviceName} services in ${cityName}, MA?`,
+      answer: `Yes! ${cityName} is ${distance && distance < 10 ? 'one of our primary service areas' : 'within our service area'}, ${distanceText}. We have many satisfied ${serviceName} customers throughout ${cityName} and ${countyContext}.`
+    },
+    {
+      question: `How quickly can you start a ${serviceName} project in ${cityName}?`,
+      answer: `For ${cityName} ${serviceName} projects, we typically schedule estimates within 2-3 days and can often begin work within 1-2 weeks. During peak season, we recommend booking 2-3 weeks ahead. Call (508) 690-8886 to discuss your timeline.`
+    },
+    {
+      question: `Why choose JH Painting for ${serviceName} in ${cityName}?`,
+      answer: `${cityName} homeowners choose us for our local expertise, premium materials, and genuine commitment to quality. With 40+ five-star reviews and comprehensive warranties, we deliver ${serviceName} results that exceed expectations throughout ${countyContext}.`
+    }
+  ]
+
+  const whyChooseUs = [
+    `${distanceText.charAt(0).toUpperCase() + distanceText.slice(1)} – your local ${cityName} ${serviceName} experts`,
+    `Premium materials from trusted brands like Benjamin Moore and Sherwin-Williams`,
+    `40+ five-star Google reviews from satisfied ${countyContext} customers`,
+    `Fully licensed, insured, and EPA Lead-Safe Certified`,
+    `Written warranties on all work – we stand behind our results`,
+    `Free, detailed estimates with transparent, honest pricing`
+  ]
+
+  return {
+    heroIntro,
+    uniqueDescription: `Professional ${serviceName} for ${cityName} homes and businesses throughout ${countyContext}. ${heroIntro.split('.')[0]}.`,
+    painPoints: template.painPointVariants[painPointIndex],
+    localContext,
+    whyChooseUs,
+    faq,
+    closingPitch
+  }
 }

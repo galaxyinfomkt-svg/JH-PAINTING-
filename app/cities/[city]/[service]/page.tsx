@@ -8,8 +8,8 @@ import {
   Phone, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play,
   ChevronRight, Users, Heart, Sparkles
 } from 'lucide-react'
-import { getCityBySlug, cities } from '@/app/data/cities'
-import { cityContentMap } from '@/app/data/cityContent'
+import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
+import { cityContentMap, generateServiceContent } from '@/app/data/cityContent'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
@@ -24,7 +24,19 @@ interface Props {
 }
 
 // Generate Schema JSON-LD for city+service pages - VSL Redesign v2
-function generateCityServiceSchema(cityName: string, serviceName: string, serviceSlug: string, citySlug: string, countyName: string) {
+function generateCityServiceSchema(
+  cityName: string,
+  serviceName: string,
+  serviceSlug: string,
+  citySlug: string,
+  countyName: string,
+  latitude?: number,
+  longitude?: number
+) {
+  // Use city coordinates if available, otherwise default to Marlborough HQ
+  const lat = latitude || 42.3459
+  const lng = longitude || -71.5526
+
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -43,14 +55,21 @@ function generateCityServiceSchema(cityName: string, serviceName: string, servic
           "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": cityName,
+            "streetAddress": "346 Plantation St",
+            "addressLocality": "Marlborough",
             "addressRegion": "MA",
+            "postalCode": "01752",
             "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": lat,
+            "longitude": lng
           },
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
-            "reviewCount": "47",
+            "reviewCount": "40",
             "bestRating": "5",
             "worstRating": "1"
           }
@@ -285,11 +304,31 @@ export default function CityServicePage({ params }: Props) {
   const service = servicesData[params.service as keyof typeof servicesData]
   const cityContent = cityContentMap[params.city]
 
+  // Generate unique content for this city+service combination
+  const uniqueServiceContent = city ? generateServiceContent(
+    city.name,
+    city.slug,
+    params.service,
+    city.county,
+    city.population,
+    city.landmarks,
+    city.neighborhoods,
+    city.distance
+  ) : null
+
   if (!city || !service) {
     notFound()
   }
 
-  const cityServiceSchema = generateCityServiceSchema(city.name, service.name, params.service, params.city, city.county || 'Massachusetts')
+  const cityServiceSchema = generateCityServiceSchema(
+    city.name,
+    service.name,
+    params.service,
+    params.city,
+    city.county || 'Massachusetts',
+    city.latitude,
+    city.longitude
+  )
 
   // Other services for this city
   const otherServices = Object.entries(servicesData)
@@ -352,7 +391,7 @@ export default function CityServicePage({ params }: Props) {
                 </h1>
 
                 <p className="service-hero-desc">
-                  {service.description} Trusted by {city.name} homeowners for quality craftsmanship, premium paints, and meticulous attention to detail.
+                  {uniqueServiceContent?.heroIntro || `${service.description} Trusted by ${city.name} homeowners for quality craftsmanship, premium paints, and meticulous attention to detail.`}
                 </p>
 
                 <div className="service-hero-ctas">
@@ -453,7 +492,10 @@ export default function CityServicePage({ params }: Props) {
             </div>
 
             <div className="service-pain-grid">
-              {service.painPoints.map((item, idx) => (
+              {(uniqueServiceContent?.painPoints && uniqueServiceContent.painPoints.length > 0
+                ? uniqueServiceContent.painPoints
+                : service.painPoints
+              ).map((item, idx) => (
                 <div key={idx} className="service-pain-card">
                   <h3 className="service-pain-title">{item.title}</h3>
                   <p className="service-pain-desc">{item.desc}</p>
@@ -613,7 +655,7 @@ export default function CityServicePage({ params }: Props) {
                   Founded with a passion for perfection, JH Painting Services has been transforming homes across Massachusetts for over 15 years. Owner Jafet Henrique leads every project with dedication to quality and customer satisfaction.
                 </p>
                 <p>
-                  We&apos;re proud to serve {city.name} and the surrounding communities. Our team understands the unique challenges of New England homes and delivers results that stand up to harsh weather conditions. From preparation to final inspection, we ensure every detail is perfect.
+                  {uniqueServiceContent?.localContext || `We're proud to serve ${city.name} and the surrounding communities. Our team understands the unique challenges of New England homes and delivers results that stand up to harsh weather conditions. From preparation to final inspection, we ensure every detail is perfect.`}
                 </p>
 
                 <div className="service-about-features">
@@ -641,15 +683,21 @@ export default function CityServicePage({ params }: Props) {
             </div>
 
             <div className="service-other-grid">
-              {otherServices.map(([slug, svc]) => (
-                <Link key={slug} href={`/cities/${params.city}/${slug}`} className="service-other-card">
+              {otherServices.map(([slug, svc]) => {
+                // Get proper city slug with state suffix for URL
+                const citySlugForUrl = params.city.endsWith('-ma') || params.city.endsWith('-ri')
+                  ? params.city
+                  : getCitySlugWithState(params.city.replace(/-ma$/, '').replace(/-ri$/, ''))
+                return (
+                <Link key={slug} href={`/cities/${citySlugForUrl}/${slug}`} className="service-other-card">
                   <h3>{svc.name}</h3>
                   <p>{svc.description}</p>
                   <span className="service-other-link">
                     Learn More <ChevronRight size={16} />
                   </span>
                 </Link>
-              ))}
+                )
+              })}
             </div>
           </div>
         </section>
@@ -660,7 +708,7 @@ export default function CityServicePage({ params }: Props) {
             <div className="service-cta-content">
               <h2 className="service-cta-title">Ready for Professional {service.name} in {city.name}?</h2>
               <p className="service-cta-subtitle">
-                Get a free estimate today and see the JH Painting difference. Professional results, on time and on budget.
+                {uniqueServiceContent?.closingPitch || `Get a free estimate today and see the JH Painting difference. Professional results, on time and on budget.`}
               </p>
               <div className="service-cta-buttons">
                 <a href={`tel:${BUSINESS.phoneRaw}`} className="service-cta-btn-white">

@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next'
-import { cities } from './data/cities'
+import { cities, getCitySlugWithState } from './data/cities'
 import { blogPosts } from './data/blogPosts'
-import { getCityPageSlug, getCityServicePageSlug, servicesSlugs } from '@/lib/seo-urls'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://jhpaintingservices.com'
@@ -97,48 +96,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // SEO-optimized city pages: /marlborough-ma-painting-contractors
-  const seoFriendlyCityPages: MetadataRoute.Sitemap = cities.map((city) => ({
-    url: `${baseUrl}/${getCityPageSlug(city.slug)}`,
+  // Services list for city+service pages
+  const servicesSlugs = [
+    'interior-painting',
+    'exterior-painting',
+    'commercial-painting',
+    'residential-painting',
+    'cabinet-painting',
+    'carpentry',
+    'power-washing',
+  ]
+
+  // City pages with state suffix: /cities/marlborough-ma
+  const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${baseUrl}/cities/${getCitySlugWithState(city.slug)}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    priority: 0.8,
   }))
 
-  // SEO-optimized city + service pages: /marlborough-ma-interior-house-painting
-  const seoFriendlyCityServicePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
+  // City + service pages with state suffix: /cities/marlborough-ma/interior-painting
+  const cityServicePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
     servicesSlugs.map((service) => ({
-      url: `${baseUrl}/${getCityServicePageSlug(city.slug, service)}`,
+      url: `${baseUrl}/cities/${getCitySlugWithState(city.slug)}/${service}`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    }))
-  )
-
-  // Legacy city pages: /cities/marlborough (for backwards compatibility and internal linking)
-  const legacyCityPages: MetadataRoute.Sitemap = cities.map((city) => ({
-    url: `${baseUrl}/cities/${city.slug}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.5,
-  }))
-
-  // Legacy city + service pages: /cities/marlborough/interior-painting
-  const legacyCityServicePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
-    servicesSlugs.map((service) => ({
-      url: `${baseUrl}/cities/${city.slug}/${service}`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.5,
+      priority: 0.7,
     }))
   )
 
   return [
     ...staticPages,
     ...blogPages,
-    ...seoFriendlyCityPages,
-    ...seoFriendlyCityServicePages,
-    ...legacyCityPages,
-    ...legacyCityServicePages,
+    ...cityPages,
+    ...cityServicePages,
   ]
 }

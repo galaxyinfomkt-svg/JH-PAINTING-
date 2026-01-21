@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
-import { getCityBySlug, cities } from '@/app/data/cities'
+import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
 
 interface Props {
   params: { city: string }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  // getCityBySlug now handles both "acton" and "acton-ma" formats
   const city = getCityBySlug(params.city)
 
   if (!city) {
@@ -19,8 +20,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const countyName = city.county || 'Massachusetts'
   const zipCode = city.zipCodes?.[0] || ''
 
-  // SEO-optimized title with ZIP code for local search
-  const title = `Painters ${cityName} MA | #1 House Painters ${zipCode} | (508) 690-8886`
+  // SEO-optimized title - max 60 chars for Google display
+  const title = `#1 Painter Contractor ${cityName} MA | JH Painting`
+
+  // Use state suffix in URL for canonical and og:url
+  const citySlugWithState = params.city.endsWith('-ma') || params.city.endsWith('-ri')
+    ? params.city
+    : getCitySlugWithState(city.slug)
 
   return {
     title,
@@ -46,9 +52,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `licensed painters ${cityName} MA`,
     ].join(', '),
     openGraph: {
-      title: `Painters ${cityName} MA | Best House Painters | JH Painting`,
+      title: `#1 Painter Contractor ${cityName} MA | JH Painting`,
       description: `#1 rated painters in ${cityName}, Massachusetts. Interior & exterior house painters, cabinet painters. Licensed & insured. FREE estimates!`,
-      url: `https://jhpaintingservices.com/cities/${params.city}`,
+      url: `https://jhpaintingservices.com/cities/${citySlugWithState}`,
       siteName: 'JH Painting Services',
       locale: 'en_US',
       type: 'website',
@@ -63,13 +69,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `Painters ${cityName} MA | #1 House Painters | (508) 690-8886`,
+      title: `#1 Painter Contractor ${cityName} MA | (508) 690-8886`,
       description: `Best house painters in ${cityName}, MA. Licensed & insured. Call for FREE estimate!`,
       images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
       creator: '@jhpaintingma',
     },
     alternates: {
-      canonical: `https://jhpaintingservices.com/cities/${params.city}`,
+      canonical: `https://jhpaintingservices.com/cities/${citySlugWithState}`,
     },
     robots: {
       index: true,
@@ -93,7 +99,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export async function generateStaticParams() {
   return cities.map((city) => ({
-    city: city.slug,
+    // Use city slug with state suffix (e.g., "acton-ma")
+    city: getCitySlugWithState(city.slug),
   }))
 }
 

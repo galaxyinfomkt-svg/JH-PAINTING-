@@ -6,8 +6,8 @@ import Link from 'next/link'
 import Script from 'next/script'
 import { notFound } from 'next/navigation'
 import { Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, Home, Building2, PaintBucket, Brush, Menu, X, ChevronDown, Paintbrush, Palette, DollarSign, Hammer, Droplets } from 'lucide-react'
-import { getCityBySlug, cities } from '@/app/data/cities'
-import { getCityContent } from '@/app/data/cityContent'
+import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
+import { getCityContent, generateUniqueCityContent } from '@/app/data/cityContent'
 import LazyIframe from '@/app/components/LazyIframe'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 
@@ -27,7 +27,18 @@ interface Props {
 }
 
 // Generate Schema JSON-LD for the city page
-function generateCitySchema(cityName: string, countyName: string, citySlug: string, faqs: { question: string; answer: string }[]) {
+function generateCitySchema(
+  cityName: string,
+  countyName: string,
+  citySlug: string,
+  faqs: { question: string; answer: string }[],
+  latitude?: number,
+  longitude?: number
+) {
+  // Use city coordinates if available, otherwise default to Marlborough HQ
+  const lat = latitude || 42.3459
+  const lng = longitude || -71.5526
+
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -50,8 +61,8 @@ function generateCitySchema(cityName: string, countyName: string, citySlug: stri
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 42.3765,
-          "longitude": -71.2356
+          "latitude": lat,
+          "longitude": lng
         },
         "openingHoursSpecification": [
           {
@@ -228,7 +239,21 @@ const servicesList = [
 
 export default function CityPage({ params }: Props) {
   const city = getCityBySlug(params.city)
-  const cityContent = getCityContent(params.city)
+
+  // Generate unique content using city data (not just slug)
+  // This creates truly unique content for each city based on its specific data
+  const cityContent = city
+    ? generateUniqueCityContent(
+        city.name,
+        city.slug,
+        city.county,
+        city.population,
+        city.landmarks,
+        city.neighborhoods,
+        city.distance
+      )
+    : getCityContent(params.city)
+
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
@@ -252,7 +277,14 @@ export default function CityPage({ params }: Props) {
     notFound()
   }
 
-  const citySchema = generateCitySchema(city.name, city.county || 'Massachusetts', params.city, cityContent.faq)
+  const citySchema = generateCitySchema(
+    city.name,
+    city.county || 'Massachusetts',
+    params.city,
+    cityContent.faq,
+    city.latitude,
+    city.longitude
+  )
 
   return (
     <>
@@ -444,7 +476,7 @@ export default function CityPage({ params }: Props) {
           }} />
         </div>
 
-        <div className="container" style={{ position: 'relative', zIndex: 2, paddingTop: '120px', paddingBottom: '60px' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2, paddingTop: '160px', paddingBottom: '60px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 500px), 1fr))', gap: '3rem', alignItems: 'center' }}>
             {/* Hero Text */}
             <div>
@@ -515,9 +547,7 @@ export default function CityPage({ params }: Props) {
                 marginBottom: '2rem',
                 maxWidth: '600px'
               }}>
-                Looking for professional painters in {city.name}, MA? JH Painting Services delivers premium interior and exterior painting,
-                cabinet refinishing, and deck staining for {city.name} homeowners. Fully licensed, insured, and backed by 40+ five-star
-                Google reviews. We use Sherwin-Williams and Benjamin Moore paints for lasting results. Free estimates, no hidden fees.
+                {cityContent.introText || `Looking for professional painters in ${city.name}, MA? JH Painting Services delivers premium interior and exterior painting, cabinet refinishing, and deck staining for ${city.name} homeowners. Fully licensed, insured, and backed by 40+ five-star Google reviews.`}
               </p>
 
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
@@ -830,10 +860,15 @@ export default function CityPage({ params }: Props) {
           </div>
 
           <div className="city-services-grid">
-            {servicesList.map((service, idx) => (
+            {servicesList.map((service, idx) => {
+              // Get proper city slug with state suffix for URL
+              const citySlugForUrl = params.city.endsWith('-ma') || params.city.endsWith('-ri')
+                ? params.city
+                : getCitySlugWithState(params.city.replace(/-ma$/, '').replace(/-ri$/, ''))
+              return (
               <Link
                 key={idx}
-                href={`/cities/${params.city}/${service.slug}`}
+                href={`/cities/${citySlugForUrl}/${service.slug}`}
                 className="city-service-card"
               >
                 <div className="city-service-icon">
@@ -849,7 +884,8 @@ export default function CityPage({ params }: Props) {
                   Learn More <ChevronRight size={18} />
                 </span>
               </Link>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -1445,13 +1481,13 @@ export default function CityPage({ params }: Props) {
             </div>
 
             <div className="city-areas-grid">
-              {footerCities.map((footerCity, idx) => (
+              {cities.map((cityItem, idx) => (
                 <Link
                   key={idx}
-                  href={`/cities/${footerCity.toLowerCase().replace(/ /g, '-')}`}
-                  className={`city-areas-link ${footerCity === city.name ? 'city-areas-link-active' : ''}`}
+                  href={`/cities/${getCitySlugWithState(cityItem.slug)}`}
+                  className={`city-areas-link ${cityItem.name === city.name ? 'city-areas-link-active' : ''}`}
                 >
-                  {footerCity}
+                  {cityItem.name}
                 </Link>
               ))}
               <Link href="/cities" className="city-areas-link-all">
@@ -1545,7 +1581,7 @@ export default function CityPage({ params }: Props) {
               {cities.map((cityItem) => (
                 <Link
                   key={cityItem.slug}
-                  href={`/cities/${cityItem.slug}`}
+                  href={`/cities/${getCitySlugWithState(cityItem.slug)}`}
                   className="footer-city-link"
                 >
                   {cityItem.name}
