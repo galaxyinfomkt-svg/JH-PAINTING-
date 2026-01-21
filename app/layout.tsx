@@ -534,6 +534,25 @@ const schemaData = {
         "availability": "https://schema.org/InStock",
         "validFrom": "2025-01-01"
       }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://jhpaintingservices.com/#navigation",
+      "name": "Main Navigation",
+      "hasPart": [
+        { "@type": "SiteNavigationElement", "name": "Home", "url": "https://jhpaintingservices.com/" },
+        { "@type": "SiteNavigationElement", "name": "About", "url": "https://jhpaintingservices.com/#about" },
+        { "@type": "SiteNavigationElement", "name": "Interior Painting", "url": "https://jhpaintingservices.com/services/interior-painting" },
+        { "@type": "SiteNavigationElement", "name": "Exterior Painting", "url": "https://jhpaintingservices.com/services/exterior-painting" },
+        { "@type": "SiteNavigationElement", "name": "Cabinet Painting", "url": "https://jhpaintingservices.com/services/cabinet-painting" },
+        { "@type": "SiteNavigationElement", "name": "Commercial Painting", "url": "https://jhpaintingservices.com/services/commercial-painting" },
+        { "@type": "SiteNavigationElement", "name": "Residential Painting", "url": "https://jhpaintingservices.com/services/residential-painting" },
+        { "@type": "SiteNavigationElement", "name": "Carpentry", "url": "https://jhpaintingservices.com/services/carpentry" },
+        { "@type": "SiteNavigationElement", "name": "Power Washing", "url": "https://jhpaintingservices.com/services/power-washing" },
+        { "@type": "SiteNavigationElement", "name": "Projects", "url": "https://jhpaintingservices.com/projects" },
+        { "@type": "SiteNavigationElement", "name": "Blog", "url": "https://jhpaintingservices.com/blog" },
+        { "@type": "SiteNavigationElement", "name": "Contact", "url": "https://jhpaintingservices.com/contact" }
+      ]
     }
   ]
 }

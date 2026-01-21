@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 import {
   Phone,
   Mail,
@@ -67,8 +68,84 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
 
   const shareUrl = typeof window !== 'undefined' ? window.location.href : `https://jhpaintingservices.com/blog/${post.slug}`
 
+  // Generate Article schema for SEO
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `https://jhpaintingservices.com/blog/${post.slug}#article`,
+        "headline": post.title,
+        "description": post.excerpt,
+        "image": {
+          "@type": "ImageObject",
+          "url": post.image,
+          "width": 1200,
+          "height": 630
+        },
+        "datePublished": post.date,
+        "dateModified": post.date,
+        "author": {
+          "@type": "Person",
+          "name": post.author,
+          "url": "https://jhpaintingservices.com",
+          "image": post.authorImage
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://jhpaintingservices.com/#organization",
+          "name": "JH Painting Services",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png",
+            "width": 400,
+            "height": 160
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://jhpaintingservices.com/blog/${post.slug}`
+        },
+        "keywords": post.tags.join(", "),
+        "articleSection": post.category,
+        "wordCount": post.content.split(/\s+/).length,
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://jhpaintingservices.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://jhpaintingservices.com/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": post.title,
+            "item": `https://jhpaintingservices.com/blog/${post.slug}`
+          }
+        ]
+      }
+    ]
+  }
+
   return (
     <>
+      {/* Article Schema JSON-LD */}
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Top Bar */}
       <div className={`top-bar ${scrolled ? 'hidden' : ''}`}>
         <div className="container">
