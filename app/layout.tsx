@@ -611,19 +611,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         {/* Critical CSS inline for faster FCP - reduces render blocking */}
         <style dangerouslySetInnerHTML={{ __html: `
-          :root{--jh-navy:#0A1F44;--jh-red:#D20404;--jh-white:#FFFFFF}
-          *{box-sizing:border-box}
-          html{background:#0A1F44;scroll-behavior:smooth}
-          body{margin:0;font-family:var(--font-inter),system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
-          img{display:block;max-width:100%;height:auto}
-          .hero{min-height:100vh;min-height:100dvh;position:relative;display:flex;align-items:center}
+          :root{--jh-navy:#0A1F44;--jh-red:#D20404}
+          html{background:#0A1F44}
+          body{margin:0;font-family:var(--font-inter),system-ui,sans-serif}
+          .hero{min-height:100vh;position:relative;display:flex;align-items:center}
           .hero-bg{position:absolute;inset:0;z-index:0}
-          .hero-bg img{object-fit:cover}
           .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,31,68,.92),rgba(10,31,68,.75));z-index:1}
-          .hero-content{position:relative;z-index:2}
           .container{width:100%;max-width:1280px;margin:0 auto;padding:0 1rem}
-          .header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s}
-          .logo img{width:auto;height:auto}
           @keyframes spin{to{transform:rotate(360deg)}}
         `}} />
         {/* Mobile optimization */}
