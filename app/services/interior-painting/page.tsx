@@ -7,7 +7,7 @@ import { Phone, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronR
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
-import LazyIframe from '@/app/components/LazyIframe'
+import LazyHeroForm from '@/app/components/LazyHeroForm'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 
 // Schema JSON-LD for Interior Painting Service
@@ -312,11 +312,10 @@ export default function InteriorPaintingPage() {
 
             {/* Quote Form Card - Clean style */}
             <div className="hero-form-card">
-              <LazyIframe
+              <LazyHeroForm
+                className="hero-form-iframe"
                 src={`https://api.leadconnectorhq.com/widget/form/${FORM_IDS.quote}`}
-                className="service-form-iframe"
                 title="Contact Form"
-                style={{ minHeight: '500px' }}
               />
             </div>
           </div>

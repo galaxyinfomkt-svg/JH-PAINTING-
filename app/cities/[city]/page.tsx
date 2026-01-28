@@ -9,6 +9,7 @@ import { Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, Ch
 import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
 import { getCityContent, generateUniqueCityContent } from '@/app/data/cityContent'
 import LazyIframe from '@/app/components/LazyIframe'
+import LazyHeroForm from '@/app/components/LazyHeroForm'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 
 // Menu data
@@ -602,12 +603,12 @@ export default function CityPage({ params }: Props) {
               </div>
             </div>
 
-            {/* Quote Form Card - Clean style like homepage */}
+            {/* Quote Form Card - Same as homepage */}
             <div id="quote-form" className="hero-form-card">
-              <LazyIframe
+              <LazyHeroForm
+                className="hero-form-iframe"
                 src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
-                style={{ width: '100%', height: '500px', border: 'none', borderRadius: '12px' }}
-                title="Contact Form - Request Free Painting Estimate"
+                title="Contact Form"
               />
             </div>
           </div>

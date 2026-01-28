@@ -14,7 +14,7 @@ import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
-import LazyIframe from '@/app/components/LazyIframe'
+import LazyHeroForm from '@/app/components/LazyHeroForm'
 
 interface Props {
   params: {
@@ -421,11 +421,10 @@ export default function CityServicePage({ params }: Props) {
 
               {/* Quote Form Card - Clean style */}
               <div id="quote-form" className="hero-form-card">
-                <LazyIframe
+                <LazyHeroForm
+                  className="hero-form-iframe"
                   src={`https://api.leadconnectorhq.com/widget/form/${FORM_IDS.quote}`}
                   title="Contact Form"
-                  className="service-form-iframe"
-                  style={{ minHeight: '500px' }}
                 />
               </div>
             </div>
