@@ -310,19 +310,13 @@ export default function InteriorPaintingPage() {
               </div>
             </div>
 
-            {/* Quote Form Card */}
-            <div className="service-form-card">
-              <div className="service-form-header">
-                <h2 className="service-form-title">Get Your Free Quote</h2>
-                <p className="service-form-subtitle">
-                  Fast response • No obligation • Interior painting experts
-                </p>
-              </div>
+            {/* Quote Form Card - Clean style */}
+            <div className="hero-form-card">
               <LazyIframe
                 src={`https://api.leadconnectorhq.com/widget/form/${FORM_IDS.quote}`}
                 className="service-form-iframe"
                 title="Contact Form"
-                style={{ minHeight: '450px' }}
+                style={{ minHeight: '500px' }}
               />
             </div>
           </div>

@@ -602,61 +602,13 @@ export default function CityPage({ params }: Props) {
               </div>
             </div>
 
-            {/* Quote Form Card */}
-            <div id="quote-form" style={{
-              background: 'rgba(255, 255, 255, 0.15)',
-              backdropFilter: 'blur(20px)',
-              WebkitBackdropFilter: 'blur(20px)',
-              borderRadius: '24px',
-              padding: '2rem',
-              boxShadow: '0 25px 80px rgba(0, 0, 0, 0.3)',
-              border: '1px solid rgba(255, 255, 255, 0.3)'
-            }}>
-              <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-                <div style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.5rem',
-                  padding: '0.5rem 1rem',
-                  background: 'linear-gradient(135deg, #DCFCE7 0%, #BBF7D0 100%)',
-                  borderRadius: '100px',
-                  color: '#166534',
-                  fontSize: '0.875rem',
-                  fontWeight: '600',
-                  marginBottom: '1rem'
-                }}>
-                  <Sparkles size={16} />
-                  Free Estimate
-                </div>
-                <h3 style={{ fontSize: '1.75rem', fontWeight: '700', color: '#fff', marginBottom: '0.5rem' }}>
-                  Get Your Free Quote
-                </h3>
-                <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.9375rem' }}>
-                  We'll respond within 24 hours
-                </p>
-              </div>
-
+            {/* Quote Form Card - Clean style like homepage */}
+            <div id="quote-form" className="hero-form-card">
               <LazyIframe
                 src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
-                style={{ width: '100%', height: '450px', border: 'none', borderRadius: '12px' }}
+                style={{ width: '100%', height: '500px', border: 'none', borderRadius: '12px' }}
                 title="Contact Form - Request Free Painting Estimate"
               />
-
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '0.75rem',
-                marginTop: '1rem',
-                padding: '0.75rem',
-                background: 'rgba(255, 255, 255, 0.1)',
-                borderRadius: '12px'
-              }}>
-                <div style={{ display: 'flex', gap: '0.25rem' }}>
-                  {[1,2,3,4,5].map(i => <Star key={i} size={16} fill="#D20404" color="#D20404" />)}
-                </div>
-                <span style={{ color: 'rgba(255, 255, 255, 0.9)', fontSize: '0.875rem' }}>5.0 on Google Reviews</span>
-              </div>
             </div>
           </div>
         </div>

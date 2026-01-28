@@ -404,17 +404,13 @@ export default function PowerWashingPage() {
               </div>
             </div>
 
-            {/* Quote Form Card */}
-            <div className="service-form-card">
-              <div className="service-form-header">
-                <h2 className="service-form-title">Get Your Free Quote</h2>
-                <p className="service-form-subtitle">Fast response • No obligation</p>
-              </div>
+            {/* Quote Form Card - Clean style */}
+            <div className="hero-form-card">
               <LazyIframe
                 src={`https://api.leadconnectorhq.com/widget/form/${FORM_IDS.quote}`}
+                title="Contact Form"
                 className="service-form-iframe"
-                title="Power Washing Quote Form"
-                style={{ minHeight: '450px' }}
+                style={{ minHeight: '500px' }}
               />
             </div>
           </div>

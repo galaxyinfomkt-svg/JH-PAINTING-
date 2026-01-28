@@ -329,21 +329,13 @@ export default function CarpentryPage() {
               </div>
             </div>
 
-            {/* Quote Form Card */}
-            <div className="service-form-card">
-              <div className="text-center mb-6">
-                <h2 className="service-form-title">
-                  Get Your Free Quote
-                </h2>
-                <p className="service-form-subtitle">
-                  Fast response • No obligation • Carpentry experts
-                </p>
-              </div>
+            {/* Quote Form Card - Clean style */}
+            <div className="hero-form-card">
               <LazyIframe
                 src={`https://api.leadconnectorhq.com/widget/form/${FORM_IDS.contact}`}
                 title="Contact Form"
                 className="service-form-iframe"
-                style={{ minHeight: '450px' }}
+                style={{ minHeight: '500px' }}
               />
             </div>
           </div>
