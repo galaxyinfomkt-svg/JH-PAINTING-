@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${post.title} | JH Painting Services Blog`,
-    description: post.excerpt,
+    title: `${post.title} | Expert Tips from MA Painters`,
+    description: `${post.excerpt} Get FREE painting quotes: (508) 690-8886`,
     keywords: post.tags.join(', '),
     authors: [{ name: post.author }],
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: `${post.title} | JH Painting MA`,
+      description: `${post.excerpt} Call for FREE estimate!`,
       url: `https://jhpaintingservices.com/blog/${post.slug}`,
       siteName: 'JH Painting Services',
       images: [

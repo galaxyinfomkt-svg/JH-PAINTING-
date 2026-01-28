@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const countyName = city.county || 'Massachusetts'
   const zipCode = city.zipCodes?.[0] || ''
 
-  // SEO-optimized title - max 60 chars for Google display
-  const title = `#1 Painter Contractor ${cityName} MA | JH Painting`
+  // SEO-optimized title - max 60 chars for Google display with CTR triggers
+  const title = `${cityName} Painters | #1 Rated | FREE Quote (508) 690-8886`
 
   // Use state suffix in URL for canonical and og:url
   const citySlugWithState = params.city.endsWith('-ma') || params.city.endsWith('-ri')
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title,
-    description: `Best painters in ${cityName}, MA ${zipCode}. #1 rated house painters in ${countyName}. Interior, exterior, cabinet painters. Benjamin Moore & Sherwin-Williams paints. Licensed & insured. 40+ 5-star reviews. FREE estimates - Call (508) 690-8886!`,
+    description: `Looking for painters in ${cityName}? JH Painting is #1 rated in ${countyName}! Interior & exterior painting, cabinets. 40+ 5-star reviews, licensed, $2M insured. Same-day quotes. Call NOW: (508) 690-8886`,
     keywords: [
       `painters ${cityName} MA`,
       `house painters ${cityName}`,
@@ -52,8 +52,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `licensed painters ${cityName} MA`,
     ].join(', '),
     openGraph: {
-      title: `#1 Painter Contractor ${cityName} MA | JH Painting`,
-      description: `#1 rated painters in ${cityName}, Massachusetts. Interior & exterior house painters, cabinet painters. Licensed & insured. FREE estimates!`,
+      title: `${cityName} MA Painters | 5-Star Rated | Call (508) 690-8886`,
+      description: `Need painters in ${cityName}? JH Painting: 40+ 5-star reviews, licensed & $2M insured. Interior, exterior, cabinets. Same-day FREE quotes!`,
       url: `https://jhpaintingservices.com/cities/${citySlugWithState}`,
       siteName: 'JH Painting Services',
       locale: 'en_US',
@@ -69,8 +69,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `#1 Painter Contractor ${cityName} MA | (508) 690-8886`,
-      description: `Best house painters in ${cityName}, MA. Licensed & insured. Call for FREE estimate!`,
+      title: `${cityName} Painters | 5-Star | (508) 690-8886`,
+      description: `Top-rated painters in ${cityName}, MA. 40+ reviews, licensed, $2M insured. FREE same-day quotes!`,
       images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
       creator: '@jhpaintingma',
     },
