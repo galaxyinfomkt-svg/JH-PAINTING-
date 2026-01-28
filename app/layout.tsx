@@ -1,16 +1,8 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import dynamic from 'next/dynamic'
 import { Inter } from 'next/font/google'
 import './globals.css'
-
-// Dynamic imports for non-critical floating components - reduces initial JS bundle
-const FloatingPhoneButton = dynamic(() => import('./components/FloatingPhoneButton'), {
-  ssr: false, // Client-side only - not needed for SEO
-})
-const FloatingSocial = dynamic(() => import('./components/FloatingSocial'), {
-  ssr: false, // Client-side only - not needed for SEO
-})
+import FloatingButtons from './components/FloatingButtons'
 
 // Optimize font loading - only load essential weights for better FCP
 // Using 'swap' ensures text is visible immediately with fallback font
@@ -649,8 +641,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         {children}
-        <FloatingPhoneButton />
-        <FloatingSocial />
+        <FloatingButtons />
         {/* LeadConnector Chat Widget - Load after page is idle */}
         <Script
           src="https://beta.leadconnectorhq.com/loader.js"

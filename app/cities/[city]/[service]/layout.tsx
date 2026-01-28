@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
 
 interface Props {
-  params: { city: string; service: string }
+  params: Promise<{ city: string; service: string }>
 }
 
 // SEO-optimized service data with rich descriptions
@@ -58,8 +58,9 @@ const services: Record<string, {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const city = getCityBySlug(params.city)
-  const service = services[params.service]
+  const { city: citySlug, service: serviceSlug } = await params
+  const city = getCityBySlug(citySlug)
+  const service = services[serviceSlug]
 
   if (!city || !service) {
     return {
@@ -92,8 +93,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   ]
 
   // Use state suffix in URL for canonical and og:url
-  const citySlugWithState = params.city.endsWith('-ma') || params.city.endsWith('-ri')
-    ? params.city
+  const citySlugWithState = citySlug.endsWith('-ma') || citySlug.endsWith('-ri')
+    ? citySlug
     : getCitySlugWithState(city.slug)
 
   return {
@@ -103,7 +104,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${service.seoTitle} ${cityName} MA | JH Painting`,
       description: `#1 rated ${service.name.toLowerCase()} in ${cityName}, Massachusetts. ${service.shortDesc}. Licensed & insured. FREE estimates!`,
-      url: `https://jhpaintingservices.com/cities/${citySlugWithState}/${params.service}`,
+      url: `https://jhpaintingservices.com/cities/${citySlugWithState}/${serviceSlug}`,
       siteName: 'JH Painting Services',
       locale: 'en_US',
       type: 'website',
@@ -124,7 +125,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       creator: '@jhpaintingma',
     },
     alternates: {
-      canonical: `https://jhpaintingservices.com/cities/${citySlugWithState}/${params.service}`,
+      canonical: `https://jhpaintingservices.com/cities/${citySlugWithState}/${serviceSlug}`,
     },
     robots: {
       index: true,

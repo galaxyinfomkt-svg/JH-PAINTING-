@@ -2,12 +2,13 @@ import type { Metadata } from 'next'
 import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
 
 interface Props {
-  params: { city: string }
+  params: Promise<{ city: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { city: citySlug } = await params
   // getCityBySlug now handles both "acton" and "acton-ma" formats
-  const city = getCityBySlug(params.city)
+  const city = getCityBySlug(citySlug)
 
   if (!city) {
     return {
@@ -24,8 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${cityName} Painters | #1 Rated | FREE Quote (508) 690-8886`
 
   // Use state suffix in URL for canonical and og:url
-  const citySlugWithState = params.city.endsWith('-ma') || params.city.endsWith('-ri')
-    ? params.city
+  const citySlugWithState = citySlug.endsWith('-ma') || citySlug.endsWith('-ri')
+    ? citySlug
     : getCitySlugWithState(city.slug)
 
   return {

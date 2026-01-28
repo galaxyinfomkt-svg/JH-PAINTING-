@@ -4,7 +4,7 @@ import { getBlogPostBySlug, getRelatedPosts, blogPosts } from '../../data/blogPo
 import BlogPostClient from './BlogPostClient'
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -14,7 +14,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = getBlogPostBySlug(params.slug)
+  const { slug } = await params
+  const post = getBlogPostBySlug(slug)
 
   if (!post) {
     return {
@@ -56,14 +57,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = getBlogPostBySlug(params.slug)
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params
+  const post = getBlogPostBySlug(slug)
 
   if (!post) {
     notFound()
   }
 
-  const relatedPosts = getRelatedPosts(params.slug, post.category, 3)
+  const relatedPosts = getRelatedPosts(slug, post.category, 3)
 
   return <BlogPostClient post={post} relatedPosts={relatedPosts} />
 }
