@@ -348,7 +348,9 @@ export default function HomePage() {
                 width={160}
                 height={64}
                 priority
+                loading="eager"
                 fetchPriority="high"
+                sizes="160px"
               />
             </a>
 

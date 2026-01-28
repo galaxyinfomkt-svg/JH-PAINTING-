@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 
 interface LazyHeroFormProps {
   src: string
@@ -10,38 +10,21 @@ interface LazyHeroFormProps {
 
 export default function LazyHeroForm({ src, title, className }: LazyHeroFormProps) {
   const [isLoaded, setIsLoaded] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    // Load form immediately - critical for conversions
-    setIsVisible(true)
-  }, [])
 
   return (
-    <div ref={containerRef} className={className} style={{ minHeight: '400px' }}>
-      {isVisible ? (
-        <iframe
-          src={src}
-          title={title}
-          className={className}
-          loading="lazy"
-          onLoad={() => setIsLoaded(true)}
-          style={{
-            opacity: isLoaded ? 1 : 0,
-            transition: 'opacity 0.3s ease',
-          }}
-        />
-      ) : (
+    <div className={className} style={{ minHeight: '400px', position: 'relative' }}>
+      {/* Loading skeleton - shows until iframe loads */}
+      {!isLoaded && (
         <div
           style={{
+            position: 'absolute',
+            inset: 0,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            height: '100%',
-            minHeight: '400px',
             background: 'rgba(255,255,255,0.05)',
             borderRadius: '12px',
+            zIndex: 1,
           }}
         >
           <div
@@ -56,6 +39,17 @@ export default function LazyHeroForm({ src, title, className }: LazyHeroFormProp
           />
         </div>
       )}
+      {/* Form iframe - loads immediately, no lazy loading for critical conversion element */}
+      <iframe
+        src={src}
+        title={title}
+        className={className}
+        onLoad={() => setIsLoaded(true)}
+        style={{
+          opacity: isLoaded ? 1 : 0,
+          transition: 'opacity 0.2s ease',
+        }}
+      />
     </div>
   )
 }
