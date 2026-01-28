@@ -593,24 +593,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://api.leadconnectorhq.com" crossOrigin="anonymous" />
         {/* DNS prefetch for non-critical resources - reduces connection time */}
-        <link rel="dns-prefetch" href="https://storage.googleapis.com" />
+        <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://reputationhub.site" />
-        <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://link.msgsndr.com" />
-        {/* Preload critical LCP image for faster loading - fetchPriority high */}
+        {/* Preload critical LCP image for faster loading */}
         <link
           rel="preload"
           as="image"
           href="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
           type="image/jpeg"
           fetchPriority="high"
-          imageSrcSet="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg 1x"
         />
+        {/* Critical CSS inline for faster FCP */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          :root{--jh-navy:#0A1F44;--jh-red:#D20404}
+          html{background:#0A1F44}
+          body{margin:0;font-family:var(--font-inter),system-ui,sans-serif}
+          .hero{min-height:100vh;position:relative;display:flex;align-items:center}
+          .hero-bg{position:absolute;inset:0;z-index:0}
+          .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,31,68,.92),rgba(10,31,68,.75));z-index:1}
+          .container{width:100%;max-width:1280px;margin:0 auto;padding:0 1rem}
+        `}} />
         {/* Mobile optimization */}
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />

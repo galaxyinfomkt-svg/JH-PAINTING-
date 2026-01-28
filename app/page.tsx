@@ -483,15 +483,14 @@ export default function HomePage() {
               src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
               alt="Professional Painting Services Massachusetts"
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, 100vw"
               style={{ objectFit: 'cover' }}
               priority
               loading="eager"
-              quality={70}
+              quality={45}
               fetchPriority="high"
               placeholder="blur"
               blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAIRAAAgICAQQDAAAAAAAAAAAAAQIDBAARBRIhMUFRYXH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABgRAAMBAQAAAAAAAAAAAAAAAAACEQEh/9oADAMBEEUhEEFgAQs6OJo5okkjkV1YZDA6I1/a"
-              unoptimized={false}
             />
           </div>
           <div className="hero-overlay" />
