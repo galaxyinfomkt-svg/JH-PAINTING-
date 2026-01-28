@@ -14,21 +14,8 @@ export default function LazyHeroForm({ src, title, className }: LazyHeroFormProp
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Use requestIdleCallback for non-critical loading
-    const loadForm = () => {
-      setIsVisible(true)
-    }
-
-    // Load after LCP is complete - delay to not block critical resources
-    const timer = setTimeout(() => {
-      if ('requestIdleCallback' in window) {
-        (window as Window & { requestIdleCallback: (cb: () => void, options?: { timeout: number }) => void }).requestIdleCallback(loadForm, { timeout: 2000 })
-      } else {
-        loadForm()
-      }
-    }, 1500)
-
-    return () => clearTimeout(timer)
+    // Load form immediately - critical for conversions
+    setIsVisible(true)
   }, [])
 
   return (

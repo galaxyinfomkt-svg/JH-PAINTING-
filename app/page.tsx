@@ -994,8 +994,9 @@ export default function HomePage() {
               src="https://reputationhub.site/reputation/widgets/review_widget/0Def8kzJShLPuKrPk5Jw"
               frameBorder={0}
               scrolling="no"
-              style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '400px' }}
+              style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '800px' }}
               title="Customer Reviews"
+              priority={true}
             />
           </div>
         </section>

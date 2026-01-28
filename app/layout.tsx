@@ -554,6 +554,17 @@ const schemaData = {
         { "@type": "SiteNavigationElement", "name": "Blog", "url": "https://jhpaintingservices.com/blog" },
         { "@type": "SiteNavigationElement", "name": "Contact", "url": "https://jhpaintingservices.com/contact" }
       ]
+    },
+    {
+      "@type": "SpeakableSpecification",
+      "@id": "https://jhpaintingservices.com/#speakable",
+      "cssSelector": [".hero-title", ".hero-description", ".section-header h2", ".faq-question-home h3", ".faq-answer-home p"]
+    },
+    {
+      "@type": "SearchAction",
+      "@id": "https://jhpaintingservices.com/#search",
+      "target": "https://jhpaintingservices.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
     }
   ]
 }
@@ -582,6 +593,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://api.leadconnectorhq.com" crossOrigin="anonymous" />
         {/* DNS prefetch for non-critical resources - reduces connection time */}
         <link rel="dns-prefetch" href="https://storage.googleapis.com" />
         <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
