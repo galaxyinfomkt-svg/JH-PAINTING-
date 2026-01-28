@@ -589,6 +589,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://link.msgsndr.com" />
         {/* Preload critical LCP image for faster loading - fetchPriority high */}
         <link
           rel="preload"
@@ -608,6 +609,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(schemaData)
           }}
+        />
+        {/* GHL External Tracking Script */}
+        <Script
+          src="https://link.msgsndr.com/js/external-tracking.js"
+          data-tracking-id="tk_17bc6e6f297d4ffc8b66e30609380978"
+          strategy="lazyOnload"
         />
       </head>
       <body>
