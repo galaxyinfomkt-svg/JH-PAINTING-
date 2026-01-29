@@ -4517,7 +4517,7 @@ button:focus:not(:focus-visible) {
 /* City Service Hero */
 .city-service-hero {
   background: linear-gradient(135deg, var(--jh-navy) 0%, var(--jh-navy-light) 100%);
-  padding: 5rem 0 3rem;
+  padding: 10rem 0 3rem;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -5523,7 +5523,7 @@ a:focus-visible {
 .service-hero-content {
   position: relative;
   z-index: 2;
-  padding-top: 140px;
+  padding-top: 180px;
   padding-bottom: 80px;
 }
 
@@ -6799,13 +6799,13 @@ a:focus-visible {
   }
 
   .service-hero-content {
-    padding-top: 120px;
+    padding-top: 160px;
   }
 }
 
 @media (max-width: 768px) {
   .service-hero-content {
-    padding-top: 100px;
+    padding-top: 140px;
     padding-bottom: 60px;
   }
 
