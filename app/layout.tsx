@@ -608,7 +608,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           body{margin:0;font-family:var(--font-inter),system-ui,sans-serif}
           .hero{min-height:100vh;position:relative;display:flex;align-items:center}
           .hero-bg{position:absolute;inset:0;z-index:0}
-          .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,31,68,.92),rgba(10,31,68,.75));z-index:1}
+          .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.85),rgba(0,0,0,.75));z-index:1}
           .container{width:100%;max-width:1280px;margin:0 auto;padding:0 1rem}
           @keyframes spin{to{transform:rotate(360deg)}}
         `}} />
