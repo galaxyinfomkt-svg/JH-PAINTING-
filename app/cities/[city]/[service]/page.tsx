@@ -1,5 +1,6 @@
 'use client'
 
+import { use } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
@@ -17,10 +18,10 @@ import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 
 interface Props {
-  params: {
+  params: Promise<{
     city: string
     service: string
-  }
+  }>
 }
 
 // Generate Schema JSON-LD for city+service pages - VSL Redesign v2
@@ -300,15 +301,16 @@ const features = [
 ]
 
 export default function CityServicePage({ params }: Props) {
-  const city = getCityBySlug(params.city)
-  const service = servicesData[params.service as keyof typeof servicesData]
-  const cityContent = cityContentMap[params.city]
+  const { city: citySlug, service: serviceSlug } = use(params)
+  const city = getCityBySlug(citySlug)
+  const service = servicesData[serviceSlug as keyof typeof servicesData]
+  const cityContent = cityContentMap[citySlug]
 
   // Generate unique content for this city+service combination
   const uniqueServiceContent = city ? generateServiceContent(
     city.name,
     city.slug,
-    params.service,
+    serviceSlug,
     city.county,
     city.population,
     city.landmarks,
@@ -323,8 +325,8 @@ export default function CityServicePage({ params }: Props) {
   const cityServiceSchema = generateCityServiceSchema(
     city.name,
     service.name,
-    params.service,
-    params.city,
+    serviceSlug,
+    citySlug,
     city.county || 'Massachusetts',
     city.latitude,
     city.longitude
@@ -332,14 +334,14 @@ export default function CityServicePage({ params }: Props) {
 
   // Other services for this city
   const otherServices = Object.entries(servicesData)
-    .filter(([slug]) => slug !== params.service)
+    .filter(([slug]) => slug !== serviceSlug)
     .slice(0, 4)
 
   return (
     <>
       {/* Schema JSON-LD */}
       <Script
-        id={`city-service-schema-${params.city}-${params.service}`}
+        id={`city-service-schema-${citySlug}-${serviceSlug}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(cityServiceSchema) }}
       />
@@ -678,9 +680,9 @@ export default function CityServicePage({ params }: Props) {
             <div className="service-other-grid">
               {otherServices.map(([slug, svc]) => {
                 // Get proper city slug with state suffix for URL
-                const citySlugForUrl = params.city.endsWith('-ma') || params.city.endsWith('-ri')
-                  ? params.city
-                  : getCitySlugWithState(params.city.replace(/-ma$/, '').replace(/-ri$/, ''))
+                const citySlugForUrl = citySlug.endsWith('-ma') || citySlug.endsWith('-ri')
+                  ? citySlug
+                  : getCitySlugWithState(citySlug.replace(/-ma$/, '').replace(/-ri$/, ''))
                 return (
                 <Link key={slug} href={`/cities/${citySlugForUrl}/${slug}`} className="service-other-card">
                   <h3>{svc.name}</h3>

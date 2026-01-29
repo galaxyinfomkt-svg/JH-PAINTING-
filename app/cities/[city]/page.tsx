@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { use, useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
@@ -24,7 +24,7 @@ const menuServices = [
 ]
 
 interface Props {
-  params: { city: string }
+  params: Promise<{ city: string }>
 }
 
 // Generate Schema JSON-LD for the city page
@@ -239,7 +239,8 @@ const servicesList = [
 ]
 
 export default function CityPage({ params }: Props) {
-  const city = getCityBySlug(params.city)
+  const { city: citySlug } = use(params)
+  const city = getCityBySlug(citySlug)
 
   // Generate unique content using city data (not just slug)
   // This creates truly unique content for each city based on its specific data
@@ -253,7 +254,7 @@ export default function CityPage({ params }: Props) {
         city.neighborhoods,
         city.distance
       )
-    : getCityContent(params.city)
+    : getCityContent(citySlug)
 
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -281,7 +282,7 @@ export default function CityPage({ params }: Props) {
   const citySchema = generateCitySchema(
     city.name,
     city.county || 'Massachusetts',
-    params.city,
+    citySlug,
     cityContent.faq,
     city.latitude,
     city.longitude
@@ -291,7 +292,7 @@ export default function CityPage({ params }: Props) {
     <>
       {/* Schema JSON-LD for SEO */}
       <Script
-        id={`city-schema-${params.city}`}
+        id={`city-schema-${citySlug}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(citySchema)
@@ -815,9 +816,9 @@ export default function CityPage({ params }: Props) {
           <div className="city-services-grid">
             {servicesList.map((service, idx) => {
               // Get proper city slug with state suffix for URL
-              const citySlugForUrl = params.city.endsWith('-ma') || params.city.endsWith('-ri')
-                ? params.city
-                : getCitySlugWithState(params.city.replace(/-ma$/, '').replace(/-ri$/, ''))
+              const citySlugForUrl = citySlug.endsWith('-ma') || citySlug.endsWith('-ri')
+                ? citySlug
+                : getCitySlugWithState(citySlug.replace(/-ma$/, '').replace(/-ri$/, ''))
               return (
               <Link
                 key={idx}
