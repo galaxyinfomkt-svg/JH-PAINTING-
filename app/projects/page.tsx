@@ -133,7 +133,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <Header variant="service" />
+      <Header />
 
       <main className="projects-page">
         {/* Immersive Hero Section */}

@@ -571,7 +571,7 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
           </div>
 
           <div className="footer-bottom">
-            <p>&copy; 2025 JH Painting Services. All Rights Reserved. Licensed Painting Contractor | Serving Massachusetts</p>
+            <p>&copy; 2026 JH Painting Services. All Rights Reserved. Licensed Painting Contractor | Serving Massachusetts</p>
           </div>
         </div>
       </footer>

@@ -249,7 +249,7 @@ const aboutFeatures = [
 export default function CarpentryPage() {
   return (
     <>
-      <Header variant="service" />
+      <Header />
 
       {/* Schema JSON-LD for SEO */}
       <Script

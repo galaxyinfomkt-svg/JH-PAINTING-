@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Residential Painters Massachusetts | #1 Home Painters Near Me | (508) 690-8886',
+  title: 'Residential Painters MA 2026 | #1 Rated | FREE Quote | 5-Star',
   description: 'Best residential painters in Massachusetts. Expert interior & exterior home painters. Full house, single room, apartments. Premium paints. Licensed & insured. 40+ 5-star reviews. FREE estimates - Call (508) 690-8886!',
   keywords: [
     'residential painters Massachusetts',

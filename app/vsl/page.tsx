@@ -73,7 +73,7 @@ export default function VSLPage() {
 
   return (
     <>
-      <Header variant="service" />
+      <Header />
 
       <main>
         {/* Hero Section with Video */}

@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const zipCode = city.zipCodes?.[0] || ''
 
   // SEO-optimized title - max 60 chars for Google display with CTR triggers
-  const title = `${cityName} Painters | #1 Rated | FREE Quote (508) 690-8886`
+  const title = `${cityName} Painters 2026 | #1 Rated | FREE Quote | 5-Star`
 
   // Use state suffix in URL for canonical and og:url
   const citySlugWithState = citySlug.endsWith('-ma') || citySlug.endsWith('-ri')

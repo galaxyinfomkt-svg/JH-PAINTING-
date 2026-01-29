@@ -271,7 +271,7 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
       />
 
-      <Header variant="service" />
+      <Header />
 
       {/* Hero Section with Background Image */}
       <section className="service-hero">

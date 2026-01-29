@@ -1545,7 +1545,7 @@ export default function CityPage({ params }: Props) {
           </div>
 
           <div className="footer-bottom">
-            <p>© 2025 JH Painting Services. All Rights Reserved. Licensed Painting Contractor | Serving Massachusetts</p>
+            <p>© 2026 JH Painting Services. All Rights Reserved. Licensed Painting Contractor | Serving Massachusetts</p>
           </div>
         </div>
       </footer>

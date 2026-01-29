@@ -320,7 +320,7 @@ const aboutFeatures = [
 export default function PowerWashingPage() {
   return (
     <>
-      <Header variant="service" />
+      <Header />
 
       {/* Schema JSON-LD for SEO */}
       <Script

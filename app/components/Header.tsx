@@ -123,11 +123,7 @@ const menuServices = [
   },
 ]
 
-interface HeaderProps {
-  variant?: 'default' | 'service'
-}
-
-export default function Header({ variant = 'default' }: HeaderProps) {
+export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
@@ -145,9 +141,6 @@ export default function Header({ variant = 'default' }: HeaderProps) {
     setMobileServicesOpen(false)
   }
   const toggleMobileServices = () => setMobileServicesOpen(!mobileServicesOpen)
-
-  // For service pages, use Link components; for homepage, use anchor links
-  const isServicePage = variant === 'service'
 
   return (
     <>
@@ -188,16 +181,8 @@ export default function Header({ variant = 'default' }: HeaderProps) {
             </Link>
 
             <nav className="nav">
-              {isServicePage ? (
-                <Link href="/">Home</Link>
-              ) : (
-                <a href="#home">Home</a>
-              )}
-              {isServicePage ? (
-                <Link href="/#about">About</Link>
-              ) : (
-                <a href="#about">About</a>
-              )}
+              <Link href="/">Home</Link>
+              <Link href="/#about">About</Link>
 
               {/* Services Dropdown */}
               <div
@@ -234,23 +219,11 @@ export default function Header({ variant = 'default' }: HeaderProps) {
                 </div>
               </div>
 
-              {isServicePage ? (
-                <Link href="/#gallery">Gallery</Link>
-              ) : (
-                <a href="#gallery">Gallery</a>
-              )}
+              <Link href="/#gallery">Gallery</Link>
               <Link href="/projects">Projects</Link>
               <Link href="/blog">Blog</Link>
-              {isServicePage ? (
-                <Link href="/#reviews">Reviews</Link>
-              ) : (
-                <a href="#reviews">Reviews</a>
-              )}
-              {isServicePage ? (
-                <Link href="/#contact">Contact</Link>
-              ) : (
-                <a href="#contact">Contact</a>
-              )}
+              <Link href="/#reviews">Reviews</Link>
+              <Link href="/#contact">Contact</Link>
             </nav>
 
             <a href={`tel:${BUSINESS.phoneRaw}`} className="header-cta">
@@ -284,16 +257,8 @@ export default function Header({ variant = 'default' }: HeaderProps) {
             </button>
           </div>
           <div className="mobile-nav">
-            {isServicePage ? (
-              <Link href="/" onClick={closeMenu}>Home</Link>
-            ) : (
-              <a href="#home" onClick={closeMenu}>Home</a>
-            )}
-            {isServicePage ? (
-              <Link href="/#about" onClick={closeMenu}>About</Link>
-            ) : (
-              <a href="#about" onClick={closeMenu}>About</a>
-            )}
+            <Link href="/" onClick={closeMenu}>Home</Link>
+            <Link href="/#about" onClick={closeMenu}>About</Link>
 
             {/* Mobile Services Accordion */}
             <div className="mobile-nav-dropdown">
@@ -324,23 +289,11 @@ export default function Header({ variant = 'default' }: HeaderProps) {
               </div>
             </div>
 
-            {isServicePage ? (
-              <Link href="/#gallery" onClick={closeMenu}>Gallery</Link>
-            ) : (
-              <a href="#gallery" onClick={closeMenu}>Gallery</a>
-            )}
+            <Link href="/#gallery" onClick={closeMenu}>Gallery</Link>
             <Link href="/projects" onClick={closeMenu}>Projects</Link>
             <Link href="/blog" onClick={closeMenu}>Blog</Link>
-            {isServicePage ? (
-              <Link href="/#reviews" onClick={closeMenu}>Reviews</Link>
-            ) : (
-              <a href="#reviews" onClick={closeMenu}>Reviews</a>
-            )}
-            {isServicePage ? (
-              <Link href="/#contact" onClick={closeMenu}>Contact</Link>
-            ) : (
-              <a href="#contact" onClick={closeMenu}>Contact</a>
-            )}
+            <Link href="/#reviews" onClick={closeMenu}>Reviews</Link>
+            <Link href="/#contact" onClick={closeMenu}>Contact</Link>
           </div>
           <a href={`tel:${BUSINESS.phoneRaw}`} className="btn btn-primary" style={{ width: '100%', marginTop: '1.5rem' }}>
             <PhoneIcon size={18} />
