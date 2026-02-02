@@ -1074,7 +1074,7 @@ p {
   opacity: 0;
   visibility: hidden;
   transition: var(--transition-smooth);
-  z-index: 110;
+  z-index: 9998;
 }
 
 .mobile-menu-overlay.active {
@@ -1091,7 +1091,7 @@ p {
   background: #fff;
   transform: translateX(100%);
   transition: transform var(--transition-smooth);
-  z-index: 120;
+  z-index: 9999;
   padding: 1.5rem;
   overflow-y: auto;
   box-shadow: -20px 0 60px rgba(0, 0, 0, 0.2);
