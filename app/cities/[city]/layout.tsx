@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
+import { getCityBySlug, cities, getCitySlugWithState, isTier1City } from '@/app/data/cities'
 
 interface Props {
   params: Promise<{ city: string }>
@@ -20,18 +20,41 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityName = city.name
   const countyName = city.county || 'Massachusetts'
   const zipCode = city.zipCodes?.[0] || ''
+  const population = city.population || ''
+  const landmark = city.landmarks?.[0] || ''
 
   // SEO-optimized title - max 60 chars for Google display with CTR triggers
-  const title = `${cityName} Painters 2026 | #1 Rated | FREE Quote | 5-Star`
+  const title = `${cityName} Painters | #1 Rated | FREE Quote | 5-Star`
 
   // Use state suffix in URL for canonical and og:url
   const citySlugWithState = citySlug.endsWith('-ma') || citySlug.endsWith('-ri')
     ? citySlug
     : getCitySlugWithState(city.slug)
 
+  // Tier-1 cities get full indexing; tier-2 cities get noindex to avoid doorway page penalties
+  const shouldIndex = isTier1City(citySlug)
+
+  // Generate unique meta descriptions based on city characteristics
+  const distanceFromHQ = city.distance
+  let description: string
+
+  if (distanceFromHQ <= 10) {
+    // Very close cities - emphasize quick response
+    description = `${cityName} painters - just ${Math.round(distanceFromHQ)} miles from our HQ! JH Painting offers same-day estimates in ${countyName}. Interior, exterior, cabinets. 40+ 5-star reviews. Licensed & $2M insured. Call: (508) 690-8886`
+  } else if (landmark) {
+    // Cities with landmarks - use local reference
+    description = `Professional painters serving ${cityName}, MA${zipCode ? ` (${zipCode})` : ''} near ${landmark}. Interior & exterior painting, cabinet refinishing. ${countyName}'s trusted choice. 40+ 5-star reviews. FREE quotes: (508) 690-8886`
+  } else if (population && population.includes('50,000') || population.includes('100,000') || population.includes('200,000')) {
+    // Major cities
+    description = `${cityName}'s top-rated painting contractor! JH Painting serves ${population} residents with expert interior & exterior painting. Licensed, $2M insured, 40+ 5-star reviews. Get FREE estimate: (508) 690-8886`
+  } else {
+    // Default template with county and zip
+    description = `Looking for painters in ${cityName}${zipCode ? `, MA ${zipCode}` : ''}? JH Painting is #1 rated in ${countyName}! Interior & exterior painting, cabinets. 40+ 5-star reviews, licensed, $2M insured. Call: (508) 690-8886`
+  }
+
   return {
     title,
-    description: `Looking for painters in ${cityName}? JH Painting is #1 rated in ${countyName}! Interior & exterior painting, cabinets. 40+ 5-star reviews, licensed, $2M insured. Same-day quotes. Call NOW: (508) 690-8886`,
+    description,
     keywords: [
       `painters ${cityName} MA`,
       `house painters ${cityName}`,
@@ -79,10 +102,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `https://jhpaintingservices.com/cities/${citySlugWithState}`,
     },
     robots: {
-      index: true,
+      index: shouldIndex,
       follow: true,
       googleBot: {
-        index: true,
+        index: shouldIndex,
         follow: true,
         'max-video-preview': -1,
         'max-image-preview': 'large',

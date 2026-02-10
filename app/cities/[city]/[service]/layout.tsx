@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
+import { getCityBySlug, cities, getCitySlugWithState, isTier1City } from '@/app/data/cities'
 
 interface Props {
   params: Promise<{ city: string; service: string }>
@@ -97,6 +97,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? citySlug
     : getCitySlugWithState(city.slug)
 
+  // Tier-1 cities get full indexing; tier-2 cities get noindex to avoid doorway page penalties
+  const shouldIndex = isTier1City(citySlug)
+
   return {
     title,
     description: `Best ${service.name.toLowerCase()} in ${cityName}, MA ${zipCode}. JH Painting offers ${service.description} in ${cityName}, ${countyName}. Premium paints (Benjamin Moore, Sherwin-Williams). Licensed & insured. 40+ 5-star reviews. FREE estimates - Call (508) 690-8886!`,
@@ -128,10 +131,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `https://jhpaintingservices.com/cities/${citySlugWithState}/${serviceSlug}`,
     },
     robots: {
-      index: true,
+      index: shouldIndex,
       follow: true,
       googleBot: {
-        index: true,
+        index: shouldIndex,
         follow: true,
         'max-video-preview': -1,
         'max-image-preview': 'large',

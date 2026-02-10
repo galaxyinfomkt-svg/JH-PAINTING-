@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cabinet Painters MA 2026 | #1 Rated | FREE Quote | 5-Star',
+  title: 'Cabinet Painters MA | #1 Rated | FREE Quote | 5-Star',
   description: 'Best cabinet painters in Massachusetts. Professional kitchen cabinet refinishing - save 70% vs replacement! Expert spray finish. All wood types. Licensed & insured. 40+ 5-star reviews. FREE estimates - Call (508) 690-8886!',
   keywords: [
     'cabinet painters Massachusetts',

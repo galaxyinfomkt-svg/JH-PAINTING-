@@ -25,19 +25,14 @@ interface Props {
 }
 
 // Generate Schema JSON-LD for city+service pages - VSL Redesign v2
+// References main organization, always uses Marlborough HQ coordinates
 function generateCityServiceSchema(
   cityName: string,
   serviceName: string,
   serviceSlug: string,
   citySlug: string,
-  countyName: string,
-  latitude?: number,
-  longitude?: number
+  countyName: string
 ) {
-  // Use city coordinates if available, otherwise default to Marlborough HQ
-  const lat = latitude || 42.3459
-  const lng = longitude || -71.5526
-
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -48,32 +43,7 @@ function generateCityServiceSchema(
         "serviceType": serviceName,
         "description": `Professional ${serviceName.toLowerCase()} services in ${cityName}, ${countyName}, Massachusetts. Expert painters, premium materials, licensed & insured. Free estimates available.`,
         "provider": {
-          "@type": "LocalBusiness",
-          "@id": "https://jhpaintingservices.com/#localbusiness",
-          "name": "JH Painting Services",
-          "telephone": "+1-508-690-8886",
-          "email": "contact@jhpaintingservices.com",
-          "priceRange": "$$",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "346 Plantation St",
-            "addressLocality": "Marlborough",
-            "addressRegion": "MA",
-            "postalCode": "01752",
-            "addressCountry": "US"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": lat,
-            "longitude": lng
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "40",
-            "bestRating": "5",
-            "worstRating": "1"
-          }
+          "@id": "https://jhpaintingservices.com/#organization"
         },
         "areaServed": {
           "@type": "City",
@@ -327,9 +297,7 @@ export default function CityServicePage({ params }: Props) {
     service.name,
     serviceSlug,
     citySlug,
-    city.county || 'Massachusetts',
-    city.latitude,
-    city.longitude
+    city.county || 'Massachusetts'
   )
 
   // Other services for this city

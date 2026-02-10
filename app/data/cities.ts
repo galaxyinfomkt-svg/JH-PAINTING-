@@ -170,3 +170,73 @@ export function parseCitySlug(urlSlug: string): string {
 export function getCitiesByDistance(maxDistance: number): City[] {
   return cities.filter(city => city.distance <= maxDistance)
 }
+
+// Tier-1 cities: Major markets with high search volume that deserve full indexing
+// These are high-value cities based on population, search demand, and business potential
+export const tier1Cities = new Set([
+  // Major cities (population 50,000+)
+  'boston',
+  'worcester',
+  'cambridge',
+  'lowell',
+  'newton',
+  'somerville',
+  'framingham',
+  'waltham',
+  'brookline',
+  'medford',
+
+  // Key markets (population 30,000-50,000+)
+  'marlborough', // HQ
+  'natick',
+  'shrewsbury',
+  'chelmsford',
+  'lexington',
+  'arlington',
+  'billerica',
+  'woburn',
+  'leominster',
+  'fitchburg',
+
+  // High-value suburbs (affluent areas with strong search volume)
+  'wellesley',
+  'needham',
+  'concord',
+  'sudbury',
+  'wayland',
+  'weston',
+  'lincoln',
+  'dover',
+  'sherborn',
+
+  // Business potential (population 25,000+)
+  'franklin',
+  'norwood',
+  'dedham',
+  'burlington',
+  'watertown',
+  'belmont',
+  'winchester',
+  'milford',
+
+  // Close proximity to HQ (under 10 miles)
+  'hudson',
+  'southborough',
+  'northborough',
+  'westborough',
+  'hopkinton',
+  'ashland',
+  'stow',
+  'bolton',
+  'berlin',
+  'clinton',
+  'grafton',
+  'acton',
+  'maynard',
+])
+
+// Check if a city is tier-1 (should be indexed)
+export function isTier1City(citySlug: string): boolean {
+  const normalizedSlug = citySlug.endsWith('-ma') ? citySlug.slice(0, -3) : citySlug
+  return tier1Cities.has(normalizedSlug)
+}

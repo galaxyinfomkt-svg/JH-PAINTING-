@@ -28,51 +28,26 @@ interface Props {
 }
 
 // Generate Schema JSON-LD for the city page
+// Uses Service type referencing main organization - NOT a false LocalBusiness per city
 function generateCitySchema(
   cityName: string,
   countyName: string,
   citySlug: string,
-  faqs: { question: string; answer: string }[],
-  latitude?: number,
-  longitude?: number
+  faqs: { question: string; answer: string }[]
 ) {
-  // Use city coordinates if available, otherwise default to Marlborough HQ
-  const lat = latitude || 42.3459
-  const lng = longitude || -71.5526
-
   return {
     "@context": "https://schema.org",
     "@graph": [
+      // Reference the main organization from root layout
       {
-        "@type": "LocalBusiness",
-        "@id": `https://jhpaintingservices.com/cities/${citySlug}#localbusiness`,
-        "name": `JH Painting Services - ${cityName}`,
-        "alternateName": [`${cityName} Painters`, `JH Painting ${cityName}`],
+        "@type": "Service",
+        "@id": `https://jhpaintingservices.com/cities/${citySlug}#service`,
+        "name": `Painting Services in ${cityName}, MA`,
         "description": `Professional painting services in ${cityName}, Massachusetts. Expert interior & exterior painting, cabinet refinishing. Licensed & insured painters serving ${cityName} and ${countyName}.`,
         "url": `https://jhpaintingservices.com/cities/${citySlug}`,
-        "telephone": "+1-508-690-8886",
-        "email": "contact@jhpaintingservices.com",
-        "image": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": cityName,
-          "addressRegion": "MA",
-          "addressCountry": "US"
+        "provider": {
+          "@id": "https://jhpaintingservices.com/#organization"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": lat,
-          "longitude": lng
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "07:00",
-            "closes": "18:00"
-          }
-        ],
         "areaServed": {
           "@type": "City",
           "name": cityName,
@@ -81,13 +56,7 @@ function generateCitySchema(
             "name": "Massachusetts"
           }
         },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "reviewCount": "40",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
+        "serviceType": "House Painting",
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": `Painting Services in ${cityName}`,
@@ -283,9 +252,7 @@ export default function CityPage({ params }: Props) {
     city.name,
     city.county || 'Massachusetts',
     citySlug,
-    cityContent.faq,
-    city.latitude,
-    city.longitude
+    cityContent.faq
   )
 
   return (
