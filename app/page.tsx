@@ -116,7 +116,6 @@ const DropletsIcon = memo(() => (
 DropletsIcon.displayName = 'DropletsIcon'
 import { cities } from './data/cities'
 import LazyIframe from './components/LazyIframe'
-import LazyHeroForm from './components/LazyHeroForm'
 import BeforeAfterSlider from './components/BeforeAfterSlider'
 
 // Data
@@ -478,8 +477,8 @@ export default function HomePage() {
 
       {/* Main Content */}
       <main id="main-content">
-        {/* Hero Section */}
-        <section id="home" className="hero">
+        {/* Hero Section - Simplified for CRO */}
+        <section id="home" className="hero hero-simplified">
           <div className="hero-bg">
             <Image
               src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
@@ -498,72 +497,58 @@ export default function HomePage() {
           <div className="hero-overlay" />
 
           <div className="hero-content container">
-            <div className="hero-grid">
+            <div className="hero-centered">
               <div className="hero-text">
-                <div className="hero-top-badges">
-                  <span className="hero-location-badge">
-                    <MapPinIcon />
-                    Serving 75+ MA Cities
-                  </span>
-                  <span className="hero-rating-badge">
-                    <StarIcon size={14} fill="currentColor" />
-                    <StarIcon size={14} fill="currentColor" />
-                    <StarIcon size={14} fill="currentColor" />
-                    <StarIcon size={14} fill="currentColor" />
-                    <StarIcon size={14} fill="currentColor" />
-                    <span className="hero-rating-text">5.0 (40 Google reviews)</span>
-                  </span>
+                {/* Single trust indicator */}
+                <div className="hero-rating-badge-centered">
+                  <StarIcon size={16} fill="currentColor" />
+                  <StarIcon size={16} fill="currentColor" />
+                  <StarIcon size={16} fill="currentColor" />
+                  <StarIcon size={16} fill="currentColor" />
+                  <StarIcon size={16} fill="currentColor" />
+                  <span className="hero-rating-text">5.0 Rating · 40+ Reviews</span>
                 </div>
 
-                <h1 className="hero-title">
-                  <span className="hero-title-number">#1</span> <span className="hero-title-highlight">Painter</span><br />
-                  <span className="hero-title-highlight">Contractor</span> <span className="hero-title-in">in</span><br />
-                  <span className="hero-title-state">Massachusetts</span>
+                {/* Emotional headline */}
+                <h1 className="hero-title-emotional">
+                  Transform Your Home.<br />
+                  <span className="hero-title-accent">No Stress. No Surprises.</span>
                 </h1>
 
-                <p className="hero-subtitle hero-cities">
-                  Marlborough, Boston, Cambridge,<br />
-                  Worcester & Beyond
+                <p className="hero-description-short">
+                  Massachusetts&apos; trusted painters. Premium quality, honest pricing,
+                  and results that speak for themselves.
                 </p>
 
-                <p className="hero-description">
-                  Professional interior and exterior painting services for homes and businesses across Massachusetts.
-                  Licensed, insured, and trusted by 200+ families. Premium paints, expert craftsmanship, and
-                  100% satisfaction guaranteed. Get your free estimate today.
-                </p>
-
-                <div className="hero-buttons">
-                  <a href="tel:+15086908886" className="btn btn-primary btn-lg">
+                {/* Single primary CTA */}
+                <div className="hero-cta-single">
+                  <a href="tel:+15086908886" className="btn btn-primary btn-xl hero-phone-btn">
                     <PhoneIcon />
-                    Call (508) 690-8886
+                    <span className="hero-cta-text">
+                      <span className="hero-cta-label">Free Estimate</span>
+                      <span className="hero-cta-number">(508) 690-8886</span>
+                    </span>
                   </a>
-                  <a href="#contact" className="btn btn-outline btn-lg" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.3)', color: '#fff' }}>
-                    Get Free Estimate
-                  </a>
+                  <span className="hero-cta-subtext">Call now for same-day response</span>
                 </div>
 
-                <div className="hero-trust-badges">
-                  <span className="hero-trust-badge">
+                {/* Compact trust badges - max 3 */}
+                <div className="hero-trust-compact">
+                  <span className="hero-trust-item">
                     <ShieldIcon />
-                    Licensed & Insured
+                    Licensed & $2M Insured
                   </span>
-                  <span className="hero-trust-badge">
+                  <span className="hero-trust-divider">·</span>
+                  <span className="hero-trust-item">
+                    <CheckIcon />
+                    200+ Happy Customers
+                  </span>
+                  <span className="hero-trust-divider">·</span>
+                  <span className="hero-trust-item">
                     <ClockIcon />
-                    Same Day Response
-                  </span>
-                  <span className="hero-trust-badge">
-                    <DollarIcon />
-                    Free Estimates
+                    Since 2018
                   </span>
                 </div>
-              </div>
-
-              <div className="hero-form-card">
-                <LazyHeroForm
-                  className="hero-form-iframe"
-                  src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
-                  title="Contact Form"
-                />
               </div>
             </div>
           </div>
@@ -740,12 +725,11 @@ export default function HomePage() {
               <p>From initial consultation to project completion, we make the painting process simple and stress-free.</p>
             </div>
 
-            <div className="process-grid-home">
+            <div className="process-grid-home process-grid-3">
               {[
-                { num: '01', icon: PhoneIcon, title: 'Free Consultation', desc: 'Call us or fill out our form. We\'ll discuss your project needs and schedule a site visit at your convenience.' },
-                { num: '02', icon: DollarIcon, title: 'Detailed Estimate', desc: 'We provide a comprehensive written estimate with transparent pricing. No hidden fees, no surprises.' },
-                { num: '03', icon: HardHatIcon, title: 'Expert Painting', desc: 'Our skilled team executes your project with precision, keeping you informed every step of the way.' },
-                { num: '04', icon: CheckIcon, title: 'Final Walkthrough', desc: 'We walk through the completed project together, ensuring everything meets your expectations.' },
+                { num: '01', icon: PhoneIcon, title: 'Free Quote', desc: 'Call or text us. We\'ll discuss your project and provide a detailed estimate within 24 hours.' },
+                { num: '02', icon: HardHatIcon, title: 'We Paint', desc: 'Our expert team handles everything—prep, painting, and cleanup. You just relax.' },
+                { num: '03', icon: CheckIcon, title: 'Love It', desc: 'We ensure you\'re 100% satisfied. If not, we\'ll make it right. Guaranteed.' },
               ].map((step, index) => (
                 <div key={index} className="process-card-home process-step-enhanced">
                   <div className="process-card-home-num">{step.num}</div>
@@ -1207,11 +1191,27 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Service Areas - Cities */}
-          <div className="footer-cities">
-            <h4>Service Areas - {cities.length}+ Cities in Massachusetts</h4>
-            <div className="footer-cities-grid">
-              {cities.map((city) => (
+          {/* Service Areas - Top 15 Cities */}
+          <div className="footer-cities footer-cities-compact">
+            <h4>Popular Service Areas</h4>
+            <div className="footer-cities-grid-compact">
+              {[
+                { name: 'Boston', slug: 'boston-ma' },
+                { name: 'Worcester', slug: 'worcester-ma' },
+                { name: 'Cambridge', slug: 'cambridge-ma' },
+                { name: 'Newton', slug: 'newton-ma' },
+                { name: 'Framingham', slug: 'framingham-ma' },
+                { name: 'Waltham', slug: 'waltham-ma' },
+                { name: 'Marlborough', slug: 'marlborough-ma' },
+                { name: 'Natick', slug: 'natick-ma' },
+                { name: 'Lexington', slug: 'lexington-ma' },
+                { name: 'Wellesley', slug: 'wellesley-ma' },
+                { name: 'Concord', slug: 'concord-ma' },
+                { name: 'Brookline', slug: 'brookline-ma' },
+                { name: 'Needham', slug: 'needham-ma' },
+                { name: 'Sudbury', slug: 'sudbury-ma' },
+                { name: 'Shrewsbury', slug: 'shrewsbury-ma' },
+              ].map((city) => (
                 <Link
                   key={city.slug}
                   href={`/cities/${city.slug}`}
@@ -1221,6 +1221,10 @@ export default function HomePage() {
                 </Link>
               ))}
             </div>
+            <Link href="/cities" className="footer-cities-view-all">
+              View All {cities.length}+ Service Areas
+              <ChevronRightIcon size={16} />
+            </Link>
           </div>
 
           <div className="footer-bottom">

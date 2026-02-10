@@ -193,6 +193,48 @@ const schemaData = {
         "https://www.yelp.com/biz/jh-painting-services-marlborough",
         "https://www.thumbtack.com/ma/marlborough/painters/jh-painting-services"
       ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-508-690-8886",
+          "contactType": "customer service",
+          "availableLanguage": ["English", "Portuguese", "Spanish"],
+          "areaServed": "US-MA",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "07:00",
+            "closes": "18:00"
+          }
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "contact@jhpaintingservices.com",
+          "contactType": "sales"
+        }
+      ],
+      "potentialAction": [
+        {
+          "@type": "OrderAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://jhpaintingservices.com/#contact",
+            "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+          },
+          "result": {
+            "@type": "Order",
+            "name": "Free Painting Estimate"
+          }
+        },
+        {
+          "@type": "CommunicateAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "tel:+15086908886",
+            "actionPlatform": "http://schema.org/MobileWebPlatform"
+          }
+        }
+      ],
       "areaServed": {
         "@type": "GeoCircle",
         "geoMidpoint": {

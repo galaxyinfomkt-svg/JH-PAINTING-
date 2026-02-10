@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { BUSINESS } from '@/lib/constants'
 
 // Inline SVG icon to avoid loading entire lucide-react bundle
@@ -10,13 +11,30 @@ const PhoneIcon = () => (
 )
 
 export default function FloatingPhoneButton() {
+  const [hasScrolled, setHasScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show expanded version after scrolling 300px
+      setHasScrolled(window.scrollY > 300)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <a
       href={`tel:${BUSINESS.phoneRaw}`}
-      className="floating-phone-btn"
+      className={`floating-phone-btn ${hasScrolled ? 'floating-phone-btn-expanded' : ''}`}
       aria-label={`Call ${BUSINESS.name} at ${BUSINESS.phone}`}
     >
-      <PhoneIcon />
+      <span className="floating-phone-icon">
+        <PhoneIcon />
+      </span>
+      <span className="floating-phone-text">
+        <span className="floating-phone-label">Free Quote</span>
+        <span className="floating-phone-number">{BUSINESS.phone}</span>
+      </span>
     </a>
   )
 }
