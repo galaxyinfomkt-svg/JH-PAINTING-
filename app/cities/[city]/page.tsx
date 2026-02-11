@@ -1,11 +1,106 @@
 'use client'
 
-import { use, useState } from 'react'
+import { use, useState, memo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 import { notFound } from 'next/navigation'
-import { Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, ChevronDown, Users, Heart, Sparkles, Home, Building2, PaintBucket, Brush, DollarSign } from 'lucide-react'
+
+// Inline SVG icons - eliminates lucide-react bundle (saves ~50KB)
+const PhoneIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+))
+PhoneIcon.displayName = 'PhoneIcon'
+
+const MailIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+))
+MailIcon.displayName = 'MailIcon'
+
+const MapPinIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+))
+MapPinIcon.displayName = 'MapPinIcon'
+
+const CheckIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+))
+CheckIcon.displayName = 'CheckIcon'
+
+const StarIcon = memo(({ size = 20, fill }: { size?: number; fill?: string }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill={fill || "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+))
+StarIcon.displayName = 'StarIcon'
+
+const ClockIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+))
+ClockIcon.displayName = 'ClockIcon'
+
+const ShieldIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+))
+ShieldIcon.displayName = 'ShieldIcon'
+
+const AwardIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+))
+AwardIcon.displayName = 'AwardIcon'
+
+const PlayIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+))
+PlayIcon.displayName = 'PlayIcon'
+
+const ChevronRightIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+))
+ChevronRightIcon.displayName = 'ChevronRightIcon'
+
+const ChevronDownIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+))
+ChevronDownIcon.displayName = 'ChevronDownIcon'
+
+const UsersIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+))
+UsersIcon.displayName = 'UsersIcon'
+
+const HeartIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+))
+HeartIcon.displayName = 'HeartIcon'
+
+const SparklesIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+))
+SparklesIcon.displayName = 'SparklesIcon'
+
+const HomeIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+))
+HomeIcon.displayName = 'HomeIcon'
+
+const Building2Icon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+))
+Building2Icon.displayName = 'Building2Icon'
+
+const PaintBucketIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m19 11-8-8-8.6 8.6a2 2 0 0 0 0 2.8l5.2 5.2c.8.8 2 .8 2.8 0L19 11Z"/><path d="m5 2 5 5"/><path d="M2 13h15"/><path d="M22 20a2 2 0 1 1-4 0c0-1.6 1.7-2.4 2-4 .3 1.6 2 2.4 2 4Z"/></svg>
+))
+PaintBucketIcon.displayName = 'PaintBucketIcon'
+
+const BrushIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/></svg>
+))
+BrushIcon.displayName = 'BrushIcon'
+
+const DollarIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+))
+DollarIcon.displayName = 'DollarIcon'
 import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
 import { getCityContent, generateUniqueCityContent } from '@/app/data/cityContent'
 import Header from '@/app/components/Header'
@@ -192,11 +287,11 @@ const videos = [
 const footerCities = cities.map(c => c.name)
 
 const servicesList = [
-  { slug: 'interior-painting', name: 'Interior Painting', icon: Brush },
-  { slug: 'exterior-painting', name: 'Exterior Painting', icon: Home },
-  { slug: 'commercial-painting', name: 'Commercial Painting', icon: Building2 },
-  { slug: 'residential-painting', name: 'Residential Painting', icon: Home },
-  { slug: 'cabinet-painting', name: 'Cabinet Painting', icon: PaintBucket },
+  { slug: 'interior-painting', name: 'Interior Painting', icon: BrushIcon },
+  { slug: 'exterior-painting', name: 'Exterior Painting', icon: HomeIcon },
+  { slug: 'commercial-painting', name: 'Commercial Painting', icon: Building2Icon },
+  { slug: 'residential-painting', name: 'Residential Painting', icon: HomeIcon },
+  { slug: 'cabinet-painting', name: 'Cabinet Painting', icon: PaintBucketIcon },
 ]
 
 export default function CityPage({ params }: Props) {
@@ -250,15 +345,20 @@ export default function CityPage({ params }: Props) {
       {/* Luxury Hero Section */}
       <section className="city-page-hero">
         <div className="city-page-hero-bg">
-          <Image
+          {/* LCP optimized: native img for fastest loading */}
+          <img
             src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
             alt={`Professional Painting Services in ${city.name}, Massachusetts`}
-            fill
-            className="object-cover"
-            priority
+            style={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              inset: 0
+            }}
+            loading="eager"
+            decoding="async"
             fetchPriority="high"
-            placeholder="blur"
-            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LC0yMi4xODY6NT04Mj4uQkJCLkpKTk5OWlpVVV5eXl5eXl7/2wBDARUXFx4aHh4lISElXkI2Ql5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl7/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAHxAAAgICAgMBAAAAAAAAAAAAAQIAAwQREiExQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/ANmNkY9lJx8ipLKm5KyuAQNb8H2JTU"
           />
           <div className="city-page-hero-overlay" />
         </div>
@@ -281,7 +381,7 @@ export default function CityPage({ params }: Props) {
                   fontWeight: '500',
                   border: '1px solid rgba(255, 255, 255, 0.2)'
                 }}>
-                  <MapPin size={16} />
+                  <MapPinIcon size={16} />
                   {city.name}, Massachusetts
                 </span>
                 <span style={{
@@ -295,11 +395,11 @@ export default function CityPage({ params }: Props) {
                   fontSize: '0.875rem',
                   fontWeight: '600'
                 }}>
-                  <Star size={14} fill="currentColor" />
-                  <Star size={14} fill="currentColor" />
-                  <Star size={14} fill="currentColor" />
-                  <Star size={14} fill="currentColor" />
-                  <Star size={14} fill="currentColor" />
+                  <StarIcon size={14} fill="currentColor" />
+                  <StarIcon size={14} fill="currentColor" />
+                  <StarIcon size={14} fill="currentColor" />
+                  <StarIcon size={14} fill="currentColor" />
+                  <StarIcon size={14} fill="currentColor" />
                   5.0
                 </span>
               </div>
@@ -352,7 +452,7 @@ export default function CityPage({ params }: Props) {
                   boxShadow: '0 10px 40px rgba(220, 38, 38, 0.4)',
                   transition: 'all 0.3s ease'
                 }}>
-                  <Phone size={20} />
+                  <PhoneIcon size={20} />
                   (508) 690-8886
                 </a>
                 <a href="#quote-form" style={{
@@ -371,18 +471,18 @@ export default function CityPage({ params }: Props) {
                   transition: 'all 0.3s ease'
                 }}>
                   Get Free Estimate
-                  <ChevronRight size={20} />
+                  <ChevronRightIcon size={20} />
                 </a>
               </div>
 
               <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
                 {[
-                  { icon: Shield, text: 'Licensed & Insured' },
-                  { icon: Clock, text: 'Same Day Response' },
-                  { icon: Award, text: '40+ 5-Star Google Reviews' }
+                  { icon: ShieldIcon, text: 'Licensed & Insured' },
+                  { icon: ClockIcon, text: 'Same Day Response' },
+                  { icon: AwardIcon, text: '40+ 5-Star Google Reviews' }
                 ].map((item, idx) => (
                   <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255, 255, 255, 0.9)' }}>
-                    <item.icon size={18} color="#D20404" />
+                    <span style={{ color: '#D20404' }}><item.icon size={18} /></span>
                     <span style={{ fontSize: '0.9375rem', fontWeight: '500' }}>{item.text}</span>
                   </div>
                 ))}
@@ -413,16 +513,16 @@ export default function CityPage({ params }: Props) {
             </svg>
             <span>Google Reviews</span>
             <div className="stars">
-              <Star size={16} fill="currentColor" />
-              <Star size={16} fill="currentColor" />
-              <Star size={16} fill="currentColor" />
-              <Star size={16} fill="currentColor" />
-              <Star size={16} fill="currentColor" />
+              <StarIcon size={16} fill="currentColor" />
+              <StarIcon size={16} fill="currentColor" />
+              <StarIcon size={16} fill="currentColor" />
+              <StarIcon size={16} fill="currentColor" />
+              <StarIcon size={16} fill="currentColor" />
             </div>
             <span className="rating">5</span>
             <Link href="/#reviews">
               See Our Reviews
-              <ChevronRight size={14} />
+              <ChevronRightIcon size={14} />
             </Link>
           </div>
         </div>
@@ -459,7 +559,7 @@ export default function CityPage({ params }: Props) {
           {/* Opening Hook */}
           <div className="vsl-hook">
             <div className="vsl-hook-badge">
-              <MapPin size={16} />
+              <MapPinIcon size={16} />
               <span>Local {city.name} Story</span>
             </div>
             <h2 className="vsl-hook-title">
@@ -490,14 +590,14 @@ export default function CityPage({ params }: Props) {
                   />
                   <div className="vsl-video-overlay">
                     <div className="vsl-play-button">
-                      <Play size={32} fill="#fff" />
+                      <PlayIcon size={32} />
                     </div>
                     <span className="vsl-watch-text">Watch Our Work</span>
                   </div>
                 </a>
               </div>
               <div className="vsl-video-caption">
-                <Star size={14} fill="#D20404" color="#D20404" />
+                <StarIcon size={14} fill="#D20404" />
                 <span>See why {city.name} homeowners trust us</span>
               </div>
             </div>
@@ -515,7 +615,7 @@ export default function CityPage({ params }: Props) {
 
                 <div className="vsl-highlight-box">
                   <div className="vsl-highlight-icon">
-                    <Heart size={24} color="#D20404" />
+                    <HeartIcon size={24} />
                   </div>
                   <p className="vsl-highlight-text">
                     <strong>Here&apos;s the thing:</strong> We don&apos;t just paint houses &mdash; we transform homes. And we take that responsibility seriously.
@@ -544,7 +644,7 @@ export default function CityPage({ params }: Props) {
           {/* Curiosity Builder */}
           <div className="vsl-curiosity-section">
             <h3 className="vsl-curiosity-title">
-              <Sparkles size={20} color="#D20404" />
+              <SparklesIcon size={20} />
               What Makes Us Different?
             </h3>
             <div className="vsl-curiosity-grid">
@@ -571,12 +671,12 @@ export default function CityPage({ params }: Props) {
             <p className="vsl-cta-text">Ready to see what we can do for your {city.name} home?</p>
             <div className="vsl-cta-buttons">
               <a href="tel:+15086908886" className="vsl-cta-primary">
-                <Phone size={20} />
+                <PhoneIcon size={20} />
                 Call (508) 690-8886
               </a>
               <a href="#quote-form" className="vsl-cta-secondary">
                 Get Free Estimate
-                <ChevronRight size={20} />
+                <ChevronRightIcon size={20} />
               </a>
             </div>
           </div>
@@ -610,8 +710,8 @@ export default function CityPage({ params }: Props) {
                 href={`/cities/${citySlugForUrl}/${service.slug}`}
                 className="city-service-card"
               >
-                <div className="city-service-icon">
-                  <service.icon size={32} color="#fff" />
+                <div className="city-service-icon" style={{ color: '#fff' }}>
+                  <service.icon size={32} />
                 </div>
                 <h3 className="city-service-title">
                   {service.name}
@@ -620,7 +720,7 @@ export default function CityPage({ params }: Props) {
                   Professional {service.name.toLowerCase()} services in {city.name}, MA
                 </p>
                 <span className="city-service-link">
-                  Learn More <ChevronRight size={18} />
+                  Learn More <ChevronRightIcon size={18} />
                 </span>
               </Link>
               )
@@ -670,7 +770,7 @@ export default function CityPage({ params }: Props) {
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <p style={{ color: 'rgba(255, 255, 255, 0.6)', marginBottom: '1rem' }}>Like what you see?</p>
             <a href="tel:+15086908886" className="city-cta-btn">
-              <Phone size={20} />
+              <PhoneIcon size={20} />
               Get a Free Quote
             </a>
           </div>
@@ -726,11 +826,11 @@ export default function CityPage({ params }: Props) {
                 />
                 <div className="video-card-rs-overlay">
                   <div className="video-card-rs-play">
-                    <Play size={20} />
+                    <PlayIcon size={20} />
                   </div>
                   <h4>{video.title}</h4>
                   <span>
-                    <Play size={12} />
+                    <PlayIcon size={12} />
                     {video.type}
                   </span>
                 </div>
@@ -745,7 +845,7 @@ export default function CityPage({ params }: Props) {
               rel="noopener noreferrer"
               className="btn btn-lg"
             >
-              <Play size={18} />
+              <PlayIcon size={18} />
               Watch More on YouTube
             </a>
           </div>
@@ -794,14 +894,14 @@ export default function CityPage({ params }: Props) {
 
               <div className="city-about-features">
                 {[
-                  { icon: Shield, title: 'Licensed & Insured' },
-                  { icon: Award, title: 'Expert Craftsmen' },
-                  { icon: Users, title: `Local ${city.name} Team` },
-                  { icon: Heart, title: '100% Satisfaction' }
+                  { icon: ShieldIcon, title: 'Licensed & Insured' },
+                  { icon: AwardIcon, title: 'Expert Craftsmen' },
+                  { icon: UsersIcon, title: `Local ${city.name} Team` },
+                  { icon: HeartIcon, title: '100% Satisfaction' }
                 ].map((item, idx) => (
                   <div key={idx} className="city-about-feature">
-                    <div className="city-about-feature-icon">
-                      <item.icon size={24} color="#D20404" />
+                    <div className="city-about-feature-icon" style={{ color: '#D20404' }}>
+                      <item.icon size={24} />
                     </div>
                     <span className="city-about-feature-text">{item.title}</span>
                   </div>
@@ -809,7 +909,7 @@ export default function CityPage({ params }: Props) {
               </div>
 
               <a href="tel:+15086908886" className="city-cta-btn">
-                <Phone size={20} />
+                <PhoneIcon size={20} />
                 Call (508) 690-8886
               </a>
             </div>
@@ -839,37 +939,37 @@ export default function CityPage({ params }: Props) {
               {
                 problem: "Contractors who ghost you or show up whenever they feel like it",
                 solution: "We confirm every appointment 24 hours in advance and arrive within a 30-minute window. Our crew shows up in uniform, ready to work. If we're ever running late (rare!), you'll get a call immediately.",
-                icon: Clock
+                icon: ClockIcon
               },
               {
                 problem: "Cheap paint that peels, cracks, or fades within months",
                 solution: "We use only premium Sherwin-Williams and Benjamin Moore paints rated to withstand Massachusetts winters and humid summers. Combined with our meticulous 5-step prep process, your paint job will look stunning for 7-10+ years.",
-                icon: Shield
+                icon: ShieldIcon
               },
               {
                 problem: "Hidden fees, surprise costs, and bait-and-switch pricing",
                 solution: "Our detailed written estimates itemize every cost upfront—labor, materials, prep work, everything. The price we quote is the price you pay. No surprises, no 'additional charges discovered during the project.'",
-                icon: DollarSign
+                icon: DollarIcon
               },
               {
                 problem: "Messy crews who damage your furniture and leave chaos behind",
                 solution: "We treat your home with respect. All furniture is carefully covered with drop cloths, floors are protected, and we clean up completely every day. You won't find paint splatter on your floors or handprints on your walls.",
-                icon: Home
+                icon: HomeIcon
               },
               {
                 problem: "Painters who cut corners when you're not watching",
                 solution: "Our crews are trained craftsmen, not day laborers. We properly prep every surface (sanding, patching, priming), apply the right number of coats, and our crew lead inspects every job before we consider it complete.",
-                icon: CheckCircle2
+                icon: CheckIcon
               },
               {
                 problem: "Companies that disappear after the check clears",
                 solution: `We're a locally-owned ${city.name} area business with a reputation to protect. We stand behind every job with our satisfaction guarantee. If something isn't right, we'll fix it—no arguments, no excuses.`,
-                icon: Award
+                icon: AwardIcon
               }
             ].map((item, idx) => (
               <div key={idx} className="city-pain-card">
-                <div className="city-pain-icon">
-                  <item.icon size={28} color="#fff" />
+                <div className="city-pain-icon" style={{ color: '#fff' }}>
+                  <item.icon size={28} />
                 </div>
                 <h3 className="city-pain-problem">
                   "{item.problem}"
@@ -884,7 +984,7 @@ export default function CityPage({ params }: Props) {
           {/* Testimonial in Pain Points */}
           <div className="city-testimonial">
             <div className="city-testimonial-stars">
-              {[1,2,3,4,5].map(i => <Star key={i} size={24} fill="#D20404" color="#D20404" />)}
+              {[1,2,3,4,5].map(i => <StarIcon key={i} size={24} fill="#D20404" />)}
             </div>
             <blockquote className="city-testimonial-quote">
               "After two bad experiences with other painters in {city.name}, I was skeptical. But JH Painting
@@ -895,7 +995,7 @@ export default function CityPage({ params }: Props) {
               — Sarah M., {city.name} Homeowner
             </div>
             <a href="tel:+15086908886" className="city-cta-btn" style={{ marginTop: '1.5rem' }}>
-              <Phone size={18} />
+              <PhoneIcon size={18} />
               Get Your Free Estimate Today
             </a>
           </div>
@@ -976,12 +1076,12 @@ export default function CityPage({ params }: Props) {
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="tel:+15086908886" className="city-cta-btn">
-                <Phone size={20} />
+                <PhoneIcon size={20} />
                 Call (508) 690-8886
               </a>
               <a href="#quote-form" className="city-cta-btn-outline city-cta-btn-dark">
                 Request Free Estimate
-                <ChevronRight size={20} />
+                <ChevronRightIcon size={20} />
               </a>
             </div>
           </div>
@@ -1012,13 +1112,8 @@ export default function CityPage({ params }: Props) {
                   className="city-faq-question"
                 >
                   <h3>{faq.question}</h3>
-                  <ChevronDown
+                  <ChevronDownIcon
                     size={24}
-                    color="#D20404"
-                    style={{
-                      transition: 'transform 0.3s ease',
-                      transform: openFaqIndex === idx ? 'rotate(180deg)' : 'rotate(0deg)'
-                    }}
                   />
                 </button>
                 <div style={{
@@ -1037,7 +1132,7 @@ export default function CityPage({ params }: Props) {
               Have a question we didn't answer? We're here to help!
             </p>
             <a href="tel:+15086908886" className="city-cta-btn">
-              <Phone size={20} />
+              <PhoneIcon size={20} />
               Call (508) 690-8886
             </a>
           </div>
@@ -1064,37 +1159,37 @@ export default function CityPage({ params }: Props) {
               {
                 title: 'Owner-Operated Quality',
                 description: `Unlike large franchises where you never see the owner, Jafet personally oversees every ${city.name} project. You're not just another number—you're a neighbor. This hands-on approach ensures consistent quality and accountability that big companies simply can't match.`,
-                icon: Users
+                icon: UsersIcon
               },
               {
                 title: 'Trained Professional Crews',
                 description: "Our painters aren't day laborers picked up from a parking lot. They're skilled craftsmen with years of experience, trained in our specific methods and quality standards. Every crew member is background-checked, drug-tested, and committed to excellence.",
-                icon: Award
+                icon: AwardIcon
               },
               {
                 title: 'Premium Materials Only',
                 description: "We never cut costs on materials. We use top-tier Sherwin-Williams and Benjamin Moore paints, professional-grade primers, and quality tools. Better materials mean better coverage, richer colors, and a finish that lasts years longer than budget alternatives.",
-                icon: Shield
+                icon: ShieldIcon
               },
               {
                 title: 'Meticulous Preparation',
                 description: "Many painters rush through prep work—the part you don't see. We spend the necessary time properly preparing every surface because we know this invisible work determines how long your paint job lasts. Cutting corners here means peeling paint in months, not years.",
-                icon: CheckCircle2
+                icon: CheckIcon
               },
               {
                 title: 'Clear Communication',
                 description: `We keep you informed at every stage. You'll know exactly when we're arriving, what we're doing each day, and when we'll be finished. Questions? Concerns? Jafet is always available by phone. No wondering what's happening with your ${city.name} home.`,
-                icon: Phone
+                icon: PhoneIcon
               },
               {
                 title: 'Respect for Your Home',
                 description: "We treat every home like our own. Shoes come off or get covered, furniture is carefully protected, and we clean up completely every day. You shouldn't have to live in chaos while we work. When we leave, the only trace of our visit is your beautiful new paint.",
-                icon: Heart
+                icon: HeartIcon
               }
             ].map((item, idx) => (
               <div key={idx} className="city-why-card">
-                <div className="city-why-icon">
-                  <item.icon size={28} color="#fff" />
+                <div className="city-why-icon" style={{ color: '#fff' }}>
+                  <item.icon size={28} />
                 </div>
                 <h3 className="city-why-title">{item.title}</h3>
                 <p className="city-why-desc">{item.description}</p>
@@ -1105,7 +1200,7 @@ export default function CityPage({ params }: Props) {
           {/* CTA after Why Choose Us */}
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <a href="tel:+15086908886" className="city-cta-btn">
-              <Phone size={20} />
+              <PhoneIcon size={20} />
               Call for Your Free Estimate
             </a>
           </div>
@@ -1166,12 +1261,12 @@ export default function CityPage({ params }: Props) {
                 </p>
                 <div className="city-seo-cta-buttons">
                   <a href="tel:+15086908886" className="city-cta-btn">
-                    <Phone size={18} />
+                    <PhoneIcon size={18} />
                     (508) 690-8886
                   </a>
                   <a href="#quote-form" className="city-cta-btn-outline">
                     Get Free Estimate
-                    <ChevronRight size={18} />
+                    <ChevronRightIcon size={18} />
                   </a>
                 </div>
               </div>
@@ -1194,11 +1289,11 @@ export default function CityPage({ params }: Props) {
             </p>
             <div className="city-cta-buttons">
               <a href="tel:+15086908886" className="city-cta-btn-white">
-                <Phone size={24} />
+                <PhoneIcon size={24} />
                 (508) 690-8886
               </a>
               <a href="#quote-form" className="city-cta-btn-glass">
-                <Mail size={24} />
+                <MailIcon size={24} />
                 Request Quote
               </a>
             </div>
@@ -1230,7 +1325,7 @@ export default function CityPage({ params }: Props) {
                 </Link>
               ))}
               <Link href="/cities" className="city-areas-link-all">
-                View All Cities <ChevronRight size={16} />
+                View All Cities <ChevronRightIcon size={16} />
               </Link>
             </div>
           </div>
@@ -1295,19 +1390,19 @@ export default function CityPage({ params }: Props) {
             <div className="footer-col">
               <h4>Contact Us</h4>
               <div className="footer-contact-item">
-                <Phone size={16} />
+                <PhoneIcon size={16} />
                 <a href="tel:+15086908886">(508) 690-8886</a>
               </div>
               <div className="footer-contact-item">
-                <Mail size={16} />
+                <MailIcon size={16} />
                 <a href="mailto:contact@jhpaintingservices.com">contact@jhpaintingservices.com</a>
               </div>
               <div className="footer-contact-item">
-                <MapPin size={16} />
+                <MapPinIcon size={16} />
                 <span>Serving All of Massachusetts</span>
               </div>
               <div className="footer-contact-item">
-                <Clock size={16} />
+                <ClockIcon size={16} />
                 <span>Mon-Sat: 7AM - 6PM</span>
               </div>
             </div>
