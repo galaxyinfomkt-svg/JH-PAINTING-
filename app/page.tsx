@@ -484,11 +484,11 @@ export default function HomePage() {
               src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
               alt="Professional Painting Services Massachusetts"
               fill
-              sizes="(max-width: 768px) 100vw, 100vw"
+              sizes="(max-width: 640px) 640px, (max-width: 1080px) 1080px, 1920px"
               style={{ objectFit: 'cover' }}
               priority
               loading="eager"
-              quality={45}
+              quality={30}
               fetchPriority="high"
               placeholder="blur"
               blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAIRAAAgICAQQDAAAAAAAAAAAAAQIDBAARBRIhMUFRYXH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABgRAAMBAQAAAAAAAAAAAAAAAAACEQEh/9oADAMBEEUhEEFgAQs6OJo5okkjkV1YZDA6I1/a"

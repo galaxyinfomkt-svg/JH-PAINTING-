@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Exterior House Painters MA | #1 Painters | FREE Quote | 5-Star',
-  description: 'Best exterior house painters in Massachusetts. Professional siding, trim & deck painters. Power washing included. Weather-resistant premium paints. Licensed & insured. 40+ 5-star reviews. FREE estimates - Call (508) 690-8886!',
+  title: 'Peeling Paint? Exterior Painters MA | Fix It Before Winter ⭐',
+  description: 'Paint peeling off your house? Stop the damage NOW before winter makes it worse. FREE power wash + weather-resistant paints that LAST 10+ years. 40+ 5-star reviews. Call (508) 690-8886',
   keywords: [
     'exterior painters Massachusetts',
     'exterior house painters near me',

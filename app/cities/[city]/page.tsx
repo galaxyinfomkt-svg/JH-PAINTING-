@@ -1,27 +1,19 @@
 'use client'
 
-import { use, useState, useEffect } from 'react'
+import { use, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 import { notFound } from 'next/navigation'
-import { Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, Home, Building2, PaintBucket, Brush, Menu, X, ChevronDown, Paintbrush, Palette, DollarSign, Hammer, Droplets } from 'lucide-react'
+import { Phone, Mail, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, ChevronDown, Users, Heart, Sparkles, Home, Building2, PaintBucket, Brush, DollarSign } from 'lucide-react'
 import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
 import { getCityContent, generateUniqueCityContent } from '@/app/data/cityContent'
+import Header from '@/app/components/Header'
+import Footer from '@/app/components/Footer'
 import LazyIframe from '@/app/components/LazyIframe'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
-
-// Menu data
-const menuServices = [
-  { name: 'Interior Painting', href: '/services/interior-painting', icon: Paintbrush, description: 'Transform your interior spaces' },
-  { name: 'Exterior Painting', href: '/services/exterior-painting', icon: Home, description: 'Protect and beautify your exterior' },
-  { name: 'Commercial Painting', href: '/services/commercial-painting', icon: Building2, description: 'Professional business painting' },
-  { name: 'Residential Painting', href: '/services/residential-painting', icon: PaintBucket, description: 'Complete home painting solutions' },
-  { name: 'Cabinet Painting', href: '/services/cabinet-painting', icon: Palette, description: 'Upgrade your kitchen cabinets' },
-  { name: 'Carpentry', href: '/services/carpentry', icon: Hammer, description: 'Expert wood repairs & trim work' },
-  { name: 'Power Washing', href: '/services/power-washing', icon: Droplets, description: 'Professional pressure cleaning' },
-]
+import { BUSINESS, FORM_IDS } from '@/lib/constants'
 
 interface Props {
   params: Promise<{ city: string }>
@@ -225,24 +217,7 @@ export default function CityPage({ params }: Props) {
       )
     : getCityContent(citySlug)
 
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const [servicesOpen, setServicesOpen] = useState(false)
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const toggleMenu = () => setMenuOpen(!menuOpen)
-  const closeMenu = () => {
-    setMenuOpen(false)
-    setMobileServicesOpen(false)
-  }
-  const toggleMobileServices = () => setMobileServicesOpen(!mobileServicesOpen)
 
   if (!city) {
     notFound()
@@ -266,186 +241,29 @@ export default function CityPage({ params }: Props) {
         }}
       />
 
-      {/* Top Bar */}
-      <div className={`top-bar ${scrolled ? 'hidden' : ''}`}>
-        <div className="container">
-          <div className="top-bar-content">
-            <div className="top-bar-left">
-              <span className="top-bar-item">
-                <MapPin size={12} />
-                <span className="top-bar-city-name">Serving {city.name}, MA</span>
-              </span>
-              <a href="mailto:contact@jhpaintingservices.com" className="top-bar-item">
-                <Mail size={12} />
-                contact@jhpaintingservices.com
-              </a>
-            </div>
-            <a href="tel:+15086908886" className="top-bar-phone-btn" aria-label="Call JH Painting Services at 508-690-8886">
-              <Phone size={12} />
-              (508) 690-8886
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Header */}
-      <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
-        <div className="container">
-          <div className="header-main">
-            <Link href="/" className="logo">
-              <Image
-                src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
-                alt="JH Painting Services Logo"
-                width={160}
-                height={64}
-                priority
-              />
-            </Link>
-
-            <nav className="nav">
-              <Link href="/">Home</Link>
-              <Link href="/#about">About</Link>
-
-              {/* Services Dropdown */}
-              <div
-                className="nav-dropdown"
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                <button className="nav-dropdown-toggle" aria-expanded={servicesOpen ? "true" : "false"} aria-haspopup="true">
-                  Services
-                  <ChevronDown size={16} className={`nav-dropdown-icon ${servicesOpen ? 'open' : ''}`} />
-                </button>
-
-                <div className={`nav-dropdown-menu ${servicesOpen ? 'open' : ''}`}>
-                  <div className="nav-dropdown-grid">
-                    {menuServices.map((service, index) => {
-                      const Icon = service.icon
-                      return (
-                        <Link key={index} href={service.href} className="nav-dropdown-item">
-                          <div className="nav-dropdown-item-icon">
-                            <Icon size={20} />
-                          </div>
-                          <div className="nav-dropdown-item-content">
-                            <span className="nav-dropdown-item-title">{service.name}</span>
-                            <span className="nav-dropdown-item-desc">{service.description}</span>
-                          </div>
-                        </Link>
-                      )
-                    })}
-                  </div>
-                  <Link href="/services" className="nav-dropdown-footer">
-                    View All Services
-                    <ChevronRight size={16} />
-                  </Link>
-                </div>
-              </div>
-
-              <Link href="/#gallery">Gallery</Link>
-              <Link href="/#reviews">Reviews</Link>
-              <Link href="/blog">Blog</Link>
-              <Link href="/#contact">Contact</Link>
-            </nav>
-
-            <a href="tel:+15086908886" className="header-cta" aria-label="Call JH Painting Services at 508-690-8886">
-              <Phone size={18} />
-              (508) 690-8886
-            </a>
-
-            <button className="menu-btn" onClick={toggleMenu} aria-label="Open menu">
-              <Menu size={28} />
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu Overlay */}
-        <div
-          className={`mobile-menu-overlay ${menuOpen ? 'active' : ''}`}
-          onClick={closeMenu}
-        />
-
-        {/* Mobile Menu */}
-        <nav className={`mobile-menu ${menuOpen ? 'active' : ''}`}>
-          <div className="mobile-menu-header">
-            <Image
-              src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
-              alt="JH Painting Services"
-              width={120}
-              height={48}
-            />
-            <button className="mobile-menu-close" onClick={closeMenu} aria-label="Close menu">
-              <X size={24} />
-            </button>
-          </div>
-          <div className="mobile-nav">
-            <Link href="/" onClick={closeMenu}>Home</Link>
-            <Link href="/#about" onClick={closeMenu}>About</Link>
-
-            {/* Mobile Services Accordion */}
-            <div className="mobile-nav-dropdown">
-              <button
-                type="button"
-                className={`mobile-nav-dropdown-toggle ${mobileServicesOpen ? 'open' : ''}`}
-                onClick={toggleMobileServices}
-              >
-                Services
-                <ChevronDown size={18} className={`mobile-nav-dropdown-icon ${mobileServicesOpen ? 'open' : ''}`} />
-              </button>
-
-              <div className={`mobile-nav-dropdown-content ${mobileServicesOpen ? 'open' : ''}`}>
-                {menuServices.map((service, index) => {
-                  const Icon = service.icon
-                  return (
-                    <Link key={index} href={service.href} onClick={closeMenu} className="mobile-nav-dropdown-item">
-                      <div className="mobile-nav-dropdown-item-icon">
-                        <Icon size={18} />
-                      </div>
-                      <div className="mobile-nav-dropdown-item-content">
-                        <span className="mobile-nav-dropdown-item-title">{service.name}</span>
-                        <span className="mobile-nav-dropdown-item-desc">{service.description}</span>
-                      </div>
-                    </Link>
-                  )
-                })}
-              </div>
-            </div>
-
-            <Link href="/#gallery" onClick={closeMenu}>Gallery</Link>
-            <Link href="/#reviews" onClick={closeMenu}>Reviews</Link>
-            <Link href="/blog" onClick={closeMenu}>Blog</Link>
-            <Link href="/#contact" onClick={closeMenu}>Contact</Link>
-          </div>
-          <a href="tel:+15086908886" className="btn btn-primary" style={{ width: '100%', marginTop: '1.5rem' }}>
-            <Phone size={18} />
-            (508) 690-8886
-          </a>
-        </nav>
-      </header>
+      {/* Header with City Name */}
+      <Header cityName={city.name} />
 
       {/* Main Content */}
       <main id="main-content">
 
       {/* Luxury Hero Section */}
-      <section style={{ position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+      <section className="city-page-hero">
+        <div className="city-page-hero-bg">
           <Image
             src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
             alt={`Professional Painting Services in ${city.name}, Massachusetts`}
             fill
-            style={{ objectFit: 'cover' }}
+            className="object-cover"
             priority
             fetchPriority="high"
             placeholder="blur"
             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LC0yMi4xODY6NT04Mj4uQkJCLkpKTk5OWlpVVV5eXl5eXl7/2wBDARUXFx4aHh4lISElXkI2Ql5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl7/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAHxAAAgICAgMBAAAAAAAAAAAAAQIAAwQREiExQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/ANmNkY9lJx8ipLKm5KyuAQNb8H2JTU"
           />
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.70) 50%, rgba(0, 0, 0, 0.60) 100%)'
-          }} />
+          <div className="city-page-hero-overlay" />
         </div>
 
-        <div className="container" style={{ position: 'relative', zIndex: 2, paddingTop: '160px', paddingBottom: '60px' }}>
+        <div className="container city-page-hero-content">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 500px), 1fr))', gap: '3rem', alignItems: 'center' }}>
             {/* Hero Text */}
             <div>
@@ -516,7 +334,7 @@ export default function CityPage({ params }: Props) {
                 marginBottom: '2rem',
                 maxWidth: '600px'
               }}>
-                {cityContent.introText || `Looking for professional painters in ${city.name}, MA? JH Painting Services delivers premium interior and exterior painting, cabinet refinishing, and deck staining for ${city.name} homeowners. Fully licensed, insured, and backed by 40+ five-star Google reviews.`}
+                {`Professional painters in ${city.name}, MA. Premium Benjamin Moore & Sherwin-Williams paints. Licensed, $2M insured, 40+ 5-star reviews. FREE estimates!`}
               </p>
 
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>

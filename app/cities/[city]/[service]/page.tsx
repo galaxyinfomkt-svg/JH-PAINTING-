@@ -314,8 +314,8 @@ export default function CityServicePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(cityServiceSchema) }}
       />
 
-      {/* Header */}
-      <Header />
+      {/* Header with City Name */}
+      <Header cityName={city.name} />
 
       {/* Main Content */}
       <main id="main-content">

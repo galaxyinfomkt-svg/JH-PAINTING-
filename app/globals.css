@@ -6003,14 +6003,15 @@ a:focus-visible {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
-  padding-top: 120px;
+  padding-top: 160px; /* top-bar (44px) + header (80px) + 36px buffer */
 }
 
 @media (max-width: 768px) {
   .service-hero {
-    padding-top: 80px;
+    padding-top: 130px; /* top-bar (~28px) + header (80px) + 22px buffer */
+    min-height: auto; /* Remove fixed 100vh on mobile to prevent image stretching */
   }
 }
 
@@ -6018,6 +6019,17 @@ a:focus-visible {
   position: absolute;
   inset: 0;
   z-index: 0;
+}
+
+/* Fix hero background images on mobile - prevent excessive cropping */
+.service-hero-bg img {
+  object-position: center center;
+}
+
+@media (max-width: 768px) {
+  .service-hero-bg img {
+    object-position: center top;
+  }
 }
 
 .service-hero-bg::after {
@@ -6036,10 +6048,11 @@ a:focus-visible {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.80) 50%, rgba(0, 0, 0, 0.75) 100%);
 }
 
-.service-hero-content {
+.service-hero-content,
+.service-hero-container {
   position: relative;
   z-index: 2;
-  padding-top: 220px;
+  padding-top: 40px;
   padding-bottom: 80px;
 }
 
@@ -6083,6 +6096,56 @@ a:focus-visible {
   color: #fff;
   font-size: 0.875rem;
   font-weight: 600;
+}
+
+/* City Page Hero Section */
+.city-page-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .city-page-hero {
+    min-height: auto;
+  }
+}
+
+.city-page-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.city-page-hero-bg img {
+  object-position: center center;
+}
+
+@media (max-width: 768px) {
+  .city-page-hero-bg img {
+    object-position: center top;
+  }
+}
+
+.city-page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.70) 50%, rgba(0, 0, 0, 0.60) 100%);
+}
+
+.city-page-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 240px;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .city-page-hero-content {
+    padding-top: 180px;
+    padding-bottom: 40px;
+  }
 }
 
 /* Hero Title */
@@ -7314,14 +7377,16 @@ a:focus-visible {
     margin: 0 auto;
   }
 
-  .service-hero-content {
-    padding-top: 200px;
+  .service-hero-content,
+  .service-hero-container {
+    padding-top: 50px;
   }
 }
 
 @media (max-width: 768px) {
-  .service-hero-content {
-    padding-top: 180px;
+  .service-hero-content,
+  .service-hero-container {
+    padding-top: 40px;
     padding-bottom: 60px;
   }
 

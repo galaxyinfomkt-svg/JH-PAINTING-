@@ -123,7 +123,11 @@ const menuServices = [
   },
 ]
 
-export default function Header() {
+interface HeaderProps {
+  cityName?: string
+}
+
+export default function Header({ cityName }: HeaderProps = {}) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
@@ -151,7 +155,7 @@ export default function Header() {
             <div className="top-bar-left">
               <span className="top-bar-item">
                 <MapPinIcon size={12} />
-                {BUSINESS.address}
+                {cityName ? `Serving ${cityName}, MA` : BUSINESS.address}
               </span>
               <a href={`mailto:${BUSINESS.email}`} className="top-bar-item">
                 <MailIcon size={12} />
