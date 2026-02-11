@@ -117,30 +117,19 @@ const nextConfig = {
       // ============================================
       // Redirect legacy city URLs without state suffix to new URLs with state suffix
       // This handles old bookmarks and links like /cities/acton -> /cities/acton-ma
-      // Note: This pattern matches city names that don't already end with -ma or -ri
+      // Note: These explicit patterns handle common city name formats
+
+      // Legacy city+service URLs: /cities/acton/interior-painting -> /cities/acton-ma/interior-painting
+      // Must come BEFORE city-only redirect to match first
       {
-        source: '/cities/:city((?!.*-ma$)(?!.*-ri$)[a-z-]+)',
-        has: [
-          {
-            type: 'header',
-            key: 'x-redirect-check',
-            value: '(?!skip)',
-          },
-        ],
-        destination: '/cities/:city-ma',
+        source: '/cities/:city((?!.*-ma$)(?!.*-ri$)[a-z-]+)/:service(interior-painting|exterior-painting|commercial-painting|residential-painting|cabinet-painting|carpentry|power-washing)',
+        destination: '/cities/:city-ma/:service',
         permanent: true,
       },
-      // Legacy city+service URLs: /cities/acton/interior-painting -> /cities/acton-ma/interior-painting
+      // City-only URLs: /cities/acton -> /cities/acton-ma
       {
-        source: '/cities/:city((?!.*-ma$)(?!.*-ri$)[a-z-]+)/:service',
-        has: [
-          {
-            type: 'header',
-            key: 'x-redirect-check',
-            value: '(?!skip)',
-          },
-        ],
-        destination: '/cities/:city-ma/:service',
+        source: '/cities/:city((?!.*-ma$)(?!.*-ri$)[a-z-]+)',
+        destination: '/cities/:city-ma',
         permanent: true,
       },
       // ============================================
@@ -513,11 +502,14 @@ const nextConfig = {
       },
     ],
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000,
+    // Optimized device sizes for faster image delivery
+    deviceSizes: [640, 828, 1080, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    minimumCacheTTL: 31536000, // 1 year cache
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Unoptimized option for faster hero loading if needed
+    // unoptimized: process.env.NODE_ENV === 'development',
   },
   compress: true,
   poweredByHeader: false,

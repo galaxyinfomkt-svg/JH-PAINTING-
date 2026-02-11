@@ -138,8 +138,8 @@ img {
 }
 
 /* Prevent forced reflow and layout shifts */
+/* NOTE: Removed .header from contain rule - it breaks position:fixed on mobile menu */
 .hero-section,
-.header,
 .footer {
   contain: layout style;
 }
@@ -151,8 +151,7 @@ iframe {
 
 /* Optimize animations to use GPU - prevents forced reflow */
 .btn,
-.nav-dropdown-menu,
-.mobile-menu {
+.nav-dropdown-menu {
   will-change: transform, opacity;
   transform: translateZ(0);
 }
@@ -1073,8 +1072,8 @@ p {
   -webkit-backdrop-filter: blur(8px) !important;
   opacity: 0 !important;
   visibility: hidden !important;
-  transition: var(--transition-smooth) !important;
-  z-index: 2147483647 !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease !important;
+  z-index: 2147483646 !important;
 }
 
 .mobile-menu-overlay.active {
@@ -1087,18 +1086,22 @@ p {
   top: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
+  left: auto !important;
   width: min(90vw, 400px) !important;
   background: #fff !important;
   transform: translateX(100%) !important;
-  transition: transform var(--transition-smooth) !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   z-index: 2147483647 !important;
   padding: 1.5rem !important;
   overflow-y: auto !important;
   box-shadow: -20px 0 60px rgba(0, 0, 0, 0.2) !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .mobile-menu.active {
   transform: translateX(0) !important;
+  visibility: visible !important;
 }
 
 .mobile-menu-header {
@@ -6002,6 +6005,13 @@ a:focus-visible {
   display: flex;
   align-items: center;
   overflow: hidden;
+  padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+  .service-hero {
+    padding-top: 80px;
+  }
 }
 
 .service-hero-bg {
@@ -6015,7 +6025,7 @@ a:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(220, 38, 38, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 50%, rgba(0, 0, 0, 0.25) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 80%, rgba(0, 0, 0, 0.35) 0%, transparent 40%);
   pointer-events: none;
 }
