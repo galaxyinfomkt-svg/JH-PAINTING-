@@ -1,11 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BUSINESS } from '@/lib/constants'
 
-// Inline SVG icons to reduce bundle size - avoid loading entire lucide-react library
+// Inline SVG icons to reduce bundle size
 const PhoneIcon = ({ size = 24 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -19,11 +19,6 @@ const MailIcon = ({ size = 24 }: { size?: number }) => (
 const MapPinIcon = ({ size = 24 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
-  </svg>
-)
-const MenuIcon = ({ size = 24 }: { size?: number }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
   </svg>
 )
 const XIcon = ({ size = 24 }: { size?: number }) => (
@@ -79,48 +74,13 @@ const DropletsIcon = ({ size = 24 }: { size?: number }) => (
 
 // Menu services data
 const menuServices = [
-  {
-    name: 'Interior Painting',
-    href: '/services/interior-painting',
-    icon: PaintbrushIcon,
-    description: 'Transform your interior spaces',
-  },
-  {
-    name: 'Exterior Painting',
-    href: '/services/exterior-painting',
-    icon: HomeIconSvg,
-    description: 'Protect and beautify your exterior',
-  },
-  {
-    name: 'Commercial Painting',
-    href: '/services/commercial-painting',
-    icon: Building2Icon,
-    description: 'Professional business painting',
-  },
-  {
-    name: 'Residential Painting',
-    href: '/services/residential-painting',
-    icon: PaintBucketIcon,
-    description: 'Complete home painting solutions',
-  },
-  {
-    name: 'Cabinet Painting',
-    href: '/services/cabinet-painting',
-    icon: PaletteIcon,
-    description: 'Upgrade your kitchen cabinets',
-  },
-  {
-    name: 'Carpentry',
-    href: '/services/carpentry',
-    icon: HammerIcon,
-    description: 'Expert wood repairs & trim work',
-  },
-  {
-    name: 'Power Washing',
-    href: '/services/power-washing',
-    icon: DropletsIcon,
-    description: 'Professional pressure cleaning',
-  },
+  { name: 'Interior Painting', href: '/services/interior-painting', icon: PaintbrushIcon, description: 'Transform your interior spaces' },
+  { name: 'Exterior Painting', href: '/services/exterior-painting', icon: HomeIconSvg, description: 'Protect and beautify your exterior' },
+  { name: 'Commercial Painting', href: '/services/commercial-painting', icon: Building2Icon, description: 'Professional business painting' },
+  { name: 'Residential Painting', href: '/services/residential-painting', icon: PaintBucketIcon, description: 'Complete home painting solutions' },
+  { name: 'Cabinet Painting', href: '/services/cabinet-painting', icon: PaletteIcon, description: 'Upgrade your kitchen cabinets' },
+  { name: 'Carpentry', href: '/services/carpentry', icon: HammerIcon, description: 'Expert wood repairs & trim work' },
+  { name: 'Power Washing', href: '/services/power-washing', icon: DropletsIcon, description: 'Professional pressure cleaning' },
 ]
 
 interface HeaderProps {
@@ -135,36 +95,46 @@ export default function Header({ cityName }: HeaderProps = {}) {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const toggleMenu = () => setMenuOpen(!menuOpen)
-  const closeMenu = () => {
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
+
+  const toggleMenu = useCallback(() => setMenuOpen(v => !v), [])
+  const closeMenu = useCallback(() => {
     setMenuOpen(false)
     setMobileServicesOpen(false)
-  }
-  const toggleMobileServices = () => setMobileServicesOpen(!mobileServicesOpen)
+  }, [])
+  const toggleMobileServices = useCallback(() => setMobileServicesOpen(v => !v), [])
 
   return (
     <>
-      {/* Top Bar */}
+      {/* Top Bar - Shows city/state on city pages */}
       <div className={`top-bar ${scrolled ? 'hidden' : ''}`}>
         <div className="container">
           <div className="top-bar-content">
             <div className="top-bar-left">
               <span className="top-bar-item">
                 <MapPinIcon size={12} />
-                {cityName ? `Serving ${cityName}, MA` : BUSINESS.address}
+                {cityName ? `Serving ${cityName}, Massachusetts` : BUSINESS.address}
               </span>
-              <a href={`mailto:${BUSINESS.email}`} className="top-bar-item">
+              <a href={`mailto:${BUSINESS.email}`} className="top-bar-item top-bar-email">
                 <MailIcon size={12} />
                 {BUSINESS.email}
               </a>
             </div>
             <a href={`tel:${BUSINESS.phoneRaw}`} className="top-bar-phone-btn">
               <PhoneIcon size={12} />
-              {BUSINESS.phone}
+              <span className="top-bar-phone-text">{BUSINESS.phone}</span>
             </a>
           </div>
         </div>
@@ -235,8 +205,15 @@ export default function Header({ cityName }: HeaderProps = {}) {
               {BUSINESS.phone}
             </a>
 
-            <button className="menu-btn" onClick={toggleMenu} aria-label="Open menu">
-              <MenuIcon size={28} />
+            {/* Modern Hamburger Button */}
+            <button
+              className={`hamburger-btn ${menuOpen ? 'active' : ''}`}
+              onClick={toggleMenu}
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            >
+              <span className="hamburger-line" />
+              <span className="hamburger-line" />
+              <span className="hamburger-line" />
             </button>
           </div>
         </div>
@@ -247,22 +224,37 @@ export default function Header({ cityName }: HeaderProps = {}) {
           onClick={closeMenu}
         />
 
-        {/* Mobile Menu */}
+        {/* Modern Mobile Menu - Full Screen */}
         <nav className={`mobile-menu ${menuOpen ? 'active' : ''}`}>
           <div className="mobile-menu-header">
-            <Image
-              src={BUSINESS.logo}
-              alt={BUSINESS.name}
-              width={120}
-              height={48}
-            />
+            <Link href="/" onClick={closeMenu} className="logo">
+              <Image
+                src={BUSINESS.logo}
+                alt={BUSINESS.name}
+                width={130}
+                height={52}
+              />
+            </Link>
             <button className="mobile-menu-close" onClick={closeMenu} aria-label="Close menu">
-              <XIcon size={24} />
+              <XIcon size={22} />
             </button>
           </div>
+
+          {/* City badge in mobile menu */}
+          {cityName && (
+            <div className="mobile-menu-city-badge">
+              <MapPinIcon size={14} />
+              <span>Serving {cityName}, MA</span>
+            </div>
+          )}
+
           <div className="mobile-nav">
-            <Link href="/" onClick={closeMenu}>Home</Link>
-            <Link href="/#about" onClick={closeMenu}>About</Link>
+            <Link href="/" onClick={closeMenu} className="mobile-nav-item">
+              Home
+            </Link>
+            <Link href="/#about" onClick={closeMenu} className="mobile-nav-item">
+              About
+            </Link>
 
             {/* Mobile Services Accordion */}
             <div className="mobile-nav-dropdown">
@@ -271,7 +263,7 @@ export default function Header({ cityName }: HeaderProps = {}) {
                 className={`mobile-nav-dropdown-toggle ${mobileServicesOpen ? 'open' : ''}`}
                 onClick={toggleMobileServices}
               >
-                Services
+                <span>Services</span>
                 <ChevronDownIcon size={18} className={`mobile-nav-dropdown-icon ${mobileServicesOpen ? 'open' : ''}`} />
               </button>
 
@@ -285,7 +277,6 @@ export default function Header({ cityName }: HeaderProps = {}) {
                       </div>
                       <div className="mobile-nav-dropdown-item-content">
                         <span className="mobile-nav-dropdown-item-title">{service.name}</span>
-                        <span className="mobile-nav-dropdown-item-desc">{service.description}</span>
                       </div>
                     </Link>
                   )
@@ -293,16 +284,23 @@ export default function Header({ cityName }: HeaderProps = {}) {
               </div>
             </div>
 
-            <Link href="/#gallery" onClick={closeMenu}>Gallery</Link>
-            <Link href="/projects" onClick={closeMenu}>Projects</Link>
-            <Link href="/blog" onClick={closeMenu}>Blog</Link>
-            <Link href="/#reviews" onClick={closeMenu}>Reviews</Link>
-            <Link href="/#contact" onClick={closeMenu}>Contact</Link>
+            <Link href="/#gallery" onClick={closeMenu} className="mobile-nav-item">Gallery</Link>
+            <Link href="/projects" onClick={closeMenu} className="mobile-nav-item">Projects</Link>
+            <Link href="/blog" onClick={closeMenu} className="mobile-nav-item">Blog</Link>
+            <Link href="/#reviews" onClick={closeMenu} className="mobile-nav-item">Reviews</Link>
+            <Link href="/#contact" onClick={closeMenu} className="mobile-nav-item">Contact</Link>
           </div>
-          <a href={`tel:${BUSINESS.phoneRaw}`} className="btn btn-primary" style={{ width: '100%', marginTop: '1.5rem' }}>
-            <PhoneIcon size={18} />
-            {BUSINESS.phone}
-          </a>
+
+          {/* Mobile menu CTA */}
+          <div className="mobile-menu-cta">
+            <a href={`tel:${BUSINESS.phoneRaw}`} className="mobile-menu-call-btn">
+              <PhoneIcon size={20} />
+              Call {BUSINESS.phone}
+            </a>
+            <a href="#quote-form" onClick={closeMenu} className="mobile-menu-quote-btn">
+              Get Free Estimate
+            </a>
+          </div>
         </nav>
       </header>
     </>
