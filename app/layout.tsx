@@ -623,27 +623,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KB89D6QQ');`,
           }}
         />
-        {/* Preconnect to critical external resources - improves LCP */}
-        <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Preload Inter font for faster font rendering - reduces font display time by ~110ms */}
-        <link
-          rel="preload"
-          as="font"
-          type="font/woff2"
-          href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.woff2"
-          crossOrigin="anonymous"
-        />
-        {/* Preconnect to form domain - critical for hero form loading */}
-        <link rel="preconnect" href="https://api.leadconnectorhq.com" crossOrigin="anonymous" />
-        {/* DNS prefetch for non-critical resources - reduces connection time */}
-        <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
-        <link rel="dns-prefetch" href="https://reputationhub.site" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://link.msgsndr.com" />
-        <link rel="dns-prefetch" href="https://img.youtube.com" />
-        {/* Preload critical LCP image for fastest loading - direct URL */}
+        {/* LCP IMAGE PRELOAD - MUST BE FIRST for fastest LCP */}
         <link
           rel="preload"
           as="image"
@@ -651,6 +631,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           type="image/jpeg"
           fetchPriority="high"
         />
+        {/* Only preconnect to image CDN - minimize connection competition */}
+        <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
+        {/* DNS prefetch for non-critical resources */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://reputationhub.site" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://link.msgsndr.com" />
+        <link rel="dns-prefetch" href="https://img.youtube.com" />
         {/* Critical CSS inline for faster FCP - reduces render blocking by ~600ms */}
         <style dangerouslySetInnerHTML={{ __html: `
           :root{--jh-navy:#0A1F44;--jh-red:#D20404;--jh-red-dark:#B91C1C;--font-inter:Inter,system-ui,sans-serif}
@@ -676,7 +667,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           .logo img{height:50px;width:auto}
           nav a{color:#0A1F44;text-decoration:none;font-weight:500}
           @keyframes spin{to{transform:rotate(360deg)}}
-          @media(max-width:768px){.top-bar-left{display:none}.hero,.hero-simplified{min-height:auto}}
+          @media(max-width:768px){.top-bar-email{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}}
         `}} />
         {/* Mobile optimization */}
         <meta name="HandheldFriendly" content="True" />
