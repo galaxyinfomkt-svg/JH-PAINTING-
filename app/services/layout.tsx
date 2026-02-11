@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Painting Services Massachusetts | Interior, Exterior, Commercial | (508) 690-8886',
-  description: 'Professional painting services in Massachusetts. Interior painting, exterior painting, commercial painting, residential, cabinet refinishing, carpentry repairs. Premium paints (Benjamin Moore, Sherwin-Williams). Licensed & insured. 40+ 5-star reviews. FREE estimates - Call (508) 690-8886!',
+  title: 'Need a Painter? All Painting Services MA | Walls to Cabinets ⭐',
+  description: 'One company, ALL your painting needs. Interior, exterior, cabinets, commercial - we do it all. Premium Benjamin Moore paints. 40+ 5-star reviews. Licensed & $2M insured. FREE quote → (508) 690-8886',
   keywords: [
     'painting services Massachusetts',
     'painting services near me',
@@ -16,10 +16,13 @@ export const metadata: Metadata = {
     'house painters Massachusetts',
     'professional painters near me',
     'painting contractors MA',
+    'all painting services',
+    'full service painters MA',
+    'one stop painting company',
   ].join(', '),
   openGraph: {
-    title: 'Professional Painting Services Massachusetts | JH Painting',
-    description: 'Full-service painting company in Massachusetts. Interior, exterior, commercial, residential, cabinet painting, and carpentry. Licensed & insured. FREE estimates!',
+    title: 'All Painting Services MA | Interior, Exterior, Cabinets & More',
+    description: 'One company for ALL your painting needs. Interior, exterior, cabinets, commercial, carpentry. 40+ 5-star reviews. Licensed & $2M insured. FREE estimates!',
     url: 'https://jhpaintingservices.com/services',
     siteName: 'JH Painting Services',
     locale: 'en_US',
@@ -29,14 +32,14 @@ export const metadata: Metadata = {
         url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064e65773e16aacef7d054.png',
         width: 1200,
         height: 630,
-        alt: 'Professional Painting Services Massachusetts - JH Painting',
+        alt: 'All Painting Services Massachusetts - JH Painting',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Painting Services MA | Interior, Exterior, Commercial | (508) 690-8886',
-    description: 'Professional painting services in Massachusetts. Interior, exterior, commercial, residential. Call for FREE estimate!',
+    title: 'All Painting Services MA | One Company Does It All ⭐',
+    description: 'Interior, exterior, cabinets, commercial - we do it ALL. 40+ 5-star reviews. FREE estimates!',
     images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064e65773e16aacef7d054.png'],
     creator: '@jhpaintingma',
   },

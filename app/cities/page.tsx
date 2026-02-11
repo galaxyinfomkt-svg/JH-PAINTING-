@@ -3,30 +3,58 @@ import Link from 'next/link'
 import { cities, getCitySlugWithState } from '@/app/data/cities'
 
 export const metadata: Metadata = {
-  title: 'Service Areas | Professional Painters in 114+ Massachusetts Cities | JH Painting',
-  description: 'JH Painting Services serves 114+ cities across Massachusetts. Find professional painters in Boston, Worcester, Cambridge, Newton, Framingham, and more. Licensed & insured. Call (508) 690-8886!',
+  title: 'Painters Near Me MA | 140+ Cities Served | Find Your Local Painter ⭐',
+  description: 'Looking for painters near you in Massachusetts? We serve 140+ cities: Boston, Worcester, Cambridge, Newton, Framingham & more. 40+ 5-star reviews. Licensed & $2M insured. FREE quote → (508) 690-8886',
   keywords: [
-    'painters Massachusetts',
+    'painters near me Massachusetts',
+    'painters near me MA',
     'house painters near me',
+    'local painters Massachusetts',
     'painting contractors MA',
     'painters Boston',
     'painters Worcester',
     'painters Cambridge',
     'painters Newton',
     'painters Framingham',
-    'painting services Massachusetts',
-    'local painters MA',
+    'find painters MA',
+    'painting services my area',
   ].join(', '),
   openGraph: {
-    title: 'Service Areas | 114+ Cities in Massachusetts | JH Painting',
-    description: 'Professional painting services across Massachusetts. Find painters in your city. Licensed, insured, 40+ 5-star reviews.',
+    title: 'Find Painters Near You | 140+ MA Cities | JH Painting',
+    description: 'Professional painters serving 140+ Massachusetts cities. Find your local painter. 40+ 5-star reviews. Licensed & $2M insured.',
     url: 'https://jhpaintingservices.com/cities',
     siteName: 'JH Painting Services',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Painters Near Me Massachusetts - JH Painting Service Areas',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Painters Near Me MA | 140+ Cities ⭐',
+    description: 'Find professional painters in your Massachusetts city. 40+ 5-star reviews.',
+    images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
+    creator: '@jhpaintingma',
   },
   alternates: {
     canonical: 'https://jhpaintingservices.com/cities',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 

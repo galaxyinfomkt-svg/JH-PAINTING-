@@ -1,12 +1,25 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Painting Tips & Guides | JH Painting Services Blog',
-  description: 'Expert painting tips, color guides, and home improvement advice from Massachusetts professional painters. Learn about interior, exterior, and cabinet painting.',
-  keywords: 'painting tips, paint colors, interior painting guide, exterior painting massachusetts, cabinet refinishing, home improvement blog, painting costs, DIY vs professional painting',
+  title: 'How Much Does Painting Cost in MA? | Expert Tips & Guides 2024',
+  description: 'Get answers: How much to paint a house in Massachusetts? Best paint colors 2024? DIY vs hiring pros? Expert painting tips from MA painters with 40+ 5-star reviews.',
+  keywords: [
+    'how much does painting cost Massachusetts',
+    'painting cost per square foot MA',
+    'best paint colors 2024',
+    'DIY vs professional painting',
+    'interior painting tips',
+    'exterior painting guide',
+    'cabinet painting cost MA',
+    'house painting prices Massachusetts',
+    'painting preparation tips',
+    'how to choose paint colors',
+    'painting contractor advice',
+    'home painting blog MA',
+  ].join(', '),
   openGraph: {
-    title: 'Painting Tips & Guides | JH Painting Services Blog',
-    description: 'Expert painting tips and home improvement advice from Massachusetts professional painters.',
+    title: 'Painting Tips MA | How Much Does Painting Cost? | Expert Guides',
+    description: 'Expert answers to your painting questions. Costs, colors, tips from Massachusetts pros with 40+ 5-star reviews.',
     url: 'https://jhpaintingservices.com/blog',
     siteName: 'JH Painting Services',
     locale: 'en_US',
@@ -16,21 +29,35 @@ export const metadata: Metadata = {
         url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
         width: 1200,
         height: 630,
+        alt: 'Painting Tips and Guides - JH Painting Services Massachusetts',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Painting Tips & Guides | JH Painting Services',
-    description: 'Expert painting tips from Massachusetts professional painters.',
+    title: 'Painting Tips MA | Cost Guides & Expert Advice ⭐',
+    description: 'How much does painting cost in MA? Best colors? DIY vs pro? Get expert answers.',
     images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
+    creator: '@jhpaintingma',
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   alternates: {
     canonical: 'https://jhpaintingservices.com/blog',
+  },
+  other: {
+    'geo.region': 'US-MA',
+    'geo.placename': 'Massachusetts',
+    'rating': 'General',
   },
 }
 
