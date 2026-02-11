@@ -4,10 +4,7 @@ const nextConfig = {
   generateBuildId: async () => {
     return `build-${Date.now()}`
   },
-  // Experimental optimizations for better performance
-  experimental: {
-    optimizePackageImports: ['lucide-react'],
-  },
+  experimental: {},
   // Redirect old URLs to /cities/[city]-ma/[service] pattern
   async redirects() {
     return [
@@ -119,19 +116,8 @@ const nextConfig = {
       // This handles old bookmarks and links like /cities/acton -> /cities/acton-ma
       // Note: These explicit patterns handle common city name formats
 
-      // Legacy city+service URLs: /cities/acton/interior-painting -> /cities/acton-ma/interior-painting
-      // Must come BEFORE city-only redirect to match first
-      {
-        source: '/cities/:city((?!.*-ma$)(?!.*-ri$)[a-z-]+)/:service(interior-painting|exterior-painting|commercial-painting|residential-painting|cabinet-painting|carpentry|power-washing)',
-        destination: '/cities/:city-ma/:service',
-        permanent: true,
-      },
-      // City-only URLs: /cities/acton -> /cities/acton-ma
-      {
-        source: '/cities/:city((?!.*-ma$)(?!.*-ri$)[a-z-]+)',
-        destination: '/cities/:city-ma',
-        permanent: true,
-      },
+      // NOTE: Legacy city redirects (without -ma suffix) are handled in middleware.ts
+      // to avoid regex lookahead issues with path-to-regexp redirect loops.
       // ============================================
       // EXPLICIT CITY REDIRECTS (without -ma suffix)
       // These handle specific crawled URLs that return 404

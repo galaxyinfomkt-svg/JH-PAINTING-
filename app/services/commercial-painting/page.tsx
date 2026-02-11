@@ -250,6 +250,8 @@ export default function CommercialPaintingPage() {
             fill
             className="object-cover"
             priority
+            sizes="100vw"
+            quality={75}
           />
           <div className="service-hero-overlay" />
         </div>

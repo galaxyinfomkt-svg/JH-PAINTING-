@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { BUSINESS, HOURS, SOCIAL_LINKS } from '@/lib/constants'
-import { cities } from '@/app/data/cities'
+import { cities, getCitySlugWithState } from '@/app/data/cities'
 
 // Inline SVG icons to avoid loading entire lucide-react bundle
 const MapPinIcon = ({ size = 24 }: { size?: number }) => (
@@ -56,6 +56,45 @@ const footerServices = [
   { name: 'Cabinet Painting', href: '/services/cabinet-painting' },
   { name: 'Carpentry', href: '/services/carpentry' },
   { name: 'Power Washing', href: '/services/power-washing' },
+]
+
+// Service-specific city links for footer SEO (varied cities per service for max coverage)
+const footerServiceAreas = [
+  {
+    name: 'Interior Painting',
+    slug: 'interior-painting',
+    citySlugs: ['marlborough', 'hudson', 'framingham', 'natick', 'worcester', 'newton', 'cambridge', 'boston', 'wellesley', 'sudbury'],
+  },
+  {
+    name: 'Exterior Painting',
+    slug: 'exterior-painting',
+    citySlugs: ['southborough', 'northborough', 'westborough', 'shrewsbury', 'concord', 'lexington', 'arlington', 'brookline', 'waltham', 'needham'],
+  },
+  {
+    name: 'Cabinet Painting',
+    slug: 'cabinet-painting',
+    citySlugs: ['wellesley', 'needham', 'concord', 'sudbury', 'weston', 'dover', 'sherborn', 'wayland', 'lincoln', 'newton'],
+  },
+  {
+    name: 'Commercial Painting',
+    slug: 'commercial-painting',
+    citySlugs: ['worcester', 'boston', 'framingham', 'newton', 'cambridge', 'lowell', 'waltham', 'burlington', 'somerville', 'marlborough'],
+  },
+  {
+    name: 'Residential Painting',
+    slug: 'residential-painting',
+    citySlugs: ['hudson', 'ashland', 'hopkinton', 'acton', 'maynard', 'stow', 'bolton', 'clinton', 'grafton', 'milford'],
+  },
+  {
+    name: 'Carpentry',
+    slug: 'carpentry',
+    citySlugs: ['marlborough', 'clinton', 'leominster', 'fitchburg', 'worcester', 'shrewsbury', 'grafton', 'northborough', 'westborough', 'southborough'],
+  },
+  {
+    name: 'Power Washing',
+    slug: 'power-washing',
+    citySlugs: ['hudson', 'framingham', 'natick', 'billerica', 'chelmsford', 'woburn', 'lexington', 'arlington', 'dedham', 'norwood'],
+  },
 ]
 
 interface FooterProps {
@@ -139,18 +178,45 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
         </div>
       </div>
 
-      {/* Service Areas Section */}
+      {/* Service-Specific City Links */}
       {showCities && (
         <div className="footer-service-areas">
           <div className="container">
             <h3 className="footer-service-areas-title">
+              Professional Painting Services Across Massachusetts
+            </h3>
+            <div className="footer-services-city-grid">
+              {footerServiceAreas.map((serviceArea) => (
+                <div key={serviceArea.slug} className="footer-service-city-col">
+                  <h4 className="footer-service-city-title">
+                    <Link href={`/services/${serviceArea.slug}`}>{serviceArea.name}</Link>
+                  </h4>
+                  <ul className="footer-service-city-links">
+                    {serviceArea.citySlugs.map((citySlug) => {
+                      const city = cities.find(c => c.slug === citySlug)
+                      if (!city) return null
+                      return (
+                        <li key={citySlug}>
+                          <Link href={`/cities/${getCitySlugWithState(city.slug)}/${serviceArea.slug}`}>
+                            {city.name}
+                          </Link>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            {/* General Service Areas */}
+            <h3 className="footer-service-areas-title" style={{ marginTop: '2.5rem' }}>
               <MapPinIcon size={20} />
               Service Areas - {cities.length}+ Cities Across Massachusetts
             </h3>
             <div className="footer-cities-list">
               {cities.map((city, index) => (
                 <span key={city.slug}>
-                  <Link href={`/cities/${city.slug}`} className="footer-city-link-rs">
+                  <Link href={`/cities/${getCitySlugWithState(city.slug)}`} className="footer-city-link-rs">
                     {city.name}
                   </Link>
                   {index < cities.length - 1 && ' • '}

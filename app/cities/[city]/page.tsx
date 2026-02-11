@@ -4,6 +4,7 @@ import { use, useState, memo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
+import dynamic from 'next/dynamic'
 import { notFound } from 'next/navigation'
 
 // Inline SVG icons - eliminates lucide-react bundle (saves ~50KB)
@@ -101,13 +102,27 @@ const DollarIcon = memo(({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
 ))
 DollarIcon.displayName = 'DollarIcon'
+
+const HammerIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18.7 5.3-7.3 7.3a1 1 0 0 0 0 1.4l.3.3a1 1 0 0 0 1.4 0l7.3-7.3a1 1 0 0 0 0-1.4l-.3-.3a1 1 0 0 0-1.4 0z"/><path d="m9.8 4.2 5.4 5.4"/><path d="M10.3 2.5c.7-.7 1.9-.7 2.6 0l.8.8c.7.7.7 1.9 0 2.6l-2.6-2.6a1.8 1.8 0 0 1 0-2.6"/></svg>
+))
+HammerIcon.displayName = 'HammerIcon'
+
+const DropletsIcon = memo(({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 14.94c1.32 0 2.4-1.1 2.4-2.43 0-.7-.34-1.36-1.03-1.92s-1.23-1.15-1.37-1.89c-.17.87-.69 1.7-1.37 2.26s-1.03 1.24-1.03 1.55c0 1.34 1.08 2.43 2.4 2.43z"/><path d="M17 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S17.29 6.75 17 5.3c-.29 1.45-1.14 2.84-2.29 3.76S13 11.1 13 12.25c0 2.22 1.8 4.05 4 4.05z"/></svg>
+))
+DropletsIcon.displayName = 'DropletsIcon'
+
 import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
 import { getCityContent, generateUniqueCityContent } from '@/app/data/cityContent'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import LazyIframe from '@/app/components/LazyIframe'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
-import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
+const BeforeAfterSlider = dynamic(() => import('@/app/components/BeforeAfterSlider'), {
+  ssr: false,
+  loading: () => <div style={{ height: '400px', background: '#f3f4f6', borderRadius: '16px' }} />,
+})
 import { BUSINESS, FORM_IDS } from '@/lib/constants'
 
 interface Props {
@@ -287,11 +302,13 @@ const videos = [
 const footerCities = cities.map(c => c.name)
 
 const servicesList = [
-  { slug: 'interior-painting', name: 'Interior Painting', icon: BrushIcon },
-  { slug: 'exterior-painting', name: 'Exterior Painting', icon: HomeIcon },
-  { slug: 'commercial-painting', name: 'Commercial Painting', icon: Building2Icon },
-  { slug: 'residential-painting', name: 'Residential Painting', icon: HomeIcon },
-  { slug: 'cabinet-painting', name: 'Cabinet Painting', icon: PaintBucketIcon },
+  { slug: 'interior-painting', name: 'Interior Painting', icon: BrushIcon, desc: 'Walls, ceilings, trim, doors & accent walls. Premium Benjamin Moore & Sherwin-Williams paints with meticulous prep for flawless results that last 10+ years.' },
+  { slug: 'exterior-painting', name: 'Exterior Painting', icon: HomeIcon, desc: 'Complete exterior protection against New England weather. Siding, trim, shutters, doors & decks with weather-resistant paints that withstand harsh winters.' },
+  { slug: 'cabinet-painting', name: 'Cabinet Painting', icon: PaintBucketIcon, desc: 'Transform dated cabinets for 70% less than replacement. Factory-smooth spray finish on kitchen & bathroom cabinets. Done in 5-7 days.' },
+  { slug: 'commercial-painting', name: 'Commercial Painting', icon: Building2Icon, desc: 'Offices, retail, restaurants & medical facilities. After-hours & weekend scheduling available to minimize business disruption.' },
+  { slug: 'residential-painting', name: 'Residential Painting', icon: HomeIcon, desc: 'Complete home painting solutions — interior & exterior. Single rooms to whole-house transformations with expert color consultation included.' },
+  { slug: 'carpentry', name: 'Carpentry', icon: HammerIcon, desc: 'Wood rot repair, window & door frames, trim, siding & deck restoration. Expert carpentry before painting ensures lasting results.' },
+  { slug: 'power-washing', name: 'Power Washing', icon: DropletsIcon, desc: 'Driveways, siding, decks, patios & fences. Remove years of dirt, mold & grime. Essential prep before any exterior painting project.' },
 ]
 
 export default function CityPage({ params }: Props) {
@@ -345,20 +362,14 @@ export default function CityPage({ params }: Props) {
       {/* Luxury Hero Section */}
       <section className="city-page-hero">
         <div className="city-page-hero-bg">
-          {/* LCP optimized: native img for fastest loading */}
-          <img
+          <Image
             src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
             alt={`Professional Painting Services in ${city.name}, Massachusetts`}
-            style={{
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              inset: 0
-            }}
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
+            fill
+            priority
+            sizes="100vw"
+            quality={75}
+            style={{ objectFit: 'cover' }}
           />
           <div className="city-page-hero-overlay" />
         </div>
@@ -429,7 +440,7 @@ export default function CityPage({ params }: Props) {
               </p>
               <p className="hero-description" style={{
                 fontSize: '1.0625rem',
-                color: 'rgba(255, 255, 255, 0.85)',
+                color: '#fff',
                 lineHeight: '1.7',
                 marginBottom: '2rem',
                 maxWidth: '600px'
@@ -585,6 +596,7 @@ export default function CityPage({ params }: Props) {
                     src="https://img.youtube.com/vi/F_lreXzNlUI/maxresdefault.jpg"
                     alt={`JH Painting Services working in ${city.name}, MA`}
                     fill
+                    loading="lazy"
                     style={{ objectFit: 'cover' }}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
@@ -714,13 +726,13 @@ export default function CityPage({ params }: Props) {
                   <service.icon size={32} />
                 </div>
                 <h3 className="city-service-title">
-                  {service.name}
+                  {service.name} in {city.name}
                 </h3>
                 <p className="city-service-desc">
-                  Professional {service.name.toLowerCase()} services in {city.name}, MA
+                  {service.desc}
                 </p>
                 <span className="city-service-link">
-                  Learn More <ChevronRightIcon size={18} />
+                  {service.name} in {city.name} <ChevronRightIcon size={18} />
                 </span>
               </Link>
               )
@@ -749,9 +761,10 @@ export default function CityPage({ params }: Props) {
               <div key={idx} className="city-gallery-item">
                 <Image
                   src={img.src}
-                  alt={img.alt}
+                  alt={`${img.alt} - ${city.name}, MA`}
                   fill
                   loading="lazy"
+                  sizes="(max-width: 768px) 50vw, 33vw"
                   style={{ objectFit: 'cover' }}
                 />
                 <div className="city-gallery-overlay">
@@ -768,7 +781,7 @@ export default function CityPage({ params }: Props) {
 
           {/* CTA after Gallery */}
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <p style={{ color: 'rgba(255, 255, 255, 0.6)', marginBottom: '1rem' }}>Like what you see?</p>
+            <p style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: '1rem' }}>Like what you see?</p>
             <a href="tel:+15086908886" className="city-cta-btn">
               <PhoneIcon size={20} />
               Get a Free Quote
@@ -792,8 +805,8 @@ export default function CityPage({ params }: Props) {
                 key={idx}
                 beforeImage={pair.before}
                 afterImage={pair.after}
-                beforeAlt={pair.beforeAlt}
-                afterAlt={pair.afterAlt}
+                beforeAlt={`${pair.beforeAlt} - ${city.name}, MA`}
+                afterAlt={`${pair.afterAlt} - ${city.name}, MA`}
               />
             ))}
           </div>
@@ -819,16 +832,17 @@ export default function CityPage({ params }: Props) {
               >
                 <Image
                   src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                  alt={video.title}
+                  alt={`${video.title} - ${city.name}, MA`}
                   fill
                   loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
                 />
                 <div className="video-card-rs-overlay">
                   <div className="video-card-rs-play">
                     <PlayIcon size={20} />
                   </div>
-                  <h4>{video.title}</h4>
+                  <h3>{video.title}</h3>
                   <span>
                     <PlayIcon size={12} />
                     {video.type}
@@ -861,7 +875,7 @@ export default function CityPage({ params }: Props) {
               <div className="city-about-image">
                 <Image
                   src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp"
-                  alt="Jafet Henrique - Owner of JH Painting Services in Massachusetts"
+                  alt={`Jafet Henrique - Owner of JH Painting Services in ${city.name}, MA`}
                   width={600}
                   height={500}
                   loading="lazy"
@@ -1239,17 +1253,31 @@ export default function CityPage({ params }: Props) {
               </p>
 
               <h3 className="city-seo-subtitle">
-                Cabinet Painting & Refinishing
+                Cabinet Painting & Refinishing in {city.name}
               </h3>
               <p>
                 Want to transform your {city.name} kitchen without the cost of new cabinets? Our cabinet painting service delivers a factory-finish look at a fraction of replacement cost. We properly prepare cabinet surfaces, apply primer and multiple coats of durable cabinet-specific paint, and reinstall hardware for a complete transformation. Most kitchen cabinet projects are completed in 5-7 days.
               </p>
 
               <h3 className="city-seo-subtitle">
-                Commercial Painting Services
+                Commercial Painting Services in {city.name}
               </h3>
               <p>
                 {city.name} businesses trust JH Painting for professional commercial painting that minimizes disruption to operations. We work around your schedule—evenings, weekends, or overnight—to complete projects without affecting your business. From offices and retail spaces to restaurants and medical facilities, we deliver commercial-quality results that enhance your professional image.
+              </p>
+
+              <h3 className="city-seo-subtitle">
+                Carpentry Services in {city.name}
+              </h3>
+              <p>
+                Before any paint touches your {city.name} home, underlying wood damage must be addressed. Our expert carpenters repair rotted window frames, damaged door frames, deteriorating trim, siding, and deck boards throughout {city.county || 'Massachusetts'}. Painting over rot is wasted money — we fix the foundation first so your paint job lasts for years. Licensed and insured for all carpentry work in {city.name}.
+              </p>
+
+              <h3 className="city-seo-subtitle">
+                Power Washing Services in {city.name}
+              </h3>
+              <p>
+                Restore your {city.name} property's curb appeal with professional power washing. We safely clean driveways, siding, decks, patios, fences, and walkways — removing years of dirt, mold, mildew, and algae. Power washing is essential preparation before any exterior painting project. Our team uses the right pressure and cleaning solutions for each surface to deliver dramatic results without damage.
               </p>
 
               <div className="city-seo-cta-box">
@@ -1340,7 +1368,7 @@ export default function CityPage({ params }: Props) {
             <div className="footer-brand">
               <Image
                 src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
-                alt="JH Painting Services"
+                alt={`JH Painting Services - Professional Painters in ${city.name}, MA`}
                 width={160}
                 height={64}
                 style={{ filter: 'brightness(0) invert(1)' }}
@@ -1384,6 +1412,7 @@ export default function CityPage({ params }: Props) {
                 <li><Link href="/services/residential-painting">Residential Painting</Link></li>
                 <li><Link href="/services/cabinet-painting">Cabinet Painting</Link></li>
                 <li><Link href="/services/carpentry">Carpentry</Link></li>
+                <li><Link href="/services/power-washing">Power Washing</Link></li>
               </ul>
             </div>
 
@@ -1408,7 +1437,42 @@ export default function CityPage({ params }: Props) {
             </div>
           </div>
 
-          {/* Service Areas - Cities */}
+          {/* Service-Specific City Links */}
+          <div className="footer-service-areas-inline">
+            <h4 className="footer-service-areas-title-inline">Professional Painting Services Across Massachusetts</h4>
+            <div className="footer-services-city-grid">
+              {[
+                { name: 'Interior Painting', slug: 'interior-painting', citySlugs: ['marlborough', 'hudson', 'framingham', 'natick', 'worcester', 'newton', 'cambridge', 'boston', 'wellesley', 'sudbury'] },
+                { name: 'Exterior Painting', slug: 'exterior-painting', citySlugs: ['southborough', 'northborough', 'westborough', 'shrewsbury', 'concord', 'lexington', 'arlington', 'brookline', 'waltham', 'needham'] },
+                { name: 'Cabinet Painting', slug: 'cabinet-painting', citySlugs: ['wellesley', 'needham', 'concord', 'sudbury', 'weston', 'dover', 'sherborn', 'wayland', 'lincoln', 'newton'] },
+                { name: 'Commercial Painting', slug: 'commercial-painting', citySlugs: ['worcester', 'boston', 'framingham', 'newton', 'cambridge', 'lowell', 'waltham', 'burlington', 'somerville', 'marlborough'] },
+                { name: 'Residential Painting', slug: 'residential-painting', citySlugs: ['hudson', 'ashland', 'hopkinton', 'acton', 'maynard', 'stow', 'bolton', 'clinton', 'grafton', 'milford'] },
+                { name: 'Carpentry', slug: 'carpentry', citySlugs: ['marlborough', 'clinton', 'leominster', 'fitchburg', 'worcester', 'shrewsbury', 'grafton', 'northborough', 'westborough', 'southborough'] },
+                { name: 'Power Washing', slug: 'power-washing', citySlugs: ['hudson', 'framingham', 'natick', 'billerica', 'chelmsford', 'woburn', 'lexington', 'arlington', 'dedham', 'norwood'] },
+              ].map((serviceArea) => (
+                <div key={serviceArea.slug} className="footer-service-city-col">
+                  <h5 className="footer-service-city-title">
+                    <Link href={`/services/${serviceArea.slug}`}>{serviceArea.name}</Link>
+                  </h5>
+                  <ul className="footer-service-city-links">
+                    {serviceArea.citySlugs.map((cs) => {
+                      const c = cities.find(ci => ci.slug === cs)
+                      if (!c) return null
+                      return (
+                        <li key={cs}>
+                          <Link href={`/cities/${getCitySlugWithState(c.slug)}/${serviceArea.slug}`}>
+                            {c.name}
+                          </Link>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* General Service Areas - All Cities */}
           <div className="footer-cities">
             <h4>Service Areas - {cities.length}+ Cities in Massachusetts</h4>
             <div className="footer-cities-grid">

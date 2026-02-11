@@ -10,7 +10,7 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap', // Critical for font display optimization - prevents FOIT
   variable: '--font-inter',
-  weight: ['400', '600', '700'],
+  weight: ['400', '700'],
   fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
   adjustFontFallback: true, // Reduces CLS by matching fallback font metrics
   preload: true,
@@ -78,27 +78,7 @@ export const metadata: Metadata = {
   },
 }
 
-// All 116 cities served - for Schema markup
-const citiesServed = [
-  'Marlborough', 'Hudson', 'Southborough', 'Berlin', 'Northborough', 'Cordaville', 'Stow',
-  'Westborough', 'Framingham', 'Bolton', 'Sudbury', 'Ashland', 'Maynard', 'Hopkinton',
-  'Clinton', 'Boylston', 'Shrewsbury', 'Wayland', 'Cochituate', 'Lancaster', 'Harvard',
-  'Concord', 'Natick', 'Acton', 'Sherborn', 'Holliston', 'Grafton', 'West Boylston',
-  'Upton', 'Weston', 'Sterling', 'Millbury', 'Wellesley', 'Dover', 'Milford', 'Carlisle',
-  'Holden', 'Lincoln', 'Paxton', 'Auburn', 'Medway', 'Needham', 'Rutland', 'Leicester',
-  'Mendon', 'Hopedale', 'Medfield', 'Bellingham', 'Bedford', 'Princeton', 'Oxford',
-  'Lexington', 'Norwood', 'Newton', 'Westwood', 'Burlington', 'Dedham', 'Brookline',
-  'Ayer', 'Canton', 'Waltham', 'Watertown', 'Belmont', 'Arlington', 'Groton', 'Pepperell',
-  'Shirley', 'Townsend', 'Lunenburg', 'Fitchburg', 'Leominster', 'Westminster', 'Spencer',
-  'Douglas', 'Uxbridge', 'Northbridge', 'Sutton', 'Millville', 'Blackstone', 'Worcester',
-  'Boston', 'Cambridge', 'Somerville', 'Franklin', 'Foxborough', 'Wrentham', 'Norfolk',
-  'Sharon', 'Walpole', 'Medford', 'Billerica', 'Chelmsford', 'Lowell', 'Tewksbury',
-  'Wilmington', 'Winchester', 'Woburn', 'Stoneham', 'Tyngsboro', 'Dunstable', 'Westford',
-  'Littleton', 'Millis', 'Hamilton', 'Pinehurst', 'Whitinsville', 'East Douglas',
-  'East Pepperell', 'Jamaica Plain', 'New Bedford', 'Sunderland'
-]
-
-// Schema JSON-LD - Comprehensive like A&M Painter
+// Schema JSON-LD - Optimized for performance
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -131,29 +111,7 @@ const schemaData = {
         "width": 400,
         "height": 160
       },
-      "image": [
-        {
-          "@type": "ImageObject",
-          "url": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg",
-          "width": 1200,
-          "height": 630,
-          "caption": "Professional house painting by JH Painting Services"
-        },
-        {
-          "@type": "ImageObject",
-          "url": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/6913825a96d06ab2e07a6439.png",
-          "width": 1200,
-          "height": 630,
-          "caption": "Interior painting services Massachusetts"
-        },
-        {
-          "@type": "ImageObject",
-          "url": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png",
-          "width": 1200,
-          "height": 630,
-          "caption": "Cabinet refinishing by JH Painting"
-        }
-      ],
+      "image": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg",
       "priceRange": "$$",
       "currenciesAccepted": "USD",
       "paymentAccepted": ["Cash", "Check", "Credit Card", "Debit Card", "Zelle", "Venmo"],
@@ -236,23 +194,23 @@ const schemaData = {
         }
       ],
       "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 42.3459,
-          "longitude": -71.5526
-        },
-        "geoRadius": "50 mi",
-        "description": `Serving 116+ cities across Massachusetts including: ${citiesServed.join(', ')}`
+        "@type": "State",
+        "name": "Massachusetts",
+        "containedInPlace": { "@type": "Country", "name": "United States" }
       },
-      "serviceArea": citiesServed.map(city => ({
-        "@type": "City",
-        "name": city,
-        "containedInPlace": {
-          "@type": "State",
-          "name": "Massachusetts"
-        }
-      })),
+      "serviceArea": [
+        { "@type": "State", "name": "Massachusetts" },
+        { "@type": "City", "name": "Boston" },
+        { "@type": "City", "name": "Worcester" },
+        { "@type": "City", "name": "Cambridge" },
+        { "@type": "City", "name": "Marlborough" },
+        { "@type": "City", "name": "Framingham" },
+        { "@type": "City", "name": "Newton" },
+        { "@type": "City", "name": "Natick" },
+        { "@type": "City", "name": "Wellesley" },
+        { "@type": "City", "name": "Lexington" },
+        { "@type": "City", "name": "Concord" }
+      ],
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
@@ -295,51 +253,10 @@ const schemaData = {
         "@type": "OfferCatalog",
         "name": "Painting Services",
         "itemListElement": [
-          {
-            "@type": "OfferCatalog",
-            "name": "Interior Painting",
-            "description": "MOST POPULAR - Professional interior painting for walls, ceilings, trim, doors",
-            "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wall Painting" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ceiling Painting" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trim & Baseboard Painting" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Door Painting" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Color Consultation" } }
-            ]
-          },
-          {
-            "@type": "OfferCatalog",
-            "name": "Exterior Painting",
-            "description": "Complete exterior house painting with prep work and premium paints",
-            "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "House Siding Painting" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trim & Fascia Painting" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck Staining & Sealing" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fence Painting & Staining" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Power Washing" } }
-            ]
-          },
-          {
-            "@type": "OfferCatalog",
-            "name": "Cabinet Refinishing",
-            "description": "Kitchen cabinet painting - Save 60-70% vs replacement",
-            "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Cabinet Painting" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Vanity Painting" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Spray Finish Application" } }
-            ]
-          },
-          {
-            "@type": "OfferCatalog",
-            "name": "Commercial Painting",
-            "description": "Professional painting for offices, retail, restaurants",
-            "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Office Painting" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retail Store Painting" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Restaurant Painting" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Warehouse Painting" } }
-            ]
-          }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting", "description": "Professional interior painting for walls, ceilings, trim, doors" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior Painting", "description": "Complete exterior house painting with prep work and premium paints" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing", "description": "Kitchen cabinet painting - Save 60-70% vs replacement" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting", "description": "Professional painting for offices, retail, restaurants" } }
         ]
       },
       "aggregateRating": {
@@ -353,73 +270,17 @@ const schemaData = {
       "review": [
         {
           "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Sarah M."
-          },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Sarah M." },
           "datePublished": "2024-11-15",
-          "reviewBody": "JH Painting did an amazing job on our entire home interior. Jafet and his team were professional, punctual, and incredibly detailed. The walls look flawless! Highly recommend for anyone in Marlborough or the MetroWest area."
+          "reviewBody": "JH Painting did an amazing job on our entire home interior. Professional, punctual, and incredibly detailed. Highly recommend!"
         },
         {
           "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "John D."
-          },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "John D." },
           "datePublished": "2024-10-22",
-          "reviewBody": "We hired JH Painting for our exterior and couldn't be happier. They power washed, prepped everything perfectly, and the paint job is beautiful. Great communication throughout the project. Fair pricing too!"
-        },
-        {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Maria L."
-          },
-          "datePublished": "2024-09-30",
-          "reviewBody": "Had our kitchen cabinets refinished by JH Painting and they look brand new! Saved us thousands compared to replacing them. The spray finish is smooth and professional. Jafet was great to work with."
-        },
-        {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Robert K."
-          },
-          "datePublished": "2024-08-18",
-          "reviewBody": "Best painters in Massachusetts! They painted our office building in Worcester and finished on time and under budget. Very professional crew, clean work area every day. Will use again for sure."
-        },
-        {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Jennifer T."
-          },
-          "datePublished": "2024-07-25",
-          "reviewBody": "JH Painting transformed our 1920s colonial in Concord. They were so careful with the historic details and the exterior looks stunning. Neighbors have been asking for their number! Excellent work."
+          "reviewBody": "We hired JH Painting for our exterior and couldn't be happier. Great communication and fair pricing!"
         }
       ]
     },
@@ -488,117 +349,11 @@ const schemaData = {
       "inLanguage": "en-US"
     },
     {
-      "@type": "HowTo",
-      "name": "How to Get Your Home Painted by JH Painting Services",
-      "description": "Step-by-step process for hiring JH Painting Services for your Massachusetts home painting project",
-      "totalTime": "PT7D",
-      "estimatedCost": {
-        "@type": "MonetaryAmount",
-        "currency": "USD",
-        "value": "4000-10000"
-      },
-      "supply": [
-        { "@type": "HowToSupply", "name": "Premium paint (Sherwin-Williams or Benjamin Moore)" },
-        { "@type": "HowToSupply", "name": "Primer" },
-        { "@type": "HowToSupply", "name": "Professional painting equipment" }
-      ],
-      "step": [
-        {
-          "@type": "HowToStep",
-          "position": 1,
-          "name": "Request Free Estimate",
-          "text": "Call JH Painting at (508) 690-8886 or fill out the online form at jhpaintingservices.com. We offer same-day or next-day estimate appointments.",
-          "url": "https://jhpaintingservices.com/#contact"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 2,
-          "name": "On-Site Consultation",
-          "text": "Our team visits your home to assess the project, discuss your vision, and provide color consultation advice.",
-          "url": "https://jhpaintingservices.com"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 3,
-          "name": "Receive Detailed Written Estimate",
-          "text": "Get a comprehensive itemized estimate with transparent pricing - no hidden fees or surprise charges.",
-          "url": "https://jhpaintingservices.com"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 4,
-          "name": "Professional Preparation",
-          "text": "Our crew protects your furniture, fills holes, sands surfaces, applies primer, and carefully masks all areas.",
-          "url": "https://jhpaintingservices.com/services/interior-painting"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 5,
-          "name": "Expert Paint Application",
-          "text": "Professional painters apply 2-3 coats using brush, roll, and spray techniques for perfect coverage and clean lines.",
-          "url": "https://jhpaintingservices.com/services"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 6,
-          "name": "Quality Inspection & Walkthrough",
-          "text": "Crew leader inspects all work, performs touch-ups, and conducts final walkthrough with you to ensure satisfaction.",
-          "url": "https://jhpaintingservices.com"
-        }
-      ]
-    },
-    {
       "@type": "Service",
       "serviceType": "House Painting",
-      "provider": {
-        "@id": "https://jhpaintingservices.com/#organization"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Massachusetts"
-      },
-      "description": "Professional house painting services in Massachusetts including interior painting, exterior painting, cabinet refinishing, and commercial painting. Licensed, $2M insured, EPA Lead-Safe certified.",
-      "offers": {
-        "@type": "Offer",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "2-6",
-          "priceCurrency": "USD",
-          "unitText": "per square foot"
-        },
-        "availability": "https://schema.org/InStock",
-        "validFrom": "2025-01-01"
-      }
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "@id": "https://jhpaintingservices.com/#navigation",
-      "name": "Main Navigation",
-      "hasPart": [
-        { "@type": "SiteNavigationElement", "name": "Home", "url": "https://jhpaintingservices.com/" },
-        { "@type": "SiteNavigationElement", "name": "About", "url": "https://jhpaintingservices.com/#about" },
-        { "@type": "SiteNavigationElement", "name": "Interior Painting", "url": "https://jhpaintingservices.com/services/interior-painting" },
-        { "@type": "SiteNavigationElement", "name": "Exterior Painting", "url": "https://jhpaintingservices.com/services/exterior-painting" },
-        { "@type": "SiteNavigationElement", "name": "Cabinet Painting", "url": "https://jhpaintingservices.com/services/cabinet-painting" },
-        { "@type": "SiteNavigationElement", "name": "Commercial Painting", "url": "https://jhpaintingservices.com/services/commercial-painting" },
-        { "@type": "SiteNavigationElement", "name": "Residential Painting", "url": "https://jhpaintingservices.com/services/residential-painting" },
-        { "@type": "SiteNavigationElement", "name": "Carpentry", "url": "https://jhpaintingservices.com/services/carpentry" },
-        { "@type": "SiteNavigationElement", "name": "Power Washing", "url": "https://jhpaintingservices.com/services/power-washing" },
-        { "@type": "SiteNavigationElement", "name": "Projects", "url": "https://jhpaintingservices.com/projects" },
-        { "@type": "SiteNavigationElement", "name": "Blog", "url": "https://jhpaintingservices.com/blog" },
-        { "@type": "SiteNavigationElement", "name": "Contact", "url": "https://jhpaintingservices.com/contact" }
-      ]
-    },
-    {
-      "@type": "SpeakableSpecification",
-      "@id": "https://jhpaintingservices.com/#speakable",
-      "cssSelector": [".hero-title", ".hero-description", ".section-header h2", ".faq-question-home h3", ".faq-answer-home p"]
-    },
-    {
-      "@type": "SearchAction",
-      "@id": "https://jhpaintingservices.com/#search",
-      "target": "https://jhpaintingservices.com/?s={search_term_string}",
-      "query-input": "required name=search_term_string"
+      "provider": { "@id": "https://jhpaintingservices.com/#organization" },
+      "areaServed": { "@type": "State", "name": "Massachusetts" },
+      "description": "Professional house painting services in Massachusetts including interior painting, exterior painting, cabinet refinishing, and commercial painting. Licensed, $2M insured, EPA Lead-Safe certified."
     }
   ]
 }
@@ -623,25 +378,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KB89D6QQ');`,
           }}
         />
-        {/* LCP IMAGE PRELOAD - MUST BE FIRST for fastest LCP */}
-        <link
-          rel="preload"
-          as="image"
-          href="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
-          type="image/jpeg"
-          fetchPriority="high"
-        />
-        {/* Only preconnect to image CDN - minimize connection competition */}
+        {/* Preconnect to image CDN for fastest image delivery */}
         <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
         {/* DNS prefetch for non-critical resources */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
-        <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
-        <link rel="dns-prefetch" href="https://reputationhub.site" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://link.msgsndr.com" />
-        <link rel="dns-prefetch" href="https://img.youtube.com" />
         {/* Critical CSS inline for faster FCP - reduces render blocking by ~600ms */}
         <style dangerouslySetInnerHTML={{ __html: `
           :root{--jh-navy:#0A1F44;--jh-red:#D20404;--jh-red-dark:#B91C1C;--font-inter:Inter,system-ui,sans-serif}
@@ -666,8 +407,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           img{max-width:100%;height:auto}
           .logo img{height:50px;width:auto}
           nav a{color:#0A1F44;text-decoration:none;font-weight:500}
+          .service-hero,.city-page-hero{position:relative;display:flex;align-items:flex-start;overflow:hidden;padding-top:160px}
+          .service-hero-bg,.city-page-hero-bg{position:absolute;inset:0;z-index:0}
+          .service-hero-overlay,.city-page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.85),rgba(0,0,0,.7),rgba(0,0,0,.6))}
+          .service-hero-content,.city-page-hero-content{position:relative;z-index:2;padding-top:40px;padding-bottom:60px}
+          .hero-form-card{background:#fff;border-radius:20px;padding:0;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.3)}
           @keyframes spin{to{transform:rotate(360deg)}}
-          @media(max-width:768px){.top-bar-email{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}}
+          @media(max-width:768px){.top-bar-email{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}.service-hero,.city-page-hero{padding-top:130px}.service-hero-content,.city-page-hero-content{padding-top:20px;padding-bottom:40px}}
         `}} />
         {/* Mobile optimization */}
         <meta name="HandheldFriendly" content="True" />

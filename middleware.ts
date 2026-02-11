@@ -48,6 +48,25 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  // Redirect /cities/city/service → /cities/city-ma/service (if city slug doesn't end with -ma or -ri)
+  const cityServiceMatch = pathname.match(/^\/cities\/([a-z][a-z0-9-]+)\/(interior-painting|exterior-painting|commercial-painting|residential-painting|cabinet-painting|carpentry|power-washing)$/)
+  if (cityServiceMatch) {
+    const citySlug = cityServiceMatch[1]
+    const service = cityServiceMatch[2]
+    if (!citySlug.endsWith('-ma') && !citySlug.endsWith('-ri')) {
+      return NextResponse.redirect(new URL(`/cities/${citySlug}-ma/${service}`, request.url), 301)
+    }
+  }
+
+  // Redirect /cities/city → /cities/city-ma (if city slug doesn't end with -ma or -ri)
+  const cityOnlyMatch = pathname.match(/^\/cities\/([a-z][a-z0-9-]+)$/)
+  if (cityOnlyMatch) {
+    const citySlug = cityOnlyMatch[1]
+    if (!citySlug.endsWith('-ma') && !citySlug.endsWith('-ri')) {
+      return NextResponse.redirect(new URL(`/cities/${citySlug}-ma`, request.url), 301)
+    }
+  }
+
   return NextResponse.next()
 }
 

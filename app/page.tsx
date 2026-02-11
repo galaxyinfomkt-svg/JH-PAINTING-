@@ -114,9 +114,15 @@ const DropletsIcon = memo(() => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 14.94c1.32 0 2.4-1.1 2.4-2.43 0-.7-.34-1.36-1.03-1.92s-1.23-1.15-1.37-1.89c-.17.87-.69 1.7-1.37 2.26s-1.03 1.24-1.03 1.55c0 1.34 1.08 2.43 2.4 2.43z"/><path d="M17 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S17.29 6.75 17 5.3c-.29 1.45-1.14 2.84-2.29 3.76S13 11.1 13 12.25c0 2.22 1.8 4.05 4 4.05z"/></svg>
 ))
 DropletsIcon.displayName = 'DropletsIcon'
+import dynamic from 'next/dynamic'
 import { cities } from './data/cities'
 import LazyIframe from './components/LazyIframe'
-import BeforeAfterSlider from './components/BeforeAfterSlider'
+
+// Lazy load heavy below-fold components
+const BeforeAfterSlider = dynamic(() => import('./components/BeforeAfterSlider'), {
+  ssr: false,
+  loading: () => <div style={{ height: '400px', background: '#f3f4f6', borderRadius: '16px' }} />,
+})
 
 // Data
 const services = [
@@ -346,9 +352,7 @@ export default function HomePage() {
                 alt="JH Painting Services Logo"
                 width={160}
                 height={64}
-                priority
                 loading="eager"
-                fetchPriority="high"
                 sizes="160px"
               />
             </a>
@@ -480,22 +484,14 @@ export default function HomePage() {
         {/* Hero Section - Simplified for CRO */}
         <section id="home" className="hero hero-simplified">
           <div className="hero-bg">
-            {/* LCP optimized: using img tag directly for fastest loading */}
-            <img
+            <Image
               src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
               alt="Professional Painting Services Massachusetts"
-              width={1920}
-              height={1080}
-              style={{
-                position: 'absolute',
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                inset: 0
-              }}
-              loading="eager"
-              decoding="sync"
-              fetchPriority="high"
+              fill
+              priority
+              sizes="100vw"
+              quality={75}
+              style={{ objectFit: 'cover' }}
             />
           </div>
           <div className="hero-overlay" />
@@ -985,7 +981,6 @@ export default function HomePage() {
               scrolling="no"
               style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '800px' }}
               title="Customer Reviews"
-              priority={true}
             />
           </div>
         </section>

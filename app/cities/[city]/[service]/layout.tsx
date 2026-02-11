@@ -38,6 +38,13 @@ const serviceSolutions: Record<string, string> = {
   'power-washing': 'Instant curb appeal. Decks, siding, driveways sparkling clean in one day.',
 }
 
+// Pre-render all service pages for each city at build time
+export async function generateStaticParams() {
+  return Object.keys(serviceNames).map(service => ({
+    service
+  }))
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ city: string; service: string }> }): Promise<Metadata> {
   const { city: citySlug, service } = await params
   const city = getCityBySlug(citySlug)

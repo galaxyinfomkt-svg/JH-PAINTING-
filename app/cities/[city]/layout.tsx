@@ -1,5 +1,12 @@
 import { Metadata } from 'next'
-import { getCityBySlug, getCitySlugWithState } from '@/app/data/cities'
+import { cities, getCityBySlug, getCitySlugWithState } from '@/app/data/cities'
+
+// Pre-render all city pages at build time for instant CDN delivery
+export async function generateStaticParams() {
+  return cities.map(city => ({
+    city: getCitySlugWithState(city.slug)
+  }))
+}
 
 interface Props {
   params: Promise<{ city: string }>

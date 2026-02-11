@@ -4,6 +4,7 @@ import { use } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
+import dynamic from 'next/dynamic'
 import { notFound } from 'next/navigation'
 import {
   Phone, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play,
@@ -11,7 +12,10 @@ import {
 } from 'lucide-react'
 import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
 import { cityContentMap, generateServiceContent } from '@/app/data/cityContent'
-import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
+const BeforeAfterSlider = dynamic(() => import('@/app/components/BeforeAfterSlider'), {
+  ssr: false,
+  loading: () => <div style={{ height: '400px', background: '#f3f4f6', borderRadius: '16px' }} />,
+})
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
@@ -476,10 +480,10 @@ export default function CityServicePage({ params }: Props) {
         <section className="service-section service-section-gray">
           <div className="container">
             <div className="service-section-header">
-              <span className="service-section-badge">Our Services</span>
-              <h2 className="service-section-title">{service.name} Services in {city.name}</h2>
+              <span className="service-section-badge">Our {city.name} Services</span>
+              <h2 className="service-section-title">{service.name} Services in {city.name}, MA</h2>
               <p className="service-section-subtitle">
-                Complete {service.name.toLowerCase()} solutions for your home or business
+                {uniqueServiceContent?.uniqueDescription || `Complete ${service.name.toLowerCase()} solutions tailored for ${city.name} homes and businesses in ${city.county || 'Massachusetts'}`}
               </p>
             </div>
 
@@ -487,7 +491,7 @@ export default function CityServicePage({ params }: Props) {
               {service.offerings.map((offering, idx) => (
                 <div key={idx} className="service-offering-item">
                   <CheckCircle2 size={20} />
-                  <span>{offering}</span>
+                  <span>{offering} in {city.name}</span>
                 </div>
               ))}
             </div>
@@ -499,9 +503,9 @@ export default function CityServicePage({ params }: Props) {
           <div className="container">
             <div className="service-section-header">
               <span className="service-section-badge">Our Work</span>
-              <h2 className="service-section-title">Project Gallery</h2>
+              <h2 className="service-section-title">{service.name} Projects Near {city.name}</h2>
               <p className="service-section-subtitle">
-                Beautiful transformations across Massachusetts
+                Real {service.name.toLowerCase()} transformations from {city.county || 'Massachusetts'} homes like yours
               </p>
             </div>
 
@@ -510,7 +514,7 @@ export default function CityServicePage({ params }: Props) {
                 <div key={idx} className="service-gallery-item">
                   <Image
                     src={image.src}
-                    alt={image.alt}
+                    alt={`${image.alt} - ${city.name}, MA`}
                     fill
                     loading="lazy"
                     className="object-cover"
@@ -555,10 +559,10 @@ export default function CityServicePage({ params }: Props) {
           <div className="container">
             <div className="service-section-header">
               <h2 className="service-section-title service-section-title-light">
-                Watch Our Work in Action
+                Watch Our {service.name} Work in {city.name}
               </h2>
               <p className="service-section-subtitle service-section-subtitle-light">
-                See how we transform homes across Massachusetts
+                See how we transform {city.name} homes with professional {service.name.toLowerCase()}
               </p>
             </div>
 
@@ -573,7 +577,7 @@ export default function CityServicePage({ params }: Props) {
                 >
                   <Image
                     src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-                    alt={video.title}
+                    alt={`${video.title} - ${city.name}, MA`}
                     fill
                     loading="lazy"
                     className="object-cover"
@@ -598,7 +602,7 @@ export default function CityServicePage({ params }: Props) {
                 <div className="service-about-image">
                   <Image
                     src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp"
-                    alt="Jafet Henrique - Owner of JH Painting Services in Massachusetts"
+                    alt={`Jafet Henrique - Owner of JH Painting Services in ${city.name}, MA`}
                     fill
                     loading="lazy"
                     className="object-cover"
@@ -612,13 +616,13 @@ export default function CityServicePage({ params }: Props) {
               </div>
 
               <div className="service-about-content">
-                <span className="service-section-badge">About Us</span>
-                <h2>Meet Jafet Henrique, Your {city.name} {service.name} Expert</h2>
+                <span className="service-section-badge">Your {city.name} {service.name} Team</span>
+                <h2>Why {city.name} Homeowners Choose JH Painting for {service.name}</h2>
                 <p>
-                  Founded with a passion for perfection, JH Painting Services has been transforming homes across Massachusetts for over 15 years. Owner Jafet Henrique leads every project with dedication to quality and customer satisfaction.
+                  Owner Jafet Henrique founded JH Painting Services with one mission: deliver exceptional {service.name.toLowerCase()} that {city.name} families can trust. With 15+ years transforming homes throughout {city.county || 'Massachusetts'}, we bring local expertise and genuine craftsmanship to every {city.name} project.
                 </p>
                 <p>
-                  {uniqueServiceContent?.localContext || `We're proud to serve ${city.name} and the surrounding communities. Our team understands the unique challenges of New England homes and delivers results that stand up to harsh weather conditions. From preparation to final inspection, we ensure every detail is perfect.`}
+                  {uniqueServiceContent?.localContext || `We're proud to serve ${city.name} and the surrounding ${city.county || 'Massachusetts'} communities. Our team understands the unique challenges of ${city.name} homes — from historic properties requiring specialized techniques to modern construction needing proper preparation. Every detail matters, from surface prep to final inspection.`}
                 </p>
 
                 <div className="service-about-features">
@@ -664,6 +668,79 @@ export default function CityServicePage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        {/* Why Choose Us for This Service in This City */}
+        {uniqueServiceContent?.whyChooseUs && uniqueServiceContent.whyChooseUs.length > 0 && (
+          <section className="service-section service-section-white">
+            <div className="container">
+              <div className="service-section-header">
+                <span className="service-section-badge">Why {city.name} Chooses Us</span>
+                <h2 className="service-section-title">Why {city.name} Homeowners Trust JH Painting for {service.name}</h2>
+                <p className="service-section-subtitle">
+                  Local expertise, premium quality, and genuine commitment to your {city.name} home
+                </p>
+              </div>
+
+              <div className="service-offerings-grid">
+                {uniqueServiceContent.whyChooseUs.map((reason, idx) => (
+                  <div key={idx} className="service-offering-item">
+                    <CheckCircle2 size={20} />
+                    <span>{reason}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* FAQ Section - City + Service Specific */}
+        {uniqueServiceContent?.faq && uniqueServiceContent.faq.length > 0 && (
+          <section className="service-section service-section-gray">
+            <div className="container">
+              <div className="service-section-header">
+                <span className="service-section-badge">{service.name} FAQ</span>
+                <h2 className="service-section-title">{service.name} Questions in {city.name}, MA</h2>
+                <p className="service-section-subtitle">
+                  Common questions from {city.name} homeowners about {service.name.toLowerCase()}
+                </p>
+              </div>
+
+              <div className="service-faq-list" style={{ maxWidth: '800px', margin: '0 auto' }}>
+                {uniqueServiceContent.faq.map((item, idx) => (
+                  <details key={idx} className="service-faq-item" style={{
+                    background: '#fff',
+                    borderRadius: '12px',
+                    padding: '1.5rem',
+                    marginBottom: '1rem',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+                    cursor: 'pointer'
+                  }}>
+                    <summary style={{
+                      fontWeight: '600',
+                      fontSize: '1.0625rem',
+                      color: '#0A1F44',
+                      listStyle: 'none',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center'
+                    }}>
+                      {item.question}
+                      <ChevronRight size={18} style={{ flexShrink: 0, marginLeft: '1rem' }} />
+                    </summary>
+                    <p style={{
+                      marginTop: '1rem',
+                      color: '#555',
+                      lineHeight: '1.7',
+                      fontSize: '0.9375rem'
+                    }}>
+                      {item.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* CTA Section */}
         <section className="service-cta-red">
