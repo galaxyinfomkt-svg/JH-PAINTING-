@@ -58,42 +58,70 @@ const footerServices = [
   { name: 'Power Washing', href: '/services/power-washing' },
 ]
 
-// Service-specific city links for footer SEO (varied cities per service for max coverage)
+// Service-specific city links organized by region for footer SEO
 const footerServiceAreas = [
   {
     name: 'Interior Painting',
     slug: 'interior-painting',
-    citySlugs: ['marlborough', 'hudson', 'framingham', 'natick', 'worcester', 'newton', 'cambridge', 'boston', 'wellesley', 'sudbury'],
+    regions: [
+      { region: 'MetroWest', cities: ['marlborough', 'hudson', 'framingham', 'natick'] },
+      { region: 'Worcester & Nearby', cities: ['worcester', 'shrewsbury'] },
+      { region: 'Greater Boston', cities: ['newton', 'cambridge', 'boston', 'wellesley'] },
+    ],
   },
   {
     name: 'Exterior Painting',
     slug: 'exterior-painting',
-    citySlugs: ['southborough', 'northborough', 'westborough', 'shrewsbury', 'concord', 'lexington', 'arlington', 'brookline', 'waltham', 'needham'],
+    regions: [
+      { region: 'MetroWest', cities: ['southborough', 'northborough', 'westborough', 'concord'] },
+      { region: 'Greater Boston', cities: ['lexington', 'arlington', 'brookline', 'waltham'] },
+      { region: 'Norfolk & South', cities: ['needham', 'shrewsbury'] },
+    ],
   },
   {
     name: 'Cabinet Painting',
     slug: 'cabinet-painting',
-    citySlugs: ['wellesley', 'needham', 'concord', 'sudbury', 'weston', 'dover', 'sherborn', 'wayland', 'lincoln', 'newton'],
+    regions: [
+      { region: 'Greater Boston', cities: ['wellesley', 'needham', 'newton', 'weston'] },
+      { region: 'MetroWest', cities: ['concord', 'sudbury', 'wayland'] },
+      { region: 'Norfolk & South', cities: ['dover', 'sherborn', 'lincoln'] },
+    ],
   },
   {
     name: 'Commercial Painting',
     slug: 'commercial-painting',
-    citySlugs: ['worcester', 'boston', 'framingham', 'newton', 'cambridge', 'lowell', 'waltham', 'burlington', 'somerville', 'marlborough'],
+    regions: [
+      { region: 'Greater Boston', cities: ['boston', 'cambridge', 'newton', 'somerville'] },
+      { region: 'MetroWest', cities: ['framingham', 'marlborough', 'waltham'] },
+      { region: 'Worcester & Nearby', cities: ['worcester', 'lowell', 'burlington'] },
+    ],
   },
   {
     name: 'Residential Painting',
     slug: 'residential-painting',
-    citySlugs: ['hudson', 'ashland', 'hopkinton', 'acton', 'maynard', 'stow', 'bolton', 'clinton', 'grafton', 'milford'],
+    regions: [
+      { region: 'MetroWest', cities: ['hudson', 'ashland', 'hopkinton', 'acton'] },
+      { region: 'Nearby Towns', cities: ['maynard', 'stow', 'bolton'] },
+      { region: 'Worcester & Nearby', cities: ['clinton', 'grafton', 'milford'] },
+    ],
   },
   {
     name: 'Carpentry',
     slug: 'carpentry',
-    citySlugs: ['marlborough', 'clinton', 'leominster', 'fitchburg', 'worcester', 'shrewsbury', 'grafton', 'northborough', 'westborough', 'southborough'],
+    regions: [
+      { region: 'MetroWest', cities: ['marlborough', 'northborough', 'westborough', 'southborough'] },
+      { region: 'Worcester & Nearby', cities: ['worcester', 'shrewsbury', 'grafton', 'clinton'] },
+      { region: 'North Central', cities: ['leominster', 'fitchburg'] },
+    ],
   },
   {
     name: 'Power Washing',
     slug: 'power-washing',
-    citySlugs: ['hudson', 'framingham', 'natick', 'billerica', 'chelmsford', 'woburn', 'lexington', 'arlington', 'dedham', 'norwood'],
+    regions: [
+      { region: 'MetroWest', cities: ['hudson', 'framingham', 'natick'] },
+      { region: 'Greater Boston', cities: ['lexington', 'arlington', 'dedham', 'norwood'] },
+      { region: 'North Middlesex', cities: ['billerica', 'chelmsford', 'woburn'] },
+    ],
   },
 ]
 
@@ -191,19 +219,24 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
                   <h4 className="footer-service-city-title">
                     <Link href={`/services/${serviceArea.slug}`}>{serviceArea.name}</Link>
                   </h4>
-                  <ul className="footer-service-city-links">
-                    {serviceArea.citySlugs.map((citySlug) => {
-                      const city = cities.find(c => c.slug === citySlug)
-                      if (!city) return null
-                      return (
-                        <li key={citySlug}>
-                          <Link href={`/cities/${getCitySlugWithState(city.slug)}/${serviceArea.slug}`}>
-                            {city.name}
-                          </Link>
-                        </li>
-                      )
-                    })}
-                  </ul>
+                  {serviceArea.regions.map((r) => (
+                    <div key={r.region} className="footer-region-group">
+                      <span className="footer-region-label">{r.region}</span>
+                      <ul className="footer-service-city-links">
+                        {r.cities.map((citySlug) => {
+                          const city = cities.find(c => c.slug === citySlug)
+                          if (!city) return null
+                          return (
+                            <li key={citySlug}>
+                              <Link href={`/cities/${getCitySlugWithState(city.slug)}/${serviceArea.slug}`}>
+                                {city.name}
+                              </Link>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>

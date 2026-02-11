@@ -1437,36 +1437,69 @@ export default function CityPage({ params }: Props) {
             </div>
           </div>
 
-          {/* Service-Specific City Links */}
+          {/* Service-Specific City Links by Region */}
           <div className="footer-service-areas-inline">
             <h4 className="footer-service-areas-title-inline">Professional Painting Services Across Massachusetts</h4>
             <div className="footer-services-city-grid">
               {[
-                { name: 'Interior Painting', slug: 'interior-painting', citySlugs: ['marlborough', 'hudson', 'framingham', 'natick', 'worcester', 'newton', 'cambridge', 'boston', 'wellesley', 'sudbury'] },
-                { name: 'Exterior Painting', slug: 'exterior-painting', citySlugs: ['southborough', 'northborough', 'westborough', 'shrewsbury', 'concord', 'lexington', 'arlington', 'brookline', 'waltham', 'needham'] },
-                { name: 'Cabinet Painting', slug: 'cabinet-painting', citySlugs: ['wellesley', 'needham', 'concord', 'sudbury', 'weston', 'dover', 'sherborn', 'wayland', 'lincoln', 'newton'] },
-                { name: 'Commercial Painting', slug: 'commercial-painting', citySlugs: ['worcester', 'boston', 'framingham', 'newton', 'cambridge', 'lowell', 'waltham', 'burlington', 'somerville', 'marlborough'] },
-                { name: 'Residential Painting', slug: 'residential-painting', citySlugs: ['hudson', 'ashland', 'hopkinton', 'acton', 'maynard', 'stow', 'bolton', 'clinton', 'grafton', 'milford'] },
-                { name: 'Carpentry', slug: 'carpentry', citySlugs: ['marlborough', 'clinton', 'leominster', 'fitchburg', 'worcester', 'shrewsbury', 'grafton', 'northborough', 'westborough', 'southborough'] },
-                { name: 'Power Washing', slug: 'power-washing', citySlugs: ['hudson', 'framingham', 'natick', 'billerica', 'chelmsford', 'woburn', 'lexington', 'arlington', 'dedham', 'norwood'] },
+                { name: 'Interior Painting', slug: 'interior-painting', regions: [
+                  { region: 'MetroWest', cities: ['marlborough', 'hudson', 'framingham', 'natick'] },
+                  { region: 'Worcester & Nearby', cities: ['worcester', 'shrewsbury'] },
+                  { region: 'Greater Boston', cities: ['newton', 'cambridge', 'boston', 'wellesley'] },
+                ]},
+                { name: 'Exterior Painting', slug: 'exterior-painting', regions: [
+                  { region: 'MetroWest', cities: ['southborough', 'northborough', 'westborough', 'concord'] },
+                  { region: 'Greater Boston', cities: ['lexington', 'arlington', 'brookline', 'waltham'] },
+                  { region: 'Norfolk & South', cities: ['needham', 'shrewsbury'] },
+                ]},
+                { name: 'Cabinet Painting', slug: 'cabinet-painting', regions: [
+                  { region: 'Greater Boston', cities: ['wellesley', 'needham', 'newton', 'weston'] },
+                  { region: 'MetroWest', cities: ['concord', 'sudbury', 'wayland'] },
+                  { region: 'Norfolk & South', cities: ['dover', 'sherborn', 'lincoln'] },
+                ]},
+                { name: 'Commercial Painting', slug: 'commercial-painting', regions: [
+                  { region: 'Greater Boston', cities: ['boston', 'cambridge', 'newton', 'somerville'] },
+                  { region: 'MetroWest', cities: ['framingham', 'marlborough', 'waltham'] },
+                  { region: 'Worcester & Nearby', cities: ['worcester', 'lowell', 'burlington'] },
+                ]},
+                { name: 'Residential Painting', slug: 'residential-painting', regions: [
+                  { region: 'MetroWest', cities: ['hudson', 'ashland', 'hopkinton', 'acton'] },
+                  { region: 'Nearby Towns', cities: ['maynard', 'stow', 'bolton'] },
+                  { region: 'Worcester & Nearby', cities: ['clinton', 'grafton', 'milford'] },
+                ]},
+                { name: 'Carpentry', slug: 'carpentry', regions: [
+                  { region: 'MetroWest', cities: ['marlborough', 'northborough', 'westborough', 'southborough'] },
+                  { region: 'Worcester & Nearby', cities: ['worcester', 'shrewsbury', 'grafton', 'clinton'] },
+                  { region: 'North Central', cities: ['leominster', 'fitchburg'] },
+                ]},
+                { name: 'Power Washing', slug: 'power-washing', regions: [
+                  { region: 'MetroWest', cities: ['hudson', 'framingham', 'natick'] },
+                  { region: 'Greater Boston', cities: ['lexington', 'arlington', 'dedham', 'norwood'] },
+                  { region: 'North Middlesex', cities: ['billerica', 'chelmsford', 'woburn'] },
+                ]},
               ].map((serviceArea) => (
                 <div key={serviceArea.slug} className="footer-service-city-col">
                   <h5 className="footer-service-city-title">
                     <Link href={`/services/${serviceArea.slug}`}>{serviceArea.name}</Link>
                   </h5>
-                  <ul className="footer-service-city-links">
-                    {serviceArea.citySlugs.map((cs) => {
-                      const c = cities.find(ci => ci.slug === cs)
-                      if (!c) return null
-                      return (
-                        <li key={cs}>
-                          <Link href={`/cities/${getCitySlugWithState(c.slug)}/${serviceArea.slug}`}>
-                            {c.name}
-                          </Link>
-                        </li>
-                      )
-                    })}
-                  </ul>
+                  {serviceArea.regions.map((r) => (
+                    <div key={r.region} className="footer-region-group">
+                      <span className="footer-region-label">{r.region}</span>
+                      <ul className="footer-service-city-links">
+                        {r.cities.map((cs) => {
+                          const c = cities.find(ci => ci.slug === cs)
+                          if (!c) return null
+                          return (
+                            <li key={cs}>
+                              <Link href={`/cities/${getCitySlugWithState(c.slug)}/${serviceArea.slug}`}>
+                                {c.name}
+                              </Link>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>

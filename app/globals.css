@@ -3420,6 +3420,21 @@ p {
   color: var(--jh-gold);
 }
 
+/* Region group within service column */
+.footer-region-group {
+  margin-bottom: 0.625rem;
+}
+
+.footer-region-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
 /* Inline footer service areas (city page) */
 .footer-service-areas-inline {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
