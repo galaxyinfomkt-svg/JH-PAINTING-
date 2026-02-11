@@ -643,15 +643,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://link.msgsndr.com" />
         <link rel="dns-prefetch" href="https://img.youtube.com" />
-        {/* Preload critical LCP image for faster loading - using Next.js optimized URL with q=30 */}
+        {/* Preload critical LCP image for fastest loading - direct URL */}
         <link
           rel="preload"
           as="image"
-          href="/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmsgsndr%2F0Def8kzJShLPuKrPk5Jw%2Fmedia%2F68d2b4b9fd1a287291990c89.jpeg&w=1080&q=30"
-          type="image/webp"
+          href="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
+          type="image/jpeg"
           fetchPriority="high"
-          imageSrcSet="/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmsgsndr%2F0Def8kzJShLPuKrPk5Jw%2Fmedia%2F68d2b4b9fd1a287291990c89.jpeg&w=640&q=30 640w, /_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmsgsndr%2F0Def8kzJShLPuKrPk5Jw%2Fmedia%2F68d2b4b9fd1a287291990c89.jpeg&w=1080&q=30 1080w, /_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmsgsndr%2F0Def8kzJShLPuKrPk5Jw%2Fmedia%2F68d2b4b9fd1a287291990c89.jpeg&w=1920&q=30 1920w"
-          imageSizes="(max-width: 640px) 640px, (max-width: 1080px) 1080px, 1920px"
         />
         {/* Critical CSS inline for faster FCP - reduces render blocking by ~600ms */}
         <style dangerouslySetInnerHTML={{ __html: `
