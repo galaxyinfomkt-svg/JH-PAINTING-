@@ -11,14 +11,14 @@ const beforeAfterPairs = [
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23ad3443ab5.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg',
-    beforeAlt: 'Historic church interior before restoration in Waltham MA',
-    afterAlt: 'Historic church interior after professional restoration in Waltham MA'
+    beforeAlt: 'Waltham Church interior before historic renewal by JH Painting',
+    afterAlt: 'Waltham Church interior after incredible transformation by JH Painting'
   },
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23bb3443ab4.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg',
-    beforeAlt: 'Historic church exterior before painting in Waltham MA',
-    afterAlt: 'Historic church exterior after professional painting in Waltham MA'
+    beforeAlt: 'Waltham Church exterior before historic renewal painting',
+    afterAlt: 'Waltham Church exterior after incredible transformation by JH Painting'
   },
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac7eb2da7db4eacd6a2.webp',

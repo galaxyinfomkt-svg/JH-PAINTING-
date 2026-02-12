@@ -385,7 +385,7 @@ export default function HomePage() {
                 </span>
                 <Image
                   src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
-                  alt="Exterior Painting Massachusetts"
+                  alt="Waltham Church Exterior Painting by JH Painting Services"
                   width={600}
                   height={450}
                   loading="lazy"
@@ -399,7 +399,7 @@ export default function HomePage() {
                   Exterior House Painting
                 </h2>
                 <p>
-                  Looking to boost your home&apos;s curb appeal? JH Painting Services delivers professional exterior house painting that transforms your property and protects it from New England&apos;s harsh weather conditions.
+                  From homes to historic landmarks like the Waltham Church, JH Painting Services delivers professional exterior painting that transforms any property and protects it from New England&apos;s harsh weather conditions. Our Waltham Church project showcased our ability to handle large-scale exterior work with precision and care.
                 </p>
                 <p>
                   Our comprehensive process includes thorough surface preparation—power washing, scraping, sanding, caulking, and priming—followed by two coats of premium grade A paint. We specialize in:

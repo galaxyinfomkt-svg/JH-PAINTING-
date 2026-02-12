@@ -175,7 +175,7 @@ const servicesData: ServiceInfo[] = [
   {
     name: 'Exterior Painting',
     slug: 'exterior-painting',
-    shortDesc: 'Weather-resistant exterior painting built for New England.',
+    shortDesc: 'Weather-resistant exterior painting built for New England — from homes to historic landmarks like our Waltham Church renewal.',
     getRegionContent: (regionName, regionSlug) => {
       const content: Record<string, { headline: string; intro: string; features: string[]; process: { step: string; detail: string }[] }> = {
         'greater-boston': {
@@ -556,7 +556,7 @@ export default async function RegionServicePage({ params }: Props) {
           <div className="city-page-hero-bg">
             <Image
               src={images.hero}
-              alt={`${service.name} services in ${region.name}`}
+              alt={serviceSlug === 'exterior-painting' ? `Historic Renewal: Waltham Church Transformation — ${service.name} in ${region.name}` : `${service.name} services in ${region.name}`}
               fill
               priority
               sizes="100vw"
@@ -670,7 +670,7 @@ export default async function RegionServicePage({ params }: Props) {
             <div style={{ position: 'relative', minHeight: '400px' }}>
               <Image
                 src={images.showcase}
-                alt={`${service.name} project results in ${region.name}`}
+                alt={serviceSlug === 'exterior-painting' ? `Historic Renewal: Waltham Church — ${service.name} by JH Painting` : `${service.name} project results in ${region.name}`}
                 fill
                 style={{ objectFit: 'cover' }}
                 loading="lazy"

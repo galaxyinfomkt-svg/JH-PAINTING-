@@ -166,7 +166,7 @@ const servicesData: Record<string, {
   'exterior-painting': {
     name: 'Exterior Painting',
     title: 'Expert Exterior Painting',
-    description: 'Protect and beautify your property exterior with premium weather-resistant paints and professional preparation.',
+    description: 'From residential homes to historic landmarks like our Waltham Church renewal, we deliver professional exterior painting with premium weather-resistant paints and meticulous preparation.',
     heroImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
     painPoints: [
       { title: 'Paint Peeling & Chipping?', desc: "New England weather is brutal on exteriors. Your home is exposed to harsh sun, rain, snow, and ice.", solution: 'Weather-resistant premium paints that last' },
@@ -238,8 +238,8 @@ const servicesData: Record<string, {
 }
 
 const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg', alt: 'Historic church restoration interior painting', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg', alt: 'Historic church exterior painting', category: 'Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg', alt: 'Historic Renewal: Waltham Church interior transformation by JH Painting', category: 'Waltham Church' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg', alt: 'Historic Renewal: Waltham Church exterior transformation by JH Painting', category: 'Waltham Church' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Professional interior painting', category: 'Interior' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp', alt: 'Professional exterior painting', category: 'Exterior' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp', alt: 'Deck staining and restoration', category: 'Deck' },
@@ -251,14 +251,14 @@ const beforeAfterPairs = [
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23ad3443ab5.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg',
-    beforeAlt: 'Historic church interior before restoration',
-    afterAlt: 'Historic church interior after professional restoration'
+    beforeAlt: 'Waltham Church interior before historic renewal by JH Painting',
+    afterAlt: 'Waltham Church interior after incredible transformation by JH Painting'
   },
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23bb3443ab4.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg',
-    beforeAlt: 'Historic church exterior before painting',
-    afterAlt: 'Historic church exterior after professional painting'
+    beforeAlt: 'Waltham Church exterior before historic renewal painting',
+    afterAlt: 'Waltham Church exterior after incredible transformation by JH Painting'
   },
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac7eb2da7db4eacd6a2.webp',

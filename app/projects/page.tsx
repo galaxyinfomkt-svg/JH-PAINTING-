@@ -15,13 +15,13 @@ const allProjects = [
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Professional exterior house painting services in Massachusetts by JH Painting', category: 'Exterior', featured: true },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Expert house painters in Waltham MA - exterior painting project', category: 'Exterior' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp', alt: 'Professional exterior house painting in Massachusetts', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg', alt: 'Historic church exterior painting in Waltham MA', category: 'Exterior', featured: true },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg', alt: 'Historic Renewal: The Incredible Transformation of a Waltham Church — exterior', category: 'Exterior', featured: true },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a39f38441b1a824eef7d0.webp', alt: 'House exterior after professional painting', category: 'Exterior' },
 
   // Interior Projects
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Professional interior painting contractors in Massachusetts', category: 'Interior', featured: true },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Bedroom interior painting services in Massachusetts by JH Painting', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg', alt: 'Historic church restoration interior painting in Waltham MA', category: 'Interior', featured: true },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg', alt: 'Historic Renewal: The Incredible Transformation of a Waltham Church — interior', category: 'Interior', featured: true },
 
   // Cabinet Projects
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Kitchen cabinet refinishing and painting services in MA', category: 'Cabinets', featured: true },
@@ -39,17 +39,17 @@ const beforeAfterPairs = [
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23ad3443ab5.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg',
-    beforeAlt: 'Historic church interior before restoration in Waltham MA',
-    afterAlt: 'Historic church interior after professional restoration in Waltham MA',
-    title: 'Church Interior Restoration',
+    beforeAlt: 'Waltham Church interior before historic renewal by JH Painting',
+    afterAlt: 'Waltham Church interior after incredible transformation by JH Painting',
+    title: 'Historic Renewal: Waltham Church Interior',
     location: 'Waltham, MA'
   },
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23bb3443ab4.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg',
-    beforeAlt: 'Historic church exterior before painting in Waltham MA',
-    afterAlt: 'Historic church exterior after professional painting in Waltham MA',
-    title: 'Church Exterior Painting',
+    beforeAlt: 'Waltham Church exterior before historic renewal painting',
+    afterAlt: 'Waltham Church exterior after incredible transformation by JH Painting',
+    title: 'Historic Renewal: Waltham Church Exterior',
     location: 'Waltham, MA'
   },
   {

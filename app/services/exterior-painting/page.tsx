@@ -19,7 +19,7 @@ const exteriorPaintingSchema = {
       "@id": "https://jhpaintingservices.com/services/exterior-painting#service",
       "name": "Exterior Painting Services Massachusetts",
       "serviceType": "Exterior House Painting",
-      "description": "Professional exterior house painting services across Massachusetts. Complete surface preparation, power washing, premium weather-resistant paints. Protect and beautify your home exterior.",
+      "description": "Professional exterior painting services across Massachusetts — from residential homes to historic landmarks like our Waltham Church renewal. Complete surface preparation, power washing, premium weather-resistant paints.",
       "provider": {
         "@type": "LocalBusiness",
         "@id": "https://jhpaintingservices.com/#localbusiness",
@@ -143,10 +143,10 @@ const exteriorPaintingSchema = {
 }
 
 const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg', alt: 'Historic church exterior painting in Waltham MA', category: 'Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg', alt: 'Historic Renewal: The Incredible Transformation of a Waltham Church — exterior after', category: 'Waltham Church' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp', alt: 'Professional exterior house painting in Massachusetts', category: 'House Exterior' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp', alt: 'Professional deck staining and power washing MA', category: 'Deck Staining' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg', alt: 'Historic church restoration interior painting', category: 'Interior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg', alt: 'Historic Renewal: Waltham Church interior restoration by JH Painting', category: 'Waltham Church' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Complete exterior home painting transformation Massachusetts', category: 'Full Exterior' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Professional painting services in Massachusetts', category: 'Interior' },
 ]
@@ -156,14 +156,14 @@ const beforeAfterPairs = [
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23ad3443ab5.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg',
-    beforeAlt: 'Historic church interior before restoration in Waltham MA',
-    afterAlt: 'Historic church interior after professional restoration in Waltham MA'
+    beforeAlt: 'Waltham Church interior before historic renewal by JH Painting',
+    afterAlt: 'Waltham Church interior after incredible transformation by JH Painting'
   },
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23bb3443ab4.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg',
-    beforeAlt: 'Historic church exterior before painting in Waltham MA',
-    afterAlt: 'Historic church exterior after professional painting in Waltham MA'
+    beforeAlt: 'Waltham Church exterior before historic renewal painting',
+    afterAlt: 'Waltham Church exterior after incredible transformation by JH Painting'
   },
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac7eb2da7db4eacd6a2.webp',
@@ -269,7 +269,7 @@ export default function ExteriorPaintingPage() {
         <div className="service-hero-bg">
           <Image
             src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
-            alt="Professional Exterior Painting Services Massachusetts"
+            alt="Historic Renewal: The Incredible Transformation of a Waltham Church by JH Painting Services"
             fill
             className="object-cover"
             priority
@@ -307,7 +307,7 @@ export default function ExteriorPaintingPage() {
               </h1>
 
               <p className="service-hero-desc">
-                Protect and beautify your home's exterior with weather-resistant finishes built for Massachusetts climate. Premium paints, expert application, and lasting protection for 10-15 years.
+                From residential homes to historic landmarks like our iconic Waltham Church restoration, JH Painting Services delivers exterior painting built to withstand Massachusetts weather. Premium paints, expert application, and lasting protection for 10-15 years.
               </p>
 
               <div className="service-hero-ctas">
@@ -595,10 +595,10 @@ export default function ExteriorPaintingPage() {
                 Meet Jafet Henrique, Your Exterior Painting Expert
               </h2>
               <p className="service-about-desc">
-                With over 15 years of experience protecting Massachusetts homes from the elements, JH Painting Services understands what it takes to deliver exterior paint jobs that last. Owner Jafet Henrique leads every project with dedication to quality and weather-resistant finishes.
+                With over 15 years of experience protecting Massachusetts homes and historic buildings from the elements, JH Painting Services understands what it takes to deliver exterior paint jobs that last. Our historic renewal of a Waltham Church — a stunning, large-scale transformation — showcases the precision and care we bring to every project, from residential homes to landmark properties.
               </p>
               <p className="service-about-desc">
-                We know Massachusetts weather—harsh winters, humid summers, and everything in between. That's why we use premium, weather-resistant paints and follow meticulous preparation processes that ensure your exterior paint job protects your home for 10-15 years.
+                We know Massachusetts weather—harsh winters, humid summers, and everything in between. That&apos;s why we use premium, weather-resistant paints and follow meticulous preparation processes that ensure your exterior paint job protects your property for 10-15 years. Owner Jafet Henrique leads every project with dedication to quality.
               </p>
 
               <div className="service-about-features">
