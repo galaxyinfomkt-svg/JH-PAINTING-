@@ -635,7 +635,7 @@ export default async function CityServicePage({ params }: Props) {
                 <span className="service-section-badge">Your {city.name} {service.name} Team</span>
                 <h2>Why {city.name} Homeowners Choose JH Painting for {service.name}</h2>
                 <p>
-                  Owner Jafet Henrique founded JH Painting Services with one mission: deliver exceptional {service.name.toLowerCase()} that {city.name} families can trust. With 15+ years transforming homes throughout {city.county || 'Massachusetts'}, we bring local expertise and genuine craftsmanship to every {city.name} project.
+                  Owner Jafet Henrique founded JH Painting Services with one mission: deliver exceptional {service.name.toLowerCase()} that {city.name} families can trust. From residential homes to historic landmarks like our <strong>Waltham Church renewal</strong> &mdash; an incredible large-scale transformation &mdash; we bring the same precision, premium materials, and genuine craftsmanship to every {city.name} project.
                 </p>
                 <p>
                   {uniqueServiceContent?.localContext || `We're proud to serve ${city.name} and the surrounding ${city.county || 'Massachusetts'} communities. Our team understands the unique challenges of ${city.name} homes — from historic properties requiring specialized techniques to modern construction needing proper preparation. Every detail matters, from surface prep to final inspection.`}

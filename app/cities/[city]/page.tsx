@@ -610,11 +610,11 @@ export default async function CityPage({ params }: Props) {
             <div className="vsl-story-content">
               <div className="vsl-story-text">
                 <p className="vsl-lead-paragraph">
-                  <span className="vsl-dropcap">W</span>hen you hire a painting contractor, you&apos;re not just getting paint on walls &mdash; you&apos;re trusting someone with your home, your biggest investment.
+                  <span className="vsl-dropcap">F</span>rom residential homes in {city.name} to historic landmarks like the Waltham Church, JH Painting Services delivers transformations that speak for themselves. Our <strong>Historic Renewal: The Incredible Transformation of a Waltham Church</strong> project is a perfect example of the precision, care, and quality we bring to every job.
                 </p>
 
                 <p>
-                  At JH Painting Services, we understand that {city.name} homeowners have high standards. Your home isn&apos;t just a building &mdash; it&apos;s where memories are made, families grow, and life happens. That&apos;s why we approach every project with the care and attention it deserves.
+                  At JH Painting Services, we understand that {city.name} homeowners have high standards. Whether it&apos;s a full exterior like the Waltham Church restoration or an interior refresh, we approach every project with the same dedication to craftsmanship and attention to detail that made that landmark transformation possible.
                 </p>
 
                 <div className="vsl-highlight-box">
@@ -622,7 +622,7 @@ export default async function CityPage({ params }: Props) {
                     <HeartIcon size={24} />
                   </div>
                   <p className="vsl-highlight-text">
-                    <strong>Here&apos;s the thing:</strong> We don&apos;t just paint houses &mdash; we transform homes. And we take that responsibility seriously.
+                    <strong>Here&apos;s the thing:</strong> We don&apos;t just paint houses &mdash; we transform properties, from {city.name} homes to historic churches. And we take that responsibility seriously.
                   </p>
                 </div>
               </div>
