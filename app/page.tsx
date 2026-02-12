@@ -110,8 +110,9 @@ export default function HomePage() {
               alt="Professional Painting Services Massachusetts"
               fill
               priority
+              fetchPriority="high"
               sizes="100vw"
-              quality={75}
+              quality={60}
               style={{ objectFit: 'cover' }}
             />
           </div>
@@ -120,54 +121,48 @@ export default function HomePage() {
           <div className="hero-content container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 500px), 1fr))', gap: '3rem', alignItems: 'center' }}>
               <div className="hero-text">
-                {/* Single trust indicator */}
-                <div className="hero-rating-badge-centered">
-                  <StarIcon size={16} fill="currentColor" />
-                  <StarIcon size={16} fill="currentColor" />
-                  <StarIcon size={16} fill="currentColor" />
-                  <StarIcon size={16} fill="currentColor" />
-                  <StarIcon size={16} fill="currentColor" />
-                  <span className="hero-rating-text">5.0 Rating · 40+ Reviews</span>
-                </div>
-
-                {/* Emotional headline */}
-                <h1 className="hero-title-emotional">
-                  Transform Your Home.<br />
-                  <span className="hero-title-accent">No Stress. No Surprises.</span>
-                </h1>
-
-                <p className="hero-description-short">
-                  Massachusetts&apos; trusted painters. Premium quality, honest pricing,
-                  and results that speak for themselves.
+                {/* Urgency eyebrow */}
+                <p style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1.25rem', background: 'rgba(220,38,38,0.9)', borderRadius: '100px', color: '#fff', fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
+                  YOUR FREE AND QUICK ESTIMATE TODAY
                 </p>
 
-                {/* Single primary CTA */}
-                <div className="hero-cta-single">
-                  <a href="tel:+15086908886" className="btn btn-primary btn-xl hero-phone-btn">
-                    <PhoneIcon />
-                    <span className="hero-cta-text">
-                      <span className="hero-cta-label">Free Estimate</span>
-                      <span className="hero-cta-number">(508) 690-8886</span>
-                    </span>
+                {/* High-impact headline with seasonal urgency */}
+                <h1 className="hero-title-emotional">
+                  Interior Painting Season Is Here<br />
+                  <span className="hero-title-accent">Book Now & Save</span>
+                </h1>
+
+                <p className="hero-description-short" style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', maxWidth: '560px' }}>
+                  Plus: Get a <strong style={{ color: '#FCD34D' }}>FREE Color Consultation</strong> When You Schedule Your Project This Month. Premium Benjamin Moore & Sherwin-Williams paints included.
+                </p>
+
+                {/* Dual CTA - Primary action + secondary */}
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+                  <a href="#quote-form" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2.5rem', background: 'linear-gradient(135deg, #DC2626 0%, #A80303 100%)', color: '#fff', borderRadius: '12px', fontSize: '1.125rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 10px 40px rgba(220,38,38,0.4)', transition: 'all 0.3s ease' }}>
+                    Claim Your Free Quote
+                    <ChevronRightIcon />
                   </a>
-                  <span className="hero-cta-subtext">Call now for same-day response</span>
+                  <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 1.5rem', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', color: '#fff', borderRadius: '12px', fontSize: '1rem', fontWeight: 600, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.3)' }}>
+                    <PhoneIcon />
+                    (508) 690-8886
+                  </a>
                 </div>
 
-                {/* Compact trust badges - max 3 */}
+                {/* Trust badges */}
                 <div className="hero-trust-compact">
+                  <span className="hero-trust-item">
+                    <StarIcon size={14} fill="currentColor" />
+                    5.0 · 40+ Reviews
+                  </span>
+                  <span className="hero-trust-divider">·</span>
                   <span className="hero-trust-item">
                     <ShieldIcon />
                     Licensed & $2M Insured
                   </span>
                   <span className="hero-trust-divider">·</span>
                   <span className="hero-trust-item">
-                    <CheckIcon />
-                    200+ Happy Customers
-                  </span>
-                  <span className="hero-trust-divider">·</span>
-                  <span className="hero-trust-item">
                     <ClockIcon />
-                    Since 2018
+                    Same-Day Response
                   </span>
                 </div>
               </div>

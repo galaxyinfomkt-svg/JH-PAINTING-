@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 interface LazyHeroFormProps {
   src: string
@@ -9,10 +9,30 @@ interface LazyHeroFormProps {
 }
 
 export default function LazyHeroForm({ src, title, className }: LazyHeroFormProps) {
+  const [shouldLoad, setShouldLoad] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = containerRef.current
+    if (!el) return
+
+    // Use IntersectionObserver to defer iframe loading until visible
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoad(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '200px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <div style={{ position: 'relative', minHeight: '400px' }}>
+    <div ref={containerRef} style={{ position: 'relative', minHeight: '400px' }}>
       {!isLoaded && (
         <div
           style={{
@@ -36,16 +56,19 @@ export default function LazyHeroForm({ src, title, className }: LazyHeroFormProp
           />
         </div>
       )}
-      <iframe
-        src={src}
-        title={title}
-        className={className}
-        onLoad={() => setIsLoaded(true)}
-        style={{
-          opacity: isLoaded ? 1 : 0,
-          transition: 'opacity 0.2s ease',
-        }}
-      />
+      {shouldLoad && (
+        <iframe
+          src={src}
+          title={title}
+          className={className}
+          onLoad={() => setIsLoaded(true)}
+          loading="lazy"
+          style={{
+            opacity: isLoaded ? 1 : 0,
+            transition: 'opacity 0.2s ease',
+          }}
+        />
+      )}
     </div>
   )
 }

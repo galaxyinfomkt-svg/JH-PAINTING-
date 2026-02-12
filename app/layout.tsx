@@ -381,6 +381,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* Preconnect to image CDN for fastest image delivery */}
         <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://api.leadconnectorhq.com" crossOrigin="anonymous" />
+        {/* Preload hero image for LCP optimization */}
+        <link rel="preload" as="image" href="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg" fetchPriority="high" />
         {/* DNS prefetch for non-critical resources */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
