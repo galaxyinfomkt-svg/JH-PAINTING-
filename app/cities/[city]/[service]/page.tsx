@@ -1,10 +1,6 @@
-'use client'
-
-import { use } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import dynamic from 'next/dynamic'
 import { notFound } from 'next/navigation'
 // Inline SVG icons - eliminates lucide-react bundle (saves ~50KB)
 const Phone = ({ size = 20 }: { size?: number }) => (
@@ -45,10 +41,7 @@ const Sparkles = ({ size = 20 }: { size?: number }) => (
 )
 import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
 import { cityContentMap, generateServiceContent } from '@/app/data/cityContent'
-const BeforeAfterSlider = dynamic(() => import('@/app/components/BeforeAfterSlider'), {
-  ssr: false,
-  loading: () => <div style={{ height: '400px', background: '#f3f4f6', borderRadius: '16px' }} />,
-})
+import BeforeAfterGrid from '@/app/components/BeforeAfterGrid'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
@@ -307,8 +300,8 @@ const features = [
   { icon: Sparkles, text: 'Premium Quality Paints' }
 ]
 
-export default function CityServicePage({ params }: Props) {
-  const { city: citySlug, service: serviceSlug } = use(params)
+export default async function CityServicePage({ params }: Props) {
+  const { city: citySlug, service: serviceSlug } = await params
   const city = getCityBySlug(citySlug)
   const service = servicesData[serviceSlug as keyof typeof servicesData]
   const cityContent = cityContentMap[citySlug]
@@ -573,17 +566,7 @@ export default function CityServicePage({ params }: Props) {
               <p>Drag the slider to see the amazing results we deliver for our {city.name} clients.</p>
             </div>
 
-            <div className="before-after-grid">
-              {beforeAfterPairs.map((pair, idx) => (
-                <BeforeAfterSlider
-                  key={idx}
-                  beforeImage={pair.before}
-                  afterImage={pair.after}
-                  beforeAlt={pair.beforeAlt}
-                  afterAlt={pair.afterAlt}
-                />
-              ))}
-            </div>
+            <BeforeAfterGrid pairs={beforeAfterPairs} />
           </div>
         </section>
 

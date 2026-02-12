@@ -1,6 +1,3 @@
-'use client'
-
-import { useParams } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { regions, getRegionBySlug } from '@/app/data/regions'
@@ -528,10 +525,12 @@ const MailIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
 )
 
-export default function RegionServicePage() {
-  const params = useParams()
-  const regionSlug = params.region as string
-  const serviceSlug = params.service as string
+interface Props {
+  params: Promise<{ region: string; service: string }>
+}
+
+export default async function RegionServicePage({ params }: Props) {
+  const { region: regionSlug, service: serviceSlug } = await params
   const region = getRegionBySlug(regionSlug)
   const service = servicesData.find(s => s.slug === serviceSlug)
 
@@ -620,7 +619,6 @@ export default function RegionServicePage() {
                   className="hero-form-iframe"
                   src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
                   title="Contact Form"
-                  headerText={`Free ${service.name} Estimate`}
                 />
               </div>
             </div>

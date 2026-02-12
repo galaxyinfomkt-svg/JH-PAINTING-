@@ -5,6 +5,7 @@ import HomeVideoSection from './components/HomeVideoSection'
 import HomeFAQ from './components/HomeFAQ'
 import HomeBeforeAfter from './components/HomeBeforeAfter'
 import LazyIframe from './components/LazyIframe'
+import LazyHeroForm from './components/LazyHeroForm'
 import Footer from './components/Footer'
 
 // SVG icons - plain functions for server rendering (no memo needed)
@@ -117,7 +118,7 @@ export default function HomePage() {
           <div className="hero-overlay" />
 
           <div className="hero-content container">
-            <div className="hero-centered">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 500px), 1fr))', gap: '3rem', alignItems: 'center' }}>
               <div className="hero-text">
                 {/* Single trust indicator */}
                 <div className="hero-rating-badge-centered">
@@ -169,6 +170,15 @@ export default function HomePage() {
                     Since 2018
                   </span>
                 </div>
+              </div>
+
+              {/* Quote Form Card */}
+              <div id="quote-form" className="hero-form-card">
+                <LazyHeroForm
+                  className="hero-form-iframe"
+                  src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
+                  title="Contact Form"
+                />
               </div>
             </div>
           </div>
