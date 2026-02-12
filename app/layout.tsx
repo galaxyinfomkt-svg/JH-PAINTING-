@@ -381,11 +381,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* Preconnect to image CDN for fastest image delivery */}
         <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://api.leadconnectorhq.com" crossOrigin="anonymous" />
-        {/* Preload hero image for LCP optimization */}
-        <link rel="preload" as="image" href="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg" fetchPriority="high" />
-        {/* DNS prefetch for non-critical resources */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        {/* Hero image preload handled automatically by next/image priority prop */}
+        {/* next/font/google serves fonts locally - no external Google Fonts CDN needed */}
         {/* Critical CSS inline for faster FCP - reduces render blocking by ~600ms */}
         <style dangerouslySetInnerHTML={{ __html: `
           :root{--jh-navy:#0A1F44;--jh-red:#D20404;--jh-red-dark:#B91C1C;--font-inter:Inter,system-ui,sans-serif}

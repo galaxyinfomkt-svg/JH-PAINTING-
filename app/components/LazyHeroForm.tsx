@@ -32,7 +32,7 @@ export default function LazyHeroForm({ src, title, className }: LazyHeroFormProp
   }, [])
 
   return (
-    <div ref={containerRef} style={{ position: 'relative', minHeight: '400px' }}>
+    <div ref={containerRef} style={{ position: 'relative', minHeight: '620px' }}>
       {!isLoaded && (
         <div
           style={{
