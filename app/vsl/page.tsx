@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Phone, CheckCircle2, Star, Shield, Award, Clock, Users, MapPin, Play, ChevronRight, Heart, Sparkles } from 'lucide-react'
+import { Phone, CheckCircle2, Star, Shield, Award, Clock, Users, MapPin, Play, ChevronRight, Heart, Sparkles } from '@/app/components/icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import LazyIframe from '@/app/components/LazyIframe'

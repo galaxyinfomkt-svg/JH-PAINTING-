@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Phone, X, ChevronLeft, ChevronRight, Play, Sparkles, Award, Users, Star, ArrowRight, Expand, Grid3X3, LayoutGrid } from 'lucide-react'
+import { Phone, X, ChevronLeft, ChevronRight, Play, Sparkles, Award, Users, Star, ArrowRight, Expand, Grid3X3, LayoutGrid } from '@/app/components/icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'

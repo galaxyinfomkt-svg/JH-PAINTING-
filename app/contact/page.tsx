@@ -22,7 +22,7 @@ import {
   PaintBucket,
   CheckCircle2,
   MessageSquare
-} from 'lucide-react'
+} from '@/app/components/icons'
 import LazyIframe from '../components/LazyIframe'
 
 // Menu data

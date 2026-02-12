@@ -6303,6 +6303,7 @@ a:focus-visible {
   display: flex;
   align-items: flex-start;
   padding-top: 160px; /* top-bar (44px) + header (80px) + 36px buffer */
+  background: #0F172A; /* Fallback for content below image on mobile */
 }
 
 @media (max-width: 768px) {
@@ -6321,6 +6322,15 @@ a:focus-visible {
   position: absolute;
   inset: 0;
   z-index: 0;
+}
+
+/* Mobile: limit hero bg to viewport height so image isn't stretched */
+@media (max-width: 768px) {
+  .city-page-hero-bg {
+    bottom: auto;
+    height: 100svh;
+    min-height: 500px;
+  }
 }
 
 .city-page-hero-bg img {

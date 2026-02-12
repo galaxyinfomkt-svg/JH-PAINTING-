@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { CheckCircle2, Phone, Mail, Clock, ArrowRight, Star, Shield, Home, Calendar } from 'lucide-react'
+import { CheckCircle2, Phone, Mail, Clock, ArrowRight, Star, Shield, Home, Calendar } from '@/app/components/icons'
 
 export default function ThankYouPage() {
   const [mounted, setMounted] = useState(false)

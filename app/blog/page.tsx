@@ -23,7 +23,7 @@ import {
   Building2,
   PaintBucket,
   BookOpen,
-} from 'lucide-react'
+} from '@/app/components/icons'
 import { blogPosts, blogCategories, getFeaturedPosts } from '../data/blogPosts'
 
 const menuServices = [

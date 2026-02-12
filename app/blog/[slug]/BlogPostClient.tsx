@@ -28,7 +28,7 @@ import {
   Star,
   Shield,
   Check,
-} from 'lucide-react'
+} from '@/app/components/icons'
 import { BlogPost } from '../../data/blogPosts'
 
 const menuServices = [
