@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { cities, getCitySlugWithState } from './data/cities'
 import { blogPosts } from './data/blogPosts'
+import { regions } from './data/regions'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://jhpaintingservices.com'
@@ -131,9 +132,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   )
 
+  // Region hub pages: /regions/greater-boston, /regions/metrowest, etc.
+  const regionPages: MetadataRoute.Sitemap = regions.map((region) => ({
+    url: `${baseUrl}/regions/${region.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }))
+
+  // Region + service pages: /regions/greater-boston/interior-painting, etc.
+  const regionServicePages: MetadataRoute.Sitemap = regions.flatMap((region) =>
+    servicesSlugs.map((service) => ({
+      url: `${baseUrl}/regions/${region.slug}/${service}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    }))
+  )
+
   return [
     ...staticPages,
     ...blogPages,
+    ...regionPages,
+    ...regionServicePages,
     ...cityPages,
     ...cityServicePages,
   ]

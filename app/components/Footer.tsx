@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { BUSINESS, HOURS, SOCIAL_LINKS } from '@/lib/constants'
 import { cities, getCitySlugWithState } from '@/app/data/cities'
+import { regions } from '@/app/data/regions'
 
 // Inline SVG icons to avoid loading entire lucide-react bundle
 const MapPinIcon = ({ size = 24 }: { size?: number }) => (
@@ -241,8 +242,24 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
               ))}
             </div>
 
-            {/* General Service Areas */}
+            {/* Region Links */}
             <h3 className="footer-service-areas-title" style={{ marginTop: '2.5rem' }}>
+              Service Regions
+            </h3>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
+              {regions.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/regions/${r.slug}`}
+                  style={{ background: 'rgba(201,168,76,0.15)', color: '#c9a84c', padding: '0.375rem 0.875rem', borderRadius: '6px', fontSize: '0.8125rem', fontWeight: 600, border: '1px solid rgba(201,168,76,0.25)' }}
+                >
+                  {r.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* General Service Areas */}
+            <h3 className="footer-service-areas-title" style={{ marginTop: '1.5rem' }}>
               <MapPinIcon size={20} />
               Service Areas - {cities.length}+ Cities Across Massachusetts
             </h3>
