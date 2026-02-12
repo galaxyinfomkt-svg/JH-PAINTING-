@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { regions, getRegionBySlug } from '@/app/data/regions'
 import { getCityBySlug, getCitySlugWithState } from '@/app/data/cities'
+import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 
 const serviceImages: Record<string, { hero: string; showcase: string }> = {
@@ -503,6 +504,29 @@ const servicesData: ServiceInfo[] = [
   },
 ]
 
+// Inline SVG icons
+const PhoneIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+)
+const MapPinIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+)
+const StarIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+)
+const ShieldIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+)
+const CheckIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+)
+const ChevronRightIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+)
+const MailIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+)
+
 export default function RegionServicePage() {
   const params = useParams()
   const regionSlug = params.region as string
@@ -524,50 +548,105 @@ export default function RegionServicePage() {
 
   return (
     <>
+      <Header cityName={region.name} />
+
       <main>
-        {/* Hero with Background Image */}
-        <section style={{ position: 'relative', color: '#fff', padding: '6rem 0 4rem', textAlign: 'center', overflow: 'hidden', minHeight: '400px' }}>
-          <Image
-            src={images.hero}
-            alt={`${service.name} services in ${region.name}`}
-            fill
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
-            priority
-            quality={75}
-          />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(26,26,46,0.92) 0%, rgba(22,33,62,0.88) 50%, rgba(15,52,96,0.85) 100%)' }} />
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{ color: '#c9a84c', fontWeight: 600, fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem' }}>
-              {service.name} &bull; {region.name}
-            </p>
-            <h1 style={{ fontSize: 'clamp(1.75rem, 4.5vw, 2.75rem)', fontWeight: 800, marginBottom: '1rem' }}>
-              {content.headline}
-            </h1>
-            <p style={{ fontSize: '1.0625rem', color: 'rgba(255,255,255,0.85)', maxWidth: '700px', margin: '0 auto 2rem', lineHeight: 1.7 }}>
-              {content.intro}
-            </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#c9a84c', color: '#1a1a2e', padding: '0.875rem 2rem', borderRadius: '8px', fontWeight: 700, fontSize: '1.125rem' }}>
-                (508) 690-8886
-              </a>
-              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', border: '2px solid #c9a84c', color: '#c9a84c', padding: '0.875rem 2rem', borderRadius: '8px', fontWeight: 600 }}>
-                Get FREE Quote
-              </Link>
+        {/* Hero */}
+        <section className="city-page-hero">
+          <div className="city-page-hero-bg">
+            <Image
+              src={images.hero}
+              alt={`${service.name} services in ${region.name}`}
+              fill
+              priority
+              sizes="100vw"
+              quality={75}
+              style={{ objectFit: 'cover' }}
+            />
+            <div className="city-page-hero-overlay" />
+          </div>
+
+          <div className="container city-page-hero-content">
+            <div style={{ maxWidth: '800px' }}>
+              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', background: 'rgba(255,255,255,0.12)', backdropFilter: 'blur(10px)', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 500, border: '1px solid rgba(255,255,255,0.2)' }}>
+                  <MapPinIcon size={14} />
+                  {region.name}
+                </span>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', padding: '0.5rem 1rem', background: 'linear-gradient(135deg, #DC2626 0%, #A80303 100%)', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
+                  <StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} />
+                  5.0
+                </span>
+              </div>
+
+              <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, color: '#fff', lineHeight: 1.08, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+                {content.headline}
+              </h1>
+
+              <p style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', color: 'rgba(255,255,255,0.9)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '640px' }}>
+                {content.intro}
+              </p>
+
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+                <a href="tel:+15086908886" className="city-cta-btn">
+                  <PhoneIcon size={20} />
+                  (508) 690-8886
+                </a>
+                <Link href="/contact" className="city-cta-btn-outline">
+                  Get FREE Quote
+                  <ChevronRightIcon size={18} />
+                </Link>
+              </div>
+
+              <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
+                {[
+                  { icon: ShieldIcon, text: 'Licensed & $2M Insured' },
+                  { icon: CheckIcon, text: '40+ 5-Star Reviews' },
+                  { icon: MapPinIcon, text: `Serving All ${region.name}` },
+                ].map((item, idx) => (
+                  <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.9)' }}>
+                    <span style={{ color: '#DC2626' }}><item.icon size={16} /></span>
+                    <span style={{ fontSize: '0.875rem', fontWeight: 500 }}>{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Bar */}
+        <section style={{ background: '#0F172A', padding: '1.5rem 0' }}>
+          <div className="container">
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '3rem', flexWrap: 'wrap' }}>
+              {[
+                { value: `${regionCities.length}+`, label: 'Cities Served' },
+                { value: '200+', label: 'Projects Completed' },
+                { value: '5.0', label: 'Google Rating' },
+                { value: '100%', label: 'Satisfaction' },
+              ].map((stat, idx) => (
+                <div key={idx} style={{ textAlign: 'center' }}>
+                  <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#DC2626' }}>{stat.value}</div>
+                  <div style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Features */}
-        <section style={{ padding: '4rem 0', background: '#fff' }}>
+        <section className="city-section city-section-white">
           <div className="container">
-            <h2 style={{ textAlign: 'center', fontSize: '1.75rem', fontWeight: 700, marginBottom: '2.5rem', color: '#1a1a2e' }}>
-              What Sets Our {service.name} Apart in {region.name}
-            </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem', maxWidth: '900px', margin: '0 auto' }}>
+            <div className="city-section-header">
+              <span className="city-badge city-badge-red">{service.name}</span>
+              <h2 className="city-section-title">What Sets Our {service.name} Apart in {region.name}</h2>
+              <p className="city-section-subtitle">Region-specific expertise that delivers superior results</p>
+            </div>
+
+            <div className="city-why-grid">
               {content.features.map((feature, idx) => (
-                <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', background: '#f8f9fa', padding: '1.25rem', borderRadius: '10px', border: '1px solid #eee' }}>
-                  <span style={{ color: '#c9a84c', fontSize: '1.25rem', flexShrink: 0, marginTop: '2px' }}>&#10003;</span>
-                  <p style={{ color: '#333', fontSize: '0.9375rem', lineHeight: 1.6 }}>{feature}</p>
+                <div key={idx} className="city-why-card">
+                  <div className="city-why-icon" style={{ color: '#fff' }}><CheckIcon size={28} /></div>
+                  <p style={{ color: '#64748B', fontSize: '1rem', lineHeight: 1.75 }}>{feature}</p>
                 </div>
               ))}
             </div>
@@ -575,42 +654,57 @@ export default function RegionServicePage() {
         </section>
 
         {/* Showcase Image */}
-        <section style={{ padding: '0', background: '#f8f9fa' }}>
-          <div style={{ position: 'relative', width: '100%', maxHeight: '400px', overflow: 'hidden' }}>
-            <Image
-              src={images.showcase}
-              alt={`${service.name} project results in ${region.name}`}
-              width={1200}
-              height={400}
-              style={{ width: '100%', height: 'auto', objectFit: 'cover', maxHeight: '400px' }}
-              loading="lazy"
-              quality={75}
-            />
-            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '2rem 1.5rem 1.5rem', background: 'linear-gradient(transparent, rgba(26,26,46,0.8))' }}>
-              <div className="container">
-                <p style={{ color: '#fff', fontWeight: 600, fontSize: '1rem' }}>
-                  {service.name} &mdash; Real results by JH Painting in {region.name}
+        <section className="city-section city-section-dark" style={{ padding: '0' }}>
+          <div className="city-about-grid" style={{ maxWidth: '100%', gap: '0' }}>
+            <div style={{ position: 'relative', minHeight: '400px' }}>
+              <Image
+                src={images.showcase}
+                alt={`${service.name} project results in ${region.name}`}
+                fill
+                style={{ objectFit: 'cover' }}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={75}
+              />
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', padding: 'clamp(2rem, 4vw, 4rem)', background: '#0F172A' }}>
+              <div>
+                <span className="city-badge city-badge-red">Real Results</span>
+                <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 800, color: '#fff', lineHeight: 1.2, margin: '1rem 0 1.25rem' }}>
+                  {service.name} Excellence in {region.name}
+                </h2>
+                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1rem', lineHeight: 1.75, marginBottom: '2rem' }}>
+                  Every project is completed with premium materials, expert technique, and our signature attention to detail. See the JH Painting difference in every brushstroke.
                 </p>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  <a href="tel:+15086908886" className="city-cta-btn"><PhoneIcon size={18} /> Call for Quote</a>
+                  <Link href="/projects" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#DC2626', fontWeight: 600, fontSize: '0.9375rem' }}>
+                    View Portfolio <ChevronRightIcon size={16} />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Process */}
-        <section style={{ padding: '4rem 0', background: '#f8f9fa' }}>
-          <div className="container" style={{ maxWidth: '800px' }}>
-            <h2 style={{ textAlign: 'center', fontSize: '1.75rem', fontWeight: 700, marginBottom: '2.5rem', color: '#1a1a2e' }}>
-              Our {service.name} Process
-            </h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+        <section className="city-section city-section-gray">
+          <div className="container">
+            <div className="city-section-header">
+              <span className="city-badge city-badge-blue">Our Process</span>
+              <h2 className="city-section-title">Our {service.name} Process</h2>
+              <p className="city-section-subtitle">A proven step-by-step approach that delivers consistent, premium results</p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '900px', margin: '0 auto', padding: '0 1.5rem' }}>
               {content.process.map((step, idx) => (
-                <div key={idx} style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', background: '#c9a84c', color: '#1a1a2e', borderRadius: '50%', fontSize: '1rem', fontWeight: 800, flexShrink: 0 }}>
+                <div key={idx} style={{ background: '#fff', borderRadius: '20px', padding: '2rem 2.5rem', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 24px rgba(0,0,0,0.05)', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', minWidth: '48px', background: 'linear-gradient(135deg, #DC2626, #B91C1C)', color: '#fff', borderRadius: '14px', fontSize: '1.125rem', fontWeight: 800 }}>
                     {idx + 1}
                   </span>
                   <div>
-                    <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: '#1a1a2e', marginBottom: '0.375rem' }}>{step.step}</h3>
-                    <p style={{ color: '#555', fontSize: '0.9375rem', lineHeight: 1.6 }}>{step.detail}</p>
+                    <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: '#0F172A', marginBottom: '0.5rem' }}>{step.step}</h3>
+                    <p style={{ color: '#64748B', fontSize: '0.9375rem', lineHeight: 1.75 }}>{step.detail}</p>
                   </div>
                 </div>
               ))}
@@ -618,25 +712,67 @@ export default function RegionServicePage() {
           </div>
         </section>
 
-        {/* Cities for this service */}
-        <section style={{ padding: '4rem 0', background: '#fff' }}>
+        {/* Owner / About */}
+        <section className="city-section city-section-white">
           <div className="container">
-            <h2 style={{ textAlign: 'center', fontSize: '1.75rem', fontWeight: 700, marginBottom: '0.5rem' }}>
-              {service.name} in {region.name} Cities
-            </h2>
-            <p style={{ textAlign: 'center', color: '#666', marginBottom: '2.5rem' }}>
-              Click any city for local {service.name.toLowerCase()} details and pricing
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.75rem' }}>
+            <div className="city-about-grid">
+              <div className="city-about-image-wrapper">
+                <div className="city-about-image">
+                  <Image
+                    src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp"
+                    alt={`Jafet Hernandez - Owner of JH Painting serving ${region.name}`}
+                    width={600} height={500} loading="lazy"
+                    style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+                  />
+                </div>
+                <div className="city-about-badge">
+                  <div className="city-about-badge-number">40+</div>
+                  <div className="city-about-badge-label">5-Star Google Reviews</div>
+                </div>
+              </div>
+              <div className="city-about-content">
+                <span className="city-badge city-badge-red">Meet the Owner</span>
+                <h2>Your {service.name} Expert in {region.name}</h2>
+                <p>Jafet Hernandez founded JH Painting with a simple belief: every homeowner deserves premium quality work at a fair price. Our team brings specialized {service.name.toLowerCase()} expertise to every project across {region.name}, using only premium Benjamin Moore and Sherwin-Williams products.</p>
+                <div className="city-about-features">
+                  {[
+                    { icon: ShieldIcon, title: 'Licensed & $2M Insured' },
+                    { icon: StarIcon, title: '40+ 5-Star Reviews' },
+                    { icon: MapPinIcon, title: `Local ${region.name} Team` },
+                    { icon: CheckIcon, title: '100% Satisfaction' },
+                  ].map((item, idx) => (
+                    <div key={idx} className="city-about-feature">
+                      <div className="city-about-feature-icon" style={{ color: '#DC2626' }}><item.icon size={24} /></div>
+                      <span className="city-about-feature-text">{item.title}</span>
+                    </div>
+                  ))}
+                </div>
+                <a href="tel:+15086908886" className="city-cta-btn"><PhoneIcon size={20} /> Call (508) 690-8886</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Cities for this service */}
+        <section className="city-section city-section-gray">
+          <div className="container">
+            <div className="city-section-header">
+              <span className="city-badge city-badge-red">Service Areas</span>
+              <h2 className="city-section-title">{service.name} in {region.name} Cities</h2>
+              <p className="city-section-subtitle">Click any city for local {service.name.toLowerCase()} details and pricing</p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.75rem', maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
               {regionCities.map((city) => {
                 if (!city) return null
                 return (
                   <Link
                     key={city.slug}
                     href={`/cities/${getCitySlugWithState(city.slug)}/${serviceSlug}`}
-                    style={{ display: 'block', background: '#f8f9fa', borderRadius: '8px', padding: '1rem', border: '1px solid #eee', fontWeight: 600, color: '#1a1a2e', fontSize: '0.9375rem' }}
+                    style={{ display: 'block', background: '#fff', borderRadius: '14px', padding: '1.25rem 1.5rem', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.04)', textDecoration: 'none' }}
                   >
-                    {city.name}
+                    <span style={{ fontWeight: 600, color: '#0F172A', fontSize: '1rem' }}>{city.name}</span>
+                    {city.population && <span style={{ display: 'block', fontSize: '0.8125rem', color: '#94A3B8', marginTop: '0.25rem' }}>Pop. {city.population}</span>}
                   </Link>
                 )
               })}
@@ -645,49 +781,64 @@ export default function RegionServicePage() {
         </section>
 
         {/* Other Services */}
-        <section style={{ padding: '3rem 0', background: '#f8f9fa' }}>
+        <section className="city-section city-section-white">
           <div className="container">
-            <h2 style={{ textAlign: 'center', fontSize: '1.5rem', fontWeight: 700, marginBottom: '1.5rem' }}>
-              Other Services in {region.name}
-            </h2>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.75rem' }}>
+            <div className="city-section-header">
+              <span className="city-badge city-badge-blue">More Services</span>
+              <h2 className="city-section-title">Other Services in {region.name}</h2>
+              <p className="city-section-subtitle">Explore our full range of professional services</p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(280px, 100%), 1fr))', gap: '1rem', maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
               {otherServices.map((svc) => (
                 <Link
                   key={svc.slug}
                   href={`/regions/${region.slug}/${svc.slug}`}
-                  style={{ background: '#1a1a2e', color: '#fff', padding: '0.625rem 1.25rem', borderRadius: '8px', fontSize: '0.875rem', fontWeight: 500 }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: '#fff', borderRadius: '16px', padding: '1.25rem 1.5rem', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.04)', textDecoration: 'none', transition: 'all 0.3s ease' }}
                 >
-                  {svc.name}
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '44px', height: '44px', minWidth: '44px', background: 'linear-gradient(135deg, #DC2626, #B91C1C)', borderRadius: '12px' }}>
+                    <ChevronRightIcon size={20} />
+                  </span>
+                  <div>
+                    <span style={{ fontWeight: 700, color: '#0F172A', fontSize: '1rem', display: 'block' }}>{svc.name}</span>
+                    <span style={{ fontSize: '0.8125rem', color: '#94A3B8' }}>{svc.shortDesc}</span>
+                  </div>
                 </Link>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA with Background Image */}
-        <section style={{ position: 'relative', padding: '4rem 0', textAlign: 'center', overflow: 'hidden' }}>
-          <Image
-            src={images.hero}
-            alt={`${service.name} in ${region.name}`}
-            fill
-            style={{ objectFit: 'cover' }}
-            loading="lazy"
-            quality={60}
-          />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(201,168,76,0.95) 0%, rgba(184,148,63,0.92) 100%)' }} />
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <h2 style={{ color: '#1a1a2e', fontSize: '1.75rem', fontWeight: 800, marginBottom: '0.75rem' }}>
-              Get a FREE {service.name} Quote in {region.name}
-            </h2>
-            <p style={{ color: 'rgba(26,26,46,0.8)', marginBottom: '1.5rem' }}>
-              Licensed & $2M insured. 40+ five-star reviews. No obligation.
-            </p>
-            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#1a1a2e', color: '#c9a84c', padding: '1rem 2.5rem', borderRadius: '8px', fontWeight: 700, fontSize: '1.25rem' }}>
-              (508) 690-8886
-            </a>
+        {/* Other Regions */}
+        <section className="city-section city-section-gray" style={{ padding: '4rem 0' }}>
+          <div className="container">
+            <div className="city-section-header" style={{ marginBottom: '2rem' }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#0F172A' }}>Other Service Regions</h2>
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.75rem', padding: '0 1.5rem' }}>
+              {regions.filter(r => r.slug !== region.slug).map((r) => (
+                <Link key={r.slug} href={`/regions/${r.slug}/${serviceSlug}`} style={{ background: '#0F172A', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '12px', fontSize: '0.9375rem', fontWeight: 600, textDecoration: 'none' }}>{r.name}</Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="city-cta-section">
+          <div className="city-cta-pattern" />
+          <div className="container">
+            <div className="city-cta-content">
+              <h2 className="city-cta-title">Get a FREE {service.name} Quote in {region.name}</h2>
+              <p className="city-cta-subtitle">Licensed & $2M insured. 40+ five-star reviews. No obligation.</p>
+              <div className="city-cta-buttons">
+                <a href="tel:+15086908886" className="city-cta-btn-white"><PhoneIcon size={24} /> (508) 690-8886</a>
+                <Link href="/contact" className="city-cta-btn-glass"><MailIcon size={24} /> Get Free Estimate</Link>
+              </div>
+            </div>
           </div>
         </section>
       </main>
+
       <Footer />
     </>
   )
