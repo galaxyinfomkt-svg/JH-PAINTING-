@@ -6324,12 +6324,10 @@ a:focus-visible {
   z-index: 0;
 }
 
-/* Mobile: limit hero bg to viewport height so image isn't stretched */
+/* Mobile: hero bg covers full section */
 @media (max-width: 768px) {
   .city-page-hero-bg {
-    bottom: auto;
-    height: 100svh;
-    min-height: 500px;
+    inset: 0;
   }
 }
 
