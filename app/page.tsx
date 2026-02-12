@@ -123,24 +123,23 @@ export default function HomePage() {
               <div className="hero-text">
                 {/* Urgency eyebrow */}
                 <p style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1.25rem', background: 'rgba(220,38,38,0.9)', borderRadius: '100px', color: '#fff', fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
-                  YOUR FREE AND QUICK ESTIMATE TODAY
+                  FREE ESTIMATE — SAME-DAY RESPONSE
                 </p>
 
-                {/* High-impact headline with seasonal urgency */}
+                {/* High-impact headline */}
                 <h1 className="hero-title-emotional">
-                  Interior Painting Season Is Here<br />
-                  <span className="hero-title-accent">Book Now & Save</span>
+                  Massachusetts&apos; Most Trusted<br />
+                  <span className="hero-title-accent">Painting Professionals</span>
                 </h1>
 
                 <p className="hero-description-short" style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', maxWidth: '560px' }}>
-                  Plus: Get a <strong style={{ color: '#FCD34D' }}>FREE Color Consultation</strong> When You Schedule Your Project This Month. Premium Benjamin Moore & Sherwin-Williams paints included.
+                  5-Star rated. Licensed & $2M insured. Premium Benjamin Moore & Sherwin-Williams paints. <strong style={{ color: '#FCD34D' }}>Spots are limited</strong> — request your free estimate now.
                 </p>
 
                 {/* Dual CTA - Primary action + secondary */}
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-                  <a href="#quote-form" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2.5rem', background: 'linear-gradient(135deg, #DC2626 0%, #A80303 100%)', color: '#fff', borderRadius: '12px', fontSize: '1.125rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 10px 40px rgba(220,38,38,0.4)', transition: 'all 0.3s ease' }}>
-                    Claim Your Free Quote
-                    <ChevronRightIcon />
+                  <a href="#quote-form" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2.5rem', background: 'linear-gradient(135deg, #DC2626 0%, #A80303 100%)', color: '#fff', borderRadius: '8px', fontSize: '1.125rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 10px 40px rgba(220,38,38,0.4)', transition: 'all 0.3s ease', border: 'none' }}>
+                    Get Your Free Estimate
                   </a>
                   <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 1.5rem', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', color: '#fff', borderRadius: '12px', fontSize: '1rem', fontWeight: 600, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.3)' }}>
                     <PhoneIcon />
@@ -410,7 +409,7 @@ export default function HomePage() {
                 </ul>
 
                 <a href="#contact" className="btn btn-primary">
-                  Learn More About Exterior Painting
+                  Get Your Free Estimate
                   <ChevronRightIcon size={18} />
                 </a>
               </div>
@@ -441,7 +440,7 @@ export default function HomePage() {
                   <li><CheckIcon /> Color Consultation</li>
                 </ul>
 
-                <a href="#contact" className="btn btn-secondary">Get Free Estimate</a>
+                <a href="#contact" className="btn btn-secondary">Get Your Free Estimate</a>
               </div>
 
               <div className="detail-image" style={{ direction: 'ltr' }}>
@@ -641,8 +640,8 @@ export default function HomePage() {
         <section className="cta-section cta-section-enhanced">
           <div className="container">
             <div className="cta-content">
-              <h2>Ready to Start Your Painting Project?</h2>
-              <p>Expert painting services. Free estimates, no obligation.</p>
+              <h2>Your Home Deserves the Best — Let&apos;s Talk</h2>
+              <p>Licensed & $2M insured. 5-star rated. Same-day response on all estimates.</p>
               <a href="tel:+15086908886" className="btn btn-lg">
                 <PhoneIcon />
                 Call (508) 690-8886

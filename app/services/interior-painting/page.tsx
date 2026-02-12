@@ -293,7 +293,7 @@ export default function InteriorPaintingPage() {
                   {BUSINESS.phone}
                 </a>
                 <Link href="/#contact" className="service-cta-secondary">
-                  Get Free Estimate
+                  Get Your Free Estimate
                   <ChevronRight size={20} />
                 </Link>
               </div>
@@ -538,7 +538,7 @@ export default function InteriorPaintingPage() {
           <div className="service-cta-content">
             <h2 className="service-cta-title">Ready to Transform Your Interior?</h2>
             <p className="service-cta-subtitle">
-              Get a free estimate today and see the JH Painting difference. Professional results, on time and on budget.
+              Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.
             </p>
             <div className="service-cta-buttons">
               <a href={`tel:${BUSINESS.phoneRaw}`} className="service-cta-btn-white">
@@ -546,7 +546,7 @@ export default function InteriorPaintingPage() {
                 Call {BUSINESS.phone}
               </a>
               <Link href="/#contact" className="service-cta-btn-outline">
-                Request Free Quote
+                Get Your Free Estimate
               </Link>
             </div>
           </div>

@@ -112,7 +112,7 @@ export default async function RegionPage({ params }: Props) {
                     (508) 690-8886
                   </a>
                   <a href="#quote-form" className="city-cta-btn-outline">
-                    Get FREE Quote
+                    Get Your Free Estimate
                     <ChevronRightIcon size={18} />
                   </a>
                 </div>
@@ -277,7 +277,7 @@ export default async function RegionPage({ params }: Props) {
                     </div>
                   ))}
                 </div>
-                <a href="tel:+15086908886" className="city-cta-btn"><PhoneIcon size={20} /> Call (508) 690-8886</a>
+                <a href="tel:+15086908886" className="city-cta-btn"><PhoneIcon size={20} /> Talk to a Painting Expert</a>
               </div>
             </div>
           </div>
@@ -351,11 +351,11 @@ export default async function RegionPage({ params }: Props) {
           <div className="city-cta-pattern" />
           <div className="container">
             <div className="city-cta-content">
-              <h2 className="city-cta-title">Ready for a FREE Quote in {region.name}?</h2>
-              <p className="city-cta-subtitle">Licensed & $2M insured. 40+ five-star reviews. No obligation.</p>
+              <h2 className="city-cta-title">Your {region.name} Home Deserves the Best — Let&apos;s Talk</h2>
+              <p className="city-cta-subtitle">Licensed & $2M insured. 40+ five-star reviews. Same-day response. No obligation.</p>
               <div className="city-cta-buttons">
                 <a href="tel:+15086908886" className="city-cta-btn-white"><PhoneIcon size={24} /> (508) 690-8886</a>
-                <Link href="/contact" className="city-cta-btn-glass"><MailIcon size={24} /> Get Free Estimate</Link>
+                <Link href="/contact" className="city-cta-btn-glass"><MailIcon size={24} /> Get Your Free Estimate</Link>
               </div>
             </div>
           </div>

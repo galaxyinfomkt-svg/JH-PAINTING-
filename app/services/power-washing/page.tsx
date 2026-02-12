@@ -385,7 +385,7 @@ export default function PowerWashingPage() {
                   {BUSINESS.phone}
                 </a>
                 <Link href="/contact" className="service-cta-secondary">
-                  Get Free Estimate
+                  Get Your Free Estimate
                   <ChevronRightIcon size={20} />
                 </Link>
               </div>
@@ -637,15 +637,15 @@ export default function PowerWashingPage() {
         <section className="service-cta-red">
           <div className="container">
             <div className="service-cta-content">
-              <h2 className="service-cta-title">Ready to Restore Your Property?</h2>
-              <p className="service-cta-subtitle">Get a free power washing estimate today. Professional service, guaranteed results.</p>
+              <h2 className="service-cta-title">Your Property Deserves the Best — Let&apos;s Talk</h2>
+              <p className="service-cta-subtitle">Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.</p>
               <div className="service-cta-buttons">
                 <a href={`tel:${BUSINESS.phoneRaw}`} className="service-cta-btn-white">
                   <PhoneIcon size={20} />
                   Call {BUSINESS.phone}
                 </a>
                 <Link href="/contact" className="service-cta-btn-outline">
-                  Schedule Free Estimate
+                  Get Your Free Estimate
                 </Link>
               </div>
             </div>

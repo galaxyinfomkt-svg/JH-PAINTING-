@@ -473,7 +473,7 @@ export default async function CityPage({ params }: Props) {
                   border: '2px solid rgba(255, 255, 255, 0.3)',
                   transition: 'all 0.3s ease'
                 }}>
-                  Get Free Estimate
+                  Get Your Free Estimate
                   <ChevronRightIcon size={20} />
                 </a>
               </div>
@@ -679,7 +679,7 @@ export default async function CityPage({ params }: Props) {
                 Call (508) 690-8886
               </a>
               <a href="#quote-form" className="vsl-cta-secondary">
-                Get Free Estimate
+                Get Your Free Estimate
                 <ChevronRightIcon size={20} />
               </a>
             </div>
@@ -773,10 +773,10 @@ export default async function CityPage({ params }: Props) {
 
           {/* CTA after Gallery */}
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <p style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: '1rem' }}>Like what you see?</p>
+            <p style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: '1rem' }}>Like what you see? Let&apos;s do the same for your home.</p>
             <a href="tel:+15086908886" className="city-cta-btn">
               <PhoneIcon size={20} />
-              Get a Free Quote
+              Get Your Free Estimate
             </a>
           </div>
         </div>
@@ -911,7 +911,7 @@ export default async function CityPage({ params }: Props) {
 
               <a href="tel:+15086908886" className="city-cta-btn">
                 <PhoneIcon size={20} />
-                Call (508) 690-8886
+                Talk to a Painting Expert
               </a>
             </div>
           </div>
@@ -997,7 +997,7 @@ export default async function CityPage({ params }: Props) {
             </div>
             <a href="tel:+15086908886" className="city-cta-btn" style={{ marginTop: '1.5rem' }}>
               <PhoneIcon size={18} />
-              Get Your Free Estimate Today
+              Get Your Free Estimate — Same-Day Response
             </a>
           </div>
         </div>
@@ -1081,7 +1081,7 @@ export default async function CityPage({ params }: Props) {
                 Call (508) 690-8886
               </a>
               <a href="#quote-form" className="city-cta-btn-outline city-cta-btn-dark">
-                Request Free Estimate
+                Get Your Free Estimate
                 <ChevronRightIcon size={20} />
               </a>
             </div>
@@ -1112,7 +1112,7 @@ export default async function CityPage({ params }: Props) {
             </p>
             <a href="tel:+15086908886" className="city-cta-btn">
               <PhoneIcon size={20} />
-              Call (508) 690-8886
+              Talk to a Painting Expert
             </a>
           </div>
         </div>
@@ -1180,7 +1180,7 @@ export default async function CityPage({ params }: Props) {
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <a href="tel:+15086908886" className="city-cta-btn">
               <PhoneIcon size={20} />
-              Call for Your Free Estimate
+              Get Your Free Estimate Now
             </a>
           </div>
         </div>
@@ -1258,7 +1258,7 @@ export default async function CityPage({ params }: Props) {
                     (508) 690-8886
                   </a>
                   <a href="#quote-form" className="city-cta-btn-outline">
-                    Get Free Estimate
+                    Get Your Free Estimate
                     <ChevronRightIcon size={18} />
                   </a>
                 </div>
@@ -1274,11 +1274,10 @@ export default async function CityPage({ params }: Props) {
         <div className="container">
           <div className="city-cta-content">
             <h2 className="city-cta-title">
-              Ready to Transform Your {city.name} Property?
+              Your {city.name} Home Deserves the Best — Let&apos;s Talk
             </h2>
             <p className="city-cta-subtitle">
-              Get a free, detailed estimate for your painting project today.
-              No obligation, no pressure—just honest advice and transparent pricing.
+              Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.
             </p>
             <div className="city-cta-buttons">
               <a href="tel:+15086908886" className="city-cta-btn-white">
@@ -1287,7 +1286,7 @@ export default async function CityPage({ params }: Props) {
               </a>
               <a href="#quote-form" className="city-cta-btn-glass">
                 <MailIcon size={24} />
-                Request Quote
+                Get Your Free Estimate
               </a>
             </div>
           </div>

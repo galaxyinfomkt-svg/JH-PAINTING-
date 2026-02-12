@@ -322,7 +322,7 @@ export default function ResidentialPaintingPage() {
                   {BUSINESS.phone}
                 </a>
                 <Link href="/#contact" className="service-cta-secondary">
-                  Get Free Estimate
+                  Get Your Free Estimate
                   <ChevronRight size={20} />
                 </Link>
               </div>
@@ -636,7 +636,7 @@ export default function ResidentialPaintingPage() {
               Call {BUSINESS.phone}
             </a>
             <Link href="/#contact" className="service-cta-btn-outline">
-              Get Free Quote
+              Get Your Free Estimate
             </Link>
           </div>
         </div>

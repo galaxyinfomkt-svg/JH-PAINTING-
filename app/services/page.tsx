@@ -500,7 +500,7 @@ export default function ServicesPage() {
             <p>Don't see your city? We likely serve your area too!</p>
             <a href={`tel:${BUSINESS.phoneRaw}`} className="btn btn-outline">
               <PhoneIcon size={18} />
-              Call to Confirm Service Area
+              Talk to an Expert — We Likely Serve You
             </a>
           </div>
         </div>
@@ -510,15 +510,15 @@ export default function ServicesPage() {
       <section className="service-cta-red">
         <div className="container">
           <div className="service-cta-content">
-            <h2>Ready to Transform Your Space?</h2>
-            <p>Get a free, no-obligation estimate for your painting project. We'll respond within 24 hours!</p>
+            <h2>Your Home Deserves the Best — Let&apos;s Talk</h2>
+            <p>Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.</p>
             <div className="service-cta-buttons">
               <a href={`tel:${BUSINESS.phoneRaw}`} className="btn btn-white btn-lg">
                 <PhoneIcon size={20} />
                 {BUSINESS.phone}
               </a>
               <Link href="/#contact" className="btn btn-outline-white btn-lg">
-                Request Free Estimate
+                Get Your Free Estimate
                 <ArrowRightIcon size={18} />
               </Link>
             </div>

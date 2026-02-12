@@ -316,7 +316,7 @@ export default function ExteriorPaintingPage() {
                   {BUSINESS.phone}
                 </a>
                 <Link href="/#contact" className="service-cta-secondary">
-                  Get Free Estimate
+                  Get Your Free Estimate
                   <ChevronRight size={20} />
                 </Link>
               </div>
@@ -619,10 +619,10 @@ export default function ExteriorPaintingPage() {
         <div className="service-cta-pattern" />
         <div className="container service-cta-content">
           <h2 className="service-cta-title">
-            Ready to Transform Your Home's Exterior?
+            Your Home Deserves the Best — Let&apos;s Talk
           </h2>
           <p className="service-cta-desc">
-            Get a free estimate today and protect your investment with professional exterior painting.
+            Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.
           </p>
           <div className="service-cta-buttons">
             <a href={`tel:${BUSINESS.phoneRaw}`} className="service-cta-btn-white">
@@ -630,7 +630,7 @@ export default function ExteriorPaintingPage() {
               Call {BUSINESS.phone}
             </a>
             <Link href="/#contact" className="service-cta-btn-outline">
-              Request Free Quote
+              Get Your Free Estimate
             </Link>
           </div>
         </div>

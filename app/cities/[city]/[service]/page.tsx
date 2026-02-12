@@ -400,7 +400,7 @@ export default async function CityServicePage({ params }: Props) {
                     {BUSINESS.phone}
                   </a>
                   <a href="#quote-form" className="service-cta-secondary">
-                    Get Free Estimate
+                    Get Your Free Estimate
                     <ChevronRight size={20} />
                   </a>
                 </div>
@@ -762,9 +762,9 @@ export default async function CityServicePage({ params }: Props) {
         <section className="service-cta-red">
           <div className="container">
             <div className="service-cta-content">
-              <h2 className="service-cta-title">Ready for Professional {service.name} in {city.name}?</h2>
+              <h2 className="service-cta-title">Your {city.name} Home Deserves the Best — Let&apos;s Talk</h2>
               <p className="service-cta-subtitle">
-                {uniqueServiceContent?.closingPitch || `Get a free estimate today and see the JH Painting difference. Professional results, on time and on budget.`}
+                {uniqueServiceContent?.closingPitch || `Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.`}
               </p>
               <div className="service-cta-buttons">
                 <a href={`tel:${BUSINESS.phoneRaw}`} className="service-cta-btn-white">
@@ -772,7 +772,7 @@ export default async function CityServicePage({ params }: Props) {
                   Call {BUSINESS.phone}
                 </a>
                 <a href="#quote-form" className="service-cta-btn-outline">
-                  Request Free Quote
+                  Get Your Free Estimate
                 </a>
               </div>
             </div>

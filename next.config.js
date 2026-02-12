@@ -4,7 +4,10 @@ const nextConfig = {
   generateBuildId: async () => {
     return `build-${Date.now()}`
   },
-  experimental: {},
+  experimental: {
+    workerThreads: false,
+    cpus: 2,
+  },
   // Redirect old URLs to /cities/[city]-ma/[service] pattern
   async redirects() {
     return [
