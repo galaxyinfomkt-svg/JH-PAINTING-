@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import FloatingButtons from './components/FloatingButtons'
+import DeferredScripts from './components/DeferredScripts'
 
 // Optimize font loading - only load essential weights for better FCP
 // Using 'swap' ensures text is visible immediately with fallback font
@@ -366,23 +366,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        {/* Google Tag Manager - Load after page is interactive to improve TBT */}
-        <Script
-          id="gtm-script"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KB89D6QQ');`,
-          }}
-        />
-        {/* Preconnect to image CDN for fastest image delivery */}
+        {/* Preconnect to image CDN for fastest hero image (LCP) delivery */}
         <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://api.leadconnectorhq.com" crossOrigin="anonymous" />
-        {/* Hero image preload handled automatically by next/image priority prop */}
-        {/* next/font/google serves fonts locally - no external Google Fonts CDN needed */}
+        {/* DNS prefetch for deferred third-party domains */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://link.msgsndr.com" />
+        <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
         {/* Critical CSS inline for faster FCP - reduces render blocking by ~600ms */}
         <style dangerouslySetInnerHTML={{ __html: `
           :root{--jh-navy:#0A1F44;--jh-red:#D20404;--jh-red-dark:#B91C1C;--font-inter:Inter,system-ui,sans-serif}
@@ -414,6 +404,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           .hero-form-card{background:transparent;border-radius:20px;padding:0;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.3)}
           @keyframes spin{to{transform:rotate(360deg)}}
           .section,.detail-section,.before-after-section,.video-section-rs,.reviews-section,.faq-section-home,.cta-section,.gallery-section,.about-section-dark,.trust-badges-section{content-visibility:auto;contain-intrinsic-size:auto 600px}
+          .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--jh-navy);color:#fff;padding:.75rem 1.5rem;z-index:100000;border-radius:0 0 8px 8px;font-weight:600;font-size:.875rem;text-decoration:none;transition:top .2s ease}.skip-link:focus{top:0}
           @media(max-width:768px){.top-bar-email{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}.service-hero,.city-page-hero{padding-top:130px}.service-hero-content,.city-page-hero-content{padding-top:20px;padding-bottom:40px}}
         `}} />
         {/* Mobile optimization */}
@@ -427,14 +418,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             __html: JSON.stringify(schemaData)
           }}
         />
-        {/* GHL External Tracking Script */}
-        <Script
-          src="https://link.msgsndr.com/js/external-tracking.js"
-          data-tracking-id="tk_17bc6e6f297d4ffc8b66e30609380978"
-          strategy="lazyOnload"
-        />
+        {/* GHL, GTM, Chat, Reviews scripts are deferred via DeferredScripts component */}
       </head>
       <body>
+        {/* Skip to main content - Accessibility */}
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -446,18 +434,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {children}
         <FloatingButtons />
-        {/* LeadConnector Chat Widget - Load after page is idle */}
-        <Script
-          src="https://beta.leadconnectorhq.com/loader.js"
-          data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="69626d9e5c8c5ba64720801a"
-          strategy="lazyOnload"
-        />
-        {/* Reviews Widget Script - Load after page is idle */}
-        <Script
-          src="https://reputationhub.site/reputation/assets/review-widget.js"
-          strategy="lazyOnload"
-        />
+        {/* All third-party scripts (GTM, GHL, Chat Widget, Reviews) deferred until user interaction */}
+        <DeferredScripts />
       </body>
     </html>
   )

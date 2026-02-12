@@ -18,7 +18,7 @@ export default function FloatingPhoneButton() {
       // Show expanded version after scrolling 300px
       setHasScrolled(window.scrollY > 300)
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 

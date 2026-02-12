@@ -133,8 +133,6 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  /* Prevent layout shift - images should have explicit dimensions */
-  content-visibility: auto;
 }
 
 /* Prevent forced reflow and layout shifts */
@@ -149,11 +147,9 @@ iframe {
   background: var(--jh-gray-100);
 }
 
-/* Optimize animations to use GPU - prevents forced reflow */
-.btn,
+/* Optimize animations to use GPU only when needed - permanent will-change wastes GPU memory */
 .nav-dropdown-menu {
   will-change: transform, opacity;
-  transform: translateZ(0);
 }
 
 /* Reduce motion for users who prefer it */

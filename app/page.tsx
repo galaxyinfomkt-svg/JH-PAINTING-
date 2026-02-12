@@ -422,7 +422,7 @@ export default function HomePage() {
           <div className="container">
             <div className="detail-grid" style={{ direction: 'rtl' }}>
               <div className="detail-content" style={{ direction: 'ltr' }}>
-                <h3>Transform Your Space</h3>
+                <span className="section-eyebrow">Transform Your Space</span>
                 <h2>Interior Painting Services</h2>
                 <p>
                   Ready to refresh your living space? We provide expert interior painting services throughout Massachusetts with premium low-VOC paints that are safe for your family.

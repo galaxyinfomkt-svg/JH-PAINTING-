@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 interface LazyHeroFormProps {
   src: string
@@ -11,28 +11,25 @@ interface LazyHeroFormProps {
 export default function LazyHeroForm({ src, title, className }: LazyHeroFormProps) {
   const [shouldLoad, setShouldLoad] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
-  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const el = containerRef.current
-    if (!el) return
+    // Delay hero form iframe to prioritize hero image (LCP element).
+    // The form is always visible in the hero, so IntersectionObserver fires immediately
+    // and competes with hero image for bandwidth. Using requestIdleCallback ensures
+    // the browser finishes rendering LCP first before loading the iframe.
+    let cancelled = false
+    const load = () => { if (!cancelled) setShouldLoad(true) }
 
-    // Use IntersectionObserver to defer iframe loading until visible
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setShouldLoad(true)
-          observer.disconnect()
-        }
-      },
-      { rootMargin: '200px' }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
+    if (typeof window.requestIdleCallback !== 'undefined') {
+      const id = window.requestIdleCallback(load, { timeout: 3000 })
+      return () => { cancelled = true; window.cancelIdleCallback(id) }
+    }
+    const timer = setTimeout(load, 2500)
+    return () => { cancelled = true; clearTimeout(timer) }
   }, [])
 
   return (
-    <div ref={containerRef} style={{ position: 'relative', minHeight: '620px' }}>
+    <div style={{ position: 'relative', minHeight: '620px' }}>
       {!isLoaded && (
         <div
           style={{

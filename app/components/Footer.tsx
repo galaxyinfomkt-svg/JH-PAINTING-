@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import { BUSINESS, HOURS, SOCIAL_LINKS } from '@/lib/constants'
 import { regions } from '@/app/data/regions'
