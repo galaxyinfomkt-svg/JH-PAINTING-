@@ -411,7 +411,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           .service-hero-bg,.city-page-hero-bg{position:absolute;inset:0;z-index:0}
           .service-hero-overlay,.city-page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.85),rgba(0,0,0,.7),rgba(0,0,0,.6))}
           .service-hero-content,.city-page-hero-content{position:relative;z-index:2;padding-top:40px;padding-bottom:60px}
-          .hero-form-card{background:#fff;border-radius:20px;padding:0;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.3)}
+          .hero-form-card{background:transparent;border-radius:20px;padding:0;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.3)}
           @keyframes spin{to{transform:rotate(360deg)}}
           @media(max-width:768px){.top-bar-email{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}.service-hero,.city-page-hero{padding-top:130px}.service-hero-content,.city-page-hero-content{padding-top:20px;padding-bottom:40px}.city-page-hero-bg{bottom:auto;height:100svh;min-height:500px}}
         `}} />

@@ -7,6 +7,7 @@ import { regions, getRegionBySlug } from '@/app/data/regions'
 import { getCityBySlug, getCitySlugWithState } from '@/app/data/cities'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import LazyHeroForm from '@/app/components/LazyHeroForm'
 
 const services = [
   { name: 'Interior Painting', slug: 'interior-painting', desc: 'Walls, ceilings, trim, doors & accent walls with premium Benjamin Moore & Sherwin-Williams paints.', image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png' },
@@ -84,48 +85,60 @@ export default function RegionPage() {
           </div>
 
           <div className="container city-page-hero-content">
-            <div style={{ maxWidth: '800px' }}>
-              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', background: 'rgba(255,255,255,0.12)', backdropFilter: 'blur(10px)', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 500, border: '1px solid rgba(255,255,255,0.2)' }}>
-                  <MapPinIcon size={14} />
-                  {regionCities.length}+ Communities
-                </span>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', padding: '0.5rem 1rem', background: 'linear-gradient(135deg, #DC2626 0%, #A80303 100%)', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
-                  <StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} />
-                  5.0
-                </span>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 500px), 1fr))', gap: '3rem', alignItems: 'center' }}>
+              <div>
+                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', background: 'rgba(255,255,255,0.12)', backdropFilter: 'blur(10px)', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 500, border: '1px solid rgba(255,255,255,0.2)' }}>
+                    <MapPinIcon size={14} />
+                    {regionCities.length}+ Communities
+                  </span>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', padding: '0.5rem 1rem', background: 'linear-gradient(135deg, #DC2626 0%, #A80303 100%)', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
+                    <StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} />
+                    5.0
+                  </span>
+                </div>
+
+                <h1 style={{ fontSize: 'clamp(2.25rem, 5.5vw, 4rem)', fontWeight: 800, color: '#fff', lineHeight: 1.08, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+                  {region.heroHeadline}
+                </h1>
+
+                <p style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', color: 'rgba(255,255,255,0.9)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '640px' }}>
+                  {region.heroSubtext}
+                </p>
+
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+                  <a href="tel:+15086908886" className="city-cta-btn">
+                    <PhoneIcon size={20} />
+                    (508) 690-8886
+                  </a>
+                  <a href="#quote-form" className="city-cta-btn-outline">
+                    Get FREE Quote
+                    <ChevronRightIcon size={18} />
+                  </a>
+                </div>
+
+                <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
+                  {[
+                    { icon: ShieldIcon, text: 'Licensed & $2M Insured' },
+                    { icon: CheckIcon, text: '40+ 5-Star Reviews' },
+                    { icon: MapPinIcon, text: `Serving All ${region.name}` },
+                  ].map((item, idx) => (
+                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.9)' }}>
+                      <span style={{ color: '#DC2626' }}><item.icon size={16} /></span>
+                      <span style={{ fontSize: '0.875rem', fontWeight: 500 }}>{item.text}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              <h1 style={{ fontSize: 'clamp(2.25rem, 5.5vw, 4rem)', fontWeight: 800, color: '#fff', lineHeight: 1.08, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-                {region.heroHeadline}
-              </h1>
-
-              <p style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', color: 'rgba(255,255,255,0.9)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '640px' }}>
-                {region.heroSubtext}
-              </p>
-
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-                <a href="tel:+15086908886" className="city-cta-btn">
-                  <PhoneIcon size={20} />
-                  (508) 690-8886
-                </a>
-                <Link href="/contact" className="city-cta-btn-outline">
-                  Get FREE Quote
-                  <ChevronRightIcon size={18} />
-                </Link>
-              </div>
-
-              <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-                {[
-                  { icon: ShieldIcon, text: 'Licensed & $2M Insured' },
-                  { icon: CheckIcon, text: '40+ 5-Star Reviews' },
-                  { icon: MapPinIcon, text: `Serving All ${region.name}` },
-                ].map((item, idx) => (
-                  <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.9)' }}>
-                    <span style={{ color: '#DC2626' }}><item.icon size={16} /></span>
-                    <span style={{ fontSize: '0.875rem', fontWeight: 500 }}>{item.text}</span>
-                  </div>
-                ))}
+              {/* Quote Form */}
+              <div id="quote-form" className="hero-form-card">
+                <LazyHeroForm
+                  className="hero-form-iframe"
+                  src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
+                  title="Contact Form"
+                  headerText={`Free ${region.name} Estimate`}
+                />
               </div>
             </div>
           </div>
