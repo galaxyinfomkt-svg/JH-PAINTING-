@@ -1,10 +1,42 @@
 'use client'
 
 import { useParams } from 'next/navigation'
+import Image from 'next/image'
 import Link from 'next/link'
 import { regions, getRegionBySlug } from '@/app/data/regions'
 import { getCityBySlug, getCitySlugWithState } from '@/app/data/cities'
 import Footer from '@/app/components/Footer'
+
+const serviceImages: Record<string, { hero: string; showcase: string }> = {
+  'interior-painting': {
+    hero: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',
+    showcase: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg',
+  },
+  'exterior-painting': {
+    hero: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
+    showcase: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp',
+  },
+  'cabinet-painting': {
+    hero: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png',
+    showcase: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',
+  },
+  'commercial-painting': {
+    hero: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg',
+    showcase: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg',
+  },
+  'residential-painting': {
+    hero: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg',
+    showcase: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg',
+  },
+  'carpentry': {
+    hero: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp',
+    showcase: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
+  },
+  'power-washing': {
+    hero: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp',
+    showcase: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp',
+  },
+}
 
 interface ServiceInfo {
   name: string
@@ -488,13 +520,23 @@ export default function RegionServicePage() {
 
   const content = service.getRegionContent(region.name, region.slug)
   const otherServices = servicesData.filter(s => s.slug !== serviceSlug)
+  const images = serviceImages[serviceSlug] || serviceImages['interior-painting']
 
   return (
     <>
       <main>
-        {/* Hero */}
-        <section style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)', color: '#fff', padding: '5rem 0 3rem', textAlign: 'center' }}>
-          <div className="container">
+        {/* Hero with Background Image */}
+        <section style={{ position: 'relative', color: '#fff', padding: '6rem 0 4rem', textAlign: 'center', overflow: 'hidden', minHeight: '400px' }}>
+          <Image
+            src={images.hero}
+            alt={`${service.name} services in ${region.name}`}
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            priority
+            quality={75}
+          />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(26,26,46,0.92) 0%, rgba(22,33,62,0.88) 50%, rgba(15,52,96,0.85) 100%)' }} />
+          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <p style={{ color: '#c9a84c', fontWeight: 600, fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem' }}>
               {service.name} &bull; {region.name}
             </p>
@@ -528,6 +570,28 @@ export default function RegionServicePage() {
                   <p style={{ color: '#333', fontSize: '0.9375rem', lineHeight: 1.6 }}>{feature}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Showcase Image */}
+        <section style={{ padding: '0', background: '#f8f9fa' }}>
+          <div style={{ position: 'relative', width: '100%', maxHeight: '400px', overflow: 'hidden' }}>
+            <Image
+              src={images.showcase}
+              alt={`${service.name} project results in ${region.name}`}
+              width={1200}
+              height={400}
+              style={{ width: '100%', height: 'auto', objectFit: 'cover', maxHeight: '400px' }}
+              loading="lazy"
+              quality={75}
+            />
+            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '2rem 1.5rem 1.5rem', background: 'linear-gradient(transparent, rgba(26,26,46,0.8))' }}>
+              <div className="container">
+                <p style={{ color: '#fff', fontWeight: 600, fontSize: '1rem' }}>
+                  {service.name} &mdash; Real results by JH Painting in {region.name}
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -600,9 +664,18 @@ export default function RegionServicePage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section style={{ background: 'linear-gradient(135deg, #c9a84c 0%, #b8943f 100%)', padding: '3rem 0', textAlign: 'center' }}>
-          <div className="container">
+        {/* CTA with Background Image */}
+        <section style={{ position: 'relative', padding: '4rem 0', textAlign: 'center', overflow: 'hidden' }}>
+          <Image
+            src={images.hero}
+            alt={`${service.name} in ${region.name}`}
+            fill
+            style={{ objectFit: 'cover' }}
+            loading="lazy"
+            quality={60}
+          />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(201,168,76,0.95) 0%, rgba(184,148,63,0.92) 100%)' }} />
+          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <h2 style={{ color: '#1a1a2e', fontSize: '1.75rem', fontWeight: 800, marginBottom: '0.75rem' }}>
               Get a FREE {service.name} Quote in {region.name}
             </h2>
