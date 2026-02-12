@@ -3309,7 +3309,7 @@ p {
 
 .footer-bottom p {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 0;
 }
 
@@ -3358,7 +3358,7 @@ p {
   text-align: center;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.9375rem;
 }
 
@@ -3410,7 +3410,7 @@ p {
 }
 
 .footer-service-city-links li a {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.8125rem;
   transition: color var(--transition-base);
   line-height: 1.5;
@@ -3429,7 +3429,7 @@ p {
   display: block;
   font-size: 0.6875rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.65);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.25rem;
@@ -3478,13 +3478,13 @@ p {
 
 .footer-bottom-rs p {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 0.25rem;
 }
 
 .footer-bottom-sub {
   font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 /* Footer Main Content Grid */

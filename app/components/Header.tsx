@@ -164,7 +164,7 @@ export default function Header({ cityName }: HeaderProps = {}) {
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
-                <button className="nav-dropdown-toggle">
+                <button className="nav-dropdown-toggle" aria-expanded={servicesOpen} aria-haspopup="true" aria-label="Services menu">
                   Services
                   <ChevronDownIcon size={16} className={`nav-dropdown-icon ${servicesOpen ? 'open' : ''}`} />
                 </button>
@@ -222,6 +222,7 @@ export default function Header({ cityName }: HeaderProps = {}) {
         <div
           className={`mobile-menu-overlay ${menuOpen ? 'active' : ''}`}
           onClick={closeMenu}
+          role="presentation"
         />
 
         {/* Modern Mobile Menu - Full Screen */}
@@ -262,6 +263,8 @@ export default function Header({ cityName }: HeaderProps = {}) {
                 type="button"
                 className={`mobile-nav-dropdown-toggle ${mobileServicesOpen ? 'open' : ''}`}
                 onClick={toggleMobileServices}
+                aria-expanded={mobileServicesOpen}
+                aria-label="Services menu"
               >
                 <span>Services</span>
                 <ChevronDownIcon size={18} className={`mobile-nav-dropdown-icon ${mobileServicesOpen ? 'open' : ''}`} />

@@ -117,6 +117,7 @@ DropletsIcon.displayName = 'DropletsIcon'
 import dynamic from 'next/dynamic'
 import { cities } from './data/cities'
 import LazyIframe from './components/LazyIframe'
+import Footer from './components/Footer'
 
 // Lazy load heavy below-fold components
 const BeforeAfterSlider = dynamic(() => import('./components/BeforeAfterSlider'), {
@@ -367,7 +368,7 @@ export default function HomePage() {
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
-                <button className="nav-dropdown-toggle">
+                <button className="nav-dropdown-toggle" aria-expanded={servicesOpen} aria-haspopup="true" aria-label="Services menu">
                   Services
                   <ChevronDownIcon size={16} />
                 </button>
@@ -415,9 +416,10 @@ export default function HomePage() {
         </div>
 
         {/* Mobile Menu Overlay */}
-        <div 
-          className={`mobile-menu-overlay ${menuOpen ? 'active' : ''}`} 
+        <div
+          className={`mobile-menu-overlay ${menuOpen ? 'active' : ''}`}
           onClick={closeMenu}
+          role="presentation"
         />
 
         {/* Mobile Menu */}
@@ -443,6 +445,8 @@ export default function HomePage() {
                 type="button"
                 className={`mobile-nav-dropdown-toggle ${mobileServicesOpen ? 'open' : ''}`}
                 onClick={toggleMobileServices}
+                aria-expanded={mobileServicesOpen}
+                aria-label="Services menu"
               >
                 Services
                 <ChevronDownIcon size={18} />
@@ -876,6 +880,7 @@ export default function HomePage() {
                   onClick={() => openVideoModal(video.id, video.title)}
                   className="video-card-rs"
                   type="button"
+                  aria-label={`Play video: ${video.title}`}
                 >
                   <Image
                     src={`https://img.youtube.com/vi/${video.id}/${video.thumbnail}.jpg`}
@@ -1131,106 +1136,7 @@ export default function HomePage() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-grid">
-            <div className="footer-brand">
-              <Image
-                src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
-                alt="JH Painting Services"
-                width={160}
-                height={64}
-                style={{ filter: 'brightness(0) invert(1)' }}
-              />
-              <p>Professional painting services for homes and businesses across Massachusetts. Licensed, insured, and dedicated to excellence.</p>
-              <div className="footer-social">
-                <a href="https://www.facebook.com/profile.php?id=61564489391475" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                  <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
-                <a href="https://www.instagram.com/jhpaintingservices_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                  <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
-                </a>
-                <a href="https://www.youtube.com/@JHPaintingServices-br9wh" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                  <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                </a>
-                <a href="https://g.co/kgs/hc9Rfmv" target="_blank" rel="noopener noreferrer" aria-label="Google">
-                  <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-                </a>
-              </div>
-            </div>
-
-            <div className="footer-col">
-              <h4>Quick Links</h4>
-              <ul className="footer-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><Link href="/blog">Blog</Link></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-
-            <div className="footer-col">
-              <h4>Contact Us</h4>
-              <div className="footer-contact-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <a href="tel:+15086908886">(508) 690-8886</a>
-              </div>
-              <div className="footer-contact-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                <a href="mailto:contact@jhpaintingservices.com">contact@jhpaintingservices.com</a>
-              </div>
-              <div className="footer-contact-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>Serving All of Massachusetts</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Service Areas - Top 15 Cities */}
-          <div className="footer-cities footer-cities-compact">
-            <h4>Popular Service Areas</h4>
-            <div className="footer-cities-grid-compact">
-              {[
-                { name: 'Boston', slug: 'boston-ma' },
-                { name: 'Worcester', slug: 'worcester-ma' },
-                { name: 'Cambridge', slug: 'cambridge-ma' },
-                { name: 'Newton', slug: 'newton-ma' },
-                { name: 'Framingham', slug: 'framingham-ma' },
-                { name: 'Waltham', slug: 'waltham-ma' },
-                { name: 'Marlborough', slug: 'marlborough-ma' },
-                { name: 'Natick', slug: 'natick-ma' },
-                { name: 'Lexington', slug: 'lexington-ma' },
-                { name: 'Wellesley', slug: 'wellesley-ma' },
-                { name: 'Concord', slug: 'concord-ma' },
-                { name: 'Brookline', slug: 'brookline-ma' },
-                { name: 'Needham', slug: 'needham-ma' },
-                { name: 'Sudbury', slug: 'sudbury-ma' },
-                { name: 'Shrewsbury', slug: 'shrewsbury-ma' },
-              ].map((city) => (
-                <Link
-                  key={city.slug}
-                  href={`/cities/${city.slug}`}
-                  className="footer-city-link"
-                >
-                  {city.name}
-                </Link>
-              ))}
-            </div>
-            <Link href="/cities" className="footer-cities-view-all">
-              View All {cities.length}+ Service Areas
-              <ChevronRightIcon size={16} />
-            </Link>
-          </div>
-
-          <div className="footer-bottom">
-            <p>© 2026 JH Painting Services. All Rights Reserved. Licensed Painting Contractor | Serving Massachusetts</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {/* Video Modal */}
       {videoModal.isOpen && (

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
+import Footer from '@/app/components/Footer'
 import {
   Phone,
   Mail,
@@ -526,55 +527,7 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-grid">
-            <div className="footer-brand">
-              <Image
-                src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
-                alt="JH Painting Services"
-                width={160}
-                height={64}
-                style={{ filter: 'brightness(0) invert(1)' }}
-              />
-              <p>Professional painting services for homes and businesses across Massachusetts. Licensed, insured, and dedicated to excellence.</p>
-            </div>
-
-            <div className="footer-col">
-              <h4>Quick Links</h4>
-              <ul className="footer-links">
-                <li><Link href="/">Home</Link></li>
-                <li><Link href="/#about">About</Link></li>
-                <li><Link href="/#services">Services</Link></li>
-                <li><Link href="/blog">Blog</Link></li>
-                <li><Link href="/#reviews">Reviews</Link></li>
-                <li><Link href="/#contact">Contact</Link></li>
-              </ul>
-            </div>
-
-            <div className="footer-col">
-              <h4>Contact Us</h4>
-              <div className="footer-contact-item">
-                <Phone size={16} />
-                <a href="tel:+15086908886">(508) 690-8886</a>
-              </div>
-              <div className="footer-contact-item">
-                <Mail size={16} />
-                <a href="mailto:contact@jhpaintingservices.com">contact@jhpaintingservices.com</a>
-              </div>
-              <div className="footer-contact-item">
-                <MapPin size={16} />
-                <span>Serving All of Massachusetts</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="footer-bottom">
-            <p>&copy; 2026 JH Painting Services. All Rights Reserved. Licensed Painting Contractor | Serving Massachusetts</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   )
 }

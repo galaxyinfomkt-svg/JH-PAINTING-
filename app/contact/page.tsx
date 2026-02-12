@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
+import Footer from '@/app/components/Footer'
 import {
   Phone,
   Mail,
@@ -478,34 +479,7 @@ export default function ContactPage() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-grid">
-            <div className="footer-brand">
-              <Image src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png" alt="JH Painting" width={150} height={60} />
-              <p>Professional painting services in Marlborough and all of Massachusetts. Licensed, insured, and committed to excellence.</p>
-            </div>
-            <div className="footer-links">
-              <h4>Quick Links</h4>
-              <Link href="/">Home</Link>
-              <Link href="/#about">About Us</Link>
-              <Link href="/#services">Services</Link>
-              <Link href="/#gallery">Gallery</Link>
-              <Link href="/contact">Contact</Link>
-            </div>
-            <div className="footer-contact">
-              <h4>Contact Us</h4>
-              <p><Phone size={16} /> (508) 690-8886</p>
-              <p><Mail size={16} /> contact@jhpaintingservices.com</p>
-              <p><MapPin size={16} /> Marlborough, MA 01752</p>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} JH Painting Services. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   )
 }

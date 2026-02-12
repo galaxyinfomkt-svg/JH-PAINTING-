@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { BUSINESS, HOURS, SOCIAL_LINKS } from '@/lib/constants'
-import { cities, getCitySlugWithState } from '@/app/data/cities'
 import { regions } from '@/app/data/regions'
 
 // Inline SVG icons to avoid loading entire lucide-react bundle
@@ -59,71 +58,28 @@ const footerServices = [
   { name: 'Power Washing', href: '/services/power-washing' },
 ]
 
-// Service-specific city links organized by region for footer SEO
-const footerServiceAreas = [
-  {
-    name: 'Interior Painting',
-    slug: 'interior-painting',
-    regions: [
-      { region: 'MetroWest', cities: ['marlborough', 'hudson', 'framingham', 'natick'] },
-      { region: 'Worcester & Nearby', cities: ['worcester', 'shrewsbury'] },
-      { region: 'Greater Boston', cities: ['newton', 'cambridge', 'boston', 'wellesley'] },
-    ],
-  },
-  {
-    name: 'Exterior Painting',
-    slug: 'exterior-painting',
-    regions: [
-      { region: 'MetroWest', cities: ['southborough', 'northborough', 'westborough', 'concord'] },
-      { region: 'Greater Boston', cities: ['lexington', 'arlington', 'brookline', 'waltham'] },
-      { region: 'Norfolk & South', cities: ['needham', 'shrewsbury'] },
-    ],
-  },
-  {
-    name: 'Cabinet Painting',
-    slug: 'cabinet-painting',
-    regions: [
-      { region: 'Greater Boston', cities: ['wellesley', 'needham', 'newton', 'weston'] },
-      { region: 'MetroWest', cities: ['concord', 'sudbury', 'wayland'] },
-      { region: 'Norfolk & South', cities: ['dover', 'sherborn', 'lincoln'] },
-    ],
-  },
-  {
-    name: 'Commercial Painting',
-    slug: 'commercial-painting',
-    regions: [
-      { region: 'Greater Boston', cities: ['boston', 'cambridge', 'newton', 'somerville'] },
-      { region: 'MetroWest', cities: ['framingham', 'marlborough', 'waltham'] },
-      { region: 'Worcester & Nearby', cities: ['worcester', 'lowell', 'burlington'] },
-    ],
-  },
-  {
-    name: 'Residential Painting',
-    slug: 'residential-painting',
-    regions: [
-      { region: 'MetroWest', cities: ['hudson', 'ashland', 'hopkinton', 'acton'] },
-      { region: 'Nearby Towns', cities: ['maynard', 'stow', 'bolton'] },
-      { region: 'Worcester & Nearby', cities: ['clinton', 'grafton', 'milford'] },
-    ],
-  },
-  {
-    name: 'Carpentry',
-    slug: 'carpentry',
-    regions: [
-      { region: 'MetroWest', cities: ['marlborough', 'northborough', 'westborough', 'southborough'] },
-      { region: 'Worcester & Nearby', cities: ['worcester', 'shrewsbury', 'grafton', 'clinton'] },
-      { region: 'North Central', cities: ['leominster', 'fitchburg'] },
-    ],
-  },
-  {
-    name: 'Power Washing',
-    slug: 'power-washing',
-    regions: [
-      { region: 'MetroWest', cities: ['hudson', 'framingham', 'natick'] },
-      { region: 'Greater Boston', cities: ['lexington', 'arlington', 'dedham', 'norwood'] },
-      { region: 'North Middlesex', cities: ['billerica', 'chelmsford', 'woburn'] },
-    ],
-  },
+// Top cities for compact footer display
+const topCities = [
+  { name: 'Boston', slug: 'boston-ma' },
+  { name: 'Worcester', slug: 'worcester-ma' },
+  { name: 'Cambridge', slug: 'cambridge-ma' },
+  { name: 'Newton', slug: 'newton-ma' },
+  { name: 'Framingham', slug: 'framingham-ma' },
+  { name: 'Marlborough', slug: 'marlborough-ma' },
+  { name: 'Natick', slug: 'natick-ma' },
+  { name: 'Wellesley', slug: 'wellesley-ma' },
+  { name: 'Lexington', slug: 'lexington-ma' },
+  { name: 'Concord', slug: 'concord-ma' },
+  { name: 'Sudbury', slug: 'sudbury-ma' },
+  { name: 'Brookline', slug: 'brookline-ma' },
+  { name: 'Needham', slug: 'needham-ma' },
+  { name: 'Waltham', slug: 'waltham-ma' },
+  { name: 'Shrewsbury', slug: 'shrewsbury-ma' },
+  { name: 'Lowell', slug: 'lowell-ma' },
+  { name: 'Milford', slug: 'milford-ma' },
+  { name: 'Hopkinton', slug: 'hopkinton-ma' },
+  { name: 'Dover', slug: 'dover-ma' },
+  { name: 'Leominster', slug: 'leominster-ma' },
 ]
 
 interface FooterProps {
@@ -207,46 +163,13 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
         </div>
       </div>
 
-      {/* Service-Specific City Links */}
+      {/* Compact Service Areas */}
       {showCities && (
         <div className="footer-service-areas">
           <div className="container">
-            <h3 className="footer-service-areas-title">
-              Professional Painting Services Across Massachusetts
-            </h3>
-            <div className="footer-services-city-grid">
-              {footerServiceAreas.map((serviceArea) => (
-                <div key={serviceArea.slug} className="footer-service-city-col">
-                  <h4 className="footer-service-city-title">
-                    <Link href={`/services/${serviceArea.slug}`}>{serviceArea.name}</Link>
-                  </h4>
-                  {serviceArea.regions.map((r) => (
-                    <div key={r.region} className="footer-region-group">
-                      <span className="footer-region-label">{r.region}</span>
-                      <ul className="footer-service-city-links">
-                        {r.cities.map((citySlug) => {
-                          const city = cities.find(c => c.slug === citySlug)
-                          if (!city) return null
-                          return (
-                            <li key={citySlug}>
-                              <Link href={`/cities/${getCitySlugWithState(city.slug)}/${serviceArea.slug}`}>
-                                {city.name}
-                              </Link>
-                            </li>
-                          )
-                        })}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-
             {/* Region Links */}
-            <h3 className="footer-service-areas-title" style={{ marginTop: '2.5rem' }}>
-              Service Regions
-            </h3>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
+            <h3 className="footer-service-areas-title">Service Regions</h3>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
               {regions.map((r) => (
                 <Link
                   key={r.slug}
@@ -258,25 +181,24 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
               ))}
             </div>
 
-            {/* General Service Areas */}
-            <h3 className="footer-service-areas-title" style={{ marginTop: '1.5rem' }}>
-              <MapPinIcon size={20} />
-              Service Areas - {cities.length}+ Cities Across Massachusetts
+            {/* Top Cities - Compact */}
+            <h3 className="footer-service-areas-title" style={{ marginTop: '1rem' }}>
+              <MapPinIcon size={18} />
+              Popular Service Areas
             </h3>
-            <div className="footer-cities-list">
-              {cities.map((city, index) => (
+            <div className="footer-cities-list" style={{ marginBottom: '0.75rem' }}>
+              {topCities.map((city, index) => (
                 <span key={city.slug}>
-                  <Link href={`/cities/${getCitySlugWithState(city.slug)}`} className="footer-city-link-rs">
+                  <Link href={`/cities/${city.slug}`} className="footer-city-link-rs">
                     {city.name}
                   </Link>
-                  {index < cities.length - 1 && ' • '}
+                  {index < topCities.length - 1 && ' · '}
                 </span>
               ))}
             </div>
-            <div className="footer-cta-link">
-              Looking for professional painting work?{' '}
-              <Link href="/services/exterior-painting" className="footer-cta-link-highlight">
-                Explore our Painting Services
+            <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+              <Link href="/cities" style={{ color: '#c9a84c', fontSize: '0.8125rem', fontWeight: 600 }}>
+                View All 116+ Service Areas →
               </Link>
             </div>
           </div>
