@@ -414,6 +414,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           .service-hero-content,.city-page-hero-content{position:relative;z-index:2;padding-top:40px;padding-bottom:60px}
           .hero-form-card{background:transparent;border-radius:20px;padding:0;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.3)}
           @keyframes spin{to{transform:rotate(360deg)}}
+          .section,.detail-section,.before-after-section,.video-section-rs,.reviews-section,.faq-section-home,.cta-section,.gallery-section,.about-section-dark,.trust-badges-section{content-visibility:auto;contain-intrinsic-size:auto 600px}
           @media(max-width:768px){.top-bar-email{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}.service-hero,.city-page-hero{padding-top:130px}.service-hero-content,.city-page-hero-content{padding-top:20px;padding-bottom:40px}}
         `}} />
         {/* Mobile optimization */}
