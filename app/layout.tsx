@@ -4,15 +4,15 @@ import './globals.css'
 import FloatingButtons from './components/FloatingButtons'
 import DeferredScripts from './components/DeferredScripts'
 
-// Optimize font loading - only load essential weights for better FCP
-// Using 'swap' ensures text is visible immediately with fallback font
+// Optimize font loading - 'optional' prevents font from being render-blocking
+// If font loads fast enough it's used, otherwise fallback is kept (no FOIT, no layout shift)
 const inter = Inter({
   subsets: ['latin'],
-  display: 'swap', // Critical for font display optimization - prevents FOIT
+  display: 'optional', // Eliminates ~210ms render-blocking font load
   variable: '--font-inter',
   weight: ['400', '700'],
   fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-  adjustFontFallback: true, // Reduces CLS by matching fallback font metrics
+  adjustFontFallback: true,
   preload: true,
 })
 
@@ -128,7 +128,7 @@ const schemaData = {
         "latitude": 42.3459,
         "longitude": -71.5526
       },
-      "hasMap": "https://maps.google.com/?cid=17086082612398292159",
+      "hasMap": "https://maps.app.goo.gl/xWBv1UJdDezRaBej9",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -147,7 +147,7 @@ const schemaData = {
         "https://www.facebook.com/profile.php?id=61564489391475",
         "https://www.instagram.com/jhpaintingservices_/",
         "https://www.youtube.com/@JHPaintingServices-br9wh",
-        "https://maps.google.com/?cid=17086082612398292159",
+        "https://maps.app.goo.gl/xWBv1UJdDezRaBej9",
         "https://www.yelp.com/biz/jh-painting-services-marlborough",
         "https://www.thumbtack.com/ma/marlborough/painters/jh-painting-services"
       ],
@@ -368,11 +368,13 @@ export default function RootLayout({
       <head>
         {/* Preconnect to image CDN for fastest hero image (LCP) delivery */}
         <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
+        {/* Preconnect to form domains for faster form loading */}
+        <link rel="preconnect" href="https://api.leadconnectorhq.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://stcdn.leadconnectorhq.com" crossOrigin="anonymous" />
         {/* DNS prefetch for deferred third-party domains */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://link.msgsndr.com" />
-        <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
-        <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://www.gstatic.com" />
         {/* Critical CSS inline for faster FCP - reduces render blocking by ~600ms */}
         <style dangerouslySetInnerHTML={{ __html: `
           :root{--jh-navy:#0A1F44;--jh-red:#D20404;--jh-red-dark:#B91C1C;--font-inter:Inter,system-ui,sans-serif}
@@ -390,7 +392,7 @@ export default function RootLayout({
           .top-bar.hidden{transform:translateY(-100%)}
           .top-bar-content{display:flex;justify-content:space-between;align-items:center}
           .top-bar-left{display:flex;gap:1.5rem;align-items:center}
-          .top-bar-item{display:flex;align-items:center;gap:4px;color:rgba(255,255,255,.9)}
+          .top-bar-item{display:flex;align-items:center;gap:4px;color:#fff}
           .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.875rem 1.5rem;border-radius:9999px;font-weight:600;text-decoration:none;transition:all .2s}
           .btn-primary{background:linear-gradient(135deg,#DC2626,#B91C1C);color:#fff;box-shadow:0 4px 15px rgba(220,38,38,.3)}
           h1,h2,h3{margin:0 0 1rem;line-height:1.2}
@@ -402,10 +404,30 @@ export default function RootLayout({
           .service-hero-overlay,.city-page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.85),rgba(0,0,0,.7),rgba(0,0,0,.6))}
           .service-hero-content,.city-page-hero-content{position:relative;z-index:2;padding-top:40px;padding-bottom:60px}
           .hero-form-card{background:transparent;border-radius:20px;padding:0;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.3)}
+          .hero-text{color:#fff}
+          .hero-title-emotional{font-size:clamp(2.5rem,6vw,4.25rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:1.5rem;letter-spacing:-.02em}
+          .hero-title-accent{background:linear-gradient(135deg,#DC2626 0%,#FF6B6B 50%,#FCD34D 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+          .hero-form-iframe{width:100%;height:620px;border:none;border-radius:12px;background:transparent}
+          .header-main{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+          .header-scrolled{top:0;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+          .nav{display:flex;align-items:center;gap:1.5rem}
+          .header-cta{display:flex;align-items:center;gap:.5rem;padding:.625rem 1.25rem;background:var(--jh-red);color:#fff;border-radius:8px;font-weight:600;font-size:.875rem;text-decoration:none}
+          .menu-btn,.hamburger-btn{display:none;background:none;border:none;cursor:pointer;padding:.5rem}
           @keyframes spin{to{transform:rotate(360deg)}}
           .section,.detail-section,.before-after-section,.video-section-rs,.reviews-section,.faq-section-home,.cta-section,.gallery-section,.about-section-dark,.trust-badges-section{content-visibility:auto;contain-intrinsic-size:auto 600px}
           .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--jh-navy);color:#fff;padding:.75rem 1.5rem;z-index:100000;border-radius:0 0 8px 8px;font-weight:600;font-size:.875rem;text-decoration:none;transition:top .2s ease}.skip-link:focus{top:0}
-          @media(max-width:768px){.top-bar-email{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}.service-hero,.city-page-hero{padding-top:130px}.service-hero-content,.city-page-hero-content{padding-top:20px;padding-bottom:40px}}
+          .google-reviews-bar{background:var(--jh-navy);padding:1rem 0;text-align:center}
+          .google-reviews-bar-content{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
+          .google-reviews-bar .google-icon{width:24px;height:24px}
+          .google-reviews-bar span{color:#fff;font-size:.9375rem;font-weight:500}
+          .google-reviews-bar .stars{display:flex;gap:.125rem;color:#FBBF24}
+          .google-reviews-bar .rating{color:#fff;font-weight:700;font-size:1rem}
+          .google-reviews-bar a{color:#93C5FD;font-weight:600;font-size:.9375rem;text-decoration:none;display:flex;align-items:center;gap:.25rem}
+          .trust-badges-section{padding:1.25rem 0}
+          .trust-badges-wrapper{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap}
+          .trust-badges-logos{display:flex;align-items:center;gap:1rem}
+          @media(max-width:992px){.nav{display:none}.header-cta{display:none}.menu-btn,.hamburger-btn{display:flex}}
+          @media(max-width:768px){.top-bar-email{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}.service-hero,.city-page-hero{padding-top:130px}.service-hero-content,.city-page-hero-content{padding-top:20px;padding-bottom:40px}.hero-form-iframe{height:600px}.google-reviews-bar-content{gap:.5rem}.trust-badges-wrapper{gap:1rem}}
         `}} />
         {/* Mobile optimization */}
         <meta name="HandheldFriendly" content="True" />
@@ -429,6 +451,7 @@ export default function RootLayout({
             src="https://www.googletagmanager.com/ns.html?id=GTM-KB89D6QQ"
             height="0"
             width="0"
+            title="Google Tag Manager"
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>

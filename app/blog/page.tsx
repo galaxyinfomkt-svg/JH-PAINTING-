@@ -240,6 +240,7 @@ export default function BlogPage() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="blog-search-input"
+                  aria-label="Search articles"
                 />
               </div>
             </div>

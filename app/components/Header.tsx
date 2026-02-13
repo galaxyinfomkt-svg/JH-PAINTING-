@@ -151,10 +151,11 @@ export default function Header({ cityName }: HeaderProps = {}) {
                 width={160}
                 height={64}
                 priority
+                sizes="160px"
               />
             </Link>
 
-            <nav className="nav">
+            <nav className="nav" aria-label="Main navigation">
               <Link href="/">Home</Link>
               <Link href="/#about">About</Link>
 
@@ -222,11 +223,11 @@ export default function Header({ cityName }: HeaderProps = {}) {
         <div
           className={`mobile-menu-overlay ${menuOpen ? 'active' : ''}`}
           onClick={closeMenu}
-          role="presentation"
+          aria-hidden="true"
         />
 
         {/* Modern Mobile Menu - Full Screen */}
-        <nav className={`mobile-menu ${menuOpen ? 'active' : ''}`}>
+        <nav className={`mobile-menu ${menuOpen ? 'active' : ''}`} aria-label="Mobile navigation">
           <div className="mobile-menu-header">
             <Link href="/" onClick={closeMenu} className="logo">
               <Image
@@ -234,6 +235,7 @@ export default function Header({ cityName }: HeaderProps = {}) {
                 alt={BUSINESS.name}
                 width={130}
                 height={52}
+                sizes="130px"
               />
             </Link>
             <button className="mobile-menu-close" onClick={closeMenu} aria-label="Close menu">

@@ -8,7 +8,9 @@ import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
-import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
+import dynamic from 'next/dynamic'
+
+const BeforeAfterSlider = dynamic(() => import('@/app/components/BeforeAfterSlider'), { ssr: false })
 
 // Schema JSON-LD for Exterior Painting Service
 const exteriorPaintingSchema = {
@@ -274,7 +276,7 @@ export default function ExteriorPaintingPage() {
             className="object-cover"
             priority
             sizes="100vw"
-            quality={75}
+            quality={35}
           />
           <div className="service-hero-overlay" />
         </div>
@@ -366,10 +368,10 @@ export default function ExteriorPaintingPage() {
               <Star size={16} fill="currentColor" />
             </div>
             <span className="rating">5</span>
-            <Link href="/#reviews">
+            <a href="https://g.page/r/Cb984Z3qm9PsEAE/review" target="_blank" rel="noopener noreferrer">
               See Our Reviews
               <ChevronRight size={14} />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -490,6 +492,8 @@ export default function ExteriorPaintingPage() {
                   fill
                   loading="lazy"
                   className="object-cover"
+                  quality={75}
+                  sizes="(max-width: 768px) 50vw, 33vw"
                 />
                 <div className="service-gallery-overlay" />
                 <div className="service-gallery-content">
@@ -553,6 +557,8 @@ export default function ExteriorPaintingPage() {
                   fill
                   loading="lazy"
                   className="object-cover"
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="service-video-overlay">
                   <div className="service-video-play">
@@ -581,6 +587,8 @@ export default function ExteriorPaintingPage() {
                   loading="lazy"
                   className="object-cover"
                   style={{ objectPosition: 'top center' }}
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="service-about-experience">

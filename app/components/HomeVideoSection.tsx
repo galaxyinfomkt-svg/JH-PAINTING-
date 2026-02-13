@@ -58,7 +58,7 @@ export default function HomeVideoSection() {
                   <div className="video-card-rs-play">
                     <PlayIcon size={20} />
                   </div>
-                  <h4>{video.title}</h4>
+                  <h3>{video.title}</h3>
                   <span>
                     <PlayIcon size={12} />
                     {video.type}

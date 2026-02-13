@@ -25,7 +25,7 @@ export const FORM_IDS = {
 export const SOCIAL = {
   facebook: 'https://facebook.com/jhpaintingservices',
   instagram: 'https://instagram.com/jhpaintingservices',
-  google: 'https://g.page/jhpaintingservices',
+  google: 'https://g.page/r/Cb984Z3qm9PsEAE/review',
   yelp: 'https://yelp.com/biz/jh-painting-services',
 } as const
 
@@ -208,5 +208,5 @@ export const SOCIAL_LINKS = {
   facebook: 'https://www.facebook.com/profile.php?id=61564489391475',
   instagram: 'https://www.instagram.com/jhpaintingservices_/',
   youtube: 'https://www.youtube.com/@JHPaintingServices-br9wh',
-  google: 'https://g.page/jhpaintingservices',
+  google: 'https://g.page/r/Cb984Z3qm9PsEAE/review',
 } as const

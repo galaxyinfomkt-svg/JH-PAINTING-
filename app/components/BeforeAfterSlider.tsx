@@ -31,6 +31,17 @@ export default function BeforeAfterSlider({
     setSliderPosition(percentage)
   }, [])
 
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    let newPos = sliderPosition
+    if (e.key === 'ArrowLeft') newPos = Math.max(0, sliderPosition - 2)
+    else if (e.key === 'ArrowRight') newPos = Math.min(100, sliderPosition + 2)
+    else if (e.key === 'Home') newPos = 0
+    else if (e.key === 'End') newPos = 100
+    else return
+    e.preventDefault()
+    setSliderPosition(newPos)
+  }, [sliderPosition])
+
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
     e.preventDefault()
     setIsDragging(true)
@@ -114,6 +125,13 @@ export default function BeforeAfterSlider({
       <div
         className="before-after-handle"
         style={{ left: `${sliderPosition}%` }}
+        role="slider"
+        aria-label="Before and after comparison slider"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={Math.round(sliderPosition)}
+        tabIndex={0}
+        onKeyDown={handleKeyDown}
       >
         <div className="before-after-line" />
         <div className="before-after-knob">

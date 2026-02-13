@@ -66,7 +66,7 @@ export default function LazyIframe({
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                background: 'var(--jh-gray-100, #f3f4f6)',
+                background: 'transparent',
                 borderRadius: '8px',
                 zIndex: 1,
               }}
@@ -104,7 +104,7 @@ export default function LazyIframe({
             justifyContent: 'center',
             height: '100%',
             minHeight: style?.minHeight || '300px',
-            background: 'var(--jh-gray-100, #f3f4f6)',
+            background: 'transparent',
             borderRadius: '8px',
           }}
         >

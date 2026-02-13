@@ -3,11 +3,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
+import dynamic from 'next/dynamic'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
-import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 import { BUSINESS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
+
+const BeforeAfterSlider = dynamic(() => import('@/app/components/BeforeAfterSlider'), { ssr: false })
 
 // Inline SVG icons to reduce bundle size
 const PhoneIcon = ({ size = 24 }: { size?: number }) => (
@@ -341,7 +343,7 @@ export default function PowerWashingPage() {
             className="object-cover"
             priority
             sizes="100vw"
-            quality={75}
+            quality={35}
           />
           <div className="service-hero-overlay" />
         </div>
@@ -437,10 +439,10 @@ export default function PowerWashingPage() {
               <StarIcon size={16} fill="currentColor" />
             </div>
             <span className="rating">5</span>
-            <Link href="/#reviews">
+            <a href="https://g.page/r/Cb984Z3qm9PsEAE/review" target="_blank" rel="noopener noreferrer">
               See Our Reviews
               <ChevronRightIcon size={14} />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -530,8 +532,10 @@ export default function PowerWashingPage() {
                     src={img.src}
                     alt={img.alt}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 50vw, 33vw"
                     className="object-cover"
+                    quality={75}
                   />
                   <div className="service-gallery-overlay">
                     <span className="service-gallery-category">{img.category}</span>
@@ -626,7 +630,10 @@ export default function PowerWashingPage() {
                   src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp"
                   alt="JH Painting Services Power Washing Team"
                   fill
+                  loading="lazy"
                   className="object-cover rounded-lg"
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>

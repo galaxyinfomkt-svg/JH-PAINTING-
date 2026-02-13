@@ -120,7 +120,7 @@ export default function HomeHeader() {
               />
             </a>
 
-            <nav className="nav">
+            <nav className="nav" aria-label="Main navigation">
               <a href="#home">Home</a>
               <a href="#about">About</a>
 
@@ -181,17 +181,18 @@ export default function HomeHeader() {
         <div
           className={`mobile-menu-overlay ${menuOpen ? 'active' : ''}`}
           onClick={closeMenu}
-          role="presentation"
+          aria-hidden="true"
         />
 
         {/* Mobile Menu */}
-        <nav className={`mobile-menu ${menuOpen ? 'active' : ''}`}>
+        <nav className={`mobile-menu ${menuOpen ? 'active' : ''}`} aria-label="Mobile navigation">
           <div className="mobile-menu-header">
             <Image
               src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
               alt="JH Painting Services"
               width={120}
               height={48}
+              sizes="120px"
             />
             <button className="mobile-menu-close" onClick={closeMenu} aria-label="Close menu">
               <XIcon />

@@ -109,15 +109,17 @@ const DropletsIcon = ({ size = 20 }: { size?: number }) => (
 )
 DropletsIcon.displayName = 'DropletsIcon'
 
+import dynamic from 'next/dynamic'
 import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
 import { getCityContent, generateUniqueCityContent } from '@/app/data/cityContent'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
-import LazyIframe from '@/app/components/LazyIframe'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
-import BeforeAfterGrid from '@/app/components/BeforeAfterGrid'
-import FAQAccordion from '@/app/components/FAQAccordion'
 import { BUSINESS, FORM_IDS } from '@/lib/constants'
+
+// Dynamic imports for below-fold heavy client components (code splitting)
+const BeforeAfterGrid = dynamic(() => import('@/app/components/BeforeAfterGrid'))
+const FAQAccordion = dynamic(() => import('@/app/components/FAQAccordion'))
 
 interface Props {
   params: Promise<{ city: string }>
@@ -360,7 +362,7 @@ export default async function CityPage({ params }: Props) {
             fill
             priority
             sizes="100vw"
-            quality={75}
+            quality={35}
             style={{ objectFit: 'cover' }}
           />
           <div className="city-page-hero-overlay" />
@@ -497,7 +499,7 @@ export default async function CityPage({ params }: Props) {
               <LazyHeroForm
                 className="hero-form-iframe"
                 src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
-                title="Contact Form"
+                title={`Get Your Free Painting Estimate in ${city.name}`}
               />
             </div>
           </div>
@@ -508,14 +510,14 @@ export default async function CityPage({ params }: Props) {
       <div className="google-reviews-bar">
         <div className="container">
           <div className="google-reviews-bar-content">
-            <svg className="google-icon" viewBox="0 0 24 24" fill="none">
+            <svg className="google-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
               <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
               <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
             </svg>
             <span>Google Reviews</span>
-            <div className="stars">
+            <div className="stars" aria-hidden="true">
               <StarIcon size={16} fill="currentColor" />
               <StarIcon size={16} fill="currentColor" />
               <StarIcon size={16} fill="currentColor" />
@@ -523,10 +525,10 @@ export default async function CityPage({ params }: Props) {
               <StarIcon size={16} fill="currentColor" />
             </div>
             <span className="rating">5</span>
-            <Link href="/#reviews">
+            <a href="https://g.page/r/Cb984Z3qm9PsEAE/review" target="_blank" rel="noopener noreferrer" aria-label="See our Google reviews - 5 star rating">
               See Our Reviews
               <ChevronRightIcon size={14} />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -589,6 +591,7 @@ export default async function CityPage({ params }: Props) {
                     alt={`JH Painting Services working in ${city.name}, MA`}
                     fill
                     loading="lazy"
+                    quality={75}
                     style={{ objectFit: 'cover' }}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
@@ -756,6 +759,7 @@ export default async function CityPage({ params }: Props) {
                   alt={`${img.alt} - ${city.name}, MA`}
                   fill
                   loading="lazy"
+                  quality={75}
                   sizes="(max-width: 768px) 50vw, 33vw"
                   style={{ objectFit: 'cover' }}
                 />
@@ -822,6 +826,7 @@ export default async function CityPage({ params }: Props) {
                   alt={`${video.title} - ${city.name}, MA`}
                   fill
                   loading="lazy"
+                  quality={75}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
                 />
@@ -866,6 +871,8 @@ export default async function CityPage({ params }: Props) {
                   width={600}
                   height={500}
                   loading="lazy"
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                 />
               </div>

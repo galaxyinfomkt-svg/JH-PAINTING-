@@ -377,11 +377,9 @@ export default function ContactPage() {
 
               {/* Contact Form */}
               <div style={{
-                background: '#fff',
+                background: 'transparent',
                 borderRadius: '20px',
-                padding: '2rem',
-                boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
-                border: '1px solid var(--jh-gray-200)'
+                padding: '0',
               }}>
                 <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <div style={{

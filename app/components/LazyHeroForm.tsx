@@ -21,10 +21,10 @@ export default function LazyHeroForm({ src, title, className }: LazyHeroFormProp
     const load = () => { if (!cancelled) setShouldLoad(true) }
 
     if (typeof window.requestIdleCallback !== 'undefined') {
-      const id = window.requestIdleCallback(load, { timeout: 3000 })
+      const id = window.requestIdleCallback(load, { timeout: 1500 })
       return () => { cancelled = true; window.cancelIdleCallback(id) }
     }
-    const timer = setTimeout(load, 2500)
+    const timer = setTimeout(load, 1200)
     return () => { cancelled = true; clearTimeout(timer) }
   }, [])
 

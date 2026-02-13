@@ -96,7 +96,7 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
           <div className="footer-grid">
             {/* Quick Links */}
             <div className="footer-column">
-              <h4 className="footer-column-title">Quick Links</h4>
+              <h3 className="footer-column-title">Quick Links</h3>
               <ul className="footer-links">
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/services">Services</Link></li>
@@ -109,7 +109,7 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
 
             {/* Our Services */}
             <div className="footer-column">
-              <h4 className="footer-column-title">Our Services</h4>
+              <h3 className="footer-column-title">Our Services</h3>
               <ul className="footer-links">
                 {footerServices.map((service) => (
                   <li key={service.href}>
@@ -121,7 +121,7 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
 
             {/* Contact Us */}
             <div className="footer-column">
-              <h4 className="footer-column-title">Contact Us</h4>
+              <h3 className="footer-column-title">Contact Us</h3>
               <ul className="footer-contact">
                 <li>
                   <PhoneIcon size={18} />
