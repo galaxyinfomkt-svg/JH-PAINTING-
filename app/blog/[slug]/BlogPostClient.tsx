@@ -28,7 +28,7 @@ import {
   Star,
   Shield,
   Check,
-} from '@/app/components/icons'
+} from '@/app/components/Icons'
 import { BlogPost } from '../../data/blogPosts'
 
 const menuServices = [

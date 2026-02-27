@@ -46,7 +46,7 @@ export default function LazyHeroForm({ src, title, className }: LazyHeroFormProp
               width: '32px',
               height: '32px',
               border: '3px solid #e2e8f0',
-              borderTopColor: '#D20404',
+              borderTopColor: '#D4A853',
               borderRadius: '50%',
               animation: 'spin 1s linear infinite',
             }}

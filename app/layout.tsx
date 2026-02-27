@@ -377,52 +377,52 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.gstatic.com" />
         {/* Critical CSS inline for faster FCP - reduces render blocking by ~600ms */}
         <style dangerouslySetInnerHTML={{ __html: `
-          :root{--jh-navy:#0A1F44;--jh-red:#D20404;--jh-red-dark:#B91C1C;--font-inter:Inter,system-ui,sans-serif}
+          :root{--jh-navy:#000000;--jh-red:#D4A853;--jh-red-dark:#B8923F;--font-inter:Inter,system-ui,sans-serif}
           *,*::before,*::after{box-sizing:border-box}
-          html{background:#0A1F44;scroll-behavior:smooth}
+          html{background:#000000;scroll-behavior:smooth}
           body{margin:0;font-family:var(--font-inter);line-height:1.6;color:#1a1a1a;-webkit-font-smoothing:antialiased}
-          .hero,.hero-simplified{min-height:100vh;position:relative;display:flex;align-items:center;background:#0A1F44}
+          .hero,.hero-simplified{min-height:100vh;position:relative;display:flex;align-items:center;background:#000000}
           .hero-bg{position:absolute;inset:0;z-index:0}
           .hero-bg img{object-fit:cover;width:100%;height:100%}
-          .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.85),rgba(0,0,0,.75));z-index:1}
+          .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.88),rgba(0,0,0,.78));z-index:1}
           .hero-content{position:relative;z-index:2;padding:2rem 0}
           .container{width:100%;max-width:1280px;margin:0 auto;padding:0 1rem}
-          .header{position:fixed;top:44px;left:0;right:0;z-index:100;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-          .top-bar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--jh-red);color:#fff;padding:.5rem 0;font-size:.75rem}
+          .header{position:fixed;top:44px;left:0;right:0;z-index:100;background:#000;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+          .top-bar{position:fixed;top:0;left:0;right:0;z-index:1000;background:#D4A853;color:#000;padding:.5rem 0;font-size:.75rem}
           .top-bar.hidden{transform:translateY(-100%)}
           .top-bar-content{display:flex;justify-content:space-between;align-items:center}
           .top-bar-left{display:flex;gap:1.5rem;align-items:center}
-          .top-bar-item{display:flex;align-items:center;gap:4px;color:#fff}
+          .top-bar-item{display:flex;align-items:center;gap:4px;color:#000}
           .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.875rem 1.5rem;border-radius:9999px;font-weight:600;text-decoration:none;transition:all .2s}
-          .btn-primary{background:linear-gradient(135deg,#DC2626,#B91C1C);color:#fff;box-shadow:0 4px 15px rgba(220,38,38,.3)}
+          .btn-primary{background:linear-gradient(135deg,#D4A853,#B8923F);color:#000;box-shadow:0 4px 15px rgba(212,168,83,.3)}
           h1,h2,h3{margin:0 0 1rem;line-height:1.2}
           img{max-width:100%;height:auto}
           .logo img{height:50px;width:auto}
-          nav a{color:#0A1F44;text-decoration:none;font-weight:500}
-          .service-hero,.city-page-hero{position:relative;display:flex;align-items:flex-start;overflow:hidden;padding-top:160px;background:#0F172A}
+          nav a{color:#fff;text-decoration:none;font-weight:500}
+          .service-hero,.city-page-hero{position:relative;display:flex;align-items:flex-start;overflow:hidden;padding-top:160px;background:#0a0a0a}
           .service-hero-bg,.city-page-hero-bg{position:absolute;inset:0;z-index:0}
-          .service-hero-overlay,.city-page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.85),rgba(0,0,0,.7),rgba(0,0,0,.6))}
+          .service-hero-overlay,.city-page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.88),rgba(0,0,0,.75),rgba(0,0,0,.65))}
           .service-hero-content,.city-page-hero-content{position:relative;z-index:2;padding-top:40px;padding-bottom:60px}
           .hero-form-card{background:transparent;border-radius:20px;padding:0;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.3)}
           .hero-text{color:#fff}
           .hero-title-emotional{font-size:clamp(2.5rem,6vw,4.25rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:1.5rem;letter-spacing:-.02em}
-          .hero-title-accent{background:linear-gradient(135deg,#DC2626 0%,#FF6B6B 50%,#FCD34D 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+          .hero-title-accent{background:linear-gradient(135deg,#D4A853 0%,#E4C47A 50%,#FCD34D 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
           .hero-form-iframe{width:100%;height:620px;border:none;border-radius:12px;background:transparent}
           .header-main{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
-          .header-scrolled{top:0;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+          .header-scrolled{top:0;box-shadow:0 4px 20px rgba(0,0,0,.2)}
           .nav{display:flex;align-items:center;gap:1.5rem}
-          .header-cta{display:flex;align-items:center;gap:.5rem;padding:.625rem 1.25rem;background:var(--jh-red);color:#fff;border-radius:8px;font-weight:600;font-size:.875rem;text-decoration:none}
+          .header-cta{display:flex;align-items:center;gap:.5rem;padding:.625rem 1.25rem;background:#D4A853;color:#000;border-radius:8px;font-weight:600;font-size:.875rem;text-decoration:none}
           .menu-btn,.hamburger-btn{display:none;background:none;border:none;cursor:pointer;padding:.5rem}
           @keyframes spin{to{transform:rotate(360deg)}}
           .section,.detail-section,.before-after-section,.video-section-rs,.reviews-section,.faq-section-home,.cta-section,.gallery-section,.about-section-dark,.trust-badges-section{content-visibility:auto;contain-intrinsic-size:auto 600px}
-          .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--jh-navy);color:#fff;padding:.75rem 1.5rem;z-index:100000;border-radius:0 0 8px 8px;font-weight:600;font-size:.875rem;text-decoration:none;transition:top .2s ease}.skip-link:focus{top:0}
-          .google-reviews-bar{background:var(--jh-navy);padding:1rem 0;text-align:center}
+          .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:#000;color:#D4A853;padding:.75rem 1.5rem;z-index:100000;border-radius:0 0 8px 8px;font-weight:600;font-size:.875rem;text-decoration:none;transition:top .2s ease}.skip-link:focus{top:0}
+          .google-reviews-bar{background:#000;padding:1rem 0;text-align:center}
           .google-reviews-bar-content{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
           .google-reviews-bar .google-icon{width:24px;height:24px}
           .google-reviews-bar span{color:#fff;font-size:.9375rem;font-weight:500}
-          .google-reviews-bar .stars{display:flex;gap:.125rem;color:#FBBF24}
+          .google-reviews-bar .stars{display:flex;gap:.125rem;color:#D4A853}
           .google-reviews-bar .rating{color:#fff;font-weight:700;font-size:1rem}
-          .google-reviews-bar a{color:#93C5FD;font-weight:600;font-size:.9375rem;text-decoration:none;display:flex;align-items:center;gap:.25rem}
+          .google-reviews-bar a{color:#D4A853;font-weight:600;font-size:.9375rem;text-decoration:none;display:flex;align-items:center;gap:.25rem}
           .trust-badges-section{padding:1.25rem 0}
           .trust-badges-wrapper{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap}
           .trust-badges-logos{display:flex;align-items:center;gap:1rem}
@@ -432,7 +432,7 @@ export default function RootLayout({
         {/* Mobile optimization */}
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />
-        <meta name="theme-color" content="#DC2626" />
+        <meta name="theme-color" content="#000000" />
         {/* Schema JSON-LD - Comprehensive SEO markup */}
         <script
           type="application/ld+json"

@@ -167,6 +167,18 @@ export function parseCitySlug(urlSlug: string): string {
   return urlSlug
 }
 
+// Normalize city slug by stripping -ma suffix if present
+// Used by /massachusetts/ routes where URLs don't include the state suffix
+export function normalizeCitySlug(slug: string): string {
+  if (slug.endsWith('-ma')) {
+    return slug.slice(0, -3)
+  }
+  if (slug.endsWith('-ri')) {
+    return slug.slice(0, -3)
+  }
+  return slug
+}
+
 export function getCitiesByDistance(maxDistance: number): City[] {
   return cities.filter(city => city.distance <= maxDistance)
 }

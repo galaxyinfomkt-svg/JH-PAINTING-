@@ -22,7 +22,7 @@ import {
   PaintBucket,
   CheckCircle2,
   MessageSquare
-} from '@/app/components/icons'
+} from '@/app/components/Icons'
 import LazyIframe from '../components/LazyIframe'
 
 // Menu data

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { CheckCircle2, Phone, Mail, Clock, ArrowRight, Star, Shield, Home, Calendar } from '@/app/components/icons'
+import { CheckCircle2, Phone, Mail, Clock, ArrowRight, Star, Shield, Home, Calendar } from '@/app/components/Icons'
 
 export default function ThankYouPage() {
   const [mounted, setMounted] = useState(false)
@@ -145,7 +145,7 @@ export default function ThankYouPage() {
                       <div style={{
                         width: '56px',
                         height: '56px',
-                        background: 'linear-gradient(135deg, #D20404 0%, #A80303 100%)',
+                        background: 'linear-gradient(135deg, #D4A853 0%, #B8923F 100%)',
                         borderRadius: '12px',
                         display: 'flex',
                         alignItems: 'center',
@@ -173,7 +173,7 @@ export default function ThankYouPage() {
                   alignItems: 'center',
                   gap: '0.75rem',
                   padding: '1rem 2rem',
-                  background: 'linear-gradient(135deg, #D20404 0%, #A80303 100%)',
+                  background: 'linear-gradient(135deg, #D4A853 0%, #B8923F 100%)',
                   color: '#fff',
                   borderRadius: '12px',
                   fontSize: '1.125rem',
@@ -222,7 +222,7 @@ export default function ThankYouPage() {
                     gap: '0.5rem',
                     color: 'rgba(255, 255, 255, 0.7)'
                   }}>
-                    <item.icon size={18} color="#D20404" />
+                    <item.icon size={18} color="#D4A853" />
                     <span style={{ fontSize: '0.9375rem', fontWeight: '500' }}>{item.text}</span>
                   </div>
                 ))}
@@ -277,7 +277,7 @@ export default function ThankYouPage() {
                     justifyContent: 'space-between'
                   }}>
                     {service.title}
-                    <ArrowRight size={18} color="#D20404" />
+                    <ArrowRight size={18} color="#D4A853" />
                   </h3>
                   <p style={{
                     color: 'rgba(255, 255, 255, 0.6)',
