@@ -379,7 +379,7 @@ export default function RootLayout({
         <style dangerouslySetInnerHTML={{ __html: `
           :root{--jh-navy:#0a0e27;--jh-red:#CC0000;--jh-red-dark:#990000;--font-inter:Inter,system-ui,sans-serif}
           *,*::before,*::after{box-sizing:border-box}
-          html{background:#0a0e27;scroll-behavior:smooth}
+          html{background:#ffffff;scroll-behavior:smooth}
           body{margin:0;font-family:var(--font-inter);line-height:1.6;color:#1a1a1a;-webkit-font-smoothing:antialiased}
           .hero,.hero-simplified{min-height:100vh;position:relative;display:flex;align-items:center;background:#0a0e27}
           .hero-bg{position:absolute;inset:0;z-index:0}

@@ -13,10 +13,10 @@
     --font-sans: var(--font-inter, 'Inter'), system-ui, -apple-system, sans-serif;
   }
 
-  html { background: #0a0e27; }
+  html { background: #ffffff; }
   body {
     font-family: var(--font-sans);
-    background: #0a0e27;
+    background: #ffffff;
     color: #0F172A;
     margin: 0;
   }
