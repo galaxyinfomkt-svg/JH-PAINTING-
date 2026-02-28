@@ -574,7 +574,7 @@ export default async function RegionServicePage({ params }: Props) {
                     <MapPinIcon size={14} />
                     {region.name}
                   </span>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', padding: '0.5rem 1rem', background: 'linear-gradient(135deg, #C8102E 0%, #9B0A1E 100%)', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', padding: '0.5rem 1rem', background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
                     <StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} />
                     5.0
                   </span>
@@ -606,7 +606,7 @@ export default async function RegionServicePage({ params }: Props) {
                     { icon: MapPinIcon, text: `Serving All ${region.name}` },
                   ].map((item, idx) => (
                     <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.9)' }}>
-                      <span style={{ color: '#C8102E' }}><item.icon size={16} /></span>
+                      <span style={{ color: '#DC2626' }}><item.icon size={16} /></span>
                       <span style={{ fontSize: '0.875rem', fontWeight: 500 }}>{item.text}</span>
                     </div>
                   ))}
@@ -636,7 +636,7 @@ export default async function RegionServicePage({ params }: Props) {
                 { value: '100%', label: 'Satisfaction' },
               ].map((stat, idx) => (
                 <div key={idx} style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#C8102E' }}>{stat.value}</div>
+                  <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#DC2626' }}>{stat.value}</div>
                   <div style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>{stat.label}</div>
                 </div>
               ))}
@@ -689,7 +689,7 @@ export default async function RegionServicePage({ params }: Props) {
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="tel:+15086908886" className="city-cta-btn"><PhoneIcon size={18} /> Call for Quote</a>
-                  <Link href="/projects" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#C8102E', fontWeight: 600, fontSize: '0.9375rem' }}>
+                  <Link href="/projects" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#DC2626', fontWeight: 600, fontSize: '0.9375rem' }}>
                     View Portfolio <ChevronRightIcon size={16} />
                   </Link>
                 </div>
@@ -710,7 +710,7 @@ export default async function RegionServicePage({ params }: Props) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '900px', margin: '0 auto', padding: '0 1.5rem' }}>
               {content.process.map((step, idx) => (
                 <div key={idx} style={{ background: '#fff', borderRadius: '20px', padding: '2rem 2.5rem', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 24px rgba(0,0,0,0.05)', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', minWidth: '48px', background: 'linear-gradient(135deg, #C8102E, #9B0A1E)', color: '#fff', borderRadius: '14px', fontSize: '1.125rem', fontWeight: 800 }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', minWidth: '48px', background: 'linear-gradient(135deg, #DC2626, #B91C1C)', color: '#fff', borderRadius: '14px', fontSize: '1.125rem', fontWeight: 800 }}>
                     {idx + 1}
                   </span>
                   <div>
@@ -753,7 +753,7 @@ export default async function RegionServicePage({ params }: Props) {
                     { icon: CheckIcon, title: '100% Satisfaction' },
                   ].map((item, idx) => (
                     <div key={idx} className="city-about-feature">
-                      <div className="city-about-feature-icon" style={{ color: '#C8102E' }}><item.icon size={24} /></div>
+                      <div className="city-about-feature-icon" style={{ color: '#DC2626' }}><item.icon size={24} /></div>
                       <span className="city-about-feature-text">{item.title}</span>
                     </div>
                   ))}
@@ -807,7 +807,7 @@ export default async function RegionServicePage({ params }: Props) {
                   href={`/regions/${region.slug}/${svc.slug}`}
                   style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: '#fff', borderRadius: '16px', padding: '1.25rem 1.5rem', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.04)', textDecoration: 'none', transition: 'all 0.3s ease' }}
                 >
-                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '44px', height: '44px', minWidth: '44px', background: 'linear-gradient(135deg, #C8102E, #9B0A1E)', borderRadius: '12px' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '44px', height: '44px', minWidth: '44px', background: 'linear-gradient(135deg, #DC2626, #B91C1C)', borderRadius: '12px' }}>
                     <ChevronRightIcon size={20} />
                   </span>
                   <div>

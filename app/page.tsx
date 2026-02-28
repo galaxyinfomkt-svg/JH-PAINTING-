@@ -151,18 +151,18 @@ export default function HomePage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 500px), 1fr))', gap: '3rem', alignItems: 'center' }}>
               <div className="hero-text">
                 {/* Service area badge - RS style */}
-                <p style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1.25rem', background: 'rgba(200,16,46,0.9)', borderRadius: '100px', color: '#fff', fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
+                <p style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1.25rem', background: 'rgba(220,38,38,0.9)', borderRadius: '100px', color: '#fff', fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
                   Serving 117+ Massachusetts Cities
                 </p>
 
                 {/* 5-Star rating badge */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                  <div style={{ display: 'flex', gap: '2px', color: '#C8102E' }}>
-                    <StarIcon size={18} fill="#C8102E" />
-                    <StarIcon size={18} fill="#C8102E" />
-                    <StarIcon size={18} fill="#C8102E" />
-                    <StarIcon size={18} fill="#C8102E" />
-                    <StarIcon size={18} fill="#C8102E" />
+                  <div style={{ display: 'flex', gap: '2px', color: '#DC2626' }}>
+                    <StarIcon size={18} fill="#DC2626" />
+                    <StarIcon size={18} fill="#DC2626" />
+                    <StarIcon size={18} fill="#DC2626" />
+                    <StarIcon size={18} fill="#DC2626" />
+                    <StarIcon size={18} fill="#DC2626" />
                   </div>
                   <span style={{ color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>5.0 Rating | 50+ Reviews</span>
                 </div>
@@ -179,7 +179,7 @@ export default function HomePage() {
 
                 {/* Dual CTA - RS style (Gold + White border) */}
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-                  <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2rem', background: 'linear-gradient(135deg, #C8102E 0%, #9B0A1E 100%)', color: '#fff', borderRadius: '8px', fontSize: '1.125rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 10px 40px rgba(200,16,46,0.35)', transition: 'all 0.3s ease', border: 'none' }}>
+                  <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2rem', background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)', color: '#fff', borderRadius: '8px', fontSize: '1.125rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 10px 40px rgba(220,38,38,0.35)', transition: 'all 0.3s ease', border: 'none' }}>
                     <PhoneIcon />
                     Call (508) 690-8886
                   </a>
@@ -346,8 +346,8 @@ export default function HomePage() {
                     { value: '100%', label: 'Licensed' },
                     { value: '24hr', label: 'Response Time' },
                   ].map((stat, i) => (
-                    <div key={i} style={{ textAlign: 'center', padding: '1.25rem 0.75rem', background: 'rgba(200,16,46,0.1)', border: '1px solid rgba(200,16,46,0.2)', borderRadius: '12px' }}>
-                      <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#C8102E', lineHeight: 1.2 }}>{stat.value}</div>
+                    <div key={i} style={{ textAlign: 'center', padding: '1.25rem 0.75rem', background: 'rgba(220,38,38,0.1)', border: '1px solid rgba(220,38,38,0.2)', borderRadius: '12px' }}>
+                      <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#DC2626', lineHeight: 1.2 }}>{stat.value}</div>
                       <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500, marginTop: '0.25rem' }}>{stat.label}</div>
                     </div>
                   ))}
@@ -610,7 +610,7 @@ export default function HomePage() {
                   <h3>Contact Us Directly</h3>
 
                   <div className="contact-item">
-                    <div className="contact-item-icon" style={{ background: 'rgba(200,16,46,0.1)', color: '#C8102E' }}>
+                    <div className="contact-item-icon" style={{ background: 'rgba(220,38,38,0.1)', color: '#DC2626' }}>
                       <PhoneIcon />
                     </div>
                     <div className="contact-item-content">
@@ -620,7 +620,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="contact-item">
-                    <div className="contact-item-icon" style={{ background: 'rgba(200,16,46,0.1)', color: '#C8102E' }}>
+                    <div className="contact-item-icon" style={{ background: 'rgba(220,38,38,0.1)', color: '#DC2626' }}>
                       <MailIcon />
                     </div>
                     <div className="contact-item-content">
@@ -630,7 +630,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="contact-item">
-                    <div className="contact-item-icon" style={{ background: 'rgba(200,16,46,0.1)', color: '#C8102E' }}>
+                    <div className="contact-item-icon" style={{ background: 'rgba(220,38,38,0.1)', color: '#DC2626' }}>
                       <MapPinIcon />
                     </div>
                     <div className="contact-item-content">
@@ -640,7 +640,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="contact-item">
-                    <div className="contact-item-icon" style={{ background: 'rgba(200,16,46,0.1)', color: '#C8102E' }}>
+                    <div className="contact-item-icon" style={{ background: 'rgba(220,38,38,0.1)', color: '#DC2626' }}>
                       <ClockIcon />
                     </div>
                     <div className="contact-item-content">
@@ -651,13 +651,13 @@ export default function HomePage() {
 
                   {/* Social Links */}
                   <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--jh-line)' }}>
-                    <a href="https://www.facebook.com/profile.php?id=61564489391475" target="_blank" rel="noopener noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#0a0e27', color: '#C8102E', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61564489391475" target="_blank" rel="noopener noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#0a0e27', color: '#DC2626', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="Facebook">
                       <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     </a>
-                    <a href="https://www.instagram.com/jhpaintingservices_/" target="_blank" rel="noopener noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#0a0e27', color: '#C8102E', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="Instagram">
+                    <a href="https://www.instagram.com/jhpaintingservices_/" target="_blank" rel="noopener noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#0a0e27', color: '#DC2626', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="Instagram">
                       <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                     </a>
-                    <a href="https://www.youtube.com/@JHPaintingServices-br9wh" target="_blank" rel="noopener noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#0a0e27', color: '#C8102E', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="YouTube">
+                    <a href="https://www.youtube.com/@JHPaintingServices-br9wh" target="_blank" rel="noopener noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#0a0e27', color: '#DC2626', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="YouTube">
                       <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                     </a>
                   </div>
@@ -666,7 +666,7 @@ export default function HomePage() {
                 {/* Map */}
                 <div className="map-container">
                   <a href="https://g.co/kgs/hc9Rfmv" target="_blank" rel="noopener noreferrer" className="static-map-link" aria-label="View JH Painting Services on Google Maps">
-                    <div className="static-map-placeholder" style={{ border: '2px solid #C8102E' }}>
+                    <div className="static-map-placeholder" style={{ border: '2px solid #DC2626' }}>
                       <MapPinIcon />
                       <span className="static-map-title">JH Painting Services</span>
                       <span className="static-map-address">Serving All of Massachusetts</span>
@@ -691,13 +691,13 @@ export default function HomePage() {
         <HomeFAQ />
 
         {/* CTA Section - RS Gold Banner Style */}
-        <section className="cta-section cta-section-enhanced" style={{ background: 'linear-gradient(135deg, #C8102E 0%, #9B0A1E 100%)' }}>
+        <section className="cta-section cta-section-enhanced" style={{ background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)' }}>
           <div className="container">
             <div className="cta-content" style={{ color: '#fff' }}>
               <h2 style={{ color: '#fff' }}>Ready to Transform Your Home?</h2>
               <p style={{ color: 'rgba(255,255,255,0.85)' }}>Licensed & $2M insured. 5-star rated. Same-day response on all estimates.</p>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                <a href="tel:+15086908886" className="btn btn-lg" style={{ background: '#fff', color: '#C8102E', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
+                <a href="tel:+15086908886" className="btn btn-lg" style={{ background: '#fff', color: '#DC2626', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
                   <PhoneIcon />
                   Call (508) 690-8886
                 </a>

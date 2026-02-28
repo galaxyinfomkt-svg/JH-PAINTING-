@@ -172,7 +172,7 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
                 <Link
                   key={r.slug}
                   href={`/regions/${r.slug}`}
-                  style={{ background: 'rgba(200,16,46,0.15)', color: '#C8102E', padding: '0.375rem 0.875rem', borderRadius: '6px', fontSize: '0.8125rem', fontWeight: 600, border: '1px solid rgba(200,16,46,0.25)' }}
+                  style={{ background: 'rgba(220,38,38,0.15)', color: '#DC2626', padding: '0.375rem 0.875rem', borderRadius: '6px', fontSize: '0.8125rem', fontWeight: 600, border: '1px solid rgba(220,38,38,0.25)' }}
                 >
                   {r.name}
                 </Link>
@@ -195,7 +195,7 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
               ))}
             </div>
             <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-              <Link href="/massachusetts" style={{ color: '#C8102E', fontSize: '0.8125rem', fontWeight: 600 }}>
+              <Link href="/massachusetts" style={{ color: '#DC2626', fontSize: '0.8125rem', fontWeight: 600 }}>
                 View All 117+ Service Areas →
               </Link>
             </div>

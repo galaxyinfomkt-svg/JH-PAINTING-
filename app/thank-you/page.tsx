@@ -145,7 +145,7 @@ export default function ThankYouPage() {
                       <div style={{
                         width: '56px',
                         height: '56px',
-                        background: 'linear-gradient(135deg, #C8102E 0%, #9B0A1E 100%)',
+                        background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
                         borderRadius: '12px',
                         display: 'flex',
                         alignItems: 'center',
@@ -173,7 +173,7 @@ export default function ThankYouPage() {
                   alignItems: 'center',
                   gap: '0.75rem',
                   padding: '1rem 2rem',
-                  background: 'linear-gradient(135deg, #C8102E 0%, #9B0A1E 100%)',
+                  background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
                   color: '#fff',
                   borderRadius: '12px',
                   fontSize: '1.125rem',
@@ -222,7 +222,7 @@ export default function ThankYouPage() {
                     gap: '0.5rem',
                     color: 'rgba(255, 255, 255, 0.7)'
                   }}>
-                    <item.icon size={18} color="#C8102E" />
+                    <item.icon size={18} color="#DC2626" />
                     <span style={{ fontSize: '0.9375rem', fontWeight: '500' }}>{item.text}</span>
                   </div>
                 ))}
@@ -277,7 +277,7 @@ export default function ThankYouPage() {
                     justifyContent: 'space-between'
                   }}>
                     {service.title}
-                    <ArrowRight size={18} color="#C8102E" />
+                    <ArrowRight size={18} color="#DC2626" />
                   </h3>
                   <p style={{
                     color: 'rgba(255, 255, 255, 0.6)',
