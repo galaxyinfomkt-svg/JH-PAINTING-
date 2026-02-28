@@ -432,7 +432,7 @@ export default function RootLayout({
         {/* Mobile optimization */}
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />
-        <meta name="theme-color" content="#0a0e27" />
+        <meta name="theme-color" content="#ffffff" />
         {/* Schema JSON-LD - Comprehensive SEO markup */}
         <script
           type="application/ld+json"
