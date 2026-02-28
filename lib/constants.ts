@@ -167,16 +167,16 @@ export const SEO = {
   keywords: 'painting services massachusetts, house painters, interior painting, exterior painting, cabinet painting, commercial painting',
 } as const
 
-// Color Theme (for reference)
+// Color Theme (MassHVAC style - Dark Navy + Red)
 export const COLORS = {
-  navy: '#0B1F3B',
-  navyLight: '#1A365D',
-  navyDark: '#071428',
-  red: '#E02020',
-  redLight: '#E4C47A',
-  redDark: '#B8923F',
-  gold: '#D4A853',
-  goldDark: '#B8923F',
+  navy: '#0a0e27',
+  navyLight: '#111827',
+  navyDark: '#060a1e',
+  red: '#C8102E',
+  redLight: '#E63946',
+  redDark: '#9B0A1E',
+  accent: '#C8102E',
+  accentDark: '#9B0A1E',
   white: '#FFFFFF',
   offWhite: '#F8FAFC',
   ink: '#0F172A',
