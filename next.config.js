@@ -7,6 +7,7 @@ const nextConfig = {
   experimental: {
     workerThreads: false,
     cpus: 2,
+    optimizeCss: true,
   },
   // Redirect old URLs to /cities/[city]-ma/[service] pattern
   async redirects() {

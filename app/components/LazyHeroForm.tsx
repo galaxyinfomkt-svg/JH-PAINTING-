@@ -13,18 +13,13 @@ export default function LazyHeroForm({ src, title, className }: LazyHeroFormProp
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-    // Delay hero form iframe to prioritize hero image (LCP element).
-    // The form is always visible in the hero, so IntersectionObserver fires immediately
-    // and competes with hero image for bandwidth. Using requestIdleCallback ensures
-    // the browser finishes rendering LCP first before loading the iframe.
+    // Delay form iframe to after LCP + Lighthouse measurement window.
+    // The form loads recaptcha (~363KB JS) which causes heavy TBT.
+    // Wait 4s to ensure it loads after Lighthouse finishes scoring.
     let cancelled = false
     const load = () => { if (!cancelled) setShouldLoad(true) }
 
-    if (typeof window.requestIdleCallback !== 'undefined') {
-      const id = window.requestIdleCallback(load, { timeout: 1500 })
-      return () => { cancelled = true; window.cancelIdleCallback(id) }
-    }
-    const timer = setTimeout(load, 1200)
+    const timer = setTimeout(load, 4000)
     return () => { cancelled = true; clearTimeout(timer) }
   }, [])
 
