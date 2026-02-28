@@ -394,7 +394,7 @@ export default async function CityPage({ params }: Props) {
                   alignItems: 'center',
                   gap: '0.375rem',
                   padding: '0.5rem 1rem',
-                  background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
+                  background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)',
                   borderRadius: '100px',
                   color: '#fff',
                   fontSize: '0.875rem',
@@ -448,13 +448,13 @@ export default async function CityPage({ params }: Props) {
                   alignItems: 'center',
                   gap: '0.75rem',
                   padding: '1rem 2rem',
-                  background: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
+                  background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)',
                   color: '#fff',
                   borderRadius: '12px',
                   fontSize: '1.125rem',
                   fontWeight: '700',
                   textDecoration: 'none',
-                  boxShadow: '0 10px 40px rgba(220, 38, 38, 0.4)',
+                  boxShadow: '0 10px 40px rgba(204, 0, 0, 0.4)',
                   transition: 'all 0.3s ease'
                 }}>
                   <PhoneIcon size={20} />
@@ -487,7 +487,7 @@ export default async function CityPage({ params }: Props) {
                   { icon: AwardIcon, text: '40+ 5-Star Google Reviews' }
                 ].map((item, idx) => (
                   <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255, 255, 255, 0.9)' }}>
-                    <span style={{ color: '#DC2626' }}><item.icon size={18} /></span>
+                    <span style={{ color: '#CC0000' }}><item.icon size={18} /></span>
                     <span style={{ fontSize: '0.9375rem', fontWeight: '500' }}>{item.text}</span>
                   </div>
                 ))}
@@ -550,7 +550,7 @@ export default async function CityPage({ params }: Props) {
               { value: '100%', label: 'Satisfaction' }
             ].map((stat, idx) => (
               <div key={idx} style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#DC2626' }}>{stat.value}</div>
+                <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#CC0000' }}>{stat.value}</div>
                 <div style={{ fontSize: '0.875rem', color: 'rgba(255, 255, 255, 0.7)', fontWeight: '500' }}>{stat.label}</div>
               </div>
             ))}
@@ -604,7 +604,7 @@ export default async function CityPage({ params }: Props) {
                 </a>
               </div>
               <div className="vsl-video-caption">
-                <StarIcon size={14} fill="#DC2626" />
+                <StarIcon size={14} fill="#CC0000" />
                 <span>See why {city.name} homeowners trust us</span>
               </div>
             </div>
@@ -908,7 +908,7 @@ export default async function CityPage({ params }: Props) {
                   { icon: HeartIcon, title: '100% Satisfaction' }
                 ].map((item, idx) => (
                   <div key={idx} className="city-about-feature">
-                    <div className="city-about-feature-icon" style={{ color: '#DC2626' }}>
+                    <div className="city-about-feature-icon" style={{ color: '#CC0000' }}>
                       <item.icon size={24} />
                     </div>
                     <span className="city-about-feature-text">{item.title}</span>
@@ -992,7 +992,7 @@ export default async function CityPage({ params }: Props) {
           {/* Testimonial in Pain Points */}
           <div className="city-testimonial">
             <div className="city-testimonial-stars">
-              {[1,2,3,4,5].map(i => <StarIcon key={i} size={24} fill="#DC2626" />)}
+              {[1,2,3,4,5].map(i => <StarIcon key={i} size={24} fill="#CC0000" />)}
             </div>
             <blockquote className="city-testimonial-quote">
               "After two bad experiences with other painters in {city.name}, I was skeptical. But JH Painting
