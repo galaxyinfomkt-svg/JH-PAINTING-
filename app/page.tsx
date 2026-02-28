@@ -212,7 +212,7 @@ export default function HomePage() {
               <div id="quote-form" className="hero-form-card">
                 <LazyHeroForm
                   className="hero-form-iframe"
-                  src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
+                  src="https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn"
                   title="Get Your Free Painting Estimate"
                 />
               </div>
@@ -599,7 +599,7 @@ export default function HomePage() {
                 <h3>Request Your Free Estimate</h3>
                 <LazyIframe
                   className="contact-form-iframe"
-                  src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
+                  src="https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn"
                   title="Contact Form"
                   style={{ minHeight: '500px' }}
                 />
