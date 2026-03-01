@@ -26,8 +26,8 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const canonicalUrl = `https://jhpaintingservices.com/massachusetts/${normalizeCitySlug(city.slug)}`
 
   return {
-    title: `Painters ${city.name} MA | Peeling Paint? We Fix It Fast ⭐ FREE Quote`,
-    description: `Tired of peeling paint ruining your ${city.name} home? Our painters fix it RIGHT the first time. ✓ 40+ 5-star reviews ✓ Licensed & $2M insured ✓ Premium paints that LAST. Get FREE quote → (508) 690-8886`,
+    title: `Painters ${city.name} MA | Peeling Paint? We Fix It Fast FREE Quote`,
+    description: `Tired of peeling paint ruining your ${city.name} home? Our painters fix it RIGHT the first time. ✓ 40+ 5-star reviews ✓ Licensed & $2M insured ✓ Premium paints that LAST. Get FREE quote (508) 690-8886`,
     keywords: `painters ${city.name} MA, house painters ${city.name}, fix peeling paint ${city.name}, painting contractor ${city.name} Massachusetts, interior painting ${city.name}, exterior painting ${city.name}, reliable painters ${city.name}`,
     alternates: {
       canonical: canonicalUrl,

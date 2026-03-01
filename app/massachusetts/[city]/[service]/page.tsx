@@ -102,10 +102,10 @@ function generateCityServiceSchema(
         "mainEntity": [
           {
             "@type": "Question",
-            "name": `How much does ${serviceName.toLowerCase()} cost in ${cityName}?`,
+            "name": `How do I get a free estimate for ${serviceName.toLowerCase()} in ${cityName}?`,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": `${serviceName} costs in ${cityName}, MA vary based on project size, preparation needed, and paint quality. Interior painting typically ranges from $2-$6 per sq ft, exterior from $3-$7 per sq ft. Contact JH Painting at (508) 690-8886 for a free, accurate quote for your ${cityName} project.`
+              "text": `Getting a free ${serviceName.toLowerCase()} estimate in ${cityName} is easy! Call JH Painting at (508) 690-8886 or fill out our online form. We'll visit your ${cityName} property, assess the scope of work, and provide a detailed written quote — typically within 24-48 hours. Every estimate is free with no obligation.`
             }
           },
           {
@@ -113,7 +113,7 @@ function generateCityServiceSchema(
             "name": `Are you licensed for ${serviceName.toLowerCase()} in ${cityName}?`,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": `Yes! JH Painting Services is fully licensed and insured to provide ${serviceName.toLowerCase()} in ${cityName} and throughout Massachusetts. We carry $1 million in liability coverage and workers' compensation insurance for all employees.`
+              "text": `Yes! JH Painting Services is fully licensed and insured to provide ${serviceName.toLowerCase()} in ${cityName} and throughout Massachusetts. We carry comprehensive liability insurance and workers' compensation coverage for all employees.`
             }
           },
           {
@@ -208,7 +208,7 @@ const servicesData: Record<string, {
     description: 'Transform your kitchen cabinets for a fraction of replacement cost with our expert refinishing services.',
     heroImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg',
     painPoints: [
-      { title: 'Kitchen Cabinets Looking Dated?', desc: "Those 90s oak cabinets are dragging your whole kitchen down. New cabinets cost $15,000+.", solution: 'Save 70% vs replacement with refinishing' },
+      { title: 'Kitchen Cabinets Looking Dated?', desc: "Those 90s oak cabinets are dragging your whole kitchen down. Full cabinet replacement is expensive.", solution: 'Save up to 70% vs replacement with refinishing' },
       { title: 'Worn & Grimy Cabinet Finish?', desc: "Years of cooking grease, fingerprints, and wear make cabinets look terrible.", solution: 'Complete prep removes all buildup' },
       { title: 'Want White Cabinets But Worried About Durability?', desc: "White shows everything. Will the paint chip, peel, or yellow over time?", solution: 'Professional-grade finishes that last' },
     ],

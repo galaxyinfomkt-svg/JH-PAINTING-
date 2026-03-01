@@ -250,7 +250,7 @@ export default async function RegionPage({ params }: Props) {
                 <div className="city-about-image">
                   <Image
                     src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp"
-                    alt={`Jafet Hernandez - Owner of JH Painting Services serving ${region.name}`}
+                    alt={`Jafet Henrique - Owner of JH Painting Services serving ${region.name}`}
                     width={600} height={500} loading="lazy"
                     style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                   />
@@ -322,7 +322,7 @@ export default async function RegionPage({ params }: Props) {
               {regionCities.map((city) => {
                 if (!city) return null
                 return (
-                  <Link key={city.slug} href={`/cities/${getCitySlugWithState(city.slug)}`} style={{ display: 'block', background: '#fff', borderRadius: '14px', padding: '1.25rem 1.5rem', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.04)', textDecoration: 'none' }}>
+                  <Link key={city.slug} href={`/massachusetts/${getCitySlugWithState(city.slug)}`} style={{ display: 'block', background: '#fff', borderRadius: '14px', padding: '1.25rem 1.5rem', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.04)', textDecoration: 'none' }}>
                     <span style={{ fontWeight: 600, color: '#0F172A', fontSize: '1rem' }}>{city.name}</span>
                     {city.population && <span style={{ display: 'block', fontSize: '0.8125rem', color: '#94A3B8', marginTop: '0.25rem' }}>Pop. {city.population}</span>}
                   </Link>

@@ -48,7 +48,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Your Victorian home on Main Street is showing its age with peeling paint and faded colors that diminish your curb appeal',
       'The harsh Massachusetts winters with freezing temperatures, ice, and snow have left your exterior looking weathered, cracked, and worn',
       'You\'ve had frustrating experiences with out-of-town contractors who don\'t show up on time, don\'t understand Marlborough\'s historic homes, and leave jobs half-finished',
-      'Your kitchen cabinets from the 90s are desperately dated with worn finishes and scratches, but full replacement costs of $15,000-$30,000 are astronomical',
+      'Your kitchen cabinets from the 90s are desperately dated with worn finishes and scratches, but full replacement is costly and disruptive',
       'Previous painters left visible drips, brush marks, uneven coverage, and didn\'t properly prep surfaces – now the paint is already peeling after just two years',
       'You\'re worried about lead paint in your older Marlborough home and need painters who handle it safely and legally',
       'The constant temperature swings in Massachusetts cause wood to expand and contract, leading to cracks and gaps that let moisture damage your home'
@@ -164,7 +164,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Hudson?',
-        answer: 'Being close to our Marlborough base, Hudson residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Hudson home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Hudson residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Hudson?',
@@ -239,7 +239,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Southborough?',
-        answer: 'Being close to our Marlborough base, Southborough residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Southborough home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Southborough residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Southborough?',
@@ -314,7 +314,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Framingham?',
-        answer: 'Framingham painting costs are competitive with the greater Boston area. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Framingham home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Framingham painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Framingham?',
@@ -389,7 +389,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Natick?',
-        answer: 'Painting costs in Natick are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Natick home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Natick are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Natick?',
@@ -614,7 +614,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Cambridge?',
-        answer: 'Cambridge painting costs are competitive with the greater Boston area. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Cambridge home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Cambridge painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Cambridge?',
@@ -689,7 +689,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Newton?',
-        answer: 'Newton painting costs are competitive with the greater Boston area. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Newton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Newton painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Newton?',
@@ -764,7 +764,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Wellesley?',
-        answer: 'Painting costs in Wellesley are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Wellesley home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Wellesley are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Wellesley?',
@@ -839,7 +839,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Concord?',
-        answer: 'Painting costs in Concord are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Concord home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Concord are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Concord?',
@@ -914,7 +914,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Lexington?',
-        answer: 'Painting costs in Lexington are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Lexington home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Lexington are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Lexington?',
@@ -981,7 +981,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Brookline?',
-        answer: 'Brookline painting costs are competitive with the greater Boston area. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Brookline home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Brookline painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Brookline?',
@@ -1050,7 +1050,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Shrewsbury?',
-        answer: 'Being close to our Marlborough base, Shrewsbury residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Shrewsbury home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Shrewsbury residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Shrewsbury?',
@@ -1119,7 +1119,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Waltham?',
-        answer: 'Waltham painting costs are competitive with the greater Boston area. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Waltham home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Waltham painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Waltham?',
@@ -1188,7 +1188,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Ashland?',
-        answer: 'Being close to our Marlborough base, Ashland residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Ashland home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Ashland residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Ashland?',
@@ -1257,7 +1257,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Westborough?',
-        answer: 'Being close to our Marlborough base, Westborough residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Westborough home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Westborough residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Westborough?',
@@ -1326,7 +1326,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Hopkinton?',
-        answer: 'Being close to our Marlborough base, Hopkinton residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Hopkinton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Hopkinton residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Hopkinton?',
@@ -1395,7 +1395,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Sudbury?',
-        answer: 'Being close to our Marlborough base, Sudbury residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Sudbury home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Sudbury residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Sudbury?',
@@ -1464,7 +1464,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Acton?',
-        answer: 'Painting costs in Acton are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Acton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Acton are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Acton?',
@@ -1533,7 +1533,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Berlin?',
-        answer: 'Being close to our Marlborough base, Berlin residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Berlin home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Berlin residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Berlin?',
@@ -1602,7 +1602,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Northborough?',
-        answer: 'Being close to our Marlborough base, Northborough residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Northborough home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Northborough residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Northborough?',
@@ -1671,7 +1671,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Cordaville?',
-        answer: 'Being close to our Marlborough base, Cordaville residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Cordaville home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Cordaville residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Cordaville?',
@@ -1740,7 +1740,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Stow?',
-        answer: 'Being close to our Marlborough base, Stow residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Stow home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Stow residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Stow?',
@@ -1809,7 +1809,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Framingham Center?',
-        answer: 'Being close to our Marlborough base, Framingham Center residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Framingham Center home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Framingham Center residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Framingham Center?',
@@ -1878,7 +1878,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Bolton?',
-        answer: 'Being close to our Marlborough base, Bolton residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Bolton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Bolton residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Bolton?',
@@ -1947,7 +1947,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Maynard?',
-        answer: 'Being close to our Marlborough base, Maynard residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Maynard home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Maynard residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Maynard?',
@@ -2016,7 +2016,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Clinton?',
-        answer: 'Being close to our Marlborough base, Clinton residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Clinton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Clinton residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Clinton?',
@@ -2085,7 +2085,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Boylston?',
-        answer: 'Being close to our Marlborough base, Boylston residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Boylston home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Boylston residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Boylston?',
@@ -2154,7 +2154,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Wayland?',
-        answer: 'Being close to our Marlborough base, Wayland residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Wayland home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Wayland residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Wayland?',
@@ -2223,7 +2223,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Cochituate?',
-        answer: 'Being close to our Marlborough base, Cochituate residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Cochituate home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Cochituate residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Cochituate?',
@@ -2292,7 +2292,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in South Lancaster?',
-        answer: 'Being close to our Marlborough base, South Lancaster residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical South Lancaster home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, South Lancaster residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in South Lancaster?',
@@ -2361,7 +2361,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Lancaster?',
-        answer: 'Being close to our Marlborough base, Lancaster residents benefit from efficient scheduling and competitive pricing. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Lancaster home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Being close to our Marlborough base, Lancaster residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Lancaster?',
@@ -2430,7 +2430,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Harvard?',
-        answer: 'Painting costs in Harvard are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Harvard home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Harvard are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Harvard?',
@@ -2499,7 +2499,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in West Concord?',
-        answer: 'Painting costs in West Concord are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical West Concord home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in West Concord are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in West Concord?',
@@ -2568,7 +2568,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Sherborn?',
-        answer: 'Painting costs in Sherborn are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Sherborn home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Sherborn are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Sherborn?',
@@ -2637,7 +2637,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Holliston?',
-        answer: 'Painting costs in Holliston are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Holliston home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Holliston are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Holliston?',
@@ -2706,7 +2706,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Grafton?',
-        answer: 'Painting costs in Grafton are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Grafton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Grafton are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Grafton?',
@@ -2775,7 +2775,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in West Boylston?',
-        answer: 'Painting costs in West Boylston are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical West Boylston home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in West Boylston are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in West Boylston?',
@@ -2844,7 +2844,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Upton?',
-        answer: 'Painting costs in Upton are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Upton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Upton are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Upton?',
@@ -2913,7 +2913,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Weston?',
-        answer: 'Painting costs in Weston are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Weston home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Weston are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Weston?',
@@ -2982,7 +2982,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Sterling?',
-        answer: 'Painting costs in Sterling are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Sterling home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Sterling are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Sterling?',
@@ -3051,7 +3051,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Hamilton?',
-        answer: 'Painting costs in Hamilton are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Hamilton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Hamilton are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Hamilton?',
@@ -3120,7 +3120,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Lincoln?',
-        answer: 'Painting costs in Lincoln are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Lincoln home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Lincoln are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Lincoln?',
@@ -3189,7 +3189,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Sunderland?',
-        answer: 'Painting costs in Sunderland are in line with Franklin County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Sunderland home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Sunderland are in line with Franklin County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Sunderland?',
@@ -3258,7 +3258,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Littleton Common?',
-        answer: 'Painting costs in Littleton Common are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Littleton Common home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Littleton Common are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Littleton Common?',
@@ -3327,7 +3327,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Shirley?',
-        answer: 'Painting costs in Shirley are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Shirley home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Shirley are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Shirley?',
@@ -3396,7 +3396,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Milford?',
-        answer: 'Painting costs in Milford are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Milford home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Milford are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Milford?',
@@ -3465,7 +3465,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Northbridge?',
-        answer: 'Painting costs in Northbridge are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Northbridge home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Northbridge are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Northbridge?',
@@ -3534,7 +3534,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Ayer?',
-        answer: 'Painting costs in Ayer are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Ayer home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Ayer are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Ayer?',
@@ -3603,7 +3603,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Hopedale?',
-        answer: 'Painting costs in Hopedale are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Hopedale home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Hopedale are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Hopedale?',
@@ -3672,7 +3672,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Dover?',
-        answer: 'Painting costs in Dover are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Dover home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Dover are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Dover?',
@@ -3741,7 +3741,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Millbury?',
-        answer: 'Painting costs in Millbury are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Millbury home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Millbury are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Millbury?',
@@ -3810,7 +3810,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Millis?',
-        answer: 'Painting costs in Millis are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Millis home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Millis are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Millis?',
@@ -3879,7 +3879,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Carlisle?',
-        answer: 'Painting costs in Carlisle are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Carlisle home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Carlisle are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Carlisle?',
@@ -3948,7 +3948,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Millis-Clicquot?',
-        answer: 'Painting costs in Millis-Clicquot are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Millis-Clicquot home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Millis-Clicquot are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Millis-Clicquot?',
@@ -4017,7 +4017,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Medway?',
-        answer: 'Painting costs in Medway are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Medway home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Medway are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Medway?',
@@ -4086,7 +4086,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Holden?',
-        answer: 'Painting costs in Holden are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Holden home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Holden are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Holden?',
@@ -4155,7 +4155,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Leominster?',
-        answer: 'Painting costs in Leominster are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Leominster home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Leominster are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Leominster?',
@@ -4224,7 +4224,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Medfield?',
-        answer: 'Painting costs in Medfield are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Medfield home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Medfield are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Medfield?',
@@ -4293,7 +4293,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Needham?',
-        answer: 'Painting costs in Needham are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Needham home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Needham are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Needham?',
@@ -4362,7 +4362,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Westford?',
-        answer: 'Painting costs in Westford are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Westford home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Westford are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Westford?',
@@ -4431,7 +4431,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Mendon?',
-        answer: 'Painting costs in Mendon are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Mendon home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Mendon are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Mendon?',
@@ -4500,7 +4500,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Bedford?',
-        answer: 'Painting costs in Bedford are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Bedford home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Bedford are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Bedford?',
@@ -4569,7 +4569,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Whitinsville?',
-        answer: 'Painting costs in Whitinsville are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Whitinsville home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Whitinsville are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Whitinsville?',
@@ -4638,7 +4638,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Sutton?',
-        answer: 'Painting costs in Sutton are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Sutton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Sutton are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Sutton?',
@@ -4707,7 +4707,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Groton?',
-        answer: 'Painting costs in Groton are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Groton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Groton are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Groton?',
@@ -4776,7 +4776,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Princeton?',
-        answer: 'Painting costs in Princeton are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Princeton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Princeton are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Princeton?',
@@ -4845,7 +4845,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Auburn?',
-        answer: 'Painting costs in Auburn are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Auburn home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Auburn are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Auburn?',
@@ -4914,7 +4914,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Bellingham?',
-        answer: 'Painting costs in Bellingham are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Bellingham home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Bellingham are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Bellingham?',
@@ -4983,7 +4983,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Watertown?',
-        answer: 'Painting costs in Watertown are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Watertown home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Watertown are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Watertown?',
@@ -5052,7 +5052,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Westwood?',
-        answer: 'Painting costs in Westwood are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Westwood home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Westwood are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Westwood?',
@@ -5121,7 +5121,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Belmont?',
-        answer: 'Painting costs in Belmont are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Belmont home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Belmont are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Belmont?',
@@ -5190,7 +5190,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Lunenburg?',
-        answer: 'Painting costs in Lunenburg are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Lunenburg home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Lunenburg are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Lunenburg?',
@@ -5259,7 +5259,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Uxbridge?',
-        answer: 'Painting costs in Uxbridge are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Uxbridge home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Uxbridge are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Uxbridge?',
@@ -5328,7 +5328,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Norfolk?',
-        answer: 'Painting costs in Norfolk are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Norfolk home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Norfolk are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Norfolk?',
@@ -5397,7 +5397,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Chelmsford?',
-        answer: 'Painting costs in Chelmsford are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Chelmsford home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Chelmsford are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Chelmsford?',
@@ -5466,7 +5466,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Paxton?',
-        answer: 'Painting costs in Paxton are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Paxton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Paxton are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Paxton?',
@@ -5535,7 +5535,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Franklin?',
-        answer: 'Painting costs in Franklin are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Franklin home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Franklin are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Franklin?',
@@ -5604,7 +5604,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Leicester?',
-        answer: 'Painting costs in Leicester are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Leicester home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Leicester are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Leicester?',
@@ -5673,7 +5673,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Billerica?',
-        answer: 'Painting costs in Billerica are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Billerica home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Billerica are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Billerica?',
@@ -5742,7 +5742,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Arlington?',
-        answer: 'Painting costs in Arlington are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Arlington home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Arlington are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Arlington?',
@@ -5811,7 +5811,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Pinehurst?',
-        answer: 'Painting costs in Pinehurst are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Pinehurst home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Pinehurst are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Pinehurst?',
@@ -5880,7 +5880,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Rutland?',
-        answer: 'Painting costs in Rutland are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Rutland home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Rutland are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Rutland?',
@@ -5949,7 +5949,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Norwood?',
-        answer: 'Painting costs in Norwood are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Norwood home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Norwood are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Norwood?',
@@ -6018,7 +6018,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Dedham?',
-        answer: 'Painting costs in Dedham are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Dedham home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Dedham are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Dedham?',
@@ -6087,7 +6087,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Fitchburg?',
-        answer: 'Painting costs in Fitchburg are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Fitchburg home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Fitchburg are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Fitchburg?',
@@ -6156,7 +6156,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Burlington?',
-        answer: 'Painting costs in Burlington are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Burlington home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Burlington are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Burlington?',
@@ -6225,7 +6225,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Walpole?',
-        answer: 'Painting costs in Walpole are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Walpole home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Walpole are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Walpole?',
@@ -6294,7 +6294,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in East Douglas?',
-        answer: 'Painting costs in East Douglas are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical East Douglas home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in East Douglas are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in East Douglas?',
@@ -6363,7 +6363,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Jamaica Plain?',
-        answer: 'Painting costs in Jamaica Plain are in line with Suffolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Jamaica Plain home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Jamaica Plain are in line with Suffolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Jamaica Plain?',
@@ -6432,7 +6432,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in East Pepperell?',
-        answer: 'Painting costs in East Pepperell are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical East Pepperell home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in East Pepperell are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in East Pepperell?',
@@ -6501,7 +6501,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Woburn?',
-        answer: 'Painting costs in Woburn are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Woburn home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Woburn are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Woburn?',
@@ -6570,7 +6570,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Pepperell?',
-        answer: 'Painting costs in Pepperell are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Pepperell home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Pepperell are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Pepperell?',
@@ -6639,7 +6639,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Winchester?',
-        answer: 'Painting costs in Winchester are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Winchester home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Winchester are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Winchester?',
@@ -6708,7 +6708,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Millville?',
-        answer: 'Painting costs in Millville are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Millville home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Millville are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Millville?',
@@ -6777,7 +6777,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Wrentham?',
-        answer: 'Painting costs in Wrentham are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Wrentham home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Wrentham are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Wrentham?',
@@ -6846,7 +6846,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Douglas?',
-        answer: 'Painting costs in Douglas are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Douglas home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Douglas are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Douglas?',
@@ -6915,7 +6915,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Dunstable?',
-        answer: 'Painting costs in Dunstable are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Dunstable home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Dunstable are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Dunstable?',
@@ -6984,7 +6984,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Lowell?',
-        answer: 'Lowell painting costs are competitive with the greater Boston area. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Lowell home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Lowell painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Lowell?',
@@ -7053,7 +7053,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Blackstone?',
-        answer: 'Painting costs in Blackstone are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Blackstone home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Blackstone are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Blackstone?',
@@ -7122,7 +7122,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Oxford?',
-        answer: 'Painting costs in Oxford are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Oxford home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Oxford are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Oxford?',
@@ -7191,7 +7191,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Somerville?',
-        answer: 'Somerville painting costs are competitive with the greater Boston area. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Somerville home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Somerville painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Somerville?',
@@ -7260,7 +7260,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Medford?',
-        answer: 'Medford painting costs are competitive with the greater Boston area. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Medford home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Medford painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Medford?',
@@ -7329,7 +7329,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Westminster?',
-        answer: 'Painting costs in Westminster are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Westminster home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Westminster are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Westminster?',
@@ -7398,7 +7398,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Wilmington?',
-        answer: 'Painting costs in Wilmington are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Wilmington home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Wilmington are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Wilmington?',
@@ -7467,7 +7467,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Townsend?',
-        answer: 'Painting costs in Townsend are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Townsend home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Townsend are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Townsend?',
@@ -7536,7 +7536,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Tyngsboro?',
-        answer: 'Painting costs in Tyngsboro are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Tyngsboro home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Tyngsboro are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Tyngsboro?',
@@ -7605,7 +7605,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Spencer?',
-        answer: 'Painting costs in Spencer are in line with Worcester County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Spencer home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Spencer are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Spencer?',
@@ -7674,7 +7674,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Woonsocket?',
-        answer: 'Painting costs in Woonsocket are in line with Providence County, RI averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Woonsocket home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Woonsocket are in line with Providence County, RI averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Woonsocket?',
@@ -7743,7 +7743,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Tewksbury?',
-        answer: 'Painting costs in Tewksbury are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Tewksbury home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Tewksbury are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Tewksbury?',
@@ -7812,7 +7812,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Canton?',
-        answer: 'Painting costs in Canton are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Canton home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Canton are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Canton?',
@@ -7881,7 +7881,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Sharon?',
-        answer: 'Painting costs in Sharon are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Sharon home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Sharon are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Sharon?',
@@ -7950,7 +7950,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Stoneham?',
-        answer: 'Painting costs in Stoneham are in line with Middlesex County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Stoneham home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Stoneham are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Stoneham?',
@@ -8019,7 +8019,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in Foxborough?',
-        answer: 'Painting costs in Foxborough are in line with Norfolk County averages. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical Foxborough home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'Painting costs in Foxborough are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Foxborough?',
@@ -8088,7 +8088,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s the average cost to paint a house in New Bedford?',
-        answer: 'New Bedford painting costs are competitive with the greater Boston area. For interior painting, expect $3-$5 per square foot depending on the number of rooms, ceiling height, and prep work needed. Exterior painting typically runs $4-$7 per square foot based on your home\'s size, siding type, and condition. A typical New Bedford home interior costs $4,000-$8,000; exteriors run $5,000-$12,000. We provide detailed, no-obligation estimates.'
+        answer: 'New Bedford painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in New Bedford?',
@@ -8201,7 +8201,7 @@ export function generateUniqueCityContent(
       `Your ${cityName} home's exterior paint is peeling, cracking, or fading from years of New England weather exposure`,
       `Previous painters in ${cityName} left your project unfinished, missed details, or produced sloppy work that's already failing`,
       `The demanding ${countyContext} climate has caused moisture damage, mold growth, or wood rot on your ${cityName} property`,
-      `Your ${cityName} kitchen cabinets look dated but full replacement costs of $15,000-$30,000 are out of reach`,
+      `Your ${cityName} kitchen cabinets look dated but full replacement is costly and out of reach`,
       `Finding reliable, trustworthy painters in ${cityName} who show up on time and respect your property has been frustrating`,
       `Your ${cityName} home near ${landmarksList} needs painters who understand the area's architectural character`,
       `Balancing home improvement with your busy ${cityName} family schedule feels overwhelming`
@@ -8233,7 +8233,7 @@ export function generateUniqueCityContent(
       },
       {
         question: `How much does painting cost in ${cityName}?`,
-        answer: `Painting costs in ${cityName} depend on project scope, surface condition, and paint selection. Typical ranges: interior $3-$5/sq ft, exterior $4-$7/sq ft, cabinet refinishing $3,500-$8,000 for average kitchens. We provide free, detailed estimates with no hidden fees. Every ${cityName} project is unique – contact us for your accurate quote.`
+        answer: `Painting costs in ${cityName} depend on project scope, surface condition, and paint selection. Every ${cityName} project is unique, so we provide free, detailed estimates with no hidden fees. Contact us at (508) 690-8886 for a personalized quote tailored to your specific needs.`
       },
       {
         question: `What makes JH Painting the best choice for ${cityName} homeowners?`,
@@ -8428,7 +8428,7 @@ const serviceTemplates: Record<string, {
   'cabinet-painting': {
     painPointVariants: [
       [
-        { title: 'Kitchen Cabinets Dated & Dark?', desc: 'Those oak or cherry cabinets from the 90s drag your whole kitchen down. But new cabinets cost $15,000-$30,000+.', solution: 'Save 70% with professional cabinet refinishing' },
+        { title: 'Kitchen Cabinets Dated & Dark?', desc: 'Those oak or cherry cabinets from the 90s drag your whole kitchen down. But full cabinet replacement is expensive and disruptive.', solution: 'Save 70% with professional cabinet refinishing' },
         { title: 'Want White But Worried?', desc: 'You love the look of white cabinets, but will they chip, peel, or yellow over time?', solution: 'Professional spray finish with 10+ year durability' },
         { title: 'Tried DIY & Failed?', desc: 'Your cabinet painting attempt left brush marks, drips, and uneven coverage. Now it looks worse than before.', solution: 'We fix DIY disasters and deliver factory-smooth results' }
       ],
@@ -8446,7 +8446,7 @@ const serviceTemplates: Record<string, {
     introTemplates: [
       'Transform your {cityName} kitchen with professional cabinet painting that saves 70% compared to replacement. JH Painting brings factory-quality spray finishes to {countyContext} homes, delivering stunning results that last 10+ years. Your outdated cabinets can look brand new.',
       '{cityName} homeowners are discovering that cabinet painting is the smartest kitchen upgrade. Our {countyContext} cabinet refinishing specialists use professional spray equipment and premium paints for a smooth, durable finish that rivals new cabinetry at a fraction of the cost.',
-      'Why spend $15,000-$30,000 on new cabinets when professional refinishing delivers beautiful results for less? Our {cityName} cabinet painting service transforms dated kitchens throughout {neighborhoodsList} with expert preparation and flawless spray application.'
+      'Why pay for expensive new cabinets when professional refinishing delivers beautiful results for a fraction of the cost? Our {cityName} cabinet painting service transforms dated kitchens throughout {neighborhoodsList} with expert preparation and flawless spray application.'
     ],
     localContextTemplates: [
       'We\'ve refinished cabinets in {cityName} homes from {neighborhoodsList} to every corner of {countyContext}. From 1990s oak to 2010s maple, we know how to transform any cabinet style into something you\'ll love.',

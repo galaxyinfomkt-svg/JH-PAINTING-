@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Office Looks Dated? Commercial Painters MA | Zero Downtime ⭐',
-  description: 'Don\'t lose business to a tired-looking space. We paint offices, retail, restaurants AFTER hours. Zero disruption to YOUR business. $2M insured. FREE quote → (508) 690-8886',
+  title: 'Commercial Painters MA | JH Painting | FREE Quote',
+  description: 'Commercial painting in Massachusetts. Offices, retail, restaurants. After-hours available, zero disruption. $2M insured. (508) 690-8886',
   keywords: [
     'commercial painters Massachusetts',
     'commercial painters near me',

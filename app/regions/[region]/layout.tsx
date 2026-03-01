@@ -25,9 +25,10 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   return {
     title: `Painters ${region.name} MA | Licensed & Insured | FREE Quote`,
     description: `${region.description} Licensed & $2M insured. 40+ 5-star reviews. Call (508) 690-8886`,
+    keywords: `painters ${region.name} MA, house painters ${region.name}, painting services ${region.name} Massachusetts`,
     alternates: { canonical: canonicalUrl },
     openGraph: {
-      title: `#1 Painters in ${region.name} | JH Painting Services`,
+      title: `Professional Painters in ${region.name} | JH Painting Services`,
       description: `Professional painting services across ${region.name}. Interior & exterior painting, cabinet refinishing, carpentry. 40+ 5-star reviews.`,
       url: canonicalUrl,
       siteName: 'JH Painting Services',
@@ -43,6 +44,29 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   }
 }
 
-export default async function RegionLayout({ children }: Props) {
-  return <>{children}</>
+export default async function RegionLayout({ params, children }: Props) {
+  const { region: regionSlug } = await params
+  const region = getRegionBySlug(regionSlug)
+
+  const breadcrumbSchema = region ? {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://jhpaintingservices.com' },
+      { '@type': 'ListItem', position: 2, name: 'Massachusetts', item: 'https://jhpaintingservices.com/massachusetts' },
+      { '@type': 'ListItem', position: 3, name: region.name, item: `https://jhpaintingservices.com/regions/${region.slug}` },
+    ],
+  } : null
+
+  return (
+    <>
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
+      {children}
+    </>
+  )
 }

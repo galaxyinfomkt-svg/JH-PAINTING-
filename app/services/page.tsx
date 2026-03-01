@@ -95,7 +95,7 @@ const services = [
     icon: PaintbrushIcon,
     features: ['Wall & Ceiling Painting', 'Trim & Baseboard Work', 'Color Consultation', 'Premium Paints'],
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',
-    priceRange: 'Starting at $350/room'
+    priceRange: 'Free Estimates'
   },
   {
     slug: 'exterior-painting',
@@ -105,7 +105,7 @@ const services = [
     icon: HomeIcon,
     features: ['Full Surface Preparation', 'Weather-Resistant Paints', 'Siding & Trim', 'Deck & Porch Painting'],
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064e65773e16aacef7d054.png',
-    priceRange: 'Starting at $2,500'
+    priceRange: 'Free Estimates'
   },
   {
     slug: 'commercial-painting',
@@ -115,7 +115,7 @@ const services = [
     icon: Building2Icon,
     features: ['Office Buildings', 'Retail Spaces', 'Restaurants', 'Warehouses'],
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064e65773e16aacef7d054.png',
-    priceRange: 'Custom Quotes'
+    priceRange: 'Free Estimates'
   },
   {
     slug: 'residential-painting',
@@ -125,7 +125,7 @@ const services = [
     icon: HomeIcon,
     features: ['Whole Home Painting', 'Room-by-Room Service', 'New Construction', 'Remodel Projects'],
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',
-    priceRange: 'Starting at $3,000'
+    priceRange: 'Free Estimates'
   },
   {
     slug: 'cabinet-painting',
@@ -135,7 +135,7 @@ const services = [
     icon: PaintBucketIcon,
     features: ['Kitchen Cabinets', 'Bathroom Vanities', 'Built-in Units', 'Factory Finish'],
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',
-    priceRange: 'Starting at $2,800'
+    priceRange: 'Free Estimates'
   },
   {
     slug: 'carpentry',
@@ -145,7 +145,7 @@ const services = [
     icon: HammerIcon,
     features: ['Window Frame Repair', 'Door Frame Repair', 'Siding & Deck Repair', 'Trim & Molding'],
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
-    priceRange: 'Starting at $200'
+    priceRange: 'Free Estimates'
   },
   {
     slug: 'power-washing',
@@ -155,7 +155,7 @@ const services = [
     icon: DropletsIcon,
     features: ['House Washing', 'Deck Cleaning', 'Driveway Cleaning', 'Pre-Paint Prep'],
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp',
-    priceRange: 'Starting at $200'
+    priceRange: 'Free Estimates'
   }
 ]
 
@@ -163,7 +163,7 @@ const services = [
 const stats = [
   { number: '500+', label: 'Projects Completed' },
   { number: '40+', label: '5-Star Reviews' },
-  { number: '10+', label: 'Years Experience' },
+  { number: '7+', label: 'Years Experience' },
   { number: '100%', label: 'Satisfaction Rate' }
 ]
 
@@ -227,22 +227,22 @@ const servicesSchema = {
     {
       "@type": "LocalBusiness",
       "name": "JH Painting Services",
-      "@id": "https://jhpaintingservices.com/#business",
+      "@id": "https://jhpaintingservices.com/#organization",
       "url": "https://jhpaintingservices.com",
       "telephone": "+1-508-690-8886",
-      "email": "jhpaintingservices1@gmail.com",
+      "email": "contact@jhpaintingservices.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "346 Plantation St",
-        "addressLocality": "Worcester",
+        "addressLocality": "Marlborough",
         "addressRegion": "MA",
-        "postalCode": "01604",
+        "postalCode": "01752",
         "addressCountry": "US"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 42.2626,
-        "longitude": -71.8023
+        "latitude": 42.3459,
+        "longitude": -71.5526
       },
       "areaServed": serviceAreas.map(city => ({
         "@type": "City",
@@ -517,7 +517,7 @@ export default function ServicesPage() {
                 <PhoneIcon size={20} />
                 {BUSINESS.phone}
               </a>
-              <Link href="/#contact" className="btn btn-outline-white btn-lg">
+              <Link href="/contact" className="btn btn-outline-white btn-lg">
                 Get Your Free Estimate
                 <ArrowRightIcon size={18} />
               </Link>

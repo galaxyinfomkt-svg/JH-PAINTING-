@@ -144,13 +144,14 @@ export const VIDEOS = [
   { id: 'LkT_HLyKibY', title: 'Interior Painting', type: 'YouTube Short' },
 ] as const
 
-// Stats/Trust Indicators
+// Stats/Trust Indicators — SINGLE SOURCE OF TRUTH for all pages
 export const STATS = {
-  yearsExperience: 18,
+  yearsExperience: 7,
   projectsCompleted: '500+',
   satisfaction: '100%',
   rating: 5.0,
-  reviewCount: 50,
+  reviewCount: 40,
+  citiesServed: 140,
 } as const
 
 // Business Hours

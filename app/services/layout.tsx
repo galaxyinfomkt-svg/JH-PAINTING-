@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Need a Painter? All Painting Services MA | Walls to Cabinets ⭐',
-  description: 'One company, ALL your painting needs. Interior, exterior, cabinets, commercial - we do it all. Premium Benjamin Moore paints. 40+ 5-star reviews. Licensed & $2M insured. FREE quote → (508) 690-8886',
+  title: 'All Painting Services MA | JH Painting | FREE Quote',
+  description: 'Interior, exterior, cabinets, commercial painting in MA. Benjamin Moore paints. 40+ 5-star reviews. Licensed & $2M insured. (508) 690-8886',
   keywords: [
     'painting services Massachusetts',
     'painting services near me',

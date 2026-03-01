@@ -24,10 +24,10 @@ const residentialPaintingSchema = {
       "description": "Professional residential painting services for Massachusetts homes. Expert interior and exterior house painting, quality finishes, fair prices. Licensed and insured painters.",
       "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://jhpaintingservices.com/#localbusiness",
+        "@id": "https://jhpaintingservices.com/#organization",
         "name": "JH Painting Services",
         "telephone": "+1-508-690-8886",
-        "priceRange": "$$",
+        "priceRange": "Free Estimates",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Marlborough",
@@ -105,40 +105,16 @@ const residentialPaintingSchema = {
       ]
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does it cost to paint a house in Massachusetts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "House painting costs in Massachusetts vary by size and scope. Interior painting typically ranges from $2-$6 per square foot, while exterior painting ranges from $3-$7 per square foot. A typical 2,000 sq ft home interior costs $4,000-$12,000. Contact JH Painting for a free estimate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How often should I paint my house?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Interior paint typically lasts 5-10 years depending on room usage and paint quality. Exterior paint in Massachusetts should be refreshed every 5-7 years due to weather exposure. High-traffic areas may need repainting sooner."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you provide color consultation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! We offer complimentary color consultation to help you choose the perfect colors for your home. Our experienced team can suggest colors that complement your decor, lighting, and personal style."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are your painters licensed and insured?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. JH Painting Services is fully licensed and insured in Massachusetts. We carry comprehensive liability insurance and workers compensation to protect both our team and your property."
-          }
-        }
+      "@type": "HowTo",
+      "name": "How Residential Painting Works at JH Painting Services",
+      "description": "Our 5-step process for transforming your home with professional painting.",
+      "totalTime": "P5D",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We discuss your home's painting needs, timeline, and provide color recommendations." },
+        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "On-site visit with transparent, written pricing for interior, exterior, or both. No hidden fees." },
+        { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Thorough prep — patching, sanding, priming, and protecting your home and belongings." },
+        { "@type": "HowToStep", "position": 4, "name": "Expert Painting", "text": "Premium Benjamin Moore or Sherwin-Williams paints applied with precision by our experienced crew." },
+        { "@type": "HowToStep", "position": 5, "name": "Final Walkthrough", "text": "Every detail inspected with you. Not perfect? We fix it. 100% satisfaction guaranteed." }
       ]
     }
   ]
@@ -216,7 +192,7 @@ const painPoints = [
 
 const stats = [
   { number: '1000+', label: 'Homes Painted' },
-  { number: '15+', label: 'Years Experience' },
+  { number: '7+', label: 'Years Experience' },
   { number: '100%', label: 'Satisfaction Rate' },
   { number: '114', label: 'Cities Served' }
 ]
@@ -253,7 +229,7 @@ const processSteps = [
 
 const aboutFeatures = [
   { icon: Shield, text: 'Licensed & Insured' },
-  { icon: Award, text: '15+ Years Experience' },
+  { icon: Award, text: '7+ Years Experience' },
   { icon: Users, text: '1000+ Happy Clients' },
   { icon: Heart, text: 'Family Owned' }
 ]
@@ -323,7 +299,7 @@ export default function ResidentialPaintingPage() {
                   <Phone size={20} />
                   {BUSINESS.phone}
                 </a>
-                <Link href="/#contact" className="service-cta-secondary">
+                <Link href="/contact" className="service-cta-secondary">
                   Get Your Free Estimate
                   <ChevronRight size={20} />
                 </Link>
@@ -392,6 +368,25 @@ export default function ResidentialPaintingPage() {
                 <div className="service-stat-label">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Citation-First Summary — Optimized for AI search engines */}
+      <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
+        <div className="container">
+          <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
+            <strong>JH Painting Services</strong> provides comprehensive residential painting services across <strong>117+ cities in Massachusetts</strong>. We paint single-family homes, condos, apartments, and townhouses — both interior and exterior. Licensed, <strong>$2M insured</strong>, EPA Lead-Safe certified. Premium <strong>Benjamin Moore</strong> and <strong>Sherwin-Williams</strong> paints with warranty protection. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong> for a free estimate.
+          </p>
+        </div>
+      </section>
+
+      {/* Free Estimate CTA */}
+      <section className="service-section service-section-white" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+            <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your needs.</p>
+            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 — Free Estimate</a>
           </div>
         </div>
       </section>
@@ -598,7 +593,7 @@ export default function ResidentialPaintingPage() {
                 />
               </div>
               <div className="service-about-experience">
-                <div className="service-about-experience-number">15+</div>
+                <div className="service-about-experience-number">7+</div>
                 <div className="service-about-experience-label">Years of Excellence</div>
               </div>
             </div>
@@ -643,7 +638,7 @@ export default function ResidentialPaintingPage() {
               <Phone size={20} />
               Call {BUSINESS.phone}
             </a>
-            <Link href="/#contact" className="service-cta-btn-outline">
+            <Link href="/contact" className="service-cta-btn-outline">
               Get Your Free Estimate
             </Link>
           </div>

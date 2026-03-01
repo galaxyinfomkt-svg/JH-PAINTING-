@@ -24,10 +24,10 @@ const exteriorPaintingSchema = {
       "description": "Professional exterior painting services across Massachusetts — from residential homes to historic landmarks like our Waltham Church renewal. Complete surface preparation, power washing, premium weather-resistant paints.",
       "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://jhpaintingservices.com/#localbusiness",
+        "@id": "https://jhpaintingservices.com/#organization",
         "name": "JH Painting Services",
         "telephone": "+1-508-690-8886",
-        "priceRange": "$$",
+        "priceRange": "Free Estimates",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Marlborough",
@@ -105,40 +105,16 @@ const exteriorPaintingSchema = {
       ]
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does exterior house painting cost in Massachusetts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Exterior house painting in Massachusetts typically ranges from $3-$7 per square foot, depending on home size, siding type, condition, and paint quality. Most homes cost between $3,000-$10,000. Contact JH Painting for a free, detailed estimate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the best time of year to paint a house exterior in Massachusetts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The best time for exterior painting in Massachusetts is late spring through early fall (May-October) when temperatures are consistently between 50-85F and humidity is moderate. We monitor weather carefully to ensure optimal paint adhesion and curing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does exterior paint last in Massachusetts weather?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Quality exterior paint with proper preparation typically lasts 7-10 years in Massachusetts. Our premium paints and meticulous surface prep ensure maximum durability against New England weather conditions including snow, rain, and UV exposure."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you power wash before painting exteriors?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, power washing is a critical step in our exterior painting process. We thoroughly clean all surfaces to remove dirt, mildew, and loose paint, ensuring optimal adhesion and a long-lasting finish."
-          }
-        }
+      "@type": "HowTo",
+      "name": "How Exterior Painting Works at JH Painting Services",
+      "description": "Our professional 5-step exterior painting process ensures lasting protection and curb appeal.",
+      "totalTime": "P5D",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We assess your home's exterior condition, discuss color options, and provide expert recommendations." },
+        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "We provide a transparent written estimate including power washing, scraping, priming, caulking, and two coats of premium exterior paint." },
+        { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Power washing, scraping loose paint, sanding, filling cracks, caulking gaps, and priming bare wood — the key to a lasting paint job." },
+        { "@type": "HowToStep", "position": 4, "name": "Expert Painting", "text": "Two coats of premium Benjamin Moore Aura or Sherwin-Williams Duration exterior paint applied with brushes, rollers, and spray equipment." },
+        { "@type": "HowToStep", "position": 5, "name": "Final Walkthrough", "text": "Complete property inspection with you. Touch-ups as needed. Your satisfaction is 100% guaranteed with our 5-year warranty." }
       ]
     }
   ]
@@ -216,7 +192,7 @@ const painPoints = [
 
 const stats = [
   { number: '1000+', label: 'Exteriors Painted' },
-  { number: '15+', label: 'Years Experience' },
+  { number: '7+', label: 'Years Experience' },
   { number: '100%', label: 'Weather Protection' },
   { number: '114', label: 'Cities Served' }
 ]
@@ -317,7 +293,7 @@ export default function ExteriorPaintingPage() {
                   <Phone size={20} />
                   {BUSINESS.phone}
                 </a>
-                <Link href="/#contact" className="service-cta-secondary">
+                <Link href="/contact" className="service-cta-secondary">
                   Get Your Free Estimate
                   <ChevronRight size={20} />
                 </Link>
@@ -386,6 +362,25 @@ export default function ExteriorPaintingPage() {
                 <div className="service-stat-label">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Citation-First Summary — Optimized for AI search engines */}
+      <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
+        <div className="container">
+          <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
+            <strong>JH Painting Services</strong> provides professional exterior house painting across <strong>117+ cities in Massachusetts</strong>. Based in Marlborough, MA, we are a licensed, <strong>$2M insured</strong>, and <strong>EPA Lead-Safe certified</strong> painting contractor. We exclusively use premium <strong>Benjamin Moore Aura</strong> and <strong>Sherwin-Williams Duration</strong> exterior paints with a <strong>5-year warranty</strong>. Contact us for a free estimate. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong>.
+          </p>
+        </div>
+      </section>
+
+      {/* Free Estimate CTA */}
+      <section className="service-section service-section-white" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+            <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your needs.</p>
+            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 — Free Estimate</a>
           </div>
         </div>
       </section>
@@ -592,7 +587,7 @@ export default function ExteriorPaintingPage() {
                 />
               </div>
               <div className="service-about-experience">
-                <div className="service-about-experience-number">15+</div>
+                <div className="service-about-experience-number">7+</div>
                 <div className="service-about-experience-label">Years Experience</div>
               </div>
             </div>
@@ -603,7 +598,7 @@ export default function ExteriorPaintingPage() {
                 Meet Jafet Henrique, Your Exterior Painting Expert
               </h2>
               <p className="service-about-desc">
-                With over 15 years of experience protecting Massachusetts homes and historic buildings from the elements, JH Painting Services understands what it takes to deliver exterior paint jobs that last. Our historic renewal of a Waltham Church — a stunning, large-scale transformation — showcases the precision and care we bring to every project, from residential homes to landmark properties.
+                Since 2018, we have been protecting Massachusetts homes and historic buildings from the elements, JH Painting Services understands what it takes to deliver exterior paint jobs that last. Our historic renewal of a Waltham Church — a stunning, large-scale transformation — showcases the precision and care we bring to every project, from residential homes to landmark properties.
               </p>
               <p className="service-about-desc">
                 We know Massachusetts weather—harsh winters, humid summers, and everything in between. That&apos;s why we use premium, weather-resistant paints and follow meticulous preparation processes that ensure your exterior paint job protects your property for 10-15 years. Owner Jafet Henrique leads every project with dedication to quality.
@@ -637,7 +632,7 @@ export default function ExteriorPaintingPage() {
               <Phone size={20} />
               Call {BUSINESS.phone}
             </a>
-            <Link href="/#contact" className="service-cta-btn-outline">
+            <Link href="/contact" className="service-cta-btn-outline">
               Get Your Free Estimate
             </Link>
           </div>

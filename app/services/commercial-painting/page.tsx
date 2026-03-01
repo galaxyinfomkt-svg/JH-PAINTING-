@@ -24,10 +24,10 @@ const commercialPaintingSchema = {
       "description": "Professional commercial painting services across Massachusetts. Office buildings, retail stores, restaurants, warehouses. Minimal business disruption, on-time completion, premium finishes.",
       "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://jhpaintingservices.com/#localbusiness",
+        "@id": "https://jhpaintingservices.com/#organization",
         "name": "JH Painting Services",
         "telephone": "+1-508-690-8886",
-        "priceRange": "$$",
+        "priceRange": "Free Estimates",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Marlborough",
@@ -105,40 +105,16 @@ const commercialPaintingSchema = {
       ]
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do you paint during business hours?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We offer flexible scheduling including evenings and weekends to minimize disruption to your business operations. Many commercial projects are completed outside regular business hours to ensure your operations continue smoothly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does commercial painting cost in Massachusetts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Commercial painting costs vary based on square footage, surface condition, paint type, and project complexity. Most commercial projects range from $1.50-$4 per square foot. Contact JH Painting for a free, detailed estimate for your business."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are you licensed and insured for commercial work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, JH Painting Services is fully licensed and insured for commercial projects in Massachusetts. We carry comprehensive liability insurance and workers compensation coverage for your protection."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a commercial painting project take?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Project timelines depend on size and scope. A typical office suite takes 2-4 days, while larger facilities may take 1-3 weeks. We provide detailed timelines and work efficiently to minimize business disruption."
-          }
-        }
+      "@type": "HowTo",
+      "name": "How Commercial Painting Works at JH Painting Services",
+      "description": "Our professional commercial painting process minimizes business disruption.",
+      "totalTime": "P7D",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We assess your commercial space, discuss brand colors and timeline requirements." },
+        { "@type": "HowToStep", "position": 2, "name": "Detailed Proposal", "text": "Written proposal with phased scheduling to minimize business disruption. After-hours and weekend work available." },
+        { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Professional prep of all surfaces including patching, sanding, and priming. Furniture and equipment protected." },
+        { "@type": "HowToStep", "position": 4, "name": "Expert Painting", "text": "Premium commercial-grade paints applied with minimal odor. Low-VOC and zero-VOC options available." },
+        { "@type": "HowToStep", "position": 5, "name": "Final Inspection", "text": "Thorough walkthrough with property manager. Touch-ups completed. Your space is ready for business." }
       ]
     }
   ]
@@ -213,7 +189,7 @@ const painPoints = [
 
 const stats = [
   { number: '200+', label: 'Commercial Projects' },
-  { number: '15+', label: 'Years Experience' },
+  { number: '7+', label: 'Years Experience' },
   { number: '100%', label: 'On-Time Delivery' },
   { number: '117', label: 'Cities Served' }
 ]
@@ -294,7 +270,7 @@ export default function CommercialPaintingPage() {
                   <Phone size={20} />
                   {BUSINESS.phone}
                 </a>
-                <Link href="/#contact" className="service-cta-secondary">
+                <Link href="/contact" className="service-cta-secondary">
                   Get Your Free Estimate
                   <ChevronRight size={20} />
                 </Link>
@@ -363,6 +339,25 @@ export default function CommercialPaintingPage() {
                 <div className="service-stat-label">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Citation-First Summary — Optimized for AI search engines */}
+      <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
+        <div className="container">
+          <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
+            <strong>JH Painting Services</strong> provides professional commercial painting services across <strong>117+ cities in Massachusetts</strong>. We paint offices, retail stores, restaurants, warehouses, and multi-unit buildings. After-hours and weekend scheduling available to <strong>minimize business disruption</strong>. Licensed, <strong>$2M insured</strong>, with low-VOC and zero-VOC paint options. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong> for a free commercial estimate.
+          </p>
+        </div>
+      </section>
+
+      {/* Free Estimate CTA */}
+      <section className="service-section service-section-white" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+            <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your needs.</p>
+            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 — Free Estimate</a>
           </div>
         </div>
       </section>
@@ -512,7 +507,7 @@ export default function CommercialPaintingPage() {
                 />
               </div>
               <div className="service-about-experience">
-                <div className="service-about-experience-number">15+</div>
+                <div className="service-about-experience-number">7+</div>
                 <div className="service-about-experience-label">Years Experience</div>
               </div>
             </div>
@@ -521,7 +516,7 @@ export default function CommercialPaintingPage() {
               <span className="service-section-badge">About Us</span>
               <h2>Commercial Painting Specialists You Can Trust</h2>
               <p>
-                JH Painting Services has been delivering exceptional commercial painting results across Massachusetts for over 15 years. We understand that your business space represents your brand.
+                JH Painting Services has been delivering exceptional commercial painting results across Massachusetts since 2018. We understand that your business space represents your brand.
               </p>
               <p>
                 From small offices to large industrial facilities, we bring the same dedication to quality and professionalism. Our flexible scheduling ensures minimal disruption to your operations.
@@ -553,7 +548,7 @@ export default function CommercialPaintingPage() {
                 <Phone size={20} />
                 Call {BUSINESS.phone}
               </a>
-              <Link href="/#contact" className="service-cta-btn-outline">
+              <Link href="/contact" className="service-cta-btn-outline">
                 Get Your Free Estimate
               </Link>
             </div>

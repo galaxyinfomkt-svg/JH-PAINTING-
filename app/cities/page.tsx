@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { cities, getCitySlugWithState } from '@/app/data/cities'
 
 export const metadata: Metadata = {
-  title: 'Painters Near Me MA | 140+ Cities Served | Find Your Local Painter ⭐',
-  description: 'Looking for painters near you in Massachusetts? We serve 140+ cities: Boston, Worcester, Cambridge, Newton, Framingham & more. 40+ 5-star reviews. Licensed & $2M insured. FREE quote → (508) 690-8886',
+  title: 'Painters Near Me MA | 140+ Cities Served | Find Your Local Painter',
+  description: 'Looking for painters near you in Massachusetts? We serve 140+ cities: Boston, Worcester, Cambridge, Newton, Framingham & more. 40+ 5-star reviews. Licensed & $2M insured. FREE quote (508) 690-8886',
   keywords: [
     'painters near me Massachusetts',
     'painters near me MA',
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Painters Near Me MA | 140+ Cities ⭐',
+    title: 'Painters Near Me MA | 140+ Cities',
     description: 'Find professional painters in your Massachusetts city. 40+ 5-star reviews.',
     images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
     creator: '@jhpaintingma',
   },
   alternates: {
-    canonical: 'https://jhpaintingservices.com/cities',
+    canonical: 'https://jhpaintingservices.com/massachusetts',
   },
   robots: {
     index: true,
