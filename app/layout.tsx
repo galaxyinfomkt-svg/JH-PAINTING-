@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Script from 'next/script'
 import FloatingButtons from './components/FloatingButtons'
 import DeferredScripts from './components/DeferredScripts'
 
@@ -459,6 +460,12 @@ export default function RootLayout({
         <FloatingButtons />
         {/* All third-party scripts (GTM, GHL, Chat Widget, Reviews) deferred until user interaction */}
         <DeferredScripts />
+        {/* BeeProHub Tracking */}
+        <Script
+          src="https://lp.beeprohub.com/js/external-tracking.js"
+          data-tracking-id="tk_17bc6e6f297d4ffc8b66e30609380978"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
