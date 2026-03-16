@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'get painting quote online',
     'painters Marlborough MA',
     'painting company contact Massachusetts',
-  ],
+  ].join(', '),
   openGraph: {
     title: 'FREE Painting Quote | Same Day Response | JH Painting MA',
     description: 'Get your FREE painting estimate in 24 hours. Interior, exterior, cabinets. 40+ 5-star reviews. Licensed & $2M insured.',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FREE Painting Quote MA | Same Day Response ⭐',
+    title: 'FREE Painting Quote MA | Same Day Response',
     description: 'Get your FREE estimate in 24 hours. 40+ 5-star reviews. Call (508) 690-8886',
     images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
     creator: '@jhpaintingma',

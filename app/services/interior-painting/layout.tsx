@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Walls Looking Tired? Interior Painters MA | Transform in Days ⭐',
-  description: 'Hate staring at scuffed walls? We fix that. Premium Benjamin Moore paints, zero mess, rooms done in 1-2 days. 40+ 5-star reviews. Licensed & $2M insured. FREE quote → (508) 690-8886',
+  title: 'Interior Painters MA | JH Painting | FREE Quote',
+  description: 'Expert interior painting in Massachusetts. Premium Benjamin Moore paints, zero mess, done in days. 40+ 5-star reviews. Licensed & $2M insured. (508) 690-8886',
   keywords: [
     'interior painters Massachusetts',
     'interior house painters near me',

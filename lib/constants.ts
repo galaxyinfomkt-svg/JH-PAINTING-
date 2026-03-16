@@ -16,9 +16,9 @@ export const BUSINESS = {
 
 // LeadConnector Form IDs
 export const FORM_IDS = {
-  contact: 'JRiO8zZFsJyeWQDs0WtO',
-  quote: 'JRiO8zZFsJyeWQDs0WtO',
-  servicePages: 'https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO',
+  contact: 'gmVSZsO5e3S0pbXmmnPn',
+  quote: 'gmVSZsO5e3S0pbXmmnPn',
+  servicePages: 'https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn',
 } as const
 
 // Social Media Links
@@ -144,13 +144,14 @@ export const VIDEOS = [
   { id: 'LkT_HLyKibY', title: 'Interior Painting', type: 'YouTube Short' },
 ] as const
 
-// Stats/Trust Indicators
+// Stats/Trust Indicators — SINGLE SOURCE OF TRUTH for all pages
 export const STATS = {
-  yearsExperience: 18,
+  yearsExperience: 7,
   projectsCompleted: '500+',
   satisfaction: '100%',
   rating: 5.0,
-  reviewCount: 50,
+  reviewCount: 40,
+  citiesServed: 140,
 } as const
 
 // Business Hours
@@ -167,16 +168,16 @@ export const SEO = {
   keywords: 'painting services massachusetts, house painters, interior painting, exterior painting, cabinet painting, commercial painting',
 } as const
 
-// Color Theme (for reference)
+// Color Theme (MassHVAC style - Dark Navy + Red)
 export const COLORS = {
-  navy: '#0B1F3B',
-  navyLight: '#1A365D',
-  navyDark: '#071428',
-  red: '#E02020',
-  redLight: '#EF4444',
-  redDark: '#B91C1C',
-  gold: '#D20404',
-  goldDark: '#A80303',
+  navy: '#0a0e27',
+  navyLight: '#111827',
+  navyDark: '#060a1e',
+  red: '#CC0000',
+  redLight: '#EE0000',
+  redDark: '#990000',
+  accent: '#CC0000',
+  accentDark: '#990000',
   white: '#FFFFFF',
   offWhite: '#F8FAFC',
   ink: '#0F172A',

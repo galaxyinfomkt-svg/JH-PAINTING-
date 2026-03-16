@@ -33,11 +33,11 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/blog', request.url), 301)
   }
 
-  // Redirect old city+service painter URLs to new structure
-  // /wellesley-ma-interior-house-painting -> /cities/wellesley-ma/interior-painting
+  // Redirect old city+service painter URLs to new /massachusetts/ structure
+  // /wellesley-ma-interior-house-painting -> /massachusetts/wellesley/interior-painting
   const oldPaintingPatterns = [
-    { pattern: /^\/([a-z-]+)-ma-interior-house-painting$/, redirect: '/cities/$1-ma/interior-painting' },
-    { pattern: /^\/([a-z-]+)-ma-exterior-house-painting$/, redirect: '/cities/$1-ma/exterior-painting' },
+    { pattern: /^\/([a-z-]+)-ma-interior-house-painting$/, redirect: '/massachusetts/$1/interior-painting' },
+    { pattern: /^\/([a-z-]+)-ma-exterior-house-painting$/, redirect: '/massachusetts/$1/exterior-painting' },
   ]
 
   for (const { pattern, redirect } of oldPaintingPatterns) {
@@ -48,23 +48,27 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // Redirect /cities/city/service → /cities/city-ma/service (if city slug doesn't end with -ma or -ri)
+  // 301 Redirect: /cities/X-ma/service → /massachusetts/X/service
   const cityServiceMatch = pathname.match(/^\/cities\/([a-z][a-z0-9-]+)\/(interior-painting|exterior-painting|commercial-painting|residential-painting|cabinet-painting|carpentry|power-washing)$/)
   if (cityServiceMatch) {
     const citySlug = cityServiceMatch[1]
     const service = cityServiceMatch[2]
-    if (!citySlug.endsWith('-ma') && !citySlug.endsWith('-ri')) {
-      return NextResponse.redirect(new URL(`/cities/${citySlug}-ma/${service}`, request.url), 301)
-    }
+    // Strip -ma suffix for the new URL
+    const cleanSlug = citySlug.endsWith('-ma') ? citySlug.slice(0, -3) : citySlug
+    return NextResponse.redirect(new URL(`/massachusetts/${cleanSlug}/${service}`, request.url), 301)
   }
 
-  // Redirect /cities/city → /cities/city-ma (if city slug doesn't end with -ma or -ri)
+  // 301 Redirect: /cities/X-ma → /massachusetts/X  (also handles /cities/X without -ma)
   const cityOnlyMatch = pathname.match(/^\/cities\/([a-z][a-z0-9-]+)$/)
   if (cityOnlyMatch) {
     const citySlug = cityOnlyMatch[1]
-    if (!citySlug.endsWith('-ma') && !citySlug.endsWith('-ri')) {
-      return NextResponse.redirect(new URL(`/cities/${citySlug}-ma`, request.url), 301)
+    // Skip RI cities - they stay under /cities/ for now
+    if (citySlug.endsWith('-ri')) {
+      return NextResponse.next()
     }
+    // Strip -ma suffix for the new URL
+    const cleanSlug = citySlug.endsWith('-ma') ? citySlug.slice(0, -3) : citySlug
+    return NextResponse.redirect(new URL(`/massachusetts/${cleanSlug}`, request.url), 301)
   }
 
   return NextResponse.next()

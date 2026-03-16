@@ -76,7 +76,7 @@ export default function LazyIframe({
                   width: '40px',
                   height: '40px',
                   border: '3px solid var(--jh-gray-200, #e5e7eb)',
-                  borderTopColor: 'var(--jh-red, #D20404)',
+                  borderTopColor: 'var(--jh-red, #CC0000)',
                   borderRadius: '50%',
                   animation: 'spin 1s linear infinite',
                 }}
@@ -113,7 +113,7 @@ export default function LazyIframe({
               width: '40px',
               height: '40px',
               border: '3px solid var(--jh-gray-200, #e5e7eb)',
-              borderTopColor: 'var(--jh-red, #D20404)',
+              borderTopColor: 'var(--jh-red, #CC0000)',
               borderRadius: '50%',
               animation: 'spin 1s linear infinite',
             }}

@@ -2,8 +2,19 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Watch Our Work | JH Painting Services Massachusetts',
-  description: 'Watch video testimonials and see our painting work across Massachusetts. Exterior painting, interior painting, cabinet refinishing. 500+ projects completed. Call (508) 690-8886 for free estimate.',
+  title: 'Professional Painting Services MA | JH Painting Services',
+  description: 'See why 500+ Massachusetts homeowners choose JH Painting Services. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star reviews. FREE estimates: (508) 690-8886',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'Watch Our Painting Work | JH Painting Services',
     description: 'See how we transform Massachusetts homes with professional painting. Watch our exterior and interior painting videos.',
@@ -15,13 +26,13 @@ export const metadata: Metadata = {
         url: 'https://www.youtube.com/watch?v=F_lreXzNlUI',
         width: 1280,
         height: 720,
-        type: 'video/mp4',
+        type: 'text/html',
       },
       {
         url: 'https://www.youtube.com/watch?v=LkT_HLyKibY',
         width: 1280,
         height: 720,
-        type: 'video/mp4',
+        type: 'text/html',
       },
     ],
   },
@@ -49,7 +60,7 @@ const videoSchema = {
         "name": "JH Painting Services",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jhpaintingservices.com/logo.png"
+          "url": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
         }
       },
       "potentialAction": {
@@ -72,7 +83,7 @@ const videoSchema = {
         "name": "JH Painting Services",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jhpaintingservices.com/logo.png"
+          "url": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png"
         }
       },
       "potentialAction": {

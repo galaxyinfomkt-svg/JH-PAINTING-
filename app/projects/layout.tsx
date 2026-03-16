@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Our Work | Before & After Painting Projects MA | See the Difference ⭐',
+  title: 'Our Work | Before & After Painting Projects MA | See the Difference',
   description: 'See real painting transformations in Massachusetts. Before & after photos of interior, exterior, cabinet painting. 40+ 5-star reviews. View our portfolio & get inspired!',
   keywords: [
     'painting before after Massachusetts',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Painting Before & After MA | See Our Work ⭐',
+    title: 'Painting Before & After MA | See Our Work',
     description: 'Real painting transformations. Interior, exterior, cabinets. View portfolio!',
     images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
     creator: '@jhpaintingma',

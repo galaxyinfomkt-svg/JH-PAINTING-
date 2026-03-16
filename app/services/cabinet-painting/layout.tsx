@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Kitchen Cabinets Dated? Cabinet Painting MA | Save 70% vs New ⭐',
-  description: 'Hate your old kitchen cabinets? DON\'T replace them. Our spray finish looks factory-new for 70% LESS. Done in 3-5 days, not months. 40+ 5-star reviews. FREE quote → (508) 690-8886',
+  title: 'Cabinet Painting MA | Save 70% | JH Painting',
+  description: 'Cabinet painting & refinishing in Massachusetts. Factory-smooth spray finish, save 70% vs replacement. 40+ 5-star reviews. (508) 690-8886',
   keywords: [
     'cabinet painters Massachusetts',
     'cabinet painters near me',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { cities, getCitySlugWithState } from '@/app/data/cities'
+import { cities, normalizeCitySlug } from '@/app/data/cities'
 
 export const metadata: Metadata = {
   title: 'Painters Near Me MA | 140+ Cities Served | Find Your Local Painter',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Find Painters Near You | 140+ MA Cities | JH Painting',
     description: 'Professional painters serving 140+ Massachusetts cities. Find your local painter. 40+ 5-star reviews. Licensed & $2M insured.',
-    url: 'https://jhpaintingservices.com/cities',
+    url: 'https://jhpaintingservices.com/massachusetts',
     siteName: 'JH Painting Services',
     locale: 'en_US',
     type: 'website',
@@ -58,18 +58,61 @@ export const metadata: Metadata = {
   },
 }
 
-export default function CitiesPage() {
+export default function MassachusettsPage() {
   // Group cities by distance range
   const nearbyHQ = cities.filter(c => c.distance <= 10)
   const nearby = cities.filter(c => c.distance > 10 && c.distance <= 20)
   const extended = cities.filter(c => c.distance > 20)
 
+  // Build ItemList schema for all cities
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'JH Painting Services — Massachusetts Service Areas',
+    description: 'Professional painting services available in ' + cities.length + '+ cities across Massachusetts. Licensed, $2M insured, EPA Lead-Safe certified.',
+    numberOfItems: cities.length,
+    itemListElement: cities.map((city, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: city.name + ', Massachusetts',
+      url: 'https://jhpaintingservices.com/massachusetts/' + normalizeCitySlug(city.slug),
+    })),
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://jhpaintingservices.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Massachusetts Service Areas',
+        item: 'https://jhpaintingservices.com/massachusetts',
+      },
+    ],
+  }
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <main className="cities-index-page">
       {/* Hero Section */}
       <section className="cities-hero">
         <div className="container">
-          <h1>Service Areas</h1>
+          <h1>Painters Near Me in Massachusetts — {cities.length}+ Cities Served</h1>
           <p className="cities-hero-subtitle">
             Professional painting services across <strong>{cities.length}+ cities</strong> in Massachusetts.
             <br />Licensed, insured, and trusted by homeowners statewide.
@@ -94,7 +137,7 @@ export default function CitiesPage() {
               {nearbyHQ.map((city) => (
                 <Link
                   key={city.slug}
-                  href={`/cities/${getCitySlugWithState(city.slug)}`}
+                  href={`/massachusetts/${normalizeCitySlug(city.slug)}`}
                   className="city-card"
                 >
                   <span className="city-name">{city.name}</span>
@@ -111,7 +154,7 @@ export default function CitiesPage() {
               {nearby.map((city) => (
                 <Link
                   key={city.slug}
-                  href={`/cities/${getCitySlugWithState(city.slug)}`}
+                  href={`/massachusetts/${normalizeCitySlug(city.slug)}`}
                   className="city-card"
                 >
                   <span className="city-name">{city.name}</span>
@@ -128,7 +171,7 @@ export default function CitiesPage() {
               {extended.map((city) => (
                 <Link
                   key={city.slug}
-                  href={`/cities/${getCitySlugWithState(city.slug)}`}
+                  href={`/massachusetts/${normalizeCitySlug(city.slug)}`}
                   className="city-card"
                 >
                   <span className="city-name">{city.name}</span>
@@ -152,5 +195,6 @@ export default function CitiesPage() {
         </div>
       </section>
     </main>
+    </>
   )
 }

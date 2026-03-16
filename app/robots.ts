@@ -50,6 +50,47 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'Applebot-Extended',
         allow: '/',
       },
+      // AI Search & Training Crawlers
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+      },
+      {
+        userAgent: 'CCBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Bytespider',
+        allow: '/',
+      },
+      {
+        userAgent: 'meta-externalagent',
+        allow: '/',
+      },
+      {
+        userAgent: 'cohere-ai',
+        allow: '/',
+      },
+      {
+        userAgent: 'YouBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Amazonbot',
+        allow: '/',
+      },
+      {
+        userAgent: 'OAI-SearchBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Twitterbot',
+        allow: '/',
+      },
+      {
+        userAgent: 'LinkedInBot',
+        allow: '/',
+      },
     ],
     sitemap: 'https://jhpaintingservices.com/sitemap.xml',
     host: 'https://jhpaintingservices.com',

@@ -23,7 +23,7 @@ import {
   Building2,
   PaintBucket,
   BookOpen,
-} from '@/app/components/icons'
+} from '@/app/components/Icons'
 import { blogPosts, blogCategories, getFeaturedPosts } from '../data/blogPosts'
 
 const menuServices = [

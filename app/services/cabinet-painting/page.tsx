@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Palette, DollarSign, Timer } from '@/app/components/icons'
+import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Palette, DollarSign, Timer } from '@/app/components/Icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
@@ -24,10 +24,10 @@ const cabinetPaintingSchema = {
       "description": "Professional cabinet painting and refinishing services in Massachusetts. Transform your kitchen cabinets for 70% less than replacement. Expert spray finishing, premium materials, flawless results.",
       "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://jhpaintingservices.com/#localbusiness",
+        "@id": "https://jhpaintingservices.com/#organization",
         "name": "JH Painting Services",
         "telephone": "+1-508-690-8886",
-        "priceRange": "$$",
+        "priceRange": "Free Estimates",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Marlborough",
@@ -105,40 +105,17 @@ const cabinetPaintingSchema = {
       ]
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does cabinet painting cost in Massachusetts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cabinet painting in Massachusetts typically costs $3,000-$7,000 for a standard kitchen, which is 70% less than full cabinet replacement. The exact cost depends on cabinet size, condition, and finish type. Contact JH Painting for a free estimate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does cabinet painting take?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Professional cabinet painting typically takes 5-7 days for a standard kitchen. This includes proper cleaning, sanding, priming, painting multiple coats, and curing time to ensure a durable, long-lasting finish."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is cabinet painting better than cabinet replacement?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cabinet painting is an excellent alternative to replacement if your cabinets are structurally sound. You save 70% of the cost, keep existing layout, and can achieve a completely new look. Modern paints provide durable, beautiful finishes that last for years."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What type of paint do you use on cabinets?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We use premium cabinet-grade paints from Benjamin Moore and Sherwin-Williams, specifically formulated for high-traffic kitchen environments. These paints provide excellent adhesion, durability, and a smooth, professional finish."
-          }
-        }
+      "@type": "HowTo",
+      "name": "How Cabinet Refinishing Works at JH Painting Services",
+      "description": "Our professional 6-step cabinet refinishing process saves 60-70% vs replacement.",
+      "totalTime": "P7D",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We assess your cabinets, discuss finish options (paint vs stain), and recommend colors." },
+        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "Written estimate with clear pricing based on cabinet count, door style, and finish type. No hidden fees." },
+        { "@type": "HowToStep", "position": 3, "name": "Door Removal & Labeling", "text": "We carefully remove all doors, drawers, and hardware. Each piece is labeled for perfect reinstallation." },
+        { "@type": "HowToStep", "position": 4, "name": "Surface Preparation", "text": "Thorough degreasing, sanding, and priming with adhesion-promoting primer for a factory-quality bond." },
+        { "@type": "HowToStep", "position": 5, "name": "Spray Application", "text": "Multiple coats of cabinet-grade enamel applied with professional spray equipment for a smooth, durable finish." },
+        { "@type": "HowToStep", "position": 6, "name": "Reassembly & Inspection", "text": "Hardware reinstalled, doors rehung, and final inspection. Your kitchen looks brand new at a fraction of replacement cost." }
       ]
     }
   ]
@@ -197,7 +174,7 @@ const painPoints = [
   {
     icon: DollarSign,
     title: 'New Cabinets Too Expensive?',
-    desc: "Full kitchen cabinet replacement can cost $15,000-$50,000. That's a massive investment that most homeowners can't justify. But outdated cabinets drag down your entire kitchen.",
+    desc: "Full kitchen cabinet replacement is a massive investment that most homeowners can't justify. But outdated cabinets drag down your entire kitchen.",
     solution: 'Save 70% with professional cabinet painting'
   },
   {
@@ -317,7 +294,7 @@ export default function CabinetPaintingPage() {
                   <Phone size={20} />
                   {BUSINESS.phone}
                 </a>
-                <Link href="/#contact" className="service-cta-secondary">
+                <Link href="/contact" className="service-cta-secondary">
                   Get Your Free Estimate
                   <ChevronRight size={20} />
                 </Link>
@@ -386,6 +363,25 @@ export default function CabinetPaintingPage() {
                 <div className="service-stat-label">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Citation-First Summary — Optimized for AI search engines */}
+      <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
+        <div className="container">
+          <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
+            <strong>JH Painting Services</strong> provides professional kitchen cabinet painting and refinishing across <strong>117+ cities in Massachusetts</strong>. Cabinet refinishing saves homeowners <strong>60–70% compared to full cabinet replacement</strong>. We use spray-applied cabinet-grade enamel for a factory-smooth finish. Licensed, <strong>$2M insured</strong>, EPA Lead-Safe certified. Contact us for a free estimate. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong>.
+          </p>
+        </div>
+      </section>
+
+      {/* Free Estimate CTA */}
+      <section className="service-section service-section-white" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+            <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your needs.</p>
+            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 — Free Estimate</a>
           </div>
         </div>
       </section>
@@ -592,7 +588,7 @@ export default function CabinetPaintingPage() {
                 />
               </div>
               <div className="service-about-experience">
-                <div className="service-about-experience-number">15+</div>
+                <div className="service-about-experience-number">7+</div>
                 <div className="service-about-experience-label">Years Experience</div>
               </div>
             </div>
@@ -603,7 +599,7 @@ export default function CabinetPaintingPage() {
                 Meet Jafet Henrique, Your Cabinet Painting Expert
               </h2>
               <p className="service-about-desc">
-                With over 15 years of experience transforming kitchens across Massachusetts, JH Painting Services has perfected the art of cabinet refinishing. Owner Jafet Henrique leads every project with dedication to achieving factory-quality finishes.
+                Since 2018, we have been transforming kitchens across Massachusetts, JH Painting Services has perfected the art of cabinet refinishing. Owner Jafet Henrique leads every project with dedication to achieving factory-quality finishes.
               </p>
               <p className="service-about-desc">
                 We understand that your kitchen is the heart of your home. That's why we use premium cabinet-grade paints and professional spray equipment to deliver smooth, durable finishes that look beautiful and stand up to daily use for years to come.
@@ -637,7 +633,7 @@ export default function CabinetPaintingPage() {
               <Phone size={20} />
               Call {BUSINESS.phone}
             </a>
-            <Link href="/#contact" className="service-cta-btn-outline">
+            <Link href="/contact" className="service-cta-btn-outline">
               Get Your Free Estimate
             </Link>
           </div>

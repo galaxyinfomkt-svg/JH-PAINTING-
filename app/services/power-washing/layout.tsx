@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Green Mold on Siding? Power Washing MA | Look New in 1 Day ⭐',
-  description: 'Embarrassed by dirty siding, green mold, black streaks? We blast it away in ONE day. Decks, driveways, patios sparkling clean. $2M insured. FREE quote → (508) 690-8886',
+  title: 'Power Washing MA | JH Painting | FREE Quote',
+  description: 'Professional power washing in Massachusetts. Decks, driveways, siding sparkling clean in one day. $2M insured. (508) 690-8886',
   keywords: [
     'power washing Massachusetts',
     'pressure washing MA',
@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Power Washing Services Massachusetts | (508) 690-8886',
     description: 'Professional power washing in MA. Decks, siding, driveways. Licensed & insured. Call now for FREE estimate!',
+    creator: '@jhpaintingma',
     images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp'],
   },
   alternates: {

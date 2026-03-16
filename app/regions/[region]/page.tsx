@@ -92,7 +92,7 @@ export default async function RegionPage({ params }: Props) {
                     <MapPinIcon size={14} />
                     {regionCities.length}+ Communities
                   </span>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', padding: '0.5rem 1rem', background: 'linear-gradient(135deg, #DC2626 0%, #A80303 100%)', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', padding: '0.5rem 1rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
                     <StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} />
                     5.0
                   </span>
@@ -124,7 +124,7 @@ export default async function RegionPage({ params }: Props) {
                     { icon: MapPinIcon, text: `Serving All ${region.name}` },
                   ].map((item, idx) => (
                     <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.9)' }}>
-                      <span style={{ color: '#DC2626' }}><item.icon size={16} /></span>
+                      <span style={{ color: '#CC0000' }}><item.icon size={16} /></span>
                       <span style={{ fontSize: '0.875rem', fontWeight: 500 }}>{item.text}</span>
                     </div>
                   ))}
@@ -135,7 +135,7 @@ export default async function RegionPage({ params }: Props) {
               <div id="quote-form" className="hero-form-card">
                 <LazyHeroForm
                   className="hero-form-iframe"
-                  src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
+                  src="https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn"
                   title="Contact Form"
                 />
               </div>
@@ -154,7 +154,7 @@ export default async function RegionPage({ params }: Props) {
                 { value: '7', label: 'Services Available' },
               ].map((stat, idx) => (
                 <div key={idx} style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#DC2626' }}>{stat.value}</div>
+                  <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#CC0000' }}>{stat.value}</div>
                   <div style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>{stat.label}</div>
                 </div>
               ))}
@@ -175,12 +175,12 @@ export default async function RegionPage({ params }: Props) {
               {region.painPoints.map((point, idx) => (
                 <div key={idx} style={{ background: '#fff', borderRadius: '20px', padding: '2rem 2.5rem', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 24px rgba(0,0,0,0.05)' }}>
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0F172A', marginBottom: '1.25rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '36px', height: '36px', background: 'linear-gradient(135deg, #DC2626, #B91C1C)', color: '#fff', borderRadius: '10px', fontSize: '0.875rem', fontWeight: 800, flexShrink: 0 }}>{idx + 1}</span>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '36px', height: '36px', background: 'linear-gradient(135deg, #CC0000, #990000)', color: '#fff', borderRadius: '10px', fontSize: '0.875rem', fontWeight: 800, flexShrink: 0 }}>{idx + 1}</span>
                     {point.title}
                   </h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                     <div>
-                      <p style={{ fontSize: '0.75rem', fontWeight: 700, color: '#DC2626', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>The Problem</p>
+                      <p style={{ fontSize: '0.75rem', fontWeight: 700, color: '#CC0000', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>The Problem</p>
                       <p style={{ color: '#64748B', fontSize: '0.9375rem', lineHeight: 1.75 }}>{point.problem}</p>
                     </div>
                     <div>
@@ -250,7 +250,7 @@ export default async function RegionPage({ params }: Props) {
                 <div className="city-about-image">
                   <Image
                     src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp"
-                    alt={`Jafet Hernandez - Owner of JH Painting Services serving ${region.name}`}
+                    alt={`Jafet Henrique - Owner of JH Painting Services serving ${region.name}`}
                     width={600} height={500} loading="lazy"
                     style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                   />
@@ -272,7 +272,7 @@ export default async function RegionPage({ params }: Props) {
                     { icon: CheckIcon, title: '100% Satisfaction' },
                   ].map((item, idx) => (
                     <div key={idx} className="city-about-feature">
-                      <div className="city-about-feature-icon" style={{ color: '#DC2626' }}><item.icon size={24} /></div>
+                      <div className="city-about-feature-icon" style={{ color: '#CC0000' }}><item.icon size={24} /></div>
                       <span className="city-about-feature-text">{item.title}</span>
                     </div>
                   ))}
@@ -301,7 +301,7 @@ export default async function RegionPage({ params }: Props) {
                   <div style={{ padding: '1.5rem' }}>
                     <h3 style={{ fontSize: '1.125rem', fontWeight: 700, marginBottom: '0.5rem', color: '#0F172A' }}>{svc.name} in {region.name}</h3>
                     <p style={{ color: '#64748B', fontSize: '0.9375rem', lineHeight: 1.65, marginBottom: '1rem' }}>{svc.desc}</p>
-                    <span style={{ color: '#DC2626', fontWeight: 600, fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>Learn More <ChevronRightIcon size={16} /></span>
+                    <span style={{ color: '#CC0000', fontWeight: 600, fontSize: '0.875rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>Learn More <ChevronRightIcon size={16} /></span>
                   </div>
                 </Link>
               ))}
@@ -322,7 +322,7 @@ export default async function RegionPage({ params }: Props) {
               {regionCities.map((city) => {
                 if (!city) return null
                 return (
-                  <Link key={city.slug} href={`/cities/${getCitySlugWithState(city.slug)}`} style={{ display: 'block', background: '#fff', borderRadius: '14px', padding: '1.25rem 1.5rem', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.04)', textDecoration: 'none' }}>
+                  <Link key={city.slug} href={`/massachusetts/${getCitySlugWithState(city.slug)}`} style={{ display: 'block', background: '#fff', borderRadius: '14px', padding: '1.25rem 1.5rem', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.04)', textDecoration: 'none' }}>
                     <span style={{ fontWeight: 600, color: '#0F172A', fontSize: '1rem' }}>{city.name}</span>
                     {city.population && <span style={{ display: 'block', fontSize: '0.8125rem', color: '#94A3B8', marginTop: '0.25rem' }}>Pop. {city.population}</span>}
                   </Link>

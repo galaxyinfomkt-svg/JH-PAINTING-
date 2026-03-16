@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
-import { cities, getCityBySlug, getCitySlugWithState } from '@/app/data/cities'
+import { cities, getCityBySlug, normalizeCitySlug } from '@/app/data/cities'
 
 // Pre-render all city pages at build time for instant CDN delivery
 export async function generateStaticParams() {
   return cities.map(city => ({
-    city: getCitySlugWithState(city.slug)
+    city: normalizeCitySlug(city.slug)
   }))
 }
 
@@ -23,8 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
     }
   }
 
-  const canonicalSlug = getCitySlugWithState(city.slug)
-  const canonicalUrl = `https://jhpaintingservices.com/cities/${canonicalSlug}`
+  const canonicalUrl = `https://jhpaintingservices.com/massachusetts/${normalizeCitySlug(city.slug)}`
 
   return {
     title: `Painters ${city.name} MA | Peeling Paint? We Fix It Fast FREE Quote`,

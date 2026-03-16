@@ -67,5 +67,51 @@ export default async function BlogPostPage({ params }: Props) {
 
   const relatedPosts = getRelatedPosts(slug, post.category, 3)
 
-  return <BlogPostClient post={post} relatedPosts={relatedPosts} />
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        headline: post.title,
+        description: post.excerpt,
+        image: post.image,
+        datePublished: post.date,
+        dateModified: post.date,
+        author: {
+          '@type': 'Person',
+          name: post.author,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'JH Painting Services',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png',
+          },
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `https://jhpaintingservices.com/blog/${post.slug}`,
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://jhpaintingservices.com' },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://jhpaintingservices.com/blog' },
+          { '@type': 'ListItem', position: 3, name: post.title, item: `https://jhpaintingservices.com/blog/${post.slug}` },
+        ],
+      },
+    ],
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <BlogPostClient post={post} relatedPosts={relatedPosts} />
+    </>
+  )
 }

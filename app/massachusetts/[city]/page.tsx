@@ -110,7 +110,7 @@ const DropletsIcon = ({ size = 20 }: { size?: number }) => (
 DropletsIcon.displayName = 'DropletsIcon'
 
 import dynamic from 'next/dynamic'
-import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
+import { getCityBySlug, cities, normalizeCitySlug } from '@/app/data/cities'
 import { getCityContent, generateUniqueCityContent } from '@/app/data/cityContent'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
@@ -139,10 +139,10 @@ function generateCitySchema(
       // Reference the main organization from root layout
       {
         "@type": "Service",
-        "@id": `https://jhpaintingservices.com/cities/${citySlug}#service`,
+        "@id": `https://jhpaintingservices.com/massachusetts/${citySlug}#service`,
         "name": `Painting Services in ${cityName}, MA`,
         "description": `Professional painting services in ${cityName}, Massachusetts. Expert interior & exterior painting, cabinet refinishing. Licensed & insured painters serving ${cityName} and ${countyName}.`,
-        "url": `https://jhpaintingservices.com/cities/${citySlug}`,
+        "url": `https://jhpaintingservices.com/massachusetts/${citySlug}`,
         "provider": {
           "@id": "https://jhpaintingservices.com/#organization"
         },
@@ -214,14 +214,14 @@ function generateCitySchema(
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Service Areas",
-            "item": "https://jhpaintingservices.com/cities"
+            "name": "Massachusetts",
+            "item": "https://jhpaintingservices.com/massachusetts"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": `${cityName} Painters`,
-            "item": `https://jhpaintingservices.com/cities/${citySlug}`
+            "item": `https://jhpaintingservices.com/massachusetts/${citySlug}`
           }
         ]
       },
@@ -707,14 +707,10 @@ export default async function CityPage({ params }: Props) {
 
           <div className="city-services-grid">
             {servicesList.map((service, idx) => {
-              // Get proper city slug with state suffix for URL
-              const citySlugForUrl = citySlug.endsWith('-ma') || citySlug.endsWith('-ri')
-                ? citySlug
-                : getCitySlugWithState(citySlug.replace(/-ma$/, '').replace(/-ri$/, ''))
               return (
               <Link
                 key={idx}
-                href={`/cities/${citySlugForUrl}/${service.slug}`}
+                href={`/massachusetts/${citySlug}/${service.slug}`}
                 className="city-service-card"
               >
                 <div className="city-service-icon" style={{ color: '#fff' }}>
@@ -1317,13 +1313,13 @@ export default async function CityPage({ params }: Props) {
               {cities.map((cityItem, idx) => (
                 <Link
                   key={idx}
-                  href={`/cities/${getCitySlugWithState(cityItem.slug)}`}
+                  href={`/massachusetts/${normalizeCitySlug(cityItem.slug)}`}
                   className={`city-areas-link ${cityItem.name === city.name ? 'city-areas-link-active' : ''}`}
                 >
                   {cityItem.name}
                 </Link>
               ))}
-              <Link href="/cities" className="city-areas-link-all">
+              <Link href="/massachusetts" className="city-areas-link-all">
                 View All Cities <ChevronRightIcon size={16} />
               </Link>
             </div>

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Phone, X, ChevronLeft, ChevronRight, Play, Sparkles, Award, Users, Star, ArrowRight, Expand, Grid3X3, LayoutGrid } from '@/app/components/icons'
+import { Phone, X, ChevronLeft, ChevronRight, Play, Sparkles, Award, Users, Star, ArrowRight, Expand, Grid3X3, LayoutGrid } from '@/app/components/Icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
@@ -408,7 +408,7 @@ export default function ProjectsPage() {
 
         .projects-page {
           --gradient-primary: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-          --gradient-accent: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+          --gradient-accent: linear-gradient(135deg, #CC0000 0%, #990000 100%);
           --glass-bg: rgba(255, 255, 255, 0.03);
           --glass-border: rgba(255, 255, 255, 0.1);
         }
@@ -494,7 +494,7 @@ export default function ProjectsPage() {
           text-transform: uppercase;
           letter-spacing: 1px;
           margin-bottom: 2rem;
-          box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
+          box-shadow: 0 4px 20px rgba(204, 0, 0, 0.4);
         }
 
         .projects-hero h1 {
@@ -511,7 +511,7 @@ export default function ProjectsPage() {
         }
 
         .hero-title-accent {
-          background: linear-gradient(90deg, #f97316, #dc2626, #f97316);
+          background: linear-gradient(90deg, #f97316, #CC0000, #f97316);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -554,7 +554,7 @@ export default function ProjectsPage() {
         }
 
         .hero-stat-icon {
-          color: #dc2626;
+          color: #CC0000;
           margin-bottom: 4px;
         }
 
@@ -594,12 +594,12 @@ export default function ProjectsPage() {
         .btn-hero-primary {
           background: var(--gradient-accent);
           color: white;
-          box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
+          box-shadow: 0 4px 20px rgba(204, 0, 0, 0.4);
         }
 
         .btn-hero-primary:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 30px rgba(220, 38, 38, 0.5);
+          box-shadow: 0 8px 30px rgba(204, 0, 0, 0.5);
         }
 
         .btn-hero-secondary {
@@ -674,8 +674,8 @@ export default function ProjectsPage() {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          background: rgba(220, 38, 38, 0.1);
-          color: #dc2626;
+          background: rgba(204, 0, 0, 0.1);
+          color: #CC0000;
           padding: 8px 16px;
           border-radius: 50px;
           font-size: 0.8rem;
@@ -683,7 +683,7 @@ export default function ProjectsPage() {
           text-transform: uppercase;
           letter-spacing: 0.5px;
           margin-bottom: 1rem;
-          border: 1px solid rgba(220, 38, 38, 0.2);
+          border: 1px solid rgba(204, 0, 0, 0.2);
         }
 
         .section-header-modern h2 {
@@ -717,7 +717,7 @@ export default function ProjectsPage() {
 
         .transformation-card:hover {
           transform: translateY(-8px);
-          border-color: rgba(220, 38, 38, 0.3);
+          border-color: rgba(204, 0, 0, 0.3);
           box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
@@ -846,15 +846,15 @@ export default function ProjectsPage() {
         }
 
         .filter-pill:hover {
-          border-color: #dc2626;
-          color: #dc2626;
+          border-color: #CC0000;
+          color: #CC0000;
         }
 
         .filter-pill.active {
-          background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+          background: linear-gradient(135deg, #CC0000 0%, #990000 100%);
           border-color: transparent;
           color: white;
-          box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+          box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3);
         }
 
         .filter-count {
@@ -950,7 +950,7 @@ export default function ProjectsPage() {
 
         .gallery-item-category {
           display: inline-block;
-          background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+          background: linear-gradient(135deg, #CC0000 0%, #990000 100%);
           color: white;
           padding: 6px 14px;
           border-radius: 50px;
@@ -1015,7 +1015,7 @@ export default function ProjectsPage() {
         .cta-background {
           position: absolute;
           inset: 0;
-          background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+          background: linear-gradient(135deg, #CC0000 0%, #991b1b 100%);
         }
 
         .cta-pattern {
@@ -1087,7 +1087,7 @@ export default function ProjectsPage() {
         .cta-btn-primary svg {
           width: 24px;
           height: 24px;
-          color: #dc2626;
+          color: #CC0000;
         }
 
         .cta-btn-primary span {

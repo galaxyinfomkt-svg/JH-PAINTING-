@@ -58,26 +58,26 @@ const footerServices = [
 
 // Top cities for compact footer display
 const topCities = [
-  { name: 'Boston', slug: 'boston-ma' },
-  { name: 'Worcester', slug: 'worcester-ma' },
-  { name: 'Cambridge', slug: 'cambridge-ma' },
-  { name: 'Newton', slug: 'newton-ma' },
-  { name: 'Framingham', slug: 'framingham-ma' },
-  { name: 'Marlborough', slug: 'marlborough-ma' },
-  { name: 'Natick', slug: 'natick-ma' },
-  { name: 'Wellesley', slug: 'wellesley-ma' },
-  { name: 'Lexington', slug: 'lexington-ma' },
-  { name: 'Concord', slug: 'concord-ma' },
-  { name: 'Sudbury', slug: 'sudbury-ma' },
-  { name: 'Brookline', slug: 'brookline-ma' },
-  { name: 'Needham', slug: 'needham-ma' },
-  { name: 'Waltham', slug: 'waltham-ma' },
-  { name: 'Shrewsbury', slug: 'shrewsbury-ma' },
-  { name: 'Lowell', slug: 'lowell-ma' },
-  { name: 'Milford', slug: 'milford-ma' },
-  { name: 'Hopkinton', slug: 'hopkinton-ma' },
-  { name: 'Dover', slug: 'dover-ma' },
-  { name: 'Leominster', slug: 'leominster-ma' },
+  { name: 'Boston', slug: 'boston' },
+  { name: 'Worcester', slug: 'worcester' },
+  { name: 'Cambridge', slug: 'cambridge' },
+  { name: 'Newton', slug: 'newton' },
+  { name: 'Framingham', slug: 'framingham' },
+  { name: 'Marlborough', slug: 'marlborough' },
+  { name: 'Natick', slug: 'natick' },
+  { name: 'Wellesley', slug: 'wellesley' },
+  { name: 'Lexington', slug: 'lexington' },
+  { name: 'Concord', slug: 'concord' },
+  { name: 'Sudbury', slug: 'sudbury' },
+  { name: 'Brookline', slug: 'brookline' },
+  { name: 'Needham', slug: 'needham' },
+  { name: 'Waltham', slug: 'waltham' },
+  { name: 'Shrewsbury', slug: 'shrewsbury' },
+  { name: 'Lowell', slug: 'lowell' },
+  { name: 'Milford', slug: 'milford' },
+  { name: 'Hopkinton', slug: 'hopkinton' },
+  { name: 'Dover', slug: 'dover' },
+  { name: 'Leominster', slug: 'leominster' },
 ]
 
 interface FooterProps {
@@ -172,7 +172,7 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
                 <Link
                   key={r.slug}
                   href={`/regions/${r.slug}`}
-                  style={{ background: 'rgba(201,168,76,0.15)', color: '#c9a84c', padding: '0.375rem 0.875rem', borderRadius: '6px', fontSize: '0.8125rem', fontWeight: 600, border: '1px solid rgba(201,168,76,0.25)' }}
+                  style={{ background: 'rgba(204,0,0,0.15)', color: '#CC0000', padding: '0.375rem 0.875rem', borderRadius: '6px', fontSize: '0.8125rem', fontWeight: 600, border: '1px solid rgba(204,0,0,0.25)' }}
                 >
                   {r.name}
                 </Link>
@@ -187,7 +187,7 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
             <div className="footer-cities-list" style={{ marginBottom: '0.75rem' }}>
               {topCities.map((city, index) => (
                 <span key={city.slug}>
-                  <Link href={`/cities/${city.slug}`} className="footer-city-link-rs">
+                  <Link href={`/massachusetts/${city.slug}`} className="footer-city-link-rs">
                     {city.name}
                   </Link>
                   {index < topCities.length - 1 && ' · '}
@@ -195,8 +195,8 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
               ))}
             </div>
             <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-              <Link href="/cities" style={{ color: '#c9a84c', fontSize: '0.8125rem', fontWeight: 600 }}>
-                View All 116+ Service Areas →
+              <Link href="/massachusetts" style={{ color: '#CC0000', fontSize: '0.8125rem', fontWeight: 600 }}>
+                View All 117+ Service Areas →
               </Link>
             </div>
           </div>

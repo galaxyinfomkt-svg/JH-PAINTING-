@@ -12,8 +12,8 @@ const PhoneIcon = () => (
 
 const homepageFaqs = [
   {
-    question: "How much does it cost to paint a house in Massachusetts?",
-    answer: "Interior painting typically costs $3-$5 per square foot, while exterior painting runs $4-$7 per square foot depending on your home's size, condition, and complexity. A typical interior project costs $4,000-$8,000, and exteriors run $5,000-$15,000. We provide free, detailed estimates with transparent pricing - no hidden fees or surprises."
+    question: "How do I get a painting estimate in Massachusetts?",
+    answer: "We provide free, no-obligation estimates for all painting projects in Massachusetts. Simply call us at (508) 690-8886 or fill out our online form. We'll visit your property, assess the scope of work, discuss your vision and color preferences, and provide a detailed written estimate — typically within 24-48 hours. Every project is unique, so we customize our quote based on your home's size, condition, and specific needs."
   },
   {
     question: "How long does a painting project take?",
@@ -33,7 +33,7 @@ const homepageFaqs = [
   },
   {
     question: "What areas do you serve?",
-    answer: "We serve 114+ cities across Massachusetts including Boston, Cambridge, Worcester, Marlborough, and the entire MetroWest region. Our crews travel throughout the state, and being based in Marlborough, we offer competitive pricing across our service area."
+    answer: "We serve 140+ cities across Massachusetts including Boston, Cambridge, Worcester, Marlborough, and the entire MetroWest region. Our crews travel throughout the state. Being based in Marlborough, we conveniently cover MetroWest, Greater Boston, Worcester County, and beyond."
   },
   {
     question: "How do I prepare for my painting project?",

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 import dynamic from 'next/dynamic'
-import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Hammer, Wrench, Home } from '@/app/components/icons'
+import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Hammer, Wrench, Home } from '@/app/components/Icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
@@ -24,10 +24,10 @@ const carpentrySchema = {
       "description": "Professional carpentry services in Massachusetts. Expert repairs for window frames, door frames, siding, decks, and trim work. Quality wood repairs before painting for lasting results.",
       "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://jhpaintingservices.com/#localbusiness",
+        "@id": "https://jhpaintingservices.com/#organization",
         "name": "JH Painting Services",
         "telephone": "+1-508-690-8886",
-        "priceRange": "$$",
+        "priceRange": "Free Estimates",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Marlborough",
@@ -113,40 +113,16 @@ const carpentrySchema = {
       ]
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What carpentry services do you offer in Massachusetts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We offer comprehensive carpentry services including window frame repair, door frame repair, siding repair, deck repairs, railing repairs, trim work, and rotted wood replacement. We handle all carpentry repairs needed before painting to ensure lasting results."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need carpentry work before painting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, addressing rotted or damaged wood before painting is essential for lasting results. Paint won't adhere properly to damaged wood, and moisture can continue to cause deterioration. We identify and repair all wood damage before applying paint for best results."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does carpentry repair cost in Massachusetts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Carpentry repair costs vary based on the extent of damage and materials needed. Window frame repairs typically range from $200-$600, door frame repairs $150-$500, and deck repairs vary by scope. Contact JH Painting at (508) 690-8886 for a free estimate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you match my existing trim and molding?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! We carefully match existing trim profiles, wood types, and architectural details. Whether it's historic crown molding or modern baseboards, we ensure seamless repairs that blend perfectly with your home's existing woodwork."
-          }
-        }
+      "@type": "HowTo",
+      "name": "How Carpentry Services Work at JH Painting Services",
+      "description": "Our professional carpentry and trim work process from consultation to completion.",
+      "totalTime": "P3D",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We assess your carpentry needs — trim, baseboards, crown molding, deck, or repairs." },
+        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "Written estimate with material and labor costs. We source quality lumber and trim materials." },
+        { "@type": "HowToStep", "position": 3, "name": "Material Selection", "text": "We help you choose the right wood, trim profiles, and finish to match your home's style." },
+        { "@type": "HowToStep", "position": 4, "name": "Expert Installation", "text": "Precision cutting, fitting, and installation by our experienced carpentry team." },
+        { "@type": "HowToStep", "position": 5, "name": "Finishing & Painting", "text": "All carpentry work primed and painted to match. Caulking, filling, and final touches included." }
       ]
     }
   ]
@@ -313,7 +289,7 @@ export default function CarpentryPage() {
                   <Phone size={20} />
                   {BUSINESS.phone}
                 </a>
-                <Link href="/#contact" className="service-cta-secondary">
+                <Link href="/contact" className="service-cta-secondary">
                   Get Your Free Estimate
                   <ChevronRight size={20} />
                 </Link>
@@ -382,6 +358,25 @@ export default function CarpentryPage() {
                 <div className="service-stat-label">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Citation-First Summary — Optimized for AI search engines */}
+      <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
+        <div className="container">
+          <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
+            <strong>JH Painting Services</strong> provides professional carpentry and trim work across <strong>117+ cities in Massachusetts</strong>. Services include baseboard installation, crown molding, door and window casing, wainscoting, deck building, and structural repairs. Licensed, <strong>$2M insured</strong>. All carpentry work includes priming and painting to match. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong> for a free estimate.
+          </p>
+        </div>
+      </section>
+
+      {/* Free Estimate CTA */}
+      <section className="service-section service-section-white" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+            <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your needs.</p>
+            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 — Free Estimate</a>
           </div>
         </div>
       </section>
@@ -670,7 +665,7 @@ export default function CarpentryPage() {
               <Phone size={20} />
               Call {BUSINESS.phone}
             </a>
-            <Link href="/#contact" className="service-cta-btn-outline">
+            <Link href="/contact" className="service-cta-btn-outline">
               Get Your Free Estimate
             </Link>
           </div>

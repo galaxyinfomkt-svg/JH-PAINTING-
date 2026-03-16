@@ -11,7 +11,7 @@ const HomeVideoSection = dynamic(() => import('./components/HomeVideoSection'))
 const HomeFAQ = dynamic(() => import('./components/HomeFAQ'))
 const HomeBeforeAfter = dynamic(() => import('./components/HomeBeforeAfter'))
 
-// SVG icons - plain functions for server rendering (no memo needed)
+// SVG icons - plain functions for server rendering
 const PhoneIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
 )
@@ -60,7 +60,15 @@ const AwardIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
 )
 
-// Data
+const ClipboardIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+)
+
+const EyeIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+)
+
+// Data — 7 services for RS-style grid
 const services = [
   {
     title: 'Exterior Painting',
@@ -82,10 +90,28 @@ const services = [
     href: '/services/cabinet-painting',
   },
   {
-    title: 'Floor Refinishing',
-    description: 'Restore hardwood floors with expert sanding, staining, and sealing services.',
-    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg',
+    title: 'Commercial Painting',
+    description: 'Professional painting for offices, retail spaces, and restaurants. Minimal disruption to your business.',
+    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg',
+    href: '/services/commercial-painting',
+  },
+  {
+    title: 'Residential Painting',
+    description: 'Complete home painting solutions from single rooms to entire house transformations.',
+    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg',
     href: '/services/residential-painting',
+  },
+  {
+    title: 'Carpentry',
+    description: 'Expert carpentry services including trim, molding, deck building, and structural repairs.',
+    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg',
+    href: '/services/carpentry',
+  },
+  {
+    title: 'Power Washing',
+    description: 'Restore your property\'s appearance with professional power washing for decks, siding, and driveways.',
+    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
+    href: '/services/power-washing',
   },
 ]
 
@@ -105,7 +131,7 @@ export default function HomePage() {
 
       {/* Main Content */}
       <main id="main-content">
-        {/* Hero Section - Simplified for CRO */}
+        {/* Hero Section - RS Development Group Style */}
         <section id="home" className="hero hero-simplified">
           <div className="hero-bg">
             <Image
@@ -124,47 +150,60 @@ export default function HomePage() {
           <div className="hero-content container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 500px), 1fr))', gap: '3rem', alignItems: 'center' }}>
               <div className="hero-text">
-                {/* Urgency eyebrow */}
-                <p style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1.25rem', background: 'rgba(220,38,38,0.9)', borderRadius: '100px', color: '#fff', fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
-                  FREE ESTIMATE — SAME-DAY RESPONSE
+                {/* Service area badge - RS style */}
+                <p style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1.25rem', background: 'rgba(204,0,0,0.9)', borderRadius: '100px', color: '#fff', fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
+                  Serving 117+ Massachusetts Cities
                 </p>
 
-                {/* High-impact headline */}
+                {/* 5-Star rating badge */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+                  <div style={{ display: 'flex', gap: '2px', color: '#CC0000' }}>
+                    <StarIcon size={18} fill="#CC0000" />
+                    <StarIcon size={18} fill="#CC0000" />
+                    <StarIcon size={18} fill="#CC0000" />
+                    <StarIcon size={18} fill="#CC0000" />
+                    <StarIcon size={18} fill="#CC0000" />
+                  </div>
+                  <span style={{ color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>5.0 Rating | 50+ Reviews</span>
+                </div>
+
+                {/* Headline */}
                 <h1 className="hero-title-emotional">
-                  Massachusetts&apos; Most Trusted<br />
-                  <span className="hero-title-accent">Painting Professionals</span>
+                  Professional Painting<br />
+                  <span className="hero-title-accent">Contractor in Massachusetts</span>
                 </h1>
 
                 <p className="hero-description-short" style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', maxWidth: '560px' }}>
-                  5-Star rated. Licensed & $2M insured. Premium Benjamin Moore & Sherwin-Williams paints. <strong style={{ color: '#FCD34D' }}>Spots are limited</strong> — request your free estimate now.
+                  Premium Benjamin Moore & Sherwin-Williams paints. Licensed & $2M insured. From interior painting to complete home exteriors, we deliver quality craftsmanship you can trust.
                 </p>
 
-                {/* Dual CTA - Primary action + secondary */}
+                {/* Dual CTA - RS style (Gold + White border) */}
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-                  <a href="#quote-form" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2.5rem', background: 'linear-gradient(135deg, #DC2626 0%, #A80303 100%)', color: '#fff', borderRadius: '8px', fontSize: '1.125rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 10px 40px rgba(220,38,38,0.4)', transition: 'all 0.3s ease', border: 'none' }}>
-                    Get Your Free Estimate
-                  </a>
-                  <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 1.5rem', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', color: '#fff', borderRadius: '12px', fontSize: '1rem', fontWeight: 600, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.3)' }}>
+                  <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', borderRadius: '8px', fontSize: '1.125rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 10px 40px rgba(204,0,0,0.35)', transition: 'all 0.3s ease', border: 'none' }}>
                     <PhoneIcon />
-                    (508) 690-8886
+                    Call (508) 690-8886
+                  </a>
+                  <a href="#quote-form" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem', background: 'transparent', color: '#fff', borderRadius: '8px', fontSize: '1rem', fontWeight: 600, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)', backdropFilter: 'blur(10px)' }}>
+                    Get Free Estimate
+                    <ChevronRightIcon size={18} />
                   </a>
                 </div>
 
-                {/* Trust badges */}
+                {/* Trust indicators - RS style */}
                 <div className="hero-trust-compact">
                   <span className="hero-trust-item">
-                    <StarIcon size={14} fill="currentColor" />
-                    5.0 · 40+ Reviews
-                  </span>
-                  <span className="hero-trust-divider">·</span>
-                  <span className="hero-trust-item">
                     <ShieldIcon />
-                    Licensed & $2M Insured
+                    Licensed & Insured
                   </span>
-                  <span className="hero-trust-divider">·</span>
+                  <span className="hero-trust-divider">|</span>
                   <span className="hero-trust-item">
                     <ClockIcon />
-                    Same-Day Response
+                    Same Day Response
+                  </span>
+                  <span className="hero-trust-divider">|</span>
+                  <span className="hero-trust-item">
+                    <DollarIcon />
+                    Free Estimates
                   </span>
                 </div>
               </div>
@@ -173,7 +212,7 @@ export default function HomePage() {
               <div id="quote-form" className="hero-form-card">
                 <LazyHeroForm
                   className="hero-form-iframe"
-                  src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
+                  src="https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn"
                   title="Get Your Free Painting Estimate"
                 />
               </div>
@@ -199,7 +238,7 @@ export default function HomePage() {
                 <StarIcon size={16} fill="currentColor" />
                 <StarIcon size={16} fill="currentColor" />
               </div>
-              <span className="rating">5</span>
+              <span className="rating">5.0</span>
               <a href="https://g.page/r/Cb984Z3qm9PsEAE/review" target="_blank" rel="noopener noreferrer" aria-label="See our Google reviews - 5 star rating">
                 See Our Reviews
                 <ChevronRightIcon size={14} />
@@ -208,31 +247,19 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Trust Badges Section - Yelp, Thumbtack, Google */}
+        {/* Trust Badges Section */}
         <section className="trust-badges-section">
           <div className="container">
             <div className="trust-badges-wrapper">
               <span className="trust-badges-label">Trusted & Verified On:</span>
               <div className="trust-badges-logos">
-                <a
-                  href="https://www.yelp.com/biz/jh-painting-services-marlborough?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="trust-badge-link"
-                  aria-label="View JH Painting on Yelp"
-                >
+                <a href="https://www.yelp.com/biz/jh-painting-services-marlborough?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer" className="trust-badge-link" aria-label="View JH Painting on Yelp">
                   <svg viewBox="0 0 384 512" fill="currentColor" className="trust-badge-icon yelp-icon">
                     <path d="M42.9 240.32l99.62 48.61c19.2 9.4 16.2 37.51-4.5 42.71L30.5 358.45a22.79 22.79 0 0 1-28.21-19.6 197.16 197.16 0 0 1 9-85.32 22.8 22.8 0 0 1 31.61-13.21zm44 239.25a199.45 199.45 0 0 0 79.42 32.11A22.78 22.78 0 0 0 192.94 490l3.9-110.82c.7-21.3-25.5-31.91-39.81-16.1l-74.21 82.4a22.82 22.82 0 0 0 4.09 34.09zm145.34-109.92l58.81 94a22.93 22.93 0 0 0 34 5.5 198.36 198.36 0 0 0 52.71-67.61A22.8 22.8 0 0 0 367.61 373.5l-108.51-45.71c-20-8.4-38.91 12.91-27.91 31.81zm148.33-132.23a197.44 197.44 0 0 0-50.41-69.31 22.77 22.77 0 0 0-34 4.4l-62 91.92c-11.9 17.7 4.7 40.61 25.2 34.71L366 268.63a22.82 22.82 0 0 0 14.61-31.21zM62.11 30.18a22.86 22.86 0 0 0-9.9 32l104.12 180.44c11.7 20.2 42.61 11.9 42.61-11.4V22.88a22.67 22.67 0 0 0-24.5-22.8 320.37 320.37 0 0 0-112.33 30.1z"/>
                   </svg>
                   <span className="trust-badge-text">Yelp</span>
                 </a>
-                <a
-                  href="https://www.thumbtack.com/ma/marlborough/exterior-painting/jh-painting-services-inc/service/335756687285510374?utm_medium=web&utm_source=txt&surface=sp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="trust-badge-link"
-                  aria-label="View JH Painting on Thumbtack"
-                >
+                <a href="https://www.thumbtack.com/ma/marlborough/exterior-painting/jh-painting-services-inc/service/335756687285510374?utm_medium=web&utm_source=txt&surface=sp" target="_blank" rel="noopener noreferrer" className="trust-badge-link" aria-label="View JH Painting on Thumbtack">
                   <svg viewBox="0 0 24 24" fill="none" className="trust-badge-icon thumbtack-icon">
                     <circle cx="12" cy="12" r="12" fill="#009FD9"/>
                     <path d="M17.5 8.5L15.5 10.5L13.5 8.5L11.5 10.5L9.5 8.5L7.5 10.5L6 9L9 6L12 9L15 6L18 9L16.5 10.5L17.5 8.5Z" fill="white"/>
@@ -241,13 +268,7 @@ export default function HomePage() {
                   </svg>
                   <span className="trust-badge-text">Thumbtack</span>
                 </a>
-                <a
-                  href="https://g.co/kgs/hc9Rfmv"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="trust-badge-link"
-                  aria-label="View JH Painting on Google"
-                >
+                <a href="https://g.co/kgs/hc9Rfmv" target="_blank" rel="noopener noreferrer" className="trust-badge-link" aria-label="View JH Painting on Google">
                   <svg viewBox="0 0 24 24" fill="none" className="trust-badge-icon google-badge-icon">
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
                     <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
@@ -261,17 +282,17 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Services Section - RS 3-Column Grid with 7 Services */}
         <section id="services" className="section section-modern">
           <div className="container">
             <div className="services-section-header section-header-enhanced">
               <span className="section-eyebrow">What We Offer</span>
-              <h2>Our <span>Services</span></h2>
+              <h2>Our Professional <span>Services</span></h2>
               <p>From expert <strong>painting and finishing work</strong> to complete home exteriors, we deliver quality craftsmanship on every project.</p>
               <div className="underline"></div>
             </div>
 
-            <div className="services-grid">
+            <div className="services-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))' }}>
               {services.map((service, index) => (
                 <Link href={service.href} key={index} className="service-card service-card-enhanced">
                   {service.featured && <span className="service-card-featured">Featured Service</span>}
@@ -283,7 +304,7 @@ export default function HomePage() {
                       height={400}
                       loading="lazy"
                       quality={75}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                     />
                   </div>
@@ -300,7 +321,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* About Section - Dark RS Style */}
+        {/* About Section - RS Dark Style with Stats */}
         <section id="about" className="section section-modern about-section-dark">
           <div className="container">
             <div className="about-grid">
@@ -316,6 +337,21 @@ export default function HomePage() {
                 <p>
                   Beyond painting, we offer comprehensive home improvement services including cabinet refinishing, floor restoration, and deck staining. Whether you&apos;re updating your home&apos;s curb appeal, refreshing a single room, or planning a full renovation, we have the skills and experience to deliver outstanding results.
                 </p>
+
+                {/* Stats Grid - RS Style */}
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginTop: '2rem' }}>
+                  {[
+                    { value: '117+', label: 'Cities Served' },
+                    { value: '50+', label: 'Google Reviews' },
+                    { value: '100%', label: 'Licensed' },
+                    { value: '24hr', label: 'Response Time' },
+                  ].map((stat, i) => (
+                    <div key={i} style={{ textAlign: 'center', padding: '1.25rem 0.75rem', background: 'rgba(204,0,0,0.1)', border: '1px solid rgba(204,0,0,0.2)', borderRadius: '12px' }}>
+                      <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#CC0000', lineHeight: 1.2 }}>{stat.value}</div>
+                      <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500, marginTop: '0.25rem' }}>{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="about-image-wrapper">
@@ -345,20 +381,21 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Process Section - RS Style */}
+        {/* Process Section - RS 4-Step Style */}
         <section className="section section-modern">
           <div className="container">
             <div className="section-header section-header-enhanced">
               <span className="section-eyebrow">How It Works</span>
               <h2>Our Process</h2>
-              <p>From initial consultation to project completion, we make the painting process simple and stress-free.</p>
+              <p>From initial consultation to final walkthrough, we make the painting process simple and stress-free.</p>
             </div>
 
-            <div className="process-grid-home process-grid-3">
+            <div className="process-grid-home" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1.5rem' }}>
               {[
-                { num: '01', icon: PhoneIcon, title: 'Free Quote', desc: 'Call or text us. We\'ll discuss your project and provide a detailed estimate within 24 hours.' },
-                { num: '02', icon: HardHatIcon, title: 'We Paint', desc: 'Our expert team handles everything—prep, painting, and cleanup. You just relax.' },
-                { num: '03', icon: CheckIcon, title: 'Love It', desc: 'We ensure you\'re 100% satisfied. If not, we\'ll make it right. Guaranteed.' },
+                { num: '01', icon: PhoneIcon, title: 'Free Consultation', desc: 'Call or text us. We\'ll discuss your project goals, timeline, and provide expert recommendations.' },
+                { num: '02', icon: ClipboardIcon, title: 'Detailed Estimate', desc: 'We provide a transparent, written estimate with clear pricing. No hidden fees, no surprises.' },
+                { num: '03', icon: HardHatIcon, title: 'Expert Painting', desc: 'Our skilled team handles everything—prep, painting, and cleanup with premium materials.' },
+                { num: '04', icon: EyeIcon, title: 'Final Walkthrough', desc: 'We walk through every detail with you. If anything isn\'t perfect, we make it right. Guaranteed.' },
               ].map((step, index) => (
                 <div key={index} className="process-card-home process-step-enhanced">
                   <div className="process-card-home-num">{step.num}</div>
@@ -373,7 +410,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Exterior Painting Detail - RS Style */}
+        {/* Expert Painting Services - RS Featured Section */}
         <section id="exterior-painting" className="section detail-section detail-section-rs">
           <div className="container">
             <div className="detail-grid">
@@ -466,7 +503,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Why Choose Us */}
+        {/* Why Choose Us - RS Style with Gold Icons */}
         <section className="section section-modern">
           <div className="container">
             <div className="section-header section-header-enhanced">
@@ -477,10 +514,10 @@ export default function HomePage() {
 
             <div className="why-grid">
               {[
-                { icon: ShieldIcon, title: 'Licensed & Insured', desc: 'Fully licensed with comprehensive insurance' },
-                { icon: StarIcon, title: '5-Star Rated', desc: '40+ verified Google reviews' },
-                { icon: ClockIcon, title: 'On-Time Completion', desc: 'We deliver projects on schedule' },
-                { icon: DollarIcon, title: 'Free Estimates', desc: 'Transparent pricing, no obligation' },
+                { icon: ShieldIcon, title: 'Licensed & Insured', desc: 'Fully licensed with $2M general liability insurance and workers compensation' },
+                { icon: StarIcon, title: '5-Star Rated', desc: '50+ verified 5-star Google reviews from satisfied homeowners' },
+                { icon: ClockIcon, title: 'On-Time Completion', desc: 'We respect your schedule and deliver every project on time' },
+                { icon: DollarIcon, title: 'Free Estimates', desc: 'Transparent pricing with detailed written estimates, no obligation' },
               ].map((item, index) => (
                 <div key={index} className="why-card why-card-enhanced">
                   <div className="why-icon">
@@ -494,7 +531,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Video Section - Client Island */}
+        {/* Video Section */}
         <HomeVideoSection />
 
         {/* Gallery Section */}
@@ -502,7 +539,7 @@ export default function HomePage() {
           <div className="container">
             <div className="section-header section-header-enhanced">
               <span className="section-eyebrow">Our Portfolio</span>
-              <h2>Our Work Gallery</h2>
+              <h2>Project Gallery</h2>
               <p>Browse through our portfolio of completed projects across Massachusetts.</p>
             </div>
 
@@ -527,7 +564,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Before/After Section - Client Island */}
+        {/* Before/After Section - ORIGINAL PRESERVED */}
         <HomeBeforeAfter />
 
         {/* Reviews Section */}
@@ -549,7 +586,68 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Why Choose Us — Service Overview for AI citation */}
+        <section className="section section-modern" style={{ background: '#fff' }}>
+          <div className="container">
+            <div className="section-header section-header-enhanced">
+              <span className="section-eyebrow">Our Services</span>
+              <h2>Professional Painting Services — Massachusetts</h2>
+              <p>Complete painting solutions for homes and businesses. All estimates are free.</p>
+            </div>
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9375rem' }}>
+                <caption style={{ textAlign: 'left', marginBottom: '0.75rem', color: '#6b7280', fontSize: '0.875rem' }}>Every project includes free color consultation, premium paints, thorough preparation, and a satisfaction guarantee. Contact us for your personalized free estimate.</caption>
+                <thead>
+                  <tr style={{ borderBottom: '2px solid #e5e7eb' }}>
+                    <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontWeight: 600, color: '#111827' }}>Service</th>
+                    <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontWeight: 600, color: '#111827' }}>Typical Timeline</th>
+                    <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontWeight: 600, color: '#111827' }}>What&apos;s Included</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style={{ borderBottom: '1px solid #f3f4f6' }}>
+                    <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Interior Painting</td>
+                    <td style={{ padding: '0.75rem 1rem' }}>1–5 days</td>
+                    <td style={{ padding: '0.75rem 1rem', color: '#6b7280' }}>Walls, ceiling, trim, baseboards, 2 coats premium paint</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #f3f4f6', background: '#f9fafb' }}>
+                    <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Exterior Painting</td>
+                    <td style={{ padding: '0.75rem 1rem' }}>3–7 days</td>
+                    <td style={{ padding: '0.75rem 1rem', color: '#6b7280' }}>Power wash, scrape, prime, caulk, 2 coats weather-resistant paint</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #f3f4f6' }}>
+                    <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Cabinet Refinishing</td>
+                    <td style={{ padding: '0.75rem 1rem' }}>5–7 days</td>
+                    <td style={{ padding: '0.75rem 1rem', color: '#6b7280' }}>Degrease, sand, prime, spray finish, hardware reinstall</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #f3f4f6', background: '#f9fafb' }}>
+                    <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Commercial Painting</td>
+                    <td style={{ padding: '0.75rem 1rem' }}>Custom schedule</td>
+                    <td style={{ padding: '0.75rem 1rem', color: '#6b7280' }}>After-hours available, minimal disruption, brand color matching</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #f3f4f6' }}>
+                    <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Power Washing</td>
+                    <td style={{ padding: '0.75rem 1rem' }}>1 day</td>
+                    <td style={{ padding: '0.75rem 1rem', color: '#6b7280' }}>Driveways, siding, decks, patios, fences</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #f3f4f6', background: '#f9fafb' }}>
+                    <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Carpentry</td>
+                    <td style={{ padding: '0.75rem 1rem' }}>1–3 days</td>
+                    <td style={{ padding: '0.75rem 1rem', color: '#6b7280' }}>Trim, baseboards, crown molding, wood repair, deck repair</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #f3f4f6' }}>
+                    <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Deck Staining</td>
+                    <td style={{ padding: '0.75rem 1rem' }}>1–2 days</td>
+                    <td style={{ padding: '0.75rem 1rem', color: '#6b7280' }}>Clean, sand, stain or paint, seal</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p style={{ marginTop: '1rem', fontSize: '0.875rem', color: '#6b7280' }}>* All estimates are free with no obligation. Call <a href="tel:+15086908886" style={{ color: '#CC0000', fontWeight: 600 }}>(508) 690-8886</a> for your personalized quote.</p>
+          </div>
+        </section>
+
+        {/* Contact Section - RS 2-Column Style */}
         <section id="contact" className="section">
           <div className="container">
             <div className="section-header">
@@ -562,7 +660,7 @@ export default function HomePage() {
                 <h3>Request Your Free Estimate</h3>
                 <LazyIframe
                   className="contact-form-iframe"
-                  src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
+                  src="https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn"
                   title="Contact Form"
                   style={{ minHeight: '500px' }}
                 />
@@ -573,7 +671,7 @@ export default function HomePage() {
                   <h3>Contact Us Directly</h3>
 
                   <div className="contact-item">
-                    <div className="contact-item-icon">
+                    <div className="contact-item-icon" style={{ background: 'rgba(204,0,0,0.1)', color: '#CC0000' }}>
                       <PhoneIcon />
                     </div>
                     <div className="contact-item-content">
@@ -583,7 +681,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="contact-item">
-                    <div className="contact-item-icon">
+                    <div className="contact-item-icon" style={{ background: 'rgba(204,0,0,0.1)', color: '#CC0000' }}>
                       <MailIcon />
                     </div>
                     <div className="contact-item-content">
@@ -593,35 +691,43 @@ export default function HomePage() {
                   </div>
 
                   <div className="contact-item">
-                    <div className="contact-item-icon">
+                    <div className="contact-item-icon" style={{ background: 'rgba(204,0,0,0.1)', color: '#CC0000' }}>
                       <MapPinIcon />
                     </div>
                     <div className="contact-item-content">
                       <h4>Service Area</h4>
-                      <p>Serving 114+ cities across Massachusetts</p>
+                      <p>Serving 117+ cities across Massachusetts</p>
                     </div>
                   </div>
 
                   <div className="contact-item">
-                    <div className="contact-item-icon">
+                    <div className="contact-item-icon" style={{ background: 'rgba(204,0,0,0.1)', color: '#CC0000' }}>
                       <ClockIcon />
                     </div>
                     <div className="contact-item-content">
                       <h4>Business Hours</h4>
-                      <p>Mon-Sat: 7AM - 6PM</p>
+                      <p>Mon-Fri: 7AM-6PM | Sat: 8AM-4PM</p>
                     </div>
+                  </div>
+
+                  {/* Social Links */}
+                  <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--jh-line)' }}>
+                    <a href="https://www.facebook.com/profile.php?id=61564489391475" target="_blank" rel="noopener noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#f1f5f9', color: '#CC0000', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="Facebook">
+                      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/jhpaintingservices_/" target="_blank" rel="noopener noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#f1f5f9', color: '#CC0000', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="Instagram">
+                      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@JHPaintingServices-br9wh" target="_blank" rel="noopener noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#f1f5f9', color: '#CC0000', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="YouTube">
+                      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
                   </div>
                 </div>
 
+                {/* Map */}
                 <div className="map-container">
-                  <a
-                    href="https://g.co/kgs/hc9Rfmv"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="static-map-link"
-                    aria-label="View JH Painting Services on Google Maps"
-                  >
-                    <div className="static-map-placeholder">
+                  <a href="https://g.co/kgs/hc9Rfmv" target="_blank" rel="noopener noreferrer" className="static-map-link" aria-label="View JH Painting Services on Google Maps">
+                    <div className="static-map-placeholder" style={{ border: '2px solid #CC0000' }}>
                       <MapPinIcon />
                       <span className="static-map-title">JH Painting Services</span>
                       <span className="static-map-address">Serving All of Massachusetts</span>
@@ -642,19 +748,25 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* FAQ Section - Client Island */}
+        {/* FAQ Section */}
         <HomeFAQ />
 
-        {/* CTA Section */}
-        <section className="cta-section cta-section-enhanced">
+        {/* CTA Section - RS Gold Banner Style */}
+        <section className="cta-section cta-section-enhanced" style={{ background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)' }}>
           <div className="container">
-            <div className="cta-content">
-              <h2>Your Home Deserves the Best — Let&apos;s Talk</h2>
-              <p>Licensed & $2M insured. 5-star rated. Same-day response on all estimates.</p>
-              <a href="tel:+15086908886" className="btn btn-lg">
-                <PhoneIcon />
-                Call (508) 690-8886
-              </a>
+            <div className="cta-content" style={{ color: '#fff' }}>
+              <h2 style={{ color: '#fff' }}>Ready to Transform Your Home?</h2>
+              <p style={{ color: 'rgba(255,255,255,0.85)' }}>Licensed & $2M insured. 5-star rated. Same-day response on all estimates.</p>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                <a href="tel:+15086908886" className="btn btn-lg" style={{ background: '#fff', color: '#CC0000', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
+                  <PhoneIcon />
+                  Call (508) 690-8886
+                </a>
+                <a href="#quote-form" className="btn btn-lg" style={{ background: 'transparent', color: '#fff', border: '2px solid #fff' }}>
+                  Get Free Estimate
+                  <ChevronRightIcon size={18} />
+                </a>
+              </div>
             </div>
           </div>
         </section>

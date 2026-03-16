@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'How Much Does Painting Cost in MA? | Expert Tips & Guides 2024',
-  description: 'Get answers: How much to paint a house in Massachusetts? Best paint colors 2024? DIY vs hiring pros? Expert painting tips from MA painters with 40+ 5-star reviews.',
+  title: 'Painting Tips & Cost Guides MA | JH Painting Blog',
+  description: 'How much does painting cost in Massachusetts? Best paint colors? DIY vs pro? Expert tips from MA painters with 40+ 5-star reviews. (508) 690-8886',
   keywords: [
     'how much does painting cost Massachusetts',
     'painting cost per square foot MA',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Painting Tips MA | Cost Guides & Expert Advice ⭐',
+    title: 'Painting Tips MA | Cost Guides & Expert Advice',
     description: 'How much does painting cost in MA? Best colors? DIY vs pro? Get expert answers.',
     images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
     creator: '@jhpaintingma',

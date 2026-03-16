@@ -95,10 +95,10 @@ const powerWashingSchema = {
       "description": "Professional power washing and pressure cleaning services in Massachusetts. Expert cleaning for homes, decks, driveways, patios, and siding. Restore your property's appearance before painting.",
       "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://jhpaintingservices.com/#localbusiness",
+        "@id": "https://jhpaintingservices.com/#organization",
         "name": "JH Painting Services",
         "telephone": "+1-508-690-8886",
-        "priceRange": "$$",
+        "priceRange": "Free Estimates",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Marlborough",
@@ -184,40 +184,16 @@ const powerWashingSchema = {
       ]
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How often should I power wash my house?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We recommend power washing your home's exterior at least once a year, or before any exterior painting project. Massachusetts weather with its humidity and seasonal changes can cause mold, mildew, and algae buildup that should be removed regularly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is power washing safe for all surfaces?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We use different pressure levels and techniques for different surfaces. Soft washing is used for delicate surfaces like painted wood and siding, while higher pressure is appropriate for concrete and stone. Our experienced technicians know exactly what settings to use for each surface type."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need to power wash before painting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! Power washing is essential before any exterior painting project. It removes dirt, mold, mildew, loose paint, and other contaminants that prevent proper paint adhesion. This step is critical for a long-lasting paint job."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does power washing cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Power washing costs vary based on the size of the area and type of surface. House washing typically ranges from $200-$500, decks $100-$300, and driveways $100-$250. We provide free estimates for all power washing projects."
-          }
-        }
+      "@type": "HowTo",
+      "name": "How Power Washing Works at JH Painting Services",
+      "description": "Our professional power washing process restores surfaces to like-new condition.",
+      "totalTime": "P1D",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Free Assessment", "text": "Call (508) 690-8886. We assess your surfaces — driveway, siding, deck, patio, or fence." },
+        { "@type": "HowToStep", "position": 2, "name": "Method Selection", "text": "We choose the right pressure and technique: high-pressure for concrete, soft-wash for siding and delicate surfaces." },
+        { "@type": "HowToStep", "position": 3, "name": "Surface Protection", "text": "We protect plants, windows, and surrounding areas before beginning." },
+        { "@type": "HowToStep", "position": 4, "name": "Professional Washing", "text": "Commercial-grade equipment removes mold, mildew, algae, dirt, and oxidation." },
+        { "@type": "HowToStep", "position": 5, "name": "Final Inspection", "text": "We inspect all surfaces with you. Problem areas get extra attention. Your property looks brand new." }
       ]
     }
   ]
@@ -458,6 +434,25 @@ export default function PowerWashingPage() {
                   <span className="service-stat-label">{stat.label}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Citation-First Summary — Optimized for AI search engines */}
+        <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
+          <div className="container">
+            <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
+              <strong>JH Painting Services</strong> provides professional power washing and pressure cleaning across <strong>117+ cities in Massachusetts</strong>. We clean driveways, siding, decks, patios, fences, and walkways using commercial-grade equipment. Both high-pressure and soft-wash techniques available. Licensed, <strong>$2M insured</strong>. Contact us for a free estimate. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong>.
+            </p>
+          </div>
+        </section>
+
+        {/* Free Estimate CTA */}
+        <section className="service-section service-section-white" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+          <div className="container">
+            <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+              <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your needs.</p>
+              <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 — Free Estimate</a>
             </div>
           </div>
         </section>

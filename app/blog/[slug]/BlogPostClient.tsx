@@ -28,7 +28,7 @@ import {
   Star,
   Shield,
   Check,
-} from '@/app/components/icons'
+} from '@/app/components/Icons'
 import { BlogPost } from '../../data/blogPosts'
 
 const menuServices = [
@@ -426,7 +426,7 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
                 <div className="blog-sidebar-form">
                   <h4>Get Your Free Quote</h4>
                   <iframe
-                    src="https://api.leadconnectorhq.com/widget/form/JRiO8zZFsJyeWQDs0WtO"
+                    src="https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn"
                     title="Contact Form"
                     loading="lazy"
                     className="blog-sidebar-form-iframe"

@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { cities, getCitySlugWithState } from './data/cities'
+import { cities, normalizeCitySlug } from './data/cities'
 import { blogPosts } from './data/blogPosts'
 import { regions } from './data/regions'
 
@@ -88,10 +88,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/cities`,
+      url: `${baseUrl}/massachusetts`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/llms.txt`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/llms-full.txt`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.3,
     },
   ]
 
@@ -114,18 +126,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'power-washing',
   ]
 
-  // City pages with state suffix: /cities/marlborough-ma
+  // City pages: /massachusetts/marlborough
   const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
-    url: `${baseUrl}/cities/${getCitySlugWithState(city.slug)}`,
+    url: `${baseUrl}/massachusetts/${normalizeCitySlug(city.slug)}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
 
-  // City + service pages with state suffix: /cities/marlborough-ma/interior-painting
+  // City + service pages: /massachusetts/marlborough/interior-painting
   const cityServicePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
     servicesSlugs.map((service) => ({
-      url: `${baseUrl}/cities/${getCitySlugWithState(city.slug)}/${service}`,
+      url: `${baseUrl}/massachusetts/${normalizeCitySlug(city.slug)}/${service}`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.7,

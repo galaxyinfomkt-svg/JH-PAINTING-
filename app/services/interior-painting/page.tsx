@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import { Phone, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles } from '@/app/components/icons'
+import { Phone, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles } from '@/app/components/Icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
@@ -24,10 +24,10 @@ const interiorPaintingSchema = {
       "description": "Professional interior painting services across Massachusetts. Transform your home with expert wall painting, trim work, ceiling painting, and color consultation. Premium paints and meticulous preparation.",
       "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://jhpaintingservices.com/#localbusiness",
+        "@id": "https://jhpaintingservices.com/#organization",
         "name": "JH Painting Services",
         "telephone": "+1-508-690-8886",
-        "priceRange": "$$",
+        "priceRange": "Free Estimates",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Marlborough",
@@ -105,40 +105,16 @@ const interiorPaintingSchema = {
       ]
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does interior painting cost in Massachusetts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Interior painting costs in Massachusetts typically range from $2-$6 per square foot, depending on room size, wall condition, paint quality, and scope of work. Most rooms cost between $300-$800. Contact JH Painting for a free, detailed estimate tailored to your project."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does it take to paint an interior room?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A typical bedroom or living room takes 1-2 days to complete, including proper prep work, priming, and two coats of paint. Larger rooms or those requiring extensive preparation may take longer. We always provide accurate timelines in our free estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What paint brands do you use for interior painting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We use premium paint brands including Benjamin Moore, Sherwin-Williams, and other top-quality paints. These provide superior coverage, durability, and a beautiful finish that lasts for years."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need to move furniture before painting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We handle furniture moving as part of our service. We carefully move and cover furniture, protect floors with drop cloths, and ensure everything is put back after the job is complete. Large items should be moved to the center of the room."
-          }
-        }
+      "@type": "HowTo",
+      "name": "How Interior Painting Works at JH Painting Services",
+      "description": "Our professional 5-step interior painting process ensures flawless results every time.",
+      "totalTime": "P3D",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886 or fill out our online form. We discuss your project goals, color preferences, and timeline." },
+        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "We visit your home and provide a transparent written estimate with clear pricing. No hidden fees." },
+        { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Our team patches drywall, sands surfaces, cleans walls, primes bare spots, and protects your furniture and floors." },
+        { "@type": "HowToStep", "position": 4, "name": "Expert Painting", "text": "We apply two coats of premium Benjamin Moore or Sherwin-Williams paint with precision cutting-in and smooth rolling." },
+        { "@type": "HowToStep", "position": 5, "name": "Final Walkthrough", "text": "We inspect every detail with you. If anything isn't perfect, we make it right. 100% satisfaction guaranteed." }
       ]
     }
   ]
@@ -213,7 +189,7 @@ const painPoints = [
 
 const stats = [
   { number: '500+', label: 'Interiors Painted' },
-  { number: '15+', label: 'Years Experience' },
+  { number: '7+', label: 'Years Experience' },
   { number: '100%', label: 'Satisfaction Rate' },
   { number: '117', label: 'Cities Served' }
 ]
@@ -294,7 +270,7 @@ export default function InteriorPaintingPage() {
                   <Phone size={20} />
                   {BUSINESS.phone}
                 </a>
-                <Link href="/#contact" className="service-cta-secondary">
+                <Link href="/contact" className="service-cta-secondary">
                   Get Your Free Estimate
                   <ChevronRight size={20} />
                 </Link>
@@ -363,6 +339,25 @@ export default function InteriorPaintingPage() {
                 <div className="service-stat-label">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Citation-First Summary — Optimized for AI search engines */}
+      <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
+        <div className="container">
+          <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
+            <strong>JH Painting Services</strong> provides professional interior painting across <strong>117+ cities in Massachusetts</strong>. Based in Marlborough, MA, we are a licensed, <strong>$2M insured</strong>, and <strong>EPA Lead-Safe certified</strong> painting contractor. We exclusively use premium <strong>Benjamin Moore</strong> and <strong>Sherwin-Williams</strong> paints with a <strong>3-year warranty</strong>. Contact us for a free estimate. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong> for a free estimate.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA Section — Get a Free Estimate */}
+      <section className="service-section service-section-white" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+            <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your home.</p>
+            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 — Free Estimate</a>
           </div>
         </div>
       </section>
@@ -512,7 +507,7 @@ export default function InteriorPaintingPage() {
                 />
               </div>
               <div className="service-about-experience">
-                <div className="service-about-experience-number">15+</div>
+                <div className="service-about-experience-number">7+</div>
                 <div className="service-about-experience-label">Years Experience</div>
               </div>
             </div>
@@ -521,7 +516,7 @@ export default function InteriorPaintingPage() {
               <span className="service-section-badge">About Us</span>
               <h2>Meet Jafet Henrique, Your Interior Painting Expert</h2>
               <p>
-                Founded with a passion for perfection, JH Painting Services has been transforming interiors across Massachusetts for over 15 years. Owner Jafet Henrique leads every project with dedication to quality and customer satisfaction.
+                Founded with a passion for perfection, JH Painting Services has been transforming interiors across Massachusetts since 2018. Owner Jafet Henrique leads every project with dedication to quality and customer satisfaction.
               </p>
               <p>
                 We understand that your interior reflects your personality. From cozy bedrooms to professional offices, we deliver flawless finishes that exceed expectations. Our attention to detail, clean work practices, and premium materials set us apart.
@@ -553,7 +548,7 @@ export default function InteriorPaintingPage() {
                 <Phone size={20} />
                 Call {BUSINESS.phone}
               </a>
-              <Link href="/#contact" className="service-cta-btn-outline">
+              <Link href="/contact" className="service-cta-btn-outline">
                 Get Your Free Estimate
               </Link>
             </div>

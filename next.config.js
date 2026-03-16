@@ -7,6 +7,7 @@ const nextConfig = {
   experimental: {
     workerThreads: false,
     cpus: 2,
+    optimizeCss: true,
   },
   // Redirect old URLs to /cities/[city]-ma/[service] pattern
   async redirects() {
@@ -587,6 +588,10 @@ const nextConfig = {
           {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
+          },
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
           },
           {
             key: 'Referrer-Policy',

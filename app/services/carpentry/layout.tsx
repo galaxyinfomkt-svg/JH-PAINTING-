@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Wood Rot Spreading? Carpentry Repair MA | Fix Before It\'s Worse ⭐',
-  description: 'Noticed rot on your trim or siding? DON\'T ignore it. Small rot becomes BIG damage fast. We fix windows, doors, decks, trim. Licensed & $2M insured. FREE inspection → (508) 690-8886',
+  title: 'Carpentry Repair MA | JH Painting | FREE Quote',
+  description: 'Professional carpentry in Massachusetts. Window frames, doors, decks, trim, siding repair. Licensed & $2M insured. (508) 690-8886',
   keywords: [
     'carpentry services Massachusetts',
     'carpentry near me',

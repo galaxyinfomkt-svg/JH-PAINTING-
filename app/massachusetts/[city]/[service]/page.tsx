@@ -40,7 +40,7 @@ const Sparkles = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
 )
 import dynamic from 'next/dynamic'
-import { getCityBySlug, cities, getCitySlugWithState } from '@/app/data/cities'
+import { getCityBySlug, cities } from '@/app/data/cities'
 import { cityContentMap, generateServiceContent } from '@/app/data/cityContent'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
@@ -71,7 +71,7 @@ function generateCityServiceSchema(
     "@graph": [
       {
         "@type": "Service",
-        "@id": `https://jhpaintingservices.com/cities/${citySlug}/${serviceSlug}#service`,
+        "@id": `https://jhpaintingservices.com/massachusetts/${citySlug}/${serviceSlug}#service`,
         "name": `${serviceName} in ${cityName}, MA`,
         "serviceType": serviceName,
         "description": `Professional ${serviceName.toLowerCase()} services in ${cityName}, ${countyName}, Massachusetts. Expert painters, premium materials, licensed & insured. Free estimates available.`,
@@ -86,7 +86,7 @@ function generateCityServiceSchema(
             "name": "Massachusetts"
           }
         },
-        "url": `https://jhpaintingservices.com/cities/${citySlug}/${serviceSlug}`,
+        "url": `https://jhpaintingservices.com/massachusetts/${citySlug}/${serviceSlug}`,
         "image": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
       },
       {
@@ -94,7 +94,7 @@ function generateCityServiceSchema(
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jhpaintingservices.com" },
           { "@type": "ListItem", "position": 2, "name": serviceName, "item": `https://jhpaintingservices.com/services/${serviceSlug}` },
-          { "@type": "ListItem", "position": 3, "name": `${cityName}, MA`, "item": `https://jhpaintingservices.com/cities/${citySlug}/${serviceSlug}` }
+          { "@type": "ListItem", "position": 3, "name": `${cityName}, MA`, "item": `https://jhpaintingservices.com/massachusetts/${citySlug}/${serviceSlug}` }
         ]
       },
       {
@@ -678,12 +678,8 @@ export default async function CityServicePage({ params }: Props) {
 
             <div className="service-other-grid">
               {otherServices.map(([slug, svc]) => {
-                // Get proper city slug with state suffix for URL
-                const citySlugForUrl = citySlug.endsWith('-ma') || citySlug.endsWith('-ri')
-                  ? citySlug
-                  : getCitySlugWithState(citySlug.replace(/-ma$/, '').replace(/-ri$/, ''))
                 return (
-                <Link key={slug} href={`/cities/${citySlugForUrl}/${slug}`} className="service-other-card">
+                <Link key={slug} href={`/massachusetts/${citySlug}/${slug}`} className="service-other-card">
                   <h3>{svc.name}</h3>
                   <p>{svc.description}</p>
                   <span className="service-other-link">

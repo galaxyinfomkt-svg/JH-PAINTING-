@@ -40,6 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   return {
     title: `${service.name} ${region.name} MA | Licensed Painters | FREE Quote`,
     description: `Professional ${service.name.toLowerCase()} across ${region.name}. Serving ${region.citySlugs.length}+ cities. Licensed & $2M insured. 40+ 5-star reviews. Call (508) 690-8886`,
+    keywords: `${service.name} ${region.name} MA, ${service.name.toLowerCase()} ${region.name}, painters ${region.name} Massachusetts`,
     alternates: { canonical: canonicalUrl },
     openGraph: {
       title: `${service.name} in ${region.name} | JH Painting Services`,
