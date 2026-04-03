@@ -548,7 +548,19 @@ export default function RootLayout({
             __html: JSON.stringify(schemaData)
           }}
         />
-        {/* GHL, GTM, Chat, Reviews scripts are deferred via DeferredScripts component */}
+        {/* GHL External Tracking - in HTML source so GHL audit detects it */}
+        <script
+          src="https://link.msgsndr.com/js/external-tracking.js"
+          data-tracking-id="tk_17bc6e6f297d4ffc8b66e30609380978"
+          async
+        />
+        {/* LeadConnector Chat Widget - in HTML source so GHL audit detects it */}
+        <script
+          src="https://beta.leadconnectorhq.com/loader.js"
+          data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69626d9e5c8c5ba64720801a"
+          async
+        />
       </head>
       <body>
         {/* Skip to main content - Accessibility */}

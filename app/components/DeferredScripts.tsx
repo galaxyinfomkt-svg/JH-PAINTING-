@@ -43,25 +43,12 @@ export default function DeferredScripts() {
         "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KB89D6QQ');"
       )
 
-      // GHL External Tracking - delay 1s
-      setTimeout(() => {
-        injectScript('https://link.msgsndr.com/js/external-tracking.js', {
-          'data-tracking-id': 'tk_17bc6e6f297d4ffc8b66e30609380978',
-        })
-      }, 1000)
+      // GHL External Tracking + Chat Widget moved to layout.tsx <head> for GHL audit detection
 
-      // LeadConnector Chat Widget - delay 2s
-      setTimeout(() => {
-        injectScript('https://beta.leadconnectorhq.com/loader.js', {
-          'data-resources-url': 'https://beta.leadconnectorhq.com/chat-widget/loader.js',
-          'data-widget-id': '69626d9e5c8c5ba64720801a',
-        })
-      }, 2000)
-
-      // Reviews Widget - delay 3s
+      // Reviews Widget - delay 1s
       setTimeout(() => {
         injectScript('https://reputationhub.site/reputation/assets/review-widget.js')
-      }, 3000)
+      }, 1000)
     }
 
     // Only real user interactions (no mousemove - Lighthouse can trigger it)
