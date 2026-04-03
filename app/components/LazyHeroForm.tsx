@@ -13,14 +13,18 @@ export default function LazyHeroForm({ src, title, className }: LazyHeroFormProp
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-    // Delay form iframe to after LCP + Lighthouse measurement window.
-    // The form loads recaptcha (~363KB JS) which causes heavy TBT.
-    // Wait 4s to ensure it loads after Lighthouse finishes scoring.
+    // Load form as soon as browser is idle (typically <100ms after paint).
+    // Falls back to 500ms timeout if requestIdleCallback is unavailable.
     let cancelled = false
     const load = () => { if (!cancelled) setShouldLoad(true) }
 
-    const timer = setTimeout(load, 4000)
-    return () => { cancelled = true; clearTimeout(timer) }
+    if ('requestIdleCallback' in window) {
+      const id = requestIdleCallback(load, { timeout: 1000 })
+      return () => { cancelled = true; cancelIdleCallback(id) }
+    } else {
+      const timer = setTimeout(load, 500)
+      return () => { cancelled = true; clearTimeout(timer) }
+    }
   }, [])
 
   return (
