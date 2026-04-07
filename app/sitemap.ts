@@ -48,8 +48,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/services/exterior-painting`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.9,
+      changeFrequency: 'weekly',
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/services/commercial-painting`,
@@ -135,12 +135,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // City + service pages: /massachusetts/marlborough/interior-painting
+  // Exterior painting pages get higher priority (better leads)
   const cityServicePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
     servicesSlugs.map((service) => ({
       url: `${baseUrl}/massachusetts/${normalizeCitySlug(city.slug)}/${service}`,
       lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      changeFrequency: service === 'exterior-painting' ? 'weekly' as const : 'monthly' as const,
+      priority: service === 'exterior-painting' ? 0.85 : 0.7,
     }))
   )
 

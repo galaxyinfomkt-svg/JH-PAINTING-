@@ -91,6 +91,59 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'LinkedInBot',
         allow: '/',
       },
+      // Gemini / Google AI
+      {
+        userAgent: 'Google-InspectionTool',
+        allow: '/',
+      },
+      {
+        userAgent: 'GoogleOther',
+        allow: '/',
+      },
+      // Microsoft / Copilot
+      {
+        userAgent: 'bingbot',
+        allow: '/',
+      },
+      {
+        userAgent: 'MicrosoftPreview',
+        allow: '/',
+      },
+      // Apple Intelligence
+      {
+        userAgent: 'Applebot',
+        allow: '/',
+      },
+      // Brave Search
+      {
+        userAgent: 'Brave',
+        allow: '/',
+      },
+      // DuckDuckGo
+      {
+        userAgent: 'DuckDuckBot',
+        allow: '/',
+      },
+      // Yandex AI
+      {
+        userAgent: 'YandexBot',
+        allow: '/',
+      },
+      // Meta AI
+      {
+        userAgent: 'FacebookBot',
+        allow: '/',
+      },
+      // Mistral AI
+      {
+        userAgent: 'MistralBot',
+        allow: '/',
+      },
+      // DeepSeek
+      {
+        userAgent: 'DeepSeekBot',
+        allow: '/',
+      },
     ],
     sitemap: 'https://jhpaintingservices.com/sitemap.xml',
     host: 'https://jhpaintingservices.com',

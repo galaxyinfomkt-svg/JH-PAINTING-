@@ -26,15 +26,15 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const canonicalUrl = `https://jhpaintingservices.com/massachusetts/${normalizeCitySlug(city.slug)}`
 
   return {
-    title: `Painters ${city.name} MA | Peeling Paint? We Fix It Fast FREE Quote`,
-    description: `Tired of peeling paint ruining your ${city.name} home? Our painters fix it RIGHT the first time. ✓ 40+ 5-star reviews ✓ Licensed & $2M insured ✓ Premium paints that LAST. Get FREE quote (508) 690-8886`,
-    keywords: `painters ${city.name} MA, house painters ${city.name}, fix peeling paint ${city.name}, painting contractor ${city.name} Massachusetts, interior painting ${city.name}, exterior painting ${city.name}, reliable painters ${city.name}`,
+    title: `#1 Exterior & Interior Painters ${city.name} MA | FREE Quote | (508) 690-8886`,
+    description: `Professional exterior & interior painting in ${city.name}, MA. Exterior house painting specialist with 5-year warranty. Premium Benjamin Moore & Sherwin-Williams paints. Licensed, $2M insured, EPA Lead-Safe. 40+ 5-star reviews. FREE estimate: (508) 690-8886`,
+    keywords: `exterior painters ${city.name} MA, house painters ${city.name}, exterior painting ${city.name} Massachusetts, interior painting ${city.name} MA, painting contractor ${city.name}, exterior house painters near me ${city.name}, cabinet refinishing ${city.name} MA, painters near me ${city.name}`,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: `#1 Painters in ${city.name}, MA | JH Painting Services`,
-      description: `Professional painting services in ${city.name}, Massachusetts. Interior & exterior painting, cabinet refinishing. 40+ 5-star reviews. FREE estimates!`,
+      title: `#1 Exterior & Interior Painters in ${city.name}, MA | JH Painting Services`,
+      description: `Professional exterior & interior painting in ${city.name}, Massachusetts. Exterior painting specialist, 5-year warranty. 40+ 5-star reviews. Licensed & $2M insured. FREE estimates: (508) 690-8886`,
       url: canonicalUrl,
       siteName: 'JH Painting Services',
       locale: 'en_US',
@@ -44,14 +44,14 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
           url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
           width: 1200,
           height: 630,
-          alt: `Professional Painting Services in ${city.name}, MA`,
+          alt: `Professional exterior and interior painting services in ${city.name}, MA by JH Painting Services`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `#1 Painters in ${city.name}, MA | JH Painting Services`,
-      description: `Professional painting in ${city.name}, MA. Interior & exterior, cabinet refinishing. 40+ 5-star reviews. FREE estimates!`,
+      title: `#1 Painters in ${city.name}, MA | Exterior & Interior | FREE Quote`,
+      description: `Professional exterior & interior painting in ${city.name}, MA. 5-year warranty on exterior work. 40+ 5-star reviews. FREE estimates: (508) 690-8886`,
       images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
     },
     robots: {
@@ -64,6 +64,14 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
         'max-image-preview': 'large',
         'max-snippet': -1,
       },
+    },
+    other: {
+      'geo.region': 'US-MA',
+      'geo.placename': `${city.name}, Massachusetts`,
+      ...(city.latitude && city.longitude ? {
+        'geo.position': `${city.latitude};${city.longitude}`,
+        'ICBM': `${city.latitude}, ${city.longitude}`,
+      } : {}),
     },
   }
 }

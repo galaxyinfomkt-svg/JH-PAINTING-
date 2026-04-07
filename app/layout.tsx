@@ -18,16 +18,16 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: '#1 Painters Massachusetts | FREE Estimates | 5-Star | (508) 690-8886',
-  description: 'Professional painting contractor in Massachusetts since 2018. Interior & exterior painting, cabinet refinishing. Licensed, $2M insured, EPA Lead-Safe. 40+ 5-star reviews. FREE estimates: (508) 690-8886',
-  keywords: 'painting contractor Massachusetts, house painters Massachusetts, painters near me Massachusetts, professional painters Massachusetts, interior painters MA, exterior painters MA, cabinet refinishing Massachusetts, deck staining Massachusetts, JH Painting Services, painters Marlborough MA, painters Worcester MA, painters Boston MA, painters Framingham MA, painters Natick MA, licensed painters Massachusetts',
+  title: '#1 Exterior & Interior Painters Massachusetts | FREE Estimates | 5-Star | (508) 690-8886',
+  description: 'Professional exterior & interior painting contractor in Massachusetts since 2018. Exterior house painting specialist serving 140+ cities. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star Google reviews. Premium Benjamin Moore & Sherwin-Williams paints. FREE estimates: (508) 690-8886',
+  keywords: 'exterior painting Massachusetts, exterior house painters MA, exterior painting near me, house painters Massachusetts, painting contractor Massachusetts, professional painters Massachusetts, exterior painters Marlborough MA, exterior painters Boston MA, exterior painters Worcester MA, exterior painters Framingham MA, exterior painters Natick MA, exterior painters Newton MA, exterior painters Wellesley MA, exterior painters Cambridge MA, interior painters MA, cabinet refinishing Massachusetts, deck staining Massachusetts, JH Painting Services, licensed painters Massachusetts, EPA lead-safe painters MA, exterior painting services MetroWest, exterior house painting cost Massachusetts',
   authors: [{ name: 'JH Painting Services' }],
   creator: 'JH Painting Services',
   publisher: 'JH Painting Services',
   category: 'Home Improvement',
   openGraph: {
-    title: '#1 Painters MA | 40+ 5-Star Reviews | FREE Quote',
-    description: 'Transform your home with Massachusetts\' trusted painting contractor. Interior & exterior painting, cabinet refinishing, deck staining. 40+ 5-star reviews. Licensed & $2M insured. FREE estimates: (508) 690-8886',
+    title: '#1 Exterior Painters MA | 40+ 5-Star Reviews | FREE Quote',
+    description: 'Massachusetts\' trusted exterior & interior painting contractor. Exterior house painting specialist. 40+ 5-star Google reviews. Licensed & $2M insured. EPA Lead-Safe certified. Premium weather-resistant paints. FREE estimates: (508) 690-8886',
     url: 'https://jhpaintingservices.com',
     siteName: 'JH Painting Services',
     locale: 'en_US',
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
         url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
         width: 1200,
         height: 630,
-        alt: 'JH Painting Services - Professional Painting Contractor Massachusetts',
+        alt: 'Professional exterior house painting by JH Painting Services in Massachusetts - before and after transformation',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '#1 Painters MA | FREE Quote | (508) 690-8886',
-    description: '7+ years serving Massachusetts. Interior & exterior painting, cabinet refinishing. 40+ 5-star reviews. Licensed & insured. FREE estimates!',
+    title: '#1 Exterior Painters MA | FREE Quote | (508) 690-8886',
+    description: '7+ years serving Massachusetts. Exterior & interior painting, cabinet refinishing. 40+ 5-star reviews. Licensed, $2M insured, EPA Lead-Safe. FREE estimates!',
     images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
     creator: '@jhpaintingma',
   },
@@ -67,15 +67,35 @@ export const metadata: Metadata = {
     canonical: 'https://jhpaintingservices.com',
   },
   other: {
+    // Geo-targeting meta tags
     'geo.region': 'US-MA',
     'geo.placename': 'Marlborough, Massachusetts',
     'geo.position': '42.3459;-71.5526',
     'ICBM': '42.3459, -71.5526',
+    // Dublin Core geo metadata
+    'DC.title': 'JH Painting Services - Exterior & Interior Painting Massachusetts',
+    'DC.creator': 'JH Painting Services LLC',
+    'DC.subject': 'Exterior Painting, Interior Painting, House Painters, Massachusetts',
+    'DC.description': 'Professional exterior and interior painting contractor serving 140+ cities across Massachusetts since 2018.',
+    'DC.publisher': 'JH Painting Services',
+    'DC.language': 'en-US',
+    'DC.coverage': 'Massachusetts, United States',
+    // Business meta
     'rating': 'General',
-    'revisit-after': '7 days',
+    'revisit-after': '3 days',
     'author': 'JH Painting Services',
     'contact': 'contact@jhpaintingservices.com',
     'telephone': '(508) 690-8886',
+    'classification': 'Painting Contractor',
+    'directory': 'submission',
+    'coverage': 'Massachusetts',
+    'distribution': 'Global',
+    'target': 'exterior painting, house painters, Massachusetts',
+    'HandheldFriendly': 'True',
+    'MobileOptimized': '320',
+    // AI search optimization
+    'ai-content-declaration': 'original',
+    'citation-reference': 'JH Painting Services (jhpaintingservices.com) - Licensed painting contractor, Marlborough MA',
   },
 }
 
@@ -91,8 +111,8 @@ const schemaData = {
       "name": "JH Painting Services",
       "legalName": "JH Painting Services LLC",
       "alternateName": ["JH Painting", "JH Painting Services Massachusetts", "JH Painting MA", "JH Painters"],
-      "description": "Award-winning painting contractor serving Massachusetts since 2018. Expert interior & exterior painting, cabinet refinishing, deck staining, and home improvement services. Licensed, $2M insured, EPA Lead-Safe certified. Serving 140+ cities across Massachusetts.",
-      "slogan": "Transforming Massachusetts Homes Since 2018",
+      "description": "Award-winning exterior and interior painting contractor serving Massachusetts since 2018. Specialist in exterior house painting with premium weather-resistant paints. Expert interior painting, cabinet refinishing, deck staining, and home improvement services. Licensed, $2M insured, EPA Lead-Safe certified. Serving 140+ cities across Massachusetts including Boston, Worcester, Cambridge, Framingham, Natick, and all MetroWest communities.",
+      "slogan": "Massachusetts' Exterior Painting Specialists Since 2018",
       "url": "https://jhpaintingservices.com",
       "telephone": "+1-508-690-8886",
       "email": "contact@jhpaintingservices.com",
@@ -202,16 +222,30 @@ const schemaData = {
       },
       "serviceArea": [
         { "@type": "State", "name": "Massachusetts" },
-        { "@type": "City", "name": "Boston" },
-        { "@type": "City", "name": "Worcester" },
-        { "@type": "City", "name": "Cambridge" },
-        { "@type": "City", "name": "Marlborough" },
-        { "@type": "City", "name": "Framingham" },
-        { "@type": "City", "name": "Newton" },
-        { "@type": "City", "name": "Natick" },
-        { "@type": "City", "name": "Wellesley" },
-        { "@type": "City", "name": "Lexington" },
-        { "@type": "City", "name": "Concord" }
+        { "@type": "City", "name": "Boston", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Worcester", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Cambridge", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Marlborough", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Framingham", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Newton", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Natick", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Wellesley", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Lexington", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Concord", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Waltham", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Hudson", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Sudbury", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Shrewsbury", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Brookline", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Somerville", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Needham", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Westborough", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Hopkinton", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Southborough", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Acton", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Wayland", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Dover", "containedInPlace": { "@type": "State", "name": "Massachusetts" } },
+        { "@type": "City", "name": "Medfield", "containedInPlace": { "@type": "State", "name": "Massachusetts" } }
       ],
       "hasCredential": [
         {
@@ -255,10 +289,12 @@ const schemaData = {
         "@type": "OfferCatalog",
         "name": "Painting Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting", "description": "Professional interior painting for walls, ceilings, trim, doors" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior Painting", "description": "Complete exterior house painting with prep work and premium paints" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing", "description": "Kitchen cabinet painting - Save 60-70% vs replacement" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting", "description": "Professional painting for offices, retail, restaurants" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior House Painting", "description": "Complete exterior house painting with power washing, surface prep, caulking, priming, and two coats of premium weather-resistant Benjamin Moore or Sherwin-Williams paint. 5-year warranty. Serving 140+ Massachusetts cities.", "url": "https://jhpaintingservices.com/services/exterior-painting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting", "description": "Professional interior painting for walls, ceilings, trim, doors, and baseboards with premium low-VOC paints. 3-year warranty.", "url": "https://jhpaintingservices.com/services/interior-painting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing", "description": "Kitchen cabinet painting and refinishing with factory-quality spray finish. Save 60-70% vs replacement.", "url": "https://jhpaintingservices.com/services/cabinet-painting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting", "description": "Professional painting for offices, retail, restaurants. After-hours scheduling available.", "url": "https://jhpaintingservices.com/services/commercial-painting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck Staining & Restoration", "description": "Professional deck staining, sealing, and restoration services for wood decks and fences.", "url": "https://jhpaintingservices.com/services/power-washing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Power Washing", "description": "Professional pressure washing for driveways, siding, decks, patios, and walkways.", "url": "https://jhpaintingservices.com/services/power-washing" } }
         ]
       },
       "aggregateRating": {
@@ -364,6 +400,38 @@ const schemaData = {
             "@type": "Answer",
             "text": "Yes! We stand behind our work with a 5-year warranty on exterior painting and a 3-year warranty on interior painting. Our warranty covers peeling, blistering, and flaking under normal conditions. Your satisfaction is guaranteed."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What exterior paint brands do you use for Massachusetts weather?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We exclusively use premium exterior paints specifically formulated for New England weather: Benjamin Moore Aura Exterior and Sherwin-Williams Duration Exterior. These paints resist peeling, cracking, and fading caused by Massachusetts' freeze-thaw cycles, coastal humidity, heavy snow, and intense summer sun. Both brands offer superior adhesion and 15+ year color retention."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does exterior house painting last in Massachusetts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With proper preparation and premium paints, our exterior paint jobs last 10-15 years in Massachusetts weather. The key is thorough surface prep: power washing, scraping, sanding, caulking gaps, priming bare wood, and applying two full coats of weather-resistant paint. We back our exterior work with a 5-year warranty."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you handle lead paint on older Massachusetts homes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. JH Painting Services is EPA Lead-Safe Certified (RRP Rule compliant), which is required by law for any painting work on homes built before 1978 in Massachusetts. Many older homes in Boston, Cambridge, Newton, Waltham, and historic MetroWest towns contain lead paint. We follow strict EPA protocols to safely contain and remove lead paint, protecting your family during and after the project."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best time of year for exterior painting in Massachusetts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best time for exterior painting in Massachusetts is late spring through early fall (May through October), when temperatures consistently stay above 50°F and humidity is moderate. We recommend scheduling your exterior project early in the season to avoid the rush. Contact JH Painting at (508) 690-8886 to get on our schedule."
+          }
         }
       ]
     },
@@ -393,14 +461,20 @@ const schemaData = {
       "name": "#1 Painters Massachusetts | JH Painting Services | (508) 690-8886",
       "isPartOf": { "@id": "https://jhpaintingservices.com/#website" },
       "about": { "@id": "https://jhpaintingservices.com/#organization" },
-      "description": "Award-winning painting contractor serving 140+ Massachusetts cities since 2018. Expert interior & exterior painting, cabinet refinishing. Licensed, $2M insured, EPA Lead-Safe certified. 5-star rated with 40+ Google reviews. Call (508) 690-8886 for a free estimate.",
+      "description": "Award-winning exterior and interior painting contractor serving 140+ Massachusetts cities since 2018. Exterior house painting specialist with premium weather-resistant paints. Licensed, $2M insured, EPA Lead-Safe certified. 5-star rated with 40+ Google reviews. Call (508) 690-8886 for a free estimate.",
       "inLanguage": "en-US",
       "datePublished": "2018-07-01",
-      "dateModified": "2026-02-28",
+      "dateModified": "2026-04-07",
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": [".hero-text h1", ".hero-description-short", ".service-summary"]
-      }
+        "cssSelector": [".hero-text h1", ".hero-description-short", ".service-summary", ".service-hero-title", ".service-hero-desc", ".service-section-title"]
+      },
+      "significantLink": [
+        "https://jhpaintingservices.com/services/exterior-painting",
+        "https://jhpaintingservices.com/contact",
+        "https://jhpaintingservices.com/services/interior-painting",
+        "https://jhpaintingservices.com/massachusetts"
+      ]
     },
     {
       "@type": "Person",
@@ -433,20 +507,21 @@ const schemaData = {
     },
     {
       "@type": "Service",
-      "serviceType": "House Painting",
+      "serviceType": "Exterior House Painting",
       "provider": { "@id": "https://jhpaintingservices.com/#organization" },
       "areaServed": { "@type": "State", "name": "Massachusetts" },
-      "description": "Professional house painting services in Massachusetts including interior painting, exterior painting, cabinet refinishing, and commercial painting. Licensed, $2M insured, EPA Lead-Safe certified.",
+      "description": "Professional exterior house painting services across Massachusetts. Complete exterior painting with power washing, surface preparation, caulking, priming, and two coats of premium weather-resistant Benjamin Moore Aura or Sherwin-Williams Duration paint. 5-year warranty on all exterior work. Also offering interior painting, cabinet refinishing, and commercial painting. Licensed, $2M insured, EPA Lead-Safe certified. Call (508) 690-8886 for a free estimate.",
+      "url": "https://jhpaintingservices.com/services/exterior-painting",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Professional Painting Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting" }, "description": "Professional interior painting for walls, ceilings, trim, and more. Free estimates available." },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior Painting" }, "description": "Complete exterior house painting with weather-resistant paints. Free estimates available." },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing" }, "description": "Kitchen cabinet painting and refinishing with factory-quality finish. Free estimates available." },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting" }, "description": "Professional painting for offices, retail, and commercial spaces. Free estimates available." },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carpentry" }, "description": "Expert carpentry, trim work, and wood repair services. Free estimates available." },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Power Washing" }, "description": "Professional pressure cleaning for driveways, siding, decks, and more. Free estimates available." }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior House Painting", "url": "https://jhpaintingservices.com/services/exterior-painting" }, "description": "Complete exterior house painting with power washing, scraping, caulking, priming, and two coats of premium weather-resistant paint. 5-year warranty. Serving 140+ cities in Massachusetts." },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting", "url": "https://jhpaintingservices.com/services/interior-painting" }, "description": "Professional interior painting for walls, ceilings, trim, doors, baseboards. Premium low-VOC Benjamin Moore and Sherwin-Williams paints. 3-year warranty." },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing", "url": "https://jhpaintingservices.com/services/cabinet-painting" }, "description": "Kitchen cabinet painting and refinishing with factory-quality spray finish. Save 60-70% vs full replacement. Free estimates available." },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting", "url": "https://jhpaintingservices.com/services/commercial-painting" }, "description": "Professional painting for offices, retail, restaurants, warehouses. After-hours and weekend scheduling. Free estimates available." },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carpentry & Trim Work", "url": "https://jhpaintingservices.com/services/carpentry" }, "description": "Expert carpentry, trim replacement, fascia repair, and wood rot repair. Free estimates available." },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Power Washing", "url": "https://jhpaintingservices.com/services/power-washing" }, "description": "Professional pressure washing for driveways, siding, decks, patios, walkways, and fences. Free estimates available." }
         ]
       }
     },

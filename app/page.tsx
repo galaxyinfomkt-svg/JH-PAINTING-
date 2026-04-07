@@ -72,7 +72,7 @@ const EyeIcon = () => (
 const services = [
   {
     title: 'Exterior Painting',
-    description: 'Professional exterior house painting with complete prep work and two coats of premium paint.',
+    description: 'Our specialty: complete exterior house painting with power washing, prep work, and two coats of premium weather-resistant paint. 5-year warranty.',
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
     href: '/services/exterior-painting',
     featured: true,
@@ -116,12 +116,12 @@ const services = [
 ]
 
 const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Professional exterior house painting services in Massachusetts by JH Painting', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Expert house painters in Waltham MA - exterior painting project', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Professional interior painting contractors in Massachusetts', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Bedroom interior painting services in Massachusetts by JH Painting', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Kitchen cabinet refinishing and painting services in MA', category: 'Cabinets' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Hardwood floor refinishing services in Massachusetts by JH Painting', category: 'Floors' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Professional exterior house painting in Marlborough MA - JH Painting Services complete home exterior transformation', category: 'Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Exterior house painting project in Waltham Massachusetts - historic church renovation by JH Painting', category: 'Exterior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Interior house painting contractors in Framingham and Natick MA - premium Benjamin Moore paint by JH Painting', category: 'Interior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Bedroom interior painting in Newton and Wellesley Massachusetts - professional residential painters JH Painting', category: 'Interior' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Kitchen cabinet refinishing and painting in MetroWest MA - save 70% vs replacement with JH Painting Services', category: 'Cabinets' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Carpentry and trim work services in Worcester and Boston Massachusetts by JH Painting Services', category: 'Carpentry' },
 ]
 
 export default function HomePage() {
@@ -136,7 +136,7 @@ export default function HomePage() {
           <div className="hero-bg">
             <Image
               src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
-              alt="Professional Painting Services Massachusetts"
+              alt="Professional exterior and interior painting services in Massachusetts by JH Painting Services - licensed painters serving 140+ cities"
               fill
               priority
               fetchPriority="high"
@@ -169,12 +169,12 @@ export default function HomePage() {
 
                 {/* Headline */}
                 <h1 className="hero-title-emotional">
-                  Professional Painting<br />
-                  <span className="hero-title-accent">Contractor in Massachusetts</span>
+                  Exterior & Interior<br />
+                  <span className="hero-title-accent">Painters in Massachusetts</span>
                 </h1>
 
                 <p className="hero-description-short" style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', maxWidth: '560px' }}>
-                  Premium Benjamin Moore & Sherwin-Williams paints. Licensed & $2M insured. From interior painting to complete home exteriors, we deliver quality craftsmanship you can trust.
+                  Massachusetts' trusted exterior painting specialists. Premium Benjamin Moore & Sherwin-Williams paints. Licensed, $2M insured, EPA Lead-Safe certified. From complete home exteriors to interiors and cabinets. 5-year warranty on exterior work.
                 </p>
 
                 {/* Dual CTA - RS style (Gold + White border) */}
