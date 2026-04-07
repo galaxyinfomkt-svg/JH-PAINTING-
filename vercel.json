@@ -1,11 +1,8 @@
 {
   "framework": "nextjs",
-  "buildCommand": "rm -rf .next node_modules/.cache && npm run build",
-  "outputDirectory": ".next",
   "build": {
     "env": {
-      "VERCEL_FORCE_NO_BUILD_CACHE": "1",
-      "FORCE_REBUILD": "true"
+      "VERCEL_FORCE_NO_BUILD_CACHE": "1"
     }
   },
   "headers": [
