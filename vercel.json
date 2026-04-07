@@ -1,4 +1,12 @@
 {
+  "framework": "nextjs",
+  "buildCommand": "rm -rf .next node_modules/.cache && npm run build",
+  "outputDirectory": ".next",
+  "build": {
+    "env": {
+      "FORCE_REBUILD": "true"
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
