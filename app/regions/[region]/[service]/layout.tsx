@@ -1,5 +1,6 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { regions, getRegionBySlug } from '@/app/data/regions'
+import { generatePageMetadata } from '@/lib/seo'
 
 const services = [
   { name: 'Interior Painting', slug: 'interior-painting' },
@@ -32,31 +33,21 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   const service = services.find(s => s.slug === serviceSlug)
 
   if (!region || !service) {
-    return { title: 'Page Not Found | JH Painting Services' }
+    return generatePageMetadata({
+      title: 'Page Not Found | JH Painting Services',
+      description: 'The page you are looking for could not be found.',
+      path: `/regions/${regionSlug}/${serviceSlug}`,
+      noIndex: true,
+    })
   }
 
-  const canonicalUrl = `https://jhpaintingservices.com/regions/${region.slug}/${service.slug}`
-
-  return {
+  return generatePageMetadata({
     title: `${service.name} ${region.name} MA | Licensed Painters | FREE Quote`,
     description: `Professional ${service.name.toLowerCase()} across ${region.name}. Serving ${region.citySlugs.length}+ cities. Licensed & $2M insured. 40+ 5-star reviews. Call (508) 690-8886`,
+    path: `/regions/${region.slug}/${service.slug}`,
+    ogImageAlt: `${service.name} in ${region.name}`,
     keywords: `${service.name} ${region.name} MA, ${service.name.toLowerCase()} ${region.name}, painters ${region.name} Massachusetts`,
-    alternates: { canonical: canonicalUrl },
-    openGraph: {
-      title: `${service.name} in ${region.name} | JH Painting Services`,
-      description: `Expert ${service.name.toLowerCase()} for homes and businesses across ${region.name}. Licensed, insured, 40+ 5-star reviews.`,
-      url: canonicalUrl,
-      siteName: 'JH Painting Services',
-      locale: 'en_US',
-      type: 'website',
-      images: [{
-        url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
-        width: 1200, height: 630,
-        alt: `${service.name} in ${region.name}`,
-      }],
-    },
-    robots: { index: true, follow: true },
-  }
+  })
 }
 
 export default async function RegionServiceLayout({ children }: Props) {

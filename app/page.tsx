@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
@@ -5,6 +6,40 @@ import HomeHeader from './components/HomeHeader'
 import LazyIframe from './components/LazyIframe'
 import LazyHeroForm from './components/LazyHeroForm'
 import Footer from './components/Footer'
+import { generatePageMetadata } from '@/lib/seo'
+
+/**
+ * HOME page metadata.
+ * Title is brand-first + phone (~62 chars, fits SERP without truncation).
+ * Description leads with the value prop, lists trust signals, and CLOSES WITH
+ * THE PHONE NUMBER — that's the lever that makes Google render the tel right
+ * inside the snippet (Wolfs Siding gets its (774) 484-1895 the same way).
+ */
+export const metadata: Metadata = generatePageMetadata({
+  title: 'JH Painting Services | Painters Massachusetts | (508) 690-8886',
+  description:
+    "Massachusetts' trusted exterior & interior painting contractor since 2018. Serving 140+ MA cities. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star Google reviews. Premium Benjamin Moore & Sherwin-Williams paints. FREE estimates: (508) 690-8886",
+  path: '/',
+  ogImageAlt:
+    'Professional exterior house painting by JH Painting Services in Massachusetts — before and after transformation',
+  keywords: [
+    'exterior painting Massachusetts',
+    'exterior house painters MA',
+    'exterior painting near me',
+    'house painters Massachusetts',
+    'painting contractor Massachusetts',
+    'professional painters Massachusetts',
+    'exterior painters Marlborough MA',
+    'exterior painters Boston MA',
+    'exterior painters Worcester MA',
+    'exterior painters Framingham MA',
+    'interior painters MA',
+    'cabinet refinishing Massachusetts',
+    'JH Painting Services',
+    'licensed painters Massachusetts',
+    'EPA lead-safe painters MA',
+  ],
+})
 
 // Dynamic imports for below-fold sections — reduces initial JS bundle and TBT
 const HomeVideoSection = dynamic(() => import('./components/HomeVideoSection'))
@@ -124,9 +159,126 @@ const galleryImages = [
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Carpentry and trim work services in Worcester and Boston Massachusetts by JH Painting Services', category: 'Carpentry' },
 ]
 
+/**
+ * Home-specific structured data — FAQ + WebPage objects that previously lived
+ * in the root layout's @graph. Moving them here means the FAQ rich-result
+ * eligibility applies ONLY to the home URL (Google flags FAQ schema on every
+ * page as spammy duplicate). The WebPage object tells Google that "/" is the
+ * canonical entry-point page for the JH Painting site.
+ */
+const homePageSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://jhpaintingservices.com/#webpage',
+      url: 'https://jhpaintingservices.com',
+      name: 'JH Painting Services | Painters Massachusetts | (508) 690-8886',
+      isPartOf: { '@id': 'https://jhpaintingservices.com/#website' },
+      about: { '@id': 'https://jhpaintingservices.com/#organization' },
+      description:
+        'Award-winning exterior and interior painting contractor serving 140+ Massachusetts cities since 2018. Licensed, $2M insured, EPA Lead-Safe certified. 40+ Google reviews. Call (508) 690-8886 for a free estimate.',
+      inLanguage: 'en-US',
+      datePublished: '2018-07-01',
+      dateModified: '2026-05-14',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.hero-text h1', '.hero-description-short', '.service-summary'],
+      },
+      significantLink: [
+        'https://jhpaintingservices.com/services/exterior-painting',
+        'https://jhpaintingservices.com/contact',
+        'https://jhpaintingservices.com/services/interior-painting',
+        'https://jhpaintingservices.com/massachusetts',
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How much does house painting cost in Massachusetts?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "House painting costs in Massachusetts vary based on size and scope. Interior painting typically costs $2-$5 per square foot, while exterior painting ranges from $3,000-$10,000 for most homes. Cabinet refinishing costs $3,000-$7,000 depending on kitchen size. Contact JH Painting at (508) 690-8886 for a free, detailed estimate.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Are you licensed and insured?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Yes! JH Painting Services is fully licensed in Massachusetts and carries $2,000,000 in general liability insurance plus workers' compensation coverage. We're also EPA Lead-Safe certified, which is essential for homes built before 1978. We're happy to provide proof of insurance upon request.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What areas do you serve in Massachusetts?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'JH Painting Services is based in Marlborough and serves 140+ cities across Massachusetts including Boston, Worcester, Cambridge, Newton, Framingham, Natick, Wellesley, Lexington, Concord, and all MetroWest communities. We travel up to 50 miles from Marlborough. Call (508) 690-8886.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How quickly can I get an estimate?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We typically schedule estimates within 24-48 hours. Call us at (508) 690-8886 or fill out our online form for a free, no-obligation quote. We respond to all inquiries within 24 hours and provide detailed written estimates.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What paint brands do you use?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "We exclusively use premium paints from Benjamin Moore and Sherwin-Williams. These brands offer superior durability, coverage, and color retention. For exteriors, we recommend paints specifically formulated for New England's harsh weather conditions.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you offer a warranty on your painting work?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes! We stand behind our work with a 5-year warranty on exterior painting and a 3-year warranty on interior painting. Our warranty covers peeling, blistering, and flaking under normal conditions. Your satisfaction is guaranteed. Call (508) 690-8886.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does exterior house painting last in Massachusetts?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'With proper preparation and premium paints, our exterior paint jobs last 10-15 years in Massachusetts weather. The key is thorough surface prep: power washing, scraping, sanding, caulking gaps, priming bare wood, and applying two full coats of weather-resistant paint. We back our exterior work with a 5-year warranty.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you handle lead paint on older Massachusetts homes?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. JH Painting Services is EPA Lead-Safe Certified (RRP Rule compliant), which is required by law for any painting work on homes built before 1978 in Massachusetts. Many older homes in Boston, Cambridge, Newton, Waltham, and historic MetroWest towns contain lead paint. We follow strict EPA protocols to safely contain and remove lead paint, protecting your family during and after the project.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the best time of year for exterior painting in Massachusetts?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The best time for exterior painting in Massachusetts is late spring through early fall (May through October), when temperatures consistently stay above 50°F and humidity is moderate. We recommend scheduling your exterior project early in the season to avoid the rush. Contact JH Painting at (508) 690-8886 to get on our schedule.',
+          },
+        },
+      ],
+    },
+  ],
+}
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }}
+      />
       <HomeHeader />
 
       {/* Main Content */}

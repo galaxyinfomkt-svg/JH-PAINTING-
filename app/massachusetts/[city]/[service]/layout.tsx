@@ -1,5 +1,7 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { getCityBySlug, normalizeCitySlug } from '@/app/data/cities'
+import { generateServiceContent } from '@/app/data/cityContent'
+import { generatePageMetadata } from '@/lib/seo'
 
 interface Props {
   params: Promise<{ city: string; service: string }>
@@ -52,87 +54,58 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const serviceNameLower = serviceName.toLowerCase()
 
   if (!city) {
-    return {
+    return generatePageMetadata({
       title: 'Service Not Found | JH Painting Services',
-    }
+      description: 'The city service page you are looking for could not be found.',
+      path: `/massachusetts/${citySlug}/${service}`,
+      noIndex: true,
+    })
   }
-
-  const canonicalUrl = 'https://jhpaintingservices.com/massachusetts/' + normalizeCitySlug(city.slug) + '/' + service
 
   const painTitle = servicePainTitles[service] || serviceName
   const solution = serviceSolutions[service] || 'Professional ' + serviceNameLower + ' by licensed pros.'
 
-  // Enhanced description for exterior painting (priority leads)
+  // Pull city+service-specific unique title/description/keywords from the multi-factor
+  // generator. Each of the 833 city+service URLs gets a distinct title/desc/keyword string
+  // selected from 5-variant pools using a hash of (slug + service + distance bracket +
+  // population bracket + county). Falls back to legacy template when generator has no pool.
+  const uniqueContent = generateServiceContent(
+    city.name,
+    city.slug,
+    service,
+    city.county,
+    city.population,
+    city.landmarks,
+    city.neighborhoods,
+    city.distance
+  )
+
   const isExterior = service === 'exterior-painting'
-  const enhancedDesc = isExterior
+  const fallbackDesc = isExterior
     ? `Expert exterior house painting in ${city.name}, MA. Power washing, surface prep, caulking, priming + 2 coats of premium Benjamin Moore Aura or Sherwin-Williams Duration paint. 5-year warranty. EPA Lead-Safe certified. 40+ 5-star reviews. Licensed & $2M insured. FREE estimate: (508) 690-8886`
     : solution + ' ✓ 40+ reviews ✓ $2M insured ✓ ' + city.name + ' MA. Call (508) 690-8886'
 
-  const enhancedKeywords = isExterior
+  const fallbackKeywords = isExterior
     ? `exterior painting ${city.name} MA, exterior house painters ${city.name}, exterior painting near me ${city.name}, house painters ${city.name} Massachusetts, exterior painting cost ${city.name} MA, exterior painters near me, ${city.name} MA painting contractors, best exterior painters ${city.name}, EPA lead-safe painters ${city.name} MA`
     : serviceNameLower + ' ' + city.name + ' MA, fix ' + serviceNameLower + ' ' + city.name + ', ' + service + ' ' + city.name + ', painters ' + city.name + ' Massachusetts'
 
-  return {
-    title: isExterior
-      ? `Exterior Painting ${city.name} MA | 5-Year Warranty | FREE Quote | (508) 690-8886`
-      : painTitle + ' ' + serviceName + ' ' + city.name + ' MA | FREE Quote',
-    description: enhancedDesc,
-    keywords: enhancedKeywords,
-    alternates: {
-      canonical: canonicalUrl,
-    },
-    openGraph: {
-      title: isExterior
-        ? `#1 Exterior Painters ${city.name}, MA | 5-Star | FREE Quote`
-        : serviceName + ' in ' + city.name + ', MA | JH Painting Services',
-      description: isExterior
-        ? `Professional exterior house painting in ${city.name}, Massachusetts. Premium weather-resistant paints, 5-year warranty. 40+ 5-star reviews. Licensed & $2M insured. FREE estimates: (508) 690-8886`
-        : 'Professional ' + serviceNameLower + ' in ' + city.name + ', Massachusetts. 40+ 5-star reviews. FREE estimates!',
-      url: canonicalUrl,
-      siteName: 'JH Painting Services',
-      locale: 'en_US',
-      type: 'website',
-      images: [
-        {
-          url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
-          width: 1200,
-          height: 630,
-          alt: isExterior
-            ? `Professional exterior house painting in ${city.name}, MA by JH Painting Services - licensed painters`
-            : serviceName + ' Services in ' + city.name + ', MA by JH Painting Services',
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: isExterior
-        ? `Exterior Painting ${city.name}, MA | 5-Year Warranty | JH Painting`
-        : serviceName + ' in ' + city.name + ', MA | JH Painting Services',
-      description: isExterior
-        ? `Expert exterior house painting in ${city.name}, MA. Premium paints, 5-year warranty. 40+ 5-star reviews. FREE estimates: (508) 690-8886`
-        : 'Professional ' + serviceNameLower + ' in ' + city.name + ', MA. 40+ 5-star reviews. FREE estimates!',
-      images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-    other: {
-      'geo.region': 'US-MA',
-      'geo.placename': city.name + ', Massachusetts',
-      ...(city.latitude && city.longitude ? {
-        'geo.position': city.latitude + ';' + city.longitude,
-        'ICBM': city.latitude + ', ' + city.longitude,
-      } : {}),
-    },
-  }
+  const fallbackTitle = isExterior
+    ? `Exterior Painting ${city.name} MA | 5-Year Warranty | FREE Quote | (508) 690-8886`
+    : painTitle + ' ' + serviceName + ' ' + city.name + ' MA | FREE Quote'
+
+  const title = uniqueContent.uniqueTitle || fallbackTitle
+  const description = uniqueContent.uniqueDescriptionMeta || fallbackDesc
+  const keywords = uniqueContent.uniqueKeywords || fallbackKeywords
+
+  return generatePageMetadata({
+    title,
+    description,
+    keywords,
+    path: `/massachusetts/${normalizeCitySlug(city.slug)}/${service}`,
+    ogImageAlt: isExterior
+      ? `Professional exterior house painting in ${city.name}, MA by JH Painting Services - licensed painters`
+      : `${serviceName} Services in ${city.name}, MA by JH Painting Services`,
+  })
 }
 
 export default async function CityServiceLayout({ children }: Props) {

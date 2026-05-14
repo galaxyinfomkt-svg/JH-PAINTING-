@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generatePageMetadata({
   title: 'Power Washing MA | JH Painting | FREE Quote',
   description: 'Professional power washing in Massachusetts. Decks, driveways, siding sparkling clean in one day. $2M insured. (508) 690-8886',
+  path: '/services/power-washing',
+  ogImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp',
+  ogImageAlt: 'Professional Power Washing Services Massachusetts - JH Painting',
   keywords: [
     'power washing Massachusetts',
     'pressure washing MA',
@@ -18,50 +22,8 @@ export const metadata: Metadata = {
     'exterior cleaning services',
     'power washing contractors MA',
     'pressure cleaning services',
-  ].join(', '),
-  openGraph: {
-    title: 'Power Washing Services Massachusetts | Professional Pressure Cleaning | JH Painting',
-    description: '#1 power washing services in Massachusetts. Expert deck, siding & driveway cleaning. Licensed & insured. FREE estimates!',
-    url: 'https://jhpaintingservices.com/services/power-washing',
-    siteName: 'JH Painting Services',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Professional Power Washing Services Massachusetts - JH Painting',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Power Washing Services Massachusetts | (508) 690-8886',
-    description: 'Professional power washing in MA. Decks, siding, driveways. Licensed & insured. Call now for FREE estimate!',
-    creator: '@jhpaintingma',
-    images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp'],
-  },
-  alternates: {
-    canonical: 'https://jhpaintingservices.com/services/power-washing',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'geo.region': 'US-MA',
-    'geo.placename': 'Massachusetts',
-    'rating': 'General',
-  },
-}
+  ],
+})
 
 export default function PowerWashingLayout({
   children,

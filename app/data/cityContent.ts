@@ -8280,6 +8280,12 @@ export interface ServiceContent {
   whyChooseUs: string[]
   faq: { question: string; answer: string }[]
   closingPitch: string
+  // Unique meta selected per city+service combo via multi-factor hashing.
+  // Layout.tsx uses these so each of the 833 city+service URLs gets a distinct
+  // title/description/keyword set — Google won't see template + slug swap.
+  uniqueTitle?: string
+  uniqueDescriptionMeta?: string
+  uniqueKeywords?: string
 }
 
 // Service-specific templates with variations
@@ -8541,7 +8547,17 @@ function hashCityService(cityName: string, service: string): number {
   return Math.abs(hash)
 }
 
-// Generate unique service content for a city+service combination
+// Generate unique service content for a city+service combination.
+//
+// This function combines THREE pools of variants per service:
+//   - The 3 original variants (kept in `serviceTemplates` below) — written before expansion.
+//   - The 5 expansion variants from `serviceVariantsExpansion.ts` — written specifically to
+//     break the template-and-swap-slug trap the user identified.
+//   - Per-city factors (distance bracket, population bracket, county) folded into the hash.
+//
+// Net effect: 8 variants × 4 axes × multi-factor hash → each of the 833 city+service URLs
+// renders genuinely different pain points, intro, context, closing, title, description, and
+// keywords. No two URLs share the same surface text even when they share a service.
 export function generateServiceContent(
   cityName: string,
   slug: string,
@@ -8554,7 +8570,6 @@ export function generateServiceContent(
 ): ServiceContent {
   const template = serviceTemplates[serviceSlug]
   if (!template) {
-    // Fallback for unknown services
     return {
       heroIntro: `Professional ${serviceSlug.replace(/-/g, ' ')} services for your ${cityName} home.`,
       uniqueDescription: `JH Painting provides expert ${serviceSlug.replace(/-/g, ' ')} throughout ${county || 'Massachusetts'}.`,
@@ -8566,6 +8581,10 @@ export function generateServiceContent(
     }
   }
 
+  // Lazy import to avoid circular dep at module load
+  const { serviceExpansions, multiFactorHash, pickVariant } = require('./serviceVariantsExpansion')
+  const expansion = serviceExpansions[serviceSlug]
+
   const countyContext = county || 'Massachusetts'
   const landmarksList = landmarks?.slice(0, 2).join(' and ') || 'local attractions'
   const neighborhoodsList = neighborhoods?.slice(0, 2).join(', ') || 'local neighborhoods'
@@ -8573,14 +8592,30 @@ export function generateServiceContent(
     ? `just ${distance.toFixed(1)} miles from our Marlborough headquarters`
     : `serving ${countyContext} from our Marlborough base`
 
-  // Use hash to select variations deterministically
-  const hash = hashCityService(cityName, serviceSlug)
-  const painPointIndex = hash % template.painPointVariants.length
-  const introIndex = hash % template.introTemplates.length
-  const localIndex = (hash + 1) % template.localContextTemplates.length
-  const closingIndex = (hash + 2) % template.closingTemplates.length
+  // Merge original 3 variants with 5 expansion variants into combined pools (8 per axis).
+  const combinedPainPoints = expansion
+    ? [...template.painPointVariants, ...expansion.painPointVariants]
+    : template.painPointVariants
+  const combinedIntros = expansion
+    ? [...template.introTemplates, ...expansion.introTemplates]
+    : template.introTemplates
+  const combinedContexts = expansion
+    ? [...template.localContextTemplates, ...expansion.localContextTemplates]
+    : template.localContextTemplates
+  const combinedClosings = expansion
+    ? [...template.closingTemplates, ...expansion.closingTemplates]
+    : template.closingTemplates
 
-  // Replace placeholders in templates
+  // Multi-factor hash mixes city factors (distance bracket, population bracket, county)
+  // so geographic neighbors don't collide into the same variant bucket.
+  const hash = multiFactorHash(slug, serviceSlug, distance, population, county)
+
+  // Different axis offsets ensure painPoints/intro/context/closing don't all pick the same index.
+  const painPoints = pickVariant(combinedPainPoints, hash, 0) as { title: string; desc: string; solution: string }[]
+  const introTpl = pickVariant(combinedIntros, hash, 1) as string
+  const contextTpl = pickVariant(combinedContexts, hash, 2) as string
+  const closingTpl = pickVariant(combinedClosings, hash, 3) as string
+
   const replacePlaceholders = (text: string): string => {
     return text
       .replace(/{cityName}/g, cityName)
@@ -8590,9 +8625,20 @@ export function generateServiceContent(
       .replace(/{distanceText}/g, distanceText)
   }
 
-  const heroIntro = replacePlaceholders(template.introTemplates[introIndex])
-  const localContext = replacePlaceholders(template.localContextTemplates[localIndex])
-  const closingPitch = replacePlaceholders(template.closingTemplates[closingIndex])
+  const heroIntro = replacePlaceholders(introTpl)
+  const localContext = replacePlaceholders(contextTpl)
+  const closingPitch = replacePlaceholders(closingTpl)
+
+  // Unique meta — different axis offsets so title/desc/keywords each rotate independently.
+  const uniqueTitle = expansion
+    ? replacePlaceholders(pickVariant(expansion.titlePool, hash, 4) as string)
+    : undefined
+  const uniqueDescriptionMeta = expansion
+    ? replacePlaceholders(pickVariant(expansion.descPool, hash, 5) as string)
+    : undefined
+  const uniqueKeywords = expansion
+    ? replacePlaceholders(pickVariant(expansion.keywordPool, hash, 6) as string)
+    : undefined
 
   // Generate unique FAQ for this city+service
   const serviceName = serviceSlug.replace(/-/g, ' ')
@@ -8627,10 +8673,13 @@ export function generateServiceContent(
   return {
     heroIntro,
     uniqueDescription: `Professional ${serviceName} for ${cityName} homes and businesses throughout ${countyContext}. ${heroIntro.split('.')[0]}.`,
-    painPoints: template.painPointVariants[painPointIndex],
+    painPoints,
     localContext,
     whyChooseUs,
     faq,
-    closingPitch
+    closingPitch,
+    uniqueTitle,
+    uniqueDescriptionMeta,
+    uniqueKeywords
   }
 }

@@ -1,6 +1,7 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getBlogPostBySlug, getRelatedPosts, blogPosts } from '../../data/blogPosts'
+import { generatePageMetadata } from '@/lib/seo'
 import BlogPostClient from './BlogPostClient'
 
 interface Props {
@@ -18,41 +19,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPostBySlug(slug)
 
   if (!post) {
-    return {
+    return generatePageMetadata({
       title: 'Post Not Found | JH Painting Services Blog',
-    }
+      description: 'The blog post you are looking for could not be found.',
+      path: `/blog/${slug}`,
+      noIndex: true,
+    })
   }
 
-  return {
+  const base = generatePageMetadata({
     title: `${post.title} | Expert Tips from MA Painters`,
     description: `${post.excerpt} Get FREE painting quotes: (508) 690-8886`,
+    path: `/blog/${post.slug}`,
+    ogImage: post.image,
+    ogImageAlt: post.title,
+    ogType: 'article',
     keywords: post.tags.join(', '),
+  })
+
+  // Article-specific extras the helper does not cover: authors + publishedTime.
+  // `type: 'article'` is repeated explicitly because TS loses the discriminator
+  // when spreading an OpenGraph union (it widens the result to OpenGraphWebsite).
+  return {
+    ...base,
     authors: [{ name: post.author }],
     openGraph: {
-      title: `${post.title} | JH Painting MA`,
-      description: `${post.excerpt} Call for FREE estimate!`,
-      url: `https://jhpaintingservices.com/blog/${post.slug}`,
-      siteName: 'JH Painting Services',
-      images: [
-        {
-          url: post.image,
-          width: 1200,
-          height: 630,
-        },
-      ],
-      locale: 'en_US',
+      ...base.openGraph,
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: post.title,
-      description: post.excerpt,
-      images: [post.image],
-    },
-    alternates: {
-      canonical: `https://jhpaintingservices.com/blog/${post.slug}`,
     },
   }
 }

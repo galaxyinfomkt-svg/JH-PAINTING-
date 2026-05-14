@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { cities, getCitySlugWithState } from '@/app/data/cities'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generatePageMetadata({
   title: 'Painters Near Me MA | 140+ Cities Served | Find Your Local Painter',
   description: 'Looking for painters near you in Massachusetts? We serve 140+ cities: Boston, Worcester, Cambridge, Newton, Framingham & more. 40+ 5-star reviews. Licensed & $2M insured. FREE quote (508) 690-8886',
+  path: '/massachusetts',
+  ogImageAlt: 'Painters Near Me Massachusetts - JH Painting Service Areas',
   keywords: [
     'painters near me Massachusetts',
     'painters near me MA',
@@ -19,44 +22,7 @@ export const metadata: Metadata = {
     'find painters MA',
     'painting services my area',
   ].join(', '),
-  openGraph: {
-    title: 'Find Painters Near You | 140+ MA Cities | JH Painting',
-    description: 'Professional painters serving 140+ Massachusetts cities. Find your local painter. 40+ 5-star reviews. Licensed & $2M insured.',
-    url: 'https://jhpaintingservices.com/cities',
-    siteName: 'JH Painting Services',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
-        width: 1200,
-        height: 630,
-        alt: 'Painters Near Me Massachusetts - JH Painting Service Areas',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Painters Near Me MA | 140+ Cities',
-    description: 'Find professional painters in your Massachusetts city. 40+ 5-star reviews.',
-    images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
-    creator: '@jhpaintingma',
-  },
-  alternates: {
-    canonical: 'https://jhpaintingservices.com/massachusetts',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+})
 
 export default function CitiesPage() {
   // Group cities by distance range

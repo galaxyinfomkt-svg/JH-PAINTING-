@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generatePageMetadata({
   title: 'Cabinet Painting MA | Save 70% | JH Painting',
   description: 'Cabinet painting & refinishing in Massachusetts. Factory-smooth spray finish, save 70% vs replacement. 40+ 5-star reviews. (508) 690-8886',
+  path: '/services/cabinet-painting',
+  ogImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png',
+  ogImageAlt: 'Professional Cabinet Painting & Refinishing Massachusetts - JH Painting',
   keywords: [
     'cabinet painters Massachusetts',
     'cabinet painters near me',
@@ -17,50 +21,8 @@ export const metadata: Metadata = {
     'cabinet refinishing painters Massachusetts',
     'cabinet painters MA',
     'local cabinet painters',
-  ].join(', '),
-  openGraph: {
-    title: 'Cabinet Painters Massachusetts | Best Cabinet Painters | JH Painting',
-    description: '#1 cabinet painters in Massachusetts. Save 70% vs replacement! Expert spray finish. Licensed & insured. FREE estimates!',
-    url: 'https://jhpaintingservices.com/services/cabinet-painting',
-    siteName: 'JH Painting Services',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png',
-        width: 1200,
-        height: 630,
-        alt: 'Professional Cabinet Painting & Refinishing Massachusetts - JH Painting',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Cabinet Painters MA | #1 Cabinet Painters | (508) 690-8886',
-    description: 'Best cabinet painters in Massachusetts. Save 70% vs replacement! Expert spray finish. Call for FREE estimate!',
-    images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png'],
-    creator: '@jhpaintingma',
-  },
-  alternates: {
-    canonical: 'https://jhpaintingservices.com/services/cabinet-painting',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'geo.region': 'US-MA',
-    'geo.placename': 'Massachusetts',
-    'rating': 'General',
-  },
-}
+  ],
+})
 
 export default function CabinetPaintingLayout({
   children,

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Script from 'next/script'
@@ -17,86 +17,47 @@ const inter = Inter({
   preload: true,
 })
 
+/**
+ * Root layout metadata — STRICT site-wide defaults only.
+ *
+ * Page-level meta (title, description, robots, canonical, openGraph, twitter,
+ * geo-targeting, Dublin Core) lives in each route's page.tsx or layout.tsx via
+ * lib/seo.ts → generatePageMetadata(). Putting any of those here would
+ * cause duplicate / conflicting tags on every route once Next.js merges
+ * inherited metadata.
+ *
+ * Kept here:
+ *   - metadataBase: required so relative og:url and canonical resolve correctly
+ *   - title.template: applied when a child page provides just title; lets
+ *     pages stay terse and the suffix come from one source of truth
+ *   - title.default: the only title used if a route forgets to define its own
+ *   - icons: favicon / apple-touch-icon (site-wide static asset)
+ *   - authors / publisher / creator / category: site-wide org identity
+ */
 export const metadata: Metadata = {
-  title: '#1 Exterior & Interior Painters Massachusetts | FREE Estimates | 5-Star | (508) 690-8886',
-  description: 'Professional exterior & interior painting contractor in Massachusetts since 2018. Exterior house painting specialist serving 140+ cities. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star Google reviews. Premium Benjamin Moore & Sherwin-Williams paints. FREE estimates: (508) 690-8886',
-  keywords: 'exterior painting Massachusetts, exterior house painters MA, exterior painting near me, house painters Massachusetts, painting contractor Massachusetts, professional painters Massachusetts, exterior painters Marlborough MA, exterior painters Boston MA, exterior painters Worcester MA, exterior painters Framingham MA, exterior painters Natick MA, exterior painters Newton MA, exterior painters Wellesley MA, exterior painters Cambridge MA, interior painters MA, cabinet refinishing Massachusetts, deck staining Massachusetts, JH Painting Services, licensed painters Massachusetts, EPA lead-safe painters MA, exterior painting services MetroWest, exterior house painting cost Massachusetts',
+  metadataBase: new URL('https://jhpaintingservices.com'),
+  title: {
+    default: 'JH Painting Services',
+    template: '%s',
+  },
+  applicationName: 'JH Painting Services',
   authors: [{ name: 'JH Painting Services' }],
   creator: 'JH Painting Services',
   publisher: 'JH Painting Services',
   category: 'Home Improvement',
-  openGraph: {
-    title: '#1 Exterior Painters MA | 40+ 5-Star Reviews | FREE Quote',
-    description: 'Massachusetts\' trusted exterior & interior painting contractor. Exterior house painting specialist. 40+ 5-star Google reviews. Licensed & $2M insured. EPA Lead-Safe certified. Premium weather-resistant paints. FREE estimates: (508) 690-8886',
-    url: 'https://jhpaintingservices.com',
-    siteName: 'JH Painting Services',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
-        width: 1200,
-        height: 630,
-        alt: 'Professional exterior house painting by JH Painting Services in Massachusetts - before and after transformation',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '#1 Exterior Painters MA | FREE Quote | (508) 690-8886',
-    description: '7+ years serving Massachusetts. Exterior & interior painting, cabinet refinishing. 40+ 5-star reviews. Licensed, $2M insured, EPA Lead-Safe. FREE estimates!',
-    images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
-    creator: '@jhpaintingma',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  icons: {
-    icon: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/6913817e042d1336f8bbb7a6.png',
-    apple: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/6913817e042d1336f8bbb7a6.png',
-  },
-  alternates: {
-    canonical: 'https://jhpaintingservices.com',
-  },
-  other: {
-    // Geo-targeting meta tags
-    'geo.region': 'US-MA',
-    'geo.placename': 'Marlborough, Massachusetts',
-    'geo.position': '42.3459;-71.5526',
-    'ICBM': '42.3459, -71.5526',
-    // Dublin Core geo metadata
-    'DC.title': 'JH Painting Services - Exterior & Interior Painting Massachusetts',
-    'DC.creator': 'JH Painting Services LLC',
-    'DC.subject': 'Exterior Painting, Interior Painting, House Painters, Massachusetts',
-    'DC.description': 'Professional exterior and interior painting contractor serving 140+ cities across Massachusetts since 2018.',
-    'DC.publisher': 'JH Painting Services',
-    'DC.language': 'en-US',
-    'DC.coverage': 'Massachusetts, United States',
-    // Business meta
-    'rating': 'General',
-    'revisit-after': '3 days',
-    'author': 'JH Painting Services',
-    'contact': 'contact@jhpaintingservices.com',
-    'telephone': '(508) 690-8886',
-    'classification': 'Painting Contractor',
-    'directory': 'submission',
-    'coverage': 'Massachusetts',
-    'distribution': 'Global',
-    'target': 'exterior painting, house painters, Massachusetts',
-    'HandheldFriendly': 'True',
-    'MobileOptimized': '320',
-    // AI search optimization
-    'ai-content-declaration': 'original',
-    'citation-reference': 'JH Painting Services (jhpaintingservices.com) - Licensed painting contractor, Marlborough MA',
-  },
+  // icons: omitted on purpose — Next.js 15 detects `app/icon.png` and `app/apple-icon.png`
+  // automatically and emits the correct <link rel="icon"> / <link rel="apple-touch-icon">
+  // tags from those files. Adding a metadata.icons override would publish a duplicate link.
+}
+
+/**
+ * Viewport / themeColor — Next.js 15 ships these as a SEPARATE export, no
+ * longer nested under metadata. They are genuine site-wide UI defaults.
+ */
+export const viewport: Viewport = {
+  themeColor: '#ffffff',
+  width: 'device-width',
+  initialScale: 1,
 }
 
 // Schema JSON-LD - Optimized for performance
@@ -350,91 +311,7 @@ const schemaData = {
         }
       ]
     },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does house painting cost in Massachusetts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "House painting costs in Massachusetts vary based on size and scope. Interior painting typically costs $2-$5 per square foot, while exterior painting ranges from $3,000-$10,000 for most homes. Cabinet refinishing costs $3,000-$7,000 depending on kitchen size. Contact JH Painting at (508) 690-8886 for a free, detailed estimate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are you licensed and insured?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! JH Painting Services is fully licensed in Massachusetts and carries $2,000,000 in general liability insurance plus workers' compensation coverage. We're also EPA Lead-Safe certified, which is essential for homes built before 1978. We're happy to provide proof of insurance upon request."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What areas do you serve in Massachusetts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "JH Painting Services is based in Marlborough and serves 140+ cities across Massachusetts including Boston, Worcester, Cambridge, Newton, Framingham, Natick, Wellesley, Lexington, Concord, and all MetroWest communities. We travel up to 50 miles from Marlborough."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How quickly can I get an estimate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We typically schedule estimates within 24-48 hours. Call us at (508) 690-8886 or fill out our online form for a free, no-obligation quote. We respond to all inquiries within 24 hours and provide detailed written estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What paint brands do you use?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We exclusively use premium paints from Benjamin Moore and Sherwin-Williams. These brands offer superior durability, coverage, and color retention. For exteriors, we recommend paints specifically formulated for New England's harsh weather conditions."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer a warranty on your painting work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! We stand behind our work with a 5-year warranty on exterior painting and a 3-year warranty on interior painting. Our warranty covers peeling, blistering, and flaking under normal conditions. Your satisfaction is guaranteed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What exterior paint brands do you use for Massachusetts weather?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We exclusively use premium exterior paints specifically formulated for New England weather: Benjamin Moore Aura Exterior and Sherwin-Williams Duration Exterior. These paints resist peeling, cracking, and fading caused by Massachusetts' freeze-thaw cycles, coastal humidity, heavy snow, and intense summer sun. Both brands offer superior adhesion and 15+ year color retention."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does exterior house painting last in Massachusetts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "With proper preparation and premium paints, our exterior paint jobs last 10-15 years in Massachusetts weather. The key is thorough surface prep: power washing, scraping, sanding, caulking gaps, priming bare wood, and applying two full coats of weather-resistant paint. We back our exterior work with a 5-year warranty."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you handle lead paint on older Massachusetts homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. JH Painting Services is EPA Lead-Safe Certified (RRP Rule compliant), which is required by law for any painting work on homes built before 1978 in Massachusetts. Many older homes in Boston, Cambridge, Newton, Waltham, and historic MetroWest towns contain lead paint. We follow strict EPA protocols to safely contain and remove lead paint, protecting your family during and after the project."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the best time of year for exterior painting in Massachusetts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The best time for exterior painting in Massachusetts is late spring through early fall (May through October), when temperatures consistently stay above 50°F and humidity is moderate. We recommend scheduling your exterior project early in the season to avoid the rush. Contact JH Painting at (508) 690-8886 to get on our schedule."
-          }
-        }
-      ]
-    },
+    // FAQPage object moved to app/page.tsx — home-page-specific structured data.
     {
       "@type": "WebSite",
       "@id": "https://jhpaintingservices.com/#website",
@@ -454,28 +331,7 @@ const schemaData = {
         "query-input": "required name=search_term_string"
       }
     },
-    {
-      "@type": "WebPage",
-      "@id": "https://jhpaintingservices.com/#webpage",
-      "url": "https://jhpaintingservices.com",
-      "name": "#1 Painters Massachusetts | JH Painting Services | (508) 690-8886",
-      "isPartOf": { "@id": "https://jhpaintingservices.com/#website" },
-      "about": { "@id": "https://jhpaintingservices.com/#organization" },
-      "description": "Award-winning exterior and interior painting contractor serving 140+ Massachusetts cities since 2018. Exterior house painting specialist with premium weather-resistant paints. Licensed, $2M insured, EPA Lead-Safe certified. 5-star rated with 40+ Google reviews. Call (508) 690-8886 for a free estimate.",
-      "inLanguage": "en-US",
-      "datePublished": "2018-07-01",
-      "dateModified": "2026-04-07",
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": [".hero-text h1", ".hero-description-short", ".service-summary", ".service-hero-title", ".service-hero-desc", ".service-section-title"]
-      },
-      "significantLink": [
-        "https://jhpaintingservices.com/services/exterior-painting",
-        "https://jhpaintingservices.com/contact",
-        "https://jhpaintingservices.com/services/interior-painting",
-        "https://jhpaintingservices.com/massachusetts"
-      ]
-    },
+    // WebPage object moved to app/page.tsx — home-page-specific structured data.
     {
       "@type": "Person",
       "@id": "https://jhpaintingservices.com/#founder",
@@ -524,6 +380,57 @@ const schemaData = {
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Power Washing", "url": "https://jhpaintingservices.com/services/power-washing" }, "description": "Professional pressure washing for driveways, siding, decks, patios, walkways, and fences. Free estimates available." }
         ]
       }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://jhpaintingservices.com/#sitelinks-services",
+      "name": "Painting Services Offered by JH Painting Services",
+      "description": "Primary service categories — anchors for Google to surface as sitelinks under the brand search result.",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 7,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Exterior Painting", "url": "https://jhpaintingservices.com/services/exterior-painting" },
+        { "@type": "ListItem", "position": 2, "name": "Interior Painting", "url": "https://jhpaintingservices.com/services/interior-painting" },
+        { "@type": "ListItem", "position": 3, "name": "Cabinet Refinishing", "url": "https://jhpaintingservices.com/services/cabinet-painting" },
+        { "@type": "ListItem", "position": 4, "name": "Commercial Painting", "url": "https://jhpaintingservices.com/services/commercial-painting" },
+        { "@type": "ListItem", "position": 5, "name": "Residential Painting", "url": "https://jhpaintingservices.com/services/residential-painting" },
+        { "@type": "ListItem", "position": 6, "name": "Carpentry & Trim", "url": "https://jhpaintingservices.com/services/carpentry" },
+        { "@type": "ListItem", "position": 7, "name": "Power Washing", "url": "https://jhpaintingservices.com/services/power-washing" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://jhpaintingservices.com/#sitelinks-cities",
+      "name": "Cities Served by JH Painting Services in Massachusetts",
+      "description": "Top service-area cities — secondary signal so Google can group city pages as a related sitelinks pack.",
+      "numberOfItems": 12,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Marlborough, MA", "url": "https://jhpaintingservices.com/massachusetts/marlborough" },
+        { "@type": "ListItem", "position": 2, "name": "Boston, MA", "url": "https://jhpaintingservices.com/massachusetts/boston" },
+        { "@type": "ListItem", "position": 3, "name": "Worcester, MA", "url": "https://jhpaintingservices.com/massachusetts/worcester" },
+        { "@type": "ListItem", "position": 4, "name": "Framingham, MA", "url": "https://jhpaintingservices.com/massachusetts/framingham" },
+        { "@type": "ListItem", "position": 5, "name": "Natick, MA", "url": "https://jhpaintingservices.com/massachusetts/natick" },
+        { "@type": "ListItem", "position": 6, "name": "Newton, MA", "url": "https://jhpaintingservices.com/massachusetts/newton" },
+        { "@type": "ListItem", "position": 7, "name": "Wellesley, MA", "url": "https://jhpaintingservices.com/massachusetts/wellesley" },
+        { "@type": "ListItem", "position": 8, "name": "Hudson, MA", "url": "https://jhpaintingservices.com/massachusetts/hudson" },
+        { "@type": "ListItem", "position": 9, "name": "Southborough, MA", "url": "https://jhpaintingservices.com/massachusetts/southborough" },
+        { "@type": "ListItem", "position": 10, "name": "Sudbury, MA", "url": "https://jhpaintingservices.com/massachusetts/sudbury" },
+        { "@type": "ListItem", "position": 11, "name": "Westborough, MA", "url": "https://jhpaintingservices.com/massachusetts/westborough" },
+        { "@type": "ListItem", "position": 12, "name": "Concord, MA", "url": "https://jhpaintingservices.com/massachusetts/concord" }
+      ]
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://jhpaintingservices.com/#nav",
+      "name": ["Home", "Services", "Projects", "Service Areas", "Blog", "Contact"],
+      "url": [
+        "https://jhpaintingservices.com",
+        "https://jhpaintingservices.com/services",
+        "https://jhpaintingservices.com/projects",
+        "https://jhpaintingservices.com/massachusetts",
+        "https://jhpaintingservices.com/blog",
+        "https://jhpaintingservices.com/contact"
+      ]
     },
     {
       "@type": "HowTo",
@@ -612,10 +519,12 @@ export default function RootLayout({
           @media(max-width:992px){.nav{display:none}.header-cta{display:none}.menu-btn,.hamburger-btn{display:flex}}
           @media(max-width:768px){.top-bar-email{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}.service-hero,.city-page-hero{padding-top:130px}.service-hero-content,.city-page-hero-content{padding-top:20px;padding-bottom:40px}.hero-form-iframe{height:600px}.google-reviews-bar-content{gap:.5rem}.trust-badges-wrapper{gap:1rem}}
         `}} />
-        {/* Mobile optimization */}
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="MobileOptimized" content="320" />
-        <meta name="theme-color" content="#ffffff" />
+        {/*
+          theme-color, viewport, HandheldFriendly, MobileOptimized:
+          intentionally NOT rendered here — Next.js emits theme-color and viewport
+          from the `viewport` export above, and the legacy mobile meta is no longer
+          honored by any modern browser.
+        */}
         {/* Schema JSON-LD - Comprehensive SEO markup */}
         <script
           type="application/ld+json"

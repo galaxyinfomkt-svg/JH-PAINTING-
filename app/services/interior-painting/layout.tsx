@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generatePageMetadata({
   title: 'Interior Painters MA | JH Painting | FREE Quote',
   description: 'Expert interior painting in Massachusetts. Premium Benjamin Moore paints, zero mess, done in days. 40+ 5-star reviews. Licensed & $2M insured. (508) 690-8886',
+  path: '/services/interior-painting',
+  ogImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',
+  ogImageAlt: 'Professional Interior Painting Services Massachusetts - JH Painting',
   keywords: [
     'interior painters Massachusetts',
     'interior house painters near me',
@@ -22,50 +26,8 @@ export const metadata: Metadata = {
     'home interior painters MA',
     'local interior painters',
     'interior painters near me',
-  ].join(', '),
-  openGraph: {
-    title: 'Interior House Painters Massachusetts | Best Interior Painters | JH Painting',
-    description: '#1 interior house painters in Massachusetts. Expert wall, ceiling & trim painters. Premium paints, flawless finish. Licensed & insured. FREE estimates!',
-    url: 'https://jhpaintingservices.com/services/interior-painting',
-    siteName: 'JH Painting Services',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',
-        width: 1200,
-        height: 630,
-        alt: 'Professional Interior Painting Services Massachusetts - JH Painting',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Interior House Painters Massachusetts | #1 Painters | (508) 690-8886',
-    description: 'Best interior painters in MA. Premium paints, expert painters. Licensed & insured. Call now for FREE estimate!',
-    images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png'],
-    creator: '@jhpaintingma',
-  },
-  alternates: {
-    canonical: 'https://jhpaintingservices.com/services/interior-painting',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'geo.region': 'US-MA',
-    'geo.placename': 'Massachusetts',
-    'rating': 'General',
-  },
-}
+  ],
+})
 
 export default function InteriorPaintingLayout({
   children,

@@ -1,5 +1,6 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { getCityBySlug, getCitySlugWithState } from '@/app/data/cities'
+import { generatePageMetadata } from '@/lib/seo'
 
 interface Props {
   params: Promise<{ city: string; service: string }>
@@ -52,58 +53,25 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const serviceNameLower = serviceName.toLowerCase()
 
   if (!city) {
-    return {
+    return generatePageMetadata({
       title: 'Service Not Found | JH Painting Services',
-    }
+      description: 'The service page you are looking for could not be found.',
+      path: `/cities/${citySlug}/${service}`,
+      noIndex: true,
+    })
   }
 
   const canonicalSlug = getCitySlugWithState(city.slug)
-  const canonicalUrl = 'https://jhpaintingservices.com/cities/' + canonicalSlug + '/' + service
-
   const painTitle = servicePainTitles[service] || serviceName
   const solution = serviceSolutions[service] || 'Professional ' + serviceNameLower + ' by licensed pros.'
 
-  return {
+  return generatePageMetadata({
     title: painTitle + ' ' + serviceName + ' ' + city.name + ' MA | FREE Quote',
     description: solution + ' ✓ 40+ reviews ✓ $2M insured ✓ ' + city.name + ' MA. Call (508) 690-8886',
+    path: `/cities/${canonicalSlug}/${service}`,
+    ogImageAlt: serviceName + ' Services in ' + city.name + ', MA',
     keywords: serviceNameLower + ' ' + city.name + ' MA, fix ' + serviceNameLower + ' ' + city.name + ', ' + service + ' ' + city.name + ', painters ' + city.name + ' Massachusetts',
-    alternates: {
-      canonical: canonicalUrl,
-    },
-    openGraph: {
-      title: serviceName + ' in ' + city.name + ', MA | JH Painting Services',
-      description: 'Professional ' + serviceNameLower + ' in ' + city.name + ', Massachusetts. 40+ 5-star reviews. FREE estimates!',
-      url: canonicalUrl,
-      siteName: 'JH Painting Services',
-      locale: 'en_US',
-      type: 'website',
-      images: [
-        {
-          url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
-          width: 1200,
-          height: 630,
-          alt: serviceName + ' Services in ' + city.name + ', MA',
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: serviceName + ' in ' + city.name + ', MA | JH Painting Services',
-      description: 'Professional ' + serviceNameLower + ' in ' + city.name + ', MA. 40+ 5-star reviews. FREE estimates!',
-      images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-  }
+  })
 }
 
 export default async function CityServiceLayout({ children }: Props) {

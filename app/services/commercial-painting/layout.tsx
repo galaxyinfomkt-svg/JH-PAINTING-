@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generatePageMetadata({
   title: 'Commercial Painters MA | JH Painting | FREE Quote',
   description: 'Commercial painting in Massachusetts. Offices, retail, restaurants. After-hours available, zero disruption. $2M insured. (508) 690-8886',
+  path: '/services/commercial-painting',
+  ogImageAlt: 'Professional Commercial Painting Services Massachusetts - JH Painting',
   keywords: [
     'commercial painters Massachusetts',
     'commercial painters near me',
@@ -21,50 +24,8 @@ export const metadata: Metadata = {
     'commercial exterior painters',
     'business painters near me',
     'local commercial painters',
-  ].join(', '),
-  openGraph: {
-    title: 'Commercial Painters Massachusetts | Best Business Painters | JH Painting',
-    description: '#1 commercial painters in Massachusetts. Office, retail, restaurant painters. Minimal disruption. Licensed & insured. FREE quotes!',
-    url: 'https://jhpaintingservices.com/services/commercial-painting',
-    siteName: 'JH Painting Services',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
-        width: 1200,
-        height: 630,
-        alt: 'Professional Commercial Painting Services Massachusetts - JH Painting',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Commercial Painters MA | #1 Business Painters | (508) 690-8886',
-    description: 'Best commercial painters in Massachusetts. Office, retail, warehouse. Licensed & insured. Call for FREE quote!',
-    images: ['https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg'],
-    creator: '@jhpaintingma',
-  },
-  alternates: {
-    canonical: 'https://jhpaintingservices.com/services/commercial-painting',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'geo.region': 'US-MA',
-    'geo.placename': 'Massachusetts',
-    'rating': 'General',
-  },
-}
+  ],
+})
 
 export default function CommercialPaintingLayout({
   children,

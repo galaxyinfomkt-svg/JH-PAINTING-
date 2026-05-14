@@ -1,43 +1,27 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+const baseMeta = generatePageMetadata({
   title: 'Professional Painting Services MA | JH Painting Services',
-  description: 'See why 500+ Massachusetts homeowners choose JH Painting Services. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star reviews. FREE estimates: (508) 690-8886',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  description:
+    'See why 500+ Massachusetts homeowners choose JH Painting Services. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star reviews. FREE estimates: (508) 690-8886',
+  path: '/vsl',
+})
+
+/**
+ * Extend the helper output with og:video tags — the helper covers the universal
+ * meta but VSL is the only page that should publish og:video, so we add it
+ * inline here rather than complicate the helper's signature.
+ */
+export const metadata: Metadata = {
+  ...baseMeta,
   openGraph: {
-    title: 'Watch Our Painting Work | JH Painting Services',
-    description: 'See how we transform Massachusetts homes with professional painting. Watch our exterior and interior painting videos.',
-    url: 'https://jhpaintingservices.com/vsl',
-    siteName: 'JH Painting Services',
-    type: 'website',
+    ...baseMeta.openGraph,
     videos: [
-      {
-        url: 'https://www.youtube.com/watch?v=F_lreXzNlUI',
-        width: 1280,
-        height: 720,
-        type: 'text/html',
-      },
-      {
-        url: 'https://www.youtube.com/watch?v=LkT_HLyKibY',
-        width: 1280,
-        height: 720,
-        type: 'text/html',
-      },
+      { url: 'https://www.youtube.com/watch?v=F_lreXzNlUI', width: 1280, height: 720, type: 'text/html' },
+      { url: 'https://www.youtube.com/watch?v=LkT_HLyKibY', width: 1280, height: 720, type: 'text/html' },
     ],
-  },
-  alternates: {
-    canonical: 'https://jhpaintingservices.com/vsl',
   },
 }
 
