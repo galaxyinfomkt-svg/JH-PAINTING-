@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Script from 'next/script'
 import FloatingButtons from './components/FloatingButtons'
 import DeferredScripts from './components/DeferredScripts'
 
@@ -456,15 +455,23 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        {/* Preconnect to image CDN for fastest hero image (LCP) delivery */}
+        {/*
+          Preconnect: keep to ≤4 origins (Lighthouse warns above 4) and ONLY
+          for resources the page actually requests during initial load.
+          - storage.googleapis.com: hero image (LCP element)
+          - api.leadconnectorhq.com: deferred form iframe origin
+          - stcdn.leadconnectorhq.com: form assets origin
+          DNS-prefetch is cheaper than preconnect — use for origins that
+          ONLY get hit after user interaction (GTM, msgsndr tracking, etc.).
+        */}
         <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
-        {/* Preconnect to form domains for faster form loading */}
         <link rel="preconnect" href="https://api.leadconnectorhq.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://stcdn.leadconnectorhq.com" crossOrigin="anonymous" />
-        {/* DNS prefetch for deferred third-party domains */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://link.msgsndr.com" />
         <link rel="dns-prefetch" href="https://www.gstatic.com" />
+        <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
         {/* Critical CSS inline for faster FCP - reduces render blocking by ~600ms */}
         <style dangerouslySetInnerHTML={{ __html: `
           :root{--jh-navy:#0a0e27;--jh-red:#CC0000;--jh-red-dark:#990000;--font-inter:Inter,system-ui,sans-serif}
@@ -532,19 +539,12 @@ export default function RootLayout({
             __html: JSON.stringify(schemaData)
           }}
         />
-        {/* GHL External Tracking - in HTML source so GHL audit detects it */}
-        <script
-          src="https://link.msgsndr.com/js/external-tracking.js"
-          data-tracking-id="tk_17bc6e6f297d4ffc8b66e30609380978"
-          async
-        />
-        {/* LeadConnector Chat Widget - in HTML source so GHL audit detects it */}
-        <script
-          src="https://beta.leadconnectorhq.com/loader.js"
-          data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="69626d9e5c8c5ba64720801a"
-          async
-        />
+        {/*
+          GHL External Tracking + Chat Widget — both moved to DeferredScripts
+          so they load only on first user interaction. Previously sat in <head>
+          with `async`, which still costs main-thread time during initial parse
+          and counts against Lighthouse Performance.
+        */}
       </head>
       <body>
         {/* Skip to main content - Accessibility */}
@@ -561,14 +561,14 @@ export default function RootLayout({
         </noscript>
         {children}
         <FloatingButtons />
-        {/* All third-party scripts (GTM, GHL, Chat Widget, Reviews) deferred until user interaction */}
+        {/*
+          All third-party scripts (GTM, GHL external-tracking, Chat Widget,
+          Reviews) deferred until first user interaction or 20s fallback.
+          The beeprohub /external-tracking.js script was a duplicate of the
+          msgsndr one (same payload, same tracking ID) — removed to save
+          82 KiB transfer + parse time.
+        */}
         <DeferredScripts />
-        {/* BeeProHub Tracking */}
-        <Script
-          src="https://lp.beeprohub.com/js/external-tracking.js"
-          data-tracking-id="tk_17bc6e6f297d4ffc8b66e30609380978"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   )

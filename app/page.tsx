@@ -449,14 +449,18 @@ export default function HomePage() {
                 <Link href={service.href} key={index} className="service-card service-card-enhanced">
                   {service.featured && <span className="service-card-featured">Featured Service</span>}
                   <div className="service-card-image">
+                    {/* Service-card images: Lighthouse flagged 828×517 served
+                       for 662×441 actual display. Reducing quality 75→55
+                       (acceptable for grid thumbnails) + tightening sizes
+                       breakpoints saves ~30 KiB per image. */}
                     <Image
                       src={service.image}
                       alt={service.title}
                       width={600}
                       height={400}
                       loading="lazy"
-                      quality={75}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      quality={55}
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
                       style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                     />
                   </div>
