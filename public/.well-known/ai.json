@@ -1,6 +1,6 @@
 {
   "name": "JH Painting Services",
-  "description": "#1 exterior and interior painting contractor in Massachusetts. Exterior house painting specialist serving 140+ cities. Licensed, $2M insured, EPA Lead-Safe certified. 5.0 Google rating with 40+ verified reviews. Premium Benjamin Moore & Sherwin-Williams paints. 5-year warranty on exterior work.",
+  "description": "#1 exterior and interior painting contractor in Massachusetts. Exterior house painting specialist serving 117+ cities. Licensed, $2M insured, EPA Lead-Safe certified. 5.0 Google rating with 40+ verified reviews. Premium Benjamin Moore & Sherwin-Williams paints. 5-year warranty on exterior work.",
   "url": "https://jhpaintingservices.com",
   "specialty": "Exterior House Painting",
   "contact": {
@@ -55,7 +55,7 @@
   ],
   "serviceArea": {
     "state": "Massachusetts",
-    "citiesServed": "140+",
+    "citiesServed": "117+",
     "primaryRegions": ["MetroWest", "Greater Boston", "Worcester & Central MA"],
     "majorCities": ["Boston", "Worcester", "Cambridge", "Newton", "Framingham", "Natick", "Wellesley", "Waltham", "Marlborough", "Hudson", "Sudbury", "Shrewsbury", "Brookline", "Somerville", "Needham", "Westborough", "Hopkinton", "Lexington", "Concord", "Acton"]
   },

@@ -4,7 +4,7 @@ import { generatePageMetadata } from '@/lib/seo'
 export const metadata: Metadata = generatePageMetadata({
   title: '#1 Exterior House Painters Massachusetts | 5-Year Warranty | FREE Quote | (508) 690-8886',
   description:
-    "Massachusetts' #1 exterior house painting contractor. Complete exterior painting: power washing, surface prep, caulking, priming + 2 coats premium Benjamin Moore Aura or Sherwin-Williams Duration paint. 5-year warranty. EPA Lead-Safe certified. 40+ 5-star Google reviews. Licensed & $2M insured. Serving 140+ MA cities. FREE estimates: (508) 690-8886",
+    "Massachusetts' #1 exterior house painting contractor. Complete exterior painting: power washing, surface prep, caulking, priming + 2 coats premium Benjamin Moore Aura or Sherwin-Williams Duration paint. 5-year warranty. EPA Lead-Safe certified. 40+ 5-star Google reviews. Licensed & $2M insured. Serving 117+ MA cities. FREE estimates: (508) 690-8886",
   path: '/services/exterior-painting',
   ogImageAlt:
     'Professional exterior house painting in Massachusetts by JH Painting Services — before and after home transformation with premium weather-resistant paint',

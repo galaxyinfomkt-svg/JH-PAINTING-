@@ -21,13 +21,7 @@ export const FORM_IDS = {
   servicePages: 'https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn',
 } as const
 
-// Social Media Links
-export const SOCIAL = {
-  facebook: 'https://facebook.com/jhpaintingservices',
-  instagram: 'https://instagram.com/jhpaintingservices',
-  google: 'https://g.page/r/Cb984Z3qm9PsEAE/review',
-  yelp: 'https://yelp.com/biz/jh-painting-services',
-} as const
+// (SOCIAL_LINKS — defined below — is the authoritative social-profile list.)
 
 // Service Areas - Massachusetts Cities
 export const SERVICE_AREAS = [
@@ -144,14 +138,22 @@ export const VIDEOS = [
   { id: 'LkT_HLyKibY', title: 'Interior Painting', type: 'YouTube Short' },
 ] as const
 
-// Stats/Trust Indicators — SINGLE SOURCE OF TRUTH for all pages
+// Stats/Trust Indicators — SINGLE SOURCE OF TRUTH for all pages.
+// Must stay in sync with:
+//   - cities.length in app/data/cities.ts (citiesServed)
+//   - Google Business Profile review count (reviewCount)
+//   - aggregateRating in app/layout.tsx schema (reviewCount must match)
+// Update labels together with their numbers, then redeploy.
 export const STATS = {
   yearsExperience: 7,
   projectsCompleted: '500+',
   satisfaction: '100%',
   rating: 5.0,
   reviewCount: 40,
-  citiesServed: 140,
+  reviewLabel: '40+',
+  citiesServed: 117,
+  citiesLabel: '117+',
+  insuranceCoverage: '$2M',
 } as const
 
 // Business Hours

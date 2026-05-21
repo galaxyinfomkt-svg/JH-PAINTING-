@@ -4,8 +4,8 @@ import { cities, getCitySlugWithState } from '@/app/data/cities'
 import { generatePageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Painters Near Me MA | 140+ Cities Served | Find Your Local Painter',
-  description: 'Looking for painters near you in Massachusetts? We serve 140+ cities: Boston, Worcester, Cambridge, Newton, Framingham & more. 40+ 5-star reviews. Licensed & $2M insured. FREE quote (508) 690-8886',
+  title: 'Painters Near Me MA | 117+ Cities Served | Find Your Local Painter',
+  description: 'Looking for painters near you in Massachusetts? We serve 117+ cities: Boston, Worcester, Cambridge, Newton, Framingham & more. 40+ 5-star reviews. Licensed & $2M insured. FREE quote (508) 690-8886',
   path: '/massachusetts',
   ogImageAlt: 'Painters Near Me Massachusetts - JH Painting Service Areas',
   keywords: [

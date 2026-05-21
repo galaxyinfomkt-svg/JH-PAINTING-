@@ -71,7 +71,7 @@ const schemaData = {
       "name": "JH Painting Services",
       "legalName": "JH Painting Services LLC",
       "alternateName": ["JH Painting", "JH Painting Services Massachusetts", "JH Painting MA", "JH Painters"],
-      "description": "Award-winning exterior and interior painting contractor serving Massachusetts since 2018. Specialist in exterior house painting with premium weather-resistant paints. Expert interior painting, cabinet refinishing, deck staining, and home improvement services. Licensed, $2M insured, EPA Lead-Safe certified. Serving 140+ cities across Massachusetts including Boston, Worcester, Cambridge, Framingham, Natick, and all MetroWest communities.",
+      "description": "Award-winning exterior and interior painting contractor serving Massachusetts since 2018. Specialist in exterior house painting with premium weather-resistant paints. Expert interior painting, cabinet refinishing, deck staining, and home improvement services. Licensed, $2M insured, EPA Lead-Safe certified. Serving 117+ cities across Massachusetts including Boston, Worcester, Cambridge, Framingham, Natick, and all MetroWest communities.",
       "slogan": "Massachusetts' Exterior Painting Specialists Since 2018",
       "url": "https://jhpaintingservices.com",
       "telephone": "+1-508-690-8886",
@@ -249,7 +249,7 @@ const schemaData = {
         "@type": "OfferCatalog",
         "name": "Painting Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior House Painting", "description": "Complete exterior house painting with power washing, surface prep, caulking, priming, and two coats of premium weather-resistant Benjamin Moore or Sherwin-Williams paint. 5-year warranty. Serving 140+ Massachusetts cities.", "url": "https://jhpaintingservices.com/services/exterior-painting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior House Painting", "description": "Complete exterior house painting with power washing, surface prep, caulking, priming, and two coats of premium weather-resistant Benjamin Moore or Sherwin-Williams paint. 5-year warranty. Serving 117+ Massachusetts cities.", "url": "https://jhpaintingservices.com/services/exterior-painting" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting", "description": "Professional interior painting for walls, ceilings, trim, doors, and baseboards with premium low-VOC paints. 3-year warranty.", "url": "https://jhpaintingservices.com/services/interior-painting" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing", "description": "Kitchen cabinet painting and refinishing with factory-quality spray finish. Save 60-70% vs replacement.", "url": "https://jhpaintingservices.com/services/cabinet-painting" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting", "description": "Professional painting for offices, retail, restaurants. After-hours scheduling available.", "url": "https://jhpaintingservices.com/services/commercial-painting" } },
@@ -316,7 +316,7 @@ const schemaData = {
       "@id": "https://jhpaintingservices.com/#website",
       "url": "https://jhpaintingservices.com",
       "name": "JH Painting Services",
-      "description": "Professional painting contractor serving 140+ cities in Massachusetts. Interior & exterior painting, cabinet refinishing, commercial painting. Licensed, $2M insured, EPA Lead-Safe certified.",
+      "description": "Professional painting contractor serving 117+ cities in Massachusetts. Interior & exterior painting, cabinet refinishing, commercial painting. Licensed, $2M insured, EPA Lead-Safe certified.",
       "publisher": {
         "@id": "https://jhpaintingservices.com/#organization"
       },
@@ -371,7 +371,7 @@ const schemaData = {
         "@type": "OfferCatalog",
         "name": "Professional Painting Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior House Painting", "url": "https://jhpaintingservices.com/services/exterior-painting" }, "description": "Complete exterior house painting with power washing, scraping, caulking, priming, and two coats of premium weather-resistant paint. 5-year warranty. Serving 140+ cities in Massachusetts." },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior House Painting", "url": "https://jhpaintingservices.com/services/exterior-painting" }, "description": "Complete exterior house painting with power washing, scraping, caulking, priming, and two coats of premium weather-resistant paint. 5-year warranty. Serving 117+ cities in Massachusetts." },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting", "url": "https://jhpaintingservices.com/services/interior-painting" }, "description": "Professional interior painting for walls, ceilings, trim, doors, baseboards. Premium low-VOC Benjamin Moore and Sherwin-Williams paints. 3-year warranty." },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing", "url": "https://jhpaintingservices.com/services/cabinet-painting" }, "description": "Kitchen cabinet painting and refinishing with factory-quality spray finish. Save 60-70% vs full replacement. Free estimates available." },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting", "url": "https://jhpaintingservices.com/services/commercial-painting" }, "description": "Professional painting for offices, retail, restaurants, warehouses. After-hours and weekend scheduling. Free estimates available." },

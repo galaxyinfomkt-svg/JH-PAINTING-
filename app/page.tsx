@@ -18,7 +18,7 @@ import { generatePageMetadata } from '@/lib/seo'
 export const metadata: Metadata = generatePageMetadata({
   title: 'JH Painting Services | Painters Massachusetts | (508) 690-8886',
   description:
-    "Massachusetts' trusted exterior & interior painting contractor since 2018. Serving 140+ MA cities. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star Google reviews. Premium Benjamin Moore & Sherwin-Williams paints. FREE estimates: (508) 690-8886",
+    "Massachusetts' trusted exterior & interior painting contractor since 2018. Serving 117+ MA cities. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star Google reviews. Premium Benjamin Moore & Sherwin-Williams paints. FREE estimates: (508) 690-8886",
   path: '/',
   ogImageAlt:
     'Professional exterior house painting by JH Painting Services in Massachusetts — before and after transformation',
@@ -177,7 +177,7 @@ const homePageSchema = {
       isPartOf: { '@id': 'https://jhpaintingservices.com/#website' },
       about: { '@id': 'https://jhpaintingservices.com/#organization' },
       description:
-        'Award-winning exterior and interior painting contractor serving 140+ Massachusetts cities since 2018. Licensed, $2M insured, EPA Lead-Safe certified. 40+ Google reviews. Call (508) 690-8886 for a free estimate.',
+        'Award-winning exterior and interior painting contractor serving 117+ Massachusetts cities since 2018. Licensed, $2M insured, EPA Lead-Safe certified. 40+ Google reviews. Call (508) 690-8886 for a free estimate.',
       inLanguage: 'en-US',
       datePublished: '2018-07-01',
       dateModified: '2026-05-14',
@@ -216,7 +216,7 @@ const homePageSchema = {
           name: 'What areas do you serve in Massachusetts?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'JH Painting Services is based in Marlborough and serves 140+ cities across Massachusetts including Boston, Worcester, Cambridge, Newton, Framingham, Natick, Wellesley, Lexington, Concord, and all MetroWest communities. We travel up to 50 miles from Marlborough. Call (508) 690-8886.',
+            text: 'JH Painting Services is based in Marlborough and serves 117+ cities across Massachusetts including Boston, Worcester, Cambridge, Newton, Framingham, Natick, Wellesley, Lexington, Concord, and all MetroWest communities. We travel up to 50 miles from Marlborough. Call (508) 690-8886.',
           },
         },
         {
@@ -288,7 +288,7 @@ export default function HomePage() {
           <div className="hero-bg">
             <Image
               src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
-              alt="Professional exterior and interior painting services in Massachusetts by JH Painting Services - licensed painters serving 140+ cities"
+              alt="Professional exterior and interior painting services in Massachusetts by JH Painting Services - licensed painters serving 117+ cities"
               fill
               priority
               fetchPriority="high"
@@ -316,7 +316,7 @@ export default function HomePage() {
                     <StarIcon size={18} fill="#CC0000" />
                     <StarIcon size={18} fill="#CC0000" />
                   </div>
-                  <span style={{ color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>5.0 Rating | 50+ Reviews</span>
+                  <span style={{ color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>5.0 Rating | 40+ Reviews</span>
                 </div>
 
                 {/* Headline */}
@@ -498,7 +498,7 @@ export default function HomePage() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginTop: '2rem' }}>
                   {[
                     { value: '117+', label: 'Cities Served' },
-                    { value: '50+', label: 'Google Reviews' },
+                    { value: '40+', label: 'Google Reviews' },
                     { value: '100%', label: 'Licensed' },
                     { value: '24hr', label: 'Response Time' },
                   ].map((stat, i) => (
@@ -671,7 +671,7 @@ export default function HomePage() {
             <div className="why-grid">
               {[
                 { icon: ShieldIcon, title: 'Licensed & Insured', desc: 'Fully licensed with $2M general liability insurance and workers compensation' },
-                { icon: StarIcon, title: '5-Star Rated', desc: '50+ verified 5-star Google reviews from satisfied homeowners' },
+                { icon: StarIcon, title: '5-Star Rated', desc: '40+ verified 5-star Google reviews from satisfied homeowners' },
                 { icon: ClockIcon, title: 'On-Time Completion', desc: 'We respect your schedule and deliver every project on time' },
                 { icon: DollarIcon, title: 'Free Estimates', desc: 'Transparent pricing with detailed written estimates, no obligation' },
               ].map((item, index) => (
