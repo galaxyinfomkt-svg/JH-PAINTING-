@@ -115,6 +115,7 @@ import { getCityContent, generateUniqueCityContent } from '@/app/data/cityConten
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
+import RelatedCities from '@/app/components/RelatedCities'
 import { BUSINESS, FORM_IDS } from '@/lib/constants'
 
 // Dynamic imports for below-fold heavy client components (code splitting)
@@ -1326,6 +1327,8 @@ export default async function CityPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <RelatedCities citySlug={citySlug} cityName={city.name} />
       </main>
 
       <Footer />

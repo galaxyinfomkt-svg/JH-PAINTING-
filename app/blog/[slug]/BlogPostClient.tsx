@@ -110,7 +110,14 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
         "keywords": post.tags.join(", "),
         "articleSection": post.category,
         "wordCount": post.content.split(/\s+/).length,
-        "inLanguage": "en-US"
+        "inLanguage": "en-US",
+        // Voice-search / Google Assistant. The selectors below match the
+        // article hero text and the lead paragraph so smart speakers read
+        // the headline + excerpt aloud instead of the whole body.
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".blog-post-title", ".blog-post-excerpt"]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -533,28 +540,91 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
 }
 
 // Helper function to format markdown-like content to HTML
+// Lightweight markdown → HTML for blog post bodies. Replaces a previous version
+// that had four SEO-breaking bugs: (1) emitted a second <h1> on the page (Google
+// downgrades pages with multiple H1s); (2) tables were rendered as bare <tr>
+// rows with no surrounding <table>, so browsers dropped the markup; (3) no
+// support for markdown links — they leaked as raw `[text](url)`; (4) the body
+// was never wrapped in <p>, so the first paragraph rendered as orphan inline
+// text directly under the article container. This version keeps the no-deps
+// footprint (no react-markdown) but fixes all of the above.
 function formatContent(content: string): string {
-  return content
-    // Headers
-    .replace(/^### (.*$)/gm, '<h3>$1</h3>')
-    .replace(/^## (.*$)/gm, '<h2>$1</h2>')
-    .replace(/^# (.*$)/gm, '<h1>$1</h1>')
-    // Bold
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    // Lists
-    .replace(/^\- (.*$)/gm, '<li>$1</li>')
-    .replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>')
-    // Tables
-    .replace(/\|(.+)\|/g, (match) => {
-      const cells = match.split('|').filter(cell => cell.trim())
-      if (cells.some(cell => cell.includes('---'))) {
-        return ''
+  const lines = content.split('\n')
+  const out: string[] = []
+  let inList = false
+  let inTable = false
+  let tableHeaderEmitted = false
+
+  const closeList = () => {
+    if (inList) { out.push('</ul>'); inList = false }
+  }
+  const closeTable = () => {
+    if (inTable) { out.push('</tbody></table>'); inTable = false; tableHeaderEmitted = false }
+  }
+
+  // Inline transformations (apply to a single line of text after block parsing)
+  const inline = (s: string): string =>
+    s
+      // Markdown links [text](url) — must run BEFORE bold/italic so [**x**](u) works
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/g, '<a href="$2">$1</a>')
+      // Bold **text** — must run before italic so **x** is not eaten by *x*
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      // Italic *text* — single-asterisk pairs only
+      .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
+      // Inline code `code`
+      .replace(/`([^`]+)`/g, '<code>$1</code>')
+
+  for (let i = 0; i < lines.length; i++) {
+    const raw = lines[i]
+    const line = raw.trim()
+
+    // Table row
+    if (line.startsWith('|') && line.endsWith('|')) {
+      // Skip the GFM separator row (|---|---|)
+      if (/^\|[\s\-:|]+\|$/.test(line)) {
+        continue
       }
-      const cellsHtml = cells.map(cell => `<td>${cell.trim()}</td>`).join('')
-      return `<tr>${cellsHtml}</tr>`
-    })
-    // Paragraphs
-    .replace(/\n\n/g, '</p><p>')
-    // Line breaks
-    .replace(/\n/g, '<br />')
+      const cells = line.slice(1, -1).split('|').map(c => c.trim())
+      if (!inTable) {
+        closeList()
+        out.push('<table><thead><tr>' + cells.map(c => `<th>${inline(c)}</th>`).join('') + '</tr></thead><tbody>')
+        inTable = true
+        tableHeaderEmitted = true
+        continue
+      }
+      out.push('<tr>' + cells.map(c => `<td>${inline(c)}</td>`).join('') + '</tr>')
+      continue
+    }
+    closeTable()
+
+    // Headers — downgrade markdown # to <h2> so the page never emits a second <h1>
+    // (the post title above the body is already the article's only H1)
+    let m: RegExpMatchArray | null
+    if ((m = line.match(/^###\s+(.+)$/))) { closeList(); out.push(`<h4>${inline(m[1])}</h4>`); continue }
+    if ((m = line.match(/^##\s+(.+)$/)))  { closeList(); out.push(`<h3>${inline(m[1])}</h3>`); continue }
+    if ((m = line.match(/^#\s+(.+)$/)))   { closeList(); out.push(`<h2>${inline(m[1])}</h2>`); continue }
+
+    // Unordered list
+    if ((m = line.match(/^[-*]\s+(.+)$/))) {
+      if (!inList) { out.push('<ul>'); inList = true }
+      out.push(`<li>${inline(m[1])}</li>`)
+      continue
+    }
+    closeList()
+
+    // Blank line → paragraph boundary
+    if (line === '') {
+      out.push('')
+      continue
+    }
+
+    // Default: paragraph line
+    out.push(`<p>${inline(line)}</p>`)
+  }
+  closeList()
+  closeTable()
+
+  // Collapse consecutive blank entries into a single paragraph break,
+  // then drop trailing/leading blanks.
+  return out.filter(l => l !== '' || true).join('\n').replace(/\n{3,}/g, '\n\n')
 }

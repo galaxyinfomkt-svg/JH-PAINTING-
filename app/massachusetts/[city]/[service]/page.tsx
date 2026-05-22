@@ -44,6 +44,7 @@ import { getCityBySlug, cities } from '@/app/data/cities'
 import { cityContentMap, generateServiceContent } from '@/app/data/cityContent'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import RelatedCities from '@/app/components/RelatedCities'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 
@@ -786,6 +787,7 @@ export default async function CityServicePage({ params }: Props) {
           </div>
         </section>
 
+        <RelatedCities citySlug={citySlug} cityName={city.name} serviceSlug={serviceSlug} />
       </main>
 
       {/* Footer */}
