@@ -27,7 +27,7 @@ const commercialPaintingSchema = {
         "@id": "https://jhpaintingservices.com/#organization",
         "name": "JH Painting Services",
         "telephone": "+1-508-690-8886",
-        "priceRange": "Free Estimates",
+        "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Marlborough",
@@ -229,7 +229,7 @@ export default function CommercialPaintingPage() {
             className="object-cover"
             priority
             sizes="100vw"
-            quality={35}
+            quality={60}
           />
           <div className="service-hero-overlay" />
         </div>

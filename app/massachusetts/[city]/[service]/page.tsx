@@ -362,7 +362,7 @@ export default async function CityServicePage({ params }: Props) {
               fill
               className="object-cover"
               priority
-              quality={35}
+              quality={60}
               sizes="100vw"
             />
             <div className="service-hero-overlay" />

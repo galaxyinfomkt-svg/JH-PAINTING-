@@ -6,20 +6,13 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        // Spam query-string URLs return 410 in middleware.ts — no need to disallow here.
+        // /cities/* is 301-redirected to /massachusetts/* in middleware.ts, but blocking
+        // crawl saves crawl budget and avoids the redirect chain entirely.
         disallow: [
           '/api/',
           '/_next/',
-          // Block spam URL patterns
-          '/*?*xmcn*',
-          '/*?*nco*',
-          '/*?chiba*',
-          '/*?s={search_term_string}',
-          '/*?40001*',
-          '/*?339*',
-          // Block old URL patterns that should use redirects
-          '/jh-painting-services-*',
-          // Block tag query params (should go to /blog directly)
-          '/blog?tag=*',
+          '/cities/',
         ],
       },
       {

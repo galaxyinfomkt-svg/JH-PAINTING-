@@ -16,7 +16,7 @@ import { generatePageMetadata } from '@/lib/seo'
  * inside the snippet (Wolfs Siding gets its (774) 484-1895 the same way).
  */
 export const metadata: Metadata = generatePageMetadata({
-  title: 'JH Painting Services | Painters Massachusetts | (508) 690-8886',
+  title: 'Painters in Massachusetts — Licensed & Insured | JH Painting',
   description:
     "Massachusetts' trusted exterior & interior painting contractor since 2018. Serving 117+ MA cities. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star Google reviews. Premium Benjamin Moore & Sherwin-Williams paints. FREE estimates: (508) 690-8886",
   path: '/',
@@ -293,7 +293,7 @@ export default function HomePage() {
               priority
               fetchPriority="high"
               sizes="100vw"
-              quality={35}
+              quality={60}
               style={{ objectFit: 'cover' }}
             />
           </div>

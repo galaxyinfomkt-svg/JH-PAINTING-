@@ -90,7 +90,7 @@ const schemaData = {
         "height": 160
       },
       "image": "https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg",
-      "priceRange": "Free Estimates",
+      "priceRange": "$$",
       "currenciesAccepted": "USD",
       "paymentAccepted": ["Cash", "Check", "Credit Card", "Debit Card", "Zelle", "Venmo"],
       "address": {

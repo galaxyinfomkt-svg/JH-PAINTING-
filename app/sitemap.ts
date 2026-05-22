@@ -3,9 +3,14 @@ import { cities, normalizeCitySlug } from './data/cities'
 import { blogPosts } from './data/blogPosts'
 import { regions } from './data/regions'
 
+// Frozen at build time. Bump when meaningful page content changes so Google
+// trusts the lastmod signal — `new Date()` every deploy is a known anti-pattern
+// (Google ignores sitemaps that fake daily updates with no content change).
+const BUILD_DATE = '2026-05-22T00:00:00.000Z'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://jhpaintingservices.com'
-  const currentDate = new Date().toISOString()
+  const currentDate = BUILD_DATE
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [

@@ -362,7 +362,7 @@ export default async function CityPage({ params }: Props) {
             fill
             priority
             sizes="100vw"
-            quality={35}
+            quality={60}
             style={{ objectFit: 'cover' }}
           />
           <div className="city-page-hero-overlay" />
