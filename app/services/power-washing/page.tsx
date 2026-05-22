@@ -1,15 +1,12 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import dynamic from 'next/dynamic'
+import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { BUSINESS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 
-const BeforeAfterSlider = dynamic(() => import('@/app/components/BeforeAfterSlider'), { ssr: false })
 
 // Inline SVG icons to reduce bundle size
 const PhoneIcon = ({ size = 24 }: { size?: number }) => (

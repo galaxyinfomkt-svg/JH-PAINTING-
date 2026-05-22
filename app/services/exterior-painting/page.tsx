@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
@@ -8,9 +6,8 @@ import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
-import dynamic from 'next/dynamic'
+import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 
-const BeforeAfterSlider = dynamic(() => import('@/app/components/BeforeAfterSlider'), { ssr: false })
 
 // Schema JSON-LD for Exterior Painting Service
 const exteriorPaintingSchema = {

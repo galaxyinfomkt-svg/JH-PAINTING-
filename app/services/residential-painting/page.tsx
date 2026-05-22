@@ -1,16 +1,13 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import dynamic from 'next/dynamic'
+import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Paintbrush, Home } from '@/app/components/Icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 
-const BeforeAfterSlider = dynamic(() => import('@/app/components/BeforeAfterSlider'), { ssr: false })
 
 // Schema JSON-LD for Residential Painting Service
 const residentialPaintingSchema = {
