@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import FloatingButtons from './components/FloatingButtons'
+import MobileStickyCTA from './components/MobileStickyCTA'
 import DeferredScripts from './components/DeferredScripts'
 
 // Optimize font loading - 'optional' prevents font from being render-blocking
@@ -265,14 +266,10 @@ const schemaData = {
         "bestRating": "5",
         "worstRating": "1"
       },
+      // Sample reviews — every entry must be a REAL, attributable customer review.
+      // The "Sarah M." entry was removed (was fabricated). Add new entries only
+      // from verified Google reviews with full first name + last initial.
       "review": [
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "Sarah M." },
-          "datePublished": "2024-11-15",
-          "reviewBody": "JH Painting did an amazing job on our entire home interior. Professional, punctual, and incredibly detailed. Highly recommend!"
-        },
         {
           "@type": "Review",
           "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
@@ -561,6 +558,7 @@ export default function RootLayout({
         </noscript>
         {children}
         <FloatingButtons />
+        <MobileStickyCTA />
         {/*
           All third-party scripts (GTM, GHL external-tracking, Chat Widget,
           Reviews) deferred until first user interaction or 20s fallback.

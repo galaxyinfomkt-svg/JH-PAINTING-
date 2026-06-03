@@ -254,6 +254,19 @@ p {
   .container { padding: 0 2.5rem; }
 }
 
+/*
+ * Mobile sticky CTA bar (Task 10)
+ * The component renders <div className="mobile-sticky-cta"> with inline
+ * positioning; this rule simply hides the whole bar on tablets/desktops.
+ * On mobile, body gets a bottom padding so content doesn't sit under the bar.
+ */
+.mobile-sticky-cta { display: flex; }
+body { padding-bottom: 72px; }
+@media (min-width: 768px) {
+  .mobile-sticky-cta { display: none !important; }
+  body { padding-bottom: 0; }
+}
+
 .section {
   padding: 5rem 0;
   /* Performance: Defer rendering of offscreen sections */

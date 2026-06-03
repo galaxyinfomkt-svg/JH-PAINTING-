@@ -9,30 +9,9 @@ import Footer from '@/app/components/Footer'
 import LazyIframe from '@/app/components/LazyIframe'
 import { BUSINESS, FORM_IDS } from '@/lib/constants'
 
-// Testimonials data
-const testimonials = [
-  {
-    name: 'Sarah M.',
-    location: 'Marlborough, MA',
-    rating: 5,
-    text: "JH Painting transformed our home! The attention to detail was incredible. They were professional, clean, and the results exceeded our expectations. Highly recommend!",
-    project: 'Exterior Painting'
-  },
-  {
-    name: 'Michael R.',
-    location: 'Worcester, MA',
-    rating: 5,
-    text: "Best painting company we've ever worked with. Fair pricing, excellent communication, and the quality of work is outstanding. Our kitchen cabinets look brand new!",
-    project: 'Cabinet Refinishing'
-  },
-  {
-    name: 'Jennifer L.',
-    location: 'Framingham, MA',
-    rating: 5,
-    text: "From estimate to completion, everything was seamless. The team was respectful of our home and the paint job is flawless. Will definitely use again!",
-    project: 'Interior Painting'
-  }
-]
+// Fabricated testimonials removed (was "Sarah M.", "Michael R.", "Jennifer L.").
+// The section below now links to the LIVE Google reviews — every quote a real
+// customer wrote — so we never present invented reviews to visitors.
 
 // Pain points that resonate with homeowners
 const painPoints = [
@@ -211,7 +190,7 @@ export default function VSLPage() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
+        {/* Social proof — links to real Google reviews instead of fabricated quotes */}
         <section className="vsl-testimonials">
           <div className="container">
             <div className="vsl-section-header">
@@ -219,22 +198,27 @@ export default function VSLPage() {
               <h2>What Our Customers Say</h2>
             </div>
 
-            <div className="vsl-testimonials-grid">
-              {testimonials.map((testimonial, idx) => (
-                <div key={idx} className="vsl-testimonial-card">
-                  <div className="vsl-testimonial-stars">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} size={18} fill="#FFB800" color="#FFB800" />
-                    ))}
-                  </div>
-                  <p className="vsl-testimonial-text">"{testimonial.text}"</p>
-                  <div className="vsl-testimonial-author">
-                    <strong>{testimonial.name}</strong>
-                    <span>{testimonial.location}</span>
-                    <span className="vsl-testimonial-project">{testimonial.project}</span>
-                  </div>
-                </div>
-              ))}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem', padding: '2rem 1.5rem', maxWidth: '640px', margin: '0 auto' }}>
+              <div style={{ display: 'flex', gap: '4px', color: '#FFB800' }}>
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={28} fill="#FFB800" color="#FFB800" />
+                ))}
+              </div>
+              <p style={{ fontSize: '1.5rem', fontWeight: 700, color: '#0a0e27', textAlign: 'center', margin: 0 }}>
+                5.0 from 40+ verified Google reviews
+              </p>
+              <p style={{ fontSize: '1rem', color: '#475569', textAlign: 'center', margin: 0, maxWidth: '480px' }}>
+                Every review on our Google profile is from a real Massachusetts homeowner who hired us.
+                Read what they say in their own words — we don&apos;t invent testimonials.
+              </p>
+              <a
+                href="https://g.page/r/Cb984Z3qm9PsEAE/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000, #990000)', color: '#fff', padding: '0.875rem 1.75rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 14px rgba(204,0,0,0.35)' }}
+              >
+                Read All Google Reviews ↗
+              </a>
             </div>
           </div>
         </section>

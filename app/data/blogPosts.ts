@@ -7383,11 +7383,9 @@ The transformation was dramatic. The homeowners were thrilled with the historica
 **Before:** Faded, peeling paint with visible damage
 **After:** Stunning Victorian beauty restored to its 1890s glory
 
-## Homeowner Testimonial
+## Verified Customer Feedback
 
-*"JH Painting Services exceeded our expectations in every way. They treated our historic home with the respect it deserves, and the results are absolutely stunning. We've had neighbors stopping by just to compliment the transformation!"*
-
-— Sarah M., Newton, MA
+This project — and 40+ others — is reviewed in our public Google Business Profile. Read every real, attributable review at [g.page/r/Cb984Z3qm9PsEAE](https://g.page/r/Cb984Z3qm9PsEAE/review). We do not publish testimonials we cannot attribute to a verified customer.
 
 ## Project Details
 

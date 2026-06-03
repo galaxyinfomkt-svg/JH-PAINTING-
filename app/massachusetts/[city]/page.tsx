@@ -410,6 +410,13 @@ export default async function CityPage({ params }: Props) {
                 </span>
               </div>
 
+              {/*
+                H1 de-superlative-ized (Task 6). Was "#1 Painter Contractor in
+                {city}, MA" — Google penalises unverifiable rank claims, and
+                we'd lose the rich-snippet rating eligibility if the H1
+                contradicts the AggregateRating ("we say #1 but rating is 5.0
+                with 40 reviews — by whose ranking?").
+              */}
               <h1 className="hero-title" style={{
                 fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
                 fontWeight: '800',
@@ -418,8 +425,8 @@ export default async function CityPage({ params }: Props) {
                 marginBottom: '1.5rem',
                 letterSpacing: '-0.02em'
               }}>
-                <span className="hero-title-number">#1</span> <span className="hero-title-highlight">Painter</span><br />
-                <span className="hero-title-highlight">Contractor</span> <span className="hero-title-in">in</span><br />
+                <span className="hero-title-highlight">Exterior &amp; Interior</span><br />
+                <span className="hero-title-highlight">Painters</span> <span className="hero-title-in">in</span><br />
                 <span className="hero-title-city">{city.name}, MA</span>
               </h1>
 
@@ -986,22 +993,35 @@ export default async function CityPage({ params }: Props) {
             ))}
           </div>
 
-          {/* Testimonial in Pain Points */}
-          <div className="city-testimonial">
+          {/*
+            Aggregate proof block (replaces fabricated "Sarah M., {city.name}
+            Homeowner" testimonial that previously templated a fake review
+            on every city page). Shows ONLY accurate, attributable trust
+            signals — the 5.0 rating, the actual Google reviews count, and
+            a link to the real Google profile so visitors can read real
+            reviews. No invented quotes.
+          */}
+          <div className="city-testimonial" role="group" aria-label="Customer rating summary">
             <div className="city-testimonial-stars">
               {[1,2,3,4,5].map(i => <StarIcon key={i} size={24} fill="#CC0000" />)}
             </div>
-            <blockquote className="city-testimonial-quote">
-              "After two bad experiences with other painters in {city.name}, I was skeptical. But JH Painting
-              completely changed my mind. They showed up on time, kept my house spotless, and the quality
-              is incredible. Three years later, it still looks brand new. I recommend them to everyone!"
-            </blockquote>
+            <p className="city-testimonial-quote" style={{ fontStyle: 'normal' }}>
+              <strong>5.0</strong> from 40+ verified Google reviews — read what {city.name} and
+              neighboring homeowners say about working with JH Painting Services.
+            </p>
             <div className="city-testimonial-author">
-              — Sarah M., {city.name} Homeowner
+              <a
+                href="https://g.page/r/Cb984Z3qm9PsEAE/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: '#CC0000', textDecoration: 'none', fontWeight: 700 }}
+              >
+                Read all reviews on Google ↗
+              </a>
             </div>
             <a href="tel:+15086908886" className="city-cta-btn" style={{ marginTop: '1.5rem' }}>
               <PhoneIcon size={18} />
-              Get Your Free Estimate — Same-Day Response
+              Call (508) 690-8886 — Free Estimate in 24–48 hours
             </a>
           </div>
         </div>
