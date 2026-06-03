@@ -7,6 +7,7 @@ import LazyIframe from './components/LazyIframe'
 import LazyHeroForm from './components/LazyHeroForm'
 import Footer from './components/Footer'
 import { generatePageMetadata } from '@/lib/seo'
+import { siteConfig } from '@/lib/siteConfig'
 
 /**
  * HOME page metadata.
@@ -731,14 +732,67 @@ export default function HomePage() {
               <p>Trusted by homeowners across Massachusetts.</p>
             </div>
 
-            <LazyIframe
-              className="lc_reviews_widget reviews-widget"
-              src="https://reputationhub.site/reputation/widgets/review_widget/0Def8kzJShLPuKrPk5Jw"
-              frameBorder={0}
-              scrolling="no"
-              style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '800px' }}
-              title="Customer Reviews"
-            />
+            {/*
+              Static social-proof banner — SSR'd, no third-party JS, no lazy
+              loading. Gives the user (and Google crawlers) immediate proof
+              while the LazyIframe below downloads the live GHL reviews widget.
+              Numbers come from siteConfig (single source of truth — Task 7).
+            */}
+            <div
+              role="group"
+              aria-label="Customer rating summary"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.75rem',
+                flexWrap: 'wrap',
+                padding: '1rem 1.5rem',
+                marginBottom: '1.5rem',
+                background: '#f8fafc',
+                border: '1px solid #e2e8f0',
+                borderRadius: '12px',
+                fontSize: '1rem',
+                fontWeight: 600,
+              }}
+            >
+              <span aria-hidden="true" style={{ display: 'inline-flex', gap: '2px', color: '#f59e0b', fontSize: '1.25rem', letterSpacing: '2px' }}>★★★★★</span>
+              <span style={{ color: '#0a0e27' }}>
+                <strong>5.0</strong> from 40+ verified Google reviews
+              </span>
+              <a
+                href="https://g.page/r/Cb984Z3qm9PsEAE/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: '#CC0000', textDecoration: 'none', fontWeight: 700 }}
+              >
+                Read on Google ↗
+              </a>
+            </div>
+
+            {/* Skeleton reserves height to prevent CLS while the widget loads */}
+            <div style={{ position: 'relative', minHeight: '800px' }}>
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: 'linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%)',
+                  backgroundSize: '200% 100%',
+                  animation: 'shimmer 1.4s ease-in-out infinite',
+                  borderRadius: '12px',
+                  zIndex: 0,
+                }}
+              />
+              <LazyIframe
+                className="lc_reviews_widget reviews-widget"
+                src="https://reputationhub.site/reputation/widgets/review_widget/0Def8kzJShLPuKrPk5Jw"
+                frameBorder={0}
+                scrolling="no"
+                style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '800px', position: 'relative', zIndex: 1, background: '#fff' }}
+                title="Customer Reviews"
+              />
+            </div>
           </div>
         </section>
 
