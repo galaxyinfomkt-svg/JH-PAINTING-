@@ -29,19 +29,19 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
 
   // Title + description rewritten. Old template was 51 base chars + city
   // name, which truncated in SERP for any city name ≥10 chars (32 of our
-  // 117 cities — Framingham Center, Marlborough, Westborough, etc.).
+  // 117 cities - Framingham Center, Marlborough, Westborough, etc.).
   //
   // New target shapes that fit even the LONGEST city name (Framingham
   // Center = 17 chars):
   //   - title: "Painters in {City}, MA | Free Quote | JH Painting"
   //     → 41 base + city = 58 chars worst case (≤60 ✓)
-  //   - desc: "Painters in {City}, MA — 5.0★ from 40+ reviews. Licensed,
+  //   - desc: "Painters in {City}, MA - 5.0★ from 40+ reviews. Licensed,
   //     $2M insured. Benjamin Moore & Sherwin-Williams. Free quote:
   //     (508) 690-8886"
   //     → 113 base + city = 130 chars worst case (≤160 ✓)
   return generatePageMetadata({
     title: `Painters in ${city.name}, MA | Free Quote | JH Painting`,
-    description: `Painters in ${city.name}, MA — 5.0★ from 40+ reviews. Licensed, $2M insured. Benjamin Moore & Sherwin-Williams. Free quote: (508) 690-8886`,
+    description: `Painters in ${city.name}, MA - 5.0★ from 40+ reviews. Licensed, $2M insured. Benjamin Moore & Sherwin-Williams. Free quote: (508) 690-8886`,
     path: `/massachusetts/${normalizeCitySlug(city.slug)}`,
     ogImageAlt: `Professional exterior and interior painting services in ${city.name}, MA by JH Painting Services`,
     keywords: `painters ${city.name} MA, house painters ${city.name}, exterior painting ${city.name}, interior painting ${city.name} MA, painting contractor ${city.name}, painters near me ${city.name}, cabinet refinishing ${city.name}`,

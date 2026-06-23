@@ -10,7 +10,7 @@ const baseMeta = generatePageMetadata({
 })
 
 /**
- * Extend the helper output with og:video tags — the helper covers the universal
+ * Extend the helper output with og:video tags - the helper covers the universal
  * meta but VSL is the only page that should publish og:video, so we add it
  * inline here rather than complicate the helper's signature.
  */

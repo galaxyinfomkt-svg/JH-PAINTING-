@@ -23,7 +23,7 @@ export const siteConfig = {
   logo: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696002676eabe616df3310e2.png',
   image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
 
-  // NAP — Marlborough, MA.
+  // NAP - Marlborough, MA.
   // Se a JH for Service-Area Business no Google (endereço escondido), deixe
   // streetAddress = '' e confie em areaServed. O gerador de schema omite o campo
   // automaticamente quando vazio.
@@ -45,12 +45,12 @@ export const siteConfig = {
   foundingDate: '2018',
   founder: 'Jafet Henrique',
 
-  // Estes números são exibidos no site E injetados no JSON-LD — manter sincronizados.
+  // Estes números são exibidos no site E injetados no JSON-LD - manter sincronizados.
   rating: '5.0',
   reviewCount: '40',
   citiesServed: 117,
   projectsCompleted: 200,
-  // Texto único pra resposta — antes tinha 3 variantes: "Same Day", "24hr", "24-48 hours"
+  // Texto único pra resposta - antes tinha 3 variantes: "Same Day", "24hr", "24-48 hours"
   responseTime: '24-48 hours',
 
   sameAs: [

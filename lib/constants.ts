@@ -21,7 +21,7 @@ export const FORM_IDS = {
   servicePages: 'https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn',
 } as const
 
-// (SOCIAL_LINKS — defined below — is the authoritative social-profile list.)
+// (SOCIAL_LINKS - defined below - is the authoritative social-profile list.)
 
 // Service Areas - Massachusetts Cities
 export const SERVICE_AREAS = [
@@ -138,7 +138,7 @@ export const VIDEOS = [
   { id: 'LkT_HLyKibY', title: 'Interior Painting', type: 'YouTube Short' },
 ] as const
 
-// Stats/Trust Indicators — SINGLE SOURCE OF TRUTH for all pages.
+// Stats/Trust Indicators - SINGLE SOURCE OF TRUTH for all pages.
 // Must stay in sync with:
 //   - cities.length in app/data/cities.ts (citiesServed)
 //   - Google Business Profile review count (reviewCount)

@@ -303,7 +303,7 @@ const servicesList = [
   { slug: 'exterior-painting', name: 'Exterior Painting', icon: HomeIcon, desc: 'Complete exterior protection against New England weather. Siding, trim, shutters, doors & decks with weather-resistant paints that withstand harsh winters.' },
   { slug: 'cabinet-painting', name: 'Cabinet Painting', icon: PaintBucketIcon, desc: 'Transform dated cabinets for 70% less than replacement. Factory-smooth spray finish on kitchen & bathroom cabinets. Done in 5-7 days.' },
   { slug: 'commercial-painting', name: 'Commercial Painting', icon: Building2Icon, desc: 'Offices, retail, restaurants & medical facilities. After-hours & weekend scheduling available to minimize business disruption.' },
-  { slug: 'residential-painting', name: 'Residential Painting', icon: HomeIcon, desc: 'Complete home painting solutions — interior & exterior. Single rooms to whole-house transformations with expert color consultation included.' },
+  { slug: 'residential-painting', name: 'Residential Painting', icon: HomeIcon, desc: 'Complete home painting solutions - interior & exterior. Single rooms to whole-house transformations with expert color consultation included.' },
   { slug: 'carpentry', name: 'Carpentry', icon: HammerIcon, desc: 'Wood rot repair, window & door frames, trim, siding & deck restoration. Expert carpentry before painting ensures lasting results.' },
   { slug: 'power-washing', name: 'Power Washing', icon: DropletsIcon, desc: 'Driveways, siding, decks, patios & fences. Remove years of dirt, mold & grime. Essential prep before any exterior painting project.' },
 ]
@@ -412,10 +412,10 @@ export default async function CityPage({ params }: Props) {
 
               {/*
                 H1 de-superlative-ized (Task 6). Was "#1 Painter Contractor in
-                {city}, MA" — Google penalises unverifiable rank claims, and
+                {city}, MA" - Google penalises unverifiable rank claims, and
                 we'd lose the rich-snippet rating eligibility if the H1
                 contradicts the AggregateRating ("we say #1 but rating is 5.0
-                with 40 reviews — by whose ranking?").
+                with 40 reviews - by whose ranking?").
               */}
               <h1 className="hero-title" style={{
                 fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
@@ -960,7 +960,7 @@ export default async function CityPage({ params }: Props) {
               },
               {
                 problem: "Hidden fees, surprise costs, and bait-and-switch pricing",
-                solution: "Our detailed written estimates itemize every cost upfront—labor, materials, prep work, everything. The price we quote is the price you pay. No surprises, no 'additional charges discovered during the project.'",
+                solution: "Our detailed written estimates itemize every cost upfront-labor, materials, prep work, everything. The price we quote is the price you pay. No surprises, no 'additional charges discovered during the project.'",
                 icon: DollarIcon
               },
               {
@@ -975,7 +975,7 @@ export default async function CityPage({ params }: Props) {
               },
               {
                 problem: "Companies that disappear after the check clears",
-                solution: `We're a locally-owned ${city.name} area business with a reputation to protect. We stand behind every job with our satisfaction guarantee. If something isn't right, we'll fix it—no arguments, no excuses.`,
+                solution: `We're a locally-owned ${city.name} area business with a reputation to protect. We stand behind every job with our satisfaction guarantee. If something isn't right, we'll fix it-no arguments, no excuses.`,
                 icon: AwardIcon
               }
             ].map((item, idx) => (
@@ -997,7 +997,7 @@ export default async function CityPage({ params }: Props) {
             Aggregate proof block (replaces fabricated "Sarah M., {city.name}
             Homeowner" testimonial that previously templated a fake review
             on every city page). Shows ONLY accurate, attributable trust
-            signals — the 5.0 rating, the actual Google reviews count, and
+            signals - the 5.0 rating, the actual Google reviews count, and
             a link to the real Google profile so visitors can read real
             reviews. No invented quotes.
           */}
@@ -1006,7 +1006,7 @@ export default async function CityPage({ params }: Props) {
               {[1,2,3,4,5].map(i => <StarIcon key={i} size={24} fill="#CC0000" />)}
             </div>
             <p className="city-testimonial-quote" style={{ fontStyle: 'normal' }}>
-              <strong>5.0</strong> from 40+ verified Google reviews — read what {city.name} and
+              <strong>5.0</strong> from 40+ verified Google reviews - read what {city.name} and
               neighboring homeowners say about working with JH Painting Services.
             </p>
             <div className="city-testimonial-author">
@@ -1021,7 +1021,7 @@ export default async function CityPage({ params }: Props) {
             </div>
             <a href="tel:+15086908886" className="city-cta-btn" style={{ marginTop: '1.5rem' }}>
               <PhoneIcon size={18} />
-              Call (508) 690-8886 — Free Estimate in 24–48 hours
+              Call (508) 690-8886 - Free Estimate in 24-48 hours
             </a>
           </div>
         </div>
@@ -1038,7 +1038,7 @@ export default async function CityPage({ params }: Props) {
               How We Transform Your {city.name} Property
             </h2>
             <p className="city-section-subtitle">
-              Every successful painting project follows a proven process. Here's exactly what happens when you choose JH Painting Services—no surprises, no guesswork, just professional results.
+              Every successful painting project follows a proven process. Here's exactly what happens when you choose JH Painting Services-no surprises, no guesswork, just professional results.
             </p>
           </div>
 
@@ -1047,7 +1047,7 @@ export default async function CityPage({ params }: Props) {
               {
                 step: '1',
                 title: 'Free Consultation & Detailed Estimate',
-                description: `We visit your ${city.name} property, discuss your vision, assess the scope of work, and provide a comprehensive written estimate. We'll explain every line item, answer your questions, and never pressure you to sign on the spot. Take your time—we're confident you'll choose us.`,
+                description: `We visit your ${city.name} property, discuss your vision, assess the scope of work, and provide a comprehensive written estimate. We'll explain every line item, answer your questions, and never pressure you to sign on the spot. Take your time-we're confident you'll choose us.`,
                 duration: 'Same-day or next-day appointments available'
               },
               {
@@ -1059,7 +1059,7 @@ export default async function CityPage({ params }: Props) {
               {
                 step: '3',
                 title: 'Professional Surface Preparation',
-                description: "This is where cheap painters cut corners—and where we shine. We thoroughly clean all surfaces, fill cracks and holes, sand rough areas, caulk gaps, apply primer where needed, and mask off trim, floors, and fixtures. Proper prep is 70% of a great paint job.",
+                description: "This is where cheap painters cut corners-and where we shine. We thoroughly clean all surfaces, fill cracks and holes, sand rough areas, caulk gaps, apply primer where needed, and mask off trim, floors, and fixtures. Proper prep is 70% of a great paint job.",
                 duration: '1-2 days depending on project size'
               },
               {
@@ -1071,7 +1071,7 @@ export default async function CityPage({ params }: Props) {
               {
                 step: '5',
                 title: 'Quality Inspection & Touch-Ups',
-                description: "Before we consider any job complete, our crew lead performs a detailed inspection under multiple lighting conditions. We touch up any imperfections, ensure clean lines, and make sure every detail meets our high standards—and yours.",
+                description: "Before we consider any job complete, our crew lead performs a detailed inspection under multiple lighting conditions. We touch up any imperfections, ensure clean lines, and make sure every detail meets our high standards-and yours.",
                 duration: 'Final walkthrough with you'
               },
               {
@@ -1161,7 +1161,7 @@ export default async function CityPage({ params }: Props) {
             {[
               {
                 title: 'Owner-Operated Quality',
-                description: `Unlike large franchises where you never see the owner, Jafet personally oversees every ${city.name} project. You're not just another number—you're a neighbor. This hands-on approach ensures consistent quality and accountability that big companies simply can't match.`,
+                description: `Unlike large franchises where you never see the owner, Jafet personally oversees every ${city.name} project. You're not just another number-you're a neighbor. This hands-on approach ensures consistent quality and accountability that big companies simply can't match.`,
                 icon: UsersIcon
               },
               {
@@ -1176,7 +1176,7 @@ export default async function CityPage({ params }: Props) {
               },
               {
                 title: 'Meticulous Preparation',
-                description: "Many painters rush through prep work—the part you don't see. We spend the necessary time properly preparing every surface because we know this invisible work determines how long your paint job lasts. Cutting corners here means peeling paint in months, not years.",
+                description: "Many painters rush through prep work-the part you don't see. We spend the necessary time properly preparing every surface because we know this invisible work determines how long your paint job lasts. Cutting corners here means peeling paint in months, not years.",
                 icon: CheckIcon
               },
               {
@@ -1220,7 +1220,7 @@ export default async function CityPage({ params }: Props) {
 
             <div className="city-seo-text">
               <p>
-                As a trusted painting contractor serving {city.name} and the greater {city.county} area, JH Painting Services understands the unique needs of Massachusetts homeowners. Our New England climate—with its harsh winters, humid summers, and dramatic temperature swings—demands painting solutions that go beyond what works in milder regions.
+                As a trusted painting contractor serving {city.name} and the greater {city.county} area, JH Painting Services understands the unique needs of Massachusetts homeowners. Our New England climate-with its harsh winters, humid summers, and dramatic temperature swings-demands painting solutions that go beyond what works in milder regions.
               </p>
 
               <p>
@@ -1238,7 +1238,7 @@ export default async function CityPage({ params }: Props) {
                 Exterior Painting in {city.name}
               </h3>
               <p>
-                Protect your {city.name} home from the elements while boosting curb appeal with professional exterior painting. Massachusetts weather is tough on exterior surfaces—freeze-thaw cycles, snow, ice, rain, and intense summer sun all take their toll. We use premium exterior paints specifically formulated to withstand these conditions, properly prepare all surfaces, and apply the right products for each material type (wood siding, vinyl, stucco, brick, trim).
+                Protect your {city.name} home from the elements while boosting curb appeal with professional exterior painting. Massachusetts weather is tough on exterior surfaces-freeze-thaw cycles, snow, ice, rain, and intense summer sun all take their toll. We use premium exterior paints specifically formulated to withstand these conditions, properly prepare all surfaces, and apply the right products for each material type (wood siding, vinyl, stucco, brick, trim).
               </p>
 
               <h3 className="city-seo-subtitle">
@@ -1252,21 +1252,21 @@ export default async function CityPage({ params }: Props) {
                 Commercial Painting Services in {city.name}
               </h3>
               <p>
-                {city.name} businesses trust JH Painting for professional commercial painting that minimizes disruption to operations. We work around your schedule—evenings, weekends, or overnight—to complete projects without affecting your business. From offices and retail spaces to restaurants and medical facilities, we deliver commercial-quality results that enhance your professional image.
+                {city.name} businesses trust JH Painting for professional commercial painting that minimizes disruption to operations. We work around your schedule-evenings, weekends, or overnight-to complete projects without affecting your business. From offices and retail spaces to restaurants and medical facilities, we deliver commercial-quality results that enhance your professional image.
               </p>
 
               <h3 className="city-seo-subtitle">
                 Carpentry Services in {city.name}
               </h3>
               <p>
-                Before any paint touches your {city.name} home, underlying wood damage must be addressed. Our expert carpenters repair rotted window frames, damaged door frames, deteriorating trim, siding, and deck boards throughout {city.county || 'Massachusetts'}. Painting over rot is wasted money — we fix the foundation first so your paint job lasts for years. Licensed and insured for all carpentry work in {city.name}.
+                Before any paint touches your {city.name} home, underlying wood damage must be addressed. Our expert carpenters repair rotted window frames, damaged door frames, deteriorating trim, siding, and deck boards throughout {city.county || 'Massachusetts'}. Painting over rot is wasted money - we fix the foundation first so your paint job lasts for years. Licensed and insured for all carpentry work in {city.name}.
               </p>
 
               <h3 className="city-seo-subtitle">
                 Power Washing Services in {city.name}
               </h3>
               <p>
-                Restore your {city.name} property's curb appeal with professional power washing. We safely clean driveways, siding, decks, patios, fences, and walkways — removing years of dirt, mold, mildew, and algae. Power washing is essential preparation before any exterior painting project. Our team uses the right pressure and cleaning solutions for each surface to deliver dramatic results without damage.
+                Restore your {city.name} property's curb appeal with professional power washing. We safely clean driveways, siding, decks, patios, fences, and walkways - removing years of dirt, mold, mildew, and algae. Power washing is essential preparation before any exterior painting project. Our team uses the right pressure and cleaning solutions for each surface to deliver dramatic results without damage.
               </p>
 
               <div className="city-seo-cta-box">
@@ -1298,7 +1298,7 @@ export default async function CityPage({ params }: Props) {
         <div className="container">
           <div className="city-cta-content">
             <h2 className="city-cta-title">
-              Your {city.name} Home Deserves the Best — Let&apos;s Talk
+              Your {city.name} Home Deserves the Best - Let&apos;s Talk
             </h2>
             <p className="city-cta-subtitle">
               Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.

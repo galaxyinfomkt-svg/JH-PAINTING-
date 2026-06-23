@@ -58,33 +58,33 @@ const servicesData: ServiceInfo[] = [
       const content: Record<string, { headline: string; intro: string; features: string[]; process: { step: string; detail: string }[] }> = {
         'greater-boston': {
           headline: `Interior Painting for Greater Boston's Historic & Modern Homes`,
-          intro: `Greater Boston interiors range from century-old plaster walls in Back Bay brownstones to modern drywall in Cambridge condos. Each surface demands different prep and technique. Our crews handle horsehair plaster skim-coating, crown molding restoration, and high-ceiling work in Boston's tallest row houses — alongside clean-line modern finishes in newer construction.`,
+          intro: `Greater Boston interiors range from century-old plaster walls in Back Bay brownstones to modern drywall in Cambridge condos. Each surface demands different prep and technique. Our crews handle horsehair plaster skim-coating, crown molding restoration, and high-ceiling work in Boston's tallest row houses - alongside clean-line modern finishes in newer construction.`,
           features: [
             'Plaster wall repair and skim-coating for pre-war homes in Boston, Brookline, Newton',
-            'Low-VOC paints for occupied Boston condos and apartments — no displacement needed',
+            'Low-VOC paints for occupied Boston condos and apartments - no displacement needed',
             'High-ceiling and stairwell work in multi-story Somerville and Cambridge homes',
-            'Condo association coordination — we handle board approvals and building access schedules',
+            'Condo association coordination - we handle board approvals and building access schedules',
           ],
           process: [
             { step: 'Historic Surface Assessment', detail: 'We test for lead paint, evaluate plaster condition, and identify moisture issues before any paint is applied.' },
             { step: 'Repair & Prep', detail: 'Skim-coat damaged plaster, fill cracks, sand trim, and prime all surfaces with the right primer for the substrate.' },
-            { step: 'Premium Application', detail: 'Benjamin Moore Regal Select or Aura applied with precision — brush-cut edges, back-rolled walls, sprayed trim.' },
+            { step: 'Premium Application', detail: 'Benjamin Moore Regal Select or Aura applied with precision - brush-cut edges, back-rolled walls, sprayed trim.' },
             { step: 'Final Walkthrough', detail: 'Room-by-room inspection with the homeowner. We touch up every detail before removing our protection.' },
           ],
         },
         'metrowest': {
           headline: `Interior Painting That Transforms MetroWest Homes`,
-          intro: `MetroWest homes built in the 1980s-2000s often have builder-grade flat paint that shows every scuff mark, fingerprint, and furniture scratch. Families in Framingham, Natick, and Sudbury want fresh, modern interiors without the chaos of a full renovation. We deliver clean, durable interior finishes that update your home's entire feel — usually in 3-5 days.`,
+          intro: `MetroWest homes built in the 1980s-2000s often have builder-grade flat paint that shows every scuff mark, fingerprint, and furniture scratch. Families in Framingham, Natick, and Sudbury want fresh, modern interiors without the chaos of a full renovation. We deliver clean, durable interior finishes that update your home's entire feel - usually in 3-5 days.`,
           features: [
             'Builder-grade paint upgrades to premium washable eggshell and satin finishes',
-            'Open floor plan expertise — seamless color transitions across large MetroWest living spaces',
+            'Open floor plan expertise - seamless color transitions across large MetroWest living spaces',
             'Accent walls, board-and-batten, wainscoting painting for modern farmhouse style',
-            'Furniture-friendly scheduling — we work room-by-room so you stay in your home',
+            'Furniture-friendly scheduling - we work room-by-room so you stay in your home',
           ],
           process: [
             { step: 'Color Consultation', detail: 'On-site color review with large swatches. We help you choose colors that work with your flooring, cabinets, and natural light.' },
             { step: 'Full Protection', detail: 'Floors, furniture, and fixtures fully covered. We protect your home as if it were our own.' },
-            { step: 'Precise Application', detail: 'Two coats of Sherwin-Williams Cashmere or Benjamin Moore Regal — washable, durable, and beautiful.' },
+            { step: 'Precise Application', detail: 'Two coats of Sherwin-Williams Cashmere or Benjamin Moore Regal - washable, durable, and beautiful.' },
             { step: 'Clean Completion', detail: 'We clean up completely, rehang fixtures, and do a detailed walkthrough before we leave.' },
           ],
         },
@@ -92,7 +92,7 @@ const servicesData: ServiceInfo[] = [
           headline: `Interior Painting for Worcester & Central MA Homes`,
           intro: `Worcester's housing ranges from grand Victorians in the Elm Park district to practical triple-decker apartments throughout the city. Interior painting here means working with old plaster, navigating tight stairways, and delivering results that withstand heavy use. Whether you're a homeowner in Shrewsbury refreshing a colonial or a Worcester landlord turning over a rental unit, we deliver quality at a fair price.`,
           features: [
-            'Triple-decker apartment turnarounds — walls, ceilings, trim in 1-2 days per unit',
+            'Triple-decker apartment turnarounds - walls, ceilings, trim in 1-2 days per unit',
             'Old plaster stabilization and repair for Worcester\'s pre-war housing stock',
             'Durable, washable finishes for high-traffic rental properties',
             'Victorian-era detail work: crown molding, chair rails, wainscoting, built-in cabinetry',
@@ -110,11 +110,11 @@ const servicesData: ServiceInfo[] = [
           features: [
             'Historic interior restoration for Lowell\'s mill-era housing',
             'Modern color updates for 2000s-era subdivisions in Chelmsford, Westford, Billerica',
-            'Wallpaper removal and wall restoration — common in older Carlisle and Groton homes',
+            'Wallpaper removal and wall restoration - common in older Carlisle and Groton homes',
             'Multi-family interior packages for Lowell and Tyngsboro landlords',
           ],
           process: [
-            { step: 'Home Assessment', detail: 'We evaluate every room — surface condition, lighting, existing colors — to recommend the right approach and products.' },
+            { step: 'Home Assessment', detail: 'We evaluate every room - surface condition, lighting, existing colors - to recommend the right approach and products.' },
             { step: 'Thorough Prep', detail: 'Fill nail pops, repair drywall damage, sand rough patches, and prime stains. Old wallpaper removed cleanly.' },
             { step: 'Quality Application', detail: 'Premium paint applied with clean edges, consistent coverage, and no lap marks. We take our time to get it right.' },
             { step: 'Protection & Cleanup', detail: 'All furniture, floors, and fixtures protected. We leave your home cleaner than we found it.' },
@@ -122,10 +122,10 @@ const servicesData: ServiceInfo[] = [
         },
         'norfolk-south': {
           headline: `Interior Painting That Matches Norfolk County's High Standards`,
-          intro: `Norfolk County homeowners in Wellesley, Dover, and Needham expect museum-quality interior finishes — and they should. These are premium properties where every detail matters. We spray-finish all trim and doors for a flawless factory look, use only Benjamin Moore Aura and Advance (the absolute top tier), and perform meticulous edge work that stands up to scrutiny.`,
+          intro: `Norfolk County homeowners in Wellesley, Dover, and Needham expect museum-quality interior finishes - and they should. These are premium properties where every detail matters. We spray-finish all trim and doors for a flawless factory look, use only Benjamin Moore Aura and Advance (the absolute top tier), and perform meticulous edge work that stands up to scrutiny.`,
           features: [
             'Spray-applied trim, doors, and cabinets for factory-smooth results',
-            'Benjamin Moore Aura walls and Advance trim — the premium standard for premium homes',
+            'Benjamin Moore Aura walls and Advance trim - the premium standard for premium homes',
             'Estate-scale interiors: great rooms, two-story foyers, cathedral ceilings',
             'Staging-ready painting packages for real estate listings in Norfolk County\'s competitive market',
           ],
@@ -138,26 +138,26 @@ const servicesData: ServiceInfo[] = [
         },
         'north-central': {
           headline: `Affordable Interior Painting for North Central MA Families`,
-          intro: `Fitchburg and Leominster families want quality interior painting that doesn't break the budget. Builder-grade paint from the 1990s-2000s is fading and scuffing, kids' rooms need freshening up, and older homes need plaster repair before new paint. We offer quality work at fair prices — premium results without the premium Boston-area markup.`,
+          intro: `Fitchburg and Leominster families want quality interior painting that doesn't break the budget. Builder-grade paint from the 1990s-2000s is fading and scuffing, kids' rooms need freshening up, and older homes need plaster repair before new paint. We offer quality work at fair prices - premium results without the premium Boston-area markup.`,
           features: [
-            'Budget-friendly room-by-room scheduling — paint now, pay as you go',
+            'Budget-friendly room-by-room scheduling - paint now, pay as you go',
             'Durable, scrubbable finishes for active families with kids and pets',
             'Old plaster repair for Fitchburg and Leominster\'s industrial-era homes',
             'Antique home interior restoration in Harvard, Lancaster, and Berlin',
           ],
           process: [
             { step: 'Fair Estimate', detail: 'Transparent pricing with no hidden fees. We itemize every room so you know exactly what you\'re paying for.' },
-            { step: 'Careful Prep', detail: 'We repair what needs fixing — cracks, nail pops, water stains — and prime properly so the paint lasts.' },
-            { step: 'Quality Paint', detail: 'Sherwin-Williams ProMar 200 or Duration — professional-grade paint that\'s durable and washable. No cheap contractor paint.' },
+            { step: 'Careful Prep', detail: 'We repair what needs fixing - cracks, nail pops, water stains - and prime properly so the paint lasts.' },
+            { step: 'Quality Paint', detail: 'Sherwin-Williams ProMar 200 or Duration - professional-grade paint that\'s durable and washable. No cheap contractor paint.' },
             { step: 'Respectful Service', detail: 'We protect your home, keep the workspace clean, and finish on schedule. Honest work for honest families.' },
           ],
         },
         'blackstone-valley': {
           headline: `Interior Painting for Blackstone Valley Homes & Historic Villages`,
-          intro: `Blackstone Valley's mill village homes in Whitinsville, Hopedale, and Uxbridge have interiors with real character — horsehair plaster, hand-carved trim, built-in china cabinets. But they also have moisture issues from the Valley's humid climate. We paint these interiors with respect for their history and materials that fight the Valley's moisture.`,
+          intro: `Blackstone Valley's mill village homes in Whitinsville, Hopedale, and Uxbridge have interiors with real character - horsehair plaster, hand-carved trim, built-in china cabinets. But they also have moisture issues from the Valley's humid climate. We paint these interiors with respect for their history and materials that fight the Valley's moisture.`,
           features: [
             'Moisture-resistant interior primers and paints for Valley\'s high-humidity homes',
-            'Historic mill village interior preservation — original trim, plaster, built-ins',
+            'Historic mill village interior preservation - original trim, plaster, built-ins',
             'Mold and mildew treatment before interior painting in damp basements and bathrooms',
             'Modern updates for suburban homes in Milford, Sutton, and Upton',
           ],
@@ -175,17 +175,17 @@ const servicesData: ServiceInfo[] = [
   {
     name: 'Exterior Painting',
     slug: 'exterior-painting',
-    shortDesc: 'Weather-resistant exterior painting built for New England — from homes to historic landmarks like our Waltham Church renewal.',
+    shortDesc: 'Weather-resistant exterior painting built for New England - from homes to historic landmarks like our Waltham Church renewal.',
     getRegionContent: (regionName, regionSlug) => {
       const content: Record<string, { headline: string; intro: string; features: string[]; process: { step: string; detail: string }[] }> = {
         'greater-boston': {
           headline: `Exterior Painting Built for Boston's Coastal Climate`,
-          intro: `Greater Boston exteriors battle salt air from the harbor, freeze-thaw cycles, intense summer sun, and urban pollution. A paint job that lasts here needs to be engineered for this specific climate — not just slapped on with whatever's on sale. From Beacon Hill townhouses to Newton colonials, we apply exterior systems designed for Boston's toughest conditions.`,
+          intro: `Greater Boston exteriors battle salt air from the harbor, freeze-thaw cycles, intense summer sun, and urban pollution. A paint job that lasts here needs to be engineered for this specific climate - not just slapped on with whatever's on sale. From Beacon Hill townhouses to Newton colonials, we apply exterior systems designed for Boston's toughest conditions.`,
           features: [
             'Salt-air resistant exterior coatings for coastal Boston neighborhoods',
             'Brownstone and masonry painting with breathable elastomeric coatings',
             'Scaffolding and staging for multi-story row houses in Somerville, Cambridge, Brookline',
-            'Lead-safe exterior prep for pre-1978 homes — EPA RRP certified',
+            'Lead-safe exterior prep for pre-1978 homes - EPA RRP certified',
           ],
           process: [
             { step: 'Exterior Inspection', detail: 'Full assessment of siding, trim, windows, and substrate condition. We identify wood rot, failed caulking, and moisture entry points.' },
@@ -212,7 +212,7 @@ const servicesData: ServiceInfo[] = [
         },
         'worcester-area': {
           headline: `Exterior Painting That Survives Central MA's Brutal Winters`,
-          intro: `Central Massachusetts exteriors endure some of the harshest conditions in the state — colder temperatures, heavier snow, longer freeze-thaw cycles than the coast. Worcester's triple-deckers need exterior paint that can flex with massive temperature swings. Rural homes in Princeton and Westminster face wind-driven rain at elevation. We build exterior paint systems that actually survive here.`,
+          intro: `Central Massachusetts exteriors endure some of the harshest conditions in the state - colder temperatures, heavier snow, longer freeze-thaw cycles than the coast. Worcester's triple-deckers need exterior paint that can flex with massive temperature swings. Rural homes in Princeton and Westminster face wind-driven rain at elevation. We build exterior paint systems that actually survive here.`,
           features: [
             'Triple-decker 3-coat exterior systems with 15+ year rated paints',
             'High-elevation weather protection for Princeton, Westminster, Rutland, Sterling',
@@ -228,11 +228,11 @@ const servicesData: ServiceInfo[] = [
         },
         'north-middlesex': {
           headline: `Exterior Painting for Every Property Type in North Middlesex`,
-          intro: `North Middlesex ranges from dense urban neighborhoods in Lowell to rural farmsteads in Groton and Townsend. Our exterior painting teams handle Victorian restorations in downtown Lowell, vinyl-sided colonials in Chelmsford, cedar-shingled antiques in Carlisle, and barn-red outbuildings in Dunstable — each with the right prep and products for the surface.`,
+          intro: `North Middlesex ranges from dense urban neighborhoods in Lowell to rural farmsteads in Groton and Townsend. Our exterior painting teams handle Victorian restorations in downtown Lowell, vinyl-sided colonials in Chelmsford, cedar-shingled antiques in Carlisle, and barn-red outbuildings in Dunstable - each with the right prep and products for the surface.`,
           features: [
             'Victorian and mill-era exterior restoration for Lowell\'s historic neighborhoods',
             'Suburban home exterior updates in Chelmsford, Westford, Tewksbury, Billerica',
-            'Rural property painting: homes, barns, garages, sheds — one mobilization',
+            'Rural property painting: homes, barns, garages, sheds - one mobilization',
             'Lead paint safe removal for pre-1940s homes across North Middlesex',
           ],
           process: [
@@ -244,7 +244,7 @@ const servicesData: ServiceInfo[] = [
         },
         'norfolk-south': {
           headline: `Premium Exterior Painting for Norfolk County's Finest Properties`,
-          intro: `Norfolk County estates in Dover, Wellesley, and Needham have complex exterior architectures — cedar shingles, multi-level rooflines, dormers, cupolas, and hand-milled trim. These aren't cookie-cutter paint jobs. We deploy experienced crews with proper staging equipment, use only the highest-rated exterior coatings, and apply each product to its optimal surface.`,
+          intro: `Norfolk County estates in Dover, Wellesley, and Needham have complex exterior architectures - cedar shingles, multi-level rooflines, dormers, cupolas, and hand-milled trim. These aren't cookie-cutter paint jobs. We deploy experienced crews with proper staging equipment, use only the highest-rated exterior coatings, and apply each product to its optimal surface.`,
           features: [
             'Estate-scale exterior painting for 4,000-8,000+ sq ft properties',
             'Cedar shingle restoration with oil and acrylic stain systems',
@@ -255,12 +255,12 @@ const servicesData: ServiceInfo[] = [
             { step: 'Detailed Exterior Survey', detail: 'We document every surface, note condition ratings, identify repairs, and create a comprehensive scope of work.' },
             { step: 'Expert Prep', detail: 'Staging for safe height access. Wood rot repair, caulking, power wash, and hand-scraping on delicate trim.' },
             { step: 'Surface-Matched Coatings', detail: 'Oil primer on bare cedar, elastomeric on stucco, acrylic on trim. Every product matched to the surface.' },
-            { step: 'Estate-Quality Inspection', detail: 'Project lead reviews every surface at completion. The standard is perfection — nothing less.' },
+            { step: 'Estate-Quality Inspection', detail: 'Project lead reviews every surface at completion. The standard is perfection - nothing less.' },
           ],
         },
         'north-central': {
           headline: `Exterior Painting Built to Endure North Central MA Winters`,
-          intro: `North Central MA gets hammered by weather — heavy snow, ice storms, and freeze-thaw cycles that destroy paint faster than anywhere else in the state. Fitchburg and Leominster's industrial-era homes have wood siding with a century of paint buildup that fails every few years. We strip these surfaces properly and apply modern paint systems that actually last through North Central MA winters.`,
+          intro: `North Central MA gets hammered by weather - heavy snow, ice storms, and freeze-thaw cycles that destroy paint faster than anywhere else in the state. Fitchburg and Leominster's industrial-era homes have wood siding with a century of paint buildup that fails every few years. We strip these surfaces properly and apply modern paint systems that actually last through North Central MA winters.`,
           features: [
             'Full paint stripping for multi-layer industrial-era homes in Fitchburg and Leominster',
             'Cold-climate rated exterior coatings with maximum flexibility',
@@ -276,18 +276,18 @@ const servicesData: ServiceInfo[] = [
         },
         'blackstone-valley': {
           headline: `Exterior Painting for Blackstone Valley's Humid Climate`,
-          intro: `The Blackstone River corridor creates unique exterior painting challenges — higher humidity, morning fog, and damp conditions that accelerate paint failure and mold growth. Homes in Northbridge, Uxbridge, and Blackstone need exterior coatings specifically designed for moisture resistance. We also preserve the historic character of the Valley's mill village architecture.`,
+          intro: `The Blackstone River corridor creates unique exterior painting challenges - higher humidity, morning fog, and damp conditions that accelerate paint failure and mold growth. Homes in Northbridge, Uxbridge, and Blackstone need exterior coatings specifically designed for moisture resistance. We also preserve the historic character of the Valley's mill village architecture.`,
           features: [
             'Anti-moisture exterior systems for Blackstone River corridor homes',
             'Mill village exterior preservation in Whitinsville, Hopedale, Uxbridge',
             'Mold and mildew preventive coatings for north-facing and shaded walls',
-            'MA/RI border service — fully licensed for both sides of the Valley',
+            'MA/RI border service - fully licensed for both sides of the Valley',
           ],
           process: [
             { step: 'Moisture Assessment', detail: 'We identify moisture sources, check for mold, evaluate drainage, and plan moisture mitigation before painting.' },
             { step: 'Anti-Mold Prep', detail: 'Professional mold treatment, power wash with mildewcide, and application of moisture-barrier primer.' },
             { step: 'Humidity-Resistant Paint', detail: 'Exterior coatings with anti-microbial additives. Breathable formulas that let moisture escape without trapping it.' },
-            { step: 'Valley-Tested Results', detail: 'Our exterior systems are proven in the Blackstone Valley\'s damp conditions — they last because they\'re designed for them.' },
+            { step: 'Valley-Tested Results', detail: 'Our exterior systems are proven in the Blackstone Valley\'s damp conditions - they last because they\'re designed for them.' },
           ],
         },
       }
@@ -302,12 +302,12 @@ const servicesData: ServiceInfo[] = [
       const content: Record<string, { headline: string; intro: string; features: string[]; process: { step: string; detail: string }[] }> = {
         'greater-boston': {
           headline: `Cabinet Painting for Greater Boston Kitchens`,
-          intro: `Boston-area kitchens vary wildly — from tiny galley kitchens in Somerville walk-ups to grand chef's kitchens in Newton estates. Regardless of size, dated cabinets drag down your entire kitchen's look. We transform honey oak, cherry, and maple cabinets into modern, fresh showpieces with our spray-applied lacquer finish — no need for $30K-$50K cabinet replacement.`,
+          intro: `Boston-area kitchens vary wildly - from tiny galley kitchens in Somerville walk-ups to grand chef's kitchens in Newton estates. Regardless of size, dated cabinets drag down your entire kitchen's look. We transform honey oak, cherry, and maple cabinets into modern, fresh showpieces with our spray-applied lacquer finish - no need for $30K-$50K cabinet replacement.`,
           features: [
-            'Small kitchen specialists — we work efficiently in tight Boston and Cambridge galley kitchens',
+            'Small kitchen specialists - we work efficiently in tight Boston and Cambridge galley kitchens',
             'Condo-friendly process with low-odor, fast-cure cabinet finishes',
             'Premium conversion from dark wood to light modern colors (white, gray, sage, navy)',
-            'Hardware upgrade coordination — we can install new pulls and handles during the project',
+            'Hardware upgrade coordination - we can install new pulls and handles during the project',
           ],
           process: [
             { step: 'Kitchen Assessment', detail: 'We evaluate cabinet condition, door style, and layout to ensure cabinet painting is the right solution for your kitchen.' },
@@ -318,11 +318,11 @@ const servicesData: ServiceInfo[] = [
         },
         'metrowest': {
           headline: `Cabinet Painting for MetroWest's 1990s-2000s Kitchens`,
-          intro: `MetroWest is packed with homes built during the suburban boom — and those honey-oak and golden-cherry cabinets from 1995-2010 are now the #1 thing homeowners want to change. A full cabinet replacement costs $25,000-$50,000. Our cabinet painting transforms them for 70% less with a factory-smooth spray finish. Framingham, Natick, Sudbury, and Hopkinton homeowners love the results.`,
+          intro: `MetroWest is packed with homes built during the suburban boom - and those honey-oak and golden-cherry cabinets from 1995-2010 are now the #1 thing homeowners want to change. A full cabinet replacement costs $25,000-$50,000. Our cabinet painting transforms them for 70% less with a factory-smooth spray finish. Framingham, Natick, Sudbury, and Hopkinton homeowners love the results.`,
           features: [
-            'Honey oak to white, gray, or navy — the most requested MetroWest kitchen transformation',
-            'Island accent colors — two-tone kitchens are MetroWest\'s most popular trend',
-            'Bathroom vanity painting included — match your kitchen\'s new look throughout the home',
+            'Honey oak to white, gray, or navy - the most requested MetroWest kitchen transformation',
+            'Island accent colors - two-tone kitchens are MetroWest\'s most popular trend',
+            'Bathroom vanity painting included - match your kitchen\'s new look throughout the home',
             'Builder-grade cabinet upgrade with high-end lacquer finish',
           ],
           process: [
@@ -336,10 +336,10 @@ const servicesData: ServiceInfo[] = [
           headline: `Affordable Cabinet Painting in Worcester & Central MA`,
           intro: `Worcester-area homeowners want updated kitchens without the premium prices charged by Boston-area refinishers. Our cabinet painting service delivers the same factory-quality spray finish at Central MA prices. Whether you have builder-grade oak in a Shrewsbury colonial or painted cabinets peeling in a Worcester triple-decker, we make them look brand new.`,
           features: [
-            'Budget-friendly cabinet transformation — 70% less than replacement',
+            'Budget-friendly cabinet transformation - 70% less than replacement',
             'Rental property cabinet refresh for Worcester landlords',
             'Durable finishes that withstand heavy kitchen use in family homes',
-            'Quick turnaround — most kitchens completed in 5-7 days',
+            'Quick turnaround - most kitchens completed in 5-7 days',
           ],
           process: [
             { step: 'Fair Quote', detail: 'Transparent pricing based on door count and kitchen size. No hidden fees or surprise charges.' },
@@ -350,10 +350,10 @@ const servicesData: ServiceInfo[] = [
         },
         'north-middlesex': {
           headline: `Cabinet Painting for North Middlesex & Merrimack Valley Kitchens`,
-          intro: `Subdivision homes across Chelmsford, Westford, Billerica, and Tewksbury share the same problem: dated builder-grade cabinets. The medium-oak finish that was standard in the 1990s-2000s now looks tired. Our cabinet painting converts those dated kitchens into modern, clean spaces with a professional spray finish — no demolition, no mess, no $30K price tag.`,
+          intro: `Subdivision homes across Chelmsford, Westford, Billerica, and Tewksbury share the same problem: dated builder-grade cabinets. The medium-oak finish that was standard in the 1990s-2000s now looks tired. Our cabinet painting converts those dated kitchens into modern, clean spaces with a professional spray finish - no demolition, no mess, no $30K price tag.`,
           features: [
             'Builder-grade oak to modern white, gray, or two-tone in 5-7 days',
-            'Suburban kitchen sizes — from compact ranch kitchens to large colonial layouts',
+            'Suburban kitchen sizes - from compact ranch kitchens to large colonial layouts',
             'Bathroom vanity refinishing available as an add-on',
             'Weekend scheduling available to minimize disruption to family routines',
           ],
@@ -366,10 +366,10 @@ const servicesData: ServiceInfo[] = [
         },
         'norfolk-south': {
           headline: `Premium Cabinet Refinishing for Norfolk County Kitchens`,
-          intro: `Norfolk County kitchens in Wellesley, Dover, and Needham demand flawless finishes. These aren't average cabinets — many are custom maple, cherry, or inset-door designs that need spray-applied lacquer, not brush-and-roller work. We deliver the kind of cabinet finish that looks like it came from a custom millwork shop — because our spray process matches that quality.`,
+          intro: `Norfolk County kitchens in Wellesley, Dover, and Needham demand flawless finishes. These aren't average cabinets - many are custom maple, cherry, or inset-door designs that need spray-applied lacquer, not brush-and-roller work. We deliver the kind of cabinet finish that looks like it came from a custom millwork shop - because our spray process matches that quality.`,
           features: [
             'Custom cabinet refinishing for high-end kitchens in Dover, Wellesley, Needham',
-            'Inset door and beaded-frame expertise — these details require precision spraying',
+            'Inset door and beaded-frame expertise - these details require precision spraying',
             'Benjamin Moore Advance and professional lacquer options for the smoothest possible finish',
             'Staging-ready kitchen refresh for real estate listings in Norfolk County',
           ],
@@ -382,23 +382,23 @@ const servicesData: ServiceInfo[] = [
         },
         'north-central': {
           headline: `Cabinet Painting at Honest Prices in North Central MA`,
-          intro: `Fitchburg and Leominster homeowners want modern kitchens but don't want to pay Boston prices for cabinet replacement. Our cabinet painting service gives you a brand-new kitchen look at a fraction of the cost. We spray-apply durable lacquer finish that transforms dated cabinets — oak, maple, or cherry — into fresh, modern showpieces.`,
+          intro: `Fitchburg and Leominster homeowners want modern kitchens but don't want to pay Boston prices for cabinet replacement. Our cabinet painting service gives you a brand-new kitchen look at a fraction of the cost. We spray-apply durable lacquer finish that transforms dated cabinets - oak, maple, or cherry - into fresh, modern showpieces.`,
           features: [
-            'Affordable cabinet transformation — quality results at North Central MA prices',
+            'Affordable cabinet transformation - quality results at North Central MA prices',
             'Room-by-room payment options available for families on a budget',
             'Durable finishes built for busy family kitchens',
             'Antique kitchen cabinet restoration for Harvard and Lancaster period homes',
           ],
           process: [
-            { step: 'Honest Quote', detail: 'We price based on door count and complexity — transparent and fair. No inflated Boston pricing.' },
+            { step: 'Honest Quote', detail: 'We price based on door count and complexity - transparent and fair. No inflated Boston pricing.' },
             { step: 'Professional Removal', detail: 'Doors removed, labeled, and taken for spray finishing. Cabinet boxes prepped on-site.' },
-            { step: 'Spray Finish', detail: 'Even, smooth lacquer finish — the same quality as shops charging twice our price.' },
+            { step: 'Spray Finish', detail: 'Even, smooth lacquer finish - the same quality as shops charging twice our price.' },
             { step: 'Quick Install', detail: 'Doors back on, hardware updated, kitchen ready to use. Most jobs done in 5-7 days.' },
           ],
         },
         'blackstone-valley': {
           headline: `Cabinet Painting for Blackstone Valley Homes`,
-          intro: `Blackstone Valley kitchens — from Milford's center to Douglas's wooded neighborhoods — deserve an update without the renovation hassle. Our spray-applied cabinet finish converts dated wood cabinets into modern, moisture-resistant surfaces. In the Valley's humid climate, we use mildew-resistant finishes that hold up in kitchens where moisture is a constant concern.`,
+          intro: `Blackstone Valley kitchens - from Milford's center to Douglas's wooded neighborhoods - deserve an update without the renovation hassle. Our spray-applied cabinet finish converts dated wood cabinets into modern, moisture-resistant surfaces. In the Valley's humid climate, we use mildew-resistant finishes that hold up in kitchens where moisture is a constant concern.`,
           features: [
             'Moisture-resistant cabinet finishes designed for the Valley\'s humid climate',
             'Mill village kitchen updates that respect historic home character',
@@ -422,11 +422,11 @@ const servicesData: ServiceInfo[] = [
     shortDesc: 'Offices, retail, restaurants & medical facilities.',
     getRegionContent: (regionName, regionSlug) => ({
       headline: `Commercial Painting Services Across ${regionName}`,
-      intro: `Businesses across ${regionName} trust JH Painting for commercial painting that's done right — on schedule, within budget, and with minimal disruption to your operations. We paint offices, retail spaces, restaurants, medical facilities, and multi-unit commercial buildings with the same quality and professionalism that's earned us 40+ five-star reviews.`,
+      intro: `Businesses across ${regionName} trust JH Painting for commercial painting that's done right - on schedule, within budget, and with minimal disruption to your operations. We paint offices, retail spaces, restaurants, medical facilities, and multi-unit commercial buildings with the same quality and professionalism that's earned us 40+ five-star reviews.`,
       features: [
-        `After-hours and weekend scheduling for ${regionName} businesses — zero disruption to your operations`,
+        `After-hours and weekend scheduling for ${regionName} businesses - zero disruption to your operations`,
         'Low-VOC, quick-dry commercial paints that allow next-day business operations',
-        'Retail, restaurant, medical, and office painting — each with appropriate finishes and compliance',
+        'Retail, restaurant, medical, and office painting - each with appropriate finishes and compliance',
         `Multi-location commercial painting programs across ${regionName} with volume pricing`,
       ],
       process: [
@@ -443,12 +443,12 @@ const servicesData: ServiceInfo[] = [
     shortDesc: 'Complete home painting with expert color consultation.',
     getRegionContent: (regionName, regionSlug) => ({
       headline: `Complete Residential Painting in ${regionName}`,
-      intro: `Whether you're refreshing a single room or transforming your entire home, ${regionName} homeowners choose JH Painting for our attention to detail, premium materials, and local reputation. We understand the housing styles in this region — from historic homes to new construction — and we tailor our approach to each property's specific needs.`,
+      intro: `Whether you're refreshing a single room or transforming your entire home, ${regionName} homeowners choose JH Painting for our attention to detail, premium materials, and local reputation. We understand the housing styles in this region - from historic homes to new construction - and we tailor our approach to each property's specific needs.`,
       features: [
         `Whole-home interior and exterior painting packages for ${regionName} homeowners`,
         'Room-by-room scheduling so you can stay in your home during the project',
-        'Expert color consultation — we help you choose colors that work with your home\'s architecture',
-        'Premium Benjamin Moore and Sherwin-Williams paints — the best products on every project',
+        'Expert color consultation - we help you choose colors that work with your home\'s architecture',
+        'Premium Benjamin Moore and Sherwin-Williams paints - the best products on every project',
       ],
       process: [
         { step: 'Home Consultation', detail: 'We walk through your home, discuss your vision, and recommend colors and finishes for every space.' },
@@ -464,10 +464,10 @@ const servicesData: ServiceInfo[] = [
     shortDesc: 'Wood rot repair, trim, siding & deck restoration.',
     getRegionContent: (regionName, regionSlug) => ({
       headline: `Carpentry & Wood Repair in ${regionName}`,
-      intro: `New England weather is tough on wood — and ${regionName} homes feel it. Rotted window frames, damaged trim, deteriorated siding, and weathered decks are common across the region. Our carpentry crews repair and replace damaged wood before painting, ensuring the new paint has a solid foundation that will last for years.`,
+      intro: `New England weather is tough on wood - and ${regionName} homes feel it. Rotted window frames, damaged trim, deteriorated siding, and weathered decks are common across the region. Our carpentry crews repair and replace damaged wood before painting, ensuring the new paint has a solid foundation that will last for years.`,
       features: [
         `Window and door frame repair and replacement for ${regionName}'s weather-damaged homes`,
-        'PVC and composite trim installation — never rot, never paint again',
+        'PVC and composite trim installation - never rot, never paint again',
         'Deck board replacement and restoration before staining',
         'Siding repair: clapboard, cedar shingle, and panel replacement',
       ],
@@ -485,18 +485,18 @@ const servicesData: ServiceInfo[] = [
     shortDesc: 'Professional cleaning for driveways, siding, decks & patios.',
     getRegionContent: (regionName, regionSlug) => ({
       headline: `Professional Power Washing in ${regionName}`,
-      intro: `${regionName} properties accumulate dirt, algae, mold, mildew, and moss — especially after New England's wet winters and humid summers. Our professional power washing uses calibrated pressure and biodegradable detergents to clean every surface safely and thoroughly. Driveways, siding, decks, patios, and fences sparkling clean in one day.`,
+      intro: `${regionName} properties accumulate dirt, algae, mold, mildew, and moss - especially after New England's wet winters and humid summers. Our professional power washing uses calibrated pressure and biodegradable detergents to clean every surface safely and thoroughly. Driveways, siding, decks, patios, and fences sparkling clean in one day.`,
       features: [
-        `Soft-wash technique for delicate surfaces — cedar siding, painted trim, windows`,
+        `Soft-wash technique for delicate surfaces - cedar siding, painted trim, windows`,
         'High-pressure cleaning for concrete driveways, walkways, and patios',
         'Deck cleaning and brightening before staining or sealing',
-        `Mildewcide treatment that prevents regrowth for months — not just cosmetic cleaning`,
+        `Mildewcide treatment that prevents regrowth for months - not just cosmetic cleaning`,
       ],
       process: [
         { step: 'Surface Assessment', detail: 'We evaluate each surface and select the appropriate pressure, nozzle, and cleaning solution.' },
         { step: 'Pre-Treatment', detail: 'Biodegradable detergent and mildewcide applied to kill organic growth at the root.' },
         { step: 'Professional Wash', detail: 'Calibrated pressure for each surface. We never damage wood, paint, or delicate materials.' },
-        { step: 'Rinse & Inspect', detail: 'Complete rinse and visual inspection. Your property looks brand new — and stays clean longer.' },
+        { step: 'Rinse & Inspect', detail: 'Complete rinse and visual inspection. Your property looks brand new - and stays clean longer.' },
       ],
     }),
   },
@@ -556,7 +556,7 @@ export default async function RegionServicePage({ params }: Props) {
           <div className="city-page-hero-bg">
             <Image
               src={images.hero}
-              alt={serviceSlug === 'exterior-painting' ? `Historic Renewal: Waltham Church Transformation — ${service.name} in ${region.name}` : `${service.name} services in ${region.name}`}
+              alt={serviceSlug === 'exterior-painting' ? `Historic Renewal: Waltham Church Transformation - ${service.name} in ${region.name}` : `${service.name} services in ${region.name}`}
               fill
               priority
               sizes="100vw"
@@ -670,7 +670,7 @@ export default async function RegionServicePage({ params }: Props) {
             <div style={{ position: 'relative', minHeight: '400px' }}>
               <Image
                 src={images.showcase}
-                alt={serviceSlug === 'exterior-painting' ? `Historic Renewal: Waltham Church — ${service.name} by JH Painting` : `${service.name} project results in ${region.name}`}
+                alt={serviceSlug === 'exterior-painting' ? `Historic Renewal: Waltham Church - ${service.name} by JH Painting` : `${service.name} project results in ${region.name}`}
                 fill
                 style={{ objectFit: 'cover' }}
                 loading="lazy"
@@ -839,7 +839,7 @@ export default async function RegionServicePage({ params }: Props) {
           <div className="city-cta-pattern" />
           <div className="container">
             <div className="city-cta-content">
-              <h2 className="city-cta-title">Your {region.name} Home Deserves the Best — Let&apos;s Talk</h2>
+              <h2 className="city-cta-title">Your {region.name} Home Deserves the Best - Let&apos;s Talk</h2>
               <p className="city-cta-subtitle">Licensed & $2M insured. 40+ five-star reviews. Same-day response. No obligation.</p>
               <div className="city-cta-buttons">
                 <a href="tel:+15086908886" className="city-cta-btn-white"><PhoneIcon size={24} /> (508) 690-8886</a>

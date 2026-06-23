@@ -210,7 +210,7 @@ export function generateCityHeroText(city: City): string {
 
     `When ${city.name} homeowners need painting done right, they call JH Painting Services. We've built our reputation throughout ${city.county || 'Massachusetts'} by delivering exceptional craftsmanship, using Benjamin Moore and Sherwin-Williams paints, and treating every home like our own. From historic properties to modern builds${neighborhoodContext}, we bring the expertise your ${city.name} home deserves.`,
 
-    `Your ${city.name} home faces unique challenges – from harsh winters to humid summers. JH Painting Services specializes in protecting and beautifying homes throughout ${city.county || 'the area'}${neighborhoodContext}. With 40+ five-star reviews and a commitment to excellence, we're the painters ${city.name} residents recommend to their neighbors.`,
+    `Your ${city.name} home faces unique challenges - from harsh winters to humid summers. JH Painting Services specializes in protecting and beautifying homes throughout ${city.county || 'the area'}${neighborhoodContext}. With 40+ five-star reviews and a commitment to excellence, we're the painters ${city.name} residents recommend to their neighbors.`,
   ]
 
   // Use city slug hash to consistently select variation
@@ -236,7 +236,7 @@ export function generateServiceIntro(city: City, serviceSlug: string): string {
   const benefitIndex = Math.abs(hash) % service.benefits.length
   const featureIndex = Math.abs(hash) % service.features.length
 
-  return `${sentenceStarters[starterIndex]} ${city.name}, ${service.name.toLowerCase()} transforms your property while protecting your investment. Serving ${neighborhoods} and areas near ${landmarks}, JH Painting Services brings professional expertise that ${city.name} homeowners trust. Our ${countyContext} clients choose us for ${service.features[featureIndex]} and results that exceed expectations. ${service.benefits[benefitIndex]} – that's the JH Painting difference that's earned us 40+ five-star Google reviews from families just like yours in ${city.name}, MA.`
+  return `${sentenceStarters[starterIndex]} ${city.name}, ${service.name.toLowerCase()} transforms your property while protecting your investment. Serving ${neighborhoods} and areas near ${landmarks}, JH Painting Services brings professional expertise that ${city.name} homeowners trust. Our ${countyContext} clients choose us for ${service.features[featureIndex]} and results that exceed expectations. ${service.benefits[benefitIndex]} - that's the JH Painting difference that's earned us 40+ five-star Google reviews from families just like yours in ${city.name}, MA.`
 }
 
 /**
@@ -252,9 +252,9 @@ export function generateServicePainPoints(city: City, serviceSlug: string): stri
   // Create unique pain points by combining service pain points with city context
   return service.painPoints.map((pain, i) => {
     const variations = [
-      `${city.name} homes often suffer from ${pain} – and our ${countyContext} climate makes it worse`,
+      `${city.name} homes often suffer from ${pain} - and our ${countyContext} climate makes it worse`,
       `We see countless ${city.name} properties struggling with ${pain}, especially in older neighborhoods`,
-      `If your ${city.name} home has ${pain}, you're not alone – it's one of the most common issues we fix`,
+      `If your ${city.name} home has ${pain}, you're not alone - it's one of the most common issues we fix`,
       `Many ${city.name} homeowners call us about ${pain} caused by years of New England weather`,
     ]
     const varIndex = Math.abs(hash + i) % variations.length
@@ -293,14 +293,14 @@ export function generateWhyChooseUs(city: City): string[] {
 
   const baseReasons = [
     distance < 10
-      ? `Just ${distance.toFixed(1)} miles from our headquarters – we're your true local painters serving ${city.name}`
+      ? `Just ${distance.toFixed(1)} miles from our headquarters - we're your true local painters serving ${city.name}`
       : `Proudly serving ${city.name} and all of ${countyContext} with fast response times`,
     `Deep knowledge of ${city.name}'s architecture, from historic homes to modern construction`,
     `Familiar with ${city.name} neighborhoods and landmarks like ${landmarks}`,
     `Premium Benjamin Moore and Sherwin-Williams paints built for ${countyContext}'s climate`,
     `40+ five-star Google reviews from families throughout ${countyContext}`,
     `Fully licensed, insured, and EPA Lead-Safe Certified for ${city.name} homes`,
-    `Written warranties: 5 years exterior, 3 years interior – backed by our local reputation`,
+    `Written warranties: 5 years exterior, 3 years interior - backed by our local reputation`,
   ]
 
   return baseReasons
@@ -352,7 +352,7 @@ export function generateClosingPitch(city: City, serviceSlug?: string): string {
   const variations = [
     `Ready to transform your ${city.name} home with professional ${serviceName}? JH Painting Services has earned the trust of homeowners throughout ${countyContext} with exceptional craftsmanship and genuine care. Contact us at (508) 690-8886 for your free estimate and discover why your ${city.name} neighbors recommend us.`,
 
-    `Your ${city.name} home deserves the best ${serviceName} services ${countyContext} has to offer. From our premium materials to our meticulous attention to detail, JH Painting delivers results that protect your investment and enhance your property's beauty. Call (508) 690-8886 today – we'd be honored to serve you.`,
+    `Your ${city.name} home deserves the best ${serviceName} services ${countyContext} has to offer. From our premium materials to our meticulous attention to detail, JH Painting delivers results that protect your investment and enhance your property's beauty. Call (508) 690-8886 today - we'd be honored to serve you.`,
 
     `Don't settle for average ${serviceName} in ${city.name}. With JH Painting Services, you get local expertise, premium quality, and the peace of mind that comes from working with trusted professionals. Reach out at (508) 690-8886 for your free, no-obligation estimate.`,
   ]

@@ -2,30 +2,30 @@
  * Page-level SEO helper for Next.js 15 App Router.
  *
  * Every route should call generatePageMetadata() from its page.tsx OR its
- * route-segment layout.tsx — never use next/head, never use react-helmet-async,
+ * route-segment layout.tsx - never use next/head, never use react-helmet-async,
  * never put page-specific tags in the ROOT layout.
  *
  * The helper takes the page's h1 (title), first paragraph (description), a
  * canonical path (which becomes both <link rel="canonical"> and og:url), and
  * an optional first-image override for og:image. It produces a complete
  * Metadata object covering title, description, keywords, canonical, OG, Twitter,
- * and robots — so a single call replaces 60+ lines of repeated meta config.
+ * and robots - so a single call replaces 60+ lines of repeated meta config.
  *
  * For JSON-LD structured data, render <script type="application/ld+json"> inside
- * the page body — App Router Metadata cannot carry <script> tags. See SCHEMA_NOTE
+ * the page body - App Router Metadata cannot carry <script> tags. See SCHEMA_NOTE
  * at the bottom.
  */
 
 import type { Metadata } from 'next'
 import { BUSINESS } from './constants'
 
-// Site-wide defaults — only used when a page omits an override.
+// Site-wide defaults - only used when a page omits an override.
 // metadataBase lives in the root layout so canonical URLs resolve correctly.
 const SITE = {
   name: BUSINESS.name,
   url: BUSINESS.website,
   // twitterHandle: set when the handle is confirmed registered. Until then,
-  // omit `creator` from twitter cards — sending an unverified handle can
+  // omit `creator` from twitter cards - sending an unverified handle can
   // surface a broken card preview in X/LinkedIn.
   twitterHandle: undefined as string | undefined,
   locale: 'en_US',
@@ -36,7 +36,7 @@ const SITE = {
 export interface PageMetadataInput {
   /** Page h1 / canonical title. Becomes <title>, og:title, twitter:title. Keep ≤ 60 chars to avoid SERP truncation. */
   title: string
-  /** First-paragraph summary. Becomes <meta description>, og:description, twitter:description. 140–160 chars ideal. */
+  /** First-paragraph summary. Becomes <meta description>, og:description, twitter:description. 140-160 chars ideal. */
   description: string
   /**
    * Path segment after the origin: "/contact", "/services/exterior-painting".
@@ -55,7 +55,7 @@ export interface PageMetadataInput {
   keywords?: string | string[]
   /** Optional override for the OpenGraph type (default "website"; use "article" on blog posts). */
   ogType?: 'website' | 'article'
-  /** Optional Twitter card type — "summary_large_image" by default. */
+  /** Optional Twitter card type - "summary_large_image" by default. */
   twitterCard?: 'summary_large_image' | 'summary'
 }
 

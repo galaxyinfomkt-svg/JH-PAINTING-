@@ -30,7 +30,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 # Best Exterior Paint Colors for Massachusetts Homes in 2025
 
-Choosing the right exterior paint color for your Massachusetts home isn't just about aesthetics—it's about creating a lasting impression while protecting your investment from our challenging New England weather.
+Choosing the right exterior paint color for your Massachusetts home isn't just about aesthetics-it's about creating a lasting impression while protecting your investment from our challenging New England weather.
 
 ## Top Trending Colors for 2025
 
@@ -132,7 +132,7 @@ One of the most common questions we receive at JH Painting Services is "How much
 ## Factors That Affect Interior Painting Costs
 
 ### 1. Square Footage
-The most obvious factor—larger spaces require more paint and labor. Our pricing is transparent and based on actual measurements.
+The most obvious factor-larger spaces require more paint and labor. Our pricing is transparent and based on actual measurements.
 
 ### 2. Ceiling Height
 Standard 8-foot ceilings are one thing, but Boston's historic homes often feature 10-12 foot ceilings, which require additional equipment and time.
@@ -301,7 +301,7 @@ We've transformed hundreds of kitchens across Massachusetts, from dated oak cabi
 
 ## The JH Painting Advantage
 
-- **Premium Materials:** We use Sherwin-Williams ProClassic or Benjamin Moore Advance—paints specifically engineered for cabinets
+- **Premium Materials:** We use Sherwin-Williams ProClassic or Benjamin Moore Advance-paints specifically engineered for cabinets
 - **Professional Finish:** Spray application for a smooth, factory-quality look
 - **Hardware Upgrade:** We can install new hinges, pulls, and knobs
 - **Warranty:** 2-year workmanship warranty on all cabinet painting
@@ -347,7 +347,7 @@ Proper preparation is the foundation of a successful exterior painting project. 
 ### 3. Vehicle Arrangements
 - Park cars in the garage or away from the work area
 - Clear the driveway for equipment and material staging
-- Note that overspray can travel—keep vehicles at least 20 feet away
+- Note that overspray can travel-keep vehicles at least 20 feet away
 
 ### 4. Pet Considerations
 - Keep pets indoors or in a fenced area away from work zones
@@ -431,7 +431,7 @@ Our New England weather can be unpredictable. Here's what we factor in:
 
 ## Ready to Get Started?
 
-At JH Painting Services, we take care of all the professional preparation—that's part of our commitment to quality results that last. We'll walk through your property before starting to address any specific concerns.
+At JH Painting Services, we take care of all the professional preparation-that's part of our commitment to quality results that last. We'll walk through your property before starting to address any specific concerns.
 
 **Contact us at (508) 690-8886 for your free exterior painting estimate!**
     `,
@@ -567,7 +567,7 @@ Sherwin-Williams Bath paints and Benjamin Moore Aura Bath & Spa both excel in hu
 
 ## Our Professional Approach
 
-At JH Painting Services, we don't pick sides—we pick the right paint for your project:
+At JH Painting Services, we don't pick sides-we pick the right paint for your project:
 
 - **Exteriors:** Typically Sherwin-Williams Duration
 - **Interiors:** Usually Benjamin Moore Aura or Regal Select
@@ -827,7 +827,7 @@ Where buyers spend the most time visualizing:
 Clean and fresh sells:
 - White or off-white walls
 - Neutral cabinet colors
-- Avoid dated oak—consider cabinet painting!
+- Avoid dated oak-consider cabinet painting!
 
 **Our pick:** Benjamin Moore Chantilly Lace (walls), Advance White Dove (cabinets)
 
@@ -1124,7 +1124,7 @@ Ready to enhance your business image? Contact JH Painting Services for a free co
     content: `
 # DIY vs Professional Painting: When Should You Hire a Pro?
 
-We get it—YouTube makes everything look easy, and you might be tempted to tackle that painting project yourself. Here's an honest assessment of when DIY makes sense and when calling professionals is the smarter choice.
+We get it-YouTube makes everything look easy, and you might be tempted to tackle that painting project yourself. Here's an honest assessment of when DIY makes sense and when calling professionals is the smarter choice.
 
 ## When DIY Painting Works
 
@@ -1282,7 +1282,7 @@ For most Massachusetts homeowners:
 
 ## Get a Free Quote
 
-Not sure which way to go? Contact JH Painting Services for a free estimate. We'll give you an honest assessment—sometimes we even tell people a small project is DIY-friendly!
+Not sure which way to go? Contact JH Painting Services for a free estimate. We'll give you an honest assessment-sometimes we even tell people a small project is DIY-friendly!
 
 **Call (508) 690-8886 for your free consultation!**
     `,
@@ -1653,7 +1653,7 @@ We use premium paints specifically formulated for New England conditions:
 
 ### Best Practices for Homeowners
 
-1. **Book Early:** Prime season fills up fast—schedule 4-6 weeks ahead
+1. **Book Early:** Prime season fills up fast-schedule 4-6 weeks ahead
 2. **Have Backup Dates:** Weather delays happen; flexibility helps
 3. **Prepare Your Home:** Clear landscaping and outdoor items before the crew arrives
 4. **Understand the Timeline:** Prep work, dry time, and multiple coats take several days
@@ -1699,7 +1699,7 @@ If you have urgent needs (selling your home, storm damage, etc.), we can sometim
 
 ## Ready to Schedule Your Exterior Painting?
 
-The best time to call is NOW—even if your project is months away. At JH Painting Services, we book up quickly during peak season, and early scheduling ensures you get your preferred dates.
+The best time to call is NOW-even if your project is months away. At JH Painting Services, we book up quickly during peak season, and early scheduling ensures you get your preferred dates.
 
 We'll help you choose the optimal timing based on:
 - Your home's specific needs
@@ -2433,7 +2433,7 @@ For bathrooms with existing mold issues:
 
 **1. Treat Existing Mold**
 
-Never paint over mold—it will return:
+Never paint over mold-it will return:
 - Clean with bleach solution (1:4 bleach to water)
 - Or use commercial mold remover
 - Scrub thoroughly and rinse
@@ -2592,7 +2592,7 @@ Ready to update your Massachusetts bathroom with beautiful, durable paint that f
     content: `
 # How to Choose a Painting Contractor in Massachusetts: 10 Red Flags to Avoid
 
-Hiring a painting contractor is a significant decision. Your home is your biggest investment, and the wrong contractor can mean wasted money, poor results, and major headaches. Here's your comprehensive guide to finding a trustworthy painter in Massachusetts—and the warning signs to watch for.
+Hiring a painting contractor is a significant decision. Your home is your biggest investment, and the wrong contractor can mean wasted money, poor results, and major headaches. Here's your comprehensive guide to finding a trustworthy painter in Massachusetts-and the warning signs to watch for.
 
 ## The Massachusetts Painting Contractor Landscape
 
@@ -2657,7 +2657,7 @@ Without detailed documentation, disputes become your-word-against-theirs situati
 - Lowball bid, then "discover" extra costs later
 
 **Why It Matters:**
-Quality painting costs money—materials, labor, insurance, and overhead. Suspiciously low prices mean corners will be cut.
+Quality painting costs money-materials, labor, insurance, and overhead. Suspiciously low prices mean corners will be cut.
 
 | Why Low Bids Happen | The Problem |
 |---------------------|-------------|
@@ -3435,7 +3435,7 @@ At JH Painting Services, we specialize in creating beautiful, safe spaces for Ma
     content: `
 # Pressure Washing Before Painting: Why It Matters in Massachusetts
 
-If you're planning an exterior painting project in Massachusetts, pressure washing isn't just recommended—it's essential. Our New England climate creates unique conditions that make proper surface preparation critical for paint adhesion and longevity.
+If you're planning an exterior painting project in Massachusetts, pressure washing isn't just recommended-it's essential. Our New England climate creates unique conditions that make proper surface preparation critical for paint adhesion and longevity.
 
 ## Why Pressure Washing is Non-Negotiable
 
@@ -3681,7 +3681,7 @@ Paint bonds at a molecular level with the surface beneath it. For this bond to f
 
 At JH Painting Services, pressure washing is included in every exterior painting project. We never cut corners on preparation because we know it's the foundation of a beautiful, long-lasting paint job.
 
-**Call (508) 690-8886 for your free estimate—proper prep included!**
+**Call (508) 690-8886 for your free estimate-proper prep included!**
     `,
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg',
     category: 'Painting Tips',
@@ -3699,7 +3699,7 @@ At JH Painting Services, pressure washing is included in every exterior painting
     content: `
 # Fence Staining Services in Massachusetts: Cedar, Pine, and Composite Options
 
-Your fence is more than a property boundary—it's a major investment that affects your home's curb appeal and privacy. Massachusetts weather can be brutal on fencing materials, making proper staining and sealing essential for protection and longevity.
+Your fence is more than a property boundary-it's a major investment that affects your home's curb appeal and privacy. Massachusetts weather can be brutal on fencing materials, making proper staining and sealing essential for protection and longevity.
 
 ## Why Fence Staining Matters in Massachusetts
 
@@ -4013,7 +4013,7 @@ Don't let another New England winter damage your fence. Contact JH Painting Serv
     content: `
 # Office Painting That Boosts Productivity: Commercial Tips for MA Businesses
 
-The paint colors in your Massachusetts office aren't just aesthetic choices—they directly impact employee productivity, creativity, and wellbeing. Research shows that workplace environment significantly affects performance, and color is one of the most influential factors.
+The paint colors in your Massachusetts office aren't just aesthetic choices-they directly impact employee productivity, creativity, and wellbeing. Research shows that workplace environment significantly affects performance, and color is one of the most influential factors.
 
 ## The Science of Color in the Workplace
 
@@ -4273,7 +4273,7 @@ At JH Painting Services, we specialize in commercial painting that works around 
     content: `
 # Popcorn Ceiling Removal and Painting in Massachusetts Homes
 
-Popcorn ceilings—also called acoustic or textured ceilings—were popular from the 1950s through the 1980s. Today, they're widely considered dated and can significantly impact your home's value and appeal. If you're a Massachusetts homeowner ready to modernize, here's everything you need to know.
+Popcorn ceilings-also called acoustic or textured ceilings-were popular from the 1950s through the 1980s. Today, they're widely considered dated and can significantly impact your home's value and appeal. If you're a Massachusetts homeowner ready to modernize, here's everything you need to know.
 
 ## Why Remove Popcorn Ceilings?
 
@@ -4546,7 +4546,7 @@ Many Massachusetts homes built 1950s-1980s have:
 
 ## Ready to Modernize Your Ceilings?
 
-Removing popcorn ceilings is one of the most impactful updates you can make to a Massachusetts home. At JH Painting Services, we handle the entire process—from testing to painting—so you can enjoy smooth, modern ceilings without the hassle.
+Removing popcorn ceilings is one of the most impactful updates you can make to a Massachusetts home. At JH Painting Services, we handle the entire process-from testing to painting-so you can enjoy smooth, modern ceilings without the hassle.
 
 **Call (508) 690-8886 for your free ceiling assessment and quote!**
     `,
@@ -6108,7 +6108,7 @@ Proper priming is essential after wallpaper removal
 
 ## Ready to Remove Your Wallpaper?
 
-At JH Painting Services, we handle the entire process—from careful removal to beautiful finished walls. Our experience with Massachusetts homes means we know what to expect and how to handle any situation.
+At JH Painting Services, we handle the entire process-from careful removal to beautiful finished walls. Our experience with Massachusetts homes means we know what to expect and how to handle any situation.
 
 **Call (508) 690-8886 for your free wallpaper removal and painting estimate!**
     `,
@@ -6701,7 +6701,7 @@ At JH Painting Services, we specialize in aluminum siding painting and can help 
     content: `
 # Color Psychology in Home Design: How Paint Affects Your Mood
 
-The colors you choose for your home do more than create an aesthetic—they actively influence how you feel, think, and behave in each space. Understanding color psychology can help you create rooms that support your wellbeing and enhance your daily life.
+The colors you choose for your home do more than create an aesthetic-they actively influence how you feel, think, and behave in each space. Understanding color psychology can help you create rooms that support your wellbeing and enhance your daily life.
 
 ## The Science of Color and Emotion
 
@@ -6849,7 +6849,7 @@ The colors you choose for your home do more than create an aesthetic—they acti
 ### For Energy and Stimulation
 
 **Colors That Energize:**
-- Red (use sparingly—accent walls, accents)
+- Red (use sparingly-accent walls, accents)
 - Orange (kitchens, playrooms)
 - Bright yellow (morning spaces, studios)
 
@@ -6991,7 +6991,7 @@ We help you:
 
 ## Ready to Transform Your Home's Mood?
 
-At JH Painting Services, we understand that color choice is about more than aesthetics—it's about how your home makes you feel. Let us help you create spaces that support your wellbeing and reflect your personality.
+At JH Painting Services, we understand that color choice is about more than aesthetics-it's about how your home makes you feel. Let us help you create spaces that support your wellbeing and reflect your personality.
 
 **Call (508) 690-8886 for your free color consultation and estimate!**
     `,
@@ -7385,7 +7385,7 @@ The transformation was dramatic. The homeowners were thrilled with the historica
 
 ## Verified Customer Feedback
 
-This project — and 40+ others — is reviewed in our public Google Business Profile. Read every real, attributable review at [g.page/r/Cb984Z3qm9PsEAE](https://g.page/r/Cb984Z3qm9PsEAE/review). We do not publish testimonials we cannot attribute to a verified customer.
+This project - and 40+ others - is reviewed in our public Google Business Profile. Read every real, attributable review at [g.page/r/Cb984Z3qm9PsEAE](https://g.page/r/Cb984Z3qm9PsEAE/review). We do not publish testimonials we cannot attribute to a verified customer.
 
 ## Project Details
 
@@ -7414,7 +7414,7 @@ Whether you have a Victorian beauty or a modern home, JH Painting Services deliv
   {
     slug: 'kitchen-cabinet-refinishing-wellesley-ma-before-after',
     title: 'Kitchen Cabinet Refinishing in Wellesley, MA: Stunning Before & After',
-    excerpt: 'This Wellesley kitchen went from dated oak to modern elegance with professional cabinet refinishing—saving the homeowners over $25,000 compared to replacement.',
+    excerpt: 'This Wellesley kitchen went from dated oak to modern elegance with professional cabinet refinishing-saving the homeowners over $25,000 compared to replacement.',
     content: `
 # Kitchen Cabinet Refinishing in Wellesley, MA: Stunning Before & After
 
@@ -7483,9 +7483,9 @@ Using our professional HVLP spray system:
 
 ## Homeowner Reaction
 
-*"I can't believe this is the same kitchen! We were dreading spending $40,000 on new cabinets, but JH Painting made our existing cabinets look even better than new. The spray finish is absolutely flawless—no brush marks, completely smooth. We're thrilled!"*
+*"I can't believe this is the same kitchen! We were dreading spending $40,000 on new cabinets, but JH Painting made our existing cabinets look even better than new. The spray finish is absolutely flawless-no brush marks, completely smooth. We're thrilled!"*
 
-— Jennifer T., Wellesley, MA
+- Jennifer T., Wellesley, MA
 
 ## Project Breakdown
 
@@ -7522,7 +7522,7 @@ Not sure if refinishing is right for your kitchen? We offer free assessments whe
   {
     slug: 'commercial-office-painting-framingham-business-park',
     title: 'Commercial Office Painting: Framingham Business Park Complete Renovation',
-    excerpt: 'How we transformed a dated 1980s office building in Framingham into a modern, inviting workspace—completed after hours with zero business disruption.',
+    excerpt: 'How we transformed a dated 1980s office building in Framingham into a modern, inviting workspace-completed after hours with zero business disruption.',
     content: `
 # Commercial Office Painting: Framingham Business Park Complete Renovation
 
@@ -7584,7 +7584,7 @@ Every night, our crew:
 
 **Employee Reaction (Monday morning, Week 2):**
 
-*"Wait—when did they paint? I didn't even know they were here! The office looks completely different!"*
+*"Wait-when did they paint? I didn't even know they were here! The office looks completely different!"*
 
 This is exactly the reaction we aim for with commercial projects.
 
@@ -7599,9 +7599,9 @@ After the renovation, Framingham Technology Partners reported:
 
 ## Project Manager Testimonial
 
-*"JH Painting Services understood our needs perfectly. We couldn't afford any downtime, and they delivered exactly as promised. Every morning, our employees came in to find another section transformed—it was like magic. The quality is exceptional, and they finished two days ahead of schedule."*
+*"JH Painting Services understood our needs perfectly. We couldn't afford any downtime, and they delivered exactly as promised. Every morning, our employees came in to find another section transformed-it was like magic. The quality is exceptional, and they finished two days ahead of schedule."*
 
-— Michael R., Facilities Manager, Framingham Technology Partners
+- Michael R., Facilities Manager, Framingham Technology Partners
 
 ## Project Details
 

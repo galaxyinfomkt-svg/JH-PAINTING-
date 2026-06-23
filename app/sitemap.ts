@@ -4,7 +4,7 @@ import { blogPosts } from './data/blogPosts'
 import { regions } from './data/regions'
 
 // Frozen at build time. Bump when meaningful page content changes so Google
-// trusts the lastmod signal — `new Date()` every deploy is a known anti-pattern
+// trusts the lastmod signal - `new Date()` every deploy is a known anti-pattern
 // (Google ignores sitemaps that fake daily updates with no content change).
 const BUILD_DATE = '2026-05-22T00:00:00.000Z'
 

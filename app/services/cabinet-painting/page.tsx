@@ -177,7 +177,7 @@ const painPoints = [
   {
     icon: Timer,
     title: 'Weeks of Kitchen Downtime?',
-    desc: "Cabinet replacement means weeks without a functional kitchen—demolition, installation, countertop adjustments. It's disruptive and stressful for the whole family.",
+    desc: "Cabinet replacement means weeks without a functional kitchen-demolition, installation, countertop adjustments. It's disruptive and stressful for the whole family.",
     solution: 'Cabinet painting takes just 5-7 days'
   },
   {
@@ -364,11 +364,11 @@ export default function CabinetPaintingPage() {
         </div>
       </section>
 
-      {/* Citation-First Summary — Optimized for AI search engines */}
+      {/* Citation-First Summary - Optimized for AI search engines */}
       <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
         <div className="container">
           <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
-            <strong>JH Painting Services</strong> provides professional kitchen cabinet painting and refinishing across <strong>117+ cities in Massachusetts</strong>. Cabinet refinishing saves homeowners <strong>60–70% compared to full cabinet replacement</strong>. We use spray-applied cabinet-grade enamel for a factory-smooth finish. Licensed, <strong>$2M insured</strong>, EPA Lead-Safe certified. Contact us for a free estimate. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong>.
+            <strong>JH Painting Services</strong> provides professional kitchen cabinet painting and refinishing across <strong>117+ cities in Massachusetts</strong>. Cabinet refinishing saves homeowners <strong>60-70% compared to full cabinet replacement</strong>. We use spray-applied cabinet-grade enamel for a factory-smooth finish. Licensed, <strong>$2M insured</strong>, EPA Lead-Safe certified. Contact us for a free estimate. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong>.
           </p>
         </div>
       </section>
@@ -378,7 +378,7 @@ export default function CabinetPaintingPage() {
         <div className="container">
           <div style={{ textAlign: 'center', padding: '2rem 0' }}>
             <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your needs.</p>
-            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 — Free Estimate</a>
+            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 - Free Estimate</a>
           </div>
         </div>
       </section>

@@ -7,7 +7,7 @@
 //   getBreadcrumb(items)                → BreadcrumbList
 //   getWebSite()                        → WebSite (só na home)
 //
-// Use o componente <JsonLd /> pra renderizar — ver app/components/JsonLd.tsx.
+// Use o componente <JsonLd /> pra renderizar - ver app/components/JsonLd.tsx.
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { siteConfig as s } from './siteConfig'
@@ -74,7 +74,7 @@ export function getLocalBusiness(city?: string, citySlug?: string): Node {
       reviewCount: s.reviewCount,
     },
     sameAs: [...s.sameAs],
-    // Catálogo de serviços — ajuda buscadores e IA a entenderem o que a JH faz.
+    // Catálogo de serviços - ajuda buscadores e IA a entenderem o que a JH faz.
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Painting Services',
@@ -146,7 +146,7 @@ export function getBreadcrumb(items: { name: string; url: string }[]): Node {
   }
 }
 
-// ── WebSite (apenas na home — bom pra entidade de marca) ────────────────────
+// ── WebSite (apenas na home - bom pra entidade de marca) ────────────────────
 export function getWebSite(): Node {
   return {
     '@context': 'https://schema.org',

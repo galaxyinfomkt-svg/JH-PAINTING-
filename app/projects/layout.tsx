@@ -6,7 +6,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     'See real painting transformations in Massachusetts. Before & after photos of interior, exterior, cabinet painting. 40+ 5-star Google reviews. Licensed & $2M insured. FREE estimates: (508) 690-8886',
   path: '/projects',
-  ogImageAlt: 'Painting Projects Portfolio — JH Painting Services Massachusetts',
+  ogImageAlt: 'Painting Projects Portfolio - JH Painting Services Massachusetts',
   keywords: [
     'painting before after Massachusetts',
     'painting portfolio MA',
@@ -33,7 +33,7 @@ const projectsIndexSchema = {
       '@type': 'CollectionPage',
       '@id': 'https://jhpaintingservices.com/projects#collection',
       url: 'https://jhpaintingservices.com/projects',
-      name: 'JH Painting Projects — Before & After Massachusetts',
+      name: 'JH Painting Projects - Before & After Massachusetts',
       description:
         'Real painting transformations by JH Painting Services across Massachusetts. Interior, exterior, cabinet refinishing. Licensed & $2M insured. Call (508) 690-8886.',
       isPartOf: { '@id': 'https://jhpaintingservices.com/#website' },

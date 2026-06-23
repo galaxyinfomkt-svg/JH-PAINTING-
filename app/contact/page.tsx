@@ -406,9 +406,9 @@ export default function ContactPage() {
                 </div>
 
                 {/*
-                  PRIORITY load — this iframe IS the page's primary purpose.
+                  PRIORITY load - this iframe IS the page's primary purpose.
                   Without priority, IntersectionObserver would defer it until
-                  near-viewport intersection (lazy) — a real lead-killer
+                  near-viewport intersection (lazy) - a real lead-killer
                   since users land on /contact specifically to fill this form.
                 */}
                 <LazyIframe

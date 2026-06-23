@@ -6,7 +6,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     'How much does painting cost in Massachusetts? Best paint colors? DIY vs pro? Expert tips from MA painters with 40+ 5-star reviews. (508) 690-8886',
   path: '/blog',
-  ogImageAlt: 'Painting Tips and Guides — JH Painting Services Massachusetts',
+  ogImageAlt: 'Painting Tips and Guides - JH Painting Services Massachusetts',
   keywords: [
     'how much does painting cost Massachusetts',
     'painting cost per square foot MA',
@@ -35,7 +35,7 @@ const blogIndexSchema = {
       '@type': 'Blog',
       '@id': 'https://jhpaintingservices.com/blog#blog',
       url: 'https://jhpaintingservices.com/blog',
-      name: 'JH Painting Blog — Painting Tips & Cost Guides MA',
+      name: 'JH Painting Blog - Painting Tips & Cost Guides MA',
       description:
         'Expert painting tips, cost guides, and how-to advice from a Massachusetts painting contractor with 40+ five-star reviews.',
       publisher: { '@id': 'https://jhpaintingservices.com/#organization' },

@@ -3,7 +3,7 @@ import { generatePageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = generatePageMetadata({
   // Title trimmed 73 → 56 chars (was getting truncated mid-phone-number in
-  // SERP — phone was being cut off). Kept "5-Yr Warranty" as the
+  // SERP - phone was being cut off). Kept "5-Yr Warranty" as the
   // differentiator because that's the strongest trust signal for exterior
   // (warranty length is a vetted promise, not a "#1" claim).
   title: 'Exterior House Painters MA | 5-Yr Warranty | Free Quote',
@@ -14,7 +14,7 @@ export const metadata: Metadata = generatePageMetadata({
     'Exterior house painting in MA. Power wash, prep, 2 coats Benjamin Moore Aura or Sherwin-Williams Duration. 5-yr warranty. 40+ reviews. Free quote: (508) 690-8886',
   path: '/services/exterior-painting',
   ogImageAlt:
-    'Professional exterior house painting in Massachusetts by JH Painting Services — before and after home transformation with premium weather-resistant paint',
+    'Professional exterior house painting in Massachusetts by JH Painting Services - before and after home transformation with premium weather-resistant paint',
   keywords: [
     'exterior painting Massachusetts',
     'exterior house painters Massachusetts',

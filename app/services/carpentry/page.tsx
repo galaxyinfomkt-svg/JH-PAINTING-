@@ -115,7 +115,7 @@ const carpentrySchema = {
       "description": "Our professional carpentry and trim work process from consultation to completion.",
       "totalTime": "P3D",
       "step": [
-        { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We assess your carpentry needs — trim, baseboards, crown molding, deck, or repairs." },
+        { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We assess your carpentry needs - trim, baseboards, crown molding, deck, or repairs." },
         { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "Written estimate with material and labor costs. We source quality lumber and trim materials." },
         { "@type": "HowToStep", "position": 3, "name": "Material Selection", "text": "We help you choose the right wood, trim profiles, and finish to match your home's style." },
         { "@type": "HowToStep", "position": 4, "name": "Expert Installation", "text": "Precision cutting, fitting, and installation by our experienced carpentry team." },
@@ -359,7 +359,7 @@ export default function CarpentryPage() {
         </div>
       </section>
 
-      {/* Citation-First Summary — Optimized for AI search engines */}
+      {/* Citation-First Summary - Optimized for AI search engines */}
       <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
         <div className="container">
           <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
@@ -373,7 +373,7 @@ export default function CarpentryPage() {
         <div className="container">
           <div style={{ textAlign: 'center', padding: '2rem 0' }}>
             <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your needs.</p>
-            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 — Free Estimate</a>
+            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 - Free Estimate</a>
           </div>
         </div>
       </section>
@@ -595,7 +595,7 @@ export default function CarpentryPage() {
                 Quality Carpentry by JH Painting Services
               </h2>
               <p className="service-about-desc">
-                At JH Painting Services, we understand that quality carpentry is the foundation of a lasting paint job. Owner Jafet Henrique and his team don't take carpentry lightly—we know that repairing broken frames, siding, or any damaged wood prior to painting is essential for beautiful, long-lasting results.
+                At JH Painting Services, we understand that quality carpentry is the foundation of a lasting paint job. Owner Jafet Henrique and his team don't take carpentry lightly-we know that repairing broken frames, siding, or any damaged wood prior to painting is essential for beautiful, long-lasting results.
               </p>
               <p className="service-about-desc">
                 Whether it's rotted window sills, damaged door frames, weathered decks, or worn railings, we have the expertise to restore your home's woodwork to like-new condition. Our carpentry services prepare surfaces perfectly for paint, ensuring your investment lasts for years to come.

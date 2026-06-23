@@ -1,5 +1,5 @@
 /**
- * Centralized icon barrel — every page imports from this single module so the
+ * Centralized icon barrel - every page imports from this single module so the
  * lucide-react bundle can be tree-shaken and pre-cached cleanly. Adding a new
  * icon? Add it here, then import it from `@/app/components/Icons` anywhere.
  *

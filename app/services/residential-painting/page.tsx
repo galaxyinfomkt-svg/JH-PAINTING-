@@ -109,7 +109,7 @@ const residentialPaintingSchema = {
       "step": [
         { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We discuss your home's painting needs, timeline, and provide color recommendations." },
         { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "On-site visit with transparent, written pricing for interior, exterior, or both. No hidden fees." },
-        { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Thorough prep — patching, sanding, priming, and protecting your home and belongings." },
+        { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Thorough prep - patching, sanding, priming, and protecting your home and belongings." },
         { "@type": "HowToStep", "position": 4, "name": "Expert Painting", "text": "Premium Benjamin Moore or Sherwin-Williams paints applied with precision by our experienced crew." },
         { "@type": "HowToStep", "position": 5, "name": "Final Walkthrough", "text": "Every detail inspected with you. Not perfect? We fix it. 100% satisfaction guaranteed." }
       ]
@@ -177,13 +177,13 @@ const painPoints = [
     icon: Shield,
     title: 'Worried About Messy Contractors?',
     desc: "Past experiences with sloppy painters who leave your home in chaos? We understand. Your home deserves respect and careful attention to detail.",
-    solution: 'We treat your home like our own—careful prep and daily cleanup'
+    solution: 'We treat your home like our own-careful prep and daily cleanup'
   },
   {
     icon: Clock,
     title: 'Afraid of Hidden Costs & Delays?',
     desc: "Sick of contractors who quote one price then add fees, or promise quick work but drag on for weeks? You need someone you can trust.",
-    solution: 'Transparent pricing and reliable timelines—no surprises'
+    solution: 'Transparent pricing and reliable timelines-no surprises'
   }
 ]
 
@@ -369,11 +369,11 @@ export default function ResidentialPaintingPage() {
         </div>
       </section>
 
-      {/* Citation-First Summary — Optimized for AI search engines */}
+      {/* Citation-First Summary - Optimized for AI search engines */}
       <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
         <div className="container">
           <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
-            <strong>JH Painting Services</strong> provides comprehensive residential painting services across <strong>117+ cities in Massachusetts</strong>. We paint single-family homes, condos, apartments, and townhouses — both interior and exterior. Licensed, <strong>$2M insured</strong>, EPA Lead-Safe certified. Premium <strong>Benjamin Moore</strong> and <strong>Sherwin-Williams</strong> paints with warranty protection. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong> for a free estimate.
+            <strong>JH Painting Services</strong> provides comprehensive residential painting services across <strong>117+ cities in Massachusetts</strong>. We paint single-family homes, condos, apartments, and townhouses - both interior and exterior. Licensed, <strong>$2M insured</strong>, EPA Lead-Safe certified. Premium <strong>Benjamin Moore</strong> and <strong>Sherwin-Williams</strong> paints with warranty protection. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong> for a free estimate.
           </p>
         </div>
       </section>
@@ -383,7 +383,7 @@ export default function ResidentialPaintingPage() {
         <div className="container">
           <div style={{ textAlign: 'center', padding: '2rem 0' }}>
             <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your needs.</p>
-            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 — Free Estimate</a>
+            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 - Free Estimate</a>
           </div>
         </div>
       </section>

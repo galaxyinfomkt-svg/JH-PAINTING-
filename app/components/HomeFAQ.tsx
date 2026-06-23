@@ -13,7 +13,7 @@ const PhoneIcon = () => (
 const homepageFaqs = [
   {
     question: "How do I get a painting estimate in Massachusetts?",
-    answer: "We provide free, no-obligation estimates for all painting projects in Massachusetts. Simply call us at (508) 690-8886 or fill out our online form. We'll visit your property, assess the scope of work, discuss your vision and color preferences, and provide a detailed written estimate — typically within 24-48 hours. Every project is unique, so we customize our quote based on your home's size, condition, and specific needs."
+    answer: "We provide free, no-obligation estimates for all painting projects in Massachusetts. Simply call us at (508) 690-8886 or fill out our online form. We'll visit your property, assess the scope of work, discuss your vision and color preferences, and provide a detailed written estimate - typically within 24-48 hours. Every project is unique, so we customize our quote based on your home's size, condition, and specific needs."
   },
   {
     question: "How long does a painting project take?",

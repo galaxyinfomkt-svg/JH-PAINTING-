@@ -184,14 +184,18 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
               <MapPinIcon size={18} />
               Popular Service Areas
             </h3>
-            <div className="footer-cities-list" style={{ marginBottom: '0.75rem' }}>
-              {topCities.map((city, index) => (
-                <span key={city.slug}>
-                  <Link href={`/massachusetts/${city.slug}`} className="footer-city-link-rs">
-                    {city.name}
-                  </Link>
-                  {index < topCities.length - 1 && ' · '}
-                </span>
+            <div
+              className="footer-cities-list"
+              style={{ marginBottom: '0.75rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem 1rem' }}
+            >
+              {topCities.map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/massachusetts/${city.slug}`}
+                  className="footer-city-link-rs"
+                >
+                  {city.name}
+                </Link>
               ))}
             </div>
             <div style={{ textAlign: 'center', marginBottom: '1rem' }}>

@@ -18,7 +18,7 @@ const inter = Inter({
 })
 
 /**
- * Root layout metadata — STRICT site-wide defaults only.
+ * Root layout metadata - STRICT site-wide defaults only.
  *
  * Page-level meta (title, description, robots, canonical, openGraph, twitter,
  * geo-targeting, Dublin Core) lives in each route's page.tsx or layout.tsx via
@@ -45,13 +45,13 @@ export const metadata: Metadata = {
   creator: 'JH Painting Services',
   publisher: 'JH Painting Services',
   category: 'Home Improvement',
-  // icons: omitted on purpose — Next.js 15 detects `app/icon.png` and `app/apple-icon.png`
+  // icons: omitted on purpose - Next.js 15 detects `app/icon.png` and `app/apple-icon.png`
   // automatically and emits the correct <link rel="icon"> / <link rel="apple-touch-icon">
   // tags from those files. Adding a metadata.icons override would publish a duplicate link.
 }
 
 /**
- * Viewport / themeColor — Next.js 15 ships these as a SEPARATE export, no
+ * Viewport / themeColor - Next.js 15 ships these as a SEPARATE export, no
  * longer nested under metadata. They are genuine site-wide UI defaults.
  */
 export const viewport: Viewport = {
@@ -266,7 +266,7 @@ const schemaData = {
         "bestRating": "5",
         "worstRating": "1"
       },
-      // Sample reviews — every entry must be a REAL, attributable customer review.
+      // Sample reviews - every entry must be a REAL, attributable customer review.
       // The "Sarah M." entry was removed (was fabricated). Add new entries only
       // from verified Google reviews with full first name + last initial.
       "review": [
@@ -303,11 +303,11 @@ const schemaData = {
           "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
           "author": { "@type": "Person", "name": "David K." },
           "datePublished": "2025-09-12",
-          "reviewBody": "Third time using JH Painting — they painted our deck, interior walls, and now our fence. Consistent quality every time. Truly the best painters in the MetroWest area."
+          "reviewBody": "Third time using JH Painting - they painted our deck, interior walls, and now our fence. Consistent quality every time. Truly the best painters in the MetroWest area."
         }
       ]
     },
-    // FAQPage object moved to app/page.tsx — home-page-specific structured data.
+    // FAQPage object moved to app/page.tsx - home-page-specific structured data.
     {
       "@type": "WebSite",
       "@id": "https://jhpaintingservices.com/#website",
@@ -327,7 +327,7 @@ const schemaData = {
         "query-input": "required name=search_term_string"
       }
     },
-    // WebPage object moved to app/page.tsx — home-page-specific structured data.
+    // WebPage object moved to app/page.tsx - home-page-specific structured data.
     {
       "@type": "Person",
       "@id": "https://jhpaintingservices.com/#founder",
@@ -381,7 +381,7 @@ const schemaData = {
       "@type": "ItemList",
       "@id": "https://jhpaintingservices.com/#sitelinks-services",
       "name": "Painting Services Offered by JH Painting Services",
-      "description": "Primary service categories — anchors for Google to surface as sitelinks under the brand search result.",
+      "description": "Primary service categories - anchors for Google to surface as sitelinks under the brand search result.",
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "numberOfItems": 7,
       "itemListElement": [
@@ -398,7 +398,7 @@ const schemaData = {
       "@type": "ItemList",
       "@id": "https://jhpaintingservices.com/#sitelinks-cities",
       "name": "Cities Served by JH Painting Services in Massachusetts",
-      "description": "Top service-area cities — secondary signal so Google can group city pages as a related sitelinks pack.",
+      "description": "Top service-area cities - secondary signal so Google can group city pages as a related sitelinks pack.",
       "numberOfItems": 12,
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Marlborough, MA", "url": "https://jhpaintingservices.com/massachusetts/marlborough" },
@@ -436,7 +436,7 @@ const schemaData = {
       "step": [
         { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886 or fill out our online form. We discuss your project goals, timeline, and provide expert color recommendations." },
         { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "We visit your property and provide a transparent, written estimate with clear pricing. No hidden fees, no surprises." },
-        { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Our team prepares all surfaces — patching drywall, sanding, priming, and protecting your furniture, floors, and landscaping." },
+        { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Our team prepares all surfaces - patching drywall, sanding, priming, and protecting your furniture, floors, and landscaping." },
         { "@type": "HowToStep", "position": 4, "name": "Expert Painting", "text": "We apply two coats of premium Benjamin Moore or Sherwin-Williams paint with precision cutting-in, smooth rolling, and careful detail work." },
         { "@type": "HowToStep", "position": 5, "name": "Final Walkthrough", "text": "We walk through every detail with you. If anything isn't perfect, we make it right. Your satisfaction is 100% guaranteed." }
       ]
@@ -458,7 +458,7 @@ export default function RootLayout({
           - storage.googleapis.com: hero image (LCP element)
           - api.leadconnectorhq.com: deferred form iframe origin
           - stcdn.leadconnectorhq.com: form assets origin
-          DNS-prefetch is cheaper than preconnect — use for origins that
+          DNS-prefetch is cheaper than preconnect - use for origins that
           ONLY get hit after user interaction (GTM, msgsndr tracking, etc.).
         */}
         <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
@@ -525,7 +525,7 @@ export default function RootLayout({
         `}} />
         {/*
           theme-color, viewport, HandheldFriendly, MobileOptimized:
-          intentionally NOT rendered here — Next.js emits theme-color and viewport
+          intentionally NOT rendered here - Next.js emits theme-color and viewport
           from the `viewport` export above, and the legacy mobile meta is no longer
           honored by any modern browser.
         */}
@@ -537,7 +537,7 @@ export default function RootLayout({
           }}
         />
         {/*
-          GHL External Tracking + Chat Widget — both moved to DeferredScripts
+          GHL External Tracking + Chat Widget - both moved to DeferredScripts
           so they load only on first user interaction. Previously sat in <head>
           with `async`, which still costs main-thread time during initial parse
           and counts against Lighthouse Performance.
@@ -563,7 +563,7 @@ export default function RootLayout({
           All third-party scripts (GTM, GHL external-tracking, Chat Widget,
           Reviews) deferred until first user interaction or 20s fallback.
           The beeprohub /external-tracking.js script was a duplicate of the
-          msgsndr one (same payload, same tracking ID) — removed to save
+          msgsndr one (same payload, same tracking ID) - removed to save
           82 KiB transfer + parse time.
         */}
         <DeferredScripts />

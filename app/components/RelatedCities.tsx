@@ -5,7 +5,7 @@ import { getRegionForCity } from '@/app/data/regions'
 interface Props {
   /** Slug of the current city (without -ma suffix). */
   citySlug: string
-  /** Display name of the current city — excluded from the related list. */
+  /** Display name of the current city - excluded from the related list. */
   cityName: string
   /** Optional service slug. If passed, related cities link to the same service variant. */
   serviceSlug?: string
@@ -15,8 +15,8 @@ interface Props {
 
 // Same-region city links surface the topical cluster Google uses for local
 // service hubs: when a user lands on /massachusetts/wellesley, this component
-// pushes them to Newton, Brookline, Needham — the cities a real Wellesley
-// homeowner would actually consider — plus the region hub page itself.
+// pushes them to Newton, Brookline, Needham - the cities a real Wellesley
+// homeowner would actually consider - plus the region hub page itself.
 // Without it, the city pages were dead-end leaves with no horizontal links.
 export default function RelatedCities({ citySlug, cityName, serviceSlug, limit = 8 }: Props) {
   const region = getRegionForCity(citySlug)

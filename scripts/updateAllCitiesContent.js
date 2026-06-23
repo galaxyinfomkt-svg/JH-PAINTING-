@@ -47,11 +47,11 @@ function generateIntroText(name, county, distance) {
 }
 
 function generateServiceDescription(name) {
-  return `JH Painting Services offers comprehensive painting and finishing solutions for ${name} homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes – transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts' challenging climate. Our cabinet refinishing service saves ${name} homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.`;
+  return `JH Painting Services offers comprehensive painting and finishing solutions for ${name} homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts' challenging climate. Our cabinet refinishing service saves ${name} homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.`;
 }
 
 function generateClosingPitch(name) {
-  return `Ready to transform your ${name} home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our ${name} neighbors trust us because we deliver on our promises – showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.`;
+  return `Ready to transform your ${name} home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our ${name} neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.`;
 }
 
 // Process each city

@@ -14,15 +14,15 @@ export type Faq = { q: string; a: string }
 export const homeFaqs: Faq[] = [
   {
     q: 'How do I get a painting estimate in Massachusetts?',
-    a: "We provide free, no-obligation estimates for all painting projects in Massachusetts. Call (508) 690-8886 or fill out our online form. We'll visit your property, assess the scope of work, discuss your color preferences, and provide a detailed written estimate — typically within 24–48 hours.",
+    a: "We provide free, no-obligation estimates for all painting projects in Massachusetts. Call (508) 690-8886 or fill out our online form. We'll visit your property, assess the scope of work, discuss your color preferences, and provide a detailed written estimate - typically within 24-48 hours.",
   },
   {
     q: 'How long does a painting project take?',
-    a: 'Most interior room painting takes 1–2 days per room. A full interior typically takes 3–7 days. Exterior painting usually takes 5–10 days depending on home size and weather. We provide a specific timeline during your free estimate and keep you updated throughout.',
+    a: 'Most interior room painting takes 1-2 days per room. A full interior typically takes 3-7 days. Exterior painting usually takes 5-10 days depending on home size and weather. We provide a specific timeline during your free estimate and keep you updated throughout.',
   },
   {
     q: 'What paint brands do you use?',
-    a: "We exclusively use premium paints from Benjamin Moore and Sherwin-Williams, formulated to withstand New England's freeze-thaw cycles, humidity, and UV exposure. Quality paint lasts 7–10+ years versus 3–5 years for budget alternatives.",
+    a: "We exclusively use premium paints from Benjamin Moore and Sherwin-Williams, formulated to withstand New England's freeze-thaw cycles, humidity, and UV exposure. Quality paint lasts 7-10+ years versus 3-5 years for budget alternatives.",
   },
   {
     q: 'Are you licensed and insured?',
@@ -46,12 +46,12 @@ export const homeFaqs: Faq[] = [
   },
 ]
 
-// FAQ das páginas de CIDADE — parametrizado por {city}.
+// FAQ das páginas de CIDADE - parametrizado por {city}.
 export function cityFaqs(city: string): Faq[] {
   return [
     {
       q: `Are you actually located near ${city}?`,
-      a: `Yes! JH Painting Services proudly serves ${city}, MA, and we're based in nearby Marlborough. We're not a franchise or out-of-town company — our owner Jafet and many crew members are local. When you hire us, you're supporting a local business invested in the community.`,
+      a: `Yes! JH Painting Services proudly serves ${city}, MA, and we're based in nearby Marlborough. We're not a franchise or out-of-town company - our owner Jafet and many crew members are local. When you hire us, you're supporting a local business invested in the community.`,
     },
     {
       q: `Do you work on historic homes in ${city}?`,
@@ -59,7 +59,7 @@ export function cityFaqs(city: string): Faq[] {
     },
     {
       q: `How quickly can you start a project in ${city}?`,
-      a: `We can often start within days, not weeks. We offer same-day estimates and priority scheduling. During peak season (May–September) we recommend booking 2–3 weeks in advance, but we always try to accommodate urgent requests.`,
+      a: `We can often start within days, not weeks. We offer same-day estimates and priority scheduling. During peak season (May-September) we recommend booking 2-3 weeks in advance, but we always try to accommodate urgent requests.`,
     },
     {
       q: `What paint brands do you use for ${city} homes?`,
@@ -67,11 +67,11 @@ export function cityFaqs(city: string): Faq[] {
     },
     {
       q: `Do you offer free estimates in ${city}?`,
-      a: `Yes! We provide free, detailed written estimates for all ${city} projects, usually scheduled within 24–48 hours. Each estimate includes a complete scope of work, materials, timeline, and transparent pricing with no hidden fees.`,
+      a: `Yes! We provide free, detailed written estimates for all ${city} projects, usually scheduled within 24-48 hours. Each estimate includes a complete scope of work, materials, timeline, and transparent pricing with no hidden fees.`,
     },
     {
       q: 'How do you handle Massachusetts weather when painting exteriors?',
-      a: 'We only paint exteriors when temperatures are between 50–85°F with low humidity and no rain in the forecast. We use paints formulated for temperature extremes, apply proper primers for moisture protection, and ensure adequate dry time between coats.',
+      a: 'We only paint exteriors when temperatures are between 50-85°F with low humidity and no rain in the forecast. We use paints formulated for temperature extremes, apply proper primers for moisture protection, and ensure adequate dry time between coats.',
     },
     {
       q: `What is your warranty on painting work in ${city}?`,

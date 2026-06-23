@@ -1,10 +1,10 @@
 /**
- * BeforeAfterGrid — wraps the BeforeAfterSlider for the gallery layout.
+ * BeforeAfterGrid - wraps the BeforeAfterSlider for the gallery layout.
  *
  * Previously imported the slider with `ssr: false` which meant the initial
- * server-rendered HTML contained ONLY a gray placeholder — no images, no
+ * server-rendered HTML contained ONLY a gray placeholder - no images, no
  * structure. The conversion-critical before/after pairs were invisible at
- * paint and only appeared after client-side hydration (often 1–3s on slow
+ * paint and only appeared after client-side hydration (often 1-3s on slow
  * connections, after the Lighthouse window).
  *
  * Fix: import the slider normally so its <Image> tags render in SSR HTML.

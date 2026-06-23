@@ -13,12 +13,12 @@ import { siteConfig } from '@/lib/siteConfig'
  * HOME page metadata.
  * Title is brand-first + phone (~62 chars, fits SERP without truncation).
  * Description leads with the value prop, lists trust signals, and CLOSES WITH
- * THE PHONE NUMBER — that's the lever that makes Google render the tel right
+ * THE PHONE NUMBER - that's the lever that makes Google render the tel right
  * inside the snippet (Wolfs Siding gets its (774) 484-1895 the same way).
  */
 export const metadata: Metadata = generatePageMetadata({
   // Title trimmed to 56 chars so the phone makes it into the SERP and
-  // nothing truncates. Brand last is intentional — Google often boosts
+  // nothing truncates. Brand last is intentional - Google often boosts
   // brand recognition when the keyword leads.
   title: 'Painters in Massachusetts | (508) 690-8886 | JH Painting',
   // Description trimmed from 254 → 153 chars (under Google's 160 cap).
@@ -27,7 +27,7 @@ export const metadata: Metadata = generatePageMetadata({
     "MA painting contractor since 2018. Exterior, interior, cabinets. Licensed, $2M insured. 40+ 5-star Google reviews. Free estimate: (508) 690-8886",
   path: '/',
   ogImageAlt:
-    'Professional exterior house painting by JH Painting Services in Massachusetts — before and after transformation',
+    'Professional exterior house painting by JH Painting Services in Massachusetts - before and after transformation',
   keywords: [
     'exterior painting Massachusetts',
     'exterior house painters MA',
@@ -47,7 +47,7 @@ export const metadata: Metadata = generatePageMetadata({
   ],
 })
 
-// Dynamic imports for below-fold sections — reduces initial JS bundle and TBT
+// Dynamic imports for below-fold sections - reduces initial JS bundle and TBT
 const HomeVideoSection = dynamic(() => import('./components/HomeVideoSection'))
 const HomeFAQ = dynamic(() => import('./components/HomeFAQ'))
 const HomeBeforeAfter = dynamic(() => import('./components/HomeBeforeAfter'))
@@ -109,7 +109,7 @@ const EyeIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
 )
 
-// Data — 7 services for RS-style grid
+// Data - 7 services for RS-style grid
 const services = [
   {
     title: 'Exterior Painting',
@@ -166,7 +166,7 @@ const galleryImages = [
 ]
 
 /**
- * Home-specific structured data — FAQ + WebPage objects that previously lived
+ * Home-specific structured data - FAQ + WebPage objects that previously lived
  * in the root layout's @graph. Moving them here means the FAQ rich-result
  * eligibility applies ONLY to the home URL (Google flags FAQ schema on every
  * page as spammy duplicate). The WebPage object tells Google that "/" is the
@@ -556,7 +556,7 @@ export default function HomePage() {
               {[
                 { num: '01', icon: PhoneIcon, title: 'Free Consultation', desc: 'Call or text us. We\'ll discuss your project goals, timeline, and provide expert recommendations.' },
                 { num: '02', icon: ClipboardIcon, title: 'Detailed Estimate', desc: 'We provide a transparent, written estimate with clear pricing. No hidden fees, no surprises.' },
-                { num: '03', icon: HardHatIcon, title: 'Expert Painting', desc: 'Our skilled team handles everything—prep, painting, and cleanup with premium materials.' },
+                { num: '03', icon: HardHatIcon, title: 'Expert Painting', desc: 'Our skilled team handles everything-prep, painting, and cleanup with premium materials.' },
                 { num: '04', icon: EyeIcon, title: 'Final Walkthrough', desc: 'We walk through every detail with you. If anything isn\'t perfect, we make it right. Guaranteed.' },
               ].map((step, index) => (
                 <div key={index} className="process-card-home process-step-enhanced">
@@ -602,7 +602,7 @@ export default function HomePage() {
                   From homes to historic landmarks like the Waltham Church, JH Painting Services delivers professional exterior painting that transforms any property and protects it from New England&apos;s harsh weather conditions. Our Waltham Church project showcased our ability to handle large-scale exterior work with precision and care.
                 </p>
                 <p>
-                  Our comprehensive process includes thorough surface preparation—power washing, scraping, sanding, caulking, and priming—followed by two coats of premium grade A paint. We specialize in:
+                  Our comprehensive process includes thorough surface preparation-power washing, scraping, sanding, caulking, and priming-followed by two coats of premium grade A paint. We specialize in:
                 </p>
 
                 <ul className="detail-list">
@@ -738,10 +738,10 @@ export default function HomePage() {
             </div>
 
             {/*
-              Static social-proof banner — SSR'd, no third-party JS, no lazy
+              Static social-proof banner - SSR'd, no third-party JS, no lazy
               loading. Gives the user (and Google crawlers) immediate proof
               while the LazyIframe below downloads the live GHL reviews widget.
-              Numbers come from siteConfig (single source of truth — Task 7).
+              Numbers come from siteConfig (single source of truth - Task 7).
             */}
             <div
               role="group"
@@ -801,12 +801,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Why Choose Us — Service Overview for AI citation */}
+        {/* Why Choose Us - Service Overview for AI citation */}
         <section className="section section-modern" style={{ background: '#fff' }}>
           <div className="container">
             <div className="section-header section-header-enhanced">
               <span className="section-eyebrow">Our Services</span>
-              <h2>Professional Painting Services — Massachusetts</h2>
+              <h2>Professional Painting Services - Massachusetts</h2>
               <p>Complete painting solutions for homes and businesses. All estimates are free.</p>
             </div>
             <div style={{ overflowX: 'auto' }}>
@@ -822,17 +822,17 @@ export default function HomePage() {
                 <tbody>
                   <tr style={{ borderBottom: '1px solid #f3f4f6' }}>
                     <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Interior Painting</td>
-                    <td style={{ padding: '0.75rem 1rem' }}>1–5 days</td>
+                    <td style={{ padding: '0.75rem 1rem' }}>1-5 days</td>
                     <td style={{ padding: '0.75rem 1rem', color: '#6b7280' }}>Walls, ceiling, trim, baseboards, 2 coats premium paint</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #f3f4f6', background: '#f9fafb' }}>
                     <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Exterior Painting</td>
-                    <td style={{ padding: '0.75rem 1rem' }}>3–7 days</td>
+                    <td style={{ padding: '0.75rem 1rem' }}>3-7 days</td>
                     <td style={{ padding: '0.75rem 1rem', color: '#6b7280' }}>Power wash, scrape, prime, caulk, 2 coats weather-resistant paint</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #f3f4f6' }}>
                     <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Cabinet Refinishing</td>
-                    <td style={{ padding: '0.75rem 1rem' }}>5–7 days</td>
+                    <td style={{ padding: '0.75rem 1rem' }}>5-7 days</td>
                     <td style={{ padding: '0.75rem 1rem', color: '#6b7280' }}>Degrease, sand, prime, spray finish, hardware reinstall</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #f3f4f6', background: '#f9fafb' }}>
@@ -847,12 +847,12 @@ export default function HomePage() {
                   </tr>
                   <tr style={{ borderBottom: '1px solid #f3f4f6', background: '#f9fafb' }}>
                     <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Carpentry</td>
-                    <td style={{ padding: '0.75rem 1rem' }}>1–3 days</td>
+                    <td style={{ padding: '0.75rem 1rem' }}>1-3 days</td>
                     <td style={{ padding: '0.75rem 1rem', color: '#6b7280' }}>Trim, baseboards, crown molding, wood repair, deck repair</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #f3f4f6' }}>
                     <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Deck Staining</td>
-                    <td style={{ padding: '0.75rem 1rem' }}>1–2 days</td>
+                    <td style={{ padding: '0.75rem 1rem' }}>1-2 days</td>
                     <td style={{ padding: '0.75rem 1rem', color: '#6b7280' }}>Clean, sand, stain or paint, seal</td>
                   </tr>
                 </tbody>

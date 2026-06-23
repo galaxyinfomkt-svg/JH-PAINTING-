@@ -8,10 +8,10 @@ import LazyHeroForm from '@/app/components/LazyHeroForm'
 
 const services = [
   { name: 'Interior Painting', slug: 'interior-painting', desc: 'Walls, ceilings, trim, doors & accent walls with premium Benjamin Moore & Sherwin-Williams paints.', image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png' },
-  { name: 'Exterior Painting', slug: 'exterior-painting', desc: 'Complete exterior protection — siding, trim, shutters, doors & decks with weather-resistant paints.', image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg' },
+  { name: 'Exterior Painting', slug: 'exterior-painting', desc: 'Complete exterior protection - siding, trim, shutters, doors & decks with weather-resistant paints.', image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg' },
   { name: 'Cabinet Painting', slug: 'cabinet-painting', desc: 'Transform dated cabinets for 70% less than replacement. Factory-smooth spray finish in 5-7 days.', image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png' },
   { name: 'Commercial Painting', slug: 'commercial-painting', desc: 'Offices, retail, restaurants & medical facilities. After-hours & weekend scheduling available.', image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg' },
-  { name: 'Residential Painting', slug: 'residential-painting', desc: 'Complete home painting — single rooms to whole-house transformations with expert color consultation.', image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg' },
+  { name: 'Residential Painting', slug: 'residential-painting', desc: 'Complete home painting - single rooms to whole-house transformations with expert color consultation.', image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg' },
   { name: 'Carpentry', slug: 'carpentry', desc: 'Wood rot repair, window & door frames, trim, siding & deck restoration by licensed pros.', image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp' },
   { name: 'Power Washing', slug: 'power-washing', desc: 'Driveways, siding, decks, patios & fences sparkling clean in one day.', image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp' },
 ]
@@ -168,7 +168,7 @@ export default async function RegionPage({ params }: Props) {
             <div className="city-section-header">
               <span className="city-badge city-badge-red">{region.name} Challenges</span>
               <h2 className="city-section-title">Common Painting Problems in {region.name}</h2>
-              <p className="city-section-subtitle">Every region has unique challenges. Here&apos;s what {region.name} homeowners face — and how we solve it.</p>
+              <p className="city-section-subtitle">Every region has unique challenges. Here&apos;s what {region.name} homeowners face - and how we solve it.</p>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '1000px', margin: '0 auto', padding: '0 1.5rem' }}>
@@ -351,7 +351,7 @@ export default async function RegionPage({ params }: Props) {
           <div className="city-cta-pattern" />
           <div className="container">
             <div className="city-cta-content">
-              <h2 className="city-cta-title">Your {region.name} Home Deserves the Best — Let&apos;s Talk</h2>
+              <h2 className="city-cta-title">Your {region.name} Home Deserves the Best - Let&apos;s Talk</h2>
               <p className="city-cta-subtitle">Licensed & $2M insured. 40+ five-star reviews. Same-day response. No obligation.</p>
               <div className="city-cta-buttons">
                 <a href="tel:+15086908886" className="city-cta-btn-white"><PhoneIcon size={24} /> (508) 690-8886</a>

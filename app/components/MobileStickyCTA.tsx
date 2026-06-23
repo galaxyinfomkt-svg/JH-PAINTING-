@@ -1,5 +1,5 @@
 /**
- * MobileStickyCTA — bottom-fixed bar with two CTAs, mobile-only.
+ * MobileStickyCTA - bottom-fixed bar with two CTAs, mobile-only.
  *
  * Spec (Task 10):
  *   - Hidden on viewports ≥ 768px (`@media (min-width: 768px)` disables it).
@@ -9,7 +9,7 @@
  *   - Bottom offset (1rem) so it doesn't overlap the LeadConnector chat
  *     widget bubble (which sits in the bottom-right corner ~80px tall).
  *   - High contrast on dark bg so it works over any hero image.
- *   - This is a Server Component — no client JS. Pure CSS + anchors. Visible
+ *   - This is a Server Component - no client JS. Pure CSS + anchors. Visible
  *     in initial paint, no hydration delay.
  *
  * Rendered ONCE from app/layout.tsx so it appears on every public page.

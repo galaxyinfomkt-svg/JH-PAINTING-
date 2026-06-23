@@ -106,7 +106,7 @@ function generateCityServiceSchema(
             "name": `How do I get a free estimate for ${serviceName.toLowerCase()} in ${cityName}?`,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": `Getting a free ${serviceName.toLowerCase()} estimate in ${cityName} is easy! Call JH Painting at (508) 690-8886 or fill out our online form. We'll visit your ${cityName} property, assess the scope of work, and provide a detailed written quote — typically within 24-48 hours. Every estimate is free with no obligation.`
+              "text": `Getting a free ${serviceName.toLowerCase()} estimate in ${cityName} is easy! Call JH Painting at (508) 690-8886 or fill out our online form. We'll visit your ${cityName} property, assess the scope of work, and provide a detailed written quote - typically within 24-48 hours. Every estimate is free with no obligation.`
             }
           },
           {
@@ -161,9 +161,9 @@ const servicesData: Record<string, {
     description: 'Transform your interior spaces with expert wall painting, ceiling painting, trim work, and color consultation.',
     heroImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',
     painPoints: [
-      { title: 'Scuff Marks & Stains Everywhere?', desc: "Kids, pets, daily life—your walls show it all. Those marks and stains don't go away with cleaning.", solution: 'We prep, prime, and paint for a flawless finish' },
-      { title: "Can't Pick the Right Color?", desc: "Thousands of paint colors, endless opinions—it's overwhelming. What if you choose wrong?", solution: 'Free expert color consultation included' },
-      { title: 'Worried About the Mess?', desc: "Paint drips on floors, furniture covered in plastic for weeks—painting sounds like a nightmare.", solution: 'Meticulous prep and daily cleanup guaranteed' },
+      { title: 'Scuff Marks & Stains Everywhere?', desc: "Kids, pets, daily life-your walls show it all. Those marks and stains don't go away with cleaning.", solution: 'We prep, prime, and paint for a flawless finish' },
+      { title: "Can't Pick the Right Color?", desc: "Thousands of paint colors, endless opinions-it's overwhelming. What if you choose wrong?", solution: 'Free expert color consultation included' },
+      { title: 'Worried About the Mess?', desc: "Paint drips on floors, furniture covered in plastic for weeks-painting sounds like a nightmare.", solution: 'Meticulous prep and daily cleanup guaranteed' },
     ],
     offerings: ['Wall painting', 'Ceiling painting', 'Trim & baseboard painting', 'Door & frame painting', 'Accent walls', 'Drywall repair', 'Color consultation', 'Wallpaper removal'],
   },
@@ -222,7 +222,7 @@ const servicesData: Record<string, {
     heroImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
     painPoints: [
       { title: 'Rotted Window Frames?', desc: "Water damage has turned your window frames soft and spongy. Painting over rot is just wasted money.", solution: 'Complete wood replacement before painting' },
-      { title: 'Damaged Door Frames?', desc: "Kicked-in doors, water damage, or just age—damaged frames look terrible and compromise security.", solution: 'Expert frame repair and replacement' },
+      { title: 'Damaged Door Frames?', desc: "Kicked-in doors, water damage, or just age-damaged frames look terrible and compromise security.", solution: 'Expert frame repair and replacement' },
       { title: 'Deck Falling Apart?', desc: "Splintered boards, wobbly railings, and soft spots make your deck dangerous and ugly.", solution: 'Complete deck repair and restoration' },
     ],
     offerings: ['Window frame repair', 'Door frame repair', 'Siding repair', 'Deck repair', 'Railing repair', 'Trim & molding', 'Rotted wood replacement', 'Fascia & soffit repair'],
@@ -234,7 +234,7 @@ const servicesData: Record<string, {
     heroImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp',
     painPoints: [
       { title: 'Driveway Covered in Stains?', desc: "Oil, rust, mold, and years of grime make your driveway an eyesore.", solution: 'Deep cleaning restores like-new appearance' },
-      { title: 'Green Mold on Your Siding?', desc: "That green and black growth isn\'t just ugly—it\'s damaging your home.", solution: 'Safe soft washing removes mold completely' },
+      { title: 'Green Mold on Your Siding?', desc: "That green and black growth isn\'t just ugly-it\'s damaging your home.", solution: 'Safe soft washing removes mold completely' },
       { title: 'Deck Looking Gray & Weathered?', desc: "Your deck has lost its color and looks rough and uninviting.", solution: 'Power washing preps for staining/sealing' },
     ],
     offerings: ['Driveway cleaning', 'Sidewalk cleaning', 'Deck power washing', 'Siding cleaning', 'Fence cleaning', 'Patio cleaning', 'Pool deck cleaning', 'Concrete restoration'],
@@ -650,7 +650,7 @@ export default async function CityServicePage({ params }: Props) {
                   Owner Jafet Henrique founded JH Painting Services with one mission: deliver exceptional {service.name.toLowerCase()} that {city.name} families can trust. From residential homes to historic landmarks like our <strong>Waltham Church renewal</strong> &mdash; an incredible large-scale transformation &mdash; we bring the same precision, premium materials, and genuine craftsmanship to every {city.name} project.
                 </p>
                 <p>
-                  {uniqueServiceContent?.localContext || `We're proud to serve ${city.name} and the surrounding ${city.county || 'Massachusetts'} communities. Our team understands the unique challenges of ${city.name} homes — from historic properties requiring specialized techniques to modern construction needing proper preparation. Every detail matters, from surface prep to final inspection.`}
+                  {uniqueServiceContent?.localContext || `We're proud to serve ${city.name} and the surrounding ${city.county || 'Massachusetts'} communities. Our team understands the unique challenges of ${city.name} homes - from historic properties requiring specialized techniques to modern construction needing proper preparation. Every detail matters, from surface prep to final inspection.`}
                 </p>
 
                 <div className="service-about-features">
@@ -770,7 +770,7 @@ export default async function CityServicePage({ params }: Props) {
         <section className="service-cta-red">
           <div className="container">
             <div className="service-cta-content">
-              <h2 className="service-cta-title">Your {city.name} Home Deserves the Best — Let&apos;s Talk</h2>
+              <h2 className="service-cta-title">Your {city.name} Home Deserves the Best - Let&apos;s Talk</h2>
               <p className="service-cta-subtitle">
                 {uniqueServiceContent?.closingPitch || `Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.`}
               </p>

@@ -544,7 +544,7 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
 // that had four SEO-breaking bugs: (1) emitted a second <h1> on the page (Google
 // downgrades pages with multiple H1s); (2) tables were rendered as bare <tr>
 // rows with no surrounding <table>, so browsers dropped the markup; (3) no
-// support for markdown links — they leaked as raw `[text](url)`; (4) the body
+// support for markdown links - they leaked as raw `[text](url)`; (4) the body
 // was never wrapped in <p>, so the first paragraph rendered as orphan inline
 // text directly under the article container. This version keeps the no-deps
 // footprint (no react-markdown) but fixes all of the above.
@@ -565,11 +565,11 @@ function formatContent(content: string): string {
   // Inline transformations (apply to a single line of text after block parsing)
   const inline = (s: string): string =>
     s
-      // Markdown links [text](url) — must run BEFORE bold/italic so [**x**](u) works
+      // Markdown links [text](url) - must run BEFORE bold/italic so [**x**](u) works
       .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/g, '<a href="$2">$1</a>')
-      // Bold **text** — must run before italic so **x** is not eaten by *x*
+      // Bold **text** - must run before italic so **x** is not eaten by *x*
       .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-      // Italic *text* — single-asterisk pairs only
+      // Italic *text* - single-asterisk pairs only
       .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
       // Inline code `code`
       .replace(/`([^`]+)`/g, '<code>$1</code>')
@@ -597,7 +597,7 @@ function formatContent(content: string): string {
     }
     closeTable()
 
-    // Headers — downgrade markdown # to <h2> so the page never emits a second <h1>
+    // Headers - downgrade markdown # to <h2> so the page never emits a second <h1>
     // (the post title above the body is already the article's only H1)
     let m: RegExpMatchArray | null
     if ((m = line.match(/^###\s+(.+)$/))) { closeList(); out.push(`<h4>${inline(m[1])}</h4>`); continue }

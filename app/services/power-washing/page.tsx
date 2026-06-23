@@ -186,7 +186,7 @@ const powerWashingSchema = {
       "description": "Our professional power washing process restores surfaces to like-new condition.",
       "totalTime": "P1D",
       "step": [
-        { "@type": "HowToStep", "position": 1, "name": "Free Assessment", "text": "Call (508) 690-8886. We assess your surfaces — driveway, siding, deck, patio, or fence." },
+        { "@type": "HowToStep", "position": 1, "name": "Free Assessment", "text": "Call (508) 690-8886. We assess your surfaces - driveway, siding, deck, patio, or fence." },
         { "@type": "HowToStep", "position": 2, "name": "Method Selection", "text": "We choose the right pressure and technique: high-pressure for concrete, soft-wash for siding and delicate surfaces." },
         { "@type": "HowToStep", "position": 3, "name": "Surface Protection", "text": "We protect plants, windows, and surrounding areas before beginning." },
         { "@type": "HowToStep", "position": 4, "name": "Professional Washing", "text": "Commercial-grade equipment removes mold, mildew, algae, dirt, and oxidation." },
@@ -435,7 +435,7 @@ export default function PowerWashingPage() {
           </div>
         </section>
 
-        {/* Citation-First Summary — Optimized for AI search engines */}
+        {/* Citation-First Summary - Optimized for AI search engines */}
         <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
           <div className="container">
             <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
@@ -449,7 +449,7 @@ export default function PowerWashingPage() {
           <div className="container">
             <div style={{ textAlign: 'center', padding: '2rem 0' }}>
               <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your needs.</p>
-              <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 — Free Estimate</a>
+              <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 - Free Estimate</a>
             </div>
           </div>
         </section>
@@ -636,7 +636,7 @@ export default function PowerWashingPage() {
         <section className="service-cta-red">
           <div className="container">
             <div className="service-cta-content">
-              <h2 className="service-cta-title">Your Property Deserves the Best — Let&apos;s Talk</h2>
+              <h2 className="service-cta-title">Your Property Deserves the Best - Let&apos;s Talk</h2>
               <p className="service-cta-subtitle">Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.</p>
               <div className="service-cta-buttons">
                 <a href={`tel:${BUSINESS.phoneRaw}`} className="service-cta-btn-white">

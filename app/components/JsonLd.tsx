@@ -2,7 +2,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // Injeta JSON-LD com segurança no Next.js App Router (Server Component).
 // Aceita um objeto OU um array de objetos de schema.
-// Renderize dentro do body de uma page.tsx ou layout.tsx — NÃO funciona
+// Renderize dentro do body de uma page.tsx ou layout.tsx - NÃO funciona
 // em arquivos 'use client'.
 // ─────────────────────────────────────────────────────────────────────────────
 

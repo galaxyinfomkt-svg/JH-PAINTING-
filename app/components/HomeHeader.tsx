@@ -111,7 +111,7 @@ export default function HomeHeader() {
           <div className="header-main">
             <a href="/" className="logo">
               {/* Logo: rendered at ~131x88 max (50px tall via CSS, ~50% header width).
-                 Source is 640x427 — Lighthouse flagged as oversized.
+                 Source is 640x427 - Lighthouse flagged as oversized.
                  Set quality=70 (PNGs survive 70 fine for a logo), and constrain
                  sizes to the actual rendered pixel max on mobile + desktop. */}
               <Image

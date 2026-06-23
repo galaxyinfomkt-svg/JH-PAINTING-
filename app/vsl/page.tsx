@@ -10,14 +10,14 @@ import LazyIframe from '@/app/components/LazyIframe'
 import { BUSINESS, FORM_IDS } from '@/lib/constants'
 
 // Fabricated testimonials removed (was "Sarah M.", "Michael R.", "Jennifer L.").
-// The section below now links to the LIVE Google reviews — every quote a real
-// customer wrote — so we never present invented reviews to visitors.
+// The section below now links to the LIVE Google reviews - every quote a real
+// customer wrote - so we never present invented reviews to visitors.
 
 // Pain points that resonate with homeowners
 const painPoints = [
   {
     title: "Tired of Looking at Peeling, Faded Paint?",
-    description: "Your home's exterior is the first thing people see. Cracked, peeling paint doesn't just look bad—it exposes your home to water damage, rot, and expensive repairs."
+    description: "Your home's exterior is the first thing people see. Cracked, peeling paint doesn't just look bad-it exposes your home to water damage, rot, and expensive repairs."
   },
   {
     title: "Worried About Hiring the Wrong Contractor?",
@@ -190,7 +190,7 @@ export default function VSLPage() {
           </div>
         </section>
 
-        {/* Social proof — links to real Google reviews instead of fabricated quotes */}
+        {/* Social proof - links to real Google reviews instead of fabricated quotes */}
         <section className="vsl-testimonials">
           <div className="container">
             <div className="vsl-section-header">
@@ -209,7 +209,7 @@ export default function VSLPage() {
               </p>
               <p style={{ fontSize: '1rem', color: '#475569', textAlign: 'center', margin: 0, maxWidth: '480px' }}>
                 Every review on our Google profile is from a real Massachusetts homeowner who hired us.
-                Read what they say in their own words — we don&apos;t invent testimonials.
+                Read what they say in their own words - we don&apos;t invent testimonials.
               </p>
               <a
                 href="https://g.page/r/Cb984Z3qm9PsEAE/review"

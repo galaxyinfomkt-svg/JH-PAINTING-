@@ -18,7 +18,7 @@ const exteriorPaintingSchema = {
       "@id": "https://jhpaintingservices.com/services/exterior-painting#service",
       "name": "Exterior Painting Services Massachusetts",
       "serviceType": "Exterior House Painting",
-      "description": "Professional exterior painting services across Massachusetts — from residential homes to historic landmarks like our Waltham Church renewal. Complete surface preparation, power washing, premium weather-resistant paints.",
+      "description": "Professional exterior painting services across Massachusetts - from residential homes to historic landmarks like our Waltham Church renewal. Complete surface preparation, power washing, premium weather-resistant paints.",
       "provider": {
         "@type": "LocalBusiness",
         "@id": "https://jhpaintingservices.com/#organization",
@@ -109,7 +109,7 @@ const exteriorPaintingSchema = {
       "step": [
         { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We assess your home's exterior condition, discuss color options, and provide expert recommendations." },
         { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "We provide a transparent written estimate including power washing, scraping, priming, caulking, and two coats of premium exterior paint." },
-        { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Power washing, scraping loose paint, sanding, filling cracks, caulking gaps, and priming bare wood — the key to a lasting paint job." },
+        { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Power washing, scraping loose paint, sanding, filling cracks, caulking gaps, and priming bare wood - the key to a lasting paint job." },
         { "@type": "HowToStep", "position": 4, "name": "Expert Painting", "text": "Two coats of premium Benjamin Moore Aura or Sherwin-Williams Duration exterior paint applied with brushes, rollers, and spray equipment." },
         { "@type": "HowToStep", "position": 5, "name": "Final Walkthrough", "text": "Complete property inspection with you. Touch-ups as needed. Your satisfaction is 100% guaranteed with our 5-year warranty." }
       ]
@@ -118,7 +118,7 @@ const exteriorPaintingSchema = {
 }
 
 const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg', alt: 'Historic Renewal: The Incredible Transformation of a Waltham Church — exterior after', category: 'Waltham Church' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg', alt: 'Historic Renewal: The Incredible Transformation of a Waltham Church - exterior after', category: 'Waltham Church' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp', alt: 'Professional exterior house painting in Massachusetts', category: 'House Exterior' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp', alt: 'Professional deck staining and power washing MA', category: 'Deck Staining' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg', alt: 'Historic Renewal: Waltham Church interior restoration by JH Painting', category: 'Waltham Church' },
@@ -170,13 +170,13 @@ const painPoints = [
   {
     icon: Sun,
     title: 'Peeling, Cracking Paint?',
-    desc: "Snow, rain, sun, and freeze-thaw cycles destroy paint. Peeling and cracking aren't just ugly—they expose your home to moisture damage and rot that costs thousands to repair.",
+    desc: "Snow, rain, sun, and freeze-thaw cycles destroy paint. Peeling and cracking aren't just ugly-they expose your home to moisture damage and rot that costs thousands to repair.",
     solution: 'Weather-resistant paints built for New England'
   },
   {
     icon: Home,
     title: 'Embarrassed by Curb Appeal?',
-    desc: "Faded, dingy siding makes your whole property look neglected—even if everything else is perfect. Your home's appearance affects property value and neighborhood perception.",
+    desc: "Faded, dingy siding makes your whole property look neglected-even if everything else is perfect. Your home's appearance affects property value and neighborhood perception.",
     solution: 'Transform your home in just days'
   },
   {
@@ -363,7 +363,7 @@ export default function ExteriorPaintingPage() {
         </div>
       </section>
 
-      {/* Citation-First Summary — Optimized for AI search engines */}
+      {/* Citation-First Summary - Optimized for AI search engines */}
       <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
         <div className="container">
           <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
@@ -377,7 +377,7 @@ export default function ExteriorPaintingPage() {
         <div className="container">
           <div style={{ textAlign: 'center', padding: '2rem 0' }}>
             <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your needs.</p>
-            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 — Free Estimate</a>
+            <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 - Free Estimate</a>
           </div>
         </div>
       </section>
@@ -595,10 +595,10 @@ export default function ExteriorPaintingPage() {
                 Meet Jafet Henrique, Your Exterior Painting Expert
               </h2>
               <p className="service-about-desc">
-                Since 2018, we have been protecting Massachusetts homes and historic buildings from the elements, JH Painting Services understands what it takes to deliver exterior paint jobs that last. Our historic renewal of a Waltham Church — a stunning, large-scale transformation — showcases the precision and care we bring to every project, from residential homes to landmark properties.
+                Since 2018, we have been protecting Massachusetts homes and historic buildings from the elements, JH Painting Services understands what it takes to deliver exterior paint jobs that last. Our historic renewal of a Waltham Church - a stunning, large-scale transformation - showcases the precision and care we bring to every project, from residential homes to landmark properties.
               </p>
               <p className="service-about-desc">
-                We know Massachusetts weather—harsh winters, humid summers, and everything in between. That&apos;s why we use premium, weather-resistant paints and follow meticulous preparation processes that ensure your exterior paint job protects your property for 10-15 years. Owner Jafet Henrique leads every project with dedication to quality.
+                We know Massachusetts weather-harsh winters, humid summers, and everything in between. That&apos;s why we use premium, weather-resistant paints and follow meticulous preparation processes that ensure your exterior paint job protects your property for 10-15 years. Owner Jafet Henrique leads every project with dedication to quality.
               </p>
 
               <div className="service-about-features">
@@ -619,7 +619,7 @@ export default function ExteriorPaintingPage() {
         <div className="service-cta-pattern" />
         <div className="container service-cta-content">
           <h2 className="service-cta-title">
-            Your Home Deserves the Best — Let&apos;s Talk
+            Your Home Deserves the Best - Let&apos;s Talk
           </h2>
           <p className="service-cta-desc">
             Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.

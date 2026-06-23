@@ -5,7 +5,7 @@ import { generatePageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = generatePageMetadata({
   // Title trimmed 67 → 55 chars. Dropped redundant "Find Your Local
-  // Painter" — the URL itself + "Near Me" already signal that.
+  // Painter" - the URL itself + "Near Me" already signal that.
   title: 'Painters Near Me MA | 117+ Cities | JH Painting',
   // Description trimmed 200 → 152 chars. Cut the question phrasing
   // ("Looking for...?") that wastes SERP characters before the trust
@@ -39,7 +39,7 @@ export default function MassachusettsPage() {
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'JH Painting Services — Massachusetts Service Areas',
+    name: 'JH Painting Services - Massachusetts Service Areas',
     description: 'Professional painting services available in ' + cities.length + '+ cities across Massachusetts. Licensed, $2M insured, EPA Lead-Safe certified.',
     numberOfItems: cities.length,
     itemListElement: cities.map((city, index) => ({
@@ -83,7 +83,7 @@ export default function MassachusettsPage() {
       {/* Hero Section */}
       <section className="cities-hero">
         <div className="container">
-          <h1>Painters Near Me in Massachusetts — {cities.length}+ Cities Served</h1>
+          <h1>Painters Near Me in Massachusetts - {cities.length}+ Cities Served</h1>
           <p className="cities-hero-subtitle">
             Professional painting services across <strong>{cities.length}+ cities</strong> in Massachusetts.
             <br />Licensed, insured, and trusted by homeowners statewide.
@@ -110,8 +110,8 @@ export default function MassachusettsPage() {
                   key={city.slug}
                   href={`/massachusetts/${normalizeCitySlug(city.slug)}`}
                   className="city-card"
-                  aria-label={`Painters in ${city.name}, MA — JH Painting Services`}
-                  title={`Painters in ${city.name}, MA — JH Painting Services`}
+                  aria-label={`Painters in ${city.name}, MA - JH Painting Services`}
+                  title={`Painters in ${city.name}, MA - JH Painting Services`}
                 >
                   <span className="city-name">{city.name}, MA Painters</span>
                   <span className="city-meta">{city.county}</span>
@@ -129,8 +129,8 @@ export default function MassachusettsPage() {
                   key={city.slug}
                   href={`/massachusetts/${normalizeCitySlug(city.slug)}`}
                   className="city-card"
-                  aria-label={`Painters in ${city.name}, MA — JH Painting Services`}
-                  title={`Painters in ${city.name}, MA — JH Painting Services`}
+                  aria-label={`Painters in ${city.name}, MA - JH Painting Services`}
+                  title={`Painters in ${city.name}, MA - JH Painting Services`}
                 >
                   <span className="city-name">{city.name}, MA Painters</span>
                   <span className="city-meta">{city.county}</span>
@@ -148,8 +148,8 @@ export default function MassachusettsPage() {
                   key={city.slug}
                   href={`/massachusetts/${normalizeCitySlug(city.slug)}`}
                   className="city-card"
-                  aria-label={`Painters in ${city.name}, MA — JH Painting Services`}
-                  title={`Painters in ${city.name}, MA — JH Painting Services`}
+                  aria-label={`Painters in ${city.name}, MA - JH Painting Services`}
+                  title={`Painters in ${city.name}, MA - JH Painting Services`}
                 >
                   <span className="city-name">{city.name}, MA Painters</span>
                   <span className="city-meta">{city.county}</span>
