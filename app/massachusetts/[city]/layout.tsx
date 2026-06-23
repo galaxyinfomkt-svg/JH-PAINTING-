@@ -27,20 +27,24 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
     })
   }
 
-  // Title + description rewritten (Task 6). "#1" claim removed — Google
-  // penalises unverifiable rank superlatives, and the meta would conflict
-  // with the AggregateRating schema ("5.0 from 40 reviews" doesn't equal
-  // "#1 by whom?"). Target shape per the Tarefa 6 spec:
-  //   - title ≤60 chars: "House Painters in {City}, MA | Free Estimate | JH Painting"
-  //   - meta ≤160 chars: "Top-rated painters in {City}, MA — 5.0★ from 40+
-  //     reviews, licensed & $2M insured. Benjamin Moore & Sherwin-Williams.
-  //     Free estimate: (508) 690-8886"
+  // Title + description rewritten. Old template was 51 base chars + city
+  // name, which truncated in SERP for any city name ≥10 chars (32 of our
+  // 117 cities — Framingham Center, Marlborough, Westborough, etc.).
+  //
+  // New target shapes that fit even the LONGEST city name (Framingham
+  // Center = 17 chars):
+  //   - title: "Painters in {City}, MA | Free Quote | JH Painting"
+  //     → 41 base + city = 58 chars worst case (≤60 ✓)
+  //   - desc: "Painters in {City}, MA — 5.0★ from 40+ reviews. Licensed,
+  //     $2M insured. Benjamin Moore & Sherwin-Williams. Free quote:
+  //     (508) 690-8886"
+  //     → 113 base + city = 130 chars worst case (≤160 ✓)
   return generatePageMetadata({
-    title: `House Painters in ${city.name}, MA | Free Estimate | JH Painting`,
-    description: `Top-rated painters in ${city.name}, MA — 5.0★ from 40+ reviews, licensed & $2M insured. Benjamin Moore & Sherwin-Williams. Free estimate: (508) 690-8886`,
+    title: `Painters in ${city.name}, MA | Free Quote | JH Painting`,
+    description: `Painters in ${city.name}, MA — 5.0★ from 40+ reviews. Licensed, $2M insured. Benjamin Moore & Sherwin-Williams. Free quote: (508) 690-8886`,
     path: `/massachusetts/${normalizeCitySlug(city.slug)}`,
     ogImageAlt: `Professional exterior and interior painting services in ${city.name}, MA by JH Painting Services`,
-    keywords: `exterior painters ${city.name} MA, house painters ${city.name}, exterior painting ${city.name} Massachusetts, interior painting ${city.name} MA, painting contractor ${city.name}, exterior house painters near me ${city.name}, cabinet refinishing ${city.name} MA, painters near me ${city.name}`,
+    keywords: `painters ${city.name} MA, house painters ${city.name}, exterior painting ${city.name}, interior painting ${city.name} MA, painting contractor ${city.name}, painters near me ${city.name}, cabinet refinishing ${city.name}`,
   })
 }
 

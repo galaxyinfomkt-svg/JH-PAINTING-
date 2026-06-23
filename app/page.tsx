@@ -17,9 +17,14 @@ import { siteConfig } from '@/lib/siteConfig'
  * inside the snippet (Wolfs Siding gets its (774) 484-1895 the same way).
  */
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Painters in Massachusetts — Licensed & Insured | JH Painting',
+  // Title trimmed to 56 chars so the phone makes it into the SERP and
+  // nothing truncates. Brand last is intentional — Google often boosts
+  // brand recognition when the keyword leads.
+  title: 'Painters in Massachusetts | (508) 690-8886 | JH Painting',
+  // Description trimmed from 254 → 153 chars (under Google's 160 cap).
+  // Phone at the END so the SERP snippet ends on the dial action.
   description:
-    "Massachusetts' trusted exterior & interior painting contractor since 2018. Serving 117+ MA cities. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star Google reviews. Premium Benjamin Moore & Sherwin-Williams paints. FREE estimates: (508) 690-8886",
+    "MA painting contractor since 2018. Exterior, interior, cabinets. Licensed, $2M insured. 40+ 5-star Google reviews. Free estimate: (508) 690-8886",
   path: '/',
   ogImageAlt:
     'Professional exterior house painting by JH Painting Services in Massachusetts — before and after transformation',

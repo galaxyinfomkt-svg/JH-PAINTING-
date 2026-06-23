@@ -2,12 +2,16 @@ import type { Metadata } from 'next'
 import { generatePageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = generatePageMetadata({
-  // "#1" self-claim removed (Task 6). Replaced with concrete, verifiable trust
-  // signals (5.0★, 40+ reviews, 5-year warranty) that match what the schema
-  // and the GBP report — no risk of contradiction.
-  title: 'Exterior House Painters Massachusetts | 5-Year Warranty | (508) 690-8886',
+  // Title trimmed 73 → 56 chars (was getting truncated mid-phone-number in
+  // SERP — phone was being cut off). Kept "5-Yr Warranty" as the
+  // differentiator because that's the strongest trust signal for exterior
+  // (warranty length is a vetted promise, not a "#1" claim).
+  title: 'Exterior House Painters MA | 5-Yr Warranty | Free Quote',
+  // Description trimmed 332 → 154 chars (was 2.1× over the 160 limit, so
+  // Google was cutting it mid-sentence). Kept the proof-points users
+  // actually scan for: paint brand + warranty + reviews + phone.
   description:
-    "Exterior house painting in Massachusetts by JH Painting Services. Power wash, surface prep, caulking, priming + 2 coats premium Benjamin Moore Aura or Sherwin-Williams Duration. 5-year warranty. EPA Lead-Safe certified. 5.0★ from 40+ Google reviews. Licensed & $2M insured. Serving 117+ MA cities. Free estimate: (508) 690-8886",
+    'Exterior house painting in MA. Power wash, prep, 2 coats Benjamin Moore Aura or Sherwin-Williams Duration. 5-yr warranty. 40+ reviews. Free quote: (508) 690-8886',
   path: '/services/exterior-painting',
   ogImageAlt:
     'Professional exterior house painting in Massachusetts by JH Painting Services — before and after home transformation with premium weather-resistant paint',

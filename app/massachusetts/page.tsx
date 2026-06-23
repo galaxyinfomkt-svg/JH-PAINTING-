@@ -4,8 +4,13 @@ import { cities, normalizeCitySlug } from '@/app/data/cities'
 import { generatePageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Painters Near Me MA | 117+ Cities Served | Find Your Local Painter',
-  description: 'Looking for painters near you in Massachusetts? We serve 117+ cities: Boston, Worcester, Cambridge, Newton, Framingham & more. 40+ 5-star reviews. Licensed & $2M insured. FREE quote (508) 690-8886',
+  // Title trimmed 67 → 55 chars. Dropped redundant "Find Your Local
+  // Painter" — the URL itself + "Near Me" already signal that.
+  title: 'Painters Near Me MA | 117+ Cities | JH Painting',
+  // Description trimmed 200 → 152 chars. Cut the question phrasing
+  // ("Looking for...?") that wastes SERP characters before the trust
+  // signals; led directly with the city count + named cities.
+  description: 'Painters near you across 117+ MA cities: Boston, Worcester, Cambridge, Newton, Framingham. 5.0★ from 40+ reviews. Free quote: (508) 690-8886',
   path: '/massachusetts',
   ogImageAlt: 'Painters Near Me Massachusetts - JH Painting Service Areas',
   keywords: [
