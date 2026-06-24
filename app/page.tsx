@@ -4,6 +4,7 @@ import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import HomeHeader from './components/HomeHeader'
 import LazyIframe from './components/LazyIframe'
+import ReviewsWidget from './components/ReviewsWidget'
 import LazyHeroForm from './components/LazyHeroForm'
 import Footer from './components/Footer'
 import { generatePageMetadata } from '@/lib/seo'
@@ -740,7 +741,7 @@ export default function HomePage() {
             {/*
               Static social-proof banner - SSR'd, no third-party JS, no lazy
               loading. Gives the user (and Google crawlers) immediate proof
-              while the LazyIframe below downloads the live GHL reviews widget.
+              while the ReviewsWidget below downloads the live GHL reviews widget.
               Numbers come from siteConfig (single source of truth - Task 7).
             */}
             <div
@@ -789,14 +790,7 @@ export default function HomePage() {
                   zIndex: 0,
                 }}
               />
-              <LazyIframe
-                className="lc_reviews_widget reviews-widget"
-                src="https://reputationhub.site/reputation/widgets/review_widget/0Def8kzJShLPuKrPk5Jw"
-                frameBorder={0}
-                scrolling="no"
-                style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '800px', position: 'relative', zIndex: 1, background: '#fff' }}
-                title="Customer Reviews"
-              />
+              <ReviewsWidget />
             </div>
           </div>
         </section>

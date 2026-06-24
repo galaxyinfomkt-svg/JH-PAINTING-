@@ -15,7 +15,9 @@ import { useEffect, useRef } from 'react'
  *   - GHL external-tracking - 82 KiB (was loading from BOTH beeprohub and
  *     msgsndr; one was a duplicate - removed)
  *   - LeadConnector chat widget loader - pulls /chat-widget/* cascade
- *   - Reviews widget - minor
+ *
+ * The reviews widget resize script lives in ReviewsWidget.tsx instead - it has
+ * to load before its iframe mounts, which can't be guaranteed from here.
  */
 
 const TRACKING_ID = 'tk_17bc6e6f297d4ffc8b66e30609380978'
@@ -70,10 +72,9 @@ export default function DeferredScripts() {
         })
       }, 500)
 
-      // 4) Reviews widget - last, 1s delay
-      setTimeout(() => {
-        injectScript('https://reputationhub.site/reputation/assets/review-widget.js')
-      }, 1000)
+      // Reviews widget resize script is NOT loaded here. It must be present
+      // BEFORE the review iframe mounts, or the lc.setHeight handshake is lost
+      // and the widget renders empty. That ordering is owned by ReviewsWidget.
     }
 
     // Real user interactions only (no mousemove)
