@@ -1553,7 +1553,7 @@ body { padding-bottom: 72px; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.55);
   z-index: 2;
 }
 
@@ -1565,7 +1565,7 @@ body { padding-bottom: 72px; }
   left: -10%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(204, 0, 0, 0.15) 0%, transparent 70%);
+  background: transparent;
   border-radius: 50%;
   z-index: 3;
   animation: float 8s ease-in-out infinite;
@@ -1578,7 +1578,7 @@ body { padding-bottom: 72px; }
   right: -5%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(204, 0, 0, 0.1) 0%, transparent 70%);
+  background: transparent;
   border-radius: 50%;
   z-index: 3;
   animation: float 10s ease-in-out infinite reverse;
@@ -1914,7 +1914,7 @@ body { padding-bottom: 72px; }
 }
 
 .hero-simplified .hero-overlay {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .hero-centered {
@@ -6242,7 +6242,7 @@ a:focus-visible {
 .service-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .service-hero-content,
@@ -6343,7 +6343,7 @@ a:focus-visible {
 .city-page-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .city-page-hero-content {
