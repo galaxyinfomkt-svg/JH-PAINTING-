@@ -338,7 +338,7 @@ export default function HomePage() {
 
                 {/* Dual CTA - RS style (Gold + White border) */}
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-                  <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', color: '#fff', borderRadius: '8px', fontSize: '1.125rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 10px 40px rgba(204,0,0,0.35)', transition: 'all 0.3s ease', border: 'none' }}>
+                  <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2rem', background: '#CC0000', color: '#fff', borderRadius: '8px', fontSize: '1.125rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 10px 40px rgba(204,0,0,0.35)', transition: 'all 0.3s ease', border: 'none' }}>
                     <PhoneIcon />
                     Call (508) 690-8886
                   </a>
@@ -949,7 +949,7 @@ export default function HomePage() {
         <HomeFAQ />
 
         {/* CTA Section - RS Gold Banner Style */}
-        <section className="cta-section cta-section-enhanced" style={{ background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)' }}>
+        <section className="cta-section cta-section-enhanced" style={{ background: '#CC0000' }}>
           <div className="container">
             <div className="cta-content" style={{ color: '#fff' }}>
               <h2 style={{ color: '#fff' }}>Ready to Transform Your Home?</h2>

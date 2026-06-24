@@ -478,7 +478,7 @@ export default function RootLayout({
           .hero,.hero-simplified{min-height:100vh;position:relative;display:flex;align-items:center;background:#0a0e27}
           .hero-bg{position:absolute;inset:0;z-index:0}
           .hero-bg img{object-fit:cover;width:100%;height:100%}
-          .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.88),rgba(0,0,0,.78));z-index:1}
+          .hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.88);z-index:1}
           .hero-content{position:relative;z-index:2;padding:2rem 0}
           .container{width:100%;max-width:1280px;margin:0 auto;padding:0 1rem}
           .header{position:fixed;top:44px;left:0;right:0;z-index:100;background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,.08)}
@@ -488,19 +488,19 @@ export default function RootLayout({
           .top-bar-left{display:flex;gap:1.5rem;align-items:center}
           .top-bar-item{display:flex;align-items:center;gap:4px;color:#fff}
           .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.875rem 1.5rem;border-radius:9999px;font-weight:600;text-decoration:none;transition:all .2s}
-          .btn-primary{background:linear-gradient(135deg,#CC0000,#990000);color:#fff;box-shadow:0 4px 15px rgba(204,0,0,.3)}
+          .btn-primary{background:#CC0000;color:#fff;box-shadow:0 4px 15px rgba(204,0,0,.3)}
           h1,h2,h3{margin:0 0 1rem;line-height:1.2}
           img{max-width:100%;height:auto}
           .logo img{height:50px;width:auto}
           nav a{color:#1a1a1a;text-decoration:none;font-weight:500}
           .service-hero,.city-page-hero{position:relative;display:flex;align-items:flex-start;overflow:hidden;padding-top:160px;background:#060a1e}
           .service-hero-bg,.city-page-hero-bg{position:absolute;inset:0;z-index:0}
-          .service-hero-overlay,.city-page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.88),rgba(0,0,0,.75),rgba(0,0,0,.65))}
+          .service-hero-overlay,.city-page-hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.88)}
           .service-hero-content,.city-page-hero-content{position:relative;z-index:2;padding-top:40px;padding-bottom:60px}
           .hero-form-card{background:transparent;border-radius:20px;padding:0;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.3)}
           .hero-text{color:#fff}
           .hero-title-emotional{font-size:clamp(2.5rem,6vw,4.25rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:1.5rem;letter-spacing:-.02em}
-          .hero-title-accent{background:linear-gradient(135deg,#CC0000 0%,#EE0000 50%,#FF6B6B 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+          .hero-title-accent{background:#CC0000;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
           .hero-form-iframe{width:100%;height:620px;border:none;border-radius:12px;background:transparent}
           .header-main{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
           .header-scrolled{top:0;background:#ffffff;box-shadow:0 4px 20px rgba(0,0,0,.1)}
