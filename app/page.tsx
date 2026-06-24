@@ -776,20 +776,8 @@ export default function HomePage() {
               </a>
             </div>
 
-            {/* Skeleton reserves height to prevent CLS while the widget loads */}
-            <div style={{ position: 'relative', minHeight: '800px' }}>
-              <div
-                aria-hidden="true"
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%)',
-                  backgroundSize: '200% 100%',
-                  animation: 'shimmer 1.4s ease-in-out infinite',
-                  borderRadius: '12px',
-                  zIndex: 0,
-                }}
-              />
+            {/* Reserve height to prevent CLS while the widget loads */}
+            <div style={{ minHeight: '800px' }}>
               <ReviewsWidget />
             </div>
           </div>
