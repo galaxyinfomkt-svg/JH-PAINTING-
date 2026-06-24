@@ -4,6 +4,7 @@ import Script from 'next/script'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 
@@ -652,6 +653,7 @@ export default function PowerWashingPage() {
         </section>
       </main>
 
+      <ReviewsSection />
       <Footer />
     </>
   )

@@ -4,6 +4,7 @@ import { regions, getRegionBySlug } from '@/app/data/regions'
 import { getCityBySlug, getCitySlugWithState } from '@/app/data/cities'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import ReviewsSection from '@/app/components/ReviewsSection'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 
 const serviceImages: Record<string, { hero: string; showcase: string }> = {
@@ -850,6 +851,7 @@ export default async function RegionServicePage({ params }: Props) {
         </section>
       </main>
 
+      <ReviewsSection />
       <Footer />
     </>
   )

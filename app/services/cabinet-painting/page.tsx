@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Palette, DollarSign, Timer } from '@/app/components/Icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
@@ -637,6 +638,7 @@ export default function CabinetPaintingPage() {
         </div>
       </section>
 
+      <ReviewsSection />
       <Footer />
     </>
   )

@@ -114,6 +114,7 @@ import { getCityBySlug, cities, normalizeCitySlug } from '@/app/data/cities'
 import { getCityContent, generateUniqueCityContent } from '@/app/data/cityContent'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import ReviewsSection from '@/app/components/ReviewsSection'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import RelatedCities from '@/app/components/RelatedCities'
 import { BUSINESS, FORM_IDS } from '@/lib/constants'
@@ -1351,6 +1352,7 @@ export default async function CityPage({ params }: Props) {
       <RelatedCities citySlug={citySlug} cityName={city.name} />
       </main>
 
+      <ReviewsSection />
       <Footer />
     </>
   )

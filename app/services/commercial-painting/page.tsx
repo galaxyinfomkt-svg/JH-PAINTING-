@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { Phone, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, Building2, Briefcase, TrendingUp } from '@/app/components/Icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
@@ -556,6 +557,7 @@ export default function CommercialPaintingPage() {
       </main>
 
       {/* Footer */}
+      <ReviewsSection />
       <Footer />
     </>
   )

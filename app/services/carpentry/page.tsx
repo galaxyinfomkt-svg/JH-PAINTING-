@@ -5,6 +5,7 @@ import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Hammer, Wrench, Home } from '@/app/components/Icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 
@@ -669,6 +670,7 @@ export default function CarpentryPage() {
         </div>
       </section>
 
+      <ReviewsSection />
       <Footer />
     </>
   )

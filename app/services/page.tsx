@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import ReviewsSection from '@/app/components/ReviewsSection'
 import LazyIframe from '@/app/components/LazyIframe'
 import { BUSINESS, FORM_IDS } from '@/lib/constants'
 
@@ -524,6 +525,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <ReviewsSection />
       <Footer variant="service" />
     </>
   )
