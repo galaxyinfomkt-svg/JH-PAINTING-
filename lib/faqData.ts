@@ -22,7 +22,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: 'What paint brands do you use?',
-    a: "We exclusively use premium paints from Benjamin Moore and Sherwin-Williams, formulated to withstand New England's freeze-thaw cycles, humidity, and UV exposure. Quality paint lasts 7-10+ years versus 3-5 years for budget alternatives.",
+    a: "We exclusively use premium paints from Benjamin Moore and Sherwin-Williams, formulated to withstand New England's freeze-thaw cycles, humidity, and UV exposure. Quality paint lasts 7-10+ years versus 3-5 years for lesser-grade alternatives.",
   },
   {
     q: 'Are you licensed and insured?',
@@ -67,7 +67,7 @@ export function cityFaqs(city: string): Faq[] {
     },
     {
       q: `Do you offer free estimates in ${city}?`,
-      a: `Yes! We provide free, detailed written estimates for all ${city} projects, usually scheduled within 24-48 hours. Each estimate includes a complete scope of work, materials, timeline, and transparent pricing with no hidden fees.`,
+      a: `Yes! We provide free, detailed written estimates for all ${city} projects, usually scheduled within 24-48 hours. Each estimate includes a complete scope of work, materials, and a clear project timeline.`,
     },
     {
       q: 'How do you handle Massachusetts weather when painting exteriors?',

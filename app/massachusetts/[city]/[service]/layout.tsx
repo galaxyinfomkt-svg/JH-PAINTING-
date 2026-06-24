@@ -25,7 +25,7 @@ const servicePainTitles: Record<string, string> = {
   'exterior-painting': 'Peeling Paint Outside?',
   'commercial-painting': 'Office Needs Refresh?',
   'residential-painting': 'Home Looking Dated?',
-  'cabinet-painting': 'Cabinets Dated? Save 70%',
+  'cabinet-painting': 'Cabinets Dated? Refinish Them',
   'carpentry': 'Wood Rot Spreading?',
   'power-washing': 'Dirty Siding & Mold?',
 }
@@ -36,7 +36,7 @@ const serviceSolutions: Record<string, string> = {
   'exterior-painting': 'Stop paint damage before it spreads. Weather-resistant paints + FREE power wash included.',
   'commercial-painting': 'Zero downtime painting. After-hours service available. We work around YOUR schedule.',
   'residential-painting': 'Love your home again. Interior + exterior experts with 40+ 5-star reviews.',
-  'cabinet-painting': 'NEW kitchen look for 70% LESS than replacement. Factory-smooth spray finish, done in 3-5 days.',
+  'cabinet-painting': 'A brand-NEW kitchen look without the replacement hassle. Factory-smooth spray finish, done in 3-5 days.',
   'carpentry': 'Fix rot BEFORE it spreads. Window frames, trim, siding repair by licensed pros.',
   'power-washing': 'Instant curb appeal. Decks, siding, driveways sparkling clean in one day.',
 }
@@ -87,7 +87,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
     : solution + ' ✓ 40+ reviews ✓ $2M insured ✓ ' + city.name + ' MA. Call (508) 690-8886'
 
   const fallbackKeywords = isExterior
-    ? `exterior painting ${city.name} MA, exterior house painters ${city.name}, exterior painting near me ${city.name}, house painters ${city.name} Massachusetts, exterior painting cost ${city.name} MA, exterior painters near me, ${city.name} MA painting contractors, best exterior painters ${city.name}, EPA lead-safe painters ${city.name} MA`
+    ? `exterior painting ${city.name} MA, exterior house painters ${city.name}, exterior painting near me ${city.name}, house painters ${city.name} Massachusetts, exterior painting services ${city.name} MA, exterior painters near me, ${city.name} MA painting contractors, best exterior painters ${city.name}, EPA lead-safe painters ${city.name} MA`
     : serviceNameLower + ' ' + city.name + ' MA, fix ' + serviceNameLower + ' ' + city.name + ', ' + service + ' ' + city.name + ', painters ' + city.name + ' Massachusetts'
 
   const fallbackTitle = isExterior

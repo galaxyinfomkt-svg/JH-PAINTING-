@@ -109,7 +109,7 @@ const exteriorPaintingSchema = {
       "totalTime": "P5D",
       "step": [
         { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We assess your home's exterior condition, discuss color options, and provide expert recommendations." },
-        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "We provide a transparent written estimate including power washing, scraping, priming, caulking, and two coats of premium exterior paint." },
+        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "We provide a clear written scope of work including power washing, scraping, priming, caulking, and two coats of premium exterior paint." },
         { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Power washing, scraping loose paint, sanding, filling cracks, caulking gaps, and priming bare wood - the key to a lasting paint job." },
         { "@type": "HowToStep", "position": 4, "name": "Expert Painting", "text": "Two coats of premium Benjamin Moore Aura or Sherwin-Williams Duration exterior paint applied with brushes, rollers, and spray equipment." },
         { "@type": "HowToStep", "position": 5, "name": "Final Walkthrough", "text": "Complete property inspection with you. Touch-ups as needed. Your satisfaction is 100% guaranteed with our 5-year warranty." }
@@ -171,7 +171,7 @@ const painPoints = [
   {
     icon: Sun,
     title: 'Peeling, Cracking Paint?',
-    desc: "Snow, rain, sun, and freeze-thaw cycles destroy paint. Peeling and cracking aren't just ugly-they expose your home to moisture damage and rot that costs thousands to repair.",
+    desc: "Snow, rain, sun, and freeze-thaw cycles destroy paint. Peeling and cracking aren't just ugly-they expose your home to moisture damage and rot that can compromise the structure for years.",
     solution: 'Weather-resistant paints built for New England'
   },
   {
@@ -377,7 +377,7 @@ export default function ExteriorPaintingPage() {
       <section className="service-section service-section-white" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
         <div className="container">
           <div style={{ textAlign: 'center', padding: '2rem 0' }}>
-            <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized estimate tailored to your needs.</p>
+            <p style={{ fontSize: '1.125rem', color: '#374151', marginBottom: '1rem' }}>Every project is unique. Contact us for a free, personalized assessment tailored to your home and timeline.</p>
             <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#CC0000', color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.5rem', fontWeight: 600, textDecoration: 'none', fontSize: '1.0625rem' }}>Call (508) 690-8886 - Free Estimate</a>
           </div>
         </div>

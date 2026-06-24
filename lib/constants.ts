@@ -62,8 +62,8 @@ export const SERVICES = [
   {
     id: 'cabinet-painting',
     title: 'Cabinet Refinishing',
-    shortDescription: 'Upgrade your kitchen with professional cabinet refinishing. Save up to 70% vs replacement.',
-    description: 'Give your kitchen a fresh new look without the cost of full replacement. Our cabinet refinishing services can transform outdated cabinets into beautiful, modern focal points.',
+    shortDescription: 'Upgrade your kitchen with professional cabinet refinishing for a brand-new look.',
+    description: 'Give your kitchen a fresh new look without a full teardown. Our cabinet refinishing services can transform outdated cabinets into beautiful, modern focal points.',
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png',
     href: '/services/cabinet-painting',
     featured: false,

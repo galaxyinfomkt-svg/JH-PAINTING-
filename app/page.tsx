@@ -127,7 +127,7 @@ const services = [
   },
   {
     title: 'Cabinet Refinishing',
-    description: 'Upgrade your kitchen with professional cabinet refinishing. Save up to 70% vs replacement.',
+    description: 'Upgrade your kitchen with professional cabinet refinishing. A fresh, durable look without the replacement hassle.',
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png',
     href: '/services/cabinet-painting',
   },
@@ -162,7 +162,7 @@ const galleryImages = [
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Exterior house painting project in Waltham Massachusetts - historic church renovation by JH Painting', category: 'Exterior' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Interior house painting contractors in Framingham and Natick MA - premium Benjamin Moore paint by JH Painting', category: 'Interior' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Bedroom interior painting in Newton and Wellesley Massachusetts - professional residential painters JH Painting', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Kitchen cabinet refinishing and painting in MetroWest MA - save 70% vs replacement with JH Painting Services', category: 'Cabinets' },
+  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Kitchen cabinet refinishing and painting in MetroWest MA - factory-smooth spray finish by JH Painting Services', category: 'Cabinets' },
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Carpentry and trim work services in Worcester and Boston Massachusetts by JH Painting Services', category: 'Carpentry' },
 ]
 
@@ -204,10 +204,10 @@ const homePageSchema = {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'How much does house painting cost in Massachusetts?',
+          name: 'How long does a house painting project take in Massachusetts?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "House painting costs in Massachusetts vary based on size and scope. Interior painting typically costs $2-$5 per square foot, while exterior painting ranges from $3,000-$10,000 for most homes. Cabinet refinishing costs $3,000-$7,000 depending on kitchen size. Contact JH Painting at (508) 690-8886 for a free, detailed estimate.",
+            text: "Project timelines in Massachusetts depend on size and scope. A single interior room typically takes 1-2 days, a full interior 4-7 days, and exterior painting for most homes 5-10 days depending on weather and prep. Cabinet refinishing is usually complete in 5-7 days. Contact JH Painting at (508) 690-8886 for a free, detailed estimate with an accurate timeline.",
           },
         },
         {
@@ -492,7 +492,7 @@ export default function HomePage() {
                 <div className="about-underline"></div>
                 <h2>About <span>JH Painting Services</span></h2>
                 <p>
-                  Founded by <strong>Jafet</strong>, JH Painting Services is a premier painting contractor based in Marlborough, Massachusetts. With years of hands-on experience in the painting industry, Jafet and his team have built a reputation on delivering exceptional craftsmanship, honest pricing, and reliable service to homeowners across the state.
+                  Founded by <strong>Jafet</strong>, JH Painting Services is a premier painting contractor based in Marlborough, Massachusetts. With years of hands-on experience in the painting industry, Jafet and his team have built a reputation on delivering exceptional craftsmanship, dependable communication, and reliable service to homeowners across the state.
                 </p>
                 <p>
                   Under Jafet&apos;s leadership, our team specializes in <strong>exterior and interior painting</strong> - the foundation of every beautiful home. From complete home transformations to single room refreshes, we ensure that every project is completed with attention to detail and using quality materials.
@@ -556,7 +556,7 @@ export default function HomePage() {
             <div className="process-grid-home" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1.5rem' }}>
               {[
                 { num: '01', icon: PhoneIcon, title: 'Free Consultation', desc: 'Call or text us. We\'ll discuss your project goals, timeline, and provide expert recommendations.' },
-                { num: '02', icon: ClipboardIcon, title: 'Detailed Estimate', desc: 'We provide a transparent, written estimate with clear pricing. No hidden fees, no surprises.' },
+                { num: '02', icon: ClipboardIcon, title: 'Detailed Estimate', desc: 'We provide a clear, written estimate with the full scope of work. No surprises, no guesswork.' },
                 { num: '03', icon: HardHatIcon, title: 'Expert Painting', desc: 'Our skilled team handles everything-prep, painting, and cleanup with premium materials.' },
                 { num: '04', icon: EyeIcon, title: 'Final Walkthrough', desc: 'We walk through every detail with you. If anything isn\'t perfect, we make it right. Guaranteed.' },
               ].map((step, index) => (
@@ -680,7 +680,7 @@ export default function HomePage() {
                 { icon: ShieldIcon, title: 'Licensed & Insured', desc: 'Fully licensed with $2M general liability insurance and workers compensation' },
                 { icon: StarIcon, title: '5-Star Rated', desc: '40+ verified 5-star Google reviews from satisfied homeowners' },
                 { icon: ClockIcon, title: 'On-Time Completion', desc: 'We respect your schedule and deliver every project on time' },
-                { icon: DollarIcon, title: 'Free Estimates', desc: 'Transparent pricing with detailed written estimates, no obligation' },
+                { icon: DollarIcon, title: 'Free Estimates', desc: 'Detailed written estimates with the full scope of work, no obligation' },
               ].map((item, index) => (
                 <div key={index} className="why-card why-card-enhanced">
                   <div className="why-icon">

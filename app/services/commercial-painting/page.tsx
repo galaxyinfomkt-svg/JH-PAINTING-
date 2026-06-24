@@ -180,7 +180,7 @@ const painPoints = [
   },
   {
     title: 'Concerned About Liability?',
-    desc: "Hiring uninsured contractors puts your business at risk. One accident could mean lawsuits and costly damages.",
+    desc: "Hiring uninsured contractors puts your business at risk. One accident could leave you exposed to liability and lengthy disputes.",
     solution: 'Fully licensed, insured & bonded'
   }
 ]

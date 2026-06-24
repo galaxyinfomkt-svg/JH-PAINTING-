@@ -22,7 +22,7 @@ export const metadata: Metadata = generatePageMetadata({
     'exterior painters MA',
     'exterior painting services Massachusetts',
     'house painters Massachusetts',
-    'exterior painting cost Massachusetts',
+    'durable exterior painting Massachusetts',
     'best exterior painters Massachusetts',
     'exterior painters Boston MA',
     'exterior painters Worcester MA',

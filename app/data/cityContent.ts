@@ -48,7 +48,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Your Victorian home on Main Street is showing its age with peeling paint and faded colors that diminish your curb appeal',
       'The harsh Massachusetts winters with freezing temperatures, ice, and snow have left your exterior looking weathered, cracked, and worn',
       'You\'ve had frustrating experiences with out-of-town contractors who don\'t show up on time, don\'t understand Marlborough\'s historic homes, and leave jobs half-finished',
-      'Your kitchen cabinets from the 90s are desperately dated with worn finishes and scratches, but full replacement is costly and disruptive',
+      'Your kitchen cabinets from the 90s are desperately dated with worn finishes and scratches, but full replacement means major disruption',
       'Previous painters left visible drips, brush marks, uneven coverage, and didn\'t properly prep surfaces - now the paint is already peeling after just two years',
       'You\'re worried about lead paint in your older Marlborough home and need painters who handle it safely and legally',
       'The constant temperature swings in Massachusetts cause wood to expand and contract, leading to cracks and gaps that let moisture damage your home'
@@ -57,13 +57,13 @@ export const cityContentMap: Record<string, CityContent> = {
       'We live and work in Marlborough - we\'re your neighbors invested in our community, not strangers passing through who disappear after cashing your check',
       'Our crews have painted hundreds of Marlborough homes and know the unique challenges of our historic downtown buildings, including proper techniques for period-accurate restoration',
       'We exclusively use premium Benjamin Moore Aura, Regal Select, and Sherwin-Williams Duration paints specifically formulated for New England\'s extreme weather conditions',
-      'Our cabinet refinishing service saves you 60-70% compared to replacement while delivering a factory-smooth, spray-applied finish that looks brand new and lasts 10+ years',
+      'Our cabinet refinishing service delivers a factory-smooth, spray-applied finish that looks brand new and lasts 10+ years - without the disruption of a full replacement',
       'Our 7-step preparation process includes power washing, scraping, sanding, caulking, priming, and two coats of premium paint - because proper prep is 80% of a lasting paint job',
       'We\'re EPA Lead-Safe Certified and follow all Massachusetts regulations for lead paint handling, keeping your family safe during and after the project',
       'We use premium flexible caulks and elastomeric coatings that move with your home through seasonal temperature changes, preventing cracks and moisture intrusion'
     ],
     localContext: 'As Marlborough\'s hometown painters, we understand every corner of our city intimately. We\'ve beautified historic properties along Main Street, refreshed homes in the established neighborhoods of East Marlborough and West Marlborough, painted new construction near Solomon Pond Mall, and transformed condos in downtown developments. We know which neighborhoods have older homes requiring lead paint expertise, which areas have strict HOA requirements, and where the mature tree coverage creates moisture challenges. Our trucks are a familiar sight on Marlborough streets, and we take enormous pride in contributing to the beauty of the community where we live and raise our families.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing services tailored specifically for Marlborough homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes for every room in your home. For exteriors, we provide complete house painting including siding, trim, shutters, doors, porches, and decks with proper New England weather protection. Our cabinet refinishing service transforms dated kitchens and bathrooms with a durable, spray-applied finish at a fraction of replacement cost. We also offer commercial painting for Marlborough businesses, deck staining and restoration, and specialty services like wallpaper removal and drywall repair. Every project begins with a thorough assessment, detailed written estimate, and clear timeline so you know exactly what to expect.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing services tailored specifically for Marlborough homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes for every room in your home. For exteriors, we provide complete house painting including siding, trim, shutters, doors, porches, and decks with proper New England weather protection. Our cabinet refinishing service transforms dated kitchens and bathrooms with a durable, spray-applied finish that looks brand new without the disruption of a full replacement. We also offer commercial painting for Marlborough businesses, deck staining and restoration, and specialty services like wallpaper removal and drywall repair. Every project begins with a thorough assessment, detailed written estimate, and clear timeline so you know exactly what to expect.',
     whyChooseUs: [
       'Marlborough-based company since founding - we\'re your neighbors, not a franchise',
       'Deep knowledge of local architecture from 1800s Colonials to 2020s new construction',
@@ -93,7 +93,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'Do you offer free estimates in Marlborough?',
-        answer: 'Yes! We provide free, detailed written estimates for all Marlborough projects. Being local, we can usually schedule your estimate within 24-48 hours. Our estimates include a complete scope of work, materials specifications, timeline, and transparent pricing with no hidden fees. We believe in upfront honesty - the price we quote is the price you pay.'
+        answer: 'Yes! We provide free, detailed written estimates for all Marlborough projects. Being local, we can usually schedule your estimate within 24-48 hours. Our estimates include a complete scope of work, materials specifications, timeline, and a clear written summary of everything involved. We believe in upfront honesty and clear communication from start to finish.'
       },
       {
         question: 'How do you handle Massachusetts weather when painting exteriors?',
@@ -163,8 +163,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Hudson, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Hudson home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Hudson?',
-        answer: 'Being close to our Marlborough base, Hudson residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Hudson?',
+        answer: 'Being close to our Marlborough base, Hudson residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Hudson?',
@@ -195,7 +195,7 @@ export const cityContentMap: Record<string, CityContent> = {
     heroSubheadline: 'Premium painting services matching the quality Southborough homeowners expect.',
     introText: 'Southborough represents the finest of Massachusetts living - prestigious estates, top-rated schools, and a community that values excellence in everything. At JH Painting Services, we understand that Southborough homeowners have high standards, and we\'ve built our premium painting services specifically to meet and exceed those expectations. From the stately homes along Route 85 and the elegant properties near St. Mark\'s School to the beautiful family neighborhoods of Southborough Center and Cordaville, we bring white-glove service and meticulous craftsmanship to every project. Our experience with Southborough\'s distinctive architecture - from historic Colonials to contemporary estates - means we understand exactly what it takes to maintain and enhance property values in one of Massachusetts\' most desirable communities.',
     painPoints: [
-      'Your executive home deserves painters who truly match your high standards for quality and professionalism - not budget contractors cutting corners',
+      'Your executive home deserves painters who truly match your high standards for quality and professionalism - not crews that cut corners',
       'Previous contractors left your property messy, didn\'t protect your expensive landscaping, and tracked paint onto your hardwood floors',
       'The large windows, vaulted ceilings, and two-story foyers in your Southborough home require experienced painters with proper equipment',
       'Your demanding professional and family schedule means you need painters who can work around you, not the other way around',
@@ -238,8 +238,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We paint many rental properties in Southborough, including those near St. Mark\\s School. We understand landlords need quick turnovers between tenants. We can work efficiently during vacancy periods and offer priority scheduling for rental properties. Our durable paint choices withstand the wear of rental environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Southborough?',
-        answer: 'Being close to our Marlborough base, Southborough residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Southborough?',
+        answer: 'Being close to our Marlborough base, Southborough residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Southborough?',
@@ -274,7 +274,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'The incredible diversity of housing styles in Framingham - from 1800s Victorians to 1950s ranches to modern condos - requires adaptable painting expertise',
       'You\'ve struggled to find painters available during convenient hours who respect your busy schedule',
       'Your multi-family property in Framingham needs painters who understand the unique requirements of coordinating work across multiple units',
-      'Budget constraints make it seem impossible to find quality painting at fair prices in the competitive MetroWest market',
+      'It can seem impossible to find genuinely reliable, high-quality painters in the competitive MetroWest market',
       'Previous painters didn\'t understand the specific needs of your Framingham neighborhood\'s architectural style',
       'Your home in Saxonville, Nobscot, or another historic area needs painters who respect its heritage while providing modern protection'
     ],
@@ -283,22 +283,22 @@ export const cityContentMap: Record<string, CityContent> = {
       'Extensive experience with every Framingham style - from Saxonville\'s historic homes to South Framingham\'s Victorians to Downtown\'s converted mills',
       'Flexible scheduling including weekends and evenings to accommodate working families and busy professionals',
       'Multi-unit expertise with efficient project management that minimizes disruption to tenants while keeping projects on schedule',
-      'Competitive pricing without sacrificing quality - our efficiency and local presence allow us to pass savings to you',
+      'Reliable, professional service - our efficiency and local presence let us bring you exceptional results',
       'Neighborhood-specific expertise that respects the architectural character of Saxonville, Nobscot, Framingham Centre, and other distinct areas',
       'Premium paints and proper preparation that protect your Framingham home against Massachusetts\' challenging climate'
     ],
     localContext: 'Framingham\'s remarkable diversity makes it one of MetroWest\'s most interesting places to work. We\'ve painted homes in the historic village of Saxonville with its mill heritage, the charming neighborhoods of Nobscot and Framingham Centre, the diverse communities of South Framingham and Downtown, and everywhere in between. We understand the different needs of each area - the historic sensibilities of the older villages, the family focus of the school-adjacent neighborhoods, and the urban energy of downtown. This knowledge allows us to provide recommendations and services tailored to your specific Framingham neighborhood.',
-    serviceDescription: 'JH Painting Services provides comprehensive painting solutions for Framingham\'s incredibly diverse housing stock. Our services include interior painting for every style from historic plaster walls to modern drywall, exterior painting with proper preparation for New England weather, multi-family and investment property painting with tenant coordination, cabinet refinishing to update kitchens without replacement cost, and commercial painting for Framingham businesses. We also offer deck staining, power washing, and specialty services. Our experience across all Framingham neighborhoods means we understand exactly what your home needs.',
+    serviceDescription: 'JH Painting Services provides comprehensive painting solutions for Framingham\'s incredibly diverse housing stock. Our services include interior painting for every style from historic plaster walls to modern drywall, exterior painting with proper preparation for New England weather, multi-family and investment property painting with tenant coordination, cabinet refinishing to update kitchens without a full replacement, and commercial painting for Framingham businesses. We also offer deck staining, power washing, and specialty services. Our experience across all Framingham neighborhoods means we understand exactly what your home needs.',
     whyChooseUs: [
       'Extensive experience across all Framingham neighborhoods from Saxonville to South Framingham',
-      'Competitive rates appropriate for Framingham\'s diverse market without sacrificing quality',
+      'Dependable, professional service for Framingham\'s diverse community without sacrificing quality',
       'Large enough team to handle any size Framingham project - from studio apartments to large estates',
       'Quick response times - just 10 minutes from our Marlborough headquarters',
       'Multi-language crews serving Framingham\'s wonderfully diverse community',
       'EPA Lead-Safe Certified for Framingham\'s many pre-1978 homes',
       'Neighborhood-specific expertise and sensitivity to local architectural character'
     ],
-    testimonialContext: 'Framingham residents from every neighborhood value our combination of quality work, fair pricing, and understanding of their diverse community. We\'ve earned repeat business across the city by delivering consistent results regardless of project size or location.',
+    testimonialContext: 'Framingham residents from every neighborhood value our combination of quality work, dependable service, and understanding of their diverse community. We\'ve earned repeat business across the city by delivering consistent results regardless of project size or location.',
     faq: [
       {
         question: 'Do you serve Framingham, MA 01701?',
@@ -313,8 +313,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes! We have extensive experience with Framingham\'s multi-family properties, condos, and apartment buildings. We coordinate with building management, handle all insurance and access requirements, and work around tenant schedules. We understand the unique logistics of urban painting projects and maintain professional, quiet work environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Framingham?',
-        answer: 'Framingham painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Framingham?',
+        answer: 'Framingham painting projects begin with a careful on-site assessment of your home. Every project is unique, so we walk through the full scope with you before any work starts. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Framingham?',
@@ -335,7 +335,7 @@ export const cityContentMap: Record<string, CityContent> = {
     ],
     nearbyAreas: ['Marlborough', 'Natick', 'Ashland', 'Sudbury', 'Wayland', 'Sherborn'],
     localTip: 'Framingham\'s varied housing stock means different homes need very different approaches. Colonial-era homes in Saxonville require different prep than 1950s ranches in Nobscot or modern condos downtown. We assess each Framingham property individually to determine the best approach, materials, and timeline for optimal results.',
-    closingPitch: 'Whether you\'re in historic Saxonville, family-friendly Nobscot, vibrant Downtown, or anywhere else in Framingham, JH Painting Services has the experience and expertise to transform your home. We\'ve built our reputation across every Framingham neighborhood by delivering quality work at fair prices with genuine respect for this diverse community. Contact us today at (508) 690-8886 for your free estimate and discover why Framingham homeowners have made us their trusted painting partner.'
+    closingPitch: 'Whether you\'re in historic Saxonville, family-friendly Nobscot, vibrant Downtown, or anywhere else in Framingham, JH Painting Services has the experience and expertise to transform your home. We\'ve built our reputation across every Framingham neighborhood by delivering quality work and dependable service with genuine respect for this diverse community. Contact us today at (508) 690-8886 for your free estimate and discover why Framingham homeowners have made us their trusted painting partner.'
   },
 
   // NATICK - Affluent, family-oriented
@@ -363,7 +363,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'HOA expertise to navigate Natick\'s color approval processes and ensure your choices comply while expressing your style'
     ],
     localContext: 'Natick combines award-winning schools, beautiful neighborhoods, convenient shopping at the Natick Mall, and easy access to Boston - making it one of Massachusetts\' most desirable communities for families. From the historic charm of South Natick with its antique homes and peaceful Charles River views to the bustling Natick Center, from the family neighborhoods near Kennedy Middle School to the estates of West Natick, we understand what Natick homeowners value most. Our team has painted homes near the Natick Common, updated kitchens in South Natick\'s historic district, and refreshed countless family homes throughout this vibrant community.',
-    serviceDescription: 'JH Painting Services offers complete painting solutions tailored to Natick\'s family-focused community. Our interior painting services use low-VOC and zero-VOC paints safe for children and pets, with expert color consultation to help you create the perfect family home atmosphere. For exteriors, we provide thorough preparation and premium weather-resistant paints that stand up to New England\'s challenging climate. Our cabinet refinishing service transforms dated kitchens at 60-70% less than replacement cost - perfect for growing families who want an updated look without the major renovation disruption. We also offer deck staining, commercial painting, and specialty services including accent walls, nursery painting, and playroom-safe finishes.',
+    serviceDescription: 'JH Painting Services offers complete painting solutions tailored to Natick\'s family-focused community. Our interior painting services use low-VOC and zero-VOC paints safe for children and pets, with expert color consultation to help you create the perfect family home atmosphere. For exteriors, we provide thorough preparation and premium weather-resistant paints that stand up to New England\'s challenging climate. Our cabinet refinishing service transforms dated kitchens with a factory-smooth finish - perfect for growing families who want an updated look without the major renovation disruption. We also offer deck staining, commercial painting, and specialty services including accent walls, nursery painting, and playroom-safe finishes.',
     whyChooseUs: [
       'Family-owned company that truly understands family-focused Natick',
       'Convenient scheduling around school calendars, sports, and activities',
@@ -388,8 +388,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Natick, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Natick home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Natick?',
-        answer: 'Painting costs in Natick are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Natick?',
+        answer: 'Painting projects in Natick are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Natick?',
@@ -424,7 +424,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Years of urban pollution, road salt, and traffic grime have left your home\'s exterior looking neglected and weathered',
       'You\'ve been burned by unreliable contractors who took deposits, started work, and then disappeared to chase bigger jobs',
       'The lead paint in your older Worcester home built before 1978 is a serious health concern that requires proper handling',
-      'Finding affordable quality painting in Worcester that doesn\'t sacrifice craftsmanship for low prices has proven nearly impossible',
+      'Finding genuinely reliable quality painting in Worcester that never sacrifices craftsmanship has proven nearly impossible',
       'Your rental property needs painting between tenants but time is tight and you need a crew that can work efficiently',
       'The ornate Victorian details on your Worcester home require skilled painters, not handymen who cut corners'
     ],
@@ -433,22 +433,22 @@ export const cityContentMap: Record<string, CityContent> = {
       'Thorough power washing, scraping, and prep that removes years of urban grime before any paint touches your surfaces',
       'Reliable crews who show up when promised and complete projects on schedule - our reputation is built on dependability',
       'EPA Lead-Safe Certified crews who follow all proper protocols to protect your family, tenants, and our workers during renovation',
-      'Competitive Worcester-market pricing that delivers quality craftsmanship without the premium suburb markup',
+      'Local Worcester crews that deliver quality craftsmanship with the same care we bring to every community we serve',
       'Fast-turnaround rental property painting to minimize vacancy time and get your units income-producing quickly',
       'Skilled craftsmen experienced with Worcester\'s beautiful Victorian trim, ornate details, and historic millwork'
     ],
-    localContext: 'Worcester\'s incredible diversity is reflected in its neighborhoods - from the grand Victorian mansions of Crown Hill and the historic streets of Main South to the thriving Canal District, the family neighborhoods of the West Side and Tatnuck, and the classic triple-decker-lined streets of the East Side. We\'ve painted properties near WPI and Clark University, transformed commercial spaces in Downtown Worcester, and refreshed countless family homes throughout this proud city. We understand that Worcester homeowners and landlords need reliable, quality work at fair prices - and that\'s exactly what we deliver.',
+    localContext: 'Worcester\'s incredible diversity is reflected in its neighborhoods - from the grand Victorian mansions of Crown Hill and the historic streets of Main South to the thriving Canal District, the family neighborhoods of the West Side and Tatnuck, and the classic triple-decker-lined streets of the East Side. We\'ve painted properties near WPI and Clark University, transformed commercial spaces in Downtown Worcester, and refreshed countless family homes throughout this proud city. We understand that Worcester homeowners and landlords need reliable, quality work and dependable service - and that\'s exactly what we deliver.',
     serviceDescription: 'JH Painting Services offers comprehensive painting solutions designed for Worcester\'s unique housing stock and property needs. Our services include interior and exterior painting for single-family homes, multi-family specialists for triple-deckers and apartment buildings, commercial painting for Worcester businesses, cabinet refinishing, deck staining, and specialty services. We excel at tenant coordination for occupied properties, fast-turnaround work for rental units, and the careful preparation that Worcester\'s older homes require. Our EPA Lead-Safe certification means we can safely work on Worcester\'s many pre-1978 properties.',
     whyChooseUs: [
       'Unmatched experience with Worcester\'s unique multi-family housing stock including triple-deckers',
       'EPA Lead-Safe Certified for safe work on Worcester\'s many older properties',
-      'Competitive pricing structured for Worcester\'s market - quality without premium suburb markups',
+      'Dependable service for Worcester homeowners - quality craftsmanship you can count on',
       'Large crew capacity to handle Worcester\'s bigger multi-family and commercial projects',
       'Deep understanding of Worcester\'s diverse neighborhoods and their specific architectural needs',
       'Fast, efficient service for rental property turnovers to minimize your vacancy time',
       'Reliable, dependable crews who show up and finish what they start'
     ],
-    testimonialContext: 'Worcester property owners - from homeowners to landlords managing multiple properties - trust us for reliable, quality work at fair prices. Our reputation in Worcester has been built one satisfied customer at a time, with many landlords using us for all their properties because they know we\'ll deliver consistent results.',
+    testimonialContext: 'Worcester property owners - from homeowners to landlords managing multiple properties - trust us for reliable, quality work and dependable service. Our reputation in Worcester has been built one satisfied customer at a time, with many landlords using us for all their properties because they know we\'ll deliver consistent results.',
     faq: [
       {
         question: 'Do you paint Worcester\'s triple-decker homes?',
@@ -468,15 +468,15 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'Can you do fast turnaround painting for rental units?',
-        answer: 'Yes! We understand that vacancy time costs Worcester landlords money. We offer expedited scheduling for rental turnovers and work efficiently to get your units painted and ready for new tenants as quickly as possible. Contact us as soon as you know a unit will be available and we\'ll prioritize your project.'
+        answer: 'Yes! We understand that quick turnarounds matter to Worcester landlords. We offer expedited scheduling for rental turnovers and work efficiently to get your units painted and ready for new tenants as quickly as possible. Contact us as soon as you know a unit will be available and we\'ll prioritize your project.'
       },
       {
         question: 'Do you paint commercial properties in Worcester?',
         answer: 'Absolutely. We provide commercial painting services throughout Worcester including offices, retail spaces, restaurants, and industrial facilities. We understand commercial requirements including working around business hours, minimizing disruption to operations, and meeting tight deadlines. The revitalized Canal District and Downtown have kept us busy with commercial projects.'
       },
       {
-        question: 'What makes your pricing competitive for Worcester?',
-        answer: 'We structure our pricing for Worcester\'s market - quality craftsmanship without the premium suburb markups. Our efficiency, experienced crews, and streamlined operations allow us to deliver excellent results at prices that make sense for Worcester property owners. We provide detailed written estimates with no hidden fees so you know exactly what to expect.'
+        question: 'What makes you a dependable choice for Worcester?',
+        answer: 'We bring dependable, professional service to Worcester homeowners and property owners alike. Our efficient, experienced crews and streamlined operations let us deliver excellent, consistent results across every Worcester neighborhood. We provide detailed written estimates with a clear scope of work so you know exactly what to expect.'
       },
       {
         question: 'Do you offer free estimates in Worcester?',
@@ -485,7 +485,7 @@ export const cityContentMap: Record<string, CityContent> = {
     ],
     nearbyAreas: ['Shrewsbury', 'Auburn', 'Holden', 'West Boylston', 'Grafton', 'Millbury'],
     localTip: 'Worcester\'s diverse neighborhoods have very different painting needs. Historic areas like Crown Hill benefit from period-appropriate colors and careful prep work for ornate Victorian details. Multi-family properties need efficient scheduling and tenant coordination. Newer developments have more flexibility. We assess each Worcester property individually and tailor our approach to your specific situation.',
-    closingPitch: 'Worcester deserves painting contractors who understand this city - its diverse neighborhoods, its iconic triple-deckers, its hardworking families and property owners. JH Painting Services has built our Worcester reputation by delivering reliable, quality work at fair prices, showing up when we say we will, and treating every property with respect. Whether you own a single-family home, manage multiple rental properties, or need commercial painting services, we\'d be honored to earn your trust. Contact us today at (508) 690-8886 for your free estimate and experience the difference a truly dependable painting contractor makes.'
+    closingPitch: 'Worcester deserves painting contractors who understand this city - its diverse neighborhoods, its iconic triple-deckers, its hardworking families and property owners. JH Painting Services has built our Worcester reputation by delivering reliable, quality work and dependable service, showing up when we say we will, and treating every property with respect. Whether you own a single-family home, manage multiple rental properties, or need commercial painting services, we\'d be honored to earn your trust. Contact us today at (508) 690-8886 for your free estimate and experience the difference a truly dependable painting contractor makes.'
   },
 
   // BOSTON - Major market, premium services
@@ -493,13 +493,13 @@ export const cityContentMap: Record<string, CityContent> = {
     slug: 'boston',
     heroHeadline: 'Boston\'s Trusted Painting Professionals',
     heroSubheadline: 'From Beacon Hill brownstones to South Boston condos, we bring suburban quality to the city.',
-    introText: 'Boston\'s architecture is genuinely unique - the Federal-style brownstones of Beacon Hill, the Victorian row houses of the South End, the modern condos of the Seaport, and the triple-deckers of Dorchester each need a different approach. JH Painting brings suburban-grade attention to detail to every Boston neighborhood, and we\'ve built our city practice around the obstacles other contractors avoid: limited parking, strict building management requirements, historic district guidelines, and tight access. We deliver the same finish quality you\'d get in the suburbs without the inflated city pricing that puts good work out of reach.',
+    introText: 'Boston\'s architecture is genuinely unique - the Federal-style brownstones of Beacon Hill, the Victorian row houses of the South End, the modern condos of the Seaport, and the triple-deckers of Dorchester each need a different approach. JH Painting brings suburban-grade attention to detail to every Boston neighborhood, and we\'ve built our city practice around the obstacles other contractors avoid: limited parking, strict building management requirements, historic district guidelines, and tight access. We deliver the same finish quality you\'d get in the suburbs, with a crew that genuinely embraces urban work.',
     painPoints: [
       'Finding reliable painters genuinely willing to work in Boston\'s challenging urban environment with limited parking and difficult access',
       'Your brownstone or historic building in Beacon Hill, Back Bay, or South End has strict architectural guidelines you must follow',
       'Coordinating painting in your condo requires building management approval, insurance certificates, elevator reservations, and strict work hours',
-      'Limited parking and narrow access means most painters either won\'t take the job or charge enormous premiums',
-      'Previous city painters charged premium prices but delivered mediocre work with excuses instead of results',
+      'Limited parking and narrow access means most painters either won\'t take the job or simply avoid it',
+      'Previous city painters made big promises but delivered mediocre work with excuses instead of results',
       'Your historic building\'s ornate details and original features require skilled craftsmen, not rushed painters',
       'Scheduling work in your Boston co-op or condo building requires coordination with neighbors that most contractors won\'t bother with'
     ],
@@ -508,7 +508,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Historic building expertise including deep knowledge of Beacon Hill, Back Bay, and South End guidelines and approval processes',
       'Full condo and HOA coordination - we handle building management requirements, insurance paperwork, elevator booking, and scheduling',
       'Efficient, skilled crews experienced in limited-access urban environments who complete projects without unnecessary delays',
-      'Premium results at competitive rates - exceptional quality doesn\'t require inflated city pricing markups',
+      'Premium results from a crew that embraces city work - exceptional quality without the runaround',
       'Skilled craftsmen who excel at ornate Victorian trim, historic millwork, and the detailed work Boston\'s beautiful buildings deserve',
       'Professional coordination with building management and neighbors to ensure smooth project execution in shared buildings'
     ],
@@ -519,11 +519,11 @@ export const cityContentMap: Record<string, CityContent> = {
       'Historic district expertise for Beacon Hill, Back Bay, South End, and Charlestown',
       'Complete condo and co-op coordination including insurance, access, and scheduling',
       'Efficient crews skilled in navigating Boston\'s urban painting logistics',
-      'Competitive pricing without the inflated "Boston premium" - quality work at fair rates',
+      'Genuine quality work from a crew that treats city projects with the same care as the suburbs',
       'Proper insurance coverage meeting Boston building requirements',
       'Reliable, professional service that respects your time and your property'
     ],
-    testimonialContext: 'Boston homeowners and condo owners consistently praise our ability to deliver suburban-quality craftsmanship in the urban environment - handling all the logistics that make city projects challenging while delivering beautiful, lasting results at competitive prices.',
+    testimonialContext: 'Boston homeowners and condo owners consistently praise our ability to deliver suburban-quality craftsmanship in the urban environment - handling all the logistics that make city projects challenging while delivering beautiful, lasting results.',
     faq: [
       {
         question: 'Do you work in historic districts like Beacon Hill and Back Bay?',
@@ -554,13 +554,13 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We serve all of Boston including Beacon Hill, Back Bay, South End, Seaport, North End, Charlestown, South Boston, Dorchester, Jamaica Plain, West Roxbury, Roslindale, Hyde Park, Allston-Brighton, and all other neighborhoods. No Boston location is outside our service area.'
       },
       {
-        question: 'Are your prices higher for Boston than surrounding suburbs?',
-        answer: 'We don\'t believe in inflated "city premiums." While urban projects sometimes require additional coordination time, we keep our pricing competitive with suburban rates. Our efficiency in urban environments means we can deliver premium results without the excessive markups that Boston homeowners often encounter. We provide transparent, detailed estimates with no hidden fees.'
+        question: 'Do you bring the same standards to Boston as the suburbs?',
+        answer: 'We bring the same standards to Boston that we bring to the suburbs. While urban projects sometimes require additional coordination time, our efficiency in city environments means we can deliver premium results without the runaround Boston homeowners often encounter. We provide detailed estimates with a clear, written scope of work.'
       }
     ],
     nearbyAreas: ['Cambridge', 'Somerville', 'Brookline', 'Newton', 'Watertown', 'Jamaica Plain'],
     localTip: 'Boston\'s historic neighborhoods - Beacon Hill, Back Bay, South End, and Charlestown - have specific approved color palettes and approval processes for exterior painting. Before selecting colors, check with the relevant historic commission or your building\'s HOA. We\'re experienced with these requirements and can help guide you through the process to ensure your project proceeds smoothly.',
-    closingPitch: 'Boston deserves painting contractors who embrace the city rather than avoiding it - who understand urban logistics, respect historic guidelines, and deliver premium craftsmanship without the inflated city pricing. JH Painting Services has built our Boston reputation by solving the challenges that make urban painting difficult and delivering beautiful results that Boston homeowners can be proud of. From Beacon Hill brownstones to Seaport condos, we\'d be honored to bring our expertise to your Boston home. Contact us today at (508) 690-8886 for your free estimate and experience the difference professional urban painting makes.'
+    closingPitch: 'Boston deserves painting contractors who embrace the city rather than avoiding it - who understand urban logistics, respect historic guidelines, and deliver premium craftsmanship that embraces the realities of city work. JH Painting Services has built our Boston reputation by solving the challenges that make urban painting difficult and delivering beautiful results that Boston homeowners can be proud of. From Beacon Hill brownstones to Seaport condos, we\'d be honored to bring our expertise to your Boston home. Contact us today at (508) 690-8886 for your free estimate and experience the difference professional urban painting makes.'
   },
 
   // CAMBRIDGE - Academic, historic, diverse
@@ -613,8 +613,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes! We have extensive experience with Cambridge\'s multi-family properties, condos, and apartment buildings. We coordinate with building management, handle all insurance and access requirements, and work around tenant schedules. We understand the unique logistics of urban painting projects and maintain professional, quiet work environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Cambridge?',
-        answer: 'Cambridge painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Cambridge?',
+        answer: 'Cambridge painting projects begin with a careful on-site assessment of your home. Every project is unique, so we walk through the full scope with you before any work starts. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Cambridge?',
@@ -688,8 +688,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes! We have extensive experience with Newton\'s multi-family properties, condos, and apartment buildings. We coordinate with building management, handle all insurance and access requirements, and work around tenant schedules. We understand the unique logistics of urban painting projects and maintain professional, quiet work environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Newton?',
-        answer: 'Newton painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Newton?',
+        answer: 'Newton painting projects begin with a careful on-site assessment of your home. Every project is unique, so we walk through the full scope with you before any work starts. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Newton?',
@@ -763,8 +763,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We paint many rental properties in Wellesley, including those near Wellesley College. We understand landlords need quick turnovers between tenants. We can work efficiently during vacancy periods and offer priority scheduling for rental properties. Our durable paint choices withstand the wear of rental environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Wellesley?',
-        answer: 'Painting costs in Wellesley are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Wellesley?',
+        answer: 'Painting projects in Wellesley are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Wellesley?',
@@ -838,8 +838,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Concord, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Concord home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Concord?',
-        answer: 'Painting costs in Concord are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Concord?',
+        answer: 'Painting projects in Concord are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Concord?',
@@ -913,8 +913,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Lexington, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Lexington home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Lexington?',
-        answer: 'Painting costs in Lexington are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Lexington?',
+        answer: 'Painting projects in Lexington are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Lexington?',
@@ -980,8 +980,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes! We have extensive experience with Brookline\'s multi-family properties, condos, and apartment buildings. We coordinate with building management, handle all insurance and access requirements, and work around tenant schedules. We understand the unique logistics of urban painting projects and maintain professional, quiet work environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Brookline?',
-        answer: 'Brookline painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Brookline?',
+        answer: 'Brookline painting projects begin with a careful on-site assessment of your home. Every project is unique, so we walk through the full scope with you before any work starts. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Brookline?',
@@ -1003,7 +1003,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Boston', 'Newton', 'Cambridge', 'Jamaica Plain', 'Needham', 'Chestnut Hill'],
     localTip: 'Brookline\'s Victorians often feature three or more exterior colors highlighting different architectural elements. This approach takes more time but dramatically enhances curb appeal. Ask us about multi-color options for your Victorian home.',
     introText: 'When Brookline homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Brookline is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Brookline homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Brookline homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Brookline homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Brookline homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Brookline homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Brookline home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Brookline neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1049,8 +1049,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Shrewsbury, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Worcester County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Shrewsbury home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Shrewsbury?',
-        answer: 'Being close to our Marlborough base, Shrewsbury residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Shrewsbury?',
+        answer: 'Being close to our Marlborough base, Shrewsbury residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Shrewsbury?',
@@ -1072,7 +1072,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Worcester', 'Westborough', 'Northborough', 'Grafton', 'Boylston', 'Millbury'],
     localTip: 'Shrewsbury homes near Lake Quinsigamond benefit from paints with superior moisture resistance. We recommend premium exterior paints with mildew-resistant properties for these properties.',
     introText: 'When Shrewsbury homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Shrewsbury is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Shrewsbury homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Shrewsbury homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Shrewsbury homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Shrewsbury homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Shrewsbury homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Shrewsbury home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Shrewsbury neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1118,8 +1118,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes! We have extensive experience with Waltham\'s multi-family properties, condos, and apartment buildings. We coordinate with building management, handle all insurance and access requirements, and work around tenant schedules. We understand the unique logistics of urban painting projects and maintain professional, quiet work environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Waltham?',
-        answer: 'Waltham painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Waltham?',
+        answer: 'Waltham painting projects begin with a careful on-site assessment of your home. Every project is unique, so we walk through the full scope with you before any work starts. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Waltham?',
@@ -1141,7 +1141,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Newton', 'Watertown', 'Lexington', 'Belmont', 'Lincoln', 'Weston'],
     localTip: 'Waltham\'s older homes often have lead paint. We\'re EPA Lead-Safe certified and follow all proper protocols when working on pre-1978 homes to protect your family and our workers.',
     introText: 'When Waltham homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Waltham is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Waltham homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Waltham homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Waltham homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Waltham homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Waltham homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Waltham home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Waltham neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1187,8 +1187,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Ashland, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Ashland home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Ashland?',
-        answer: 'Being close to our Marlborough base, Ashland residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Ashland?',
+        answer: 'Being close to our Marlborough base, Ashland residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Ashland?',
@@ -1210,7 +1210,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Framingham', 'Hopkinton', 'Holliston', 'Southborough', 'Sudbury', 'Natick'],
     localTip: 'Ashland\'s location means variable weather conditions. We recommend scheduling exterior painting for late spring through early fall when temperatures are ideal for proper paint adhesion and curing.',
     introText: 'When Ashland homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Ashland is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Ashland homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Ashland homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Ashland homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Ashland homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Ashland homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Ashland home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Ashland neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1256,8 +1256,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Westborough, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Worcester County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Westborough home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Westborough?',
-        answer: 'Being close to our Marlborough base, Westborough residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Westborough?',
+        answer: 'Being close to our Marlborough base, Westborough residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Westborough?',
@@ -1277,9 +1277,9 @@ export const cityContentMap: Record<string, CityContent> = {
       }
     ],
     nearbyAreas: ['Northborough', 'Southborough', 'Hopkinton', 'Grafton', 'Shrewsbury', 'Marlborough'],
-    localTip: 'Westborough\'s newer developments often have specific HOA-approved color palettes. We recommend getting approval before purchasing paint to avoid costly mistakes.',
+    localTip: 'Westborough\'s newer developments often have specific HOA-approved color palettes. We recommend getting approval before purchasing paint to avoid the hassle of redoing work.',
     introText: 'When Westborough homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Westborough is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Westborough homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Westborough homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Westborough homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Westborough homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Westborough homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Westborough home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Westborough neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1325,8 +1325,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Hopkinton, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Hopkinton home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Hopkinton?',
-        answer: 'Being close to our Marlborough base, Hopkinton residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Hopkinton?',
+        answer: 'Being close to our Marlborough base, Hopkinton residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Hopkinton?',
@@ -1348,7 +1348,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Westborough', 'Ashland', 'Holliston', 'Southborough', 'Milford', 'Upton'],
     localTip: 'Hopkinton\'s wooded properties can hold moisture longer. We recommend mildew-resistant paints and thorough surface prep for homes surrounded by trees.',
     introText: 'When Hopkinton homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Hopkinton is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Hopkinton homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Hopkinton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Hopkinton homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Hopkinton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Hopkinton homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Hopkinton home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Hopkinton neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1394,8 +1394,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Sudbury, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Sudbury home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Sudbury?',
-        answer: 'Being close to our Marlborough base, Sudbury residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Sudbury?',
+        answer: 'Being close to our Marlborough base, Sudbury residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Sudbury?',
@@ -1417,7 +1417,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Wayland', 'Concord', 'Maynard', 'Framingham', 'Lincoln', 'Acton'],
     localTip: 'Sudbury\'s historic homes often benefit from earth-tone color palettes common in the colonial era. We can help you research what colors may have originally adorned your home.',
     introText: 'When Sudbury homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Sudbury is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Sudbury homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Sudbury homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Sudbury homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Sudbury homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Sudbury homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Sudbury home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Sudbury neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1463,8 +1463,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Acton, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Acton home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Acton?',
-        answer: 'Painting costs in Acton are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Acton?',
+        answer: 'Painting projects in Acton are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Acton?',
@@ -1486,7 +1486,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Concord', 'Maynard', 'Boxborough', 'Littleton', 'Westford', 'Carlisle'],
     localTip: 'Acton\'s variety of home ages - from antique to modern - means each property needs individual assessment. We tailor our approach to your home\'s specific needs and materials.',
     introText: 'When Acton homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Acton is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Acton homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Acton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Acton homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Acton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Acton homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Acton home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Acton neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1528,12 +1528,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Riverside homes near Assabet River National Wildlife Refuge in Berlin require special attention due to elevated moisture levels. We use breathable, moisture-resistant paints that allow water vapor to escape while preventing outside moisture from penetrating. Our prep work includes thorough mold and mildew treatment. We\'ve successfully painted numerous homes along Assabet River National Wildlife Refuge.'
       },
       {
-        question: 'Do you charge extra to come to Berlin?',
-        answer: 'No, we never charge travel fees for Berlin projects. Berlin is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Berlin and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Berlin?',
+        answer: 'Yes, we proudly serve Berlin and treat every home here with full care. Berlin is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Berlin and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Berlin?',
-        answer: 'Being close to our Marlborough base, Berlin residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Berlin?',
+        answer: 'Being close to our Marlborough base, Berlin residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Berlin?',
@@ -1555,7 +1555,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Marlborough', 'Hudson', 'Bolton', 'Northborough', 'Clinton', 'Boylston'],
     localTip: 'Berlin\'s proximity to the wildlife refuge means homes often experience higher humidity. We recommend mildew-resistant primers and paints for lasting exterior results.',
     introText: 'When Berlin homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Berlin is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Berlin homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Berlin homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Berlin homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Berlin homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Berlin homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Berlin home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Berlin neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1601,8 +1601,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Northborough, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Worcester County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Northborough home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Northborough?',
-        answer: 'Being close to our Marlborough base, Northborough residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Northborough?',
+        answer: 'Being close to our Marlborough base, Northborough residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Northborough?',
@@ -1624,7 +1624,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Marlborough', 'Westborough', 'Shrewsbury', 'Berlin', 'Boylston', 'Southborough'],
     localTip: 'Northborough\'s varied housing stock - from established colonials to newer construction - benefits from paint choices that complement each home\'s era and style.',
     introText: 'When Northborough homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Northborough is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Northborough homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Northborough homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Northborough homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Northborough homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Northborough homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Northborough home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Northborough neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1666,12 +1666,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Cordaville, from Cordaville Village to the surrounding neighborhoods. We\'re familiar with the different housing styles across Cordaville - whether you\'re near Cordaville Mill or in the newer developments. Our crews know Cordaville well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Cordaville?',
-        answer: 'No, we never charge travel fees for Cordaville projects. Cordaville is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Cordaville and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Cordaville?',
+        answer: 'Yes, we proudly serve Cordaville and treat every home here with full care. Cordaville is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Cordaville and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Cordaville?',
-        answer: 'Being close to our Marlborough base, Cordaville residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Cordaville?',
+        answer: 'Being close to our Marlborough base, Cordaville residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Cordaville?',
@@ -1693,7 +1693,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Southborough', 'Marlborough', 'Westborough', 'Framingham', 'Ashland', 'Hopkinton'],
     localTip: 'Cordaville\'s historic homes often feature original clapboard siding. We use breathable paints that protect while allowing historic wood to properly release moisture.',
     introText: 'When Cordaville homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Cordaville is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Cordaville homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Cordaville homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Cordaville homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Cordaville homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Cordaville homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Cordaville home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Cordaville neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1735,12 +1735,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes, we have extensive experience with lakeside properties near Lake Boon. These homes face unique challenges: increased humidity, morning fog, and intense sun reflection off the water. We use moisture-resistant primers, mold-inhibiting paints, and UV-protective topcoats specifically for waterfront homes. We\'ve painted many properties in this beautiful area of Stow.'
       },
       {
-        question: 'Do you charge extra to come to Stow?',
-        answer: 'No, we never charge travel fees for Stow projects. Stow is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Stow and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Stow?',
+        answer: 'Yes, we proudly serve Stow and treat every home here with full care. Stow is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Stow and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Stow?',
-        answer: 'Being close to our Marlborough base, Stow residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Stow?',
+        answer: 'Being close to our Marlborough base, Stow residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Stow?',
@@ -1762,7 +1762,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Hudson', 'Maynard', 'Bolton', 'Sudbury', 'Acton', 'Marlborough'],
     localTip: 'Stow properties near Lake Boon benefit from paints with superior mildew resistance. We recommend scheduling exterior work during drier months for best adhesion.',
     introText: 'When Stow homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Stow is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Stow homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Stow homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Stow homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Stow homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Stow homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Stow home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Stow neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1804,12 +1804,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Framingham Center, particularly near Framingham Centre Common. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Framingham Center homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Framingham Center?',
-        answer: 'No, we never charge travel fees for Framingham Center projects. Framingham Center is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Framingham Center and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Framingham Center?',
+        answer: 'Yes, we proudly serve Framingham Center and treat every home here with full care. Framingham Center is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Framingham Center and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Framingham Center?',
-        answer: 'Being close to our Marlborough base, Framingham Center residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Framingham Center?',
+        answer: 'Being close to our Marlborough base, Framingham Center residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Framingham Center?',
@@ -1831,7 +1831,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Framingham', 'Natick', 'Wayland', 'Sudbury', 'Ashland', 'Sherborn'],
     localTip: 'Framingham Centre\'s historic homes often benefit from multi-color schemes that highlight architectural details. We can help design a palette that honors your home\'s heritage.',
     introText: 'When Framingham Center homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Framingham Center is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Framingham Center homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Framingham Center homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Framingham Center homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Framingham Center homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Framingham Center homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Framingham Center home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Framingham Center neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1873,12 +1873,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Bolton, from Bolton Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Bolton - whether you\'re near Nashoba Valley Ski Area or in the newer developments. Our crews know Bolton well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Bolton?',
-        answer: 'No, we never charge travel fees for Bolton projects. Bolton is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Bolton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Bolton?',
+        answer: 'Yes, we proudly serve Bolton and treat every home here with full care. Bolton is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Bolton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Bolton?',
-        answer: 'Being close to our Marlborough base, Bolton residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Bolton?',
+        answer: 'Being close to our Marlborough base, Bolton residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Bolton?',
@@ -1900,7 +1900,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Marlborough', 'Hudson', 'Stow', 'Berlin', 'Harvard', 'Lancaster'],
     localTip: 'Bolton\'s elevation and rural exposure mean homes face significant weather challenges. We recommend premium exterior paints with superior UV and moisture protection.',
     introText: 'When Bolton homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Bolton is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Bolton homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Bolton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Bolton homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Bolton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Bolton homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Bolton home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Bolton neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1942,12 +1942,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Riverside homes near Assabet River Rail Trail in Maynard require special attention due to elevated moisture levels. We use breathable, moisture-resistant paints that allow water vapor to escape while preventing outside moisture from penetrating. Our prep work includes thorough mold and mildew treatment. We\'ve successfully painted numerous homes along Assabet River Rail Trail.'
       },
       {
-        question: 'Do you charge extra to come to Maynard?',
-        answer: 'No, we never charge travel fees for Maynard projects. Maynard is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Maynard and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Maynard?',
+        answer: 'Yes, we proudly serve Maynard and treat every home here with full care. Maynard is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Maynard and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Maynard?',
-        answer: 'Being close to our Marlborough base, Maynard residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Maynard?',
+        answer: 'Being close to our Marlborough base, Maynard residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Maynard?',
@@ -1969,7 +1969,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Acton', 'Stow', 'Sudbury', 'Hudson', 'Concord', 'Marlborough'],
     localTip: 'Maynard\'s creative community often opts for distinctive color choices. We offer color consultation to help you achieve the look you envision while ensuring lasting results.',
     introText: 'When Maynard homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Maynard is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Maynard homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Maynard homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Maynard homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Maynard homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Maynard homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Maynard home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Maynard neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -1981,21 +1981,21 @@ export const cityContentMap: Record<string, CityContent> = {
     painPoints: [
       'Your Clinton Victorian needs painters skilled in detailed work',
       'The Wachusett Reservoir area homes face specific weather challenges',
-      'Finding quality painters at fair prices is important to you',
+      'Finding reliable, trustworthy painters is important to you',
       'Your multi-family property needs efficient, professional painting',
       'Previous painters left without properly completing the job'
     ],
     solutions: [
       'Victorian detail expertise for Clinton\'s historic housing stock',
       'Premium paints suited for reservoir-area humidity',
-      'Competitive pricing without sacrificing quality',
+      'Dependable service without sacrificing quality',
       'Multi-family efficiency with minimal tenant disruption',
       'Reliable completion - we finish what we start'
     ],
-    localContext: 'Clinton\'s rich industrial history near the Wachusett Reservoir gives it unique character. From Clinton Center to South Clinton, we serve this hardworking community with professional, fairly-priced painting services.',
+    localContext: 'Clinton\'s rich industrial history near the Wachusett Reservoir gives it unique character. From Clinton Center to South Clinton, we serve this hardworking community with professional, dependable painting services.',
     whyChooseUs: [
       'Victorian home expertise',
-      'Fair, competitive pricing',
+      'Reliable, professional craftsmanship',
       'Multi-family property experience',
       'Reliable project completion',
       'Understanding of Clinton\'s character'
@@ -2011,12 +2011,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Clinton, from Clinton Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Clinton - whether you\'re near Wachusett Reservoir or in the newer developments. Our crews know Clinton well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Clinton?',
-        answer: 'No, we never charge travel fees for Clinton projects. Clinton is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Clinton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Clinton?',
+        answer: 'Yes, we proudly serve Clinton and treat every home here with full care. Clinton is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Clinton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Clinton?',
-        answer: 'Being close to our Marlborough base, Clinton residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Clinton?',
+        answer: 'Being close to our Marlborough base, Clinton residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Clinton?',
@@ -2038,7 +2038,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Berlin', 'Bolton', 'Lancaster', 'Sterling', 'West Boylston', 'Boylston'],
     localTip: 'Clinton\'s older homes often have multiple layers of paint. Proper prep including scraping and priming is essential for lasting results.',
     introText: 'When Clinton homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Clinton is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Clinton homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Clinton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Clinton homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Clinton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Clinton homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Clinton home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Clinton neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2080,12 +2080,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Boylston, from Boylston Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Boylston - whether you\'re near Wachusett Reservoir or in the newer developments. Our crews know Boylston well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Boylston?',
-        answer: 'No, we never charge travel fees for Boylston projects. Boylston is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Boylston and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Boylston?',
+        answer: 'Yes, we proudly serve Boylston and treat every home here with full care. Boylston is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Boylston and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Boylston?',
-        answer: 'Being close to our Marlborough base, Boylston residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Boylston?',
+        answer: 'Being close to our Marlborough base, Boylston residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Boylston?',
@@ -2107,7 +2107,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Shrewsbury', 'West Boylston', 'Clinton', 'Berlin', 'Northborough', 'Sterling'],
     localTip: 'Boylston homes benefit from paints with superior moisture resistance due to the reservoir\'s influence on local humidity.',
     introText: 'When Boylston homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Boylston is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Boylston homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Boylston homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Boylston homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Boylston homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Boylston homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Boylston home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Boylston neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2149,12 +2149,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes, we have extensive experience with lakeside properties near Dudley Pond. These homes face unique challenges: increased humidity, morning fog, and intense sun reflection off the water. We use moisture-resistant primers, mold-inhibiting paints, and UV-protective topcoats specifically for waterfront homes. We\'ve painted many properties in this beautiful area of Wayland.'
       },
       {
-        question: 'Do you charge extra to come to Wayland?',
-        answer: 'No, we never charge travel fees for Wayland projects. Wayland is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Wayland and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Wayland?',
+        answer: 'Yes, we proudly serve Wayland and treat every home here with full care. Wayland is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Wayland and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Wayland?',
-        answer: 'Being close to our Marlborough base, Wayland residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Wayland?',
+        answer: 'Being close to our Marlborough base, Wayland residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Wayland?',
@@ -2176,7 +2176,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Sudbury', 'Framingham', 'Natick', 'Weston', 'Lincoln', 'Cochituate'],
     localTip: 'Wayland\'s family-focused community values low-VOC paint options. We offer eco-friendly choices safe for children and pets.',
     introText: 'When Wayland homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Wayland is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Wayland homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Wayland homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Wayland homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Wayland homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Wayland homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Wayland home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Wayland neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2218,12 +2218,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes, we have extensive experience with lakeside properties near Lake Cochituate. These homes face unique challenges: increased humidity, morning fog, and intense sun reflection off the water. We use moisture-resistant primers, mold-inhibiting paints, and UV-protective topcoats specifically for waterfront homes. We\'ve painted many properties in this beautiful area of Cochituate.'
       },
       {
-        question: 'Do you charge extra to come to Cochituate?',
-        answer: 'No, we never charge travel fees for Cochituate projects. Cochituate is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Cochituate and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Cochituate?',
+        answer: 'Yes, we proudly serve Cochituate and treat every home here with full care. Cochituate is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Cochituate and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Cochituate?',
-        answer: 'Being close to our Marlborough base, Cochituate residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Cochituate?',
+        answer: 'Being close to our Marlborough base, Cochituate residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Cochituate?',
@@ -2245,7 +2245,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Wayland', 'Natick', 'Framingham', 'Sudbury', 'Wellesley', 'Sherborn'],
     localTip: 'Cochituate lakeside properties benefit from annual inspection of paint condition. The high humidity can cause faster deterioration than inland homes.',
     introText: 'When Cochituate homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Cochituate is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Cochituate homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Cochituate homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Cochituate homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Cochituate homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Cochituate homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Cochituate home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Cochituate neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2291,8 +2291,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We paint many rental properties in South Lancaster, including those near Atlantic Union College. We understand landlords need quick turnovers between tenants. We can work efficiently during vacancy periods and offer priority scheduling for rental properties. Our durable paint choices withstand the wear of rental environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in South Lancaster?',
-        answer: 'Being close to our Marlborough base, South Lancaster residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in South Lancaster?',
+        answer: 'Being close to our Marlborough base, South Lancaster residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in South Lancaster?',
@@ -2314,7 +2314,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Lancaster', 'Clinton', 'Bolton', 'Berlin', 'Sterling', 'Harvard'],
     localTip: 'South Lancaster\'s historic homes often benefit from earth-tone color palettes that honor their heritage while providing modern protection.',
     introText: 'When South Lancaster homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. South Lancaster is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that South Lancaster homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for South Lancaster homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves South Lancaster homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for South Lancaster homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives South Lancaster homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your South Lancaster home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our South Lancaster neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2356,12 +2356,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Lancaster, particularly near Lancaster Town Common. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Lancaster homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Lancaster?',
-        answer: 'No, we never charge travel fees for Lancaster projects. Lancaster is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Lancaster and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Lancaster?',
+        answer: 'Yes, we proudly serve Lancaster and treat every home here with full care. Lancaster is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Lancaster and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Lancaster?',
-        answer: 'Being close to our Marlborough base, Lancaster residents benefit from efficient scheduling and competitive pricing. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Lancaster?',
+        answer: 'Being close to our Marlborough base, Lancaster residents benefit from efficient scheduling and dedicated local crews. Every project begins with a thorough on-site assessment so we can tailor the prep, materials, and finish to your home. Our process covers surface preparation, premium paint application, and a final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Lancaster?',
@@ -2383,7 +2383,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Clinton', 'Bolton', 'Harvard', 'Leominster', 'Sterling', 'South Lancaster'],
     localTip: 'Lancaster\'s Town Common area homes often feature historic color schemes. We can help you research what colors may have originally adorned your property.',
     introText: 'When Lancaster homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Lancaster is just minutes from our Marlborough headquarters, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Lancaster homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Lancaster homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Lancaster homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Lancaster homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Lancaster homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Lancaster home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Lancaster neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2425,12 +2425,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Harvard, particularly near Fruitlands Museum. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Harvard homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Harvard?',
-        answer: 'No, we never charge travel fees for Harvard projects. Harvard is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Harvard and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Harvard?',
+        answer: 'Yes, we proudly serve Harvard and treat every home here with full care. Harvard is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Harvard and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Harvard?',
-        answer: 'Painting costs in Harvard are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Harvard?',
+        answer: 'Painting projects in Harvard are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Harvard?',
@@ -2452,7 +2452,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Bolton', 'Lancaster', 'Littleton', 'Ayer', 'Boxborough', 'Stow'],
     localTip: 'Harvard\'s heavily wooded properties benefit from mildew-resistant paints and thorough prep to address shade and moisture challenges.',
     introText: 'When Harvard homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Harvard is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Harvard homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Harvard homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Harvard homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Harvard homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Harvard homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Harvard home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Harvard neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2494,12 +2494,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of West Concord, from West Concord Village to the surrounding neighborhoods. We\'re familiar with the different housing styles across West Concord - whether you\'re near West Concord Station or in the newer developments. Our crews know West Concord well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to West Concord?',
-        answer: 'No, we never charge travel fees for West Concord projects. West Concord is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with West Concord and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout West Concord?',
+        answer: 'Yes, we proudly serve West Concord and treat every home here with full care. West Concord is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with West Concord and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in West Concord?',
-        answer: 'Painting costs in West Concord are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in West Concord?',
+        answer: 'Painting projects in West Concord are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in West Concord?',
@@ -2521,7 +2521,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Concord', 'Acton', 'Maynard', 'Sudbury', 'Lincoln', 'Stow'],
     localTip: 'West Concord\'s village aesthetic often features classic New England colors. We can help you choose palettes that complement neighboring homes.',
     introText: 'When West Concord homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. West Concord is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that West Concord homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for West Concord homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves West Concord homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for West Concord homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives West Concord homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your West Concord home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our West Concord neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2563,12 +2563,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes, we have extensive experience with lakeside properties near Farm Pond. These homes face unique challenges: increased humidity, morning fog, and intense sun reflection off the water. We use moisture-resistant primers, mold-inhibiting paints, and UV-protective topcoats specifically for waterfront homes. We\'ve painted many properties in this beautiful area of Sherborn.'
       },
       {
-        question: 'Do you charge extra to come to Sherborn?',
-        answer: 'No, we never charge travel fees for Sherborn projects. Sherborn is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Sherborn and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Sherborn?',
+        answer: 'Yes, we proudly serve Sherborn and treat every home here with full care. Sherborn is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Sherborn and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Sherborn?',
-        answer: 'Painting costs in Sherborn are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Sherborn?',
+        answer: 'Painting projects in Sherborn are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Sherborn?',
@@ -2590,7 +2590,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Natick', 'Framingham', 'Holliston', 'Dover', 'Medfield', 'Wayland'],
     localTip: 'Sherborn\'s wooded properties often benefit from lighter paint colors that brighten shade-heavy areas while resisting mildew.',
     introText: 'When Sherborn homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Sherborn is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Sherborn homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Sherborn homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Sherborn homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Sherborn homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Sherborn homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Sherborn home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Sherborn neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2636,8 +2636,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Holliston, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Holliston home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Holliston?',
-        answer: 'Painting costs in Holliston are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Holliston?',
+        answer: 'Painting projects in Holliston are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Holliston?',
@@ -2659,7 +2659,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Ashland', 'Hopkinton', 'Milford', 'Medway', 'Sherborn', 'Framingham'],
     localTip: 'Holliston families often choose classic, timeless colors that enhance property value. We offer color consultation to help make lasting choices.',
     introText: 'When Holliston homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Holliston is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Holliston homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Holliston homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Holliston homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Holliston homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Holliston homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Holliston home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Holliston neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2705,8 +2705,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Grafton, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Worcester County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Grafton home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Grafton?',
-        answer: 'Painting costs in Grafton are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Grafton?',
+        answer: 'Painting projects in Grafton are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Grafton?',
@@ -2728,7 +2728,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Worcester', 'Shrewsbury', 'Millbury', 'Westborough', 'Upton', 'Northbridge'],
     localTip: 'Grafton\'s varied terrain means different neighborhoods face different conditions. We assess each property individually for optimal paint selection.',
     introText: 'When Grafton homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Grafton is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Grafton homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Grafton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Grafton homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Grafton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Grafton homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Grafton home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Grafton neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2770,12 +2770,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes, we have extensive experience with lakeside properties near Beaman Pond. These homes face unique challenges: increased humidity, morning fog, and intense sun reflection off the water. We use moisture-resistant primers, mold-inhibiting paints, and UV-protective topcoats specifically for waterfront homes. We\'ve painted many properties in this beautiful area of West Boylston.'
       },
       {
-        question: 'Do you charge extra to come to West Boylston?',
-        answer: 'No, we never charge travel fees for West Boylston projects. West Boylston is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with West Boylston and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout West Boylston?',
+        answer: 'Yes, we proudly serve West Boylston and treat every home here with full care. West Boylston is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with West Boylston and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in West Boylston?',
-        answer: 'Painting costs in West Boylston are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in West Boylston?',
+        answer: 'Painting projects in West Boylston are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in West Boylston?',
@@ -2797,7 +2797,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Boylston', 'Holden', 'Sterling', 'Paxton', 'Worcester', 'Clinton'],
     localTip: 'West Boylston\'s reservoir-area homes benefit from lighter colors that resist moisture and mildew better than darker shades.',
     introText: 'When West Boylston homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. West Boylston is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that West Boylston homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for West Boylston homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves West Boylston homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for West Boylston homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives West Boylston homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your West Boylston home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our West Boylston neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2839,12 +2839,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes, we have extensive experience with lakeside properties near Pratt Pond. These homes face unique challenges: increased humidity, morning fog, and intense sun reflection off the water. We use moisture-resistant primers, mold-inhibiting paints, and UV-protective topcoats specifically for waterfront homes. We\'ve painted many properties in this beautiful area of Upton.'
       },
       {
-        question: 'Do you charge extra to come to Upton?',
-        answer: 'No, we never charge travel fees for Upton projects. Upton is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Upton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Upton?',
+        answer: 'Yes, we proudly serve Upton and treat every home here with full care. Upton is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Upton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Upton?',
-        answer: 'Painting costs in Upton are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Upton?',
+        answer: 'Painting projects in Upton are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Upton?',
@@ -2866,7 +2866,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Hopkinton', 'Milford', 'Mendon', 'Grafton', 'Northbridge', 'Westborough'],
     localTip: 'Upton\'s forested setting means exterior paint faces significant moisture challenges. We recommend mildew-resistant formulas for lasting results.',
     introText: 'When Upton homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Upton is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Upton homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Upton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Upton homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Upton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Upton homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Upton home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Upton neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2908,12 +2908,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Weston, from Weston Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Weston - whether you\'re near Case Estates or in the newer developments. Our crews know Weston well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Weston?',
-        answer: 'No, we never charge travel fees for Weston projects. Weston is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Weston and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Weston?',
+        answer: 'Yes, we proudly serve Weston and treat every home here with full care. Weston is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Weston and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Weston?',
-        answer: 'Painting costs in Weston are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Weston?',
+        answer: 'Painting projects in Weston are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Weston?',
@@ -2935,7 +2935,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Newton', 'Wellesley', 'Wayland', 'Lincoln', 'Natick', 'Waltham'],
     localTip: 'Weston\'s heavily wooded properties benefit from premium exterior paints with superior mildew resistance. Schedule exterior work for optimal seasonal conditions.',
     introText: 'When Weston homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Weston is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Weston homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Weston homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Weston homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Weston homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Weston homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Weston home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Weston neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -2977,12 +2977,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Sterling, particularly near Sterling Town Common. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Sterling homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Sterling?',
-        answer: 'No, we never charge travel fees for Sterling projects. Sterling is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Sterling and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Sterling?',
+        answer: 'Yes, we proudly serve Sterling and treat every home here with full care. Sterling is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Sterling and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Sterling?',
-        answer: 'Painting costs in Sterling are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Sterling?',
+        answer: 'Painting projects in Sterling are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Sterling?',
@@ -3004,7 +3004,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['West Boylston', 'Holden', 'Princeton', 'Clinton', 'Lancaster', 'Leominster'],
     localTip: 'Sterling\'s reservoir proximity creates elevated humidity. We recommend moisture-resistant paints and thorough prep for lasting exterior results.',
     introText: 'When Sterling homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Sterling is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Sterling homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Sterling homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Sterling homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Sterling homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Sterling homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Sterling home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Sterling neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3046,12 +3046,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Hamilton, from Hamilton Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Hamilton - whether you\'re near Myopia Hunt Club or in the newer developments. Our crews know Hamilton well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Hamilton?',
-        answer: 'No, we never charge travel fees for Hamilton projects. Hamilton is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Hamilton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Hamilton?',
+        answer: 'Yes, we proudly serve Hamilton and treat every home here with full care. Hamilton is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Hamilton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Hamilton?',
-        answer: 'Painting costs in Hamilton are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Hamilton?',
+        answer: 'Painting projects in Hamilton are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Hamilton?',
@@ -3073,7 +3073,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Wenham', 'Ipswich', 'Manchester', 'Beverly', 'Topsfield', 'Essex'],
     localTip: 'Hamilton\'s estate properties often include multiple structures. We offer comprehensive services including main house, barns, and outbuildings.',
     introText: 'When Hamilton homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Hamilton is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Hamilton homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Hamilton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Hamilton homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Hamilton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Hamilton homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Hamilton home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Hamilton neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3115,12 +3115,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Lincoln, particularly near DeCordova Museum. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Lincoln homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Lincoln?',
-        answer: 'No, we never charge travel fees for Lincoln projects. Lincoln is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Lincoln and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Lincoln?',
+        answer: 'Yes, we proudly serve Lincoln and treat every home here with full care. Lincoln is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Lincoln and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Lincoln?',
-        answer: 'Painting costs in Lincoln are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Lincoln?',
+        answer: 'Painting projects in Lincoln are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Lincoln?',
@@ -3142,7 +3142,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Concord', 'Lexington', 'Weston', 'Bedford', 'Wayland', 'Waltham'],
     localTip: 'Lincoln\'s heavily wooded properties benefit from lighter colors that brighten shade-heavy exteriors while resisting mildew.',
     introText: 'When Lincoln homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Lincoln is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Lincoln homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Lincoln homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Lincoln homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Lincoln homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Lincoln homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Lincoln home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Lincoln neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3184,12 +3184,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Sunderland, from Sunderland Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Sunderland - whether you\'re near Mount Sugarloaf or in the newer developments. Our crews know Sunderland well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Sunderland?',
-        answer: 'No, we never charge travel fees for Sunderland projects. Sunderland is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Sunderland and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Sunderland?',
+        answer: 'Yes, we proudly serve Sunderland and treat every home here with full care. Sunderland is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Sunderland and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Sunderland?',
-        answer: 'Painting costs in Sunderland are in line with Franklin County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Sunderland?',
+        answer: 'Painting projects in Sunderland are handled by our experienced local crews across Franklin County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Sunderland?',
@@ -3211,7 +3211,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Amherst', 'Deerfield', 'Whately', 'Leverett', 'Montague', 'Hadley'],
     localTip: 'Sunderland\'s proximity to Mount Sugarloaf means properties face weather extremes. We recommend premium exterior paints with superior durability.',
     introText: 'When Sunderland homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Franklin County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Sunderland is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Sunderland homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Sunderland homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Sunderland homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Sunderland homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Sunderland homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Sunderland home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Sunderland neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3253,12 +3253,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Littleton Common, particularly near Littleton Common. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Littleton Common homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Littleton Common?',
-        answer: 'No, we never charge travel fees for Littleton Common projects. Littleton Common is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Littleton Common and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Littleton Common?',
+        answer: 'Yes, we proudly serve Littleton Common and treat every home here with full care. Littleton Common is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Littleton Common and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Littleton Common?',
-        answer: 'Painting costs in Littleton Common are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Littleton Common?',
+        answer: 'Painting projects in Littleton Common are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Littleton Common?',
@@ -3280,7 +3280,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Acton', 'Westford', 'Groton', 'Ayer', 'Harvard', 'Boxborough'],
     localTip: 'Littleton\'s mix of home styles benefits from color choices that complement the neighborhood aesthetic while expressing your personal taste.',
     introText: 'When Littleton Common homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Littleton Common is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Littleton Common homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Littleton Common homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Littleton Common homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Littleton Common homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Littleton Common homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Littleton Common home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Littleton Common neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3293,21 +3293,21 @@ export const cityContentMap: Record<string, CityContent> = {
       'Your Shirley home needs reliable, quality painting',
       'Finding painters who serve smaller towns takes effort',
       'Your New England home deserves proper care',
-      'You want fair pricing without sacrificing quality',
+      'You want dependable service without sacrificing quality',
       'Previous painters didn\'t complete the job properly'
     ],
     solutions: [
       'Reliable quality painting for Shirley homes',
       'We proudly serve smaller communities',
       'New England home expertise and care',
-      'Fair, honest pricing for quality work',
+      'Honest, dependable service for quality work',
       'Complete job completion - we finish what we start'
     ],
     localContext: 'Shirley\'s small-town character and close-knit community deserve painters who share these values. We bring dependable service to Shirley\'s wonderful neighborhoods.',
     whyChooseUs: [
       'Dependable service',
       'Small-town values',
-      'Fair pricing',
+      'Dependable, professional service',
       'Complete job finish',
       'Quality workmanship'
     ],
@@ -3322,12 +3322,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Shirley, from Shirley Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Shirley - whether you\'re near Shirley Center or in the newer developments. Our crews know Shirley well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Shirley?',
-        answer: 'No, we never charge travel fees for Shirley projects. Shirley is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Shirley and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Shirley?',
+        answer: 'Yes, we proudly serve Shirley and treat every home here with full care. Shirley is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Shirley and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Shirley?',
-        answer: 'Painting costs in Shirley are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Shirley?',
+        answer: 'Painting projects in Shirley are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Shirley?',
@@ -3349,7 +3349,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Ayer', 'Groton', 'Lunenburg', 'Townsend', 'Pepperell', 'Lancaster'],
     localTip: 'Shirley\'s homes benefit from classic New England colors that honor the town\'s traditional character while providing modern protection.',
     introText: 'When Shirley homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Shirley is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Shirley homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Shirley homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Shirley homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Shirley homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Shirley homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Shirley home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Shirley neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3359,7 +3359,7 @@ export const cityContentMap: Record<string, CityContent> = {
     heroHeadline: 'Milford\'s Professional Painting Contractors',
     heroSubheadline: 'Quality painting for Milford\'s diverse community.',
     painPoints: [
-      'Your Milford home needs professional painting at a fair price',
+      'Your Milford home needs professional painting from a crew you can trust',
       'Downtown Milford\'s diverse housing stock requires versatile painters',
       'Finding reliable painters who complete projects on time is important',
       'Your multi-family property needs efficient, professional service',
@@ -3374,7 +3374,7 @@ export const cityContentMap: Record<string, CityContent> = {
     ],
     localContext: 'Milford\'s vibrant community with its diverse downtown and family neighborhoods deserves professional painting services. We bring quality and value to all of Milford.',
     whyChooseUs: [
-      'Competitive pricing',
+      'Dependable, professional service',
       'Versatile expertise',
       'Reliable completion',
       'Multi-family experience',
@@ -3395,8 +3395,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Milford, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Worcester County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Milford home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Milford?',
-        answer: 'Painting costs in Milford are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Milford?',
+        answer: 'Painting projects in Milford are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Milford?',
@@ -3418,7 +3418,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Hopkinton', 'Holliston', 'Hopedale', 'Mendon', 'Bellingham', 'Medway'],
     localTip: 'Milford\'s diverse housing stock - from historic downtown to newer developments - benefits from paint choices tailored to each home\'s era and style.',
     introText: 'When Milford homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Milford is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Milford homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Milford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Milford homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Milford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Milford homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Milford home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Milford neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3464,8 +3464,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Northbridge, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Worcester County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Northbridge home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Northbridge?',
-        answer: 'Painting costs in Northbridge are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Northbridge?',
+        answer: 'Painting projects in Northbridge are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Northbridge?',
@@ -3487,7 +3487,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Whitinsville', 'Uxbridge', 'Grafton', 'Douglas', 'Mendon', 'Sutton'],
     localTip: 'Northbridge\'s mill-era homes often have detailed trim work. We take time to properly prep and paint these historic details.',
     introText: 'When Northbridge homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Northbridge is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Northbridge homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Northbridge homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Northbridge homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Northbridge homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Northbridge homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Northbridge home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Northbridge neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3529,12 +3529,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Ayer, from Ayer Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Ayer - whether you\'re near Fort Devens or in the newer developments. Our crews know Ayer well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Ayer?',
-        answer: 'No, we never charge travel fees for Ayer projects. Ayer is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Ayer and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Ayer?',
+        answer: 'Yes, we proudly serve Ayer and treat every home here with full care. Ayer is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Ayer and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Ayer?',
-        answer: 'Painting costs in Ayer are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Ayer?',
+        answer: 'Painting projects in Ayer are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Ayer?',
@@ -3556,7 +3556,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Shirley', 'Groton', 'Harvard', 'Littleton', 'Lunenburg', 'Lancaster'],
     localTip: 'Ayer\'s New England homes benefit from premium exterior paints that withstand the region\'s variable weather conditions.',
     introText: 'When Ayer homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Ayer is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Ayer homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Ayer homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Ayer homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Ayer homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Ayer homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Ayer home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Ayer neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3598,12 +3598,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Hopedale, from Hopedale Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Hopedale - whether you\'re near Hopedale Parklands or in the newer developments. Our crews know Hopedale well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Hopedale?',
-        answer: 'No, we never charge travel fees for Hopedale projects. Hopedale is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Hopedale and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Hopedale?',
+        answer: 'Yes, we proudly serve Hopedale and treat every home here with full care. Hopedale is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Hopedale and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Hopedale?',
-        answer: 'Painting costs in Hopedale are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Hopedale?',
+        answer: 'Painting projects in Hopedale are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Hopedale?',
@@ -3625,7 +3625,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Milford', 'Mendon', 'Bellingham', 'Upton', 'Millis', 'Medway'],
     localTip: 'Hopedale\'s planned community aesthetic benefits from coordinated color palettes. We can help choose colors that honor tradition while expressing your taste.',
     introText: 'When Hopedale homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Hopedale is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Hopedale homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Hopedale homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Hopedale homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Hopedale homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Hopedale homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Hopedale home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Hopedale neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3667,12 +3667,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Dover, from Dover Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Dover - whether you\'re near Noanet Woodlands or in the newer developments. Our crews know Dover well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Dover?',
-        answer: 'No, we never charge travel fees for Dover projects. Dover is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Dover and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Dover?',
+        answer: 'Yes, we proudly serve Dover and treat every home here with full care. Dover is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Dover and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Dover?',
-        answer: 'Painting costs in Dover are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Dover?',
+        answer: 'Painting projects in Dover are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Dover?',
@@ -3694,7 +3694,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Sherborn', 'Medfield', 'Needham', 'Wellesley', 'Natick', 'Westwood'],
     localTip: 'Dover\'s heavily wooded properties benefit from premium exterior paints with superior mildew resistance and UV protection.',
     introText: 'When Dover homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Dover is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Dover homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Dover homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Dover homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Dover homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Dover homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Dover home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Dover neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3704,7 +3704,7 @@ export const cityContentMap: Record<string, CityContent> = {
     heroHeadline: 'Millbury\'s Reliable House Painters',
     heroSubheadline: 'Professional painting for Millbury\'s hardworking community.',
     painPoints: [
-      'Your Millbury home needs quality painting at a fair price',
+      'Your Millbury home needs quality painting from a crew you can trust',
       'Blackstone River area homes face moisture challenges',
       'Finding reliable painters who show up as promised is important',
       'Your New England home deserves proper prep and quality paint',
@@ -3719,13 +3719,13 @@ export const cityContentMap: Record<string, CityContent> = {
     ],
     localContext: 'Millbury\'s hardworking community near the Blackstone River deserves reliable painting services. We bring quality and value to Millbury homeowners.',
     whyChooseUs: [
-      'Fair pricing',
+      'Dependable, professional service',
       'River-area expertise',
       'Reliable service',
       'Quality products',
       'Efficient completion'
     ],
-    testimonialContext: 'Millbury homeowners appreciate our reliability and fair prices.',
+    testimonialContext: 'Millbury homeowners appreciate our reliability and consistent quality.',
     faq: [
       {
         question: 'Do you serve Millbury, MA 01527?',
@@ -3736,12 +3736,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Riverside homes near Blackstone River in Millbury require special attention due to elevated moisture levels. We use breathable, moisture-resistant paints that allow water vapor to escape while preventing outside moisture from penetrating. Our prep work includes thorough mold and mildew treatment. We\'ve successfully painted numerous homes along Blackstone River.'
       },
       {
-        question: 'Do you charge extra to come to Millbury?',
-        answer: 'No, we never charge travel fees for Millbury projects. Millbury is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Millbury and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Millbury?',
+        answer: 'Yes, we proudly serve Millbury and treat every home here with full care. Millbury is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Millbury and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Millbury?',
-        answer: 'Painting costs in Millbury are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Millbury?',
+        answer: 'Painting projects in Millbury are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Millbury?',
@@ -3763,7 +3763,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Worcester', 'Grafton', 'Auburn', 'Sutton', 'Oxford', 'Leicester'],
     localTip: 'Millbury homes near the Blackstone River benefit from mildew-resistant paint formulas that perform well in humid conditions.',
     introText: 'When Millbury homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Millbury is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Millbury homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Millbury homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Millbury homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Millbury homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Millbury homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Millbury home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Millbury neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3805,12 +3805,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Millis, from Millis Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Millis - whether you\'re near Millis Town Center or in the newer developments. Our crews know Millis well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Millis?',
-        answer: 'No, we never charge travel fees for Millis projects. Millis is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Millis and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Millis?',
+        answer: 'Yes, we proudly serve Millis and treat every home here with full care. Millis is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Millis and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Millis?',
-        answer: 'Painting costs in Millis are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Millis?',
+        answer: 'Painting projects in Millis are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Millis?',
@@ -3832,7 +3832,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Medway', 'Holliston', 'Medfield', 'Norfolk', 'Franklin', 'Sherborn'],
     localTip: 'Millis families often prefer classic, timeless colors that enhance home value. We offer color consultation to help make lasting choices.',
     introText: 'When Millis homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Millis is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Millis homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Millis homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Millis homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Millis homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Millis homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Millis home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Millis neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3874,12 +3874,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Carlisle, from Carlisle Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Carlisle - whether you\'re near Great Brook Farm State Park or in the newer developments. Our crews know Carlisle well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Carlisle?',
-        answer: 'No, we never charge travel fees for Carlisle projects. Carlisle is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Carlisle and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Carlisle?',
+        answer: 'Yes, we proudly serve Carlisle and treat every home here with full care. Carlisle is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Carlisle and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Carlisle?',
-        answer: 'Painting costs in Carlisle are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Carlisle?',
+        answer: 'Painting projects in Carlisle are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Carlisle?',
@@ -3901,7 +3901,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Concord', 'Acton', 'Bedford', 'Chelmsford', 'Billerica', 'Westford'],
     localTip: 'Carlisle\'s wooded properties benefit from mildew-resistant paints. We recommend lighter colors for shade-heavy exteriors.',
     introText: 'When Carlisle homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Carlisle is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Carlisle homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Carlisle homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Carlisle homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Carlisle homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Carlisle homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Carlisle home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Carlisle neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -3943,12 +3943,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Millis-Clicquot, from Clicquot to the surrounding neighborhoods. We\'re familiar with the different housing styles across Millis-Clicquot - whether you\'re near Clicquot Club Building or in the newer developments. Our crews know Millis-Clicquot well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Millis-Clicquot?',
-        answer: 'No, we never charge travel fees for Millis-Clicquot projects. Millis-Clicquot is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Millis-Clicquot and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Millis-Clicquot?',
+        answer: 'Yes, we proudly serve Millis-Clicquot and treat every home here with full care. Millis-Clicquot is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Millis-Clicquot and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Millis-Clicquot?',
-        answer: 'Painting costs in Millis-Clicquot are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Millis-Clicquot?',
+        answer: 'Painting projects in Millis-Clicquot are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Millis-Clicquot?',
@@ -3970,7 +3970,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Millis', 'Medway', 'Medfield', 'Norfolk', 'Holliston', 'Sherborn'],
     localTip: 'Clicquot\'s historic character benefits from period-appropriate color choices that honor the village\'s heritage.',
     introText: 'When Millis-Clicquot homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Millis-Clicquot is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Millis-Clicquot homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Millis-Clicquot homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Millis-Clicquot homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Millis-Clicquot homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Millis-Clicquot homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Millis-Clicquot home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Millis-Clicquot neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4012,12 +4012,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Medway, from Medway Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Medway - whether you\'re near Medway Village or in the newer developments. Our crews know Medway well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Medway?',
-        answer: 'No, we never charge travel fees for Medway projects. Medway is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Medway and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Medway?',
+        answer: 'Yes, we proudly serve Medway and treat every home here with full care. Medway is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Medway and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Medway?',
-        answer: 'Painting costs in Medway are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Medway?',
+        answer: 'Painting projects in Medway are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Medway?',
@@ -4039,7 +4039,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Millis', 'Franklin', 'Bellingham', 'Holliston', 'Norfolk', 'Milford'],
     localTip: 'Medway\'s family-oriented community often prefers classic colors that maintain property values and complement the neighborhood.',
     introText: 'When Medway homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Medway is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Medway homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Medway homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Medway homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Medway homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Medway homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Medway home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Medway neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4085,8 +4085,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Holden, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Worcester County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Holden home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Holden?',
-        answer: 'Painting costs in Holden are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Holden?',
+        answer: 'Painting projects in Holden are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Holden?',
@@ -4108,7 +4108,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Worcester', 'West Boylston', 'Paxton', 'Rutland', 'Princeton', 'Sterling'],
     localTip: 'Holden\'s proximity to Wachusett Reservoir means moisture-resistant paints are essential for lasting exterior results.',
     introText: 'When Holden homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Holden is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Holden homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Holden homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Holden homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Holden homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Holden homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Holden home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Holden neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4118,7 +4118,7 @@ export const cityContentMap: Record<string, CityContent> = {
     heroHeadline: 'Leominster\'s Professional Painting Contractors',
     heroSubheadline: 'Quality painting for all of Leominster\'s diverse neighborhoods.',
     painPoints: [
-      'Your Leominster home needs professional painting at a fair price',
+      'Your Leominster home needs professional painting from a crew you can trust',
       'The city\'s diverse neighborhoods need versatile painters',
       'Finding reliable contractors who complete work properly is important',
       'Your Victorian or colonial needs experienced care',
@@ -4133,13 +4133,13 @@ export const cityContentMap: Record<string, CityContent> = {
     ],
     localContext: 'Leominster\'s diverse neighborhoods from Downtown to North Leominster deserve professional painting. We bring quality and value to this vibrant city.',
     whyChooseUs: [
-      'Competitive rates',
+      'Dependable, professional service',
       'Versatile expertise',
       'Reliable completion',
       'Historic style skills',
       'Quality protection'
     ],
-    testimonialContext: 'Leominster homeowners appreciate our quality work at fair prices.',
+    testimonialContext: 'Leominster homeowners appreciate our quality work and dependable service.',
     faq: [
       {
         question: 'Do you serve Leominster, MA 01453?',
@@ -4154,8 +4154,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Leominster, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Worcester County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Leominster home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Leominster?',
-        answer: 'Painting costs in Leominster are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Leominster?',
+        answer: 'Painting projects in Leominster are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Leominster?',
@@ -4177,7 +4177,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Fitchburg', 'Lancaster', 'Lunenburg', 'Sterling', 'Princeton', 'Westminster'],
     localTip: 'Leominster\'s variety of home styles benefits from color choices tailored to each property\'s architecture and era.',
     introText: 'When Leominster homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Leominster is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Leominster homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Leominster homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Leominster homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Leominster homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Leominster homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Leominster home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Leominster neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4219,12 +4219,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Medfield, from Medfield Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Medfield - whether you\'re near Medfield State Hospital or in the newer developments. Our crews know Medfield well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Medfield?',
-        answer: 'No, we never charge travel fees for Medfield projects. Medfield is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Medfield and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Medfield?',
+        answer: 'Yes, we proudly serve Medfield and treat every home here with full care. Medfield is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Medfield and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Medfield?',
-        answer: 'Painting costs in Medfield are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Medfield?',
+        answer: 'Painting projects in Medfield are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Medfield?',
@@ -4246,7 +4246,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Millis', 'Norfolk', 'Dover', 'Sherborn', 'Walpole', 'Holliston'],
     localTip: 'Medfield\'s wooded properties near Noon Hill benefit from mildew-resistant paints that perform well in shade-heavy environments.',
     introText: 'When Medfield homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Medfield is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Medfield homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Medfield homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Medfield homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Medfield homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Medfield homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Medfield home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Medfield neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4292,8 +4292,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Needham, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Norfolk County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Needham home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Needham?',
-        answer: 'Painting costs in Needham are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Needham?',
+        answer: 'Painting projects in Needham are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Needham?',
@@ -4315,7 +4315,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Newton', 'Wellesley', 'Dedham', 'Dover', 'Natick', 'Westwood'],
     localTip: 'Needham\'s diverse neighborhoods benefit from color choices that complement each area\'s unique character while enhancing property value.',
     introText: 'When Needham homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Needham is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Needham homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Needham homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Needham homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Needham homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Needham homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Needham home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Needham neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4361,8 +4361,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Westford, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Westford home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Westford?',
-        answer: 'Painting costs in Westford are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Westford?',
+        answer: 'Painting projects in Westford are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Westford?',
@@ -4384,7 +4384,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Chelmsford', 'Littleton', 'Groton', 'Acton', 'Carlisle', 'Billerica'],
     localTip: 'Westford\'s varied terrain means different neighborhoods face different conditions. We assess each property for optimal paint selection.',
     introText: 'When Westford homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Westford is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Westford homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Westford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Westford homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Westford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Westford homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Westford home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Westford neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4426,12 +4426,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Mendon, particularly near Mendon Town Common. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Mendon homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Mendon?',
-        answer: 'No, we never charge travel fees for Mendon projects. Mendon is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Mendon and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Mendon?',
+        answer: 'Yes, we proudly serve Mendon and treat every home here with full care. Mendon is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Mendon and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Mendon?',
-        answer: 'Painting costs in Mendon are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Mendon?',
+        answer: 'Painting projects in Mendon are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Mendon?',
@@ -4453,7 +4453,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Milford', 'Hopedale', 'Upton', 'Bellingham', 'Uxbridge', 'Northbridge'],
     localTip: 'Mendon\'s wooded properties benefit from mildew-resistant paints that perform well in shade and moisture conditions.',
     introText: 'When Mendon homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Mendon is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Mendon homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Mendon homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Mendon homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Mendon homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Mendon homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Mendon home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Mendon neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4495,12 +4495,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Bedford, from Bedford Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Bedford - whether you\'re near Minuteman Bikeway or in the newer developments. Our crews know Bedford well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Bedford?',
-        answer: 'No, we never charge travel fees for Bedford projects. Bedford is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Bedford and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Bedford?',
+        answer: 'Yes, we proudly serve Bedford and treat every home here with full care. Bedford is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Bedford and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Bedford?',
-        answer: 'Painting costs in Bedford are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Bedford?',
+        answer: 'Painting projects in Bedford are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Bedford?',
@@ -4522,7 +4522,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Lexington', 'Burlington', 'Billerica', 'Concord', 'Lincoln', 'Carlisle'],
     localTip: 'Bedford\'s variety of home ages - from colonial to contemporary - benefits from paint choices suited to each era\'s construction.',
     introText: 'When Bedford homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Bedford is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Bedford homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Bedford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Bedford homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Bedford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Bedford homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Bedford home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Bedford neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4564,12 +4564,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Riverside homes near Blackstone River in Whitinsville require special attention due to elevated moisture levels. We use breathable, moisture-resistant paints that allow water vapor to escape while preventing outside moisture from penetrating. Our prep work includes thorough mold and mildew treatment. We\'ve successfully painted numerous homes along Blackstone River.'
       },
       {
-        question: 'Do you charge extra to come to Whitinsville?',
-        answer: 'No, we never charge travel fees for Whitinsville projects. Whitinsville is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Whitinsville and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Whitinsville?',
+        answer: 'Yes, we proudly serve Whitinsville and treat every home here with full care. Whitinsville is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Whitinsville and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Whitinsville?',
-        answer: 'Painting costs in Whitinsville are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Whitinsville?',
+        answer: 'Painting projects in Whitinsville are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Whitinsville?',
@@ -4591,7 +4591,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Northbridge', 'Uxbridge', 'Douglas', 'Grafton', 'Sutton', 'Mendon'],
     localTip: 'Whitinsville\'s historic homes often feature detailed mill-era trim. We take time to properly prep and paint these important details.',
     introText: 'When Whitinsville homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Whitinsville is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Whitinsville homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Whitinsville homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Whitinsville homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Whitinsville homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Whitinsville homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Whitinsville home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Whitinsville neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4633,12 +4633,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Sutton, from Sutton Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Sutton - whether you\'re near Purgatory Chasm State Reservation or in the newer developments. Our crews know Sutton well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Sutton?',
-        answer: 'No, we never charge travel fees for Sutton projects. Sutton is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Sutton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Sutton?',
+        answer: 'Yes, we proudly serve Sutton and treat every home here with full care. Sutton is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Sutton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Sutton?',
-        answer: 'Painting costs in Sutton are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Sutton?',
+        answer: 'Painting projects in Sutton are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Sutton?',
@@ -4660,7 +4660,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Worcester', 'Millbury', 'Grafton', 'Northbridge', 'Douglas', 'Oxford'],
     localTip: 'Sutton\'s wooded rural properties benefit from lighter colors and mildew-resistant formulas for lasting exterior results.',
     introText: 'When Sutton homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Sutton is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Sutton homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Sutton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Sutton homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Sutton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Sutton homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Sutton home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Sutton neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4706,8 +4706,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We paint many rental properties in Groton, including those near Groton School. We understand landlords need quick turnovers between tenants. We can work efficiently during vacancy periods and offer priority scheduling for rental properties. Our durable paint choices withstand the wear of rental environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Groton?',
-        answer: 'Painting costs in Groton are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Groton?',
+        answer: 'Painting projects in Groton are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Groton?',
@@ -4729,7 +4729,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Ayer', 'Westford', 'Pepperell', 'Dunstable', 'Townsend', 'Shirley'],
     localTip: 'Groton\'s historic estates often benefit from multi-color schemes that highlight architectural details and period character.',
     introText: 'When Groton homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Groton is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Groton homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Groton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Groton homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Groton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Groton homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Groton home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Groton neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4771,12 +4771,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Princeton, particularly near Princeton Town Common. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Princeton homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Princeton?',
-        answer: 'No, we never charge travel fees for Princeton projects. Princeton is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Princeton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Princeton?',
+        answer: 'Yes, we proudly serve Princeton and treat every home here with full care. Princeton is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Princeton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Princeton?',
-        answer: 'Painting costs in Princeton are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Princeton?',
+        answer: 'Painting projects in Princeton are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Princeton?',
@@ -4798,7 +4798,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Sterling', 'Holden', 'Westminster', 'Rutland', 'Hubbardston', 'Leominster'],
     localTip: 'Princeton\'s elevation means properties face intense UV and weather exposure. Premium exterior paints are essential for lasting results.',
     introText: 'When Princeton homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Princeton is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Princeton homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Princeton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Princeton homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Princeton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Princeton homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Princeton home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Princeton neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4808,7 +4808,7 @@ export const cityContentMap: Record<string, CityContent> = {
     heroHeadline: 'Auburn\'s Reliable Painting Team',
     heroSubheadline: 'Professional painting for Auburn\'s diverse community.',
     painPoints: [
-      'Your Auburn home needs quality painting at a fair price',
+      'Your Auburn home needs quality painting from a crew you can trust',
       'Finding reliable painters in Worcester County is important',
       'Your colonial or ranch deserves proper treatment',
       'You want work completed efficiently and on schedule',
@@ -4823,13 +4823,13 @@ export const cityContentMap: Record<string, CityContent> = {
     ],
     localContext: 'Auburn\'s convenient location and diverse neighborhoods deserve reliable painting services. We bring quality and value to Auburn homeowners.',
     whyChooseUs: [
-      'Fair pricing',
+      'Dependable, professional service',
       'Reliable service',
       'Style versatility',
       'Efficient completion',
       'Commitment keeping'
     ],
-    testimonialContext: 'Auburn homeowners appreciate our reliability and fair prices.',
+    testimonialContext: 'Auburn homeowners appreciate our reliability and consistent quality.',
     faq: [
       {
         question: 'Do you serve Auburn, MA 01501?',
@@ -4844,8 +4844,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Auburn, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Worcester County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Auburn home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Auburn?',
-        answer: 'Painting costs in Auburn are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Auburn?',
+        answer: 'Painting projects in Auburn are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Auburn?',
@@ -4867,7 +4867,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Worcester', 'Millbury', 'Oxford', 'Leicester', 'Charlton', 'Sutton'],
     localTip: 'Auburn\'s varied housing stock benefits from paint choices suited to each home\'s style and construction era.',
     introText: 'When Auburn homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Auburn is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Auburn homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Auburn homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Auburn homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Auburn homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Auburn homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Auburn home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Auburn neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4913,8 +4913,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Bellingham, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Norfolk County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Bellingham home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Bellingham?',
-        answer: 'Painting costs in Bellingham are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Bellingham?',
+        answer: 'Painting projects in Bellingham are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Bellingham?',
@@ -4936,7 +4936,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Franklin', 'Milford', 'Mendon', 'Medway', 'Wrentham', 'Blackstone'],
     localTip: 'Bellingham homes near Lake Hiawatha benefit from moisture-resistant paints designed for lakeside conditions.',
     introText: 'When Bellingham homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Bellingham is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Bellingham homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Bellingham homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Bellingham homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Bellingham homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Bellingham homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Bellingham home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Bellingham neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -4982,8 +4982,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Watertown, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Watertown home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Watertown?',
-        answer: 'Painting costs in Watertown are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Watertown?',
+        answer: 'Painting projects in Watertown are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Watertown?',
@@ -5005,7 +5005,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Cambridge', 'Newton', 'Waltham', 'Belmont', 'Boston', 'Brookline'],
     localTip: 'Watertown\'s urban properties benefit from efficient scheduling that minimizes neighbor disruption while delivering quality results.',
     introText: 'When Watertown homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Watertown is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Watertown homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Watertown homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Watertown homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Watertown homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Watertown homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Watertown home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Watertown neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5051,8 +5051,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Westwood, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Norfolk County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Westwood home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Westwood?',
-        answer: 'Painting costs in Westwood are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Westwood?',
+        answer: 'Painting projects in Westwood are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Westwood?',
@@ -5074,7 +5074,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Dedham', 'Dover', 'Norwood', 'Medfield', 'Walpole', 'Canton'],
     localTip: 'Westwood\'s wooded properties near Hale Reservation benefit from mildew-resistant paints suited for shaded environments.',
     introText: 'When Westwood homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Westwood is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Westwood homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Westwood homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Westwood homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Westwood homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Westwood homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Westwood home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Westwood neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5120,8 +5120,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Belmont, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Belmont home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Belmont?',
-        answer: 'Painting costs in Belmont are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Belmont?',
+        answer: 'Painting projects in Belmont are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Belmont?',
@@ -5143,7 +5143,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Cambridge', 'Arlington', 'Watertown', 'Waltham', 'Lexington', 'Newton'],
     localTip: 'Belmont\'s Victorian homes often benefit from multi-color schemes that highlight architectural details and period character.',
     introText: 'When Belmont homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Belmont is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Belmont homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Belmont homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Belmont homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Belmont homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Belmont homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Belmont home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Belmont neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5185,12 +5185,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes, we have extensive experience with lakeside properties near Lake Shirley. These homes face unique challenges: increased humidity, morning fog, and intense sun reflection off the water. We use moisture-resistant primers, mold-inhibiting paints, and UV-protective topcoats specifically for waterfront homes. We\'ve painted many properties in this beautiful area of Lunenburg.'
       },
       {
-        question: 'Do you charge extra to come to Lunenburg?',
-        answer: 'No, we never charge travel fees for Lunenburg projects. Lunenburg is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Lunenburg and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Lunenburg?',
+        answer: 'Yes, we proudly serve Lunenburg and treat every home here with full care. Lunenburg is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Lunenburg and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Lunenburg?',
-        answer: 'Painting costs in Lunenburg are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Lunenburg?',
+        answer: 'Painting projects in Lunenburg are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Lunenburg?',
@@ -5212,7 +5212,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Leominster', 'Fitchburg', 'Shirley', 'Townsend', 'Groton', 'Lancaster'],
     localTip: 'Lunenburg homes near Lake Shirley benefit from moisture-resistant paints with mildew protection.',
     introText: 'When Lunenburg homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Lunenburg is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Lunenburg homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Lunenburg homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Lunenburg homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Lunenburg homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Lunenburg homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Lunenburg home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Lunenburg neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5226,14 +5226,14 @@ export const cityContentMap: Record<string, CityContent> = {
       'Finding reliable painters for southern Worcester County is challenging',
       'Your historic mill-era home deserves specialized care',
       'River valley humidity affects paint longevity',
-      'You want quality work at fair prices'
+      'You want quality work from a dependable local team'
     ],
     solutions: [
       'Blackstone River expertise with moisture-resistant solutions',
       'Reliable service for southern communities',
       'Mill-era historic home specialization',
       'River valley-appropriate products',
-      'Quality work at competitive prices'
+      'Quality work from a dependable local team'
     ],
     localContext: 'Uxbridge\'s proud place in the Blackstone Valley deserves quality painting. We bring professional service that protects and beautifies Uxbridge homes.',
     whyChooseUs: [
@@ -5241,9 +5241,9 @@ export const cityContentMap: Record<string, CityContent> = {
       'Reliable service',
       'Historic home skills',
       'Moisture solutions',
-      'Fair pricing'
+      'Dependable, professional service'
     ],
-    testimonialContext: 'Uxbridge homeowners appreciate our river valley expertise and fair prices.',
+    testimonialContext: 'Uxbridge homeowners appreciate our river valley expertise and dependable service.',
     faq: [
       {
         question: 'Do you serve Uxbridge, MA 01569?',
@@ -5254,12 +5254,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Riverside homes near Blackstone River in Uxbridge require special attention due to elevated moisture levels. We use breathable, moisture-resistant paints that allow water vapor to escape while preventing outside moisture from penetrating. Our prep work includes thorough mold and mildew treatment. We\'ve successfully painted numerous homes along Blackstone River.'
       },
       {
-        question: 'Do you charge extra to come to Uxbridge?',
-        answer: 'No, we never charge travel fees for Uxbridge projects. Uxbridge is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Uxbridge and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Uxbridge?',
+        answer: 'Yes, we proudly serve Uxbridge and treat every home here with full care. Uxbridge is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Uxbridge and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Uxbridge?',
-        answer: 'Painting costs in Uxbridge are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Uxbridge?',
+        answer: 'Painting projects in Uxbridge are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Uxbridge?',
@@ -5281,7 +5281,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Northbridge', 'Douglas', 'Milford', 'Mendon', 'Sutton', 'Blackstone'],
     localTip: 'Uxbridge\'s Blackstone River proximity means moisture-resistant paints are essential for lasting exterior results.',
     introText: 'When Uxbridge homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Uxbridge is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Uxbridge homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Uxbridge homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Uxbridge homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Uxbridge homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Uxbridge homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Uxbridge home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Uxbridge neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5323,12 +5323,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Norfolk, from Norfolk Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Norfolk - whether you\'re near Stony Brook Wildlife Sanctuary or in the newer developments. Our crews know Norfolk well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Norfolk?',
-        answer: 'No, we never charge travel fees for Norfolk projects. Norfolk is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Norfolk and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Norfolk?',
+        answer: 'Yes, we proudly serve Norfolk and treat every home here with full care. Norfolk is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Norfolk and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Norfolk?',
-        answer: 'Painting costs in Norfolk are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Norfolk?',
+        answer: 'Painting projects in Norfolk are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Norfolk?',
@@ -5350,7 +5350,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Medfield', 'Millis', 'Wrentham', 'Franklin', 'Walpole', 'Medway'],
     localTip: 'Norfolk families often choose classic colors that enhance property value while complementing the natural surroundings.',
     introText: 'When Norfolk homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Norfolk is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Norfolk homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Norfolk homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Norfolk homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Norfolk homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Norfolk homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Norfolk home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Norfolk neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5396,8 +5396,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Chelmsford, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Chelmsford home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Chelmsford?',
-        answer: 'Painting costs in Chelmsford are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Chelmsford?',
+        answer: 'Painting projects in Chelmsford are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Chelmsford?',
@@ -5419,7 +5419,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Lowell', 'Westford', 'Carlisle', 'Billerica', 'Tewksbury', 'Tyngsboro'],
     localTip: 'Chelmsford\'s variety of settings - from suburban to rural near Great Brook Farm - benefits from paint choices suited to each environment.',
     introText: 'When Chelmsford homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Chelmsford is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Chelmsford homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Chelmsford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Chelmsford homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Chelmsford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Chelmsford homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Chelmsford home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Chelmsford neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5461,12 +5461,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Paxton, particularly near Paxton Town Common. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Paxton homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Paxton?',
-        answer: 'No, we never charge travel fees for Paxton projects. Paxton is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Paxton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Paxton?',
+        answer: 'Yes, we proudly serve Paxton and treat every home here with full care. Paxton is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Paxton and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Paxton?',
-        answer: 'Painting costs in Paxton are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Paxton?',
+        answer: 'Painting projects in Paxton are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Paxton?',
@@ -5488,7 +5488,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Worcester', 'Holden', 'Spencer', 'Leicester', 'Rutland', 'Princeton'],
     localTip: 'Paxton\'s wooded properties benefit from mildew-resistant paints and thorough prep for lasting exterior results.',
     introText: 'When Paxton homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Paxton is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Paxton homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Paxton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Paxton homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Paxton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Paxton homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Paxton home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Paxton neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5534,8 +5534,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Franklin, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Norfolk County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Franklin home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Franklin?',
-        answer: 'Painting costs in Franklin are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Franklin?',
+        answer: 'Painting projects in Franklin are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Franklin?',
@@ -5557,7 +5557,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Bellingham', 'Wrentham', 'Norfolk', 'Medway', 'Millis', 'Milford'],
     localTip: 'Franklin\'s mix of historic and modern homes benefits from paint choices suited to each property\'s era and character.',
     introText: 'When Franklin homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Franklin is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Franklin homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Franklin homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Franklin homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Franklin homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Franklin homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Franklin home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Franklin neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5571,14 +5571,14 @@ export const cityContentMap: Record<string, CityContent> = {
       'Cherry Valley and Rochdale have different neighborhood characters',
       'Finding painters for Worcester County communities is important',
       'Your New England home deserves proper care',
-      'You want fair pricing with quality results'
+      'You want dependable service with quality results'
     ],
     solutions: [
       'Reliable quality for Leicester homes',
       'Understanding of different village characters',
       'Worcester County service commitment',
       'Proper care for New England properties',
-      'Fair pricing with quality delivery'
+      'Quality craftsmanship and dependable service'
     ],
     localContext: 'Leicester\'s villages from Leicester Center to Cherry Valley and Rochdale deserve quality painting. We bring reliable service throughout this community.',
     whyChooseUs: [
@@ -5586,7 +5586,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Village understanding',
       'County commitment',
       'Quality care',
-      'Fair pricing'
+      'Dependable, professional service'
     ],
     testimonialContext: 'Leicester homeowners appreciate our reliability and fair approach.',
     faq: [
@@ -5599,12 +5599,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Leicester, particularly near Leicester Town Common. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Leicester homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Leicester?',
-        answer: 'No, we never charge travel fees for Leicester projects. Leicester is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Leicester and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Leicester?',
+        answer: 'Yes, we proudly serve Leicester and treat every home here with full care. Leicester is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Leicester and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Leicester?',
-        answer: 'Painting costs in Leicester are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Leicester?',
+        answer: 'Painting projects in Leicester are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Leicester?',
@@ -5626,7 +5626,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Worcester', 'Auburn', 'Spencer', 'Paxton', 'Oxford', 'Charlton'],
     localTip: 'Leicester\'s varied villages benefit from paint choices that complement each area\'s unique character and home styles.',
     introText: 'When Leicester homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Leicester is conveniently located within our primary service area, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Leicester homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Leicester homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Leicester homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Leicester homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Leicester homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Leicester home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Leicester neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5646,7 +5646,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Expert painting tailored to Billerica\'s climate challenges',
       'Knowledge of painting techniques for all home ages and styles',
       'Familiarity with Billerica Center, North Billerica, and Pinehurst',
-      'Cabinet refinishing at 70% less than replacement cost',
+      'Cabinet refinishing that looks brand new without a full replacement',
       'Thorough preparation ensuring long-lasting results'
     ],
     localContext: 'Billerica\'s neighborhoods from the historic Town Common to North Billerica and Pinehurst showcase diverse home styles. We understand the unique needs of each area and deliver quality painting that enhances your home\'s appeal.',
@@ -5672,8 +5672,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Billerica, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Billerica home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Billerica?',
-        answer: 'Painting costs in Billerica are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Billerica?',
+        answer: 'Painting projects in Billerica are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Billerica?',
@@ -5695,7 +5695,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Burlington', 'Wilmington', 'Bedford', 'Chelmsford', 'Tewksbury', 'Lowell'],
     localTip: 'Billerica homes near the Concord River benefit from moisture-resistant paints that withstand the higher humidity levels common in these areas.',
     introText: 'When Billerica homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Billerica is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Billerica homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Billerica homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Billerica homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Billerica homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Billerica homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Billerica home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Billerica neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5741,8 +5741,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Arlington, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Arlington home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Arlington?',
-        answer: 'Painting costs in Arlington are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Arlington?',
+        answer: 'Painting projects in Arlington are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Arlington?',
@@ -5764,7 +5764,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Lexington', 'Cambridge', 'Belmont', 'Somerville', 'Medford', 'Winchester'],
     localTip: 'Arlington\'s mature tree canopy means many homes face shade-related moisture issues. We recommend paints with excellent mildew resistance for shaded areas.',
     introText: 'When Arlington homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Arlington is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Arlington homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Arlington homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Arlington homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Arlington homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Arlington homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Arlington home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Arlington neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5793,7 +5793,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Wooded lot expertise',
       'Quality materials for lasting results',
       'Friendly, professional service',
-      'Fair pricing'
+      'Dependable, professional service'
     ],
     testimonialContext: 'Pinehurst homeowners appreciate our reliable service and attention to their specific needs.',
     faq: [
@@ -5806,12 +5806,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Pinehurst, from Pinehurst to the surrounding neighborhoods. We\'re familiar with the different housing styles across Pinehurst - whether you\'re near Pinehurst Plaza or in the newer developments. Our crews know Pinehurst well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Pinehurst?',
-        answer: 'No, we never charge travel fees for Pinehurst projects. Pinehurst is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Pinehurst and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Pinehurst?',
+        answer: 'Yes, we proudly serve Pinehurst and treat every home here with full care. Pinehurst is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Pinehurst and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Pinehurst?',
-        answer: 'Painting costs in Pinehurst are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Pinehurst?',
+        answer: 'Painting projects in Pinehurst are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Pinehurst?',
@@ -5833,7 +5833,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Billerica', 'Burlington', 'Wilmington', 'Bedford', 'Chelmsford', 'Lowell'],
     localTip: 'Pinehurst homes surrounded by trees benefit from regular paint maintenance to prevent mildew buildup. We can help you establish a maintenance schedule.',
     introText: 'When Pinehurst homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Pinehurst is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Pinehurst homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Pinehurst homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Pinehurst homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Pinehurst homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Pinehurst homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Pinehurst home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Pinehurst neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5875,12 +5875,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Rutland, from Rutland Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Rutland - whether you\'re near Rutland State Park or in the newer developments. Our crews know Rutland well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Rutland?',
-        answer: 'No, we never charge travel fees for Rutland projects. Rutland is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Rutland and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Rutland?',
+        answer: 'Yes, we proudly serve Rutland and treat every home here with full care. Rutland is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Rutland and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Rutland?',
-        answer: 'Painting costs in Rutland are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Rutland?',
+        answer: 'Painting projects in Rutland are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Rutland?',
@@ -5902,7 +5902,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Holden', 'Paxton', 'Princeton', 'Barre', 'Oakham', 'Hubbardston'],
     localTip: 'Rutland\'s elevation and exposure mean homes face intense weather. We recommend premium exterior paints with extended warranties for maximum protection.',
     introText: 'When Rutland homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Rutland is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Rutland homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Rutland homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Rutland homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Rutland homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Rutland homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Rutland home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Rutland neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -5922,7 +5922,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Quality work that meets Norwood\'s high standards',
       'Experience with both residential and commercial painting',
       'Curb appeal enhancement for visible properties',
-      'Cabinet refinishing at a fraction of replacement cost',
+      'Cabinet refinishing that looks brand new without a full replacement',
       'Clean, professional workmanship every time'
     ],
     localContext: 'Norwood\'s well-maintained neighborhoods from the Town Common to South Norwood reflect community pride. We provide painting services that match the quality expectations of Norwood residents.',
@@ -5948,8 +5948,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Norwood, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Norfolk County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Norwood home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Norwood?',
-        answer: 'Painting costs in Norwood are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Norwood?',
+        answer: 'Painting projects in Norwood are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Norwood?',
@@ -5971,7 +5971,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Westwood', 'Walpole', 'Canton', 'Dedham', 'Sharon', 'Stoughton'],
     localTip: 'Norwood homes near wetlands or conservation areas benefit from moisture-resistant exterior paints for lasting protection.',
     introText: 'When Norwood homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Norwood is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Norwood homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Norwood homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Norwood homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Norwood homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Norwood homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Norwood home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Norwood neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6017,8 +6017,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Dedham, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Norfolk County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Dedham home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Dedham?',
-        answer: 'Painting costs in Dedham are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Dedham?',
+        answer: 'Painting projects in Dedham are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Dedham?',
@@ -6040,7 +6040,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Norwood', 'Brookline', 'Newton', 'Westwood', 'Canton', 'Milton'],
     localTip: 'Dedham\'s older homes often have multiple paint layers that need proper assessment before repainting. We always evaluate the existing paint condition to ensure the best approach.',
     introText: 'When Dedham homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Dedham is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Dedham homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Dedham homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Dedham homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Dedham homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Dedham homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Dedham home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Dedham neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6086,8 +6086,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Fitchburg, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Worcester County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Fitchburg home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Fitchburg?',
-        answer: 'Painting costs in Fitchburg are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Fitchburg?',
+        answer: 'Painting projects in Fitchburg are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Fitchburg?',
@@ -6109,7 +6109,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Leominster', 'Westminster', 'Lunenburg', 'Ashby', 'Gardner', 'Townsend'],
     localTip: 'Fitchburg\'s elevation means more exposure to wind and weather. We recommend high-adhesion primers and premium paints for maximum durability.',
     introText: 'When Fitchburg homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Fitchburg is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Fitchburg homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Fitchburg homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Fitchburg homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Fitchburg homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Fitchburg homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Fitchburg home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Fitchburg neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6155,8 +6155,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Burlington, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Burlington home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Burlington?',
-        answer: 'Painting costs in Burlington are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Burlington?',
+        answer: 'Painting projects in Burlington are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Burlington?',
@@ -6178,7 +6178,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Billerica', 'Woburn', 'Wilmington', 'Bedford', 'Lexington', 'Winchester'],
     localTip: 'Burlington homes with composite decking benefit from specialized stains and sealers. We can recommend the best products for your specific decking material.',
     introText: 'When Burlington homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Burlington is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Burlington homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Burlington homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Burlington homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Burlington homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Burlington homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Burlington home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Burlington neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6191,14 +6191,14 @@ export const cityContentMap: Record<string, CityContent> = {
       'Your Walpole home needs reliable, quality painting',
       'Bird Park area properties face wooded lot challenges',
       'Finding painters who understand East and South Walpole differences',
-      'Your kitchen cabinets are dated but replacement is too costly',
+      'Your kitchen cabinets are dated but a full replacement means major disruption',
       'Previous painters didn\'t finish on schedule'
     ],
     solutions: [
       'Reliable quality service for Walpole homes',
       'Mildew-resistant solutions for wooded properties',
       'Familiarity with all Walpole neighborhoods',
-      'Cabinet refinishing at significant savings',
+      'Cabinet refinishing that looks brand new without a full replacement',
       'On-time project completion'
     ],
     localContext: 'Walpole\'s beautiful neighborhoods from the Town Common to Bird Park and throughout East and South Walpole deserve quality painting services. We bring reliability and craftsmanship to every project.',
@@ -6224,8 +6224,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Walpole, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Norfolk County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Walpole home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Walpole?',
-        answer: 'Painting costs in Walpole are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Walpole?',
+        answer: 'Painting projects in Walpole are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Walpole?',
@@ -6247,7 +6247,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Norwood', 'Sharon', 'Canton', 'Foxborough', 'Medfield', 'Norfolk'],
     localTip: 'Walpole homes near conservation land often face additional moisture from surrounding vegetation. Premium exterior paints with mildew inhibitors provide the best protection.',
     introText: 'When Walpole homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Walpole is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Walpole homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Walpole homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Walpole homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Walpole homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Walpole homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Walpole home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Walpole neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6261,14 +6261,14 @@ export const cityContentMap: Record<string, CityContent> = {
       'Rural location makes finding quality painters challenging',
       'Older New England homes require special care',
       'Weather has taken a toll on your exterior paint',
-      'You want fair pricing for quality work'
+      'You want dependable, quality work you can trust'
     ],
     solutions: [
       'Reliable service to East Douglas properties',
       'Full coverage of rural Worcester County locations',
       'Experience with traditional New England homes',
       'Complete exterior restoration and protection',
-      'Fair, competitive pricing'
+      'Reliable, professional craftsmanship'
     ],
     localContext: 'East Douglas\'s quiet village character and wooded surroundings make it a special community. We bring professional painting services that respect your property and deliver lasting results.',
     whyChooseUs: [
@@ -6276,7 +6276,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Worcester County coverage',
       'New England home expertise',
       'Weather-resistant paints',
-      'Fair pricing'
+      'Dependable, professional service'
     ],
     testimonialContext: 'East Douglas homeowners appreciate our willingness to serve rural properties with quality work.',
     faq: [
@@ -6289,12 +6289,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes, we have extensive experience with lakeside properties near Wallis Pond. These homes face unique challenges: increased humidity, morning fog, and intense sun reflection off the water. We use moisture-resistant primers, mold-inhibiting paints, and UV-protective topcoats specifically for waterfront homes. We\'ve painted many properties in this beautiful area of East Douglas.'
       },
       {
-        question: 'Do you charge extra to come to East Douglas?',
-        answer: 'No, we never charge travel fees for East Douglas projects. East Douglas is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with East Douglas and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout East Douglas?',
+        answer: 'Yes, we proudly serve East Douglas and treat every home here with full care. East Douglas is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with East Douglas and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in East Douglas?',
-        answer: 'Painting costs in East Douglas are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in East Douglas?',
+        answer: 'Painting projects in East Douglas are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in East Douglas?',
@@ -6316,7 +6316,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Douglas', 'Uxbridge', 'Northbridge', 'Sutton', 'Webster', 'Oxford'],
     localTip: 'East Douglas properties often have extensive wood elements that benefit from regular maintenance. We can help you plan a painting schedule that protects your investment.',
     introText: 'When East Douglas homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. East Douglas is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that East Douglas homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for East Douglas homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves East Douglas homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for East Douglas homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives East Douglas homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your East Douglas home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our East Douglas neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6362,8 +6362,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Jamaica Plain, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Suffolk County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Jamaica Plain home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Jamaica Plain?',
-        answer: 'Painting costs in Jamaica Plain are in line with Suffolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Jamaica Plain?',
+        answer: 'Painting projects in Jamaica Plain are handled by our experienced local crews across Suffolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Jamaica Plain?',
@@ -6385,7 +6385,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Brookline', 'Roslindale', 'West Roxbury', 'Mission Hill', 'Roxbury', 'Dorchester'],
     localTip: 'JP homes near the Arnold Arboretum face significant shade and moisture. We recommend paints with superior mildew resistance for these locations.',
     introText: 'When Jamaica Plain homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Suffolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Jamaica Plain is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Jamaica Plain homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Jamaica Plain homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Jamaica Plain homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Jamaica Plain homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Jamaica Plain homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Jamaica Plain home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Jamaica Plain neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6399,14 +6399,14 @@ export const cityContentMap: Record<string, CityContent> = {
       'Nashua River proximity creates moisture challenges',
       'Finding painters who serve the Pepperell area',
       'Your home\'s exterior shows weather wear',
-      'You want quality work at fair prices'
+      'You want quality work from a dependable local team'
     ],
     solutions: [
       'Reliable quality for East Pepperell homes',
       'Moisture-resistant paints for riverside properties',
       'Full service to Pepperell area communities',
       'Complete exterior restoration',
-      'Fair, transparent pricing'
+      'Clear, dependable communication'
     ],
     localContext: 'East Pepperell\'s peaceful riverside community deserves quality painting services. We bring professional expertise to your home with attention to the unique needs of this area.',
     whyChooseUs: [
@@ -6414,7 +6414,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Riverside property expertise',
       'Reliable service',
       'Quality workmanship',
-      'Fair pricing'
+      'Dependable, professional service'
     ],
     testimonialContext: 'East Pepperell residents appreciate our reliable service and quality results.',
     faq: [
@@ -6427,12 +6427,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Riverside homes near Nashua River in East Pepperell require special attention due to elevated moisture levels. We use breathable, moisture-resistant paints that allow water vapor to escape while preventing outside moisture from penetrating. Our prep work includes thorough mold and mildew treatment. We\'ve successfully painted numerous homes along Nashua River.'
       },
       {
-        question: 'Do you charge extra to come to East Pepperell?',
-        answer: 'No, we never charge travel fees for East Pepperell projects. East Pepperell is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with East Pepperell and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout East Pepperell?',
+        answer: 'Yes, we proudly serve East Pepperell and treat every home here with full care. East Pepperell is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with East Pepperell and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in East Pepperell?',
-        answer: 'Painting costs in East Pepperell are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in East Pepperell?',
+        answer: 'Painting projects in East Pepperell are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in East Pepperell?',
@@ -6454,7 +6454,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Pepperell', 'Groton', 'Townsend', 'Dunstable', 'Hollis NH', 'Nashua NH'],
     localTip: 'East Pepperell homes near the Nashua River benefit from annual inspection of paint condition to catch moisture-related issues early.',
     introText: 'When East Pepperell homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. East Pepperell is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that East Pepperell homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for East Pepperell homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves East Pepperell homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for East Pepperell homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives East Pepperell homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your East Pepperell home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our East Pepperell neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6500,8 +6500,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Woburn, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Woburn home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Woburn?',
-        answer: 'Painting costs in Woburn are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Woburn?',
+        answer: 'Painting projects in Woburn are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Woburn?',
@@ -6523,7 +6523,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Winchester', 'Burlington', 'Stoneham', 'Reading', 'Lexington', 'Medford'],
     localTip: 'Woburn homes near Horn Pond or wetland areas benefit from exterior paints with enhanced mold and mildew resistance.',
     introText: 'When Woburn homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Woburn is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Woburn homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Woburn homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Woburn homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Woburn homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Woburn homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Woburn home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Woburn neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6565,12 +6565,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Riverside homes near Nashua River in Pepperell require special attention due to elevated moisture levels. We use breathable, moisture-resistant paints that allow water vapor to escape while preventing outside moisture from penetrating. Our prep work includes thorough mold and mildew treatment. We\'ve successfully painted numerous homes along Nashua River.'
       },
       {
-        question: 'Do you charge extra to come to Pepperell?',
-        answer: 'No, we never charge travel fees for Pepperell projects. Pepperell is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Pepperell and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Pepperell?',
+        answer: 'Yes, we proudly serve Pepperell and treat every home here with full care. Pepperell is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Pepperell and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Pepperell?',
-        answer: 'Painting costs in Pepperell are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Pepperell?',
+        answer: 'Painting projects in Pepperell are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Pepperell?',
@@ -6592,7 +6592,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Groton', 'Townsend', 'Dunstable', 'East Pepperell', 'Hollis NH', 'Nashua NH'],
     localTip: 'Pepperell\'s traditional New England homes look best with historically-appropriate color palettes. We can help you choose colors that honor the town\'s character.',
     introText: 'When Pepperell homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Pepperell is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Pepperell homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Pepperell homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Pepperell homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Pepperell homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Pepperell homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Pepperell home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Pepperell neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6638,8 +6638,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Winchester, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Winchester home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Winchester?',
-        answer: 'Painting costs in Winchester are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Winchester?',
+        answer: 'Painting projects in Winchester are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Winchester?',
@@ -6661,7 +6661,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Arlington', 'Lexington', 'Woburn', 'Medford', 'Stoneham', 'Reading'],
     localTip: 'Winchester\'s Mystic Lakes properties benefit from premium marine-grade paints that withstand the higher humidity of lakeside locations.',
     introText: 'When Winchester homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Winchester is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Winchester homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Winchester homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Winchester homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Winchester homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Winchester homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Winchester home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Winchester neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6675,14 +6675,14 @@ export const cityContentMap: Record<string, CityContent> = {
       'Blackstone River area creates moisture considerations',
       'Finding painters who serve small Worcester County towns',
       'Your home shows weather wear from New England seasons',
-      'You want fair pricing without sacrificing quality'
+      'You want dependable service without sacrificing quality'
     ],
     solutions: [
       'Reliable quality for Millville homes',
       'Moisture-resistant solutions for river area properties',
       'Full service to all Worcester County communities',
       'Complete weather damage restoration',
-      'Fair, transparent pricing'
+      'Clear, dependable communication'
     ],
     localContext: 'Millville\'s quiet community along the Blackstone River deserves quality painting services. We bring professional expertise to your doorstep with attention to local needs.',
     whyChooseUs: [
@@ -6690,7 +6690,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Blackstone River knowledge',
       'Worcester County coverage',
       'Quality workmanship',
-      'Fair pricing'
+      'Dependable, professional service'
     ],
     testimonialContext: 'Millville residents appreciate our reliable service and fair approach.',
     faq: [
@@ -6703,12 +6703,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Riverside homes near Blackstone River in Millville require special attention due to elevated moisture levels. We use breathable, moisture-resistant paints that allow water vapor to escape while preventing outside moisture from penetrating. Our prep work includes thorough mold and mildew treatment. We\'ve successfully painted numerous homes along Blackstone River.'
       },
       {
-        question: 'Do you charge extra to come to Millville?',
-        answer: 'No, we never charge travel fees for Millville projects. Millville is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Millville and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Millville?',
+        answer: 'Yes, we proudly serve Millville and treat every home here with full care. Millville is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Millville and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Millville?',
-        answer: 'Painting costs in Millville are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Millville?',
+        answer: 'Painting projects in Millville are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Millville?',
@@ -6730,7 +6730,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Blackstone', 'Uxbridge', 'Mendon', 'Northbridge', 'Bellingham', 'Woonsocket RI'],
     localTip: 'Millville\'s Blackstone River location means higher humidity. We recommend exterior paints with excellent moisture resistance for lasting protection.',
     introText: 'When Millville homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Millville is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Millville homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Millville homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Millville homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Millville homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Millville homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Millville home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Millville neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6750,7 +6750,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Durable quality painting for Wrentham properties',
       'Familiarity with all Wrentham areas including Sheldonville',
       'Curb appeal enhancement for high-traffic area properties',
-      'Cabinet refinishing at significant savings',
+      'Cabinet refinishing that looks brand new without a full replacement',
       'Quality that exceeds expectations'
     ],
     localContext: 'Wrentham\'s neighborhoods from the historic Town Common to Sheldonville offer diverse homes deserving quality painting. We bring professional expertise to every Wrentham project.',
@@ -6772,12 +6772,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Wrentham, particularly near Wrentham Town Common. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Wrentham homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Wrentham?',
-        answer: 'No, we never charge travel fees for Wrentham projects. Wrentham is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Wrentham and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Wrentham?',
+        answer: 'Yes, we proudly serve Wrentham and treat every home here with full care. Wrentham is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Wrentham and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Wrentham?',
-        answer: 'Painting costs in Wrentham are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Wrentham?',
+        answer: 'Painting projects in Wrentham are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Wrentham?',
@@ -6799,7 +6799,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Franklin', 'Norfolk', 'Foxborough', 'Plainville', 'Bellingham', 'Millis'],
     localTip: 'Wrentham\'s varied terrain means homes in different areas face different challenges. We assess each property individually to recommend the best paint and preparation approach.',
     introText: 'When Wrentham homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Wrentham is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Wrentham homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Wrentham homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Wrentham homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Wrentham homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Wrentham homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Wrentham home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Wrentham neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6841,12 +6841,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes, we have extensive experience with lakeside properties near Wallum Lake. These homes face unique challenges: increased humidity, morning fog, and intense sun reflection off the water. We use moisture-resistant primers, mold-inhibiting paints, and UV-protective topcoats specifically for waterfront homes. We\'ve painted many properties in this beautiful area of Douglas.'
       },
       {
-        question: 'Do you charge extra to come to Douglas?',
-        answer: 'No, we never charge travel fees for Douglas projects. Douglas is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Douglas and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Douglas?',
+        answer: 'Yes, we proudly serve Douglas and treat every home here with full care. Douglas is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Douglas and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Douglas?',
-        answer: 'Painting costs in Douglas are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Douglas?',
+        answer: 'Painting projects in Douglas are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Douglas?',
@@ -6868,7 +6868,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Uxbridge', 'East Douglas', 'Northbridge', 'Sutton', 'Webster', 'Thompson CT'],
     localTip: 'Douglas homes surrounded by state forest face shade and moisture challenges. We recommend paints with superior mildew resistance for wooded lot properties.',
     introText: 'When Douglas homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Douglas is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Douglas homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Douglas homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Douglas homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Douglas homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Douglas homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Douglas home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Douglas neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6882,14 +6882,14 @@ export const cityContentMap: Record<string, CityContent> = {
       'Finding quality contractors in small towns is challenging',
       'Your New England farmhouse or colonial needs proper care',
       'Weather and time have worn your exterior paint',
-      'You want reliable service at fair prices'
+      'You want reliable, professional service you can count on'
     ],
     solutions: [
       'Full service to all Dunstable properties',
       'Quality craftsmanship for small-town residents',
       'Expertise with traditional New England homes',
       'Complete exterior restoration and protection',
-      'Reliable service with fair pricing'
+      'Reliable, professional service'
     ],
     localContext: 'Dunstable\'s quiet, rural character and traditional New England homes create a special community. We bring professional painting services that honor this heritage.',
     whyChooseUs: [
@@ -6897,7 +6897,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Small-town service quality',
       'New England home expertise',
       'Weather-resistant paints',
-      'Fair, honest pricing'
+      'Honest, dependable service'
     ],
     testimonialContext: 'Dunstable residents appreciate our reliable service and respect for their community.',
     faq: [
@@ -6910,12 +6910,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Dunstable, particularly near Dunstable Town Common. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Dunstable homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Dunstable?',
-        answer: 'No, we never charge travel fees for Dunstable projects. Dunstable is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Dunstable and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Dunstable?',
+        answer: 'Yes, we proudly serve Dunstable and treat every home here with full care. Dunstable is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Dunstable and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Dunstable?',
-        answer: 'Painting costs in Dunstable are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Dunstable?',
+        answer: 'Painting projects in Dunstable are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Dunstable?',
@@ -6937,7 +6937,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Pepperell', 'Groton', 'Tyngsboro', 'Nashua NH', 'Hollis NH', 'Townsend'],
     localTip: 'Dunstable\'s open terrain means homes face significant sun and wind exposure. Premium exterior paints with UV protection extend the life of your paint job.',
     introText: 'When Dunstable homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Dunstable is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Dunstable homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Dunstable homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Dunstable homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Dunstable homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Dunstable homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Dunstable home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Dunstable neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -6983,8 +6983,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes! We have extensive experience with Lowell\'s multi-family properties, condos, and apartment buildings. We coordinate with building management, handle all insurance and access requirements, and work around tenant schedules. We understand the unique logistics of urban painting projects and maintain professional, quiet work environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Lowell?',
-        answer: 'Lowell painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Lowell?',
+        answer: 'Lowell painting projects begin with a careful on-site assessment of your home. Every project is unique, so we walk through the full scope with you before any work starts. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Lowell?',
@@ -7006,7 +7006,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Chelmsford', 'Tewksbury', 'Dracut', 'Tyngsboro', 'Billerica', 'Westford'],
     localTip: 'Lowell\'s mill buildings and Merrimack River proximity create unique humidity challenges. We use industrial-grade moisture barriers and paints for lasting protection.',
     introText: 'When Lowell homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Lowell is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Lowell homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Lowell homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Lowell homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Lowell homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Lowell homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Lowell home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Lowell neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7035,7 +7035,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'River property experience',
       'Historic home knowledge',
       'Reliable service',
-      'Fair pricing'
+      'Dependable, professional service'
     ],
     testimonialContext: 'Blackstone homeowners appreciate our understanding of the river valley\'s unique challenges.',
     faq: [
@@ -7048,12 +7048,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Riverside homes near Blackstone River in Blackstone require special attention due to elevated moisture levels. We use breathable, moisture-resistant paints that allow water vapor to escape while preventing outside moisture from penetrating. Our prep work includes thorough mold and mildew treatment. We\'ve successfully painted numerous homes along Blackstone River.'
       },
       {
-        question: 'Do you charge extra to come to Blackstone?',
-        answer: 'No, we never charge travel fees for Blackstone projects. Blackstone is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Blackstone and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Blackstone?',
+        answer: 'Yes, we proudly serve Blackstone and treat every home here with full care. Blackstone is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Blackstone and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Blackstone?',
-        answer: 'Painting costs in Blackstone are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Blackstone?',
+        answer: 'Painting projects in Blackstone are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Blackstone?',
@@ -7075,7 +7075,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Millville', 'Mendon', 'Uxbridge', 'Bellingham', 'Woonsocket RI', 'North Smithfield RI'],
     localTip: 'Blackstone homes near the river and gorge face significant humidity. We recommend premium moisture-barrier paints for these locations.',
     introText: 'When Blackstone homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Blackstone is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Blackstone homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Blackstone homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Blackstone homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Blackstone homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Blackstone homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Blackstone home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Blackstone neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7088,14 +7088,14 @@ export const cityContentMap: Record<string, CityContent> = {
       'Your Oxford home needs reliable, quality painting',
       'Finding painters who serve south-central Worcester County',
       'Your property faces New England weather challenges',
-      'You want fair pricing from honest contractors',
+      'You want honest, dependable contractors you can trust',
       'Previous painters didn\'t meet your expectations'
     ],
     solutions: [
       'Reliable quality for Oxford properties',
       'Full service throughout south-central Worcester County',
       'Weather-resistant paint systems',
-      'Honest, fair pricing',
+      'Honest, dependable service',
       'Quality that exceeds expectations'
     ],
     localContext: 'Oxford\'s central Massachusetts location puts homes squarely in the path of New England weather extremes. We provide painting solutions that protect your investment year-round.',
@@ -7103,7 +7103,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Oxford community service',
       'Worcester County coverage',
       'Weather-resistant expertise',
-      'Fair, honest pricing',
+      'Honest, dependable service',
       'Quality commitment'
     ],
     testimonialContext: 'Oxford homeowners appreciate our reliable service and quality results.',
@@ -7117,12 +7117,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Absolutely! We specialize in painting historic properties in Oxford, particularly near Clara Barton Birthplace Museum. We\'re EPA Lead-Safe Certified (required for pre-1978 homes), understand period-appropriate color palettes, and take extra care with original architectural details. Many Oxford homes have beautiful woodwork that deserves expert attention.'
       },
       {
-        question: 'Do you charge extra to come to Oxford?',
-        answer: 'No, we never charge travel fees for Oxford projects. Oxford is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Oxford and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Oxford?',
+        answer: 'Yes, we proudly serve Oxford and treat every home here with full care. Oxford is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Oxford and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Oxford?',
-        answer: 'Painting costs in Oxford are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Oxford?',
+        answer: 'Painting projects in Oxford are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Oxford?',
@@ -7144,7 +7144,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Auburn', 'Webster', 'Charlton', 'Dudley', 'Leicester', 'Sutton'],
     localTip: 'Oxford\'s central Massachusetts location means extreme temperature swings. We use flexible paint formulations that expand and contract without cracking.',
     introText: 'When Oxford homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Oxford is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Oxford homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Oxford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Oxford homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Oxford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Oxford homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Oxford home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Oxford neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7190,8 +7190,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes! We have extensive experience with Somerville\'s multi-family properties, condos, and apartment buildings. We coordinate with building management, handle all insurance and access requirements, and work around tenant schedules. We understand the unique logistics of urban painting projects and maintain professional, quiet work environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Somerville?',
-        answer: 'Somerville painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Somerville?',
+        answer: 'Somerville painting projects begin with a careful on-site assessment of your home. Every project is unique, so we walk through the full scope with you before any work starts. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Somerville?',
@@ -7211,9 +7211,9 @@ export const cityContentMap: Record<string, CityContent> = {
       }
     ],
     nearbyAreas: ['Cambridge', 'Medford', 'Arlington', 'Charlestown', 'Boston', 'Everett'],
-    localTip: 'Somerville\'s triple-deckers benefit from coordinated painting across all units. This ensures consistent appearance and can reduce costs through efficiency.',
+    localTip: 'Somerville\'s triple-deckers benefit from coordinated painting across all units. This ensures consistent appearance and a more efficient project overall.',
     introText: 'When Somerville homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Somerville is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Somerville homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Somerville homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Somerville homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Somerville homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Somerville homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Somerville home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Somerville neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7259,8 +7259,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes! We have extensive experience with Medford\'s multi-family properties, condos, and apartment buildings. We coordinate with building management, handle all insurance and access requirements, and work around tenant schedules. We understand the unique logistics of urban painting projects and maintain professional, quiet work environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Medford?',
-        answer: 'Medford painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Medford?',
+        answer: 'Medford painting projects begin with a careful on-site assessment of your home. Every project is unique, so we walk through the full scope with you before any work starts. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Medford?',
@@ -7282,7 +7282,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Somerville', 'Arlington', 'Winchester', 'Malden', 'Everett', 'Woburn'],
     localTip: 'Medford homes near the Mystic River and Fells benefit from paints with enhanced moisture and mildew resistance.',
     introText: 'When Medford homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Medford is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Medford homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Medford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Medford homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Medford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Medford homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Medford home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Medford neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7324,12 +7324,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'We paint homes throughout all of Westminster, from Westminster Center to the surrounding neighborhoods. We\'re familiar with the different housing styles across Westminster - whether you\'re near Wachusett Meadow Wildlife Sanctuary or in the newer developments. Our crews know Westminster well and can navigate efficiently to keep your project on schedule.'
       },
       {
-        question: 'Do you charge extra to come to Westminster?',
-        answer: 'No, we never charge travel fees for Westminster projects. Westminster is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Westminster and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Westminster?',
+        answer: 'Yes, we proudly serve Westminster and treat every home here with full care. Westminster is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Westminster and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Westminster?',
-        answer: 'Painting costs in Westminster are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Westminster?',
+        answer: 'Painting projects in Westminster are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Westminster?',
@@ -7351,7 +7351,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Fitchburg', 'Leominster', 'Gardner', 'Princeton', 'Hubbardston', 'Ashburnham'],
     localTip: 'Westminster\'s elevation means more exposure to wind and UV. Premium exterior paints with UV inhibitors provide longer-lasting protection.',
     introText: 'When Westminster homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Westminster is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Westminster homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Westminster homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Westminster homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Westminster homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Westminster homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Westminster home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Westminster neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7397,8 +7397,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Wilmington, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Wilmington home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Wilmington?',
-        answer: 'Painting costs in Wilmington are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Wilmington?',
+        answer: 'Painting projects in Wilmington are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Wilmington?',
@@ -7420,7 +7420,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Billerica', 'Burlington', 'Woburn', 'Tewksbury', 'Reading', 'North Reading'],
     localTip: 'Wilmington homes near Silver Lake benefit from exterior paints with enhanced moisture resistance for lasting protection.',
     introText: 'When Wilmington homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Wilmington is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Wilmington homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Wilmington homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Wilmington homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Wilmington homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Wilmington homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Wilmington home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Wilmington neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7462,12 +7462,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Riverside homes near Squannacook River in Townsend require special attention due to elevated moisture levels. We use breathable, moisture-resistant paints that allow water vapor to escape while preventing outside moisture from penetrating. Our prep work includes thorough mold and mildew treatment. We\'ve successfully painted numerous homes along Squannacook River.'
       },
       {
-        question: 'Do you charge extra to come to Townsend?',
-        answer: 'No, we never charge travel fees for Townsend projects. Townsend is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Townsend and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Townsend?',
+        answer: 'Yes, we proudly serve Townsend and treat every home here with full care. Townsend is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Townsend and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Townsend?',
-        answer: 'Painting costs in Townsend are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Townsend?',
+        answer: 'Painting projects in Townsend are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Townsend?',
@@ -7489,7 +7489,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Groton', 'Pepperell', 'Lunenburg', 'Fitchburg', 'Ashby', 'Mason NH'],
     localTip: 'Townsend\'s traditional New England homes look best with historically-appropriate colors. We can help you choose palettes that honor the town\'s heritage.',
     introText: 'When Townsend homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Townsend is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Townsend homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Townsend homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Townsend homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Townsend homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Townsend homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Townsend home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Townsend neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7503,14 +7503,14 @@ export const cityContentMap: Record<string, CityContent> = {
       'Finding painters familiar with the NH border area',
       'Your property needs curb appeal maintenance',
       'Previous painters didn\'t understand riverfront property needs',
-      'You want reliable service at fair prices'
+      'You want reliable, professional service you can count on'
     ],
     solutions: [
       'Merrimack River expertise',
       'NH border area coverage',
       'Curb appeal enhancement',
       'Riverfront property specialists',
-      'Reliable, fairly-priced service'
+      'Reliable, professional service'
     ],
     localContext: 'Tyngsboro\'s location along the Merrimack River creates unique painting challenges. We understand these conditions and provide solutions that protect your home.',
     whyChooseUs: [
@@ -7518,7 +7518,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Border area service',
       'Curb appeal expertise',
       'River property experience',
-      'Fair pricing'
+      'Dependable, professional service'
     ],
     testimonialContext: 'Tyngsboro homeowners appreciate our understanding of riverfront painting challenges.',
     faq: [
@@ -7531,12 +7531,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Riverside homes near Merrimack River in Tyngsboro require special attention due to elevated moisture levels. We use breathable, moisture-resistant paints that allow water vapor to escape while preventing outside moisture from penetrating. Our prep work includes thorough mold and mildew treatment. We\'ve successfully painted numerous homes along Merrimack River.'
       },
       {
-        question: 'Do you charge extra to come to Tyngsboro?',
-        answer: 'No, we never charge travel fees for Tyngsboro projects. Tyngsboro is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Tyngsboro and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Tyngsboro?',
+        answer: 'Yes, we proudly serve Tyngsboro and treat every home here with full care. Tyngsboro is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Tyngsboro and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Tyngsboro?',
-        answer: 'Painting costs in Tyngsboro are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Tyngsboro?',
+        answer: 'Painting projects in Tyngsboro are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Tyngsboro?',
@@ -7558,7 +7558,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Lowell', 'Chelmsford', 'Dunstable', 'Nashua NH', 'Hudson NH', 'Dracut'],
     localTip: 'Tyngsboro homes along the Merrimack River benefit from premium moisture-barrier paints that withstand the river\'s humidity.',
     introText: 'When Tyngsboro homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Tyngsboro is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Tyngsboro homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Tyngsboro homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Tyngsboro homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Tyngsboro homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Tyngsboro homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Tyngsboro home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Tyngsboro neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7572,14 +7572,14 @@ export const cityContentMap: Record<string, CityContent> = {
       'Lake Whittemore area properties face moisture challenges',
       'Finding quality contractors in central Worcester County',
       'Your older New England home deserves proper care',
-      'You want fair pricing for professional work'
+      'You want dependable, professional work you can trust'
     ],
     solutions: [
       'Reliable quality for Spencer homes',
       'Moisture solutions for lakeside properties',
       'Full Worcester County coverage',
       'New England home expertise',
-      'Fair, transparent pricing'
+      'Clear, dependable communication'
     ],
     localContext: 'Spencer\'s quiet community and Spencer State Forest surroundings create a special environment. We bring professional painting services that respect your property and the area\'s character.',
     whyChooseUs: [
@@ -7587,7 +7587,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Lake area expertise',
       'County-wide coverage',
       'Traditional home knowledge',
-      'Fair pricing'
+      'Dependable, professional service'
     ],
     testimonialContext: 'Spencer homeowners appreciate our reliable service and quality results.',
     faq: [
@@ -7600,12 +7600,12 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes, we have extensive experience with lakeside properties near Lake Whittemore. These homes face unique challenges: increased humidity, morning fog, and intense sun reflection off the water. We use moisture-resistant primers, mold-inhibiting paints, and UV-protective topcoats specifically for waterfront homes. We\'ve painted many properties in this beautiful area of Spencer.'
       },
       {
-        question: 'Do you charge extra to come to Spencer?',
-        answer: 'No, we never charge travel fees for Spencer projects. Spencer is within our standard service area, and we price projects based on the work required, not distance. Many of our crew members are familiar with Spencer and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
+        question: 'Do you serve homes throughout Spencer?',
+        answer: 'Yes, we proudly serve Spencer and treat every home here with full care. Spencer is well within our standard service area, and we bring the same care and attention to every project here as we do closer to home. Many of our crew members are familiar with Spencer and enjoy working in smaller communities where we often build lasting relationships with homeowners.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Spencer?',
-        answer: 'Painting costs in Spencer are in line with Worcester County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Spencer?',
+        answer: 'Painting projects in Spencer are handled by our experienced local crews across Worcester County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Spencer?',
@@ -7627,7 +7627,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Leicester', 'East Brookfield', 'Charlton', 'Oakham', 'Paxton', 'Brookfield'],
     localTip: 'Spencer homes near Spencer State Forest and lakes benefit from paints with enhanced mildew resistance for lasting protection.',
     introText: 'When Spencer homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Worcester County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Spencer is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Spencer homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Spencer homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Spencer homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Spencer homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Spencer homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Spencer home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Spencer neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7673,8 +7673,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Woonsocket, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Providence County, RI has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Woonsocket home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Woonsocket?',
-        answer: 'Painting costs in Woonsocket are in line with Providence County, RI averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Woonsocket?',
+        answer: 'Painting projects in Woonsocket are handled by our experienced local crews across Providence County, RI averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
       },
       {
         question: 'How soon can you start a project in Woonsocket?',
@@ -7696,7 +7696,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Blackstone', 'Bellingham', 'Millville', 'North Smithfield RI', 'Cumberland RI', 'Uxbridge'],
     localTip: 'Woonsocket\'s Blackstone River location means high humidity. We use premium moisture-barrier paints for lasting protection.',
     introText: 'When Woonsocket homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Providence County, RI by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Woonsocket is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Woonsocket homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Woonsocket homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Woonsocket homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Woonsocket homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Woonsocket homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Woonsocket home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Woonsocket neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7710,14 +7710,14 @@ export const cityContentMap: Record<string, CityContent> = {
       'Finding painters who understand Tewksbury\'s suburban character',
       'Your deck or siding needs professional attention',
       'Previous painters weren\'t responsive or reliable',
-      'You want quality work at reasonable prices'
+      'You want quality work from a reliable local team'
     ],
     solutions: [
       'Reliable quality for Tewksbury families',
       'Suburban home expertise',
       'Deck and siding restoration',
       'Responsive, professional service',
-      'Quality at fair prices'
+      'Quality craftsmanship you can count on'
     ],
     localContext: 'Tewksbury\'s family-friendly neighborhoods deserve quality painting services. We bring professional expertise that enhances your home\'s beauty and value.',
     whyChooseUs: [
@@ -7725,7 +7725,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Suburban expertise',
       'Deck specialists',
       'Reliable responsiveness',
-      'Fair pricing'
+      'Dependable, professional service'
     ],
     testimonialContext: 'Tewksbury families appreciate our reliability and quality results.',
     faq: [
@@ -7742,8 +7742,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Tewksbury, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Tewksbury home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Tewksbury?',
-        answer: 'Painting costs in Tewksbury are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Tewksbury?',
+        answer: 'Painting projects in Tewksbury are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Tewksbury?',
@@ -7765,7 +7765,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Lowell', 'Billerica', 'Wilmington', 'Andover', 'Chelmsford', 'Dracut'],
     localTip: 'Tewksbury decks face significant weather exposure. We recommend premium deck stains with UV protection for lasting beauty.',
     introText: 'When Tewksbury homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Tewksbury is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Tewksbury homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Tewksbury homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Tewksbury homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Tewksbury homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Tewksbury homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Tewksbury home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Tewksbury neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7811,8 +7811,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Canton, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Norfolk County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Canton home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Canton?',
-        answer: 'Painting costs in Canton are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Canton?',
+        answer: 'Painting projects in Canton are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Canton?',
@@ -7834,7 +7834,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Dedham', 'Norwood', 'Sharon', 'Stoughton', 'Milton', 'Randolph'],
     localTip: 'Canton homes near the Blue Hills face shade and moisture from the surrounding forest. We recommend mildew-resistant paints for these locations.',
     introText: 'When Canton homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Canton is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Canton homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Canton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Canton homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Canton homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Canton homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Canton home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Canton neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7880,8 +7880,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Sharon, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Norfolk County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Sharon home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Sharon?',
-        answer: 'Painting costs in Sharon are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Sharon?',
+        answer: 'Painting projects in Sharon are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Sharon?',
@@ -7903,7 +7903,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Canton', 'Stoughton', 'Foxborough', 'Norwood', 'Walpole', 'Easton'],
     localTip: 'Sharon lakefront properties benefit from premium marine-influenced paints that resist the higher humidity of lakeside locations.',
     introText: 'When Sharon homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Sharon is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Sharon homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Sharon homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Sharon homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Sharon homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Sharon homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Sharon home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Sharon neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7949,8 +7949,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Stoneham, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Middlesex County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Stoneham home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Stoneham?',
-        answer: 'Painting costs in Stoneham are in line with Middlesex County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Stoneham?',
+        answer: 'Painting projects in Stoneham are handled by our experienced local crews across Middlesex County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Stoneham?',
@@ -7972,7 +7972,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Woburn', 'Winchester', 'Melrose', 'Medford', 'Reading', 'Wakefield'],
     localTip: 'Stoneham homes near the Middlesex Fells face significant shade. Mildew-resistant paints are essential for lasting protection in these locations.',
     introText: 'When Stoneham homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Middlesex County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Stoneham is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Stoneham homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Stoneham homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Stoneham homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Stoneham homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Stoneham homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Stoneham home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Stoneham neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -7986,14 +7986,14 @@ export const cityContentMap: Record<string, CityContent> = {
       'Finding painters familiar with Foxborough\'s community',
       'Your property deserves curb appeal that matches the area\'s pride',
       'Previous painters didn\'t finish on their promised schedule',
-      'You want quality work at reasonable prices'
+      'You want quality work from a reliable local team'
     ],
     solutions: [
       'Reliable quality for Foxborough properties',
       'Community-focused service',
       'Curb appeal enhancement matching local pride',
       'On-schedule project completion',
-      'Quality at fair prices'
+      'Quality craftsmanship you can count on'
     ],
     localContext: 'Foxborough\'s community pride, anchored by Gillette Stadium, extends to its residential neighborhoods. We provide painting that reflects this community spirit.',
     whyChooseUs: [
@@ -8001,7 +8001,7 @@ export const cityContentMap: Record<string, CityContent> = {
       'Reliable scheduling',
       'Curb appeal expertise',
       'On-time completion',
-      'Fair pricing'
+      'Dependable, professional service'
     ],
     testimonialContext: 'Foxborough homeowners appreciate our reliability and community focus.',
     faq: [
@@ -8018,8 +8018,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'In Foxborough, we paint a diverse mix of homes - single-family colonials, capes, ranches, and newer construction. Norfolk County has wonderful architectural variety, and we adapt our techniques to each home\'s specific needs. Whether your Foxborough home is 20 or 200 years old, we have the experience to paint it beautifully.'
       },
       {
-        question: 'What\'s the average cost to paint a house in Foxborough?',
-        answer: 'Painting costs in Foxborough are in line with Norfolk County averages. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in Foxborough?',
+        answer: 'Painting projects in Foxborough are handled by our experienced local crews across Norfolk County. Every project is unique, so we begin with a careful on-site assessment of your home. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in Foxborough?',
@@ -8041,7 +8041,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Wrentham', 'Sharon', 'Walpole', 'Norfolk', 'Mansfield', 'Plainville'],
     localTip: 'Foxborough homes benefit from quality exterior painting that enhances curb appeal and reflects the community\'s pride.',
     introText: 'When Foxborough homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Norfolk County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. Foxborough is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that Foxborough homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Foxborough homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves Foxborough homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for Foxborough homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives Foxborough homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your Foxborough home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our Foxborough neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -8087,8 +8087,8 @@ export const cityContentMap: Record<string, CityContent> = {
         answer: 'Yes! We have extensive experience with New Bedford\'s multi-family properties, condos, and apartment buildings. We coordinate with building management, handle all insurance and access requirements, and work around tenant schedules. We understand the unique logistics of urban painting projects and maintain professional, quiet work environments.'
       },
       {
-        question: 'What\'s the average cost to paint a house in New Bedford?',
-        answer: 'New Bedford painting costs are competitive with the greater Boston area. Every project is unique, so we provide free, detailed estimates tailored to your specific needs. Pricing depends on the number of rooms, ceiling height, surface condition, and prep work required. Call (508) 690-8886 for a personalized quote.'
+        question: 'What does your painting process include in New Bedford?',
+        answer: 'New Bedford painting projects begin with a careful on-site assessment of your home. Every project is unique, so we walk through the full scope with you before any work starts. Our process covers thorough surface preparation, premium paint application, and a detailed final walkthrough. Call (508) 690-8886 to schedule your free estimate.'
       },
       {
         question: 'How soon can you start a project in New Bedford?',
@@ -8110,7 +8110,7 @@ export const cityContentMap: Record<string, CityContent> = {
     nearbyAreas: ['Fairhaven', 'Dartmouth', 'Acushnet', 'Freetown', 'Mattapoisett', 'Fall River'],
     localTip: 'New Bedford\'s coastal location demands premium marine-grade exterior paints. Standard paints will fail quickly in the salt air environment.',
     introText: 'When New Bedford homeowners need professional painting services they can trust, JH Painting Services delivers exceptional results with the quality and reliability that local families deserve. Based in nearby Marlborough, we\'ve built our reputation throughout Bristol County by providing meticulous craftsmanship, transparent pricing, and personalized service that larger companies simply can\'t match. New Bedford is within our extended service area throughout Massachusetts, and we\'ve spent years painting homes throughout this wonderful community. Whether you\'re updating your interior with fresh, modern colors, protecting your exterior from New England\'s harsh weather, or transforming your kitchen with cabinet refinishing, our experienced team brings the expertise and attention to detail that New Bedford homes deserve.',
-    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for New Bedford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service saves New Bedford homeowners 60-70% compared to full replacement while delivering a factory-smooth, spray-applied finish.',
+    serviceDescription: 'JH Painting Services offers comprehensive painting and finishing solutions for New Bedford homes and businesses. Our interior painting services include walls, ceilings, trim, doors, and specialty finishes - transforming every room with premium low-VOC paints safe for your family. For exteriors, we provide complete house painting with proper surface preparation, premium weather-resistant paints, and attention to detail that protects your investment against Massachusetts\' challenging climate. Our cabinet refinishing service gives New Bedford homeowners a factory-smooth, spray-applied finish that looks brand new without the disruption of a full replacement.',
     closingPitch: 'Ready to transform your New Bedford home with professional painting that exceeds expectations? JH Painting Services combines premium materials, expert craftsmanship, and genuine care for every project we undertake. Our New Bedford neighbors trust us because we deliver on our promises - showing up on time, communicating clearly, protecting your property, and achieving beautiful, lasting results. Contact us today at (508) 690-8886 for your free estimate.'
   },
 
@@ -8149,7 +8149,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'What\'s included in a free estimate?',
-        answer: 'Our free estimates include a thorough assessment of your project, detailed scope of work, material recommendations, and transparent pricing. There\'s no obligation and no pressure.'
+        answer: 'Our free estimates include a thorough assessment of your project, detailed scope of work, material recommendations, and a clear written summary. There\'s no obligation and no pressure.'
       }
     ],
     nearbyAreas: ['Marlborough', 'Framingham', 'Worcester', 'Boston'],
@@ -8201,7 +8201,7 @@ export function generateUniqueCityContent(
       `Your ${cityName} home's exterior paint is peeling, cracking, or fading from years of New England weather exposure`,
       `Previous painters in ${cityName} left your project unfinished, missed details, or produced sloppy work that's already failing`,
       `The demanding ${countyContext} climate has caused moisture damage, mold growth, or wood rot on your ${cityName} property`,
-      `Your ${cityName} kitchen cabinets look dated but full replacement is costly and out of reach`,
+      `Your ${cityName} kitchen cabinets look dated but a full replacement means weeks of disruption you would rather avoid`,
       `Finding reliable, trustworthy painters in ${cityName} who show up on time and respect your property has been frustrating`,
       `Your ${cityName} home near ${landmarksList} needs painters who understand the area's architectural character`,
       `Balancing home improvement with your busy ${cityName} family schedule feels overwhelming`
@@ -8210,12 +8210,12 @@ export function generateUniqueCityContent(
       `Premium Benjamin Moore and Sherwin-Williams paints specifically formulated for ${countyContext}'s extreme weather conditions`,
       `Meticulous 7-step preparation process that addresses underlying issues before any paint is applied`,
       `EPA Lead-Safe Certified painting for ${cityName}'s older homes built before 1978`,
-      `Cabinet refinishing that saves 60-70% vs replacement while delivering stunning, factory-quality results`,
+      `Cabinet refinishing that delivers stunning, factory-quality results without the disruption of a full replacement`,
       `Consistent, reliable service - we show up when promised, communicate clearly, and treat your ${cityName} home with respect`,
       `Local expertise with ${cityName}'s architectural styles from historic properties to new construction`,
       `Flexible scheduling designed around busy ${cityName} family and work commitments`
     ],
-    localContext: `We're proud to serve ${cityName} and the surrounding ${countyContext} communities. Our crews are familiar with ${neighborhoodsList} and landmarks like ${landmarksList}. Being ${distanceText} means fast response times and genuine accountability - we're not distant contractors passing through, but neighbors invested in ${cityName}'s community. We understand what ${cityName} homeowners value: quality work, fair prices, and painters who treat their property with care.`,
+    localContext: `We're proud to serve ${cityName} and the surrounding ${countyContext} communities. Our crews are familiar with ${neighborhoodsList} and landmarks like ${landmarksList}. Being ${distanceText} means fast response times and genuine accountability - we're not distant contractors passing through, but neighbors invested in ${cityName}'s community. We understand what ${cityName} homeowners value: quality work, dependable communication, and painters who treat their property with care.`,
     whyChooseUs: [
       `Located ${distanceText} - your true local ${cityName} painters`,
       `Deep knowledge of ${cityName}'s architecture and ${countyContext}'s climate challenges`,
@@ -8223,7 +8223,7 @@ export function generateUniqueCityContent(
       `40+ five-star Google reviews from satisfied customers`,
       `Fully licensed, insured, and EPA Lead-Safe Certified`,
       `Written warranties: 5 years exterior, 3 years interior`,
-      `Free, detailed estimates with transparent, upfront pricing`
+      `Free, detailed estimates with a clear, written scope of work`
     ],
     testimonialContext: `${cityName} homeowners consistently praise our attention to detail, reliable communication, and the lasting quality of our work. Our reputation throughout ${countyContext} is built on one satisfied customer at a time.`,
     faq: [
@@ -8232,8 +8232,8 @@ export function generateUniqueCityContent(
         answer: `Absolutely! ${cityName} is ${distance && distance < 10 ? 'one of our closest service areas' : 'well within our service area'}, ${distanceText}. We have many satisfied customers throughout ${cityName} and can typically schedule estimates within 2-3 days. Call (508) 690-8886 for your free ${cityName} estimate!`
       },
       {
-        question: `How much does painting cost in ${cityName}?`,
-        answer: `Painting costs in ${cityName} depend on project scope, surface condition, and paint selection. Every ${cityName} project is unique, so we provide free, detailed estimates with no hidden fees. Contact us at (508) 690-8886 for a personalized quote tailored to your specific needs.`
+        question: `What does your painting process include in ${cityName}?`,
+        answer: `Every ${cityName} painting project begins with a thorough on-site assessment. Our process covers careful surface preparation, premium paint application, and a detailed final walkthrough. We provide free, detailed estimates for every ${cityName} project. Contact us at (508) 690-8886 to schedule yours.`
       },
       {
         question: `What makes JH Painting the best choice for ${cityName} homeowners?`,
@@ -8339,7 +8339,7 @@ const serviceTemplates: Record<string, {
       [
         { title: 'Chalking & Discoloration?', desc: 'Your exterior paint has broken down, leaving a chalky residue and uneven color. It looks worse every year.', solution: 'Proper power washing and premium exterior paint systems' },
         { title: 'Caulk Cracked & Failing?', desc: 'The caulk around your windows, doors, and trim has dried out and cracked, letting water damage your home.', solution: 'Complete recaulking with premium flexible sealants' },
-        { title: 'Last Paint Job Failed Early?', desc: "You paid for exterior painting but it's already failing after just 2-3 years. Poor prep and cheap paint are showing.", solution: 'Professional prep work with 10+ year paint systems' }
+        { title: 'Last Paint Job Failed Early?', desc: "You had exterior painting done but it's already failing after just 2-3 years. Poor prep and low-quality paint are showing.", solution: 'Professional prep work with 10+ year paint systems' }
       ],
       [
         { title: 'Mold & Mildew Growth?', desc: 'Green and black growth on your siding is more than ugly - it\'s damaging your home and can affect indoor air quality.', solution: 'Deep cleaning and mold-resistant exterior paints' },
@@ -8376,7 +8376,7 @@ const serviceTemplates: Record<string, {
         { title: 'High-Traffic Durability Needed?', desc: 'Standard residential paints won\'t survive your commercial traffic. Walls get damaged quickly.', solution: 'Commercial-grade, scrubbable paint systems' }
       ],
       [
-        { title: 'Budget Constraints Real?', desc: 'You need professional results but have a limited budget. Every dollar counts for your business.', solution: 'Honest pricing with no hidden fees or surprises' },
+        { title: 'Need a Reliable Crew?', desc: 'You need professional results from a contractor who shows up, communicates clearly, and finishes on schedule.', solution: 'Dependable scheduling with a clear written scope' },
         { title: 'Previous Contractor Unreliable?', desc: 'You\'ve been burned by painters who didn\'t show up, dragged out the project, or did subpar work.', solution: 'Dependable scheduling with clear communication' },
         { title: 'Large Space, Complex Logistics?', desc: 'Your warehouse, retail space, or office building requires careful planning and coordination.', solution: 'Experienced project management for complex jobs' }
       ]
@@ -8402,10 +8402,10 @@ const serviceTemplates: Record<string, {
       [
         { title: 'Whole House Overwhelm?', desc: 'Your entire home needs painting but the scope feels impossible. Where do you even start?', solution: 'Expert project planning from start to finish' },
         { title: 'Coordinating Interior & Exterior?', desc: 'You want both interior and exterior done, but managing multiple projects is daunting.', solution: 'Single contractor for complete home transformation' },
-        { title: 'Budget for Everything?', desc: 'Full house painting is a major investment. You need honest pricing you can plan around.', solution: 'Transparent pricing with flexible payment options' }
+        { title: 'Coordinating a Big Project?', desc: 'Full house painting is a major undertaking. You need a clear plan and a single point of contact you can rely on.', solution: 'Detailed project planning with a clear written scope' }
       ],
       [
-        { title: 'Selling Your Home Soon?', desc: 'Fresh paint is the best ROI for home sales, but you need it done quickly and professionally.', solution: 'Fast turnaround for real estate timelines' },
+        { title: 'Selling Your Home Soon?', desc: 'Fresh paint makes the strongest first impression for home sales, but you need it done quickly and professionally.', solution: 'Fast turnaround for real estate timelines' },
         { title: 'Just Moved In?', desc: 'Your new home needs your colors and style, but you\'re already exhausted from the move.', solution: 'We handle everything while you settle in' },
         { title: 'Growing Family Needs?', desc: 'Nursery prep, kid-proof finishes, playroom updates - your home needs to adapt to family life.', solution: 'Durable, washable, family-safe paints' }
       ],
@@ -8434,7 +8434,7 @@ const serviceTemplates: Record<string, {
   'cabinet-painting': {
     painPointVariants: [
       [
-        { title: 'Kitchen Cabinets Dated & Dark?', desc: 'Those oak or cherry cabinets from the 90s drag your whole kitchen down. But full cabinet replacement is expensive and disruptive.', solution: 'Save 70% with professional cabinet refinishing' },
+        { title: 'Kitchen Cabinets Dated & Dark?', desc: 'Those oak or cherry cabinets from the 90s drag your whole kitchen down. But a full cabinet replacement means weeks of disruption.', solution: 'Refresh your kitchen with professional cabinet refinishing' },
         { title: 'Want White But Worried?', desc: 'You love the look of white cabinets, but will they chip, peel, or yellow over time?', solution: 'Professional spray finish with 10+ year durability' },
         { title: 'Tried DIY & Failed?', desc: 'Your cabinet painting attempt left brush marks, drips, and uneven coverage. Now it looks worse than before.', solution: 'We fix DIY disasters and deliver factory-smooth results' }
       ],
@@ -8450,25 +8450,25 @@ const serviceTemplates: Record<string, {
       ]
     ],
     introTemplates: [
-      'Transform your {cityName} kitchen with professional cabinet painting that saves 70% compared to replacement. JH Painting brings factory-quality spray finishes to {countyContext} homes, delivering stunning results that last 10+ years. Your outdated cabinets can look brand new.',
-      '{cityName} homeowners are discovering that cabinet painting is the smartest kitchen upgrade. Our {countyContext} cabinet refinishing specialists use professional spray equipment and premium paints for a smooth, durable finish that rivals new cabinetry at a fraction of the cost.',
-      'Why pay for expensive new cabinets when professional refinishing delivers beautiful results for a fraction of the cost? Our {cityName} cabinet painting service transforms dated kitchens throughout {neighborhoodsList} with expert preparation and flawless spray application.'
+      'Transform your {cityName} kitchen with professional cabinet painting that refreshes your space without the disruption of a full replacement. JH Painting brings factory-quality spray finishes to {countyContext} homes, delivering stunning results that last 10+ years. Your outdated cabinets can look brand new.',
+      '{cityName} homeowners are discovering that cabinet painting is the smartest kitchen upgrade. Our {countyContext} cabinet refinishing specialists use professional spray equipment and premium paints for a smooth, durable finish that rivals brand-new cabinetry.',
+      'Why endure the disruption of replacing cabinets when professional refinishing delivers beautiful, lasting results? Our {cityName} cabinet painting service transforms dated kitchens throughout {neighborhoodsList} with expert preparation and flawless spray application.'
     ],
     localContextTemplates: [
       'We\'ve refinished cabinets in {cityName} homes from {neighborhoodsList} to every corner of {countyContext}. From 1990s oak to 2010s maple, we know how to transform any cabinet style into something you\'ll love.',
-      '{cityName} kitchens near {landmarksList} and throughout the community have been transformed by our cabinet painting services. Homeowners are amazed at how dramatically cabinet refinishing updates their space without the cost and disruption of replacement.',
-      'The {cityName} homeowners we serve in {countyContext} consistently tell us cabinet painting was their best home improvement decision. The value is incredible - stunning results at 30% of replacement cost, completed in days instead of weeks.'
+      '{cityName} kitchens near {landmarksList} and throughout the community have been transformed by our cabinet painting services. Homeowners are amazed at how dramatically cabinet refinishing updates their space without the disruption of replacement.',
+      'The {cityName} homeowners we serve in {countyContext} consistently tell us cabinet painting was their best home improvement decision. The transformation is incredible - stunning results completed in days instead of weeks.'
     ],
     closingTemplates: [
-      'Give your {cityName} kitchen a stunning makeover with professional cabinet painting. Save thousands compared to replacement. Call (508) 690-8886 for your free cabinet refinishing estimate.',
-      'Your {cityName} cabinets can look brand new at a fraction of replacement cost. Contact JH Painting at (508) 690-8886 for a free estimate on cabinet painting for your {countyContext} home.',
+      'Give your {cityName} kitchen a stunning makeover with professional cabinet painting. Enjoy beautiful results without the disruption of replacement. Call (508) 690-8886 for your free cabinet refinishing estimate.',
+      'Your {cityName} cabinets can look brand new without the disruption of a full replacement. Contact JH Painting at (508) 690-8886 for a free estimate on cabinet painting for your {countyContext} home.',
       'Transform your dated {cityName} kitchen with cabinet painting that delivers factory-quality results. Call (508) 690-8886 today for your free cabinet refinishing estimate.'
     ]
   },
   'carpentry': {
     painPointVariants: [
       [
-        { title: 'Rotted Window Frames?', desc: 'Water has damaged your window frames. The wood is soft, and painting over it is just wasted money.', solution: 'Complete rot repair with new wood before painting' },
+        { title: 'Rotted Window Frames?', desc: 'Water has damaged your window frames. The wood is soft, and painting over it will not last.', solution: 'Complete rot repair with new wood before painting' },
         { title: 'Damaged Exterior Trim?', desc: 'Your fascia, soffits, and trim are deteriorating. Holes and gaps are letting pests and weather in.', solution: 'Expert trim replacement and repair' },
         { title: 'Door Frames Falling Apart?', desc: 'Kicked-in doors, water damage, or age has destroyed your door frames. Security and appearance suffer.', solution: 'Professional door frame repair and replacement' }
       ],
@@ -8644,8 +8644,8 @@ export function generateServiceContent(
   const serviceName = serviceSlug.replace(/-/g, ' ')
   const faq = [
     {
-      question: `How much does ${serviceName} cost in ${cityName}?`,
-      answer: `${serviceName.charAt(0).toUpperCase() + serviceName.slice(1)} costs in ${cityName} vary based on project scope, surface condition, and material selection. We provide free, detailed estimates with transparent pricing. Contact us at (508) 690-8886 for your accurate ${cityName} quote.`
+      question: `What does your ${serviceName} process include in ${cityName}?`,
+      answer: `Our ${serviceName} process in ${cityName} starts with a thorough on-site assessment, followed by careful surface preparation, premium material application, and a final walkthrough. We provide free, detailed estimates. Contact us at (508) 690-8886 to schedule your ${cityName} estimate.`
     },
     {
       question: `Do you provide ${serviceName} services in ${cityName}, MA?`,
@@ -8667,7 +8667,7 @@ export function generateServiceContent(
     `40+ five-star Google reviews from satisfied ${countyContext} customers`,
     `Fully licensed, insured, and EPA Lead-Safe Certified`,
     `Written warranties on all work - we stand behind our results`,
-    `Free, detailed estimates with transparent, honest pricing`
+    `Free, detailed estimates with a clear, written scope of work`
   ]
 
   return {

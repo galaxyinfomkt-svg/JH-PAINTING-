@@ -91,7 +91,7 @@ export const interiorExpansion: ServiceVariantPack = {
   ],
   keywordPool: [
     'interior painters {cityName} MA, interior painting {cityName} Massachusetts, house painters {cityName}, zero-VOC painters {cityName}, painting contractor {cityName}',
-    '{cityName} interior painting cost, interior painters near me {cityName}, professional painters {cityName} MA, room painting {cityName}, ceiling painting {cityName}',
+    '{cityName} interior painting services, interior painters near me {cityName}, professional painters {cityName} MA, room painting {cityName}, ceiling painting {cityName}',
     'best interior painters {cityName} MA, residential painters {cityName}, kitchen painting {cityName}, bedroom painting {cityName}, trim painting {cityName} Massachusetts',
     'Benjamin Moore painters {cityName}, Sherwin-Williams painters {cityName} MA, low VOC painting {cityName}, family-safe painters {cityName}',
     'interior house painters {cityName} MA, indoor painting {cityName}, drywall painting {cityName}, plaster wall painters {cityName}'
@@ -106,16 +106,16 @@ export const exteriorExpansion: ServiceVariantPack = {
     [
       { title: 'Insurance Inspection Failing?', desc: 'Your home insurance carrier flagged peeling exterior paint and chalking siding - fix it or lose coverage.', solution: 'Insurance-grade documented prep + carrier-accepted scope of work' },
       { title: 'HOA Sent a Violation Letter?', desc: 'Your HOA gave you 60 days to repaint to community standards or face fines.', solution: 'HOA-approved color matching and code-compliant exterior systems' },
-      { title: 'Realtor Says Repaint Before Listing?', desc: 'Your agent says the exterior is killing your listing price - fresh paint adds $15K+ to offers.', solution: 'Pre-listing exterior refresh on real-estate timelines' }
+      { title: 'Realtor Says Repaint Before Listing?', desc: 'Your agent says a tired exterior is hurting your listing - fresh, professional paint makes a strong first impression on buyers.', solution: 'Pre-listing exterior refresh on real-estate timelines' }
     ],
     [
       { title: 'Cedar Siding Turned Gray?', desc: 'Your beautiful cedar shake or clapboard has weathered to that uneven gray that screams "needs work."', solution: 'Cedar restoration with semi-transparent stains or solid acrylic systems' },
       { title: 'Stucco Cracking Everywhere?', desc: 'Hairline cracks are spreading across your stucco - water is getting in and the damage is accelerating.', solution: 'Elastomeric stucco coatings that bridge cracks and waterproof' },
-      { title: 'Vinyl Siding Faded & Chalky?', desc: 'Old vinyl siding looks dull, chalky, and can\'t be cleaned back to color - but replacement is $30K+.', solution: 'Vinyl-safe exterior paint at 1/5 the cost of new siding' }
+      { title: 'Vinyl Siding Faded & Chalky?', desc: 'Old vinyl siding looks dull, chalky, and can\'t be cleaned back to color - and full replacement means weeks of disruption.', solution: 'Vinyl-safe exterior paint that restores color without tearing off siding' }
     ],
     [
       { title: 'Storm Damage After Last Winter?', desc: 'Ice dams, wind damage, and heavy snow left your trim, fascia, and soffits torn up.', solution: 'Storm repair carpentry + complete exterior repaint' },
-      { title: 'Energy Bill Through the Roof?', desc: 'A reflective exterior paint can drop attic temps 10°F+ in summer - your AC is working overtime.', solution: 'Reflective Energy Star exterior systems that lower cooling costs' },
+      { title: 'Attic Overheating in Summer?', desc: 'A reflective exterior paint can drop attic temps 10°F+ in summer - your AC is working overtime.', solution: 'Reflective Energy Star exterior systems that keep your home cooler' },
       { title: 'Woodpecker Holes Everywhere?', desc: 'Pileated woodpeckers have drilled your cedar siding full of holes and the damage is structural.', solution: 'Wood replacement + woodpecker-deterrent finish systems' }
     ],
     [
@@ -139,14 +139,14 @@ export const exteriorExpansion: ServiceVariantPack = {
   localContextTemplates: [
     'Our exterior painting in {cityName} has covered every era of housing - pre-1900 Victorians with leaded windows, mid-century ranches near {landmarksList}, 80s colonials throughout {neighborhoodsList}, and brand-new construction with composite siding. Each gets a tailored approach.',
     'The microclimate in {cityName} matters. Properties near water bodies or wetlands within {countyContext} get more moisture failure on north walls. Hilltop homes catch more wind erosion. Wooded lots near {landmarksList} stay damp longer. Our exterior specs flex for each location.',
-    'We\'ve fixed enough failed exterior jobs in {cityName} to know what cheap contractors skip - caulking around windows, priming bare wood, addressing wood rot before painting. {countyContext} homeowners who hired us second never call a third painter.',
+    'We\'ve fixed enough failed exterior jobs in {cityName} to know what rushed contractors skip - caulking around windows, priming bare wood, addressing wood rot before painting. {countyContext} homeowners who hired us second never call a third painter.',
     'Many {cityName} exteriors we paint were last done 12-15 years ago, which is excellent paint life for {countyContext} - but only if the prep was right. We document our prep with photos so {neighborhoodsList} clients can compare apples to apples on their next quote.',
     'The Massachusetts Historical Commission has specific requirements for {cityName} homes in historic districts and on the inventory. We\'ve navigated those approvals throughout {countyContext} - colors, finishes, and methods that honor the home and pass review.'
   ],
   closingTemplates: [
     'Your {cityName} exterior is too important to gamble on the lowest bidder. Get a real estimate with documented prep scope, paint specs, and warranty terms. Free quote: (508) 690-8886. Serving all of {countyContext}.',
     'Schedule your {cityName} exterior estimate before the {countyContext} season fills up - our exterior crews book 4-6 weeks out from May through October. Call (508) 690-8886 today to claim a spot.',
-    'A premium exterior paint job lasts 10-15 years in {countyContext}. A budget paint job fails in 3-4. We build the first kind for {cityName} homeowners across {neighborhoodsList}. Free estimate: (508) 690-8886.',
+    'A properly prepped exterior paint job lasts 10-15 years in {countyContext}. A rushed one fails in 3-4. We build the first kind for {cityName} homeowners across {neighborhoodsList}. Free estimate: (508) 690-8886.',
     'Your home is the largest asset on your balance sheet. Protect it with an exterior paint system designed for {cityName} conditions and applied by EPA-Lead-Safe certified professionals. Call (508) 690-8886 - free estimate.',
     'Ready to give your {cityName} exterior the protection it deserves before the next New England winter? Book your free assessment now: (508) 690-8886. We cover all of {countyContext}.'
   ],
@@ -166,7 +166,7 @@ export const exteriorExpansion: ServiceVariantPack = {
   ],
   keywordPool: [
     'exterior painters {cityName} MA, exterior house painting {cityName} Massachusetts, exterior painting contractor {cityName}, EPA lead-safe painters {cityName}',
-    '{cityName} exterior painting cost, exterior painters near me {cityName}, house painters {cityName} MA, Benjamin Moore Aura {cityName}, exterior repaint {cityName}',
+    '{cityName} exterior painting services, exterior painters near me {cityName}, house painters {cityName} MA, Benjamin Moore Aura {cityName}, exterior repaint {cityName}',
     'best exterior painters {cityName} MA, professional exterior painting {cityName}, siding painters {cityName}, cedar painting {cityName}, trim painters {cityName} Massachusetts',
     'exterior painting {cityName} warranty, painted exterior {cityName} MA, storm-ready exterior painters {cityName}, two-tone exterior {cityName}',
     'pre-listing exterior paint {cityName} MA, HOA exterior painters {cityName}, insurance exterior painters {cityName}, historic exterior {cityName}'
@@ -207,7 +207,7 @@ export const commercialExpansion: ServiceVariantPack = {
   introTemplates: [
     'Commercial painting in {cityName} runs on three rules: zero business disruption, documented compliance, and visible quality. JH Painting Services serves {countyContext} businesses with after-hours crews, full insurance documentation, and the kind of finish quality that reflects on your brand near {landmarksList}.',
     'When {cityName} businesses repaint, they\'re managing tenants, customers, employees, and ROI all at once. We bring commercial-grade scheduling and project management to {countyContext} - phased work plans, daily progress reports, and clean-as-you-go protocols across {neighborhoodsList}.',
-    'Your {cityName} commercial property is a revenue-generating asset. A fresh, professional paint finish protects occupancy rates, supports lease renewals, and signals tenants that ownership cares. JH Painting brings that finish to {countyContext} on schedule, on budget.',
+    'Your {cityName} commercial property is a revenue-generating asset. A fresh, professional paint finish protects occupancy rates, supports lease renewals, and signals tenants that ownership cares. JH Painting brings that finish to {countyContext} on schedule, with zero disruption.',
     'From single-tenant retail to multi-unit office towers, commercial painting in {cityName} requires a different operating model than residential. Our {countyContext} commercial division carries dedicated COIs, OSHA-trained crews, and after-hours capacity for businesses near {landmarksList}.',
     'Brand consistency, regulatory compliance, and minimal disruption - those are the three asks {cityName} commercial property managers send us, and our {countyContext} answer is documented every time. Pantone-accurate, FDA/OSHA-compliant, after-hours scheduled.'
   ],
@@ -295,7 +295,7 @@ export const residentialExpansion: ServiceVariantPack = {
   ],
   closingTemplates: [
     'Your {cityName} home should reflect who you are now, not who you were 10 years ago. Schedule a free residential painting consultation: (508) 690-8886. Serving {countyContext}.',
-    'Whether it\'s one room, one floor, or every wall inside and out, {cityName} residential painting starts with a real conversation about your home, your timeline, and your budget. Call (508) 690-8886.',
+    'Whether it\'s one room, one floor, or every wall inside and out, {cityName} residential painting starts with a real conversation about your home, your timeline, and your goals. Call (508) 690-8886.',
     'From estate sales to nursery prep, divorce-driven listings to multigenerational moves - JH Painting handles {cityName} residential painting through every life chapter. (508) 690-8886.',
     'Ready to get your {cityName} home painted by a residential team that respects your space, your family, and your schedule? Free estimate: (508) 690-8886. Throughout {countyContext}.',
     'A residential paint job done right adds value, comfort, and pride. Get yours scheduled in {cityName} today: (508) 690-8886. We serve {neighborhoodsList} and all of {countyContext}.'
@@ -316,7 +316,7 @@ export const residentialExpansion: ServiceVariantPack = {
   ],
   keywordPool: [
     'residential painters {cityName} MA, house painters {cityName} Massachusetts, home painting {cityName}, whole-house painters {cityName}',
-    '{cityName} residential painting cost, residential painters near me {cityName}, family painters {cityName} MA, indoor outdoor painters {cityName}',
+    '{cityName} residential painting services, residential painters near me {cityName}, family painters {cityName} MA, indoor outdoor painters {cityName}',
     'pre-listing painters {cityName} MA, estate painting {cityName}, rental turnover painters {cityName}, insurance painters {cityName}',
     'best residential painters {cityName} MA, licensed home painters {cityName}, insured painters {cityName}, family-safe painters {cityName}',
     'home repaint {cityName} MA, residential painting contractor {cityName}, full-house painters {cityName}, single-room painters {cityName}'
@@ -331,7 +331,7 @@ export const cabinetExpansion: ServiceVariantPack = {
     [
       { title: 'Thermofoil Cabinets Peeling?', desc: 'Your white thermofoil cabinet doors are peeling at corners and edges - and you can\'t paint over them with regular paint.', solution: 'Thermofoil-specific bonding primer + spray finish that adheres' },
       { title: 'Laminate Cabinets Look Cheap?', desc: 'Your 80s laminate cabinets can\'t take a standard paint job - the slick surface rejects coatings.', solution: 'Laminate-bonding adhesion primer system + lacquer topcoat' },
-      { title: 'Want Shaker Look Without Replacing?', desc: 'You love the modern shaker style but full cabinet replacement is $30K+.', solution: 'Add shaker rails/stiles + paint = new look for 25% of replacement cost' }
+      { title: 'Want Shaker Look Without Replacing?', desc: 'You love the modern shaker style but full cabinet replacement means a gutted kitchen for weeks.', solution: 'Add shaker rails/stiles + paint for a brand-new look without tearing out cabinets' }
     ],
     [
       { title: 'Inside of Cabinet Boxes Need Paint Too?', desc: 'Just painting the doors isn\'t enough - the cabinet boxes show stained interiors when doors are open.', solution: 'Full box + door + frame painting for a complete transformation' },
@@ -355,7 +355,7 @@ export const cabinetExpansion: ServiceVariantPack = {
     ]
   ],
   introTemplates: [
-    'Cabinet painting in {cityName} is the smartest kitchen upgrade dollar-for-dollar - 60-70% savings versus replacement, finished in days not weeks. JH Painting brings spray-booth quality to {countyContext} kitchens, with prep and process that lasts a decade plus.',
+    'Cabinet painting in {cityName} is the smartest kitchen upgrade you can make - all the impact of new cabinets, finished in days not weeks. JH Painting brings spray-booth quality to {countyContext} kitchens, with prep and process that lasts a decade plus.',
     'Your {cityName} cabinets are probably solid wood - the boxes, faces, and doors are worth saving. The finish is what\'s dated. Our {countyContext} cabinet refinishing removes the old surface, treats the substrate, and applies a factory-grade finish near {landmarksList}.',
     'Cabinet painting done badly looks like cabinet painting. Cabinet painting done right looks like new cabinets. The difference is in the prep - degreasing, sanding to scuff, bonding primer, light sanding between coats. Our {cityName} cabinet team does it right every time.',
     'Why replace what you can refinish? Solid {cityName} cabinet boxes from the 80s and 90s are often better-built than today\'s big-box replacements. Our {countyContext} refinishing service brings them visually current while keeping the structural integrity.',
@@ -369,29 +369,29 @@ export const cabinetExpansion: ServiceVariantPack = {
     'Bath vanity refinishing has become almost as popular as kitchens in {cityName} - same process, water-resistant topcoat, dramatic transformation. We pair kitchen and bath cabinets for coordinated {countyContext} home updates.'
   ],
   closingTemplates: [
-    'Update your {cityName} kitchen for 30% of the cost of replacement. Free cabinet consultation with color samples and a written quote: (508) 690-8886. Serving {countyContext}.',
+    'Update your {cityName} kitchen without the upheaval of full replacement. Free cabinet consultation with color samples and a written quote: (508) 690-8886. Serving {countyContext}.',
     'Your {cityName} cabinets don\'t need to be replaced - they need to be refinished by pros. Call (508) 690-8886 for a free estimate. We serve {neighborhoodsList} and all of {countyContext}.',
     'Cabinet painting in {cityName}, done in 4-6 days, with a factory-quality finish that lasts a decade. Free consultation: (508) 690-8886.',
     'Stop staring at dated {cityName} cabinets every morning. Get a free cabinet refinishing estimate today: (508) 690-8886. Throughout {countyContext}.',
     'Ready to transform your {cityName} kitchen without ripping it apart? Book your free cabinet painting consultation: (508) 690-8886.'
   ],
   titlePool: [
-    'Cabinet Painters {cityName} MA | Save 70% | (508) 690-8886',
+    'Cabinet Painters {cityName} MA | Spray-Booth Finish | (508) 690-8886',
     '{cityName} Cabinet Refinishing | Spray Booth Finish | Free Quote',
     'Kitchen Cabinet Painting {cityName}, MA | 4-Day Turnaround',
     'Cabinet Refinishers {cityName} MA | Factory-Quality Finish',
     'Cabinet Painting in {cityName} | Two-Tone Specialists'
   ],
   descPool: [
-    'Cabinet painting in {cityName}, MA. Save 60-70% vs replacement. Spray-booth quality, 4-6 day turnaround. Free estimate: (508) 690-8886.',
+    'Cabinet painting in {cityName}, MA. A brand-new kitchen look without replacement. Spray-booth quality, 4-6 day turnaround. Free estimate: (508) 690-8886.',
     'Kitchen cabinet refinishing in {cityName} and {countyContext}. Premium prep, factory-grade finish, written warranty. (508) 690-8886.',
     'Trusted {cityName} cabinet painters. Two-tone kitchens, bath vanities, built-ins. 40+ five-star Google reviews. (508) 690-8886.',
-    'Update your {cityName} kitchen cabinets for a fraction of replacement cost. Spray-booth finish, all colors, all styles. (508) 690-8886.',
+    'Update your {cityName} kitchen cabinets without the upheaval of replacement. Spray-booth finish, all colors, all styles. (508) 690-8886.',
     'Cabinet painting and refinishing throughout {cityName} MA. Kitchens, baths, built-ins, mudrooms. Free quote: (508) 690-8886.'
   ],
   keywordPool: [
     'cabinet painters {cityName} MA, cabinet refinishing {cityName} Massachusetts, kitchen cabinet painting {cityName}, cabinet refinishers {cityName}',
-    '{cityName} cabinet painting cost, cabinet painters near me {cityName}, kitchen refinish {cityName} MA, two-tone cabinets {cityName}',
+    '{cityName} cabinet painting services, cabinet painters near me {cityName}, kitchen refinish {cityName} MA, two-tone cabinets {cityName}',
     'spray finish cabinets {cityName} MA, factory finish cabinets {cityName}, white cabinets {cityName}, navy cabinets {cityName}',
     'bathroom vanity painters {cityName} MA, built-in cabinet painters {cityName}, mudroom cabinet painters {cityName}',
     'cabinet repaint {cityName} MA, oak cabinet refinishing {cityName}, maple cabinet painting {cityName}, cherry cabinet repaint {cityName}'

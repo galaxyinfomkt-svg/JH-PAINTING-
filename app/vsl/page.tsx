@@ -24,8 +24,8 @@ const painPoints = [
     description: "Horror stories of painters who don't show up, leave a mess, or do sloppy work. You deserve a professional team that treats your home with respect."
   },
   {
-    title: "Concerned About Fair Pricing?",
-    description: "Getting quotes that are all over the map? We provide transparent, detailed estimates with no hidden fees or surprise charges."
+    title: "Worried the Work Won't Last?",
+    description: "Tired of paint that peels or fades within a year? We use premium materials and meticulous prep so your finish stays beautiful for years."
   }
 ]
 

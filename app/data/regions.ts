@@ -73,17 +73,17 @@ export const regions: Region[] = [
     painPoints: [
       {
         title: 'Sun-Faded Cedar Siding & Wood Rot',
-        problem: 'MetroWest\'s suburban homes - especially in Sudbury, Wayland, Weston, and Sherborn - feature natural cedar shingle and clapboard siding. Years of sun exposure and moisture cause fading, splitting, and wood rot around windows and trim. Homeowners watch their $800K+ homes look neglected.',
+        problem: 'MetroWest\'s suburban homes - especially in Sudbury, Wayland, Weston, and Sherborn - feature natural cedar shingle and clapboard siding. Years of sun exposure and moisture cause fading, splitting, and wood rot around windows and trim. Homeowners watch their beautiful homes look neglected.',
         solution: 'We replace rotted wood with PVC or Boral trim that never rots, then apply oil-based primer and two coats of premium acrylic exterior paint. For natural cedar, we offer transparent and semi-transparent stains that protect while showcasing the wood grain. Full prep, not just paint.',
       },
       {
         title: 'Dated Kitchen Cabinets in 1980s-2000s Homes',
-        problem: 'MetroWest has thousands of homes built during the suburban boom of the 1980s-2000s. The honey-oak and cherry cabinets that were trendy then now look dated. Full cabinet replacement costs $25,000-$50,000 - money most Framingham, Natick, and Ashland homeowners would rather not spend.',
-        solution: 'Our cabinet painting service transforms dated cabinets for 70% less than replacement. We spray-apply cabinet-grade lacquer in a controlled environment for a factory-smooth finish. White, gray, navy, sage - your kitchen looks brand new in 5-7 days.',
+        problem: 'MetroWest has thousands of homes built during the suburban boom of the 1980s-2000s. The honey-oak and cherry cabinets that were trendy then now look dated. Full cabinet replacement means a gutted kitchen and weeks of disruption most Framingham, Natick, and Ashland homeowners would rather avoid.',
+        solution: 'Our cabinet painting service transforms dated cabinets without the upheaval of replacement. We spray-apply cabinet-grade lacquer in a controlled environment for a factory-smooth finish. White, gray, navy, sage - your kitchen looks brand new in 5-7 days.',
       },
       {
         title: 'New Construction Touch-Ups Done Wrong',
-        problem: 'Hopkinton, Southborough, and Westborough are full of new developments where builder-grade paint starts peeling within 2-3 years. Builders use the cheapest paint and rush the application. By year three, you\'re seeing nail pops, joint cracks, and fading exterior.',
+        problem: 'Hopkinton, Southborough, and Westborough are full of new developments where builder-grade paint starts peeling within 2-3 years. Builders use thin, low-grade paint and rush the application. By year three, you\'re seeing nail pops, joint cracks, and fading exterior.',
         solution: 'We fix builder shortcuts right. We re-tape and mud visible seams, spot-prime nail pops, and repaint with premium paint that lasts. We also offer new homeowner packages: touch-up all rooms plus upgrade exterior to a 15-year-rated coating system.',
       },
       {
@@ -114,7 +114,7 @@ export const regions: Region[] = [
     painPoints: [
       {
         title: 'Triple-Decker Exteriors Peeling After 2 Years',
-        problem: 'Worcester has more triple-deckers per capita than almost any city in America. These 3-story wood-frame buildings take enormous punishment from wind, rain, and ice. Cheap paint jobs peel within two winters. Landlords waste money repainting constantly, and tenants complain about curb appeal.',
+        problem: 'Worcester has more triple-deckers per capita than almost any city in America. These 3-story wood-frame buildings take enormous punishment from wind, rain, and ice. Rushed paint jobs peel within two winters. Landlords find themselves repainting constantly, and tenants complain about curb appeal.',
         solution: 'We use a 3-coat system specifically designed for multi-family wood siding: oil-based primer to penetrate old wood, followed by two coats of 100% acrylic exterior paint rated for 15+ years. We fully scrape, sand, and caulk every surface - the prep that most Worcester painters skip.',
       },
       {
@@ -128,15 +128,15 @@ export const regions: Region[] = [
         solution: 'We\'re EPA RRP certified for lead paint work. We use infrared paint removers, chemical strippers, and HEPA containment systems to safely remove failed paint layers. Every lead job includes proper cleanup verification and documentation - protecting your family and keeping you legal.',
       },
       {
-        title: 'Rental Property Turnarounds on a Budget',
-        problem: 'Worcester is a major rental market - landlords in Main South, Grafton Hill, and Green Island need fast apartment turnarounds between tenants. Most painters either charge premium prices or do sloppy work. Landlords need quality at a fair price, done fast.',
-        solution: 'We offer landlord packages: walls, ceilings, trim, and doors repainted in 1-2 days per unit. We use durable, washable Sherwin-Williams ProMar 200 that holds up to tenant wear. Volume pricing for multi-unit buildings. We understand the Worcester rental cycle.',
+        title: 'Fast Rental Property Turnarounds',
+        problem: 'Worcester is a major rental market - landlords in Main South, Grafton Hill, and Green Island need fast apartment turnarounds between tenants. Most painters either keep them waiting or do sloppy work. Landlords need dependable quality, done fast.',
+        solution: 'We offer landlord packages: walls, ceilings, trim, and doors repainted in 1-2 days per unit. We use durable, washable Sherwin-Williams ProMar 200 that holds up to tenant wear. Streamlined scheduling for multi-unit buildings. We understand the Worcester rental cycle.',
       },
     ],
     whyUs: [
       'EPA Lead-Safe Certified for Worcester\'s pre-1940 housing stock',
       'Triple-decker specialists - 3-coat exterior systems built for Central MA winters',
-      'Landlord volume pricing for multi-unit turnarounds in Worcester',
+      'Landlord packages for fast multi-unit turnarounds in Worcester',
       'Serve all of Central MA: Worcester to Princeton, Clinton to Oxford',
     ],
     localExpertise: 'We\'ve been painting in Worcester and Central MA long enough to know that a triple-decker on Grafton Street needs different prep than a colonial in Holden. We know the neighborhoods, we know the housing stock, and we know the weather patterns. Our crews handle everything from a single apartment repaint in Main South to a full exterior restoration on a Victorian in Shrewsbury.',
@@ -162,17 +162,17 @@ export const regions: Region[] = [
       {
         title: 'Cookie-Cutter Subdivision Upgrades',
         problem: 'Westford, Chelmsford, Tewksbury, and Billerica saw massive subdivision growth in the 1990s-2010s. These homes all look the same - beige walls, white trim, builder-grade flat paint that shows every scuff. Homeowners want personality without a full renovation.',
-        solution: 'We specialize in affordable upgrades that transform builder-basic homes: accent walls, updated color schemes, cabinet repainting, and exterior color changes that give your home curb appeal. We bring color samples and do on-site consultations so you see the transformation before we start.',
+        solution: 'We specialize in high-impact upgrades that transform builder-basic homes: accent walls, updated color schemes, cabinet repainting, and exterior color changes that give your home curb appeal. We bring color samples and do on-site consultations so you see the transformation before we start.',
       },
       {
         title: 'Rural Properties with Weather-Beaten Exteriors',
         problem: 'Groton, Pepperell, Townsend, Dunstable, and Shirley have rural properties with long driveways, exposed exteriors, and outbuildings. Wind, sun, and rain batter these homes year-round. Barns, sheds, and detached garages are often neglected until wood rot sets in.',
-        solution: 'We service rural properties with the right equipment - our crews bring everything needed, no return trips for forgotten supplies. We paint homes, barns, sheds, and garages in a single mobilization. For outbuildings, we offer cost-effective barn paint and stain options that protect without breaking the budget.',
+        solution: 'We service rural properties with the right equipment - our crews bring everything needed, no return trips for forgotten supplies. We paint homes, barns, sheds, and garages in a single mobilization. For outbuildings, we offer durable barn paint and stain options that protect against the elements for years.',
       },
       {
         title: 'Rental Multi-Families in Lowell & Tyngsboro',
-        problem: 'Lowell and Tyngsboro landlords manage multi-family properties that need regular painting between tenants. Fast turnarounds are essential - every empty day costs rent. But rushing leads to sloppy work, and tenants complain to the city about peeling paint and code violations.',
-        solution: 'We offer 24-48 hour apartment turnarounds using quick-dry, durable finishes. Our landlord program includes priority scheduling, consistent pricing, and paint colors we keep in stock so there\'s zero delay. Clean, code-compliant results every time.',
+        problem: 'Lowell and Tyngsboro landlords manage multi-family properties that need regular painting between tenants. Fast turnarounds are essential - every vacant day delays the next tenant. But rushing leads to sloppy work, and tenants complain to the city about peeling paint and code violations.',
+        solution: 'We offer 24-48 hour apartment turnarounds using quick-dry, durable finishes. Our landlord program includes priority scheduling, consistent results, and paint colors we keep in stock so there\'s zero delay. Clean, code-compliant results every time.',
       },
     ],
     whyUs: [
@@ -197,7 +197,7 @@ export const regions: Region[] = [
     painPoints: [
       {
         title: 'High-End Finishes That Must Be Flawless',
-        problem: 'In Wellesley, Dover, and Needham, homeowners invest $1M-$5M+ in their properties. A visible brush stroke, roller mark, or uneven sheen is unacceptable. Many painters claim "premium quality" but deliver results that fall short of what these homes require.',
+        problem: 'In Wellesley, Dover, and Needham, homeowners hold their properties to an exacting standard. A visible brush stroke, roller mark, or uneven sheen is unacceptable. Many painters claim "premium quality" but deliver results that fall short of what these homes require.',
         solution: 'We spray-apply finishes on trim, doors, and cabinets for a factory-smooth result. Walls get back-rolled with premium microfiber rollers for zero texture variation. We use Benjamin Moore Advance (trim) and Aura (walls) - the absolute top of the line. Final walkthrough with the homeowner before we consider the job complete.',
       },
       {
@@ -207,7 +207,7 @@ export const regions: Region[] = [
       },
       {
         title: 'Color Consultation for Prestigious Neighborhoods',
-        problem: 'Norfolk County\'s upscale neighborhoods often have historic district guidelines or HOA color restrictions. Choosing the wrong exterior color in Wellesley Hills or Walpole Center can mean repainting at your own expense - or worse, lowering your home\'s value relative to neighbors.',
+        problem: 'Norfolk County\'s upscale neighborhoods often have historic district guidelines or HOA color restrictions. Choosing the wrong exterior color in Wellesley Hills or Walpole Center can mean redoing the whole job - or worse, a finish that looks out of place next to the neighbors.',
         solution: 'We provide complimentary color consultation with large-format test patches applied directly to your home. We\'re familiar with common HOA and historic district guidelines across Norfolk County. Our color recommendations consider your landscaping, roof color, stone work, and neighboring homes.',
       },
       {
@@ -246,9 +246,9 @@ export const regions: Region[] = [
         solution: 'We address the moisture before the paint. That means checking attic ventilation, fixing ice dam damage, replacing failed caulking, and ensuring proper drainage away from siding. Then we apply breathable, high-flexibility paint systems that handle the thermal cycling without cracking.',
       },
       {
-        title: 'Affordable Quality for Working Families',
-        problem: 'Fitchburg and Leominster families want quality painting but face tighter budgets than homeowners in wealthier suburbs. They\'ve been burned by cheap contractors who do poor work, but premium Boston-area painters charge more than the market can bear.',
-        solution: 'We offer competitive pricing without cutting corners on prep or materials. Our proximity (30 minutes from Marlborough) keeps travel costs low. We also offer room-by-room scheduling so you can spread the investment over time. Quality work at fair prices - that\'s our commitment to this community.',
+        title: 'Dependable Quality for Working Families',
+        problem: 'Fitchburg and Leominster families want quality painting they can count on. They\'ve been burned by contractors who do poor work or never show up, and they want a crew that treats their home with the same care as any high-end suburb.',
+        solution: 'We never cut corners on prep or materials. Our proximity (30 minutes from Marlborough) means fast, reliable service. We also offer room-by-room scheduling so you can tackle the project in stages that fit your life. Consistent, dependable craftsmanship - that\'s our commitment to this community.',
       },
       {
         title: 'Rural Properties in Harvard, Lancaster & Berlin',
@@ -259,10 +259,10 @@ export const regions: Region[] = [
     whyUs: [
       'Experience with Fitchburg & Leominster\'s 19th-century industrial housing stock',
       'Cold-climate exterior systems for North Central MA\'s harsh winters',
-      'Fair, competitive pricing for working families - no Boston-area markup',
+      'Reliable, high-quality work for working families - close to home',
       'Rural property service: Harvard, Lancaster, Berlin farmhouses and estates',
     ],
-    localExpertise: 'North Central MA is a community we care about. We\'ve restored historic facades on Main Street in Fitchburg, painted new builds in Sterling, and refreshed farmhouses in Harvard. We price our work fairly because we want long-term relationships with homeowners here - the kind where you call us back in 10 years because the last job held up perfectly.',
+    localExpertise: 'North Central MA is a community we care about. We\'ve restored historic facades on Main Street in Fitchburg, painted new builds in Sterling, and refreshed farmhouses in Harvard. We do right by every homeowner because we want long-term relationships here - the kind where you call us back in 10 years because the last job held up perfectly.',
   },
   {
     name: 'Blackstone Valley',

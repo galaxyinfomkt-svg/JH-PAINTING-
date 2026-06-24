@@ -19,7 +19,7 @@ const residentialPaintingSchema = {
       "@id": "https://jhpaintingservices.com/services/residential-painting#service",
       "name": "Residential Painting Services Massachusetts",
       "serviceType": "Residential Painting",
-      "description": "Professional residential painting services for Massachusetts homes. Expert interior and exterior house painting, quality finishes, fair prices. Licensed and insured painters.",
+      "description": "Professional residential painting services for Massachusetts homes. Expert interior and exterior house painting, durable finishes, meticulous craftsmanship. Licensed and insured painters.",
       "provider": {
         "@type": "LocalBusiness",
         "@id": "https://jhpaintingservices.com/#organization",
@@ -109,7 +109,7 @@ const residentialPaintingSchema = {
       "totalTime": "P5D",
       "step": [
         { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We discuss your home's painting needs, timeline, and provide color recommendations." },
-        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "On-site visit with transparent, written pricing for interior, exterior, or both. No hidden fees." },
+        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "On-site visit with a clear, written scope of work for interior, exterior, or both. Every detail explained up front." },
         { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Thorough prep - patching, sanding, priming, and protecting your home and belongings." },
         { "@type": "HowToStep", "position": 4, "name": "Expert Painting", "text": "Premium Benjamin Moore or Sherwin-Williams paints applied with precision by our experienced crew." },
         { "@type": "HowToStep", "position": 5, "name": "Final Walkthrough", "text": "Every detail inspected with you. Not perfect? We fix it. 100% satisfaction guaranteed." }
@@ -182,9 +182,9 @@ const painPoints = [
   },
   {
     icon: Clock,
-    title: 'Afraid of Hidden Costs & Delays?',
-    desc: "Sick of contractors who quote one price then add fees, or promise quick work but drag on for weeks? You need someone you can trust.",
-    solution: 'Transparent pricing and reliable timelines-no surprises'
+    title: 'Afraid of Endless Delays?',
+    desc: "Sick of contractors who promise quick work but drag on for weeks, leaving your home disrupted? You need someone you can trust to show up and finish.",
+    solution: 'Reliable timelines and dependable crews-no surprises'
   }
 ]
 

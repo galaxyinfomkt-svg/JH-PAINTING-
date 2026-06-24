@@ -255,7 +255,7 @@ export default function ThankYouPage() {
               {[
                 { title: 'Interior Painting', href: '/services/interior-painting', desc: 'Transform your living spaces with premium paints' },
                 { title: 'Exterior Painting', href: '/services/exterior-painting', desc: 'Protect and beautify your home exterior' },
-                { title: 'Cabinet Painting', href: '/services/cabinet-painting', desc: 'Refresh your kitchen for a fraction of the cost' },
+                { title: 'Cabinet Painting', href: '/services/cabinet-painting', desc: 'Refresh your kitchen without the replacement hassle' },
                 { title: 'Commercial Painting', href: '/services/commercial-painting', desc: 'Professional painting for your business' },
               ].map((service, idx) => (
                 <Link key={idx} href={service.href} style={{

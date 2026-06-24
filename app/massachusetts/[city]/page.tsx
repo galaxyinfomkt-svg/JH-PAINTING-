@@ -302,7 +302,7 @@ const footerCities = cities.map(c => c.name)
 const servicesList = [
   { slug: 'interior-painting', name: 'Interior Painting', icon: BrushIcon, desc: 'Walls, ceilings, trim, doors & accent walls. Premium Benjamin Moore & Sherwin-Williams paints with meticulous prep for flawless results that last 10+ years.' },
   { slug: 'exterior-painting', name: 'Exterior Painting', icon: HomeIcon, desc: 'Complete exterior protection against New England weather. Siding, trim, shutters, doors & decks with weather-resistant paints that withstand harsh winters.' },
-  { slug: 'cabinet-painting', name: 'Cabinet Painting', icon: PaintBucketIcon, desc: 'Transform dated cabinets for 70% less than replacement. Factory-smooth spray finish on kitchen & bathroom cabinets. Done in 5-7 days.' },
+  { slug: 'cabinet-painting', name: 'Cabinet Painting', icon: PaintBucketIcon, desc: 'Transform dated cabinets without the replacement hassle. Factory-smooth spray finish on kitchen & bathroom cabinets. Done in 5-7 days.' },
   { slug: 'commercial-painting', name: 'Commercial Painting', icon: Building2Icon, desc: 'Offices, retail, restaurants & medical facilities. After-hours & weekend scheduling available to minimize business disruption.' },
   { slug: 'residential-painting', name: 'Residential Painting', icon: HomeIcon, desc: 'Complete home painting solutions - interior & exterior. Single rooms to whole-house transformations with expert color consultation included.' },
   { slug: 'carpentry', name: 'Carpentry', icon: HammerIcon, desc: 'Wood rot repair, window & door frames, trim, siding & deck restoration. Expert carpentry before painting ensures lasting results.' },
@@ -672,12 +672,12 @@ export default async function CityPage({ params }: Props) {
               <div className="vsl-curiosity-card">
                 <div className="vsl-curiosity-number">02</div>
                 <h4>Premium Materials Only</h4>
-                <p>We use only Sherwin-Williams and Benjamin Moore paints. Why? Because cheap paint means repainting in 3 years. Ours lasts 7-10+.</p>
+                <p>We use only Sherwin-Williams and Benjamin Moore paints. Why? Because lower-grade paint means repainting in 3 years. Ours lasts 7-10+.</p>
               </div>
               <div className="vsl-curiosity-card">
                 <div className="vsl-curiosity-number">03</div>
                 <h4>No Surprises, Ever</h4>
-                <p>The price we quote is the price you pay. No hidden fees, no &quot;we found more work&quot; excuses. Just honest, transparent pricing.</p>
+                <p>We tell you the full scope upfront. No &quot;we found more work&quot; excuses, no surprises mid-project. Just clear communication and reliable follow-through.</p>
               </div>
             </div>
           </div>
@@ -898,7 +898,7 @@ export default async function CityPage({ params }: Props) {
               <p>
                 Founded by <strong>Jafet</strong>, JH Painting Services is a premier painting contractor based in Marlborough, Massachusetts.
                 With years of hands-on experience, we've built our reputation on delivering exceptional craftsmanship,
-                honest pricing, and reliable service to homeowners across {city.name} and all of {city.county}.
+                dependable communication, and reliable service to homeowners across {city.name} and all of {city.county}.
               </p>
               <p>
                 We specialize in interior and exterior painting, using only premium materials designed to withstand
@@ -943,7 +943,7 @@ export default async function CityPage({ params }: Props) {
             <p className="city-section-subtitle">
               If you've hired painters before in {city.name}, you've probably experienced the frustration:
               contractors who show up late (or not at all), sloppy work that starts peeling within months,
-              or that dreaded phone call about "unexpected costs." It's exhausting, and you deserve better.
+              or that dreaded phone call about "unexpected delays." It's exhausting, and you deserve better.
             </p>
           </div>
 
@@ -955,13 +955,13 @@ export default async function CityPage({ params }: Props) {
                 icon: ClockIcon
               },
               {
-                problem: "Cheap paint that peels, cracks, or fades within months",
+                problem: "Low-grade paint that peels, cracks, or fades within months",
                 solution: "We use only premium Sherwin-Williams and Benjamin Moore paints rated to withstand Massachusetts winters and humid summers. Combined with our meticulous 5-step prep process, your paint job will look stunning for 7-10+ years.",
                 icon: ShieldIcon
               },
               {
-                problem: "Hidden fees, surprise costs, and bait-and-switch pricing",
-                solution: "Our detailed written estimates itemize every cost upfront-labor, materials, prep work, everything. The price we quote is the price you pay. No surprises, no 'additional charges discovered during the project.'",
+                problem: "Vague scopes and surprise changes mid-project",
+                solution: "Our detailed written estimates spell out every step upfront-labor, materials, prep work, everything. We stick to the agreed scope. No surprises, no 'extra work discovered during the project.'",
                 icon: DollarIcon
               },
               {
@@ -1060,7 +1060,7 @@ export default async function CityPage({ params }: Props) {
               {
                 step: '3',
                 title: 'Professional Surface Preparation',
-                description: "This is where cheap painters cut corners-and where we shine. We thoroughly clean all surfaces, fill cracks and holes, sand rough areas, caulk gaps, apply primer where needed, and mask off trim, floors, and fixtures. Proper prep is 70% of a great paint job.",
+                description: "This is where rushed painters cut corners-and where we shine. We thoroughly clean all surfaces, fill cracks and holes, sand rough areas, caulk gaps, apply primer where needed, and mask off trim, floors, and fixtures. Proper prep is the foundation of a great paint job.",
                 duration: '1-2 days depending on project size'
               },
               {
@@ -1172,7 +1172,7 @@ export default async function CityPage({ params }: Props) {
               },
               {
                 title: 'Premium Materials Only',
-                description: "We never cut costs on materials. We use top-tier Sherwin-Williams and Benjamin Moore paints, professional-grade primers, and quality tools. Better materials mean better coverage, richer colors, and a finish that lasts years longer than budget alternatives.",
+                description: "We never cut corners on materials. We use top-tier Sherwin-Williams and Benjamin Moore paints, professional-grade primers, and quality tools. Better materials mean better coverage, richer colors, and a finish that lasts years longer than lesser alternatives.",
                 icon: ShieldIcon
               },
               {
@@ -1246,7 +1246,7 @@ export default async function CityPage({ params }: Props) {
                 Cabinet Painting & Refinishing in {city.name}
               </h3>
               <p>
-                Want to transform your {city.name} kitchen without the cost of new cabinets? Our cabinet painting service delivers a factory-finish look at a fraction of replacement cost. We properly prepare cabinet surfaces, apply primer and multiple coats of durable cabinet-specific paint, and reinstall hardware for a complete transformation. Most kitchen cabinet projects are completed in 5-7 days.
+                Want to transform your {city.name} kitchen without the hassle of new cabinets? Our cabinet painting service delivers a factory-finish look without the demolition and downtime of replacement. We properly prepare cabinet surfaces, apply primer and multiple coats of durable cabinet-specific paint, and reinstall hardware for a complete transformation. Most kitchen cabinet projects are completed in 5-7 days.
               </p>
 
               <h3 className="city-seo-subtitle">

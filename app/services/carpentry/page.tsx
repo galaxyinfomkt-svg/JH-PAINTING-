@@ -117,7 +117,7 @@ const carpentrySchema = {
       "totalTime": "P3D",
       "step": [
         { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We assess your carpentry needs - trim, baseboards, crown molding, deck, or repairs." },
-        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "Written estimate with material and labor costs. We source quality lumber and trim materials." },
+        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "Written estimate detailing the scope of work and materials. We source quality lumber and trim materials." },
         { "@type": "HowToStep", "position": 3, "name": "Material Selection", "text": "We help you choose the right wood, trim profiles, and finish to match your home's style." },
         { "@type": "HowToStep", "position": 4, "name": "Expert Installation", "text": "Precision cutting, fitting, and installation by our experienced carpentry team." },
         { "@type": "HowToStep", "position": 5, "name": "Finishing & Painting", "text": "All carpentry work primed and painted to match. Caulking, filling, and final touches included." }
@@ -167,7 +167,7 @@ const painPoints = [
   {
     icon: Wrench,
     title: 'Rotted Window Frames?',
-    desc: "New England weather takes a toll on wood. Rotted window frames not only look bad but allow moisture to damage your home's structure and drive up energy bills.",
+    desc: "New England weather takes a toll on wood. Rotted window frames not only look bad but allow moisture to damage your home's structure and let drafts compromise your comfort.",
     solution: 'Expert window frame repair and replacement'
   },
   {

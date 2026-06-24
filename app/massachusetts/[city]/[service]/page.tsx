@@ -207,10 +207,10 @@ const servicesData: Record<string, {
   'cabinet-painting': {
     name: 'Cabinet Painting',
     title: 'Cabinet Painting & Refinishing',
-    description: 'Transform your kitchen cabinets for a fraction of replacement cost with our expert refinishing services.',
+    description: 'Transform your kitchen cabinets with our expert refinishing services - a fresh, durable look without the replacement hassle.',
     heroImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg',
     painPoints: [
-      { title: 'Kitchen Cabinets Looking Dated?', desc: "Those 90s oak cabinets are dragging your whole kitchen down. Full cabinet replacement is expensive.", solution: 'Save up to 70% vs replacement with refinishing' },
+      { title: 'Kitchen Cabinets Looking Dated?', desc: "Those 90s oak cabinets are dragging your whole kitchen down. Full cabinet replacement means weeks of demolition and disruption.", solution: 'Refinishing gives a like-new look without the teardown' },
       { title: 'Worn & Grimy Cabinet Finish?', desc: "Years of cooking grease, fingerprints, and wear make cabinets look terrible.", solution: 'Complete prep removes all buildup' },
       { title: 'Want White Cabinets But Worried About Durability?', desc: "White shows everything. Will the paint chip, peel, or yellow over time?", solution: 'Professional-grade finishes that last' },
     ],

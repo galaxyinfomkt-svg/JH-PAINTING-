@@ -229,7 +229,7 @@ export default function BlogPage() {
                 Expert Painting Insights
               </div>
               <h1>Painting Tips, Guides &amp; Inspiration</h1>
-              <p>Expert advice from Massachusetts&apos; trusted painting professionals. Learn about colors, techniques, costs, and more.</p>
+              <p>Expert advice from Massachusetts&apos; trusted painting professionals. Learn about colors, techniques, prep, and more.</p>
 
               {/* Search Bar */}
               <div className="blog-search-wrapper">

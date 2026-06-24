@@ -37,7 +37,7 @@ const serviceContent = {
     benefits: [
       'Protect your home from harsh New England weather',
       'Dramatically boost your curb appeal and property value',
-      'Prevent costly damage from moisture, rot, and decay',
+      'Prevent damage from moisture, rot, and decay',
       'Give your home a fresh, modern appearance',
     ],
     features: [
@@ -59,10 +59,10 @@ const serviceContent = {
     name: 'Cabinet Painting',
     nameVariants: ['cabinet refinishing', 'kitchen cabinet painting', 'cabinet restoration', 'cabinet makeover'],
     benefits: [
-      'Save 70% compared to full cabinet replacement',
+      'Keep your solid cabinet boxes and skip a full kitchen teardown',
       'Transform dated cabinets into modern showpieces',
       'Update your kitchen in days, not weeks',
-      'Add thousands to your home\'s value',
+      'Add lasting value and appeal to your home',
     ],
     features: [
       'professional spray-applied finish for flawless results',
@@ -75,7 +75,7 @@ const serviceContent = {
       'dated oak or cherry cabinets from the 90s',
       'worn, scratched, or peeling cabinet finish',
       'kitchen that looks tired despite being clean',
-      'can\'t afford $15,000-$30,000 for new cabinets',
+      'solid cabinets that just need a fresh, modern finish',
     ],
     types: ['kitchen cabinets', 'bathroom vanities', 'built-ins', 'entertainment centers', 'laundry cabinets'],
   },
@@ -131,7 +131,7 @@ const serviceContent = {
     name: 'Carpentry',
     nameVariants: ['carpentry services', 'wood repair', 'trim carpentry', 'carpentry repairs'],
     benefits: [
-      'Fix structural issues before they become costly problems',
+      'Fix structural issues before they become bigger problems',
       'Restore rotted wood to like-new condition',
       'Ensure paint adheres properly to sound surfaces',
       'Protect your investment with proper repairs',
@@ -206,7 +206,7 @@ export function generateCityHeroText(city: City): string {
     : ''
 
   const variations = [
-    `${city.name}, Massachusetts${countyContext} deserves painters who understand local architecture and New England's demanding climate. JH Painting Services has transformed countless homes${neighborhoodContext}, delivering premium results that protect your investment and enhance your property's beauty. Our ${city.population || 'growing'} community trusts us for interior excellence, exterior durability, and cabinet transformations that save thousands over replacement.`,
+    `${city.name}, Massachusetts${countyContext} deserves painters who understand local architecture and New England's demanding climate. JH Painting Services has transformed countless homes${neighborhoodContext}, delivering premium results that protect your investment and enhance your property's beauty. Our ${city.population || 'growing'} community trusts us for interior excellence, exterior durability, and cabinet transformations that look brand new.`,
 
     `When ${city.name} homeowners need painting done right, they call JH Painting Services. We've built our reputation throughout ${city.county || 'Massachusetts'} by delivering exceptional craftsmanship, using Benjamin Moore and Sherwin-Williams paints, and treating every home like our own. From historic properties to modern builds${neighborhoodContext}, we bring the expertise your ${city.name} home deserves.`,
 
@@ -319,8 +319,8 @@ export function generateServiceFAQ(city: City, serviceSlug: string): { question:
 
   return [
     {
-      question: `How much does ${service.name.toLowerCase()} cost in ${city.name}, MA?`,
-      answer: `${service.name} costs in ${city.name}${zipContext} depend on your project's scope, surface condition, and material choices. For ${city.name} homes, interior painting typically runs $3-$5/sq ft, exteriors $4-$7/sq ft, and cabinet refinishing $3,500-$8,000 for average kitchens. We provide free, detailed estimates with no hidden fees. Call (508) 690-8886 for your ${city.name} project quote.`
+      question: `What does ${service.name.toLowerCase()} in ${city.name}, MA include?`,
+      answer: `Every ${service.name.toLowerCase()} project in ${city.name}${zipContext} includes thorough surface preparation, premium Benjamin Moore and Sherwin-Williams products, and a detailed written scope tailored to your home. Our crews protect your floors and furnishings, complete the work cleanly, and back it with a written warranty. Call (508) 690-8886 for a free, detailed estimate on your ${city.name} project.`
     },
     {
       question: `Do you serve ${city.name}, MA${zipContext}?`,

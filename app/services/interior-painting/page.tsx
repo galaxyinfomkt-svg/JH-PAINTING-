@@ -109,7 +109,7 @@ const interiorPaintingSchema = {
       "totalTime": "P3D",
       "step": [
         { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886 or fill out our online form. We discuss your project goals, color preferences, and timeline." },
-        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "We visit your home and provide a transparent written estimate with clear pricing. No hidden fees." },
+        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "We visit your home and provide a clear written scope of work covering prep, products, and timeline. No surprises." },
         { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Our team patches drywall, sands surfaces, cleans walls, primes bare spots, and protects your furniture and floors." },
         { "@type": "HowToStep", "position": 4, "name": "Expert Painting", "text": "We apply two coats of premium Benjamin Moore or Sherwin-Williams paint with precision cutting-in and smooth rolling." },
         { "@type": "HowToStep", "position": 5, "name": "Final Walkthrough", "text": "We inspect every detail with you. If anything isn't perfect, we make it right. 100% satisfaction guaranteed." }

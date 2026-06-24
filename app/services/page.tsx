@@ -84,7 +84,7 @@ const DropletsIcon = ({ size = 24 }: { size?: number }) => (
   </svg>
 )
 
-// Service data with price ranges
+// Service data
 const services = [
   {
     slug: 'interior-painting',
@@ -129,8 +129,8 @@ const services = [
   {
     slug: 'cabinet-painting',
     name: 'Cabinet Painting',
-    shortDesc: 'Refresh your kitchen for less',
-    description: 'Transform your kitchen with professional cabinet refinishing. Save up to 70% compared to replacement while achieving a factory-quality finish.',
+    shortDesc: 'Refresh your kitchen cabinets',
+    description: 'Transform your kitchen with professional cabinet refinishing. A durable, factory-quality finish that revives your cabinets and lasts for years.',
     icon: PaintBucketIcon,
     features: ['Kitchen Cabinets', 'Bathroom Vanities', 'Built-in Units', 'Factory Finish'],
     image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',

@@ -91,7 +91,7 @@ const servicesData: ServiceInfo[] = [
         },
         'worcester-area': {
           headline: `Interior Painting for Worcester & Central MA Homes`,
-          intro: `Worcester's housing ranges from grand Victorians in the Elm Park district to practical triple-decker apartments throughout the city. Interior painting here means working with old plaster, navigating tight stairways, and delivering results that withstand heavy use. Whether you're a homeowner in Shrewsbury refreshing a colonial or a Worcester landlord turning over a rental unit, we deliver quality at a fair price.`,
+          intro: `Worcester's housing ranges from grand Victorians in the Elm Park district to practical triple-decker apartments throughout the city. Interior painting here means working with old plaster, navigating tight stairways, and delivering results that withstand heavy use. Whether you're a homeowner in Shrewsbury refreshing a colonial or a Worcester landlord turning over a rental unit, we deliver quality work you can rely on.`,
           features: [
             'Triple-decker apartment turnarounds - walls, ceilings, trim in 1-2 days per unit',
             'Old plaster stabilization and repair for Worcester\'s pre-war housing stock',
@@ -138,18 +138,18 @@ const servicesData: ServiceInfo[] = [
           ],
         },
         'north-central': {
-          headline: `Affordable Interior Painting for North Central MA Families`,
-          intro: `Fitchburg and Leominster families want quality interior painting that doesn't break the budget. Builder-grade paint from the 1990s-2000s is fading and scuffing, kids' rooms need freshening up, and older homes need plaster repair before new paint. We offer quality work at fair prices - premium results without the premium Boston-area markup.`,
+          headline: `Quality Interior Painting for North Central MA Families`,
+          intro: `Fitchburg and Leominster families want quality interior painting that holds up to daily life. Builder-grade paint from the 1990s-2000s is fading and scuffing, kids' rooms need freshening up, and older homes need plaster repair before new paint. We deliver premium results with the same craftsmanship the Boston area expects.`,
           features: [
-            'Budget-friendly room-by-room scheduling - paint now, pay as you go',
+            'Flexible room-by-room scheduling - tackle one space at a time',
             'Durable, scrubbable finishes for active families with kids and pets',
             'Old plaster repair for Fitchburg and Leominster\'s industrial-era homes',
             'Antique home interior restoration in Harvard, Lancaster, and Berlin',
           ],
           process: [
-            { step: 'Fair Estimate', detail: 'Transparent pricing with no hidden fees. We itemize every room so you know exactly what you\'re paying for.' },
+            { step: 'Clear Estimate', detail: 'A detailed written scope with no surprises. We itemize every room so you know exactly what the project includes.' },
             { step: 'Careful Prep', detail: 'We repair what needs fixing - cracks, nail pops, water stains - and prime properly so the paint lasts.' },
-            { step: 'Quality Paint', detail: 'Sherwin-Williams ProMar 200 or Duration - professional-grade paint that\'s durable and washable. No cheap contractor paint.' },
+            { step: 'Quality Paint', detail: 'Sherwin-Williams ProMar 200 or Duration - professional-grade paint that\'s durable and washable. No low-grade contractor paint.' },
             { step: 'Respectful Service', detail: 'We protect your home, keep the workspace clean, and finish on schedule. Honest work for honest families.' },
           ],
         },
@@ -218,7 +218,7 @@ const servicesData: ServiceInfo[] = [
             'Triple-decker 3-coat exterior systems with 15+ year rated paints',
             'High-elevation weather protection for Princeton, Westminster, Rutland, Sterling',
             'Ice dam damage repair and prevention before exterior painting',
-            'Multi-family volume pricing for Worcester landlords and property managers',
+            'Multi-family painting programs for Worcester landlords and property managers',
           ],
           process: [
             { step: 'Climate Assessment', detail: 'We evaluate exposure direction, elevation, and weather patterns specific to your property\'s location in Central MA.' },
@@ -298,12 +298,12 @@ const servicesData: ServiceInfo[] = [
   {
     name: 'Cabinet Painting',
     slug: 'cabinet-painting',
-    shortDesc: 'Transform kitchen cabinets for 70% less than replacement.',
+    shortDesc: 'Transform kitchen cabinets without the replacement hassle.',
     getRegionContent: (regionName, regionSlug) => {
       const content: Record<string, { headline: string; intro: string; features: string[]; process: { step: string; detail: string }[] }> = {
         'greater-boston': {
           headline: `Cabinet Painting for Greater Boston Kitchens`,
-          intro: `Boston-area kitchens vary wildly - from tiny galley kitchens in Somerville walk-ups to grand chef's kitchens in Newton estates. Regardless of size, dated cabinets drag down your entire kitchen's look. We transform honey oak, cherry, and maple cabinets into modern, fresh showpieces with our spray-applied lacquer finish - no need for $30K-$50K cabinet replacement.`,
+          intro: `Boston-area kitchens vary wildly - from tiny galley kitchens in Somerville walk-ups to grand chef's kitchens in Newton estates. Regardless of size, dated cabinets drag down your entire kitchen's look. We transform honey oak, cherry, and maple cabinets into modern, fresh showpieces with our spray-applied lacquer finish - no demolition or full cabinet replacement required.`,
           features: [
             'Small kitchen specialists - we work efficiently in tight Boston and Cambridge galley kitchens',
             'Condo-friendly process with low-odor, fast-cure cabinet finishes',
@@ -319,7 +319,7 @@ const servicesData: ServiceInfo[] = [
         },
         'metrowest': {
           headline: `Cabinet Painting for MetroWest's 1990s-2000s Kitchens`,
-          intro: `MetroWest is packed with homes built during the suburban boom - and those honey-oak and golden-cherry cabinets from 1995-2010 are now the #1 thing homeowners want to change. A full cabinet replacement costs $25,000-$50,000. Our cabinet painting transforms them for 70% less with a factory-smooth spray finish. Framingham, Natick, Sudbury, and Hopkinton homeowners love the results.`,
+          intro: `MetroWest is packed with homes built during the suburban boom - and those honey-oak and golden-cherry cabinets from 1995-2010 are now the #1 thing homeowners want to change. A full cabinet replacement means weeks of demolition and disruption. Our cabinet painting transforms them with a factory-smooth spray finish and far less hassle. Framingham, Natick, Sudbury, and Hopkinton homeowners love the results.`,
           features: [
             'Honey oak to white, gray, or navy - the most requested MetroWest kitchen transformation',
             'Island accent colors - two-tone kitchens are MetroWest\'s most popular trend',
@@ -334,16 +334,16 @@ const servicesData: ServiceInfo[] = [
           ],
         },
         'worcester-area': {
-          headline: `Affordable Cabinet Painting in Worcester & Central MA`,
-          intro: `Worcester-area homeowners want updated kitchens without the premium prices charged by Boston-area refinishers. Our cabinet painting service delivers the same factory-quality spray finish at Central MA prices. Whether you have builder-grade oak in a Shrewsbury colonial or painted cabinets peeling in a Worcester triple-decker, we make them look brand new.`,
+          headline: `Quality Cabinet Painting in Worcester & Central MA`,
+          intro: `Worcester-area homeowners want updated kitchens without the disruption of a full remodel. Our cabinet painting service delivers a factory-quality spray finish with craftsmanship you can count on. Whether you have builder-grade oak in a Shrewsbury colonial or painted cabinets peeling in a Worcester triple-decker, we make them look brand new.`,
           features: [
-            'Budget-friendly cabinet transformation - 70% less than replacement',
+            'Hassle-free cabinet transformation - no demolition or replacement',
             'Rental property cabinet refresh for Worcester landlords',
             'Durable finishes that withstand heavy kitchen use in family homes',
             'Quick turnaround - most kitchens completed in 5-7 days',
           ],
           process: [
-            { step: 'Fair Quote', detail: 'Transparent pricing based on door count and kitchen size. No hidden fees or surprise charges.' },
+            { step: 'Clear Quote', detail: 'A detailed written scope based on door count and kitchen size. No surprises mid-project.' },
             { step: 'Efficient Removal', detail: 'Doors removed, labeled, and prepped. We work quickly to minimize kitchen downtime.' },
             { step: 'Quality Spray Finish', detail: 'Professional lacquer sprayed to a smooth, even finish. Durable enough for the busiest family kitchens.' },
             { step: 'Fast Return', detail: 'Reinstalled and ready to use. Most Central MA kitchens done in under a week.' },
@@ -351,7 +351,7 @@ const servicesData: ServiceInfo[] = [
         },
         'north-middlesex': {
           headline: `Cabinet Painting for North Middlesex & Merrimack Valley Kitchens`,
-          intro: `Subdivision homes across Chelmsford, Westford, Billerica, and Tewksbury share the same problem: dated builder-grade cabinets. The medium-oak finish that was standard in the 1990s-2000s now looks tired. Our cabinet painting converts those dated kitchens into modern, clean spaces with a professional spray finish - no demolition, no mess, no $30K price tag.`,
+          intro: `Subdivision homes across Chelmsford, Westford, Billerica, and Tewksbury share the same problem: dated builder-grade cabinets. The medium-oak finish that was standard in the 1990s-2000s now looks tired. Our cabinet painting converts those dated kitchens into modern, clean spaces with a professional spray finish - no demolition, no mess, no weeks-long teardown.`,
           features: [
             'Builder-grade oak to modern white, gray, or two-tone in 5-7 days',
             'Suburban kitchen sizes - from compact ranch kitchens to large colonial layouts',
@@ -382,18 +382,18 @@ const servicesData: ServiceInfo[] = [
           ],
         },
         'north-central': {
-          headline: `Cabinet Painting at Honest Prices in North Central MA`,
-          intro: `Fitchburg and Leominster homeowners want modern kitchens but don't want to pay Boston prices for cabinet replacement. Our cabinet painting service gives you a brand-new kitchen look at a fraction of the cost. We spray-apply durable lacquer finish that transforms dated cabinets - oak, maple, or cherry - into fresh, modern showpieces.`,
+          headline: `Quality Cabinet Painting in North Central MA`,
+          intro: `Fitchburg and Leominster homeowners want modern kitchens without the disruption of a full cabinet replacement. Our cabinet painting service gives you a brand-new kitchen look without the demolition and downtime. We spray-apply durable lacquer finish that transforms dated cabinets - oak, maple, or cherry - into fresh, modern showpieces.`,
           features: [
-            'Affordable cabinet transformation - quality results at North Central MA prices',
-            'Room-by-room payment options available for families on a budget',
+            'Hassle-free cabinet transformation - quality results for North Central MA homes',
+            'Flexible room-by-room scheduling for busy families',
             'Durable finishes built for busy family kitchens',
             'Antique kitchen cabinet restoration for Harvard and Lancaster period homes',
           ],
           process: [
-            { step: 'Honest Quote', detail: 'We price based on door count and complexity - transparent and fair. No inflated Boston pricing.' },
+            { step: 'Clear Quote', detail: 'We scope the work based on door count and complexity - detailed and upfront. No surprises later.' },
             { step: 'Professional Removal', detail: 'Doors removed, labeled, and taken for spray finishing. Cabinet boxes prepped on-site.' },
-            { step: 'Spray Finish', detail: 'Even, smooth lacquer finish - the same quality as shops charging twice our price.' },
+            { step: 'Spray Finish', detail: 'Even, smooth lacquer finish - the same quality you would expect from a custom millwork shop.' },
             { step: 'Quick Install', detail: 'Doors back on, hardware updated, kitchen ready to use. Most jobs done in 5-7 days.' },
           ],
         },
@@ -404,7 +404,7 @@ const servicesData: ServiceInfo[] = [
             'Moisture-resistant cabinet finishes designed for the Valley\'s humid climate',
             'Mill village kitchen updates that respect historic home character',
             'Modern color options for suburban homes in Milford, Sutton, Upton',
-            'Budget-friendly alternative to full cabinet replacement',
+            'A hassle-free alternative to full cabinet replacement',
           ],
           process: [
             { step: 'Valley-Specific Assessment', detail: 'We check for moisture issues and recommend finishes rated for the Blackstone Valley\'s humidity.' },
@@ -423,12 +423,12 @@ const servicesData: ServiceInfo[] = [
     shortDesc: 'Offices, retail, restaurants & medical facilities.',
     getRegionContent: (regionName, regionSlug) => ({
       headline: `Commercial Painting Services Across ${regionName}`,
-      intro: `Businesses across ${regionName} trust JH Painting for commercial painting that's done right - on schedule, within budget, and with minimal disruption to your operations. We paint offices, retail spaces, restaurants, medical facilities, and multi-unit commercial buildings with the same quality and professionalism that's earned us 40+ five-star reviews.`,
+      intro: `Businesses across ${regionName} trust JH Painting for commercial painting that's done right - on schedule, on spec, and with minimal disruption to your operations. We paint offices, retail spaces, restaurants, medical facilities, and multi-unit commercial buildings with the same quality and professionalism that's earned us 40+ five-star reviews.`,
       features: [
         `After-hours and weekend scheduling for ${regionName} businesses - zero disruption to your operations`,
         'Low-VOC, quick-dry commercial paints that allow next-day business operations',
         'Retail, restaurant, medical, and office painting - each with appropriate finishes and compliance',
-        `Multi-location commercial painting programs across ${regionName} with volume pricing`,
+        `Multi-location commercial painting programs across ${regionName} with coordinated scheduling`,
       ],
       process: [
         { step: 'Site Assessment', detail: 'We evaluate your space, discuss brand colors, identify special requirements, and create a detailed scope and timeline.' },
@@ -453,7 +453,7 @@ const servicesData: ServiceInfo[] = [
       ],
       process: [
         { step: 'Home Consultation', detail: 'We walk through your home, discuss your vision, and recommend colors and finishes for every space.' },
-        { step: 'Detailed Proposal', detail: 'Room-by-room quote with product specifications. You know exactly what you\'re getting and what it costs.' },
+        { step: 'Detailed Proposal', detail: 'Room-by-room scope with product specifications. You know exactly what you\'re getting at every step.' },
         { step: 'Expert Application', detail: 'Professional prep, premium paint, and careful technique. Every room finished to the same high standard.' },
         { step: 'Satisfaction Guarantee', detail: 'Final walkthrough with the homeowner. Any touch-ups completed before we consider the job done.' },
       ],
@@ -745,7 +745,7 @@ export default async function RegionServicePage({ params }: Props) {
               <div className="city-about-content">
                 <span className="city-badge city-badge-red">Meet the Owner</span>
                 <h2>Your {service.name} Expert in {region.name}</h2>
-                <p>Jafet Hernandez founded JH Painting with a simple belief: every homeowner deserves premium quality work at a fair price. Our team brings specialized {service.name.toLowerCase()} expertise to every project across {region.name}, using only premium Benjamin Moore and Sherwin-Williams products.</p>
+                <p>Jafet Hernandez founded JH Painting with a simple belief: every homeowner deserves premium quality work and craftsmanship they can trust. Our team brings specialized {service.name.toLowerCase()} expertise to every project across {region.name}, using only premium Benjamin Moore and Sherwin-Williams products.</p>
                 <div className="city-about-features">
                   {[
                     { icon: ShieldIcon, title: 'Licensed & $2M Insured' },
@@ -771,7 +771,7 @@ export default async function RegionServicePage({ params }: Props) {
             <div className="city-section-header">
               <span className="city-badge city-badge-red">Service Areas</span>
               <h2 className="city-section-title">{service.name} in {region.name} Cities</h2>
-              <p className="city-section-subtitle">Click any city for local {service.name.toLowerCase()} details and pricing</p>
+              <p className="city-section-subtitle">Click any city for local {service.name.toLowerCase()} details and service info</p>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.75rem', maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>

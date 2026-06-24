@@ -252,7 +252,7 @@ const schemaData = {
         "itemListElement": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior House Painting", "description": "Complete exterior house painting with power washing, surface prep, caulking, priming, and two coats of premium weather-resistant Benjamin Moore or Sherwin-Williams paint. 5-year warranty. Serving 117+ Massachusetts cities.", "url": "https://jhpaintingservices.com/services/exterior-painting" }, "warranty": { "@type": "WarrantyPromise", "durationOfWarranty": { "@type": "QuantitativeValue", "value": 5, "unitCode": "ANN" }, "warrantyScope": "Covers peeling, blistering, cracking, and fading under normal weather conditions." } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting", "description": "Professional interior painting for walls, ceilings, trim, doors, and baseboards with premium low-VOC paints. 3-year warranty.", "url": "https://jhpaintingservices.com/services/interior-painting" }, "warranty": { "@type": "WarrantyPromise", "durationOfWarranty": { "@type": "QuantitativeValue", "value": 3, "unitCode": "ANN" }, "warrantyScope": "Covers peeling, blistering, and flaking under normal indoor conditions." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing", "description": "Kitchen cabinet painting and refinishing with factory-quality spray finish. Save 60-70% vs replacement.", "url": "https://jhpaintingservices.com/services/cabinet-painting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing", "description": "Kitchen cabinet painting and refinishing with a durable, factory-quality spray finish that revives cabinets without replacement.", "url": "https://jhpaintingservices.com/services/cabinet-painting" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting", "description": "Professional painting for offices, retail, restaurants. After-hours scheduling available.", "url": "https://jhpaintingservices.com/services/commercial-painting" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck Staining & Restoration", "description": "Professional deck staining, sealing, and restoration services for wood decks and fences.", "url": "https://jhpaintingservices.com/services/power-washing" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Power Washing", "description": "Professional pressure washing for driveways, siding, decks, patios, and walkways.", "url": "https://jhpaintingservices.com/services/power-washing" } }
@@ -275,28 +275,28 @@ const schemaData = {
           "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
           "author": { "@type": "Person", "name": "John D." },
           "datePublished": "2024-10-22",
-          "reviewBody": "We hired JH Painting for our exterior and couldn't be happier. Great communication and fair pricing!"
+          "reviewBody": "We hired JH Painting for our exterior and couldn't be happier. Great communication and beautiful, lasting results!"
         },
         {
           "@type": "Review",
           "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
           "author": { "@type": "Person", "name": "Maria L." },
           "datePublished": "2025-01-10",
-          "reviewBody": "Best painting company in Massachusetts! They refinished our kitchen cabinets and saved us thousands compared to replacing them. The attention to detail was incredible."
+          "reviewBody": "Best painting company in Massachusetts! They refinished our kitchen cabinets and made them look brand new instead of replacing them. The attention to detail was incredible."
         },
         {
           "@type": "Review",
           "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
           "author": { "@type": "Person", "name": "Michael R." },
           "datePublished": "2025-03-05",
-          "reviewBody": "Hired JH Painting for a commercial office project in Worcester. They finished on time, stayed within budget, and the results exceeded our expectations. Very professional crew."
+          "reviewBody": "Hired JH Painting for a commercial office project in Worcester. They finished on time, kept the site clean, and the results exceeded our expectations. Very professional crew."
         },
         {
           "@type": "Review",
           "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
           "author": { "@type": "Person", "name": "Emily C." },
           "datePublished": "2025-06-18",
-          "reviewBody": "Jafet and his team painted our entire Victorian home exterior in Natick. They handled the lead paint safely and the house looks brand new. Worth every penny!"
+          "reviewBody": "Jafet and his team painted our entire Victorian home exterior in Natick. They handled the lead paint safely and the house looks brand new. Couldn't recommend them more!"
         },
         {
           "@type": "Review",
@@ -370,7 +370,7 @@ const schemaData = {
         "itemListElement": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior House Painting", "url": "https://jhpaintingservices.com/services/exterior-painting" }, "description": "Complete exterior house painting with power washing, scraping, caulking, priming, and two coats of premium weather-resistant paint. 5-year warranty. Serving 117+ cities in Massachusetts." },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting", "url": "https://jhpaintingservices.com/services/interior-painting" }, "description": "Professional interior painting for walls, ceilings, trim, doors, baseboards. Premium low-VOC Benjamin Moore and Sherwin-Williams paints. 3-year warranty." },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing", "url": "https://jhpaintingservices.com/services/cabinet-painting" }, "description": "Kitchen cabinet painting and refinishing with factory-quality spray finish. Save 60-70% vs full replacement. Free estimates available." },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing", "url": "https://jhpaintingservices.com/services/cabinet-painting" }, "description": "Kitchen cabinet painting and refinishing with factory-quality spray finish that revives cabinets without full replacement. Free estimates available." },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting", "url": "https://jhpaintingservices.com/services/commercial-painting" }, "description": "Professional painting for offices, retail, restaurants, warehouses. After-hours and weekend scheduling. Free estimates available." },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carpentry & Trim Work", "url": "https://jhpaintingservices.com/services/carpentry" }, "description": "Expert carpentry, trim replacement, fascia repair, and wood rot repair. Free estimates available." },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Power Washing", "url": "https://jhpaintingservices.com/services/power-washing" }, "description": "Professional pressure washing for driveways, siding, decks, patios, walkways, and fences. Free estimates available." }
@@ -435,7 +435,7 @@ const schemaData = {
       "totalTime": "P5D",
       "step": [
         { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886 or fill out our online form. We discuss your project goals, timeline, and provide expert color recommendations." },
-        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "We visit your property and provide a transparent, written estimate with clear pricing. No hidden fees, no surprises." },
+        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "We visit your property and provide a clear, written estimate detailing the full scope of work. No surprises - just a straightforward plan." },
         { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Our team prepares all surfaces - patching drywall, sanding, priming, and protecting your furniture, floors, and landscaping." },
         { "@type": "HowToStep", "position": 4, "name": "Expert Painting", "text": "We apply two coats of premium Benjamin Moore or Sherwin-Williams paint with precision cutting-in, smooth rolling, and careful detail work." },
         { "@type": "HowToStep", "position": 5, "name": "Final Walkthrough", "text": "We walk through every detail with you. If anything isn't perfect, we make it right. Your satisfaction is 100% guaranteed." }

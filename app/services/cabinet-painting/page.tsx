@@ -19,7 +19,7 @@ const cabinetPaintingSchema = {
       "@id": "https://jhpaintingservices.com/services/cabinet-painting#service",
       "name": "Cabinet Painting & Refinishing Services Massachusetts",
       "serviceType": "Cabinet Painting",
-      "description": "Professional cabinet painting and refinishing services in Massachusetts. Transform your kitchen cabinets for 70% less than replacement. Expert spray finishing, premium materials, flawless results.",
+      "description": "Professional cabinet painting and refinishing services in Massachusetts. Transform your kitchen cabinets without the disruption of replacement. Expert spray finishing, premium materials, flawless results.",
       "provider": {
         "@type": "LocalBusiness",
         "@id": "https://jhpaintingservices.com/#organization",
@@ -105,15 +105,15 @@ const cabinetPaintingSchema = {
     {
       "@type": "HowTo",
       "name": "How Cabinet Refinishing Works at JH Painting Services",
-      "description": "Our professional 6-step cabinet refinishing process saves 60-70% vs replacement.",
+      "description": "Our professional 6-step cabinet refinishing process delivers a factory-quality finish without replacement.",
       "totalTime": "P7D",
       "step": [
         { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886. We assess your cabinets, discuss finish options (paint vs stain), and recommend colors." },
-        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "Written estimate with clear pricing based on cabinet count, door style, and finish type. No hidden fees." },
+        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "Clear written estimate based on cabinet count, door style, and finish type. Everything spelled out up front." },
         { "@type": "HowToStep", "position": 3, "name": "Door Removal & Labeling", "text": "We carefully remove all doors, drawers, and hardware. Each piece is labeled for perfect reinstallation." },
         { "@type": "HowToStep", "position": 4, "name": "Surface Preparation", "text": "Thorough degreasing, sanding, and priming with adhesion-promoting primer for a factory-quality bond." },
         { "@type": "HowToStep", "position": 5, "name": "Spray Application", "text": "Multiple coats of cabinet-grade enamel applied with professional spray equipment for a smooth, durable finish." },
-        { "@type": "HowToStep", "position": 6, "name": "Reassembly & Inspection", "text": "Hardware reinstalled, doors rehung, and final inspection. Your kitchen looks brand new at a fraction of replacement cost." }
+        { "@type": "HowToStep", "position": 6, "name": "Reassembly & Inspection", "text": "Hardware reinstalled, doors rehung, and final inspection. Your kitchen looks brand new without the upheaval of replacement." }
       ]
     }
   ]
@@ -171,9 +171,9 @@ const beforeAfterPairs = [
 const painPoints = [
   {
     icon: DollarSign,
-    title: 'New Cabinets Too Expensive?',
-    desc: "Full kitchen cabinet replacement is a massive investment that most homeowners can't justify. But outdated cabinets drag down your entire kitchen.",
-    solution: 'Save 70% with professional cabinet painting'
+    title: 'Cabinets Looking Dated?',
+    desc: "Full kitchen cabinet replacement means demolition and weeks of upheaval that most homeowners would rather avoid. But outdated cabinets drag down your entire kitchen.",
+    solution: 'Refresh your cabinets with professional refinishing'
   },
   {
     icon: Timer,
@@ -191,7 +191,7 @@ const painPoints = [
 
 const stats = [
   { number: '500+', label: 'Cabinets Refinished' },
-  { number: '70%', label: 'Cost Savings' },
+  { number: '5★', label: 'Average Rating' },
   { number: '5-7', label: 'Days Average' },
   { number: '114', label: 'Cities Served' }
 ]
@@ -284,7 +284,7 @@ export default function CabinetPaintingPage() {
               </h1>
 
               <p className="service-hero-desc">
-                Transform your kitchen cabinets for 70% less than replacement. Expert spray finishing, premium paints, and factory-quality results that last for years.
+                Transform your kitchen cabinets without the upheaval of replacement. Expert spray finishing, premium paints, and factory-quality results that last for years.
               </p>
 
               <div className="service-hero-ctas">
@@ -301,7 +301,7 @@ export default function CabinetPaintingPage() {
               <div className="service-hero-features">
                 {[
                   { icon: Shield, text: 'Licensed & Insured' },
-                  { icon: Award, text: 'Save 70% vs Replacement' },
+                  { icon: Award, text: 'Factory-Quality Finish' },
                   { icon: Clock, text: '5-7 Day Turnaround' }
                 ].map((item, idx) => (
                   <div key={idx} className="service-hero-feature">
@@ -369,7 +369,7 @@ export default function CabinetPaintingPage() {
       <section className="service-section service-section-white" style={{ paddingTop: '3rem', paddingBottom: '0' }}>
         <div className="container">
           <p className="service-summary" style={{ fontSize: '1.0625rem', lineHeight: '1.8', color: '#374151', maxWidth: '900px' }}>
-            <strong>JH Painting Services</strong> provides professional kitchen cabinet painting and refinishing across <strong>117+ cities in Massachusetts</strong>. Cabinet refinishing saves homeowners <strong>60-70% compared to full cabinet replacement</strong>. We use spray-applied cabinet-grade enamel for a factory-smooth finish. Licensed, <strong>$2M insured</strong>, EPA Lead-Safe certified. Contact us for a free estimate. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong>.
+            <strong>JH Painting Services</strong> provides professional kitchen cabinet painting and refinishing across <strong>117+ cities in Massachusetts</strong>. Cabinet refinishing revives outdated kitchens <strong>without the disruption of full cabinet replacement</strong>. We use spray-applied cabinet-grade enamel for a factory-smooth finish. Licensed, <strong>$2M insured</strong>, EPA Lead-Safe certified. Contact us for a free estimate. Call <strong><a href="tel:+15086908886" style={{ color: '#CC0000' }}>(508) 690-8886</a></strong>.
           </p>
         </div>
       </section>
@@ -389,10 +389,10 @@ export default function CabinetPaintingPage() {
         <div className="container">
           <div className="service-section-header">
             <h2 className="service-section-title">
-              Dreaming of a Kitchen Transformation Without the Massive Price Tag?
+              Dreaming of a Kitchen Transformation Without the Disruption?
             </h2>
             <p className="service-section-subtitle">
-              Cabinet painting delivers stunning results at a fraction of the cost of replacement.
+              Cabinet painting delivers stunning, lasting results without the upheaval of replacement.
             </p>
           </div>
 
@@ -624,7 +624,7 @@ export default function CabinetPaintingPage() {
             Ready to Transform Your Kitchen Cabinets?
           </h2>
           <p className="service-cta-desc">
-            Get a free estimate and see how much you can save with professional cabinet painting.
+            Get a free estimate and see what professional cabinet painting can do for your kitchen.
           </p>
           <div className="service-cta-buttons">
             <a href={`tel:${BUSINESS.phoneRaw}`} className="service-cta-btn-white">
