@@ -48,6 +48,17 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  // 301 Redirect: /massachusetts/X-ma[/service] → /massachusetts/X[/service]
+  // getCityBySlug() strips a trailing "-ma", so these malformed slugs render a
+  // 200 DUPLICATE of the canonical clean URL (wasting crawl budget and
+  // splitting signals). Redirect them to the one canonical URL. RI slugs
+  // (e.g. woonsocket-ri) are intentionally left untouched.
+  const maDupMatch = pathname.match(/^\/massachusetts\/([a-z][a-z0-9-]*)-ma(\/(?:interior-painting|exterior-painting|commercial-painting|residential-painting|cabinet-painting|carpentry|power-washing))?$/)
+  if (maDupMatch) {
+    const clean = `/massachusetts/${maDupMatch[1]}${maDupMatch[2] || ''}`
+    return NextResponse.redirect(new URL(clean, request.url), 301)
+  }
+
   // 301 Redirect: /cities/X-ma/service → /massachusetts/X/service
   const cityServiceMatch = pathname.match(/^\/cities\/([a-z][a-z0-9-]+)\/(interior-painting|exterior-painting|commercial-painting|residential-painting|cabinet-painting|carpentry|power-washing)$/)
   if (cityServiceMatch) {
