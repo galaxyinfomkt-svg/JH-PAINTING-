@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { getCityBySlug, normalizeCitySlug } from '@/app/data/cities'
 import { generateServiceContent } from '@/app/data/cityContent'
+import { shouldIndexCityService } from '@/app/data/indexing'
 import { generatePageMetadata } from '@/lib/seo'
 
 interface Props {
@@ -102,6 +103,9 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
     description,
     keywords,
     path: `/massachusetts/${normalizeCitySlug(city.slug)}/${service}`,
+    // Long-tail (low-demand) city+service combos are noindex,follow so they
+    // stop diluting crawl budget; high-demand combos stay indexable.
+    noIndex: !shouldIndexCityService(city, service),
     ogImageAlt: isExterior
       ? `Professional exterior house painting in ${city.name}, MA by JH Painting Services - licensed painters`
       : `${serviceName} Services in ${city.name}, MA by JH Painting Services`,

@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import { cities, normalizeCitySlug } from './data/cities'
 import { blogPosts } from './data/blogPosts'
 import { regions } from './data/regions'
+import { shouldIndexCityService } from './data/indexing'
 
 // Frozen at build time. Bump when meaningful page content changes so Google
 // trusts the lastmod signal - `new Date()` every deploy is a known anti-pattern
@@ -140,14 +141,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // City + service pages: /massachusetts/marlborough/interior-painting
-  // Exterior painting pages get higher priority (better leads)
+  // Only the indexable (high-demand) combos go in the sitemap - the long-tail
+  // combos are noindex,follow (see app/data/indexing.ts) and must NOT be listed
+  // here (a sitemap should only contain indexable URLs).
+  // Exterior painting pages get higher priority (better leads).
   const cityServicePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
-    servicesSlugs.map((service) => ({
-      url: `${baseUrl}/massachusetts/${normalizeCitySlug(city.slug)}/${service}`,
-      lastModified: currentDate,
-      changeFrequency: service === 'exterior-painting' ? 'weekly' as const : 'monthly' as const,
-      priority: service === 'exterior-painting' ? 0.85 : 0.7,
-    }))
+    servicesSlugs
+      .filter((service) => shouldIndexCityService(city, service))
+      .map((service) => ({
+        url: `${baseUrl}/massachusetts/${normalizeCitySlug(city.slug)}/${service}`,
+        lastModified: currentDate,
+        changeFrequency: service === 'exterior-painting' ? 'weekly' as const : 'monthly' as const,
+        priority: service === 'exterior-painting' ? 0.85 : 0.7,
+      }))
   )
 
   // Region hub pages: /regions/greater-boston, /regions/metrowest, etc.
