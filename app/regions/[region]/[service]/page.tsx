@@ -574,7 +574,7 @@ export default async function RegionServicePage({ params }: Props) {
                     <MapPinIcon size={14} />
                     {region.name}
                   </span>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', padding: '0.5rem 1rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', padding: '0.5rem 1rem', background: '#CC0000', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
                     <StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} />
                     5.0
                   </span>
@@ -710,7 +710,7 @@ export default async function RegionServicePage({ params }: Props) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '900px', margin: '0 auto', padding: '0 1.5rem' }}>
               {content.process.map((step, idx) => (
                 <div key={idx} style={{ background: '#fff', borderRadius: '20px', padding: '2rem 2.5rem', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 24px rgba(0,0,0,0.05)', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', minWidth: '48px', background: 'linear-gradient(135deg, #CC0000, #990000)', color: '#fff', borderRadius: '14px', fontSize: '1.125rem', fontWeight: 800 }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', minWidth: '48px', background: '#CC0000', color: '#fff', borderRadius: '14px', fontSize: '1.125rem', fontWeight: 800 }}>
                     {idx + 1}
                   </span>
                   <div>
@@ -807,7 +807,7 @@ export default async function RegionServicePage({ params }: Props) {
                   href={`/regions/${region.slug}/${svc.slug}`}
                   style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: '#fff', borderRadius: '16px', padding: '1.25rem 1.5rem', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.04)', textDecoration: 'none', transition: 'all 0.3s ease' }}
                 >
-                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '44px', height: '44px', minWidth: '44px', background: 'linear-gradient(135deg, #CC0000, #990000)', borderRadius: '12px' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '44px', height: '44px', minWidth: '44px', background: '#CC0000', borderRadius: '12px' }}>
                     <ChevronRightIcon size={20} />
                   </span>
                   <div>

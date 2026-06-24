@@ -92,7 +92,7 @@ export default async function RegionPage({ params }: Props) {
                     <MapPinIcon size={14} />
                     {regionCities.length}+ Communities
                   </span>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', padding: '0.5rem 1rem', background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', padding: '0.5rem 1rem', background: '#CC0000', borderRadius: '100px', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
                     <StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} /><StarIcon size={12} />
                     5.0
                   </span>
@@ -175,7 +175,7 @@ export default async function RegionPage({ params }: Props) {
               {region.painPoints.map((point, idx) => (
                 <div key={idx} style={{ background: '#fff', borderRadius: '20px', padding: '2rem 2.5rem', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 24px rgba(0,0,0,0.05)' }}>
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0F172A', marginBottom: '1.25rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '36px', height: '36px', background: 'linear-gradient(135deg, #CC0000, #990000)', color: '#fff', borderRadius: '10px', fontSize: '0.875rem', fontWeight: 800, flexShrink: 0 }}>{idx + 1}</span>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '36px', height: '36px', background: '#CC0000', color: '#fff', borderRadius: '10px', fontSize: '0.875rem', fontWeight: 800, flexShrink: 0 }}>{idx + 1}</span>
                     {point.title}
                   </h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>

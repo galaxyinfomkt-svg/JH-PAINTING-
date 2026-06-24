@@ -46,7 +46,7 @@ export default function ThankYouPage() {
       </header>
 
       {/* Main Content */}
-      <main style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)' }}>
+      <main style={{ minHeight: '100vh', background: '#0F172A' }}>
         {/* Hero Section */}
         <section style={{
           paddingTop: '120px',
@@ -75,7 +75,7 @@ export default function ThankYouPage() {
               <div style={{
                 width: '120px',
                 height: '120px',
-                background: 'linear-gradient(135deg, #22C55E 0%, #16A34A 100%)',
+                background: '#22C55E',
                 borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
@@ -145,7 +145,7 @@ export default function ThankYouPage() {
                       <div style={{
                         width: '56px',
                         height: '56px',
-                        background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)',
+                        background: '#CC0000',
                         borderRadius: '12px',
                         display: 'flex',
                         alignItems: 'center',
@@ -173,7 +173,7 @@ export default function ThankYouPage() {
                   alignItems: 'center',
                   gap: '0.75rem',
                   padding: '1rem 2rem',
-                  background: 'linear-gradient(135deg, #CC0000 0%, #990000 100%)',
+                  background: '#CC0000',
                   color: '#fff',
                   borderRadius: '12px',
                   fontSize: '1.125rem',

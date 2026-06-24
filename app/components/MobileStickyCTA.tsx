@@ -45,7 +45,7 @@ export default function MobileStickyCTA() {
           justifyContent: 'center',
           gap: '0.4rem',
           padding: '0.875rem 0.5rem',
-          background: 'linear-gradient(135deg, #CC0000, #990000)',
+          background: '#CC0000',
           color: '#fff',
           fontWeight: 700,
           fontSize: '0.9375rem',

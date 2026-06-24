@@ -401,8 +401,8 @@ export default function ProjectsPage() {
            ======================================== */
 
         .projects-page {
-          --gradient-primary: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-          --gradient-accent: linear-gradient(135deg, #CC0000 0%, #990000 100%);
+          --gradient-primary: #0f172a;
+          --gradient-accent: #CC0000;
           --glass-bg: rgba(255, 255, 255, 0.03);
           --glass-border: rgba(255, 255, 255, 0.1);
         }
@@ -451,12 +451,7 @@ export default function ProjectsPage() {
         .hero-overlay {
           position: absolute;
           inset: 0;
-          background: linear-gradient(
-            180deg,
-            rgba(15, 23, 42, 0.9) 0%,
-            rgba(15, 23, 42, 0.95) 50%,
-            rgba(15, 23, 42, 1) 100%
-          );
+          background: rgba(15, 23, 42, 0.9);
         }
 
         .hero-content {
@@ -505,7 +500,7 @@ export default function ProjectsPage() {
         }
 
         .hero-title-accent {
-          background: linear-gradient(90deg, #f97316, #CC0000, #f97316);
+          background: #CC0000;
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -656,7 +651,7 @@ export default function ProjectsPage() {
 
         .transformations-section {
           padding: 100px 0;
-          background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+          background: #0f172a;
         }
 
         .section-header-modern {
@@ -845,7 +840,7 @@ export default function ProjectsPage() {
         }
 
         .filter-pill.active {
-          background: linear-gradient(135deg, #CC0000 0%, #990000 100%);
+          background: #CC0000;
           border-color: transparent;
           color: white;
           box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3);
@@ -944,7 +939,7 @@ export default function ProjectsPage() {
 
         .gallery-item-category {
           display: inline-block;
-          background: linear-gradient(135deg, #CC0000 0%, #990000 100%);
+          background: #CC0000;
           color: white;
           padding: 6px 14px;
           border-radius: 50px;
@@ -1009,7 +1004,7 @@ export default function ProjectsPage() {
         .cta-background {
           position: absolute;
           inset: 0;
-          background: linear-gradient(135deg, #CC0000 0%, #991b1b 100%);
+          background: #CC0000;
         }
 
         .cta-pattern {

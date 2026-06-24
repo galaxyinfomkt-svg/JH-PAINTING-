@@ -215,7 +215,7 @@ export default function VSLPage() {
                 href="https://g.page/r/Cb984Z3qm9PsEAE/review"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #CC0000, #990000)', color: '#fff', padding: '0.875rem 1.75rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 14px rgba(204,0,0,0.35)' }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#CC0000', color: '#fff', padding: '0.875rem 1.75rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 14px rgba(204,0,0,0.35)' }}
               >
                 Read All Google Reviews ↗
               </a>
@@ -271,7 +271,7 @@ export default function VSLPage() {
 
       <style jsx>{`
         .vsl-hero {
-          background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+          background: #1a1a2e;
           padding: 100px 0 60px;
           text-align: center;
         }
@@ -477,7 +477,7 @@ export default function VSLPage() {
         }
 
         .vsl-solution-box {
-          background: linear-gradient(135deg, var(--jh-red) 0%, var(--jh-red-dark) 100%);
+          background: var(--jh-red);
           padding: 3rem;
           border-radius: 16px;
           text-align: center;
@@ -592,7 +592,7 @@ export default function VSLPage() {
 
         .vsl-final-cta {
           padding: 80px 0;
-          background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+          background: #1a1a2e;
         }
 
         .vsl-final-cta-content {

@@ -182,7 +182,7 @@ export default function ContactPage() {
       <main id="main-content">
         {/* Hero Section */}
         <section style={{
-          background: 'linear-gradient(135deg, var(--jh-navy) 0%, var(--jh-navy-dark) 100%)',
+          background: 'var(--jh-navy)',
           padding: '140px 0 80px',
           position: 'relative'
         }}>
@@ -354,7 +354,7 @@ export default function ContactPage() {
                 <div style={{
                   marginTop: '2rem',
                   padding: '1.5rem',
-                  background: 'linear-gradient(135deg, var(--jh-gray-50) 0%, #fff 100%)',
+                  background: 'var(--jh-gray-50)',
                   borderRadius: '12px',
                   border: '1px solid var(--jh-gray-200)'
                 }}>
@@ -387,7 +387,7 @@ export default function ContactPage() {
                     alignItems: 'center',
                     gap: '0.5rem',
                     padding: '0.5rem 1rem',
-                    background: 'linear-gradient(135deg, #DCFCE7 0%, #BBF7D0 100%)',
+                    background: '#DCFCE7',
                     borderRadius: '100px',
                     color: '#166534',
                     fontSize: '0.875rem',
