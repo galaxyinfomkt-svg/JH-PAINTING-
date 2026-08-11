@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { getCityBySlug, normalizeCitySlug } from '@/app/data/cities'
-import { generateServiceContent } from '@/app/data/cityContent'
+import { getCityBySlug, getCityState, normalizeCitySlug } from '@/app/data/cities'
+import { composeMeta, SERVICE_LABELS } from '@/app/data/cityServiceComposer'
 import { shouldIndexCityService } from '@/app/data/indexing'
 import { generatePageMetadata } from '@/lib/seo'
 
@@ -9,41 +9,17 @@ interface Props {
   children: React.ReactNode
 }
 
-const serviceNames: Record<string, string> = {
-  'interior-painting': 'Interior Painting',
-  'exterior-painting': 'Exterior Painting',
-  'commercial-painting': 'Commercial Painting',
-  'residential-painting': 'Residential Painting',
-  'cabinet-painting': 'Cabinet Painting',
-  'carpentry': 'Carpentry',
-  'power-washing': 'Power Washing',
-}
-
-// Pain-point focused titles that match SEARCH INTENT
-const servicePainTitles: Record<string, string> = {
-  'interior-painting': 'Walls Looking Tired?',
-  'exterior-painting': 'Peeling Paint Outside?',
-  'commercial-painting': 'Office Needs Refresh?',
-  'residential-painting': 'Home Looking Dated?',
-  'cabinet-painting': 'Cabinets Dated? Refinish Them',
-  'carpentry': 'Wood Rot Spreading?',
-  'power-washing': 'Dirty Siding & Mold?',
-}
-
-// Solution-focused descriptions
-const serviceSolutions: Record<string, string> = {
-  'interior-painting': 'Transform tired walls into stunning rooms. Premium Benjamin Moore paints, zero mess, done in days not weeks.',
-  'exterior-painting': 'Stop paint damage before it spreads. Weather-resistant paints + FREE power wash included.',
-  'commercial-painting': 'Zero downtime painting. After-hours service available. We work around YOUR schedule.',
-  'residential-painting': 'Love your home again. Interior + exterior experts with 40+ 5-star reviews.',
-  'cabinet-painting': 'A brand-NEW kitchen look without the replacement hassle. Factory-smooth spray finish, done in 3-5 days.',
-  'carpentry': 'Fix rot BEFORE it spreads. Window frames, trim, siding repair by licensed pros.',
-  'power-washing': 'Instant curb appeal. Decks, siding, driveways sparkling clean in one day.',
-}
+// Service labels live in cityServiceComposer.ts (SERVICE_LABELS) so the route,
+// the composer, and the body copy cannot drift apart.
+//
+// The old `servicePainTitles` / `serviceSolutions` maps were deleted with the
+// variant-pool generator: titles like "Walls Looking Tired? Interior Painting
+// {City} MA | FREE Quote" overflowed the SERP and buried the actual search
+// term behind a slogan.
 
 // Pre-render all service pages for each city at build time
 export async function generateStaticParams() {
-  return Object.keys(serviceNames).map(service => ({
+  return Object.keys(SERVICE_LABELS).map(service => ({
     service
   }))
 }
@@ -51,8 +27,6 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ city: string; service: string }> }): Promise<Metadata> {
   const { city: citySlug, service } = await params
   const city = getCityBySlug(citySlug)
-  const serviceName = serviceNames[service] || service.replace(/-/g, ' ')
-  const serviceNameLower = serviceName.toLowerCase()
 
   if (!city) {
     return generatePageMetadata({
@@ -63,52 +37,25 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
     })
   }
 
-  const painTitle = servicePainTitles[service] || serviceName
-  const solution = serviceSolutions[service] || 'Professional ' + serviceNameLower + ' by licensed pros.'
-
-  // Pull city+service-specific unique title/description/keywords from the multi-factor
-  // generator. Each of the 833 city+service URLs gets a distinct title/desc/keyword string
-  // selected from 5-variant pools using a hash of (slug + service + distance bracket +
-  // population bracket + county). Falls back to legacy template when generator has no pool.
-  const uniqueContent = generateServiceContent(
-    city.name,
-    city.slug,
-    service,
-    city.county,
-    city.population,
-    city.landmarks,
-    city.neighborhoods,
-    city.distance
-  )
-
-  const isExterior = service === 'exterior-painting'
-  const fallbackDesc = isExterior
-    ? `Expert exterior house painting in ${city.name}, MA. Power washing, surface prep, caulking, priming + 2 coats of premium Benjamin Moore Aura or Sherwin-Williams Duration paint. 5-year warranty. EPA Lead-Safe certified. 40+ 5-star reviews. Licensed & $2M insured. FREE estimate: (508) 690-8886`
-    : solution + ' ✓ 40+ reviews ✓ $2M insured ✓ ' + city.name + ' MA. Call (508) 690-8886'
-
-  const fallbackKeywords = isExterior
-    ? `exterior painting ${city.name} MA, exterior house painters ${city.name}, exterior painting near me ${city.name}, house painters ${city.name} Massachusetts, exterior painting services ${city.name} MA, exterior painters near me, ${city.name} MA painting contractors, best exterior painters ${city.name}, EPA lead-safe painters ${city.name} MA`
-    : serviceNameLower + ' ' + city.name + ' MA, fix ' + serviceNameLower + ' ' + city.name + ', ' + service + ' ' + city.name + ', painters ' + city.name + ' Massachusetts'
-
-  const fallbackTitle = isExterior
-    ? `Exterior Painting ${city.name} MA | 5-Year Warranty | FREE Quote | (508) 690-8886`
-    : painTitle + ' ' + serviceName + ' ' + city.name + ' MA | FREE Quote'
-
-  const title = uniqueContent.uniqueTitle || fallbackTitle
-  const description = uniqueContent.uniqueDescriptionMeta || fallbackDesc
-  const keywords = uniqueContent.uniqueKeywords || fallbackKeywords
+  // Meta is COMPOSED from this city's own attributes (market tier, distance to
+  // our base, marine vs inland exposure, real neighborhoods, real ZIPs) rather
+  // than selected from a pool of pre-written variants.
+  //
+  // The old path hashed the slug and picked variant N of 5, which produced 35
+  // distinct title skeletons across all 812 city+service URLs - roughly 23
+  // pages sharing each one. It also overflowed the SERP on 35% of titles and
+  // 46% of descriptions (worst case 226 chars). composeMeta() measures as it
+  // assembles, so overflow is structurally impossible and the phone CTA is
+  // always the last thing kept.
+  const { title, description, keywords } = composeMeta(city, service)
 
   return generatePageMetadata({
     title,
     description,
     keywords,
     path: `/massachusetts/${normalizeCitySlug(city.slug)}/${service}`,
-    // Long-tail (low-demand) city+service combos are noindex,follow so they
-    // stop diluting crawl budget; high-demand combos stay indexable.
     noIndex: !shouldIndexCityService(city, service),
-    ogImageAlt: isExterior
-      ? `Professional exterior house painting in ${city.name}, MA by JH Painting Services - licensed painters`
-      : `${serviceName} Services in ${city.name}, MA by JH Painting Services`,
+    ogImageAlt: `${SERVICE_LABELS[service] ?? service.replace(/-/g, ' ')} in ${city.name}, ${getCityState(city)} by JH Painting Services`,
   })
 }
 

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import { regions, getRegionBySlug } from '@/app/data/regions'
 import { getCityBySlug, getCitySlugWithState } from '@/app/data/cities'
 import Header from '@/app/components/Header'
@@ -535,8 +536,10 @@ export default async function RegionServicePage({ params }: Props) {
   const region = getRegionBySlug(regionSlug)
   const service = servicesData.find(s => s.slug === serviceSlug)
 
+  // See note in ../page.tsx - a rendered fallback here returned HTTP 200 and
+  // registered as Soft 404 in Search Console.
   if (!region || !service) {
-    return <div className="container" style={{ padding: '4rem 1rem', textAlign: 'center' }}><h1>Page Not Found</h1></div>
+    notFound()
   }
 
   const regionCities = region.citySlugs

@@ -72,7 +72,7 @@ export const interiorExpansion: ServiceVariantPack = {
     'Stop staring at the walls in your {cityName} home wishing they were different. Schedule your free interior consultation - we\'ll bring large-format color samples, paint chips, and a tablet showing real {countyContext} project photos. Call (508) 690-8886.',
     'Your {cityName} interior project deserves a contractor that returns calls, shows up when promised, and leaves your home cleaner than they found it. That\'s the JH Painting standard across all of {countyContext}. Free estimates: (508) 690-8886.',
     'Whether it\'s one room, one floor, or the whole house, {cityName} interior painting starts with a free, no-pressure consultation. We\'ll measure, photograph, and email a detailed written estimate within 48 hours. Call (508) 690-8886 - we serve {neighborhoodsList} and all of {countyContext}.',
-    'The difference between a painted room and a transformed room is in the prep work, the products, and the patience. Bring all three to your {cityName} home with JH Painting. Schedule your free estimate today at (508) 689-8886... correction: (508) 690-8886.',
+    'The difference between a painted room and a transformed room is in the prep work, the products, and the patience. We bring all three to your {cityName} home. Schedule your free estimate today at (508) 690-8886.',
     'Ready to give your {cityName} interior the upgrade it deserves? Our {countyContext} team is booking 2-3 weeks out for full interior projects in {neighborhoodsList}. Reserve your slot now: (508) 690-8886.'
   ],
   titlePool: [

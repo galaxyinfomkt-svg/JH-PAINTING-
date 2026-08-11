@@ -8315,7 +8315,7 @@ const serviceTemplates: Record<string, {
     ],
     introTemplates: [
       'Transform your {cityName} home\'s interior with professional painting that brings new life to every room. Our {countyContext} interior painting experts understand how New England\'s dramatic humidity changes affect interior surfaces, and we use paints specifically formulated for these conditions. From living rooms and bedrooms to kitchens and bathrooms, we deliver flawless results that last.',
-      'Interior painting in {cityName} requires understanding local conditions - from the humidity near {landmarksList} to the heating demands of our cold winters. JH Painting brings 15+ years of experience to every {cityName} interior project, ensuring proper surface preparation, premium paint selection, and meticulous application that stands up to daily life.',
+      'Interior painting in {cityName} requires understanding local conditions - from the humidity near {landmarksList} to the heating demands of our cold winters. JH Painting brings a documented, repeatable process to every {cityName} interior project, ensuring proper surface preparation, premium paint selection, and meticulous application that stands up to daily life.',
       'Your {cityName} home deserves interior painting that reflects your style and stands up to family life. Whether you\'re refreshing a single room or transforming your entire home, our {countyContext} painting team delivers precise, professional results. We work around your schedule, minimize disruption, and leave your space cleaner than we found it.'
     ],
     localContextTemplates: [

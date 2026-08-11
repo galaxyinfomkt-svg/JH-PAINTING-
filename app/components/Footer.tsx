@@ -200,7 +200,7 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
             </div>
             <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
               <Link href="/massachusetts" style={{ color: '#CC0000', fontSize: '0.8125rem', fontWeight: 600 }}>
-                View All 117+ Service Areas →
+                View All 116 Service Areas →
               </Link>
             </div>
           </div>

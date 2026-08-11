@@ -33,7 +33,7 @@ const homepageFaqs = [
   },
   {
     question: "What areas do you serve?",
-    answer: "We serve 117+ cities across Massachusetts including Boston, Cambridge, Worcester, Marlborough, and the entire MetroWest region. Our crews travel throughout the state. Being based in Marlborough, we conveniently cover MetroWest, Greater Boston, Worcester County, and beyond."
+    answer: "We serve 116 cities across Massachusetts including Boston, Cambridge, Worcester, Marlborough, and the entire MetroWest region. Our crews travel throughout the state. Being based in Marlborough, we conveniently cover MetroWest, Greater Boston, Worcester County, and beyond."
   },
   {
     question: "How do I prepare for my painting project?",

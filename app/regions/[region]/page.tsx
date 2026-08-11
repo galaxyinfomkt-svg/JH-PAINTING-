@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import { regions, getRegionBySlug } from '@/app/data/regions'
 import { getCityBySlug, getCitySlugWithState } from '@/app/data/cities'
 import Header from '@/app/components/Header'
@@ -57,8 +58,11 @@ export default async function RegionPage({ params }: Props) {
   const { region: regionSlug } = await params
   const region = getRegionBySlug(regionSlug)
 
+  // Must be notFound(), not a rendered fallback: returning JSX here served
+  // HTTP 200 for every bogus /regions/* URL, which Google reports as Soft 404
+  // and which opens an unbounded crawl space.
   if (!region) {
-    return <div className="container" style={{ padding: '4rem 1rem', textAlign: 'center' }}><h1>Region Not Found</h1></div>
+    notFound()
   }
 
   const regionCities = region.citySlugs

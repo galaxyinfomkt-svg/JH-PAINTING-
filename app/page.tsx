@@ -184,7 +184,7 @@ const homePageSchema = {
       isPartOf: { '@id': 'https://jhpaintingservices.com/#website' },
       about: { '@id': 'https://jhpaintingservices.com/#organization' },
       description:
-        'Award-winning exterior and interior painting contractor serving 117+ Massachusetts cities since 2018. Licensed, $2M insured, EPA Lead-Safe certified. 40+ Google reviews. Call (508) 690-8886 for a free estimate.',
+        'Award-winning exterior and interior painting contractor serving 116 Massachusetts cities since 2018. Licensed, $2M insured, EPA Lead-Safe certified. 40+ Google reviews. Call (508) 690-8886 for a free estimate.',
       inLanguage: 'en-US',
       datePublished: '2018-07-01',
       dateModified: '2026-05-14',
@@ -223,7 +223,7 @@ const homePageSchema = {
           name: 'What areas do you serve in Massachusetts?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'JH Painting Services is based in Marlborough and serves 117+ cities across Massachusetts including Boston, Worcester, Cambridge, Newton, Framingham, Natick, Wellesley, Lexington, Concord, and all MetroWest communities. We travel up to 50 miles from Marlborough. Call (508) 690-8886.',
+            text: 'JH Painting Services is based in Marlborough and serves 116 cities across Massachusetts including Boston, Worcester, Cambridge, Newton, Framingham, Natick, Wellesley, Lexington, Concord, and all MetroWest communities. We travel up to 50 miles from Marlborough. Call (508) 690-8886.',
           },
         },
         {
@@ -295,7 +295,7 @@ export default function HomePage() {
           <div className="hero-bg">
             <Image
               src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
-              alt="Professional exterior and interior painting services in Massachusetts by JH Painting Services - licensed painters serving 117+ cities"
+              alt="Professional exterior and interior painting services in Massachusetts by JH Painting Services - licensed painters serving 116 cities"
               fill
               priority
               fetchPriority="high"
@@ -311,7 +311,7 @@ export default function HomePage() {
               <div className="hero-text">
                 {/* Service area badge - RS style */}
                 <p style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1.25rem', background: 'rgba(204,0,0,0.9)', borderRadius: '100px', color: '#fff', fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
-                  Serving 117+ Massachusetts Cities
+                  Serving 116 Massachusetts cities
                 </p>
 
                 {/* 5-Star rating badge */}
@@ -504,7 +504,7 @@ export default function HomePage() {
                 {/* Stats Grid - RS Style */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginTop: '2rem' }}>
                   {[
-                    { value: '117+', label: 'Cities Served' },
+                    { value: '116', label: 'Cities Served' },
                     { value: '40+', label: 'Google Reviews' },
                     { value: '100%', label: 'Licensed' },
                     { value: '24hr', label: 'Response Time' },
@@ -893,7 +893,7 @@ export default function HomePage() {
                     </div>
                     <div className="contact-item-content">
                       <h4>Service Area</h4>
-                      <p>Serving 117+ cities across Massachusetts</p>
+                      <p>Serving 116 cities across Massachusetts</p>
                     </div>
                   </div>
 

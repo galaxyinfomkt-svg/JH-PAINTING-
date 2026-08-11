@@ -41,7 +41,8 @@ const Sparkles = ({ size = 20 }: { size?: number }) => (
 )
 import dynamic from 'next/dynamic'
 import { getCityBySlug, cities } from '@/app/data/cities'
-import { cityContentMap, generateServiceContent } from '@/app/data/cityContent'
+import { cityContentMap } from '@/app/data/cityContent'
+import { composeBody } from '@/app/data/cityServiceComposer'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
@@ -295,7 +296,7 @@ const stats = [
   { number: '500+', label: 'Projects Completed' },
   { number: '15+', label: 'Years Experience' },
   { number: '100%', label: 'Satisfaction Rate' },
-  { number: '117', label: 'Cities Served' }
+  { number: '116', label: 'Cities Served' }
 ]
 
 const features = [
@@ -311,17 +312,20 @@ export default async function CityServicePage({ params }: Props) {
   const service = servicesData[serviceSlug as keyof typeof servicesData]
   const cityContent = cityContentMap[citySlug]
 
-  // Generate unique content for this city+service combination
-  const uniqueServiceContent = city ? generateServiceContent(
-    city.name,
-    city.slug,
-    serviceSlug,
-    city.county,
-    city.population,
-    city.landmarks,
-    city.neighborhoods,
-    city.distance
-  ) : null
+  // Body copy COMPOSED from this city's own facts - distance to our base,
+  // market tier, marine vs inland exposure, real ZIPs, real neighborhoods,
+  // real nearest cities.
+  //
+  // Replaces generateServiceContent(), which hashed the slug and pulled
+  // sentence N from a pool of 8 pre-written variants. That produced pages that
+  // differed in wording but carried identical information, which is what
+  // "Crawled - currently not indexed" is Google reporting back.
+  //
+  // What this still cannot do is manufacture first-hand proof. Fill
+  // `cityEvidence` in app/data/cityFacts.ts with real photos, real jobs and
+  // real customer quotes per city - that is the part that decides whether
+  // these pages hold their rankings.
+  const uniqueServiceContent = city ? composeBody(city, serviceSlug) : null
 
   if (!city || !service) {
     notFound()

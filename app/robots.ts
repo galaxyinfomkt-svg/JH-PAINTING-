@@ -1,141 +1,36 @@
 import { MetadataRoute } from 'next'
 
+/**
+ * robots.txt
+ *
+ * ONE group only, on purpose.
+ *
+ * The previous version declared `User-agent: *` with a Disallow list and then
+ * 26 named groups (Googlebot, bingbot, GPTBot, PerplexityBot, ClaudeBot, ...)
+ * each carrying only `Allow: /`. Per the robots.txt spec a crawler obeys the
+ * single most-specific group matching its token and IGNORES every other group
+ * - including `*`. So Googlebot read `User-agent: Googlebot / Allow: /` and no
+ * Disallow applied to it at all: the entire list was dead for every crawler
+ * that actually matters, and only anonymous bots were restricted.
+ *
+ * A bare `*: Allow: /` already permits every crawler, AI crawlers included.
+ * Named allow-groups add nothing and silently disable the real rules.
+ *
+ * /cities/ is deliberately NOT disallowed: those URLs 301-redirect to
+ * /massachusetts/* in middleware.ts, and a blocked URL is never fetched, so the
+ * redirect is never seen and the link equity never consolidates. Blocking a
+ * redirect always defeats its purpose.
+ *
+ * /_next/ is also NOT disallowed: Google needs those assets to render pages.
+ */
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        // Spam query-string URLs return 410 in middleware.ts - no need to disallow here.
-        // /cities/* is 301-redirected to /massachusetts/* in middleware.ts, but blocking
-        // crawl saves crawl budget and avoids the redirect chain entirely.
-        disallow: [
-          '/api/',
-          '/_next/',
-          '/cities/',
-        ],
-      },
-      {
-        userAgent: 'GPTBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'ChatGPT-User',
-        allow: '/',
-      },
-      {
-        userAgent: 'Google-Extended',
-        allow: '/',
-      },
-      {
-        userAgent: 'PerplexityBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'ClaudeBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'anthropic-ai',
-        allow: '/',
-      },
-      {
-        userAgent: 'Applebot-Extended',
-        allow: '/',
-      },
-      // AI Search & Training Crawlers
-      {
-        userAgent: 'Googlebot',
-        allow: '/',
-      },
-      {
-        userAgent: 'CCBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Bytespider',
-        allow: '/',
-      },
-      {
-        userAgent: 'meta-externalagent',
-        allow: '/',
-      },
-      {
-        userAgent: 'cohere-ai',
-        allow: '/',
-      },
-      {
-        userAgent: 'YouBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Amazonbot',
-        allow: '/',
-      },
-      {
-        userAgent: 'OAI-SearchBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Twitterbot',
-        allow: '/',
-      },
-      {
-        userAgent: 'LinkedInBot',
-        allow: '/',
-      },
-      // Gemini / Google AI
-      {
-        userAgent: 'Google-InspectionTool',
-        allow: '/',
-      },
-      {
-        userAgent: 'GoogleOther',
-        allow: '/',
-      },
-      // Microsoft / Copilot
-      {
-        userAgent: 'bingbot',
-        allow: '/',
-      },
-      {
-        userAgent: 'MicrosoftPreview',
-        allow: '/',
-      },
-      // Apple Intelligence
-      {
-        userAgent: 'Applebot',
-        allow: '/',
-      },
-      // Brave Search
-      {
-        userAgent: 'Brave',
-        allow: '/',
-      },
-      // DuckDuckGo
-      {
-        userAgent: 'DuckDuckBot',
-        allow: '/',
-      },
-      // Yandex AI
-      {
-        userAgent: 'YandexBot',
-        allow: '/',
-      },
-      // Meta AI
-      {
-        userAgent: 'FacebookBot',
-        allow: '/',
-      },
-      // Mistral AI
-      {
-        userAgent: 'MistralBot',
-        allow: '/',
-      },
-      // DeepSeek
-      {
-        userAgent: 'DeepSeekBot',
-        allow: '/',
+        // API routes return JSON and have no business in the index.
+        disallow: ['/api/'],
       },
     ],
     sitemap: 'https://jhpaintingservices.com/sitemap.xml',

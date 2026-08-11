@@ -172,7 +172,7 @@ const whyChooseUs = [
   { icon: StarIcon, title: '5-Star Rated', desc: '40+ perfect ratings from satisfied homeowners' },
   { icon: AwardIcon, title: 'Premium Quality', desc: 'Benjamin Moore & Sherwin-Williams paints exclusively' },
   { icon: ClockIcon, title: 'On-Time Delivery', desc: 'We respect your schedule and complete on time' },
-  { icon: UsersIcon, title: 'Expert Team', desc: 'Skilled painters with 10+ years of experience' },
+  { icon: UsersIcon, title: 'Expert Team', desc: 'Skilled painters trained to a single documented standard' },
   { icon: CheckCircle2Icon, title: 'Free Estimates', desc: 'No-obligation quotes within 24 hours' }
 ]
 

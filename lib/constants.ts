@@ -139,20 +139,31 @@ export const VIDEOS = [
 ] as const
 
 // Stats/Trust Indicators - SINGLE SOURCE OF TRUTH for all pages.
-// Must stay in sync with:
-//   - cities.length in app/data/cities.ts (citiesServed)
-//   - Google Business Profile review count (reviewCount)
-//   - aggregateRating in app/layout.tsx schema (reviewCount must match)
-// Update labels together with their numbers, then redeploy.
+//
+// Numbers that can be DERIVED are derived, never typed twice. The site used to
+// publish four different ages for the company (7+, 10+, 15+, 18+ years) against
+// a 2018 founding date, two project counts (200 and 500+), and three city
+// counts (116 real, 117 claimed, 118 in a stale list). Contradictory
+// self-description is one of the cheapest low-trust signals for a quality
+// rater to spot, so the literals are gone.
+//
+// reviewCount is the one value that MUST be updated by hand - it has to match
+// the Google Business Profile exactly, and no code can verify that.
+export const FOUNDING_YEAR = 2018
+
+/** Full years in business, computed at render time. Never hardcode this. */
+export function yearsInBusiness(now: Date = new Date()): number {
+  return now.getFullYear() - FOUNDING_YEAR
+}
+
 export const STATS = {
-  yearsExperience: 7,
-  projectsCompleted: '500+',
+  foundingYear: FOUNDING_YEAR,
+  get yearsExperience() { return yearsInBusiness() },
+  get yearsLabel() { return `${yearsInBusiness()}+` },
   satisfaction: '100%',
   rating: 5.0,
   reviewCount: 40,
   reviewLabel: '40+',
-  citiesServed: 117,
-  citiesLabel: '117+',
   insuranceCoverage: '$2M',
 } as const
 
@@ -166,7 +177,7 @@ export const HOURS = {
 // SEO Defaults
 export const SEO = {
   title: 'JH Painting Services | Professional Painters in Massachusetts',
-  description: 'Professional painting services in Massachusetts. Interior, exterior, cabinet painting & more. Licensed, insured, 18+ years experience. Free estimates!',
+  description: 'Professional painting services in Massachusetts. Interior, exterior, cabinet painting & more. Licensed, insured, EPA Lead-Safe certified. Free estimates!',
   keywords: 'painting services massachusetts, house painters, interior painting, exterior painting, cabinet painting, commercial painting',
 } as const
 
@@ -186,25 +197,11 @@ export const COLORS = {
   line: '#E5E7EB',
 } as const
 
-// All 117 Massachusetts cities we serve (names only for footer display)
-export const ALL_CITY_NAMES = [
-  'Hudson', 'Southborough', 'Berlin', 'Northborough', 'Cordaville', 'Stow', 'Westborough',
-  'Framingham Center', 'Bolton', 'Sudbury', 'Ashland', 'Maynard', 'Framingham', 'Hopkinton',
-  'Clinton', 'Boylston', 'Shrewsbury', 'Wayland', 'Cochituate', 'South Lancaster', 'Lancaster',
-  'Harvard', 'West Concord', 'Natick', 'Acton', 'Sherborn', 'Holliston', 'Grafton', 'West Boylston',
-  'Upton', 'Weston', 'Sterling', 'Concord', 'Milford', 'Marlborough', 'Medfield', 'Mendon',
-  'Littleton', 'Lincoln', 'Holden', 'Leicester', 'Waltham', 'Dover', 'Worcester', 'Spencer',
-  'Bedford', 'Hopedale', 'Millbury', 'Rutland', 'Wellesley', 'Newton', 'Paxton', 'Chelmsford',
-  'Lexington', 'Needham', 'Watertown', 'Auburn', 'Medway', 'Millis', 'Belmont', 'Franklin',
-  'Norwood', 'Brookline', 'Arlington', 'Bellingham', 'Groton', 'Norfolk', 'Townsend', 'Charlton',
-  'Lunenburg', 'Westford', 'Pepperell', 'Uxbridge', 'Wrentham', 'Somerville', 'Cambridge',
-  'Burlington', 'Woburn', 'Fitchburg', 'Dedham', 'Blackstone', 'Oxford', 'Northbridge', 'Douglas',
-  'Billerica', 'Plainville', 'Canton', 'Lowell', 'Tyngsboro', 'North Attleboro', 'Medford',
-  'Wilmington', 'Stoneham', 'Sutton', 'Winchester', 'Leominster', 'Reading', 'Wakefield',
-  'Malden', 'Melrose', 'Gardner', 'Tewksbury', 'Webster', 'Stoughton', 'Dracut', 'Everett',
-  'Dudley', 'Randolph', 'North Reading', 'Sharon', 'Quincy', 'Milton', 'Braintree', 'Weymouth',
-  'Westwood', 'Foxborough', 'Mansfield', 'Boston'
-] as const
+// NOTE: the old hand-maintained ALL_CITY_NAMES list lived here. It held 118
+// names while app/data/cities.ts held 116, and 21 of its entries had no page
+// at all - it was one of the three conflicting city counts the site published.
+// It was imported by nothing, so it was deleted. Read `cities` / `CITY_COUNT`
+// from app/data/cities.ts: that array generates the routes, so it cannot drift.
 
 // Social Media Links (corrected)
 export const SOCIAL_LINKS = {

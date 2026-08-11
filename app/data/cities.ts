@@ -1,6 +1,12 @@
 export interface City {
   name: string
   slug: string
+  /**
+   * Two-letter state code. Defaults to 'MA' when omitted - only out-of-state
+   * cities need to set it. Page titles/descriptions must read this instead of
+   * hardcoding "MA", or an out-of-state city renders a false location claim.
+   */
+  state?: string
   distance: number
   county?: string
   population?: string
@@ -129,7 +135,7 @@ export const cities: City[] = [
   { name: 'Townsend', slug: 'townsend', distance: 23.41, county: 'Middlesex County', population: '9,000+', zipCodes: ['01469'], landmarks: ['Townsend Harbor', 'Squannacook River'], neighborhoods: ['Townsend Center', 'Townsend Harbor'] },
   { name: 'Tyngsboro', slug: 'tyngsboro', distance: 23.46, county: 'Middlesex County', population: '12,000+', zipCodes: ['01879'], landmarks: ['Merrimack River', 'Tyngsboro Bridge'], neighborhoods: ['Tyngsboro Center'] },
   { name: 'Spencer', slug: 'spencer', distance: 23.96, county: 'Worcester County', population: '12,000+', zipCodes: ['01562'], landmarks: ['Spencer State Forest', 'Lake Whittemore'], neighborhoods: ['Spencer Center', 'East Spencer'] },
-  { name: 'Woonsocket', slug: 'woonsocket-ri', distance: 23.97, county: 'Providence County, RI', population: '43,000+', zipCodes: ['02895'], landmarks: ['Museum of Work and Culture', 'Blackstone River'], neighborhoods: ['Downtown Woonsocket', 'Fairmount'] },
+  { name: 'Woonsocket', slug: 'woonsocket-ri', state: 'RI', distance: 23.97, county: 'Providence County, RI', population: '43,000+', zipCodes: ['02895'], landmarks: ['Museum of Work and Culture', 'Blackstone River'], neighborhoods: ['Downtown Woonsocket', 'Fairmount'] },
   { name: 'Tewksbury', slug: 'tewksbury', distance: 24.05, county: 'Middlesex County', population: '31,000+', zipCodes: ['01876'], landmarks: ['Tewksbury Hospital', 'Livingston Street'], neighborhoods: ['Tewksbury Center', 'North Tewksbury'] },
   { name: 'Canton', slug: 'canton', distance: 24.36, county: 'Norfolk County', population: '24,000+', zipCodes: ['02021'], landmarks: ['Blue Hills Reservation', 'Canton Junction'], neighborhoods: ['Canton Center', 'Canton Junction'] },
   { name: 'Sharon', slug: 'sharon', distance: 24.39, county: 'Norfolk County', population: '18,000+', zipCodes: ['02067'], landmarks: ['Lake Massapoag', 'Sharon Town Center'], neighborhoods: ['Sharon Center', 'East Sharon'] },
@@ -140,6 +146,13 @@ export const cities: City[] = [
   // 50+ MILES - Extended Service Area
   { name: 'New Bedford', slug: 'new-bedford', distance: 55.0, county: 'Bristol County', population: '101,000+', zipCodes: ['02740', '02741', '02742', '02743', '02744', '02745', '02746'], landmarks: ['New Bedford Whaling Museum', 'Buttonwood Park Zoo', 'Fort Taber Park'], neighborhoods: ['Downtown New Bedford', 'South End', 'North End', 'West End', 'Acushnet Heights'] }
 ]
+
+/**
+ * Number of cities we actually publish pages for. DERIVED - never type this
+ * number into copy. The site previously claimed "117+" while the array held
+ * 116 and a stale footer list held 118.
+ */
+export const CITY_COUNT = cities.length
 
 export function getCityBySlug(slug: string): City | undefined {
   // Support both formats: "acton" and "acton-ma"
@@ -167,16 +180,24 @@ export function parseCitySlug(urlSlug: string): string {
   return urlSlug
 }
 
-// Normalize city slug by stripping -ma suffix if present
-// Used by /massachusetts/ routes where URLs don't include the state suffix
+// Normalize city slug by stripping the -ma suffix if present.
+// Used by /massachusetts/ routes where URLs don't include the state suffix.
+//
+// IMPORTANT: only "-ma" is stripped. Stripping "-ri" here used to produce
+// /massachusetts/woonsocket in the sitemap and in generateStaticParams, while
+// getCityBySlug() (which strips only "-ma") could never resolve it - so all 5
+// Woonsocket URLs rendered notFound() while sitting in sitemap.xml as 404s.
+// The two functions must agree on exactly one normalization rule.
 export function normalizeCitySlug(slug: string): string {
   if (slug.endsWith('-ma')) {
     return slug.slice(0, -3)
   }
-  if (slug.endsWith('-ri')) {
-    return slug.slice(0, -3)
-  }
   return slug
+}
+
+/** Two-letter state for a city. Cities default to MA unless they set `state`. */
+export function getCityState(city: Pick<City, 'state'>): string {
+  return city.state ?? 'MA'
 }
 
 export function getCitiesByDistance(maxDistance: number): City[] {
