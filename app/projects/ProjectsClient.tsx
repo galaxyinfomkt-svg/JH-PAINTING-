@@ -144,7 +144,7 @@ export default function ProjectsClient() {
       </nav>
 
       <ul className="jb-grid">
-        {shown.map((p) => (
+        {shown.map((p, i) => (
           <li key={p.slug} className="jb-folder">
             <button className="jb-open" onClick={() => setOpen(p)}>
               <span className="jb-stack">
@@ -159,6 +159,12 @@ export default function ProjectsClient() {
                     width={p.photos[0].w}
                     height={p.photos[0].h}
                     sizes="(max-width: 640px) 92vw, (max-width: 1100px) 45vw, 30vw"
+                    /* The first cover is the LCP element on this page. Without
+                       priority it inherits next/image's lazy default and the
+                       browser discovers it late, which measured as the worst
+                       LCP on the site. The rest stay lazy. */
+                    priority={i === 0}
+                    loading={i === 0 ? undefined : 'lazy'}
                   />
                 </span>
               </span>
