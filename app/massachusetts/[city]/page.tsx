@@ -115,6 +115,7 @@ import { getCityContent, generateUniqueCityContent } from '@/app/data/cityConten
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
+import CityProof from '@/app/components/CityProof'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import RelatedCities from '@/app/components/RelatedCities'
 import { BUSINESS, FORM_IDS } from '@/lib/constants'
@@ -1351,6 +1352,10 @@ export default async function CityPage({ params }: Props) {
 
       <RelatedCities citySlug={citySlug} cityName={city.name} />
       </main>
+
+      {/* First-hand proof: renders only when we hold real photographs from
+          this town. See app/data/projects.ts. */}
+      <CityProof citySlug={city.slug} cityName={city.name} state={city.state ?? 'MA'} />
 
       <ReviewsSection />
       <Footer />

@@ -33,6 +33,7 @@
  */
 
 import { cities, type City } from './cities'
+import { projects } from './projects'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Population parsing - ONE implementation.
@@ -196,16 +197,36 @@ export interface CityEvidence {
 }
 
 /**
- * Keyed by city slug. EMPTY BY DESIGN - populate from real jobs.
- * Do not seed this with plausible-sounding examples; a fabricated project is
- * far more damaging than an empty section.
+ * Derived from app/data/projects.ts - the real portfolio.
+ *
+ * This is NOT hand-written. It reads the same photographs shown on /projects,
+ * so a city page can never claim work that the portfolio cannot show. Add a
+ * project to projects.ts and the matching city page gains its evidence
+ * automatically; there is no second list to keep in sync and no way to seed a
+ * plausible-sounding job that does not exist.
  */
-export const cityEvidence: Record<string, CityEvidence> = {}
+export const cityEvidence: Record<string, CityEvidence> = (() => {
+  const map: Record<string, CityEvidence> = {}
+  for (const p of projects) {
+    if (!p.citySlug) continue
+    const entry = (map[p.citySlug] ??= { projects: [] })
+    entry.projects.push({
+      summary: `${p.client ? `${p.client}: ` : ''}${p.title}${p.space ? ` (${p.space})` : ''}`,
+      where: p.city ? `${p.city}, ${p.state}` : undefined,
+      image: p.photos[0]?.src,
+      completed: p.completed,
+    })
+  }
+  return map
+})()
 
 export function getCityEvidence(slug: string): CityEvidence | undefined {
   const e = cityEvidence[slug]
   return e && e.projects.length > 0 ? e : undefined
 }
+
+/** Cities where we can show photographic proof of completed work. */
+export const citiesWithEvidence = Object.keys(cityEvidence).sort()
 
 /** True when a city page carries first-hand proof, not just generated copy. */
 export function hasFirstHandEvidence(slug: string): boolean {

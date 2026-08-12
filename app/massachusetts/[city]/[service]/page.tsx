@@ -46,6 +46,7 @@ import { composeBody } from '@/app/data/cityServiceComposer'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
+import CityProof from '@/app/components/CityProof'
 import RelatedCities from '@/app/components/RelatedCities'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
@@ -796,6 +797,10 @@ export default async function CityServicePage({ params }: Props) {
       </main>
 
       {/* Footer */}
+      {/* Prefers projects of THIS trade in this town, falls back to any
+          documented job there. Renders nothing when we have none. */}
+      <CityProof citySlug={city.slug} cityName={city.name} state={city.state ?? 'MA'} service={serviceSlug} />
+
       <ReviewsSection />
       <Footer />
     </>
