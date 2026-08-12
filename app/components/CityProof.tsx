@@ -42,7 +42,7 @@ export default function CityProof({
           Jobs we&apos;ve finished in {cityName}
         </h2>
         <p className="cityproof-lede">
-          These are our own site photographs from {cityName}, {state} — not stock images.
+          These are our own site photographs from {cityName}, {state} - not stock images.
         </p>
 
         <ul className="cityproof-jobs">
@@ -51,7 +51,7 @@ export default function CityProof({
               <span className="cityproof-jt">
                 {p.client ? <strong>{p.client}: </strong> : null}
                 {p.title}
-                {p.space ? ` — ${p.space}` : ''}
+                {p.space ? ` - ${p.space}` : ''}
               </span>
               <span className="cityproof-jm">
                 {p.serviceLabel} · {formatCompleted(p.completed)}
@@ -66,7 +66,7 @@ export default function CityProof({
               <Image
                 src={ph.thumb}
                 alt={`${ph.project.serviceLabel}${
-                  ph.project.space ? ` — ${ph.project.space}` : ''
+                  ph.project.space ? ` - ${ph.project.space}` : ''
                 } completed by JH Painting Services in ${cityName}, ${state}`}
                 width={ph.w}
                 height={ph.h}

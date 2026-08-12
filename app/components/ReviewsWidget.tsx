@@ -13,7 +13,7 @@ import { useEffect, useRef, useState } from 'react'
  *
  * A previous perf change moved the script into DeferredScripts (loaded only
  * after the first user interaction + 1s), which raced the lazy iframe and
- * dropped the height handshake — the reviews disappeared. This component
+ * dropped the height handshake - the reviews disappeared. This component
  * keeps the perf intent (nothing loads until the section nears the viewport,
  * so Lighthouse's no-scroll run is unaffected) while guaranteeing the script
  * is ready BEFORE the iframe mounts.

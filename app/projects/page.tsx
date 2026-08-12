@@ -5,7 +5,7 @@ import { projects, formatCompleted } from '@/app/data/projects'
 import './projects.css'
 
 /**
- * /projects — the portfolio.
+ * /projects - the portfolio.
  *
  * Rebuilt to render app/data/projects.ts: real site photographs from real
  * jobs, grouped by job rather than by loose category. The previous version
@@ -30,7 +30,7 @@ const gallerySchema = {
   '@context': 'https://schema.org',
   '@type': 'ImageGallery',
   '@id': `${SITE}/projects#gallery`,
-  name: 'JH Painting Services — completed projects in Massachusetts',
+  name: 'JH Painting Services - completed projects in Massachusetts',
   description:
     'Original site photographs from painting, carpentry and power-washing jobs completed by JH Painting Services across Massachusetts.',
   url: `${SITE}/projects`,
@@ -45,8 +45,8 @@ const gallerySchema = {
       thumbnailUrl: `${SITE}${ph.thumb}`,
       width: ph.w,
       height: ph.h,
-      name: `${p.client ? `${p.client} — ` : ''}${p.title}${p.city ? `, ${p.city} ${p.state}` : ''}`,
-      caption: `${p.serviceLabel}${p.space ? ` — ${p.space}` : ''} by JH Painting Services${
+      name: `${p.client ? `${p.client} - ` : ''}${p.title}${p.city ? `, ${p.city} ${p.state}` : ''}`,
+      caption: `${p.serviceLabel}${p.space ? ` - ${p.space}` : ''} by JH Painting Services${
         p.city ? ` in ${p.city}, ${p.state}` : ' in Massachusetts'
       }, ${formatCompleted(p.completed)}.`,
       ...(p.city

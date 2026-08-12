@@ -1,22 +1,35 @@
 'use client'
 
 import { useState, useMemo, useCallback, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import Image from 'next/image'
 import Link from 'next/link'
 import { projects, projectCities, formatCompleted, type Project } from '@/app/data/projects'
 import { SERVICE_LABELS } from '@/app/data/cityServiceComposer'
 
 /* ────────────────────────────────────────────────────────────────────────────
-   Portfolio, grouped by job.
-   Every photo here is an original site photograph. Nothing is stock, so the
-   copy stays with what the photos prove: city, trade, space, month.
+   Job archive.
+
+   Design read: redesign-preserve of a contractor portfolio. Audience is
+   homeowners and facility managers deciding whether this crew is real.
+   Language: documentary archive. Dials: VARIANCE 6 / MOTION 4 / DENSITY 3.
+   A credibility page, so restraint beats spectacle.
+
+   Interaction: each job is a folder. The cover photo rests on a visible stack
+   of the rest; opening it fills the screen with that job's photographs.
+   Two levels only, folder then photograph. Nothing is overlaid on an image.
+
+   Checked against design-taste-frontend section 9: no em-dash, no section
+   numbering, no labels on photos, no italic-split headline, no scroll cue,
+   no decorative dots, middle-dot not used as a separator.
    ──────────────────────────────────────────────────────────────────────────── */
 
 type Filter = { kind: 'all' } | { kind: 'service'; value: string } | { kind: 'city'; value: string }
 
 export default function ProjectsClient() {
   const [filter, setFilter] = useState<Filter>({ kind: 'all' })
-  const [lightbox, setLightbox] = useState<{ project: Project; index: number } | null>(null)
+  const [open, setOpen] = useState<Project | null>(null)
+  const [zoom, setZoom] = useState<number | null>(null)
 
   const services = useMemo(() => {
     const counts = new Map<string, number>()
@@ -30,23 +43,26 @@ export default function ProjectsClient() {
     return projects.filter((p) => p.city === filter.value)
   }, [filter])
 
-  const photoCount = shown.reduce((s, p) => s + p.photos.length, 0)
+  const step = useCallback(
+    (d: number) => {
+      setZoom((z) => {
+        if (z === null || !open) return z
+        const n = open.photos.length
+        return (z + d + n) % n
+      })
+    },
+    [open]
+  )
 
-  /* keyboard nav for the lightbox */
-  const move = useCallback((step: number) => {
-    setLightbox((lb) => {
-      if (!lb) return lb
-      const n = lb.project.photos.length
-      return { ...lb, index: (lb.index + step + n) % n }
-    })
-  }, [])
-
+  /* Esc closes the top layer first, then the folder. Arrows page the photograph. */
   useEffect(() => {
-    if (!lightbox) return
+    if (!open) return
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setLightbox(null)
-      else if (e.key === 'ArrowRight') move(1)
-      else if (e.key === 'ArrowLeft') move(-1)
+      if (e.key === 'Escape') {
+        if (zoom !== null) setZoom(null)
+        else setOpen(null)
+      } else if (zoom !== null && e.key === 'ArrowRight') step(1)
+      else if (zoom !== null && e.key === 'ArrowLeft') step(-1)
     }
     window.addEventListener('keydown', onKey)
     const prev = document.body.style.overflow
@@ -55,219 +71,230 @@ export default function ProjectsClient() {
       window.removeEventListener('keydown', onKey)
       document.body.style.overflow = prev
     }
-  }, [lightbox, move])
+  }, [open, zoom, step])
 
-  const isActive = (f: Filter) =>
+  /* The overlays must escape this subtree's stacking context: the site header
+     and the mobile sticky bar are fixed with their own z-index, and an
+     ancestor here would otherwise trap the folder view underneath them.
+     Portal to <body> and mount only after hydration. */
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+
+  const active = (f: Filter) =>
     f.kind === filter.kind &&
     (f.kind === 'all' || (filter.kind !== 'all' && f.value === filter.value))
 
+  const totalPhotos = projects.reduce((s, p) => s + p.photos.length, 0)
+
   return (
-    <div className="pf">
-      {/* ── masthead ─────────────────────────────────────────────────────── */}
-      <header className="pf-mast">
-        <p className="pf-eyebrow">Completed work</p>
-        <h1 className="pf-h1">
-          Jobs we can <em>point to</em>
-        </h1>
-        <p className="pf-lede">
-          Every photograph below was taken on one of our own job sites in Massachusetts —
-          no stock imagery, no renderings. Filter by trade or by town.
+    <div className="jb">
+      <header className="jb-top">
+        <p className="jb-brow">Our work</p>
+        <h1 className="jb-h1">Jobs we can point to</h1>
+        <p className="jb-lede">
+          Every photograph here was taken on one of our own job sites in Massachusetts. No stock
+          imagery.
         </p>
-        <dl className="pf-stats">
+        <dl className="jb-stats">
           <div>
-            <dt>Projects</dt>
+            <dt>Jobs</dt>
             <dd>{projects.length}</dd>
           </div>
           <div>
-            <dt>Site photographs</dt>
-            <dd>{projects.reduce((s, p) => s + p.photos.length, 0)}</dd>
+            <dt>Photographs</dt>
+            <dd>{totalPhotos}</dd>
           </div>
           <div>
-            <dt>Towns documented</dt>
+            <dt>Towns</dt>
             <dd>{projectCities.length}</dd>
           </div>
         </dl>
       </header>
 
-      {/* ── filters ──────────────────────────────────────────────────────── */}
-      <nav className="pf-filters" aria-label="Filter projects">
-        <div className="pf-frow">
-          <span className="pf-flabel">Trade</span>
+      <nav className="jb-filters" aria-label="Filter jobs">
+        <div className="jb-row">
           <button
-            className={`pf-chip${isActive({ kind: 'all' }) ? ' is-on' : ''}`}
+            className={`jb-chip${active({ kind: 'all' }) ? ' on' : ''}`}
             onClick={() => setFilter({ kind: 'all' })}
           >
-            All <span className="pf-n">{projects.length}</span>
+            Everything
           </button>
           {services.map(([svc, n]) => (
             <button
               key={svc}
-              className={`pf-chip${isActive({ kind: 'service', value: svc }) ? ' is-on' : ''}`}
+              className={`jb-chip${active({ kind: 'service', value: svc }) ? ' on' : ''}`}
               onClick={() => setFilter({ kind: 'service', value: svc })}
             >
-              {SERVICE_LABELS[svc] ?? svc} <span className="pf-n">{n}</span>
+              {SERVICE_LABELS[svc] ?? svc}
+              <i>{n}</i>
             </button>
           ))}
         </div>
-        <div className="pf-frow">
-          <span className="pf-flabel">Town</span>
+        <div className="jb-row jb-row-town">
           {projectCities.map((c) => (
             <button
               key={c}
-              className={`pf-chip${isActive({ kind: 'city', value: c }) ? ' is-on' : ''}`}
+              className={`jb-chip jb-chip-town${active({ kind: 'city', value: c }) ? ' on' : ''}`}
               onClick={() => setFilter({ kind: 'city', value: c })}
             >
               {c}
             </button>
           ))}
         </div>
-        <p className="pf-count" role="status">
-          {shown.length} project{shown.length === 1 ? '' : 's'} · {photoCount} photograph
-          {photoCount === 1 ? '' : 's'}
-        </p>
       </nav>
 
-      {/* ── projects ─────────────────────────────────────────────────────── */}
-      <div className="pf-list">
-        {shown.map((p, pi) => (
-          <article key={p.slug} className="pf-project" id={p.slug}>
-            <div className="pf-phead">
-              <div className="pf-pnum" aria-hidden="true">
-                {String(pi + 1).padStart(2, '0')}
-              </div>
-              <div className="pf-pmeta">
-                <h2>
-                  {p.client ? <span className="pf-client">{p.client} — </span> : null}
-                  {p.title}
-                </h2>
-                <p className="pf-tags">
-                  {p.city ? (
-                    <Link href={`/massachusetts/${p.citySlug}`} className="pf-tag pf-tag-city">
-                      {p.city}, {p.state}
-                    </Link>
-                  ) : (
-                    <span className="pf-tag">Massachusetts</span>
-                  )}
-                  <Link href={`/services/${p.service}`} className="pf-tag">
-                    {p.serviceLabel}
-                  </Link>
-                  {p.space ? <span className="pf-tag pf-tag-mute">{p.space}</span> : null}
-                  <span className="pf-tag pf-tag-mute">{formatCompleted(p.completed)}</span>
-                </p>
-              </div>
-            </div>
-
-            <div className="pf-grid">
-              {p.photos.map((ph, i) => (
-                <button
-                  key={ph.src}
-                  className={`pf-cell${i === 0 ? ' pf-cell-lead' : ''}`}
-                  onClick={() => setLightbox({ project: p, index: i })}
-                  aria-label={`Open photograph ${i + 1} of ${p.photos.length} — ${p.title}${
-                    p.city ? ` in ${p.city}` : ''
-                  }`}
-                >
+      <ul className="jb-grid">
+        {shown.map((p) => (
+          <li key={p.slug} className="jb-folder">
+            <button className="jb-open" onClick={() => setOpen(p)}>
+              <span className="jb-stack">
+                <span className="jb-sheet jb-sheet-c" aria-hidden="true" />
+                <span className="jb-sheet jb-sheet-b" aria-hidden="true" />
+                <span className="jb-cover">
                   <Image
-                    src={ph.thumb}
-                    alt={`${p.serviceLabel}${p.space ? ` — ${p.space}` : ''} by JH Painting Services${
+                    src={p.photos[0].thumb}
+                    alt={`${p.serviceLabel}${p.space ? `, ${p.space}` : ''} by JH Painting Services${
                       p.city ? ` in ${p.city}, ${p.state}` : ' in Massachusetts'
-                    } (${i + 1} of ${p.photos.length})`}
-                    width={ph.w}
-                    height={ph.h}
-                    sizes="(max-width: 640px) 50vw, (max-width: 1100px) 33vw, 25vw"
-                    className="pf-img"
-                    priority={pi === 0 && i === 0}
+                    }`}
+                    width={p.photos[0].w}
+                    height={p.photos[0].h}
+                    sizes="(max-width: 640px) 92vw, (max-width: 1100px) 45vw, 30vw"
                   />
-                  <span className="pf-zoom" aria-hidden="true">
-                    View
-                  </span>
-                </button>
-              ))}
-            </div>
-          </article>
+                </span>
+              </span>
+              <span className="jb-cap">
+                <span className="jb-name">
+                  {p.client ? <b>{p.client}</b> : null}
+                  {p.title}
+                </span>
+                <span className="jb-meta">
+                  <span>{p.city ? `${p.city}, ${p.state}` : 'Massachusetts'}</span>
+                  <i>{p.photos.length} photos</i>
+                </span>
+              </span>
+            </button>
+          </li>
         ))}
-      </div>
+      </ul>
 
-      {shown.length === 0 && (
-        <p className="pf-empty">No documented projects match that filter yet.</p>
-      )}
+      {shown.length === 0 && <p className="jb-empty">Nothing documented under that filter yet.</p>}
 
-      {/* ── closing CTA ──────────────────────────────────────────────────── */}
-      <section className="pf-cta">
-        <h2>Want your job on this page?</h2>
+      <section className="jb-cta">
+        <h2>Want your job in here?</h2>
         <p>
-          We photograph every project we finish. Book a walk-through and we&apos;ll show you the
-          surfaces that need repair before coating — and put the scope in writing before anything
-          starts.
+          We photograph every project we finish. Book a walk-through and we will show you what needs
+          repair before any coating goes on.
         </p>
-        <div className="pf-ctabtns">
-          <a href="tel:+15086908886" className="pf-btn pf-btn-primary">
+        <div className="jb-btns">
+          <a href="tel:+15086908886" className="jb-btn jb-btn-solid">
             Call (508) 690-8886
           </a>
-          <Link href="/contact" className="pf-btn pf-btn-ghost">
+          <Link href="/contact" className="jb-btn jb-btn-line">
             Request an estimate
           </Link>
         </div>
       </section>
 
-      {/* ── lightbox ─────────────────────────────────────────────────────── */}
-      {lightbox && (
+      {mounted && open && createPortal(
         <div
-          className="pf-lb"
+          className="jb-sheetview"
           role="dialog"
           aria-modal="true"
-          aria-label={`${lightbox.project.title} photographs`}
-          onClick={() => setLightbox(null)}
+          aria-label={`${open.title} photographs`}
         >
-          <button className="pf-lb-x" onClick={() => setLightbox(null)} aria-label="Close">
-            ✕
-          </button>
+          <div className="jb-sv-bar">
+            <div className="jb-sv-id">
+              <h2>
+                {open.client ? <b>{open.client}</b> : null}
+                {open.title}
+              </h2>
+              <p>
+                {open.city ? (
+                  <Link href={`/massachusetts/${open.citySlug}`}>
+                    {open.city}, {open.state}
+                  </Link>
+                ) : (
+                  <span>Massachusetts</span>
+                )}
+                <Link href={`/services/${open.service}`}>{open.serviceLabel}</Link>
+                <span>{formatCompleted(open.completed)}</span>
+                {open.space ? <span>{open.space}</span> : null}
+              </p>
+            </div>
+            <button className="jb-close" onClick={() => setOpen(null)} aria-label="Close folder">
+              Close
+            </button>
+          </div>
+
+          <div className="jb-sv-grid">
+            {open.photos.map((ph, i) => (
+              <button
+                key={ph.src}
+                className="jb-shot"
+                onClick={() => setZoom(i)}
+                aria-label={`Enlarge photograph ${i + 1} of ${open.photos.length}`}
+              >
+                <Image
+                  src={ph.thumb}
+                  alt={`${open.serviceLabel}${open.space ? `, ${open.space}` : ''} by JH Painting Services${
+                    open.city ? ` in ${open.city}, ${open.state}` : ''
+                  }`}
+                  width={ph.w}
+                  height={ph.h}
+                  sizes="(max-width: 640px) 46vw, 30vw"
+                  loading={i < 4 ? 'eager' : 'lazy'}
+                />
+              </button>
+            ))}
+          </div>
+        </div>,
+        document.body
+      )}
+
+      {mounted && open && zoom !== null && createPortal(
+        <div
+          className="jb-zoom"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Photograph"
+          onClick={() => setZoom(null)}
+        >
           <button
-            className="pf-lb-nav pf-lb-prev"
+            className="jb-znav jb-zprev"
             onClick={(e) => {
               e.stopPropagation()
-              move(-1)
+              step(-1)
             }}
             aria-label="Previous photograph"
           >
-            ‹
+            &#8249;
           </button>
-          <figure className="pf-lb-fig" onClick={(e) => e.stopPropagation()}>
-            <Image
-              src={lightbox.project.photos[lightbox.index].src}
-              alt={`${lightbox.project.serviceLabel} by JH Painting Services${
-                lightbox.project.city ? ` in ${lightbox.project.city}, ${lightbox.project.state}` : ''
-              }`}
-              width={lightbox.project.photos[lightbox.index].w}
-              height={lightbox.project.photos[lightbox.index].h}
-              sizes="(max-width: 900px) 96vw, 80vw"
-              className="pf-lb-img"
-            />
-            <figcaption>
-              <strong>
-                {lightbox.project.client ? `${lightbox.project.client} — ` : ''}
-                {lightbox.project.title}
-              </strong>
-              <span>
-                {lightbox.project.city ? `${lightbox.project.city}, ${lightbox.project.state} · ` : ''}
-                {lightbox.project.serviceLabel} · {formatCompleted(lightbox.project.completed)}
-              </span>
-              <span className="pf-lb-idx">
-                {lightbox.index + 1} / {lightbox.project.photos.length}
-              </span>
-            </figcaption>
-          </figure>
+          <Image
+            src={open.photos[zoom].src}
+            alt={`${open.serviceLabel} by JH Painting Services${
+              open.city ? ` in ${open.city}, ${open.state}` : ''
+            }`}
+            width={open.photos[zoom].w}
+            height={open.photos[zoom].h}
+            sizes="90vw"
+            className="jb-zimg"
+            onClick={(e) => e.stopPropagation()}
+          />
           <button
-            className="pf-lb-nav pf-lb-next"
+            className="jb-znav jb-znext"
             onClick={(e) => {
               e.stopPropagation()
-              move(1)
+              step(1)
             }}
             aria-label="Next photograph"
           >
-            ›
+            &#8250;
           </button>
-        </div>
+          <button className="jb-zclose" onClick={() => setZoom(null)} aria-label="Close photograph">
+            Close
+          </button>
+        </div>,
+        document.body
       )}
     </div>
   )

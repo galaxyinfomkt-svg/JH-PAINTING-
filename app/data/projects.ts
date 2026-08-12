@@ -46,7 +46,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: 'roto-rooter-marlborough-cafeteria',
-    title: 'Roto-Rooter Cafeteria',
+    title: 'Cafeteria',
     client: 'Roto-Rooter',
     city: 'Marlborough',
     citySlug: 'marlborough',
@@ -66,7 +66,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'roto-rooter-marlborough-training-room',
-    title: 'Roto-Rooter Training Room',
+    title: 'Training Room',
     client: 'Roto-Rooter',
     city: 'Marlborough',
     citySlug: 'marlborough',
@@ -86,7 +86,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'roto-rooter-marlborough-office',
-    title: 'Roto-Rooter Offices',
+    title: 'Offices',
     client: 'Roto-Rooter',
     city: 'Marlborough',
     citySlug: 'marlborough',
