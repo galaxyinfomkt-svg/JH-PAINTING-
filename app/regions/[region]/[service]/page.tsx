@@ -7,6 +7,7 @@ import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
+import CapacityNotice from '@/app/components/CapacityNotice'
 
 const serviceImages: Record<string, { hero: string; showcase: string }> = {
   'interior-painting': {
@@ -619,6 +620,7 @@ export default async function RegionServicePage({ params }: Props) {
 
               {/* Quote Form */}
               <div id="quote-form" className="hero-form-card">
+                <CapacityNotice service={serviceSlug} />
                 <LazyHeroForm
                   className="hero-form-iframe"
                   src="https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn"

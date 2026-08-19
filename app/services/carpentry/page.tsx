@@ -8,6 +8,7 @@ import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
+import CapacityNotice from '@/app/components/CapacityNotice'
 
 
 // Schema JSON-LD for Carpentry Service
@@ -309,6 +310,7 @@ export default function CarpentryPage() {
 
             {/* Quote Form Card - Clean style */}
             <div className="hero-form-card">
+              <CapacityNotice service={'carpentry'} />
               <LazyHeroForm
                 className="hero-form-iframe"
                 src={`https://api.leadconnectorhq.com/widget/form/${FORM_IDS.contact}`}

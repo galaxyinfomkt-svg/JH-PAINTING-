@@ -24,6 +24,7 @@ import {
   MessageSquare
 } from '@/app/components/Icons'
 import LazyIframe from '../components/LazyIframe'
+import CapacityNotice from '@/app/components/CapacityNotice'
 
 // Menu data
 const menuServices = [
@@ -411,6 +412,7 @@ export default function ContactPage() {
                   near-viewport intersection (lazy) - a real lead-killer
                   since users land on /contact specifically to fill this form.
                 */}
+                <CapacityNotice />
                 <LazyIframe
                   priority
                   src="https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn"

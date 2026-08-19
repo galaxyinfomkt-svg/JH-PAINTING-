@@ -9,6 +9,7 @@ import LazyHeroForm from './components/LazyHeroForm'
 import Footer from './components/Footer'
 import { generatePageMetadata } from '@/lib/seo'
 import { siteConfig } from '@/lib/siteConfig'
+import CapacityNotice from '@/app/components/CapacityNotice'
 
 /**
  * HOME page metadata.
@@ -369,6 +370,7 @@ export default function HomePage() {
 
               {/* Quote Form Card */}
               <div id="quote-form" className="hero-form-card">
+                <CapacityNotice />
                 <LazyHeroForm
                   className="hero-form-iframe"
                   src="https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn"

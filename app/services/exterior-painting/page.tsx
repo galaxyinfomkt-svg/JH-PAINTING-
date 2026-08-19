@@ -8,6 +8,7 @@ import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
+import CapacityNotice from '@/app/components/CapacityNotice'
 
 
 // Schema JSON-LD for Exterior Painting Service
@@ -313,6 +314,7 @@ export default function ExteriorPaintingPage() {
 
             {/* Quote Form Card - Clean style */}
             <div className="hero-form-card">
+              <CapacityNotice service={'exterior-painting'} />
               <LazyHeroForm
                 className="hero-form-iframe"
                 src={`https://api.leadconnectorhq.com/widget/form/${FORM_IDS.contact}`}

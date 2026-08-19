@@ -50,6 +50,7 @@ import CityProof from '@/app/components/CityProof'
 import RelatedCities from '@/app/components/RelatedCities'
 import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
+import CapacityNotice from '@/app/components/CapacityNotice'
 
 // Dynamic import for below-fold heavy client component (code splitting)
 const BeforeAfterGrid = dynamic(() => import('@/app/components/BeforeAfterGrid'))
@@ -433,6 +434,7 @@ export default async function CityServicePage({ params }: Props) {
 
               {/* Quote Form Card - Clean style */}
               <div id="quote-form" className="hero-form-card">
+                <CapacityNotice service={serviceSlug} />
                 <LazyHeroForm
                   className="hero-form-iframe"
                   src={`https://api.leadconnectorhq.com/widget/form/${FORM_IDS.quote}`}

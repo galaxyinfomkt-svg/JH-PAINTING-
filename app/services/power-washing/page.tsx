@@ -7,6 +7,7 @@ import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, FORM_IDS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
+import CapacityNotice from '@/app/components/CapacityNotice'
 
 
 // Inline SVG icons to reduce bundle size
@@ -384,6 +385,7 @@ export default function PowerWashingPage() {
 
             {/* Quote Form Card - Clean style */}
             <div className="hero-form-card">
+              <CapacityNotice service={'power-washing'} />
               <LazyHeroForm
                 className="hero-form-iframe"
                 src={`https://api.leadconnectorhq.com/widget/form/${FORM_IDS.quote}`}
