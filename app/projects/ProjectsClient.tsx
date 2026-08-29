@@ -223,7 +223,7 @@ export default function ProjectsClient() {
                   <span>Massachusetts</span>
                 )}
                 <Link href={`/services/${open.service}`}>{open.serviceLabel}</Link>
-                <span>{formatCompleted(open.completed)}</span>
+                {open.completed ? <span>{formatCompleted(open.completed)}</span> : null}
                 {open.space ? <span>{open.space}</span> : null}
               </p>
             </div>

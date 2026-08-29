@@ -34,9 +34,9 @@ const MODIFIED = {
   /** The seven /services/* pages. Last touched by the capacity notice. */
   services: '2026-08-19T00:00:00.000Z',
   /** /projects and the photographs behind it. */
-  projects: '2026-08-12T00:00:00.000Z',
-  /** City and city+service pages: the copy engine was replaced on the 11th. */
-  cities: '2026-08-11T00:00:00.000Z',
+  projects: '2026-08-29T00:00:00.000Z',
+  /** City and city+service pages. Southbridge added with its job photos on the 29th. */
+  cities: '2026-08-29T00:00:00.000Z',
   /** Region hubs and region+service pages, same engine swap. */
   regions: '2026-08-11T00:00:00.000Z',
 } as const

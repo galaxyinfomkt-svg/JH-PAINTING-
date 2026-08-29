@@ -54,7 +54,8 @@ export default function CityProof({
                 {p.space ? ` - ${p.space}` : ''}
               </span>
               <span className="cityproof-jm">
-                {p.serviceLabel} · {formatCompleted(p.completed)}
+                {p.serviceLabel}
+                {p.completed ? ` · ${formatCompleted(p.completed)}` : ''}
               </span>
             </li>
           ))}

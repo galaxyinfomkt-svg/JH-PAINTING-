@@ -48,7 +48,7 @@ const gallerySchema = {
       name: `${p.client ? `${p.client} - ` : ''}${p.title}${p.city ? `, ${p.city} ${p.state}` : ''}`,
       caption: `${p.serviceLabel}${p.space ? ` - ${p.space}` : ''} by JH Painting Services${
         p.city ? ` in ${p.city}, ${p.state}` : ' in Massachusetts'
-      }, ${formatCompleted(p.completed)}.`,
+      }${p.completed ? `, ${formatCompleted(p.completed)}` : ''}.`,
       ...(p.city
         ? {
             contentLocation: {

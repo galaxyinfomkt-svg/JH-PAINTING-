@@ -38,12 +38,52 @@ export interface Project {
   serviceLabel: string
   /** The specific space, when the photos show one. */
   space?: string
-  /** YYYY-MM the photos were taken. */
-  completed: string
+  /** YYYY-MM the photos were taken. Absent when the originals carry no date. */
+  completed?: string
   photos: ProjectPhoto[]
 }
 
 export const projects: Project[] = [
+  {
+    slug: 'interior-repaint-groton',
+    title: 'Whole-Home Interior Repaint',
+    city: 'Groton',
+    citySlug: 'groton',
+    state: 'MA',
+    service: 'interior-painting',
+    serviceLabel: 'Interior Painting',
+    space: 'Hallway, landing and bedrooms',
+    photos: [
+      { src: '/projects/interior-repaint-groton/01.webp', thumb: '/projects/interior-repaint-groton/01-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-groton/02.webp', thumb: '/projects/interior-repaint-groton/02-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-groton/03.webp', thumb: '/projects/interior-repaint-groton/03-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-groton/04.webp', thumb: '/projects/interior-repaint-groton/04-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-groton/05.webp', thumb: '/projects/interior-repaint-groton/05-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-groton/06.webp', thumb: '/projects/interior-repaint-groton/06-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-groton/07.webp', thumb: '/projects/interior-repaint-groton/07-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-groton/08.webp', thumb: '/projects/interior-repaint-groton/08-thumb.webp', w: 1600, h: 2133 },
+    ],
+  },
+  {
+    slug: 'interior-repaint-southbridge',
+    title: 'Occupied Home Interior Repaint',
+    city: 'Southbridge',
+    citySlug: 'southbridge',
+    state: 'MA',
+    service: 'interior-painting',
+    serviceLabel: 'Interior Painting',
+    space: 'Living, dining, bedrooms and baths',
+    photos: [
+      { src: '/projects/interior-repaint-southbridge/01.webp', thumb: '/projects/interior-repaint-southbridge/01-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-southbridge/02.webp', thumb: '/projects/interior-repaint-southbridge/02-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-southbridge/03.webp', thumb: '/projects/interior-repaint-southbridge/03-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-southbridge/04.webp', thumb: '/projects/interior-repaint-southbridge/04-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-southbridge/05.webp', thumb: '/projects/interior-repaint-southbridge/05-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-southbridge/06.webp', thumb: '/projects/interior-repaint-southbridge/06-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-southbridge/07.webp', thumb: '/projects/interior-repaint-southbridge/07-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-southbridge/08.webp', thumb: '/projects/interior-repaint-southbridge/08-thumb.webp', w: 1600, h: 2133 },
+    ],
+  },
   {
     slug: 'roto-rooter-marlborough-cafeteria',
     title: 'Cafeteria',
@@ -212,8 +252,8 @@ export const projects: Project[] = [
   {
     slug: 'bathroom-painting',
     title: 'Bathroom Repaint',
-    city: 'Marlborough',
-    citySlug: 'marlborough',
+    city: 'Concord',
+    citySlug: 'concord',
     state: 'MA',
     service: 'interior-painting',
     serviceLabel: 'Interior Painting',
@@ -262,7 +302,8 @@ export function getProject(slug: string): Project | undefined {
 }
 
 /** "2025-10" -> "October 2025". Kept pure so it renders identically on server and client. */
-export function formatCompleted(ym: string): string {
+export function formatCompleted(ym?: string): string | null {
+  if (!ym) return null
   const [y, m] = ym.split('-').map(Number)
   const months = ['January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December']

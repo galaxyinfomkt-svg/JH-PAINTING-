@@ -19,11 +19,12 @@ export interface City {
 
 export const cities: City[] = [
   // 0-5 MILES
+  { name: 'Marlborough', slug: 'marlborough', distance: 0, county: 'Middlesex County', population: '41,000+', zipCodes: ['01752'], landmarks: ['Ghiloni Park', 'Marlborough Downtown', 'Wayside Rail Trail'], neighborhoods: ['Downtown Marlborough', 'East Marlborough', 'West Marlborough'] },
   { name: 'Hudson', slug: 'hudson', distance: 3.13, county: 'Middlesex County', population: '20,000+', zipCodes: ['01749'], landmarks: ['Downtown Hudson', 'Assabet River Rail Trail'], neighborhoods: ['Downtown Hudson', 'Hudson Center'], latitude: 42.3918, longitude: -71.5662 },
   { name: 'Southborough', slug: 'southborough', distance: 3.19, county: 'Worcester County', population: '10,000+', zipCodes: ['01772'], landmarks: ['St. Mark\'s School', 'Breakneck Hill Conservation Land'], neighborhoods: ['Southborough Center', 'Cordaville'], latitude: 42.3057, longitude: -71.5240 },
-  { name: 'Berlin', slug: 'berlin', distance: 5.17, county: 'Worcester County', population: '3,000+', zipCodes: ['01503'], landmarks: ['Assabet River National Wildlife Refuge'], neighborhoods: ['Berlin Center', 'South Berlin'], latitude: 42.3812, longitude: -71.6370 },
 
   // 5-10 MILES
+  { name: 'Berlin', slug: 'berlin', distance: 5.17, county: 'Worcester County', population: '3,000+', zipCodes: ['01503'], landmarks: ['Assabet River National Wildlife Refuge'], neighborhoods: ['Berlin Center', 'South Berlin'], latitude: 42.3812, longitude: -71.6370 },
   { name: 'Northborough', slug: 'northborough', distance: 5.30, county: 'Worcester County', population: '15,000+', zipCodes: ['01532'], landmarks: ['Assabet River Rail Trail', 'Northborough Crossing'], neighborhoods: ['Northborough Center', 'West Northborough'], latitude: 42.3195, longitude: -71.6412 },
   { name: 'Cordaville', slug: 'cordaville', distance: 5.64, county: 'Worcester County', population: '5,000+', zipCodes: ['01772'], landmarks: ['Cordaville Mill', 'Breakneck Hill'], neighborhoods: ['Cordaville Village'], latitude: 42.2857, longitude: -71.5240 },
   { name: 'Stow', slug: 'stow', distance: 6.41, county: 'Middlesex County', population: '7,000+', zipCodes: ['01775'], landmarks: ['Collings Foundation', 'Lake Boon'], neighborhoods: ['Stow Center', 'Gleasondale'] },
@@ -56,11 +57,8 @@ export const cities: City[] = [
   { name: 'Weston', slug: 'weston', distance: 12.43, county: 'Middlesex County', population: '12,000+', zipCodes: ['02493'], landmarks: ['Case Estates', 'Weston Town Center'], neighborhoods: ['Weston Center', 'Kendal Green'] },
   { name: 'Sterling', slug: 'sterling', distance: 12.57, county: 'Worcester County', population: '8,000+', zipCodes: ['01564'], landmarks: ['Wachusett Reservoir', 'Sterling Town Common'], neighborhoods: ['Sterling Center', 'West Sterling'] },
   { name: 'Concord', slug: 'concord', distance: 12.64, county: 'Middlesex County', population: '18,000+', zipCodes: ['01742'], landmarks: ['Walden Pond', 'Minute Man National Park', 'Old North Bridge'], neighborhoods: ['Concord Center', 'West Concord'] },
-  { name: 'Marlborough', slug: 'marlborough', distance: 0, county: 'Middlesex County', population: '41,000+', zipCodes: ['01752'], landmarks: ['Ghiloni Park', 'Marlborough Downtown', 'Wayside Rail Trail'], neighborhoods: ['Downtown Marlborough', 'East Marlborough', 'West Marlborough'] },
-  { name: 'Hamilton', slug: 'hamilton', distance: 44.5, county: 'Essex County', population: '8,000+', zipCodes: ['01936'], landmarks: ['Myopia Hunt Club'], neighborhoods: ['Hamilton Center'] },
   { name: 'Lincoln', slug: 'lincoln', distance: 13.42, county: 'Middlesex County', population: '7,000+', zipCodes: ['01773'], landmarks: ['DeCordova Museum', 'Drumlin Farm'], neighborhoods: ['Lincoln Center'] },
   { name: 'Wellesley', slug: 'wellesley', distance: 13.42, county: 'Norfolk County', population: '29,000+', zipCodes: ['02481', '02482'], landmarks: ['Wellesley College', 'Wellesley Town Center'], neighborhoods: ['Wellesley Center', 'Wellesley Hills', 'Wellesley Farms'] },
-  { name: 'Sunderland', slug: 'sunderland', distance: 68.0, county: 'Franklin County', population: '3,700+', zipCodes: ['01375'], landmarks: ['Mount Sugarloaf'], neighborhoods: ['Sunderland Center'] },
   { name: 'Littleton Common', slug: 'littleton-common', distance: 14.07, county: 'Middlesex County', population: '3,000+', zipCodes: ['01460'], landmarks: ['Littleton Common'], neighborhoods: ['Littleton Center'] },
   { name: 'Worcester', slug: 'worcester', distance: 14.42, county: 'Worcester County', population: '206,000+', zipCodes: ['01601', '01602', '01603', '01604', '01605', '01606', '01607', '01608', '01609', '01610'], landmarks: ['DCU Center', 'Worcester Art Museum', 'Hanover Theatre'], neighborhoods: ['Downtown Worcester', 'West Side', 'East Side', 'Main South'] },
   { name: 'Shirley', slug: 'shirley', distance: 14.46, county: 'Middlesex County', population: '7,500+', zipCodes: ['01464'], landmarks: ['Shirley Center'], neighborhoods: ['Shirley Center'] },
@@ -81,16 +79,16 @@ export const cities: City[] = [
   { name: 'Leominster', slug: 'leominster', distance: 16.35, county: 'Worcester County', population: '41,000+', zipCodes: ['01453'], landmarks: ['Doyle Field', 'Leominster State Forest'], neighborhoods: ['Downtown Leominster', 'North Leominster'] },
   { name: 'Medfield', slug: 'medfield', distance: 16.55, county: 'Norfolk County', population: '12,500+', zipCodes: ['02052'], landmarks: ['Medfield State Hospital', 'Noon Hill'], neighborhoods: ['Medfield Center'] },
   { name: 'Needham', slug: 'needham', distance: 16.61, county: 'Norfolk County', population: '31,000+', zipCodes: ['02492', '02494'], landmarks: ['Needham Town Center', 'Charles River'], neighborhoods: ['Needham Center', 'Needham Heights', 'Highlandville'] },
-  { name: 'Westford', slug: 'westford', distance: 16.82, county: 'Middlesex County', population: '24,000+', zipCodes: ['01886'], landmarks: ['Nashoba Valley Ski Area', 'Westford Town Common'], neighborhoods: ['Westford Center', 'Forge Village', 'Graniteville'] },
   { name: 'Mendon', slug: 'mendon', distance: 16.82, county: 'Worcester County', population: '6,000+', zipCodes: ['01756'], landmarks: ['Mendon Town Common'], neighborhoods: ['Mendon Center'] },
+  { name: 'Westford', slug: 'westford', distance: 16.82, county: 'Middlesex County', population: '24,000+', zipCodes: ['01886'], landmarks: ['Nashoba Valley Ski Area', 'Westford Town Common'], neighborhoods: ['Westford Center', 'Forge Village', 'Graniteville'] },
   { name: 'Bedford', slug: 'bedford', distance: 16.86, county: 'Middlesex County', population: '14,000+', zipCodes: ['01730'], landmarks: ['Minuteman Bikeway', 'Bedford Town Center'], neighborhoods: ['Bedford Center', 'Springs Brook'] },
   { name: 'Newton', slug: 'newton', distance: 17.19, county: 'Middlesex County', population: '88,000+', zipCodes: ['02458', '02459', '02460', '02461', '02462', '02464', '02465', '02466', '02467', '02468'], landmarks: ['Boston College', 'Newton Centre', 'Crystal Lake'], neighborhoods: ['Newton Centre', 'Newton Highlands', 'West Newton', 'Newtonville'] },
   { name: 'Whitinsville', slug: 'whitinsville', distance: 17.56, county: 'Worcester County', population: '7,000+', zipCodes: ['01588'], landmarks: ['Whitin Mill', 'Blackstone River'], neighborhoods: ['Whitinsville Village'] },
   { name: 'Sutton', slug: 'sutton', distance: 17.68, county: 'Worcester County', population: '9,000+', zipCodes: ['01590'], landmarks: ['Purgatory Chasm State Reservation'], neighborhoods: ['Sutton Center', 'Wilkinsonville'] },
   { name: 'Lexington', slug: 'lexington', distance: 17.73, county: 'Middlesex County', population: '34,000+', zipCodes: ['02420', '02421'], landmarks: ['Lexington Battle Green', 'Minute Man National Park'], neighborhoods: ['Lexington Center', 'East Lexington'] },
   { name: 'Groton', slug: 'groton', distance: 18.17, county: 'Middlesex County', population: '11,000+', zipCodes: ['01450'], landmarks: ['Groton School', 'Nashua River'], neighborhoods: ['Groton Center', 'West Groton'] },
-  { name: 'Princeton', slug: 'princeton', distance: 18.28, county: 'Worcester County', population: '3,500+', zipCodes: ['01541'], landmarks: ['Wachusett Mountain', 'Princeton Town Common'], neighborhoods: ['Princeton Center'] },
   { name: 'Auburn', slug: 'auburn', distance: 18.28, county: 'Worcester County', population: '16,000+', zipCodes: ['01501'], landmarks: ['Pakachoag Hill', 'Auburn Mall'], neighborhoods: ['Auburn Center', 'Stoneville'] },
+  { name: 'Princeton', slug: 'princeton', distance: 18.28, county: 'Worcester County', population: '3,500+', zipCodes: ['01541'], landmarks: ['Wachusett Mountain', 'Princeton Town Common'], neighborhoods: ['Princeton Center'] },
   { name: 'Bellingham', slug: 'bellingham', distance: 18.49, county: 'Norfolk County', population: '17,000+', zipCodes: ['02019'], landmarks: ['Lake Hiawatha', 'Bellingham Town Common'], neighborhoods: ['Bellingham Center', 'South Bellingham'] },
   { name: 'Watertown', slug: 'watertown', distance: 18.58, county: 'Middlesex County', population: '35,000+', zipCodes: ['02472'], landmarks: ['Arsenal Yards', 'Watertown Square'], neighborhoods: ['Watertown Square', 'East Watertown'] },
   { name: 'Westwood', slug: 'westwood', distance: 18.88, county: 'Norfolk County', population: '16,000+', zipCodes: ['02090'], landmarks: ['Hale Reservation', 'Westwood Station'], neighborhoods: ['Westwood Center', 'Islington'] },
@@ -143,8 +141,13 @@ export const cities: City[] = [
   { name: 'Boston', slug: 'boston', distance: 24.81, county: 'Suffolk County', population: '675,000+', zipCodes: ['02108', '02109', '02110', '02111', '02113', '02114', '02115', '02116', '02118', '02119', '02120', '02121', '02122', '02124', '02125', '02126', '02127', '02128', '02129', '02130', '02131', '02132', '02134', '02135', '02136', '02163', '02199', '02203', '02210', '02215'], landmarks: ['Freedom Trail', 'Fenway Park', 'Boston Common', 'Faneuil Hall'], neighborhoods: ['Back Bay', 'Beacon Hill', 'North End', 'South End', 'Charlestown', 'South Boston', 'Dorchester', 'Roxbury'] },
   { name: 'Foxborough', slug: 'foxborough', distance: 24.83, county: 'Norfolk County', population: '18,000+', zipCodes: ['02035'], landmarks: ['Gillette Stadium', 'Patriot Place'], neighborhoods: ['Foxborough Center'] },
 
+  // 25-50 MILES
+  { name: 'Southbridge', slug: 'southbridge', distance: 30.93, county: 'Worcester County', population: '17,000+', zipCodes: ['01550'], landmarks: ['Jacob Edwards Library', 'Optical Heritage Museum'], neighborhoods: ['Southbridge Center', 'Globe Village', 'Sandersdale'] },
+  { name: 'Hamilton', slug: 'hamilton', distance: 44.5, county: 'Essex County', population: '8,000+', zipCodes: ['01936'], landmarks: ['Myopia Hunt Club'], neighborhoods: ['Hamilton Center'] },
+
   // 50+ MILES - Extended Service Area
-  { name: 'New Bedford', slug: 'new-bedford', distance: 55.0, county: 'Bristol County', population: '101,000+', zipCodes: ['02740', '02741', '02742', '02743', '02744', '02745', '02746'], landmarks: ['New Bedford Whaling Museum', 'Buttonwood Park Zoo', 'Fort Taber Park'], neighborhoods: ['Downtown New Bedford', 'South End', 'North End', 'West End', 'Acushnet Heights'] }
+  { name: 'New Bedford', slug: 'new-bedford', distance: 55.0, county: 'Bristol County', population: '101,000+', zipCodes: ['02740', '02741', '02742', '02743', '02744', '02745', '02746'], landmarks: ['New Bedford Whaling Museum', 'Buttonwood Park Zoo', 'Fort Taber Park'], neighborhoods: ['Downtown New Bedford', 'South End', 'North End', 'West End', 'Acushnet Heights'] },
+  { name: 'Sunderland', slug: 'sunderland', distance: 68.0, county: 'Franklin County', population: '3,700+', zipCodes: ['01375'], landmarks: ['Mount Sugarloaf'], neighborhoods: ['Sunderland Center'] },
 ]
 
 /**
