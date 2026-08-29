@@ -135,14 +135,23 @@ const schemaData = {
         "https://www.facebook.com/profile.php?id=61564489391475",
         "https://www.instagram.com/jhpaintingservices_/",
         "https://www.youtube.com/@JHPaintingServices-br9wh",
-        "https://maps.app.goo.gl/xWBv1UJdDezRaBej9"
-        // Yelp, Thumbtack, Angi, BBB, Nextdoor and Houzz URLs were removed.
-        // All six followed the same guessable /{city}/{business-name} pattern
-        // and none could be confirmed to exist. sameAs is how you tell Google
-        // that two profiles are the same entity; pointing it at a URL that may
-        // 404 wastes the mechanism and, if a profile genuinely does not exist,
-        // asserts a presence the business does not have. Add each one back
-        // individually after opening it and confirming it is claimed.
+        "https://maps.app.goo.gl/xWBv1UJdDezRaBej9",
+        // Yelp and Thumbtack are back. The URLs in FloatingSocial.tsx carry
+        // "utm_campaign=www_business_share_popup" and "utm_source=copy_link",
+        // which are the parameters those sites append only when somebody uses
+        // the Share control inside the live profile. So the profiles exist and
+        // somebody copied the links from them. Tracking parameters are stripped
+        // here: sameAs is an identity statement and should point at the
+        // canonical profile, not at a share link.
+        "https://www.yelp.com/biz/jh-painting-services-marlborough",
+        "https://www.thumbtack.com/ma/marlborough/exterior-painting/jh-painting-services-inc/service/335756687285510374"
+        // Angi, BBB, Nextdoor and Houzz stay out.
+        // Those four followed a guessable /{city}/{business-name} pattern with
+        // no evidence behind them. sameAs is how you tell Google that two
+        // profiles are the same entity; pointing it at a URL that may 404
+        // wastes the mechanism, and if the profile does not exist it asserts a
+        // presence the business does not have. Add each back only after
+        // opening it and confirming it is claimed.
       ],
       "contactPoint": [
         {
