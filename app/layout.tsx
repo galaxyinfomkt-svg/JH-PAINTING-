@@ -94,9 +94,18 @@ const schemaData = {
       "priceRange": "$$",
       "currenciesAccepted": "USD",
       "paymentAccepted": ["Cash", "Check", "Credit Card", "Debit Card", "Zelle", "Venmo"],
+      // streetAddress removed on purpose. The value here was
+      // "346 Plantation St, Marlborough, MA 01752", but Plantation St is a
+      // Worcester street and 01752 is a Marlborough ZIP, so the two halves
+      // contradict each other. NAP consistency is one of the few local
+      // ranking factors that still acts directly, and an address that does not
+      // match the Google Business Profile character for character is worse
+      // than none. lib/siteConfig.ts already models this business as a
+      // service-area business with an empty streetAddress, which is the right
+      // shape for a painter with no storefront. Put the street back only when
+      // it matches the GBP exactly.
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "346 Plantation St",
         "addressLocality": "Marlborough",
         "addressRegion": "MA",
         "postalCode": "01752",
@@ -126,13 +135,14 @@ const schemaData = {
         "https://www.facebook.com/profile.php?id=61564489391475",
         "https://www.instagram.com/jhpaintingservices_/",
         "https://www.youtube.com/@JHPaintingServices-br9wh",
-        "https://maps.app.goo.gl/xWBv1UJdDezRaBej9",
-        "https://www.yelp.com/biz/jh-painting-services-marlborough",
-        "https://www.thumbtack.com/ma/marlborough/painters/jh-painting-services",
-        "https://www.angi.com/companylist/us/ma/marlborough/jh-painting-services",
-        "https://www.bbb.org/us/ma/marlborough/profile/painting-contractors/jh-painting-services",
-        "https://nextdoor.com/pages/jh-painting-services-marlborough-ma",
-        "https://www.houzz.com/professionals/painting/jh-painting-services"
+        "https://maps.app.goo.gl/xWBv1UJdDezRaBej9"
+        // Yelp, Thumbtack, Angi, BBB, Nextdoor and Houzz URLs were removed.
+        // All six followed the same guessable /{city}/{business-name} pattern
+        // and none could be confirmed to exist. sameAs is how you tell Google
+        // that two profiles are the same entity; pointing it at a URL that may
+        // 404 wastes the mechanism and, if a profile genuinely does not exist,
+        // asserts a presence the business does not have. Add each one back
+        // individually after opening it and confirming it is claimed.
       ],
       "contactPoint": [
         {
@@ -256,54 +266,24 @@ const schemaData = {
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Power Washing", "description": "Professional pressure washing for driveways, siding, decks, patios, and walkways.", "url": "https://jhpaintingservices.com/services/power-washing" } }
         ]
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "ratingCount": "40",
-        "reviewCount": "40",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      // Sample reviews - every entry must be a REAL, attributable customer review.
-      // The "Sarah M." entry was removed (was fabricated). Add new entries only
-      // from verified Google reviews with full first name + last initial.
-      "review": [
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "John D." },
-          "datePublished": "2024-10-22",
-          "reviewBody": "We hired JH Painting for our exterior and couldn't be happier. Great communication and beautiful, lasting results!"
-        },
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "Maria L." },
-          "datePublished": "2025-01-10",
-          "reviewBody": "Best painting company in Massachusetts! They refinished our kitchen cabinets and made them look brand new instead of replacing them. The attention to detail was incredible."
-        },
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "Michael R." },
-          "datePublished": "2025-03-05",
-          "reviewBody": "Hired JH Painting for a commercial office project in Worcester. They finished on time, kept the site clean, and the results exceeded our expectations. Very professional crew."
-        },
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "Emily C." },
-          "datePublished": "2025-06-18",
-          "reviewBody": "Jafet and his team painted our entire Victorian home exterior in Natick. They handled the lead paint safely and the house looks brand new. Couldn't recommend them more!"
-        },
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "David K." },
-          "datePublished": "2025-09-12",
-          "reviewBody": "Third time using JH Painting - they painted our deck, interior walls, and now our fence. Consistent quality every time. Truly the best painters in the MetroWest area."
-        }
-      ]
+      // aggregateRating and the five Review nodes were removed from this
+      // node on purpose.
+      //
+      // Google's review snippet policy does not allow self-serving review
+      // markup: markup about the entity that owns the site. A LocalBusiness
+      // rating that the business publishes about itself is ignored at best,
+      // and at worst earns a structured-data manual action. It was being
+      // emitted on all ~1,034 pages.
+      //
+      // The reviews themselves stay where they belong and where they actually
+      // convert: as visible content rendered by ReviewsSection, and on the
+      // Google Business Profile, which is the channel Google does trust for a
+      // local business rating. Nothing customers see is lost by this change.
+      //
+      // Historical note kept because it matters: a fabricated "Sarah M."
+      // testimonial was once shipped here and later removed. The five that
+      // followed should each be checked against the Google Business Profile
+      // before being reused anywhere.
     },
     // FAQPage object moved to app/page.tsx - home-page-specific structured data.
     {

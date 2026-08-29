@@ -1,6 +1,18 @@
 export interface BlogPost {
   slug: string
   title: string
+  /**
+   * Last substantive revision, YYYY-MM-DD. Optional.
+   *
+   * Without it the Article schema can only advertise datePublished, so a post
+   * updated in 2026 still looks like January 2025 to Google. These posts hold
+   * the best organic positions on the site (8.0 and 10.9 measured), which
+   * makes their freshness signal worth more here than anywhere else.
+   *
+   * Set it only when the body actually changed. A dateModified that moves
+   * without the content moving is the same lie as a sitemap lastmod that does.
+   */
+  dateModified?: string
   excerpt: string
   content: string
   image: string
@@ -25,7 +37,7 @@ export const blogCategories = [
 export const blogPosts: BlogPost[] = [
   {
     slug: 'best-exterior-paint-colors-massachusetts-homes-2025',
-    title: 'Best Exterior Paint Colors for Massachusetts Homes in 2025',
+    title: 'Best Exterior Paint Colors for Massachusetts Homes',
     excerpt: 'Discover the trending exterior paint colors that complement New England architecture and withstand our harsh weather. From classic colonials to modern farmhouses.',
     content: `
 # Best Exterior Paint Colors for Massachusetts Homes in 2025
@@ -113,7 +125,7 @@ At JH Painting Services, we offer free color consultations with every exterior p
   },
   {
     slug: 'how-much-does-interior-painting-cost-massachusetts',
-    title: 'What Affects an Interior Painting Project in Massachusetts? 2025 Guide',
+    title: 'What Affects an Interior Painting Project in Massachusetts',
     excerpt: 'Learn what really shapes an interior painting project in Massachusetts, from surface condition and prep to paint quality and number of coats, so you know what to expect.',
     content: `
 # What Affects an Interior Painting Project in Massachusetts? 2025 Guide
@@ -6949,7 +6961,7 @@ At JH Painting Services, we understand that color choice is about more than aest
   },
   {
     slug: 'kitchen-painting-trends-massachusetts-2025-color-forecast',
-    title: 'Kitchen Painting Trends in Massachusetts: 2025 Color Forecast',
+    title: 'Kitchen Painting Trends in Massachusetts',
     excerpt: 'Discover the hottest kitchen paint colors and trends for Massachusetts homes in 2025. From cabinet colors to wall treatments, get ahead of the curve.',
     content: `
 # Kitchen Painting Trends in Massachusetts: 2025 Color Forecast

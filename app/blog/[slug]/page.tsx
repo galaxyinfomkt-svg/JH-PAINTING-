@@ -71,7 +71,11 @@ export default async function BlogPostPage({ params }: Props) {
         description: post.excerpt,
         image: post.image,
         datePublished: post.date,
-        dateModified: post.date,
+        // Falls back to datePublished when the post has never been revised.
+        // Do not wire this to the build clock: a dateModified that moves on
+        // every deploy without the body changing is the same false freshness
+        // signal as a sitemap lastmod that does, and Google discounts both.
+        dateModified: post.dateModified || post.date,
         author: {
           '@type': 'Person',
           name: post.author,

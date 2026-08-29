@@ -223,40 +223,16 @@ const servicesSchema = {
         }
       ]
     },
+    // This page used to redeclare the whole #organization node: same @id as the
+    // one in the root layout, but with its own address, its own geo and a
+    // second aggregateRating. Two nodes sharing one @id on the same page is an
+    // entity-modelling error, and the copy carried the contradictory
+    // "346 Plantation St" address (a Worcester street with a Marlborough ZIP).
+    //
+    // A page-level node should REFERENCE the organisation, never redefine it.
+    // The root layout already emits the full node on every page.
     {
-      "@type": "LocalBusiness",
-      "name": "JH Painting Services",
-      "@id": "https://jhpaintingservices.com/#organization",
-      "url": "https://jhpaintingservices.com",
-      "telephone": "+1-508-690-8886",
-      "email": "contact@jhpaintingservices.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "346 Plantation St",
-        "addressLocality": "Marlborough",
-        "addressRegion": "MA",
-        "postalCode": "01752",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 42.3459,
-        "longitude": -71.5526
-      },
-      "areaServed": serviceAreas.map(city => ({
-        "@type": "City",
-        "name": city,
-        "containedInPlace": {
-          "@type": "State",
-          "name": "Massachusetts"
-        }
-      })),
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "40",
-        "bestRating": "5"
-      }
+      "@id": "https://jhpaintingservices.com/#organization"
     }
   ]
 }

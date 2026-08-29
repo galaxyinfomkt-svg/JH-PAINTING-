@@ -79,7 +79,16 @@ export function proximityTier(city: City): ProximityTier {
  * cannot keep - the tiers were chosen so the closest towns get the strongest
  * claim and the far ones get an honest one.
  */
+/** The town the business is actually based in. */
+export const HQ_SLUG = 'marlborough'
+
 export function schedulingNote(city: City): string {
+  // Marlborough is the shop itself. Its distance is 0, so the generic
+  // "N miles from our Marlborough shop" line would read "Marlborough is 0.0
+  // miles from our Marlborough shop".
+  if (city.slug === HQ_SLUG) {
+    return `${city.name} is where the shop is. Our crews start the day here, which means a walk-through can usually happen the same week and a small job does not have to wait for a full crew day to be worth the trip.`
+  }
   switch (proximityTier(city)) {
     case 'home-turf':
       return `${city.name} is ${city.distance.toFixed(1)} miles from our Marlborough shop, so our crews are on site without a travel surcharge and we can usually walk the job within a couple of days.`
