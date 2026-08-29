@@ -103,7 +103,7 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
                 <li><Link href="/projects">Projects</Link></li>
                 <li><Link href="/about">About Us</Link></li>
                 <li><Link href="/contact">Contact</Link></li>
-                <li><Link href="/free-quote">Free Quote</Link></li>
+                <li><Link href="/contact">Free Quote</Link></li>
               </ul>
             </div>
 
