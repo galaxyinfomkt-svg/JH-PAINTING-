@@ -4,14 +4,46 @@ import { blogPosts } from './data/blogPosts'
 import { regions } from './data/regions'
 import { shouldIndexCityService } from './data/indexing'
 
-// Frozen at build time. Bump when meaningful page content changes so Google
-// trusts the lastmod signal - `new Date()` every deploy is a known anti-pattern
-// (Google ignores sitemaps that fake daily updates with no content change).
-const BUILD_DATE = '2026-05-22T00:00:00.000Z'
+/**
+ * lastmod, per section rather than one frozen date for the whole site.
+ *
+ * WHY THIS CHANGED
+ * A single BUILD_DATE was pinned at 2026-05-22 while the content underneath it
+ * was replaced repeatedly through August: the city copy engine on the 11th, the
+ * projects gallery on the 12th, the capacity notice on the 19th, /about on the
+ * 29th. So 1,001 URLs were telling Google "nothing here has changed since
+ * May" while the pages were in fact rewritten. Google uses lastmod to decide
+ * what deserves a recrawl, and a stale date is an instruction not to come back.
+ * /massachusetts/waltham was last crawled on 2026-05-28, six days after that
+ * frozen date, and never since.
+ *
+ * The original comment was right that `new Date()` on every deploy is an
+ * anti-pattern: Google discounts a sitemap that claims daily change with no
+ * change behind it. The fix is not a live date, it is an HONEST date per
+ * section.
+ *
+ * HOW TO MAINTAIN
+ * When you change the content that feeds a section, bump that section's date
+ * and leave the others alone. Do not bump everything on every deploy, and do
+ * not wire this to the build clock. A date that is wrong in the other
+ * direction is just as damaging.
+ */
+const MODIFIED = {
+  /** Home, /about, /contact, /projects, /massachusetts hub. */
+  core: '2026-08-29T00:00:00.000Z',
+  /** The seven /services/* pages. Last touched by the capacity notice. */
+  services: '2026-08-19T00:00:00.000Z',
+  /** /projects and the photographs behind it. */
+  projects: '2026-08-12T00:00:00.000Z',
+  /** City and city+service pages: the copy engine was replaced on the 11th. */
+  cities: '2026-08-11T00:00:00.000Z',
+  /** Region hubs and region+service pages, same engine swap. */
+  regions: '2026-08-11T00:00:00.000Z',
+} as const
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://jhpaintingservices.com'
-  const currentDate = BUILD_DATE
+  const currentDate = MODIFIED.core
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
@@ -41,7 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/projects`,
-      lastModified: currentDate,
+      lastModified: MODIFIED.projects,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
@@ -53,43 +85,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/services/interior-painting`,
-      lastModified: currentDate,
+      lastModified: MODIFIED.services,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services/exterior-painting`,
-      lastModified: currentDate,
+      lastModified: MODIFIED.services,
       changeFrequency: 'weekly',
       priority: 0.95,
     },
     {
       url: `${baseUrl}/services/commercial-painting`,
-      lastModified: currentDate,
+      lastModified: MODIFIED.services,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/services/residential-painting`,
-      lastModified: currentDate,
+      lastModified: MODIFIED.services,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/services/cabinet-painting`,
-      lastModified: currentDate,
+      lastModified: MODIFIED.services,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/services/carpentry`,
-      lastModified: currentDate,
+      lastModified: MODIFIED.services,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/services/power-washing`,
-      lastModified: currentDate,
+      lastModified: MODIFIED.services,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
@@ -141,7 +173,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // City pages: /massachusetts/marlborough
   const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${baseUrl}/massachusetts/${normalizeCitySlug(city.slug)}`,
-    lastModified: currentDate,
+    lastModified: MODIFIED.cities,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
@@ -156,7 +188,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .filter((service) => shouldIndexCityService(city, service))
       .map((service) => ({
         url: `${baseUrl}/massachusetts/${normalizeCitySlug(city.slug)}/${service}`,
-        lastModified: currentDate,
+        lastModified: MODIFIED.cities,
         changeFrequency: service === 'exterior-painting' ? 'weekly' as const : 'monthly' as const,
         priority: service === 'exterior-painting' ? 0.85 : 0.7,
       }))
@@ -165,7 +197,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Region hub pages: /regions/greater-boston, /regions/metrowest, etc.
   const regionPages: MetadataRoute.Sitemap = regions.map((region) => ({
     url: `${baseUrl}/regions/${region.slug}`,
-    lastModified: currentDate,
+    lastModified: MODIFIED.regions,
     changeFrequency: 'monthly' as const,
     priority: 0.85,
   }))
@@ -174,7 +206,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const regionServicePages: MetadataRoute.Sitemap = regions.flatMap((region) =>
     servicesSlugs.map((service) => ({
       url: `${baseUrl}/regions/${region.slug}/${service}`,
-      lastModified: currentDate,
+      lastModified: MODIFIED.regions,
       changeFrequency: 'monthly' as const,
       priority: 0.75,
     }))
