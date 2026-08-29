@@ -209,15 +209,13 @@ const schemaData = {
         { "@type": "City", "name": "Medfield", "containedInPlace": { "@type": "State", "name": "Massachusetts" } }
       ],
       "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "license",
-          "name": "Massachusetts Painting Contractor License",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Commonwealth of Massachusetts"
-          }
-        },
+        // REMOVED: "Massachusetts Painting Contractor License".
+        // The Commonwealth does not issue a painting contractor licence. What
+        // exists is Home Improvement Contractor registration (OCABR) and, for
+        // pre-1978 housing, a Lead-Safe Renovation Contractor licence from the
+        // Department of Labor Standards. Declaring a credential that does not
+        // exist, and naming an issuer for it, is a verifiable false claim.
+        // Re-add real credentials with their numbers via lib/credentials.ts.
         {
           "@type": "EducationalOccupationalCredential",
           "credentialCategory": "certification",
@@ -343,18 +341,22 @@ const schemaData = {
         "EPA Lead-Safe Practices", "Deck Staining", "Power Washing"
       ],
       "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "certification",
-          "name": "EPA Lead-Safe Certification",
-          "recognizedBy": { "@type": "Organization", "name": "Environmental Protection Agency" }
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "license",
-          "name": "Massachusetts Painting Contractor License",
-          "recognizedBy": { "@type": "Organization", "name": "Commonwealth of Massachusetts" }
-        }
+        // Both entries that used to sit here were wrong and were removed.
+        //
+        // "Massachusetts Painting Contractor License" names a credential the
+        // Commonwealth does not issue. What exists is Home Improvement
+        // Contractor registration with OCABR.
+        //
+        // "EPA Lead-Safe Certification" is the wrong programme for work in
+        // Massachusetts. On 9 July 2010 the Massachusetts Department of Labor
+        // Standards received EPA authorisation to run its own Lead-Safe
+        // Renovation programme in lieu of the federal RRP rule, so the
+        // credential that governs a job in this state is a DLS Lead-Safe
+        // Renovation Contractor licence, not an EPA firm certification.
+        //
+        // Real credentials belong in lib/credentials.ts, which publishes one
+        // only once its number is filled in. Structured data is the last place
+        // to guess: a credential claim here is machine-readable and quotable.
       ]
     },
     {

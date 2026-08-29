@@ -28,7 +28,9 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
 
   return generatePageMetadata({
     title: `Painters ${region.name} MA | Licensed & Insured | FREE Quote`,
-    description: `${region.description} Licensed & $2M insured. 40+ 5-star reviews. Call (508) 690-8886`,
+    // region.description is editorial body copy and overflows the SERP.
+    // metaDescription is written to fit; see app/data/regions.ts.
+    description: region.metaDescription,
     path: `/regions/${region.slug}`,
     ogImageAlt: `Professional Painting Services in ${region.name}`,
     keywords: `painters ${region.name} MA, house painters ${region.name}, painting services ${region.name} Massachusetts`,

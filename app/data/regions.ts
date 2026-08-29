@@ -7,7 +7,19 @@ export interface RegionPainPoint {
 export interface Region {
   name: string
   slug: string
+  /** Editorial copy for the page body. Can run long. */
   description: string
+  /**
+   * SERP meta description, 155 chars max.
+   *
+   * Kept separate from `description` because the layout injected the editorial
+   * copy straight into <meta name="description"> and all seven regions
+   * overflowed: 285, 263, 263, 247, 247, 248 and 230 characters. Google cuts
+   * around 160, so the phone number at the end never reached the search
+   * result. Region pages are the best-indexed section of the site at 86%,
+   * which made this the most expensive truncation on the domain.
+   */
+  metaDescription: string
   citySlugs: string[]
   heroHeadline: string
   heroSubtext: string
@@ -21,6 +33,8 @@ export const regions: Region[] = [
     name: 'Greater Boston',
     slug: 'greater-boston',
     description: 'Serving Boston and surrounding communities including Cambridge, Newton, Brookline, and more. Premium painting services for historic homes, modern condos, and commercial properties across the Greater Boston metro area.',
+    metaDescription:
+      'House painters for Greater Boston: Cambridge, Newton, Brookline, Somerville. Historic plaster, lead-safe prep, tight city access. Quote: (508) 690-8886',
     heroHeadline: 'Boston\'s Historic Homes Deserve Expert Painters',
     heroSubtext: 'From Back Bay brownstones to Cambridge Victorians, Greater Boston homes demand painters who understand century-old plaster, lead paint safety, and the unique challenges of New England\'s oldest neighborhoods.',
     citySlugs: [
@@ -62,6 +76,8 @@ export const regions: Region[] = [
     name: 'MetroWest',
     slug: 'metrowest',
     description: 'Proudly serving the MetroWest region from our Marlborough headquarters. Interior and exterior painting, cabinet refinishing, and carpentry for homes and businesses across MetroWest Massachusetts.',
+    metaDescription:
+      'House painters across MetroWest MA: Framingham, Natick, Sudbury, Marlborough and 19 more towns. Interior, exterior, cabinets. Quote: (508) 690-8886',
     heroHeadline: 'MetroWest\'s Trusted Local Painting Contractor',
     heroSubtext: 'Headquartered right here in Marlborough, we\'re the painting company your MetroWest neighbors already trust. From Framingham colonials to Sudbury estates, Natick condos to Hopkinton new builds - we\'re 15 minutes away.',
     citySlugs: [
@@ -104,6 +120,8 @@ export const regions: Region[] = [
     name: 'Worcester & Central MA',
     slug: 'worcester-area',
     description: 'Professional painting services throughout Worcester and Central Massachusetts. From historic triple-deckers to modern office buildings, we deliver quality results across the Worcester metro area.',
+    metaDescription:
+      'House painters in Worcester and Central MA: Shrewsbury, Millbury, Holden, Auburn. Triple-deckers, Victorians, rental turnovers. Quote: (508) 690-8886',
     heroHeadline: 'Worcester\'s Triple-Deckers & Central MA Homes - Painted Right',
     heroSubtext: 'Central Massachusetts homes face brutal winters, aging housing stock, and unique architectural challenges. From Worcester\'s iconic triple-deckers to Shrewsbury\'s family neighborhoods, we deliver results built for this climate.',
     citySlugs: [
@@ -145,6 +163,8 @@ export const regions: Region[] = [
     name: 'North Middlesex & Merrimack Valley',
     slug: 'north-middlesex',
     description: 'Expert painting contractors serving Lowell, Billerica, Chelmsford and communities across North Middlesex County and the Merrimack Valley. Licensed, insured, and trusted by homeowners.',
+    metaDescription:
+      'House painters for North Middlesex and the Merrimack Valley: Lowell, Chelmsford, Westford, Billerica. Free written quote: (508) 690-8886',
     heroHeadline: 'Trusted Painters for Lowell, Chelmsford & the Merrimack Valley',
     heroSubtext: 'From Lowell\'s historic mill housing to Westford\'s newer subdivisions, North Middlesex homes need painters who understand the range - century-old plaster walls one day, new-construction drywall the next.',
     citySlugs: [
@@ -187,6 +207,8 @@ export const regions: Region[] = [
     name: 'Norfolk County & South',
     slug: 'norfolk-south',
     description: 'Trusted painting services across Norfolk County and south of Boston. Serving affluent communities with premium finishes, expert color consultation, and meticulous attention to detail.',
+    metaDescription:
+      'House painters for Norfolk County and south: Needham, Wellesley, Dedham, Norwood, Canton. Interior and exterior. Quote: (508) 690-8886',
     heroHeadline: 'Premium Painting for Norfolk County\'s Finest Homes',
     heroSubtext: 'Wellesley, Dover, Needham, and Westwood homeowners expect perfection - and they should. These are some of New England\'s most beautiful homes, and they deserve painters with the skill and materials to match.',
     citySlugs: [
@@ -228,6 +250,8 @@ export const regions: Region[] = [
     name: 'North Central MA',
     slug: 'north-central',
     description: 'Reliable painting and carpentry services in Leominster, Fitchburg, and surrounding North Central Massachusetts towns. Experienced with New England weather-resistant exterior solutions.',
+    metaDescription:
+      'House painters for North Central MA: Fitchburg, Leominster, Lunenburg, Westminster. Freeze-thaw prep that lasts. Quote: (508) 690-8886',
     heroHeadline: 'Dependable Painters for Leominster, Fitchburg & North Central MA',
     heroSubtext: 'North Central Massachusetts homes face the state\'s harshest winters. Fitchburg and Leominster\'s housing stock - much of it built during the industrial boom - needs painters who know how to prep for this climate.',
     citySlugs: [
@@ -268,6 +292,8 @@ export const regions: Region[] = [
     name: 'Blackstone Valley',
     slug: 'blackstone-valley',
     description: 'Serving the Blackstone Valley region with professional painting, carpentry, and power washing services. Quality workmanship for residential and commercial properties.',
+    metaDescription:
+      'House painters for the Blackstone Valley: Milford, Uxbridge, Northbridge, Douglas, Blackstone. Mill-town housing stock. Quote: (508) 690-8886',
     heroHeadline: 'Blackstone Valley\'s Go-To Painting Professionals',
     heroSubtext: 'From Milford\'s downtown to Douglas\'s wooded neighborhoods, Blackstone Valley homes and businesses deserve painters who understand the Valley\'s mix of historic villages, suburban neighborhoods, and rural properties.',
     citySlugs: [
