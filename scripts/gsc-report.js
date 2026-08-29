@@ -6,6 +6,7 @@
  *   node scripts/gsc-report.js
  *   node scripts/gsc-report.js --sample 40      (amostra maior por tipo)
  *   node scripts/gsc-report.js --submit         (reenvia o sitemap tambem)
+ *   node scripts/gsc-report.js --static         (veredito de cada pagina estatica)
  *
  * CREDENCIAL
  *   Service account com permissao de Owner na propriedade do GSC.
@@ -31,8 +32,20 @@ const ORIGIN = 'https://jhpaintingservices.com'
 const SITEMAP = `${ORIGIN}/sitemap.xml`
 
 const args = process.argv.slice(2)
-const SAMPLE = Number((args.find(a => a.startsWith('--sample')) || '').split('=')[1] || args[args.indexOf('--sample') + 1] || 15)
+const SAMPLE = (() => {
+  const eq = (args.find(a => a.startsWith('--sample=')) || '').split('=')[1]
+  const i = args.indexOf('--sample')
+  const n = Number(eq || (i >= 0 ? args[i + 1] : ''))
+  return Number.isFinite(n) && n > 0 ? n : 15
+})()
 const SUBMIT = args.includes('--submit')
+/**
+ * As paginas estaticas sao poucas e valem individualmente, entao aqui nao ha
+ * amostragem: cada uma recebe seu proprio veredito. Foi assim que apareceu que
+ * /services nunca tinha sido rastreada apesar de estar no sitemap, responder
+ * 200, ter canonical propria e receber links de quase toda pagina do site.
+ */
+const STATIC_ONLY = args.includes('--static')
 
 const b64 = (o) => Buffer.from(typeof o === 'string' ? o : JSON.stringify(o))
   .toString('base64').replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_')
@@ -98,7 +111,23 @@ const TYPES = [
 
   const xml = await (await fetch(SITEMAP)).text()
   const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1])
-  console.log(`\n${urls.length} URLs no sitemap. Inspecionando ate ${SAMPLE} por tipo.\n`)
+  console.log(`\n${urls.length} URLs no sitemap.${STATIC_ONLY ? '' : ` Inspecionando ate ${SAMPLE} por tipo.`}\n`)
+
+  if (STATIC_ONLY) {
+    const [, isStatic] = TYPES[0]
+    const pages = urls.filter(u => isStatic(u.replace(ORIGIN, '') || '/'))
+    console.log('PAGINAS ESTATICAS, uma a uma')
+    console.log('')
+    for (const u of pages) {
+      const r = await inspect(t, u)
+      const st = r.err ? `ERRO ${r.err}` : (r.coverageState || r.verdict || 'desconhecido')
+      const ok = /indexed/i.test(st) && !/not indexed/i.test(st)
+      const crawl = r.lastCrawlTime ? r.lastCrawlTime.slice(0, 10) : 'nunca rastreada'
+      console.log(`  ${ok ? 'OK ' : '>> '}${(u.replace(ORIGIN, '') || '/').padEnd(16)} ${st.padEnd(38)} ${crawl}`)
+      await sleep(650)
+    }
+    return
+  }
 
   const summary = []
   for (const [name, match] of TYPES) {
