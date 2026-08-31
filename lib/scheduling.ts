@@ -30,7 +30,9 @@ export interface CapacityNotice {
 }
 
 export const capacity: CapacityNotice = {
-  bookedOut: ['exterior-painting'],
+  // Vazio: nenhum servico esta bloqueado, e o aviso some de todas as paginas.
+  // Para bloquear de novo, basta devolver o slug aqui.
+  bookedOut: [],
   nextOpening: '',
 }
 
