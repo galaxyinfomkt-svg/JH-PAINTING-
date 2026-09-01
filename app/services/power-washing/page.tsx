@@ -5,9 +5,10 @@ import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
-import { BUSINESS, FORM_IDS } from '@/lib/constants'
+import { BUSINESS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import CapacityNotice from '@/app/components/CapacityNotice'
+import { CITY_COUNT } from '@/app/data/cities'
 
 
 // Inline SVG icons to reduce bundle size
@@ -257,9 +258,9 @@ const painPoints = [
 ]
 
 const stats = [
-  { number: '500+', label: 'Power Wash Jobs' },
-  { number: '7+', label: 'Years Experience' },
-  { number: '116', label: 'Cities Served' },
+  { number: STATS.projectsLabel, label: 'Power Wash Jobs' },
+  { number: STATS.yearsLabel, label: 'Years Experience' },
+  { number: String(CITY_COUNT), label: 'Cities Served' },
   { number: '5.0', label: 'Google Rating' }
 ]
 
@@ -374,7 +375,7 @@ export default function PowerWashingPage() {
                 </div>
                 <div className="service-hero-feature">
                   <AwardIcon size={18} />
-                  <span>7+ Years Experience</span>
+                  <span>{STATS.yearsLabel} Years Experience</span>
                 </div>
                 <div className="service-hero-feature">
                   <ClockIcon size={18} />
@@ -384,7 +385,7 @@ export default function PowerWashingPage() {
             </div>
 
             {/* Quote Form Card - Clean style */}
-            <div className="hero-form-card">
+            <div id="quote-form" className="hero-form-card">
               <CapacityNotice service={'power-washing'} />
               <LazyHeroForm
                 className="hero-form-iframe"
@@ -423,7 +424,7 @@ export default function PowerWashingPage() {
         </div>
       </div>
 
-      <main>
+      <main id="main-content">
         {/* Stats Section */}
         <section className="service-stats">
           <div className="container">
@@ -640,7 +641,7 @@ export default function PowerWashingPage() {
           <div className="container">
             <div className="service-cta-content">
               <h2 className="service-cta-title">Your Property Deserves the Best - Let&apos;s Talk</h2>
-              <p className="service-cta-subtitle">Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.</p>
+              <p className="service-cta-subtitle">Licensed, $2M insured & 5-star rated. Estimates scheduled within 24-48 hours. No obligation.</p>
               <div className="service-cta-buttons">
                 <a href={`tel:${BUSINESS.phoneRaw}`} className="service-cta-btn-white">
                   <PhoneIcon size={20} />

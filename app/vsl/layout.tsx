@@ -5,7 +5,7 @@ import { generatePageMetadata } from '@/lib/seo'
 const baseMeta = generatePageMetadata({
   title: 'Professional Painting Services MA | JH Painting Services',
   description:
-    'See why 500+ Massachusetts homeowners choose JH Painting Services. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star reviews. FREE estimates: (508) 690-8886',
+    'See why Massachusetts homeowners choose JH Painting Services. Licensed, $2M insured, EPA Lead-Safe certified. 40+ 5-star reviews. Free estimate: (508) 690-8886',
   path: '/vsl',
 })
 

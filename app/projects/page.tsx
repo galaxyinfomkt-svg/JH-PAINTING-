@@ -77,7 +77,7 @@ export default function ProjectsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(gallerySchema) }}
       />
       <Header />
-      <main>
+      <main id="main-content">
         <ProjectsClient />
       </main>
       <Footer />

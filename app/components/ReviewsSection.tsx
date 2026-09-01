@@ -35,7 +35,7 @@ export default function ReviewsSection() {
             fontWeight: 600,
           }}
         >
-          <span aria-hidden="true" style={{ display: 'inline-flex', gap: '2px', color: '#f59e0b', fontSize: '1.25rem', letterSpacing: '2px' }}>★★★★★</span>
+          <span aria-hidden="true" style={{ display: 'inline-flex', gap: '2px', color: '#B45309', fontSize: '1.25rem', letterSpacing: '2px' }}>★★★★★</span>
           <span style={{ color: '#0a0e27' }}>
             <strong>5.0</strong> from 40+ verified Google reviews
           </span>

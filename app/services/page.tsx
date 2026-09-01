@@ -5,7 +5,7 @@ import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import LazyIframe from '@/app/components/LazyIframe'
-import { BUSINESS, FORM_IDS } from '@/lib/constants'
+import { BUSINESS, FORM_IDS, STATS } from '@/lib/constants'
 
 // Inline SVG icons to reduce bundle size
 const PhoneIcon = ({ size = 24 }: { size?: number }) => (
@@ -160,9 +160,9 @@ const services = [
 
 // Stats data
 const stats = [
-  { number: '500+', label: 'Projects Completed' },
+  { number: STATS.projectsLabel, label: 'Projects Completed' },
   { number: '40+', label: '5-Star Reviews' },
-  { number: '7+', label: 'Years Experience' },
+  { number: STATS.yearsLabel, label: 'Years Experience' },
   { number: '100%', label: 'Satisfaction Rate' }
 ]
 
@@ -247,6 +247,12 @@ export default function ServicesPage() {
       />
 
       <Header />
+      {/* These pages rendered no <main> at all: Header, then a run of
+          <section>s, then Footer. So there was no main landmark for assistive
+          technology to jump to, and the skip link in app/layout.tsx - which
+          targets #main-content - had nothing to land on. */}
+
+      <main id="main-content">
 
       {/* Hero Section with Background Image */}
       <section className="service-hero">
@@ -310,9 +316,11 @@ export default function ServicesPage() {
             </div>
 
             {/* Quote Form Card */}
-            <div className="service-form-card">
+            <div id="quote-form" className="service-form-card">
               <div className="service-form-header">
-                <h3>Get Your FREE Estimate</h3>
+                {/* h2, not h3: this is the first heading after the page h1, so
+                    an h3 here skipped a level (Lighthouse heading-order). */}
+                <h2>Get Your FREE Estimate</h2>
                 <p>Fast response • No obligation</p>
               </div>
               <LazyIframe
@@ -486,7 +494,7 @@ export default function ServicesPage() {
         <div className="container">
           <div className="service-cta-content">
             <h2>Your Home Deserves the Best - Let&apos;s Talk</h2>
-            <p>Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.</p>
+            <p>Licensed, $2M insured & 5-star rated. Estimates scheduled within 24-48 hours. No obligation.</p>
             <div className="service-cta-buttons">
               <a href={`tel:${BUSINESS.phoneRaw}`} className="btn btn-white btn-lg">
                 <PhoneIcon size={20} />
@@ -500,6 +508,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <ReviewsSection />
       <Footer variant="service" />

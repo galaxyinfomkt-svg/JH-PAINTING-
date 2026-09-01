@@ -163,14 +163,19 @@ export function getCityBySlug(slug: string): City | undefined {
   return cities.find(city => city.slug === normalizedSlug)
 }
 
-// Get city slug with state suffix for URLs (e.g., "acton-ma")
-export function getCitySlugWithState(citySlug: string): string {
-  // Special case for Woonsocket which is in RI
-  if (citySlug === 'woonsocket-ri') {
-    return 'woonsocket-ri' // Already has state
-  }
-  return `${citySlug}-ma`
-}
+// REMOVED: getCitySlugWithState().
+//
+// It appended "-ma" to a slug, a leftover from the retired /cities/<slug>-ma
+// URL scheme. Its two remaining callers were the region hub and the
+// region+service pages, and between them they emitted 886 internal links of
+// the form /massachusetts/<city>-ma and /cities/<city>-ma/<service>. Every one
+// of those is a 301 in middleware.ts, so all 56 region pages linked to the
+// whole city network through a redirect: a wasted hop for crawlers, a diluted
+// internal link graph, and an extra round trip for the user.
+//
+// The canonical shape is /massachusetts/<normalizeCitySlug(slug)>. Use
+// normalizeCitySlug() below - it is the same function generateStaticParams()
+// and the sitemap use, so a link built with it cannot drift from a real route.
 
 // Parse city slug from URL (removes -ma suffix if present)
 export function parseCitySlug(urlSlug: string): string {

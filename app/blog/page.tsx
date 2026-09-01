@@ -209,7 +209,7 @@ export default function BlogPage() {
         </nav>
       </header>
 
-      <main>
+      <main id="main-content">
         {/* Blog Hero */}
         <section className="blog-hero">
           <div className="blog-hero-bg">

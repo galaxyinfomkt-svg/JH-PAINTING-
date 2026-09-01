@@ -5,6 +5,12 @@ import { useEffect, useRef, useState } from 'react'
 interface LazyIframeProps {
   src: string
   title: string
+  /**
+   * Applied to the OUTER container, not the iframe, so an in-page anchor
+   * (#quote-form) scrolls the whole form card into view rather than the
+   * iframe's top edge. The sticky mobile CTA relies on this.
+   */
+  id?: string
   className?: string
   style?: React.CSSProperties
   frameBorder?: number
@@ -17,6 +23,7 @@ interface LazyIframeProps {
 export default function LazyIframe({
   src,
   title,
+  id,
   className,
   style,
   frameBorder,
@@ -55,7 +62,7 @@ export default function LazyIframe({
   }, [priority])
 
   return (
-    <div ref={containerRef} style={{ minHeight: style?.minHeight || '300px', position: 'relative', ...style }}>
+    <div id={id} ref={containerRef} style={{ minHeight: style?.minHeight || '300px', position: 'relative', ...style }}>
       {isVisible ? (
         <>
           {!isLoaded && (

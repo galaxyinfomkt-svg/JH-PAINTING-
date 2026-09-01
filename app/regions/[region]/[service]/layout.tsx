@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { regions, getRegionBySlug } from '@/app/data/regions'
-import { generatePageMetadata } from '@/lib/seo'
+import { generatePageMetadata, composeTitle, fitDescription } from '@/lib/seo'
 
 const services = [
   { name: 'Interior Painting', slug: 'interior-painting' },
@@ -42,8 +42,14 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   }
 
   return generatePageMetadata({
-    title: `${service.name} ${region.name} MA | Licensed Painters | FREE Quote`,
-    description: `Professional ${service.name.toLowerCase()} across ${region.name}. Serving ${region.citySlugs.length}+ cities. Licensed & $2M insured. 40+ 5-star reviews. Call (508) 690-8886`,
+    // Budgeted. "Residential Painting" (20) + "North Middlesex & Merrimack
+    // Valley" (34) leaves no room for a fixed suffix, so the suffixes are
+    // dropped in priority order instead of being truncated by Google.
+    title: composeTitle(`${service.name} in ${region.name}`, [', MA', ' | JH Painting']),
+    description: fitDescription(
+      `Professional ${service.name.toLowerCase()} across ${region.name}. Serving ${region.citySlugs.length}+ cities. Licensed & $2M insured. 40+ 5-star reviews.`,
+      'Call (508) 690-8886'
+    ),
     path: `/regions/${region.slug}/${service.slug}`,
     ogImageAlt: `${service.name} in ${region.name}`,
     keywords: `${service.name} ${region.name} MA, ${service.name.toLowerCase()} ${region.name}, painters ${region.name} Massachusetts`,

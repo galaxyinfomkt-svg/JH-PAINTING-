@@ -3,7 +3,8 @@ import { generatePageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Cabinet Painting MA | Factory-Smooth Finish | JH Painting',
-  description: 'Cabinet painting & refinishing in Massachusetts. Factory-smooth spray finish, a like-new kitchen without the disruption of replacement. 40+ 5-star reviews. (508) 690-8886',
+  // 170 -> 148 chars.
+  description: 'Cabinet painting and refinishing in Massachusetts. Factory-smooth spray finish, a like-new kitchen without a teardown. Free estimate: (508) 690-8886',
   path: '/services/cabinet-painting',
   ogImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png',
   ogImageAlt: 'Professional Cabinet Painting & Refinishing Massachusetts - JH Painting',

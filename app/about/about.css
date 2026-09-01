@@ -11,7 +11,7 @@
 .ab {
   --ink: #14171d;
   --body: #4a515c;
-  --mute: #767e8b;
+  --mute: #6a7180;   /* was #767e8b: 4.10:1 on white, under the 4.5 bar */
   --line: #e3e6ea;
   --card: #f7f8fa;
   --red: #c62a1f;

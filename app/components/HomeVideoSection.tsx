@@ -2,33 +2,40 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import {
+  videos,
+  videoThumbnail,
+  videoEmbedUrl,
+  videoSchema,
+  YOUTUBE_CHANNEL,
+} from '@/app/data/videos'
 
 const PlayIcon = ({ size = 20 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><polygon points="6 3 20 12 6 21 6 3"/></svg>
 )
 
 const XIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
 )
 
-const videos = [
-  { id: 'F_lreXzNlUI', title: 'Exterior Painting in Massachusetts', type: 'YouTube Short', thumbnail: 'maxresdefault' },
-  { id: 'LkT_HLyKibY', title: 'Interior Painting in Massachusetts', type: 'YouTube Short', thumbnail: 'hqdefault' },
-]
+// Emitted once, at module scope: null until the videos carry their real
+// uploadDate + duration (see app/data/videos.ts).
+const schema = videoSchema(videos)
 
 export default function HomeVideoSection() {
-  const [videoModal, setVideoModal] = useState<{ isOpen: boolean; videoId: string; title: string }>({ isOpen: false, videoId: '', title: '' })
+  const [videoModal, setVideoModal] = useState<{ isOpen: boolean; embed: string; title: string }>({ isOpen: false, embed: '', title: '' })
 
-  const openVideoModal = (videoId: string, title: string) => {
-    setVideoModal({ isOpen: true, videoId, title })
-  }
-
-  const closeVideoModal = () => {
-    setVideoModal({ isOpen: false, videoId: '', title: '' })
-  }
+  const closeVideoModal = () => setVideoModal({ isOpen: false, embed: '', title: '' })
 
   return (
     <>
+      {schema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      )}
+
       {/* Video Section - RS Style Dark */}
       <section className="section video-section-rs">
         <div className="container">
@@ -38,22 +45,31 @@ export default function HomeVideoSection() {
           </div>
 
           <div className="video-grid-rs">
-            {videos.map((video, index) => (
+            {videos.map((video) => (
               <button
-                key={index}
-                onClick={() => openVideoModal(video.id, video.title)}
+                key={video.id}
+                onClick={() => setVideoModal({ isOpen: true, embed: videoEmbedUrl(video), title: video.title })}
                 className="video-card-rs"
                 type="button"
-                aria-label={`Play video: ${video.title}`}
               >
                 <Image
-                  src={`https://img.youtube.com/vi/${video.id}/${video.thumbnail}.jpg`}
-                  alt={video.title}
+                  src={videoThumbnail(video)}
+                  alt=""
+                  aria-hidden="true"
                   fill
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
                 />
+                {/*
+                  No aria-label on the button. It used to carry
+                  aria-label="Play video: {title}", which overrode the visible
+                  text below and tripped WCAG 2.5.3 "Label in Name": a
+                  voice-control user saying the words they can see on the card
+                  could not activate it. The visible <h3> is now the accessible
+                  name, and the decorative thumbnail and icons are hidden from
+                  the tree so they cannot dilute it.
+                */}
                 <div className="video-card-rs-overlay">
                   <div className="video-card-rs-play">
                     <PlayIcon size={20} />
@@ -61,7 +77,7 @@ export default function HomeVideoSection() {
                   <h3>{video.title}</h3>
                   <span>
                     <PlayIcon size={12} />
-                    {video.type}
+                    {video.isShort ? 'YouTube Short' : 'Video'}
                   </span>
                 </div>
               </button>
@@ -70,7 +86,7 @@ export default function HomeVideoSection() {
 
           <div className="video-section-cta">
             <a
-              href="https://www.youtube.com/@JHPaintingServices-br9wh"
+              href={YOUTUBE_CHANNEL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-lg"
@@ -91,7 +107,7 @@ export default function HomeVideoSection() {
             </button>
             <div className="video-modal-content">
               <iframe
-                src={`https://www.youtube.com/embed/${videoModal.videoId}?autoplay=1&rel=0`}
+                src={`${videoModal.embed}&autoplay=1`}
                 title={videoModal.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

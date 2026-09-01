@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BUSINESS } from '@/lib/constants'
+import { useEstimateHref } from './useEstimateHref'
 
 // Inline SVG icons to reduce bundle size
 const PhoneIcon = ({ size = 24 }: { size?: number }) => (
@@ -88,6 +89,7 @@ interface HeaderProps {
 }
 
 export default function Header({ cityName }: HeaderProps = {}) {
+  const estimateHref = useEstimateHref()
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
@@ -302,7 +304,9 @@ export default function Header({ cityName }: HeaderProps = {}) {
               <PhoneIcon size={20} />
               Call {BUSINESS.phone}
             </a>
-            <a href="#quote-form" onClick={closeMenu} className="mobile-menu-quote-btn">
+            {/* Was a hardcoded #quote-form, which is dead on every page that
+                does not embed the estimate form - see useEstimateHref. */}
+            <a href={estimateHref} onClick={closeMenu} className="mobile-menu-quote-btn">
               Get Free Estimate
             </a>
           </div>

@@ -7,7 +7,8 @@ import { Phone, CheckCircle2, Star, Shield, Award, Clock, Users, MapPin, Play, C
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import LazyIframe from '@/app/components/LazyIframe'
-import { BUSINESS, FORM_IDS } from '@/lib/constants'
+import { BUSINESS, FORM_IDS, STATS } from '@/lib/constants'
+import { CITY_COUNT } from '@/app/data/cities'
 
 // Fabricated testimonials removed (was "Sarah M.", "Michael R.", "Jennifer L.").
 // The section below now links to the LIVE Google reviews - every quote a real
@@ -34,17 +35,17 @@ const differentiators = [
   { icon: Shield, title: '$2M Liability Insurance', desc: 'Your home is fully protected on every project' },
   { icon: Award, title: 'Premium Paints Only', desc: 'Benjamin Moore & Sherwin-Williams exclusively' },
   { icon: Clock, title: 'On-Time Completion', desc: 'We respect your schedule and complete when promised' },
-  { icon: Users, title: '10+ Years Experience', desc: 'Skilled craftsmen who take pride in their work' },
+  { icon: Users, title: `${STATS.yearsLabel} Years Experience`, desc: 'Skilled craftsmen who take pride in their work' },
   { icon: Star, title: '5.0 Google Rating', desc: '40+ perfect reviews from happy customers' },
   { icon: Heart, title: 'Satisfaction Guaranteed', desc: 'We stand behind every project we complete' }
 ]
 
 // Stats
 const stats = [
-  { number: '500+', label: 'Homes Painted' },
+  { number: STATS.projectsLabel, label: 'Homes Painted' },
   { number: '40+', label: '5-Star Reviews' },
-  { number: '116', label: 'Cities Served' },
-  { number: '7+', label: 'Years in Business' }
+  { number: String(CITY_COUNT), label: 'Cities Served' },
+  { number: STATS.yearsLabel, label: 'Years in Business' }
 ]
 
 export default function VSLPage() {
@@ -54,7 +55,7 @@ export default function VSLPage() {
     <>
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero Section with Video */}
         <section className="vsl-hero">
           <div className="container">
@@ -159,7 +160,7 @@ export default function VSLPage() {
             <div className="vsl-solution-box">
               <h3>The Solution? A Painting Company That Actually Cares.</h3>
               <p>
-                JH Painting Services has helped over 500 Massachusetts homeowners transform their properties with professional, hassle-free painting services. We show up on time, communicate clearly, and deliver results that exceed expectations.
+                JH Painting Services has helped Massachusetts homeowners across {CITY_COUNT} cities transform their properties with professional, hassle-free painting services. We show up on time, communicate clearly, and deliver results that exceed expectations.
               </p>
             </div>
           </div>
@@ -229,7 +230,7 @@ export default function VSLPage() {
             <div className="vsl-final-cta-content">
               <h2>Ready to Transform Your Home?</h2>
               <p>
-                Join the 500+ Massachusetts homeowners who trust JH Painting Services for their painting projects. Get your free, no-obligation estimate today.
+                Join the Massachusetts homeowners who trust JH Painting Services for their painting projects. Get your free, no-obligation estimate today.
               </p>
 
               <div className="vsl-final-cta-form">
@@ -314,7 +315,8 @@ export default function VSLPage() {
         }
 
         .vsl-hero-accent {
-          color: var(--jh-red);
+          /* #CC0000 on the #1a1a2e hero is 2.9:1. */
+          color: var(--jh-red-on-dark);
         }
 
         .vsl-hero-subtitle {
@@ -472,7 +474,8 @@ export default function VSLPage() {
         }
 
         .vsl-pain-card p {
-          color: #64748b;
+          /* #64748b on the card's #fef2f2 ground is 4.35:1. */
+          color: #57606f;
           line-height: 1.7;
         }
 
@@ -490,6 +493,10 @@ export default function VSLPage() {
         }
 
         .vsl-solution-box p {
+          /* The box sets color:#fff on itself, but the global "p" rule
+             declares #374151 directly and inheritance never beats a direct
+             declaration - so this rendered dark grey on brand red, 1.75:1. */
+          color: #fff;
           font-size: 1.125rem;
           max-width: 800px;
           margin: 0 auto;
@@ -603,13 +610,19 @@ export default function VSLPage() {
         }
 
         .vsl-final-cta h2 {
+          /* Was inheriting nothing and falling back to the global h2 colour
+             #0F172A on this #1a1a2e section: 1.05:1, i.e. an invisible
+             heading. */
+          color: #fff;
           font-size: 2.5rem;
           margin-bottom: 1rem;
         }
 
         .vsl-final-cta p {
+          /* Same cause as the h2 above: 1.65:1 before this. */
+          color: #fff;
           font-size: 1.125rem;
-          opacity: 0.9;
+          opacity: 0.92;
           margin-bottom: 2rem;
         }
 
@@ -645,7 +658,8 @@ export default function VSLPage() {
           gap: 0.5rem;
           font-size: 1.5rem;
           font-weight: 700;
-          color: var(--jh-red);
+          /* On the #1a1a2e panel the brand red is 2.9:1. */
+          color: var(--jh-red-on-dark);
           text-decoration: none;
         }
 

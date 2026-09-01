@@ -2,9 +2,13 @@ import type { Metadata } from 'next'
 import { generatePageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Our Work | Before & After Painting Projects MA | See the Difference',
+  // 67 -> 45 chars. The old title carried two separators and a slogan, so
+  // Google cut it after "Projects MA" and the slogan never rendered.
+  title: 'Our Work | Painting Projects in Massachusetts',
   description:
-    'See real painting transformations in Massachusetts. Before & after photos of interior, exterior, cabinet painting. 40+ 5-star Google reviews. Licensed & $2M insured. FREE estimates: (508) 690-8886',
+    // 196 -> 152 chars. Everything after "insured" was truncated, including
+    // the phone number the snippet is supposed to end on.
+    'Our own photos of finished painting jobs across Massachusetts: interior, exterior, cabinets, commercial. $2M insured. Free estimate: (508) 690-8886',
   path: '/projects',
   ogImageAlt: 'Painting Projects Portfolio - JH Painting Services Massachusetts',
   keywords: [

@@ -3,6 +3,9 @@
  * All business data and configuration in one place
  */
 
+import { videos as siteVideos } from '@/app/data/videos'
+import { siteConfig } from './siteConfig'
+
 // Business Contact Information
 export const BUSINESS = {
   name: 'JH Painting Services',
@@ -132,11 +135,18 @@ export const GALLERY_IMAGES = [
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Floor refinishing', category: 'Floors' },
 ] as const
 
-// YouTube Videos (unique IDs only - no duplicates)
-export const VIDEOS = [
-  { id: 'F_lreXzNlUI', title: 'Exterior Painting', type: 'YouTube Short' },
-  { id: 'LkT_HLyKibY', title: 'Interior Painting', type: 'YouTube Short' },
-] as const
+// YouTube Videos.
+//
+// The list itself now lives in app/data/videos.ts, which is the single source
+// of truth and also carries the fields VideoObject schema needs. This export
+// stays as a thin adapter so the seven /services/* pages that already read
+// `VIDEOS` keep working unchanged. New code should import from
+// '@/app/data/videos' directly.
+export const VIDEOS = siteVideos.map((v) => ({
+  id: v.id,
+  title: v.title,
+  type: v.isShort ? 'YouTube Short' : 'Video',
+}))
 
 // Stats/Trust Indicators - SINGLE SOURCE OF TRUTH for all pages.
 //
@@ -158,6 +168,20 @@ export function yearsInBusiness(now: Date = new Date()): number {
 
 export const STATS = {
   foundingYear: FOUNDING_YEAR,
+  /**
+   * Completed projects, as a display label.
+   *
+   * Mirrors siteConfig.projectsCompleted, which is the value the JSON-LD
+   * already publishes - so the visible copy and the structured data now agree.
+   * Before this, 873 pages showed "500+" while siteConfig said 200 and /about
+   * (built from the real photo archive) showed 13 documented jobs. Three
+   * different answers to "how much work have you done" is the cheapest
+   * low-trust signal there is.
+   *
+   * TO CORRECT IT: change siteConfig.projectsCompleted, once. Everything that
+   * displays a project count reads from here.
+   */
+  get projectsLabel() { return `${siteConfig.projectsCompleted}+` },
   get yearsExperience() { return yearsInBusiness() },
   get yearsLabel() { return `${yearsInBusiness()}+` },
   satisfaction: '100%',

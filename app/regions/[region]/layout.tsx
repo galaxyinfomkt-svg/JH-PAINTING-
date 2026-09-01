@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { regions, getRegionBySlug } from '@/app/data/regions'
-import { generatePageMetadata } from '@/lib/seo'
+import { generatePageMetadata, composeTitle } from '@/lib/seo'
 
 export async function generateStaticParams() {
   return regions.map(region => ({
@@ -27,7 +27,9 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   }
 
   return generatePageMetadata({
-    title: `Painters ${region.name} MA | Licensed & Insured | FREE Quote`,
+    // Budgeted: the old fixed template ran to 91 characters on the longer
+    // region names and overflowed the SERP on 52 of the 56 region URLs.
+    title: composeTitle(`Painters in ${region.name}`, [', MA', ' | JH Painting']),
     // region.description is editorial body copy and overflows the SERP.
     // metaDescription is written to fit; see app/data/regions.ts.
     description: region.metaDescription,

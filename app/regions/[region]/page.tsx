@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { regions, getRegionBySlug } from '@/app/data/regions'
-import { getCityBySlug, getCitySlugWithState } from '@/app/data/cities'
+import { getCityBySlug, normalizeCitySlug } from '@/app/data/cities'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
@@ -74,7 +74,7 @@ export default async function RegionPage({ params }: Props) {
     <>
       <Header cityName={region.name} />
 
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="city-page-hero">
           <div className="city-page-hero-bg">
@@ -191,7 +191,7 @@ export default async function RegionPage({ params }: Props) {
                       <p style={{ color: '#64748B', fontSize: '0.9375rem', lineHeight: 1.75 }}>{point.problem}</p>
                     </div>
                     <div>
-                      <p style={{ fontSize: '0.75rem', fontWeight: 700, color: '#16A34A', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>Our Solution</p>
+                      <p style={{ fontSize: '0.75rem', fontWeight: 700, color: '#15803D', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>Our Solution</p>
                       <p style={{ color: '#64748B', fontSize: '0.9375rem', lineHeight: 1.75 }}>{point.solution}</p>
                     </div>
                   </div>
@@ -329,9 +329,9 @@ export default async function RegionPage({ params }: Props) {
               {regionCities.map((city) => {
                 if (!city) return null
                 return (
-                  <Link key={city.slug} href={`/massachusetts/${getCitySlugWithState(city.slug)}`} style={{ display: 'block', background: '#fff', borderRadius: '14px', padding: '1.25rem 1.5rem', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.04)', textDecoration: 'none' }}>
+                  <Link key={city.slug} href={`/massachusetts/${normalizeCitySlug(city.slug)}`} style={{ display: 'block', background: '#fff', borderRadius: '14px', padding: '1.25rem 1.5rem', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.04)', textDecoration: 'none' }}>
                     <span style={{ fontWeight: 600, color: '#0F172A', fontSize: '1rem' }}>{city.name}</span>
-                    {city.population && <span style={{ display: 'block', fontSize: '0.8125rem', color: '#94A3B8', marginTop: '0.25rem' }}>Pop. {city.population}</span>}
+                    {city.population && <span style={{ display: 'block', fontSize: '0.8125rem', color: '#64748B', marginTop: '0.25rem' }}>Pop. {city.population}</span>}
                   </Link>
                 )
               })}
@@ -359,7 +359,7 @@ export default async function RegionPage({ params }: Props) {
           <div className="container">
             <div className="city-cta-content">
               <h2 className="city-cta-title">Your {region.name} Home Deserves the Best - Let&apos;s Talk</h2>
-              <p className="city-cta-subtitle">Licensed & $2M insured. 40+ five-star reviews. Same-day response. No obligation.</p>
+              <p className="city-cta-subtitle">Licensed & $2M insured. 40+ five-star reviews. Estimates within 24-48 hours. No obligation.</p>
               <div className="city-cta-buttons">
                 <a href="tel:+15086908886" className="city-cta-btn-white"><PhoneIcon size={24} /> (508) 690-8886</a>
                 <Link href="/contact" className="city-cta-btn-glass"><MailIcon size={24} /> Get Your Free Estimate</Link>

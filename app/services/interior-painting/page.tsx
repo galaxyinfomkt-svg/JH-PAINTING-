@@ -5,7 +5,7 @@ import { Phone, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronR
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
-import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
+import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 import CapacityNotice from '@/app/components/CapacityNotice'
@@ -187,8 +187,8 @@ const painPoints = [
 ]
 
 const stats = [
-  { number: '500+', label: 'Interiors Painted' },
-  { number: '7+', label: 'Years Experience' },
+  { number: STATS.projectsLabel, label: 'Interiors Painted' },
+  { number: STATS.yearsLabel, label: 'Years Experience' },
   { number: '100%', label: 'Satisfaction Rate' },
   { number: '117', label: 'Cities Served' }
 ]
@@ -290,7 +290,7 @@ export default function InteriorPaintingPage() {
             </div>
 
             {/* Quote Form Card - Clean style */}
-            <div className="hero-form-card">
+            <div id="quote-form" className="hero-form-card">
               <CapacityNotice service={'interior-painting'} />
               <LazyHeroForm
                 className="hero-form-iframe"
@@ -470,7 +470,11 @@ export default function InteriorPaintingPage() {
               >
                 <Image
                   src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-                  alt={video.title}
+                  /* Decorative: the card's own heading already carries the
+                     video title, so repeating it here made the title announce
+                     twice (Lighthouse image-redundant-alt). */
+                  alt=""
+                  aria-hidden="true"
                   fill
                   loading="lazy"
                   className="object-cover"
@@ -541,7 +545,7 @@ export default function InteriorPaintingPage() {
           <div className="service-cta-content">
             <h2 className="service-cta-title">Ready to Transform Your Interior?</h2>
             <p className="service-cta-subtitle">
-              Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.
+              Licensed, $2M insured & 5-star rated. Estimates scheduled within 24-48 hours. No obligation.
             </p>
             <div className="service-cta-buttons">
               <a href={`tel:${BUSINESS.phoneRaw}`} className="service-cta-btn-white">

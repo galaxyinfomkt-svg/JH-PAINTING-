@@ -49,7 +49,7 @@ export default function AboutPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <Header />
-      <main className="ab">
+      <main id="main-content" className="ab">
         <header className="ab-top">
           <p className="ab-brow">About</p>
           <h1 className="ab-h1">Who you are hiring</h1>

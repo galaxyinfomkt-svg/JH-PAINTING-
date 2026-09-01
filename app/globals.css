@@ -50,8 +50,32 @@
   --jh-line: #E5E7EB;
 
   /* ACCENT COLORS */
-  --jh-gold: #CC0000;
+  /* --jh-gold is a legacy alias kept from the pre-rebrand palette. EVERY
+     rule that reads it paints text on the navy footer, where #CC0000 only
+     reaches 3.07-3.23:1. Pointing the alias at the on-dark red fixes the
+     footer on all 1,042 pages in one line. --jh-gold-dark is only used on
+     LIGHT backgrounds (hero badge, blog author box), so it stays. */
+  --jh-gold: #FF4D4D;
   --jh-gold-dark: #990000;
+
+  /* ACCESSIBLE VARIANTS — audit 2026-09
+     #CC0000 is the brand red and is correct on light surfaces (white text on
+     it reads at 5.9:1). On the navy/near-black surfaces it only reaches
+     3.07–3.30:1 as TEXT, which fails WCAG 1.4.3 for body copy. These two
+     tokens are the same hue lightened until they clear 4.5:1 on every dark
+     surface the site actually uses (#0a0e27, #270c21, #0b0d13, #0d1017,
+     #12151d). Use them for TEXT on dark; keep --jh-red for fills. */
+  --jh-red-on-dark: #FF4D4D;      /* 5.5–5.9:1 on every dark surface */
+
+  /* Height of the fixed .top-bar, so .header can sit exactly beneath it.
+     MEASURED, not guessed: the bar renders 56.4px on wide screens, 49.2px
+     under 768px and 45.6px under 480px, while .header was pinned at a flat
+     top:44px - so the white header covered the bottom 12.4px of the red bar
+     at every desktop width (5.2px under 768, 1.6px under 480) on all 1,042
+     pages. Overridden per breakpoint below; .header reads this instead of a
+     literal, so the two can no longer disagree. */
+  --top-bar-h: 57px;
+  --jh-text-on-dark-muted: #9AA3B4; /* replaces #656d7c/#626a79 (3.5:1) */
   --jh-green: #10B981;
 
   /* Legacy aliases */
@@ -93,6 +117,11 @@
   --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+
+/* Skip link: styled by the inline critical CSS in app/layout.tsx
+   (.skip-link / .skip-link:focus), which is inlined in <head> and therefore
+   wins over anything declared here. Deliberately NOT redefined in this file -
+   a second copy is how the .container / .header drift happened. */
 
 @keyframes spin {
   to { transform: rotate(360deg); }
@@ -532,8 +561,12 @@ body { padding-bottom: 72px; }
 }
 
 @media (max-width: 768px) {
+  :root {
+    --top-bar-h: 50px; /* measured 49.2px at this breakpoint */
+  }
+
   .top-bar {
-    padding: 0.25rem 0;
+    padding: 0.5rem 0;
   }
 
   .top-bar-content {
@@ -593,6 +626,10 @@ body { padding-bottom: 72px; }
 }
 
 @media (max-width: 480px) {
+  :root {
+    --top-bar-h: 46px; /* measured 45.6px at this breakpoint */
+  }
+
   .top-bar {
     padding: 0.1875rem 0;
   }
@@ -622,7 +659,9 @@ body { padding-bottom: 72px; }
 ============================================ */
 .header {
   position: fixed;
-  top: 44px;
+  /* Derived from the bar's real height - see --top-bar-h. A literal here is
+     exactly what let the header drift on top of the bar at every breakpoint. */
+  top: var(--top-bar-h);
   left: 0;
   right: 0;
   z-index: 100;
@@ -640,7 +679,8 @@ body { padding-bottom: 72px; }
 
 @media (max-width: 768px) {
   .header {
-    top: 28px;
+    /* `top` removed: it said 28px against a ~49px bar, a 21px overlap. The
+       offset now comes from --top-bar-h, which this breakpoint sets above. */
     padding-top: 4px;
   }
 
@@ -2101,8 +2141,10 @@ body { padding-bottom: 72px; }
   flex-shrink: 0;
 }
 
+/* Purely a visual separator between trust items. Lifted from 0.4 to 0.55
+   alpha so it reads as a divider instead of disappearing on a bright hero. */
 .hero-trust-divider {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 @media (max-width: 640px) {
@@ -5633,7 +5675,7 @@ button:focus:not(:focus-visible) {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background: #3B82F6;
+  background: var(--jh-red);
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: var(--radius-full);
@@ -6649,7 +6691,8 @@ a:focus-visible {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #16A34A;
+  /* #16A34A on white is 3.30:1 - fails for 15px body text */
+  color: #15803D;
   font-weight: 600;
   font-size: 0.9375rem;
 }
@@ -7272,12 +7315,25 @@ a:focus-visible {
 }
 
 .service-video-title {
+  /* Overlays the YouTube thumbnail. `color:#fff` was declared here but the
+     <p> inside inherited #374151 from a more specific body-copy rule, so dark
+     grey text rendered on a dark video still (1.79:1). The colour is now set
+     on the text element itself, and a scrim guarantees the contrast holds
+     whatever the thumbnail looks like. */
   position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  color: #fff;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 3rem 1.5rem 1.25rem;
+  background: linear-gradient(to top, rgba(8, 11, 20, 0.92) 0%, rgba(8, 11, 20, 0.6) 55%, transparent 100%);
   font-weight: 600;
   font-size: 1.125rem;
+  margin: 0;
+}
+
+.service-video-title,
+.service-video-title p {
+  color: #fff;
   margin: 0;
 }
 
@@ -7748,8 +7804,10 @@ a:focus-visible {
 
 .city-badge-dark {
   background: rgba(204, 0, 0, 0.15);
-  color: #CC0000;
-  border: 1px solid rgba(204, 0, 0, 0.25);
+  /* On the dark section this composites to ~#2b1424; #CC0000 on it is 2.9:1.
+     The on-dark token clears 5.2:1 at the same hue. */
+  color: var(--jh-red-on-dark);
+  border: 1px solid rgba(255, 77, 77, 0.35);
 }
 
 .city-section-title {
@@ -8265,7 +8323,7 @@ a:focus-visible {
   padding: 1.125rem 2.25rem;
   background: transparent;
   color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 14px;
   font-size: 1.125rem;
   font-weight: 600;
@@ -8281,6 +8339,23 @@ a:focus-visible {
 .city-cta-btn-dark {
   background: #0F172A;
   border: 2px solid #E2E8F0;
+}
+
+/* Light-surface variant of .city-cta-btn-outline.
+   The base class is white-on-transparent, which only works inside a dark
+   section. Inside .city-seo-cta-box (background #FEF3F2) it rendered white
+   text + a 30%-white border on near-white: 1.09:1, i.e. an invisible
+   "Get Your Free Estimate" button on every city page. */
+.city-cta-btn-outline-light {
+  color: var(--jh-red);
+  border-color: var(--jh-red);
+  background: #fff;
+}
+
+.city-cta-btn-outline-light:hover {
+  background: var(--jh-red);
+  color: #fff;
+  border-color: var(--jh-red);
 }
 
 /* City Why Choose Section */
@@ -9473,7 +9548,8 @@ a:focus-visible {
   align-items: center;
   gap: 0.25rem;
   font-size: 0.7rem;
-  color: var(--jh-text-light);
+  /* --jh-text-light (#64748B) on --jh-gray-100 (#F1F5F9) is 4.34:1 */
+  color: var(--jh-gray-600);
   background: var(--jh-gray-100);
   padding: 0.25rem 0.625rem;
   border-radius: var(--radius-sm);
@@ -9934,7 +10010,8 @@ a:focus-visible {
   background: var(--jh-gray-100);
   border-radius: var(--radius-full);
   font-size: 0.8rem;
-  color: var(--jh-text-light);
+  /* --jh-text-light (#64748B) on --jh-gray-100 (#F1F5F9) is 4.34:1 */
+  color: var(--jh-gray-600);
   transition: var(--transition-base);
 }
 
@@ -10385,7 +10462,10 @@ h1, h2, h3, .hero-title {
 .vsl-video-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3);
+  /* 0.3 alpha does not guarantee the white label clears 4.5:1 over a bright
+     video thumbnail - it depends entirely on the frame behind it. 0.55 holds
+     for any thumbnail while still showing the image clearly. */
+  background: rgba(0, 0, 0, 0.55);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12059,6 +12139,7 @@ button.video-card-rs {
 }
 
 /* Service form header styling */
+.service-form-header h2,
 .service-form-header h3 {
   font-size: 1.5rem;
   font-weight: 800;
@@ -12498,7 +12579,7 @@ button.video-card-rs {
 .cityproof-eyebrow {
   font-family: ui-monospace, "SF Mono", Consolas, monospace;
   font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
-  color: #e0392c; margin: 0 0 .9rem;
+  color: #EF5A4D; margin: 0 0 .9rem; /* was #e0392c: 4.34:1 on #0d1017 */
 }
 .cityproof-h {
   font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -.03em;
@@ -12514,7 +12595,7 @@ button.video-card-rs {
 .cityproof-jt strong { font-weight: 700; }
 .cityproof-jm {
   font-family: ui-monospace, "SF Mono", Consolas, monospace;
-  font-size: 11px; color: #626a79; letter-spacing: .05em;
+  font-size: 11px; color: #8B93A3; letter-spacing: .05em; /* was #626a79: 3.49:1 */
   text-transform: uppercase; margin-left: auto; white-space: nowrap;
 }
 .cityproof-grid {
@@ -12524,8 +12605,8 @@ button.video-card-rs {
 .cityproof-cell { margin: 0; aspect-ratio: 3/4; overflow: hidden; border-radius: 4px; background: #1a1e2a; }
 .cityproof-cell img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .cityproof-link {
-  font-weight: 700; color: #e0392c; text-decoration: none;
-  border-bottom: 1px solid rgba(224,57,44,.4); padding-bottom: 2px;
+  font-weight: 700; color: #EF5A4D; text-decoration: none;
+  border-bottom: 1px solid rgba(239,90,77,.55); padding-bottom: 2px;
 }
 .cityproof-link:hover { color: #fff; border-color: #fff; }
 @media (max-width: 640px) { .cityproof-grid { grid-template-columns: repeat(2, 1fr); } .cityproof-jm { margin-left: 0; } }
@@ -12559,3 +12640,228 @@ button.video-card-rs {
   flex-shrink: 0; margin-top: .45rem;
 }
 @media (prefers-color-scheme: dark) { .capnote, .capnote-line { color-scheme: light; } }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Home "Project Gallery" - real job photographs (app/components/HomeGallery).
+
+   Overrides the stock-photo grid it replaced:
+   - 3:4 tiles, because every photograph in /public/projects is portrait
+     (shot on a phone on site). The old 4/3 box cropped ~44% off each frame.
+   - The caption is always rendered. The previous overlay was opacity:0 until
+     :hover, which on a touch device means never.
+   - Tiles are real links now, so the inherited `cursor: pointer` finally
+     corresponds to something.
+   ───────────────────────────────────────────────────────────────────────── */
+.gallery-grid-proof {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  /* Three across, not six. At six the tiles come out ~146px wide on a 1366px
+     screen: every project title wraps to two lines, the captions sit at
+     different heights, and the photographs - the entire point of the section -
+     are too small to show any workmanship. */
+  .gallery-grid-proof {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.gallery-item-proof {
+  aspect-ratio: 3 / 4;
+  display: block;
+  text-decoration: none;
+  background: var(--jh-gray-100);
+  isolation: isolate;
+}
+
+.gallery-item-proof img {
+  transition: transform var(--transition-slow);
+}
+
+.gallery-item-proof:hover img,
+.gallery-item-proof:focus-visible img {
+  transform: scale(1.04);
+}
+
+.gallery-item-proof:focus-visible {
+  outline: 3px solid var(--jh-red);
+  outline-offset: 3px;
+}
+
+.gallery-item-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 3.5rem 1rem 1rem;
+  /* Tuned so the smallest line still clears 4.5:1 against the photo behind it. */
+  background: linear-gradient(to top, rgba(8, 11, 20, 0.94) 0%, rgba(8, 11, 20, 0.78) 45%, transparent 100%);
+  pointer-events: none;
+}
+
+.gallery-item-place {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #ff8a80; /* 8.3:1 on the caption ground */
+}
+
+.gallery-item-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  /* Two lines maximum, so a long project name cannot push the caption block
+     taller than the scrim behind it. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.gallery-item-meta {
+  font-size: 0.75rem;
+  color: #cdd3de; /* 11:1 on the caption ground */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gallery-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   404 (app/not-found.tsx). Replaces Next's bare default page.
+   ───────────────────────────────────────────────────────────────────────── */
+.nf {
+  background: var(--jh-gray-50);
+  padding: clamp(7rem, 12vw, 10rem) 0 clamp(4rem, 8vw, 6rem);
+}
+
+.nf-inner {
+  max-width: 720px;
+  text-align: center;
+}
+
+.nf-code {
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--jh-red);
+  margin: 0 0 0.75rem;
+}
+
+.nf-title {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--jh-dark);
+  margin: 0 0 0.75rem;
+  text-wrap: balance;
+}
+
+.nf-lede {
+  color: var(--jh-gray-600);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  margin: 0 auto 2.5rem;
+  max-width: 46ch;
+}
+
+.nf-links {
+  list-style: none;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .nf-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.nf-link {
+  display: block;
+  height: 100%;
+  padding: 1.125rem 1.25rem;
+  background: #fff;
+  border: 1px solid var(--jh-gray-200);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.nf-link:hover,
+.nf-link:focus-visible {
+  border-color: var(--jh-red);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  transform: translateY(-2px);
+}
+
+.nf-link:focus-visible {
+  outline: 3px solid var(--jh-red);
+  outline-offset: 2px;
+}
+
+.nf-link-label {
+  display: block;
+  font-weight: 700;
+  color: var(--jh-dark);
+  margin-bottom: 0.2rem;
+}
+
+.nf-link-desc {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--jh-gray-600);
+}
+
+.nf-call {
+  color: var(--jh-gray-600);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.nf-phone {
+  font-weight: 800;
+  color: var(--jh-red);
+  text-decoration: none;
+}
+
+.nf-phone:hover {
+  text-decoration: underline;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   .section-eyebrow on a DARK section.
+
+   The base pill is #CC0000 text on a red-tinted chip: correct on white, but
+   3.17:1 once it composites over the navy gallery ground. Declared here, at
+   the end of the file and with the same `.section-header-enhanced` ancestor
+   the base rule uses, so it wins on order rather than on !important.
+   ───────────────────────────────────────────────────────────────────────── */
+.gallery-section .section-header-enhanced .section-eyebrow,
+.about-section-dark .section-header-enhanced .section-eyebrow,
+.video-section-rs .section-header-enhanced .section-eyebrow,
+.gallery-section .section-eyebrow,
+.about-section-dark .section-eyebrow,
+.video-section-rs .section-eyebrow {
+  color: var(--jh-red-on-dark);
+  background: rgba(255, 77, 77, 0.12);
+  border-color: rgba(255, 77, 77, 0.3);
+}

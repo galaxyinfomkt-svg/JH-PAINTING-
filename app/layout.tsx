@@ -4,6 +4,7 @@ import './globals.css'
 import FloatingButtons from './components/FloatingButtons'
 import MobileStickyCTA from './components/MobileStickyCTA'
 import DeferredScripts from './components/DeferredScripts'
+import { CITY_COUNT } from './data/cities'
 
 // Optimize font loading - 'optional' prevents font from being render-blocking
 // If font loads fast enough it's used, otherwise fallback is kept (no FOIT, no layout shift)
@@ -72,7 +73,7 @@ const schemaData = {
       "name": "JH Painting Services",
       "legalName": "JH Painting Services LLC",
       "alternateName": ["JH Painting", "JH Painting Services Massachusetts", "JH Painting MA", "JH Painters"],
-      "description": "Award-winning exterior and interior painting contractor serving Massachusetts since 2018. Specialist in exterior house painting with premium weather-resistant paints. Expert interior painting, cabinet refinishing, deck staining, and home improvement services. Licensed, $2M insured, EPA Lead-Safe certified. Serving 116 cities across Massachusetts including Boston, Worcester, Cambridge, Framingham, Natick, and all MetroWest communities.",
+      "description": `Award-winning exterior and interior painting contractor serving Massachusetts since 2018. Specialist in exterior house painting with premium weather-resistant paints. Expert interior painting, cabinet refinishing, deck staining, and home improvement services. Licensed, $2M insured, EPA Lead-Safe certified. Serving ${CITY_COUNT} cities across Massachusetts including Boston, Worcester, Cambridge, Framingham, Natick, and all MetroWest communities.`,
       "slogan": "Massachusetts' Exterior Painting Specialists Since 2018",
       "url": "https://jhpaintingservices.com",
       "telephone": "+1-508-690-8886",
@@ -267,7 +268,7 @@ const schemaData = {
         "@type": "OfferCatalog",
         "name": "Painting Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior House Painting", "description": "Complete exterior house painting with power washing, surface prep, caulking, priming, and two coats of premium weather-resistant Benjamin Moore or Sherwin-Williams paint. 5-year warranty. Serving 116 Massachusetts cities.", "url": "https://jhpaintingservices.com/services/exterior-painting" }, "warranty": { "@type": "WarrantyPromise", "durationOfWarranty": { "@type": "QuantitativeValue", "value": 5, "unitCode": "ANN" }, "warrantyScope": "Covers peeling, blistering, cracking, and fading under normal weather conditions." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior House Painting", "description": `Complete exterior house painting with power washing, surface prep, caulking, priming, and two coats of premium weather-resistant Benjamin Moore or Sherwin-Williams paint. 5-year warranty. Serving ${CITY_COUNT} Massachusetts cities.`, "url": "https://jhpaintingservices.com/services/exterior-painting" }, "warranty": { "@type": "WarrantyPromise", "durationOfWarranty": { "@type": "QuantitativeValue", "value": 5, "unitCode": "ANN" }, "warrantyScope": "Covers peeling, blistering, cracking, and fading under normal weather conditions." } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting", "description": "Professional interior painting for walls, ceilings, trim, doors, and baseboards with premium low-VOC paints. 3-year warranty.", "url": "https://jhpaintingservices.com/services/interior-painting" }, "warranty": { "@type": "WarrantyPromise", "durationOfWarranty": { "@type": "QuantitativeValue", "value": 3, "unitCode": "ANN" }, "warrantyScope": "Covers peeling, blistering, and flaking under normal indoor conditions." } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing", "description": "Kitchen cabinet painting and refinishing with a durable, factory-quality spray finish that revives cabinets without replacement.", "url": "https://jhpaintingservices.com/services/cabinet-painting" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting", "description": "Professional painting for offices, retail, restaurants. After-hours scheduling available.", "url": "https://jhpaintingservices.com/services/commercial-painting" } },
@@ -300,7 +301,7 @@ const schemaData = {
       "@id": "https://jhpaintingservices.com/#website",
       "url": "https://jhpaintingservices.com",
       "name": "JH Painting Services",
-      "description": "Professional painting contractor serving 116 cities in Massachusetts. Interior & exterior painting, cabinet refinishing, commercial painting. Licensed, $2M insured, EPA Lead-Safe certified.",
+      "description": `Professional painting contractor serving ${CITY_COUNT} cities in Massachusetts. Interior & exterior painting, cabinet refinishing, commercial painting. Licensed, $2M insured, EPA Lead-Safe certified.`,
       "publisher": {
         "@id": "https://jhpaintingservices.com/#organization"
       },
@@ -419,19 +420,26 @@ const schemaData = {
         "https://jhpaintingservices.com/contact"
       ]
     },
-    {
-      "@type": "HowTo",
-      "name": "How to Get Professional Painting Services from JH Painting",
-      "description": "Our 5-step process from free consultation to final walkthrough ensures a perfect paint job every time.",
-      "totalTime": "P5D",
-      "step": [
-        { "@type": "HowToStep", "position": 1, "name": "Free Consultation", "text": "Call (508) 690-8886 or fill out our online form. We discuss your project goals, timeline, and provide expert color recommendations." },
-        { "@type": "HowToStep", "position": 2, "name": "Detailed Estimate", "text": "We visit your property and provide a clear, written estimate detailing the full scope of work. No surprises - just a straightforward plan." },
-        { "@type": "HowToStep", "position": 3, "name": "Surface Preparation", "text": "Our team prepares all surfaces - patching drywall, sanding, priming, and protecting your furniture, floors, and landscaping." },
-        { "@type": "HowToStep", "position": 4, "name": "Expert Painting", "text": "We apply two coats of premium Benjamin Moore or Sherwin-Williams paint with precision cutting-in, smooth rolling, and careful detail work." },
-        { "@type": "HowToStep", "position": 5, "name": "Final Walkthrough", "text": "We walk through every detail with you. If anything isn't perfect, we make it right. Your satisfaction is 100% guaranteed." }
-      ]
-    }
+    // HowTo REMOVED.
+    //
+    // Two reasons, and either one is sufficient.
+    //
+    // 1. Google retired HowTo rich results outright. The feature was cut back
+    //    to desktop in 2023 and then removed from Search entirely, so this
+    //    markup could not produce a rich result on any surface. It was shipping
+    //    on all 1,042 prerendered pages as dead weight in every document.
+    //
+    // 2. It was not a HowTo. schema.org/HowTo describes a task the READER
+    //    performs. This described JH Painting's own sales and delivery process
+    //    - "call us, we estimate, we paint" - which is the company's service
+    //    description, not instructions for the visitor. Marking up a sales
+    //    funnel as a HowTo, site-wide and identically on every URL, is exactly
+    //    the shape of structured-data misuse a manual reviewer flags.
+    //
+    // The same five steps still render as visible content in the Process
+    // section of the home page and the service pages, which is where they
+    // actually help a customer. The Service/Offer nodes above already carry
+    // the machine-readable version of what the business does.
   ]
 }
 
@@ -460,29 +468,59 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.gstatic.com" />
         <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
-        {/* Critical CSS inline for faster FCP - reduces render blocking by ~600ms */}
+        {/*
+          CRITICAL CSS - A MIRROR OF globals.css, NOT A SECOND SOURCE OF TRUTH.
+          ────────────────────────────────────────────────────────────────────
+          This block is inlined in <head>, so for any rule of equal specificity
+          it BEATS the external stylesheet on all 1,042 pages. That makes it
+          silently authoritative, and it had drifted from globals.css in
+          thirteen substantive ways. The site was rendering to these values
+          while every designer and every later edit read the other file:
+
+            .container         max-width 1280px / padding 1rem
+                               (globals said 1320px / 1.25rem — the site was
+                               40px narrower than the stylesheet specified)
+            body               color #1a1a1a          (globals: #0F172A)
+            .logo img          height 50px            (globals: 3.5rem = 56px)
+            .header-cta        8px radius, .625/1.25 padding, .875rem
+                               (globals: pill radius, .75/1.5, .9375rem)
+            .btn-primary       shadow 0 4px 15px/.3   (globals: 0 4px 20px/.35)
+            .google-reviews-bar  padding 1rem 0       (globals: .75rem 0)
+            .google-reviews-bar .stars  color #CC0000 (globals: #FBBF24)
+                               — Google review stars rendered RED instead of
+                               gold on every page
+            .hero-bg/.hero-overlay/.hero-content  z-index 0/1/2
+                               (globals: 1/2/10)
+
+          Every value below now matches globals.css. If you change one file,
+          change the other. Two exceptions are recorded where the pair
+          .header{top} / .top-bar{padding} is concerned: those two are coupled
+          (the header sits directly beneath the fixed top bar), the SHIPPING
+          pair is 44px/.5rem, and globals.css has been corrected to match this
+          block rather than the other way round.
+        */}
         <style dangerouslySetInnerHTML={{ __html: `
-          :root{--jh-navy:#0a0e27;--jh-red:#CC0000;--jh-red-dark:#990000;--font-inter:Inter,system-ui,sans-serif}
+          :root{--jh-navy:#0a0e27;--jh-red:#CC0000;--jh-red-dark:#990000;--jh-text:#0F172A;--top-bar-h:57px;--font-sans:var(--font-inter,Inter),-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}
           *,*::before,*::after{box-sizing:border-box}
           html{background:#ffffff;scroll-behavior:smooth}
-          body{margin:0;font-family:var(--font-inter);line-height:1.6;color:#1a1a1a;-webkit-font-smoothing:antialiased}
+          body{margin:0;font-family:var(--font-sans);line-height:1.6;color:#0F172A;-webkit-font-smoothing:antialiased}
           .hero,.hero-simplified{min-height:100vh;position:relative;display:flex;align-items:center;background:#0a0e27}
-          .hero-bg{position:absolute;inset:0;z-index:0}
+          .hero-bg{position:absolute;inset:0;z-index:1}
           .hero-bg img{object-fit:cover;width:100%;height:100%}
-          .hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.55);z-index:1}
-          .hero-content{position:relative;z-index:2;padding:2rem 0}
-          .container{width:100%;max-width:1280px;margin:0 auto;padding:0 1rem}
-          .header{position:fixed;top:44px;left:0;right:0;z-index:100;background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+          .hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.55);z-index:2}
+          .hero-content{position:relative;z-index:10;padding:2rem 0}
+          .container{width:100%;max-width:1320px;margin:0 auto;padding:0 1.25rem}
+          .header{position:fixed;top:var(--top-bar-h);left:0;right:0;z-index:100;background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,.08)}
           .top-bar{position:fixed;top:0;left:0;right:0;z-index:1000;background:#CC0000;color:#fff;padding:.5rem 0;font-size:.75rem}
           .top-bar.hidden{transform:translateY(-100%)}
           .top-bar-content{display:flex;justify-content:space-between;align-items:center}
           .top-bar-left{display:flex;gap:1.5rem;align-items:center}
           .top-bar-item{display:flex;align-items:center;gap:4px;color:#fff}
           .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.875rem 1.5rem;border-radius:9999px;font-weight:600;text-decoration:none;transition:all .2s}
-          .btn-primary{background:#CC0000;color:#fff;box-shadow:0 4px 15px rgba(204,0,0,.3)}
+          .btn-primary{background:#CC0000;color:#fff;box-shadow:0 4px 20px rgba(204,0,0,.35)}
           h1,h2,h3{margin:0 0 1rem;line-height:1.2}
           img{max-width:100%;height:auto}
-          .logo img{height:50px;width:auto}
+          .logo img{height:3.5rem;width:auto}
           nav a{color:#1a1a1a;text-decoration:none;font-weight:500}
           .service-hero,.city-page-hero{position:relative;display:flex;align-items:flex-start;overflow:hidden;padding-top:160px;background:#060a1e}
           .service-hero-bg,.city-page-hero-bg{position:absolute;inset:0;z-index:0}
@@ -496,23 +534,24 @@ export default function RootLayout({
           .header-main{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
           .header-scrolled{top:0;background:#ffffff;box-shadow:0 4px 20px rgba(0,0,0,.1)}
           .nav{display:flex;align-items:center;gap:1.5rem}
-          .header-cta{display:flex;align-items:center;gap:.5rem;padding:.625rem 1.25rem;background:#CC0000;color:#fff;border-radius:8px;font-weight:600;font-size:.875rem;text-decoration:none}
+          .header-cta{display:flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;background:#CC0000;color:#fff;border-radius:9999px;font-weight:600;font-size:.9375rem;text-decoration:none}
           .menu-btn,.hamburger-btn{display:none;background:none;border:none;cursor:pointer;padding:.5rem}
           @keyframes spin{to{transform:rotate(360deg)}}
           .section,.detail-section,.before-after-section,.video-section-rs,.reviews-section,.faq-section-home,.cta-section,.gallery-section,.about-section-dark,.trust-badges-section{content-visibility:auto;contain-intrinsic-size:auto 600px}
           .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:#ffffff;color:#CC0000;padding:.75rem 1.5rem;z-index:100000;border-radius:0 0 8px 8px;font-weight:600;font-size:.875rem;text-decoration:none;transition:top .2s ease;box-shadow:0 4px 12px rgba(0,0,0,.1)}.skip-link:focus{top:0}
-          .google-reviews-bar{background:#f8f9fa;padding:1rem 0;text-align:center}
+          .google-reviews-bar{background:#f8f9fa;padding:.75rem 0;text-align:center}
           .google-reviews-bar-content{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
           .google-reviews-bar .google-icon{width:24px;height:24px}
           .google-reviews-bar span{color:#1a1a1a;font-size:.9375rem;font-weight:500}
-          .google-reviews-bar .stars{display:flex;gap:.125rem;color:#CC0000}
+          .google-reviews-bar .stars{display:flex;gap:.125rem;color:#FBBF24}
           .google-reviews-bar .rating{color:#1a1a1a;font-weight:700;font-size:1rem}
           .google-reviews-bar a{color:#CC0000;font-weight:600;font-size:.9375rem;text-decoration:none;display:flex;align-items:center;gap:.25rem}
           .trust-badges-section{padding:1.25rem 0}
           .trust-badges-wrapper{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap}
           .trust-badges-logos{display:flex;align-items:center;gap:1rem}
           @media(max-width:992px){.nav{display:none}.header-cta{display:none}.menu-btn,.hamburger-btn{display:flex}}
-          @media(max-width:768px){.top-bar-email{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}.service-hero,.city-page-hero{padding-top:130px}.service-hero-content,.city-page-hero-content{padding-top:20px;padding-bottom:40px}.hero-form-iframe{height:600px}.google-reviews-bar-content{gap:.5rem}.trust-badges-wrapper{gap:1rem}}
+          @media(max-width:768px){:root{--top-bar-h:50px}.top-bar-email{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}.service-hero,.city-page-hero{padding-top:130px}.service-hero-content,.city-page-hero-content{padding-top:20px;padding-bottom:40px}.hero-form-iframe{height:600px}.google-reviews-bar-content{gap:.5rem}.trust-badges-wrapper{gap:1rem}}
+          @media(max-width:480px){:root{--top-bar-h:46px}}
         `}} />
         {/*
           theme-color, viewport, HandheldFriendly, MobileOptimized:

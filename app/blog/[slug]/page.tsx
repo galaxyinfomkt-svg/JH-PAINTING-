@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getBlogPostBySlug, getRelatedPosts, blogPosts } from '../../data/blogPosts'
-import { generatePageMetadata } from '@/lib/seo'
+import { generatePageMetadata, fitTitle, fitDescription } from '@/lib/seo'
 import BlogPostClient from './BlogPostClient'
 
 interface Props {
@@ -27,9 +27,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     })
   }
 
+  // Budgeted, not concatenated. The old form appended a 31-character suffix
+  // to titles that already ran 40-79 characters, and a 40-character CTA to
+  // excerpts that already ran 117-169 - so 26 of 33 titles and 33 of 33
+  // descriptions overflowed the SERP. seoTitle / seoDescription on the post
+  // are the manual override; otherwise these fit it automatically.
   const base = generatePageMetadata({
-    title: `${post.title} | Expert Tips from MA Painters`,
-    description: `${post.excerpt} Get FREE painting quotes: (508) 690-8886`,
+    title: post.seoTitle ?? fitTitle(post.title),
+    description: post.seoDescription ?? fitDescription(post.excerpt),
     path: `/blog/${post.slug}`,
     ogImage: post.image,
     ogImageAlt: post.title,

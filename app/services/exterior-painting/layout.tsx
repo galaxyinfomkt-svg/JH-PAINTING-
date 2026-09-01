@@ -11,7 +11,8 @@ export const metadata: Metadata = generatePageMetadata({
   // Google was cutting it mid-sentence). Kept the proof-points users
   // actually scan for: paint brand + warranty + reviews + phone.
   description:
-    'Exterior house painting in MA. Power wash, prep, 2 coats Benjamin Moore Aura or Sherwin-Williams Duration. 5-yr warranty. 40+ reviews. Free quote: (508) 690-8886',
+    // 161 -> 147. One character over is still one character Google cuts.
+    'Exterior house painting in MA. Power wash, prep, 2 coats Benjamin Moore or Sherwin-Williams. 5-yr warranty. 40+ reviews. Free quote: (508) 690-8886',
   path: '/services/exterior-painting',
   ogImageAlt:
     'Professional exterior house painting in Massachusetts by JH Painting Services - before and after home transformation with premium weather-resistant paint',

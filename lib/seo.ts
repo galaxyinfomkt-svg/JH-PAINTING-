@@ -142,3 +142,146 @@ export function generatePageMetadata(input: PageMetadataInput): Metadata {
  * (site-wide) and PAGE-level Service / FAQPage / BreadcrumbList schema in the
  * individual page.tsx files.
  */
+
+/* ───────────────────────────────────────────────────────────────────────────
+   SERP LENGTH BUDGETING
+   ───────────────────────────────────────────────────────────────────────────
+   The city and city+service routes already compose their meta inside a length
+   budget (app/data/cityServiceComposer.ts -> composeMeta), which is why 0 of
+   those 936 URLs overflow. The blog route did not: it built its tags by
+   concatenation -
+
+       title:       `${post.title} | Expert Tips from MA Painters`
+       description: `${post.excerpt} Get FREE painting quotes: (508) 690-8886`
+
+   - and post titles are already 40-79 characters before the 31-character
+   suffix. Measured across the 33 published posts that produced titles up to
+   110 characters and descriptions up to 210. Google renders roughly 60 and
+   160, so on every blog URL the brand was cut off and, worse, the phone number
+   at the end of the description never reached the search result. Blog posts
+   hold the site's strongest organic positions, so this was the most expensive
+   truncation on the domain.
+
+   These two helpers apply the same budget-as-you-assemble rule as composeMeta:
+   the CTA is reserved first and the editorial text is fitted around it, so
+   overflow is structurally impossible rather than merely unlikely.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/** Google truncates the SERP title near here. */
+export const TITLE_MAX = 60
+/** Google truncates the SERP description near here. */
+export const DESCRIPTION_MAX = 160
+
+const BRAND_SUFFIX = ' | JH Painting'
+
+/** Words that must never be the last word of a title - they read as truncation. */
+const DANGLING =
+  /\s+(?:in|for|and|to|the|of|a|an|on|at|with|your|our|from|by|that|is|are|vs|or|but|as|into|about|when|which|why|how|complete|before)$/i
+
+function trimDangling(s: string): string {
+  let out = s.replace(/[\s,;:.\-–—]+$/, '')
+  // A single pass is not enough for "... available in the" etc.
+  for (let i = 0; i < 4; i++) {
+    const next = out.replace(DANGLING, '')
+    if (next === out) break
+    out = next
+  }
+  return out.replace(/[\s,;:.\-–—]+$/, '')
+}
+
+/**
+ * Fit an editorial title into the SERP budget, appending the brand only when
+ * it genuinely fits.
+ *
+ * Order of preference, best result first:
+ *   1. the title as written, plus the brand
+ *   2. the title as written
+ *   3. the head clause before the first ":" or "?" (this keeps the primary
+ *      keyword and drops the sub-heading, which is what a human editor does)
+ *   4. a word-boundary trim with trailing prepositions removed
+ *
+ * No ellipsis is added: Google adds its own when it truncates, and a title
+ * that ends in "..." in the source looks unfinished when it is NOT truncated.
+ */
+export function fitTitle(title: string, max: number = TITLE_MAX): string {
+  const t = title.trim()
+  if (t.length + BRAND_SUFFIX.length <= max) return t + BRAND_SUFFIX
+  if (t.length <= max) return t
+
+  const cut = t.search(/[:?]/)
+  if (cut > 0) {
+    const head = trimDangling(t.slice(0, cut))
+    // Guard against a head so short it loses the topic ("DIY vs Professional").
+    if (head.length >= 25 && head.length <= max) {
+      return head.length + BRAND_SUFFIX.length <= max ? head + BRAND_SUFFIX : head
+    }
+  }
+
+  const sliced = t.slice(0, max)
+  return trimDangling(sliced.slice(0, sliced.lastIndexOf(' ')))
+}
+
+/**
+ * Fit a summary plus a trailing call to action into the description budget.
+ *
+ * The CTA is reserved FIRST and the summary is fitted around it, so the phone
+ * number is always the last thing in the snippet - the same reason the home
+ * page description ends on the number. Whole sentences are preferred; a
+ * word-boundary trim is the fallback.
+ */
+export function fitDescription(
+  summary: string,
+  cta: string = 'Free estimate: (508) 690-8886',
+  max: number = DESCRIPTION_MAX
+): string {
+  const s = summary.trim().replace(/\s+/g, ' ')
+  const room = max - cta.length - 1
+  if (s.length <= room) return `${s} ${cta}`
+
+  // Prefer dropping whole sentences.
+  const sentences = s.match(/[^.!?]+[.!?]+/g) || []
+  let kept = ''
+  for (const sentence of sentences) {
+    if ((kept + sentence).trim().length <= room) kept += sentence
+    else break
+  }
+  kept = kept.trim()
+
+  // If sentence-dropping left too little to be a useful snippet, fall back to a
+  // word-boundary trim of the original.
+  if (kept.length < 70) {
+    const sliced = s.slice(0, room)
+    kept = `${trimDangling(sliced.slice(0, sliced.lastIndexOf(' ')))}.`
+  }
+
+  return `${kept} ${cta}`
+}
+
+/**
+ * Assemble a title from a required head plus optional suffixes, keeping as many
+ * suffixes as the budget allows.
+ *
+ * Some titles cannot be templated at a fixed length. The region routes are the
+ * clearest case: "Residential Painting" is 20 characters and "North Middlesex &
+ * Merrimack Valley" is 34, so the old fixed template
+ *
+ *     `${service} ${region} MA | Licensed Painters | FREE Quote`
+ *
+ * produced 91 characters at its worst and overflowed on 52 of the 56 region
+ * URLs - the brand, the qualifier and the call to action were all cut off, and
+ * a searcher saw a truncated fragment.
+ *
+ * Passing the head plus the parts in order of importance lets the same template
+ * render "Interior Painting in MetroWest, MA | JH Painting" for a short region
+ * and "Residential Painting in North Middlesex & Merrimack Valley" for the long
+ * one, without a second template and without ever overflowing.
+ */
+export function composeTitle(head: string, suffixes: string[] = [], max: number = TITLE_MAX): string {
+  let out = head.trim()
+  for (const suffix of suffixes) {
+    const next = out + suffix
+    if (next.length <= max) out = next
+    else break // keep suffixes in priority order; stop at the first that won't fit
+  }
+  return out.length <= max ? out : fitTitle(out, max)
+}

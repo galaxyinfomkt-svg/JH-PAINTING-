@@ -40,7 +40,7 @@ const Sparkles = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
 )
 import dynamic from 'next/dynamic'
-import { getCityBySlug, cities } from '@/app/data/cities'
+import { getCityBySlug, cities, CITY_COUNT } from '@/app/data/cities'
 import { cityContentMap } from '@/app/data/cityContent'
 import { composeBody } from '@/app/data/cityServiceComposer'
 import Header from '@/app/components/Header'
@@ -48,7 +48,7 @@ import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import CityProof from '@/app/components/CityProof'
 import RelatedCities from '@/app/components/RelatedCities'
-import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
+import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import CapacityNotice from '@/app/components/CapacityNotice'
 
@@ -295,10 +295,10 @@ const beforeAfterPairs = [
 ]
 
 const stats = [
-  { number: '500+', label: 'Projects Completed' },
+  { number: STATS.projectsLabel, label: 'Projects Completed' },
   { number: '15+', label: 'Years Experience' },
   { number: '100%', label: 'Satisfaction Rate' },
-  { number: '116', label: 'Cities Served' }
+  { number: String(CITY_COUNT), label: 'Cities Served' }
 ]
 
 const features = [
@@ -464,8 +464,9 @@ export default async function CityServicePage({ params }: Props) {
                 <Star size={16} fill="currentColor" />
               </div>
               <span className="rating">5</span>
-              <a href="https://g.page/r/Cb984Z3qm9PsEAE/review" target="_blank" rel="noopener noreferrer" aria-label="See our Google reviews - 5 star rating">
-                See Our Reviews
+              {/* See the note on the city page: WCAG 2.5.3 Label in Name. */}
+              <a href="https://g.page/r/Cb984Z3qm9PsEAE/review" target="_blank" rel="noopener noreferrer">
+                See Our Reviews<span className="sr-only"> on Google, rated 5 out of 5 stars</span>
                 <ChevronRight size={14} />
               </a>
             </div>
@@ -780,7 +781,7 @@ export default async function CityServicePage({ params }: Props) {
             <div className="service-cta-content">
               <h2 className="service-cta-title">Your {city.name} Home Deserves the Best - Let&apos;s Talk</h2>
               <p className="service-cta-subtitle">
-                {uniqueServiceContent?.closingPitch || `Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.`}
+                {uniqueServiceContent?.closingPitch || `Licensed, $2M insured & 5-star rated. Estimates scheduled within 24-48 hours. No obligation.`}
               </p>
               <div className="service-cta-buttons">
                 <a href={`tel:${BUSINESS.phoneRaw}`} className="service-cta-btn-white">

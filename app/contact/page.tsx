@@ -414,6 +414,7 @@ export default function ContactPage() {
                 */}
                 <CapacityNotice />
                 <LazyIframe
+                  id="quote-form"
                   priority
                   src="https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn"
                   style={{ width: '100%', height: '500px', border: 'none', borderRadius: '12px' }}

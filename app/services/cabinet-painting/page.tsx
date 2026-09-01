@@ -5,7 +5,7 @@ import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Us
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
-import { BUSINESS, VIDEOS, FORM_IDS } from '@/lib/constants'
+import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 import CapacityNotice from '@/app/components/CapacityNotice'
@@ -191,7 +191,7 @@ const painPoints = [
 ]
 
 const stats = [
-  { number: '500+', label: 'Cabinets Refinished' },
+  { number: STATS.projectsLabel, label: 'Cabinets Refinished' },
   { number: '5★', label: 'Average Rating' },
   { number: '5-7', label: 'Days Average' },
   { number: '114', label: 'Cities Served' }
@@ -232,6 +232,11 @@ export default function CabinetPaintingPage() {
   return (
     <>
       <Header />
+      {/* These pages rendered no <main> at all: Header, then a run of
+          <section>s, then Footer. So there was no main landmark for assistive
+          technology to jump to, and the skip link in app/layout.tsx - which
+          targets #main-content - had nothing to land on. */}
+      <main id="main-content">
 
       {/* Schema JSON-LD for SEO */}
       <Script
@@ -314,7 +319,7 @@ export default function CabinetPaintingPage() {
             </div>
 
             {/* Quote Form Card - Clean style */}
-            <div className="hero-form-card">
+            <div id="quote-form" className="hero-form-card">
               <CapacityNotice service={'cabinet-painting'} />
               <LazyHeroForm
                 className="hero-form-iframe"
@@ -456,7 +461,10 @@ export default function CabinetPaintingPage() {
           <div className="service-process-grid">
             {processSteps.map((item, idx) => (
               <div key={idx} className="service-process-card">
-                <div className="service-process-bg-number">{item.step}</div>
+                {/* Decorative watermark numeral (~6% opacity). aria-hidden: it duplicates
+                    the step already announced by the heading, and a 1.1:1 element in the
+                    a11y tree reads as broken text rather than the ornament it is. */}
+                <div className="service-process-bg-number" aria-hidden="true">{item.step}</div>
                 <div className="service-process-number">{item.step}</div>
                 <h3 className="service-process-title">{item.title}</h3>
                 <p className="service-process-desc">{item.desc}</p>
@@ -549,7 +557,11 @@ export default function CabinetPaintingPage() {
               >
                 <Image
                   src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-                  alt={video.title}
+                  /* Decorative: the card's own heading already carries the
+                     video title, so repeating it here made the title announce
+                     twice (Lighthouse image-redundant-alt). */
+                  alt=""
+                  aria-hidden="true"
                   fill
                   loading="lazy"
                   className="object-cover"
@@ -639,6 +651,8 @@ export default function CabinetPaintingPage() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <ReviewsSection />
       <Footer />

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { BUSINESS, HOURS, SOCIAL_LINKS } from '@/lib/constants'
 import { regions } from '@/app/data/regions'
+import { CITY_COUNT } from '@/app/data/cities'
 
 // Inline SVG icons to avoid loading entire lucide-react bundle
 const MapPinIcon = ({ size = 24 }: { size?: number }) => (
@@ -172,7 +173,7 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
                 <Link
                   key={r.slug}
                   href={`/regions/${r.slug}`}
-                  style={{ background: 'rgba(204,0,0,0.15)', color: '#CC0000', padding: '0.375rem 0.875rem', borderRadius: '6px', fontSize: '0.8125rem', fontWeight: 600, border: '1px solid rgba(204,0,0,0.25)' }}
+                  style={{ background: 'rgba(204,0,0,0.15)', color: '#FF4D4D', padding: '0.375rem 0.875rem', borderRadius: '6px', fontSize: '0.8125rem', fontWeight: 600, border: '1px solid rgba(255,77,77,0.35)' }}
                 >
                   {r.name}
                 </Link>
@@ -199,8 +200,8 @@ export default function Footer({ variant = 'default', showCities = true }: Foote
               ))}
             </div>
             <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-              <Link href="/massachusetts" style={{ color: '#CC0000', fontSize: '0.8125rem', fontWeight: 600 }}>
-                View All 116 Service Areas →
+              <Link href="/massachusetts" style={{ color: '#FF4D4D', fontSize: '0.8125rem', fontWeight: 600 }}>
+                View All {CITY_COUNT} Service Areas →
               </Link>
             </div>
           </div>

@@ -9,7 +9,9 @@ import LazyHeroForm from './components/LazyHeroForm'
 import Footer from './components/Footer'
 import { generatePageMetadata } from '@/lib/seo'
 import { siteConfig } from '@/lib/siteConfig'
+import { CITY_COUNT } from '@/app/data/cities'
 import CapacityNotice from '@/app/components/CapacityNotice'
+import HomeGallery from './components/HomeGallery'
 
 /**
  * HOME page metadata.
@@ -158,14 +160,11 @@ const services = [
   },
 ]
 
-const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Professional exterior house painting in Marlborough MA - JH Painting Services complete home exterior transformation', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Exterior house painting project in Waltham Massachusetts - historic church renovation by JH Painting', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Interior house painting contractors in Framingham and Natick MA - premium Benjamin Moore paint by JH Painting', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Bedroom interior painting in Newton and Wellesley Massachusetts - professional residential painters JH Painting', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Kitchen cabinet refinishing and painting in MetroWest MA - factory-smooth spray finish by JH Painting Services', category: 'Cabinets' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Carpentry and trim work services in Worcester and Boston Massachusetts by JH Painting Services', category: 'Carpentry' },
-]
+// The hardcoded `galleryImages` array that used to live here is gone. It held
+// six GoHighLevel CDN URLs whose alt text named specific projects the images
+// were not of. app/components/HomeGallery.tsx now builds this section from
+// app/data/projects.ts - the crew's own photographs - so the caption and the
+// picture can no longer disagree.
 
 /**
  * Home-specific structured data - FAQ + WebPage objects that previously lived
@@ -185,7 +184,7 @@ const homePageSchema = {
       isPartOf: { '@id': 'https://jhpaintingservices.com/#website' },
       about: { '@id': 'https://jhpaintingservices.com/#organization' },
       description:
-        'Award-winning exterior and interior painting contractor serving 116 Massachusetts cities since 2018. Licensed, $2M insured, EPA Lead-Safe certified. 40+ Google reviews. Call (508) 690-8886 for a free estimate.',
+        `Award-winning exterior and interior painting contractor serving ${CITY_COUNT} Massachusetts cities since 2018. Licensed, $2M insured, EPA Lead-Safe certified. 40+ Google reviews. Call (508) 690-8886 for a free estimate.`,
       inLanguage: 'en-US',
       datePublished: '2018-07-01',
       dateModified: '2026-05-14',
@@ -224,7 +223,7 @@ const homePageSchema = {
           name: 'What areas do you serve in Massachusetts?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'JH Painting Services is based in Marlborough and serves 116 cities across Massachusetts including Boston, Worcester, Cambridge, Newton, Framingham, Natick, Wellesley, Lexington, Concord, and all MetroWest communities. We travel up to 50 miles from Marlborough. Call (508) 690-8886.',
+            text: `JH Painting Services is based in Marlborough and serves ${CITY_COUNT} cities across Massachusetts including Boston, Worcester, Cambridge, Newton, Framingham, Natick, Wellesley, Lexington, Concord, and all MetroWest communities. We travel up to 50 miles from Marlborough. Call (508) 690-8886.`,
           },
         },
         {
@@ -296,7 +295,7 @@ export default function HomePage() {
           <div className="hero-bg">
             <Image
               src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
-              alt="Professional exterior and interior painting services in Massachusetts by JH Painting Services - licensed painters serving 116 cities"
+              alt={`Professional exterior and interior painting services in Massachusetts by JH Painting Services - licensed painters serving ${CITY_COUNT} cities`}
               fill
               priority
               fetchPriority="high"
@@ -312,7 +311,7 @@ export default function HomePage() {
               <div className="hero-text">
                 {/* Service area badge - RS style */}
                 <p style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1.25rem', background: 'rgba(204,0,0,0.9)', borderRadius: '100px', color: '#fff', fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
-                  Serving 116 Massachusetts cities
+                  Serving {CITY_COUNT} Massachusetts cities
                 </p>
 
                 {/* 5-Star rating badge */}
@@ -358,7 +357,7 @@ export default function HomePage() {
                   <span className="hero-trust-divider">|</span>
                   <span className="hero-trust-item">
                     <ClockIcon />
-                    Same Day Response
+                    24-48 Hour Response
                   </span>
                   <span className="hero-trust-divider">|</span>
                   <span className="hero-trust-item">
@@ -401,8 +400,14 @@ export default function HomePage() {
                 <StarIcon size={16} fill="currentColor" />
               </div>
               <span className="rating">5.0</span>
-              <a href="https://g.page/r/Cb984Z3qm9PsEAE/review" target="_blank" rel="noopener noreferrer" aria-label="See our Google reviews - 5 star rating">
-                See Our Reviews
+              {/* The aria-label here used to read "See our Google reviews - 5
+                  star rating", which does not contain the visible words "See
+                  Our Reviews" - a WCAG 2.5.3 Label in Name failure, so voice
+                  control could not activate it. The extra context is appended
+                  to the visible text instead, hidden from sight but present in
+                  the accessible name. */}
+              <a href="https://g.page/r/Cb984Z3qm9PsEAE/review" target="_blank" rel="noopener noreferrer">
+                See Our Reviews<span className="sr-only"> on Google, rated 5 out of 5 stars</span>
                 <ChevronRightIcon size={14} />
               </a>
             </div>
@@ -507,10 +512,10 @@ export default function HomePage() {
                 {/* Stats Grid - RS Style */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginTop: '2rem' }}>
                   {[
-                    { value: '116', label: 'Cities Served' },
+                    { value: String(CITY_COUNT), label: 'Cities Served' },
                     { value: '40+', label: 'Google Reviews' },
                     { value: '100%', label: 'Licensed' },
-                    { value: '24hr', label: 'Response Time' },
+                    { value: '24-48h', label: 'Response Time' },
                   ].map((stat, i) => (
                     <div key={i} style={{ textAlign: 'center', padding: '1.25rem 0.75rem', background: 'rgba(204,0,0,0.1)', border: '1px solid rgba(204,0,0,0.2)', borderRadius: '12px' }}>
                       <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#CC0000', lineHeight: 1.2 }}>{stat.value}</div>
@@ -564,7 +569,8 @@ export default function HomePage() {
                 { num: '04', icon: EyeIcon, title: 'Final Walkthrough', desc: 'We walk through every detail with you. If anything isn\'t perfect, we make it right. Guaranteed.' },
               ].map((step, index) => (
                 <div key={index} className="process-card-home process-step-enhanced">
-                  <div className="process-card-home-num">{step.num}</div>
+                  {/* Decorative watermark numeral - see note in globals.css */}
+                  <div className="process-card-home-num" aria-hidden="true">{step.num}</div>
                   <div className="process-card-home-icon">
                     <step.icon />
                   </div>
@@ -689,7 +695,9 @@ export default function HomePage() {
                   <div className="why-icon">
                     <item.icon />
                   </div>
-                  <h4>{item.title}</h4>
+                  {/* was <h4> directly under an <h2> - a skipped level. The
+                      card's visual size comes from .why-card CSS, not the tag. */}
+                  <h3>{item.title}</h3>
                   <p>{item.desc}</p>
                 </div>
               ))}
@@ -700,35 +708,8 @@ export default function HomePage() {
         {/* Video Section */}
         <HomeVideoSection />
 
-        {/* Gallery Section */}
-        <section id="gallery" className="section section-modern gallery-section">
-          <div className="container">
-            <div className="section-header section-header-enhanced">
-              <span className="section-eyebrow">Our Portfolio</span>
-              <h2>Project Gallery</h2>
-              <p>Browse through our portfolio of completed projects across Massachusetts.</p>
-            </div>
-
-            <div className="gallery-grid">
-              {galleryImages.map((img, index) => (
-                <div key={index} className="gallery-item gallery-item-enhanced">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    width={400}
-                    height={300}
-                    loading="lazy"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                  />
-                  <div className="gallery-item-overlay">
-                    <span>{img.category}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Gallery Section - real job photographs, see HomeGallery */}
+        <HomeGallery />
 
         {/* Before/After Section - ORIGINAL PRESERVED */}
         <HomeBeforeAfter />
@@ -765,7 +746,7 @@ export default function HomePage() {
                 fontWeight: 600,
               }}
             >
-              <span aria-hidden="true" style={{ display: 'inline-flex', gap: '2px', color: '#f59e0b', fontSize: '1.25rem', letterSpacing: '2px' }}>★★★★★</span>
+              <span aria-hidden="true" style={{ display: 'inline-flex', gap: '2px', color: '#B45309', fontSize: '1.25rem', letterSpacing: '2px' }}>★★★★★</span>
               <span style={{ color: '#0a0e27' }}>
                 <strong>5.0</strong> from 40+ verified Google reviews
               </span>
@@ -896,7 +877,7 @@ export default function HomePage() {
                     </div>
                     <div className="contact-item-content">
                       <h4>Service Area</h4>
-                      <p>Serving 116 cities across Massachusetts</p>
+                      <p>Serving {CITY_COUNT} cities across Massachusetts</p>
                     </div>
                   </div>
 
@@ -926,7 +907,7 @@ export default function HomePage() {
 
                 {/* Map */}
                 <div className="map-container">
-                  <a href="https://g.co/kgs/hc9Rfmv" target="_blank" rel="noopener noreferrer" className="static-map-link" aria-label="View JH Painting Services on Google Maps">
+                  <a href="https://g.co/kgs/hc9Rfmv" target="_blank" rel="noopener noreferrer" className="static-map-link">
                     <div className="static-map-placeholder" style={{ border: '2px solid #CC0000' }}>
                       <MapPinIcon />
                       <span className="static-map-title">JH Painting Services</span>
@@ -956,7 +937,8 @@ export default function HomePage() {
           <div className="container">
             <div className="cta-content" style={{ color: '#fff' }}>
               <h2 style={{ color: '#fff' }}>Ready to Transform Your Home?</h2>
-              <p style={{ color: 'rgba(255,255,255,0.85)' }}>Licensed & $2M insured. 5-star rated. Same-day response on all estimates.</p>
+              {/* 0.85 alpha over #CC0000 composites to #f7d9d9 = 4.45:1, just under the bar. */}
+              <p style={{ color: 'rgba(255,255,255,0.95)' }}>Licensed & $2M insured. 5-star rated. Estimates scheduled within 24-48 hours.</p>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                 <a href="tel:+15086908886" className="btn btn-lg" style={{ background: '#fff', color: '#CC0000', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
                   <PhoneIcon />

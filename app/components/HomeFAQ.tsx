@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { CITY_COUNT } from '@/app/data/cities'
 
 const ChevronDownIcon = ({ size = 16 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
@@ -33,7 +34,7 @@ const homepageFaqs = [
   },
   {
     question: "What areas do you serve?",
-    answer: "We serve 116 cities across Massachusetts including Boston, Cambridge, Worcester, Marlborough, and the entire MetroWest region. Our crews travel throughout the state. Being based in Marlborough, we conveniently cover MetroWest, Greater Boston, Worcester County, and beyond."
+    answer: `We serve ${CITY_COUNT} cities across Massachusetts including Boston, Cambridge, Worcester, Marlborough, and the entire MetroWest region. Our crews travel throughout the state. Being based in Marlborough, we conveniently cover MetroWest, Greater Boston, Worcester County, and beyond.`
   },
   {
     question: "How do I prepare for my painting project?",

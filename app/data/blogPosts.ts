@@ -1,6 +1,18 @@
 export interface BlogPost {
   slug: string
+  /** Editorial headline. Rendered as the page h1 in full, however long. */
   title: string
+  /**
+   * Optional hand-written <title> for the SERP, <= 60 characters.
+   *
+   * Leave it unset and lib/seo.ts -> fitTitle() derives one from `title`
+   * within the budget. Set it when the derived version loses a keyword you
+   * care about - a human editor beats the rule every time, the rule just
+   * guarantees nothing ever overflows while nobody is looking.
+   */
+  seoTitle?: string
+  /** Optional hand-written meta description, <= 160 characters including the CTA. */
+  seoDescription?: string
   /**
    * Last substantive revision, YYYY-MM-DD. Optional.
    *

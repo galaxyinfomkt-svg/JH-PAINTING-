@@ -290,7 +290,7 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
         </nav>
       </header>
 
-      <main>
+      <main id="main-content">
         {/* Breadcrumb */}
         <div className="blog-breadcrumb">
           <div className="container">
@@ -364,6 +364,16 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
                 {/* Share */}
                 <div className="blog-article-share">
                   <span className="blog-article-share-label"><Share2 size={16} /> Share this article:</span>
+                  {/*
+                    These three were icon-only links with no text, no title and
+                    no aria-label, so on all 33 blog posts a screen reader
+                    announced them by their href - "link, facebook dot com
+                    slash sharer slash sharer dot php question mark u equals
+                    https colon percent 3A..." - and a keyboard user tabbed
+                    into three unidentifiable stops. Each now carries a name,
+                    and the glyphs are marked decorative so they cannot dilute
+                    it.
+                  */}
                   <div className="blog-article-share-buttons">
                     <a
                       href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
@@ -371,7 +381,8 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
                       rel="noopener noreferrer"
                       className="blog-share-btn facebook"
                     >
-                      <Facebook size={18} />
+                      <span aria-hidden="true"><Facebook size={18} /></span>
+                      <span className="sr-only">Share this article on Facebook</span>
                     </a>
                     <a
                       href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(post.title)}`}
@@ -379,7 +390,8 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
                       rel="noopener noreferrer"
                       className="blog-share-btn twitter"
                     >
-                      <X size={18} />
+                      <span aria-hidden="true"><X size={18} /></span>
+                      <span className="sr-only">Share this article on X</span>
                     </a>
                     <a
                       href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(post.title)}`}
@@ -387,7 +399,8 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
                       rel="noopener noreferrer"
                       className="blog-share-btn linkedin"
                     >
-                      <Linkedin size={18} />
+                      <span aria-hidden="true"><Linkedin size={18} /></span>
+                      <span className="sr-only">Share this article on LinkedIn</span>
                     </a>
                   </div>
                 </div>

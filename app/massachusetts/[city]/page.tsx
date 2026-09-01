@@ -494,7 +494,7 @@ export default async function CityPage({ params }: Props) {
               <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
                 {[
                   { icon: ShieldIcon, text: 'Licensed & Insured' },
-                  { icon: ClockIcon, text: 'Same Day Response' },
+                  { icon: ClockIcon, text: '24-48 Hour Response' },
                   { icon: AwardIcon, text: '40+ 5-Star Google Reviews' }
                 ].map((item, idx) => (
                   <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255, 255, 255, 0.9)' }}>
@@ -537,8 +537,12 @@ export default async function CityPage({ params }: Props) {
               <StarIcon size={16} fill="currentColor" />
             </div>
             <span className="rating">5</span>
-            <a href="https://g.page/r/Cb984Z3qm9PsEAE/review" target="_blank" rel="noopener noreferrer" aria-label="See our Google reviews - 5 star rating">
-              See Our Reviews
+            {/* aria-label removed: it did not contain the visible words "See
+                Our Reviews", so voice control could not activate the link
+                (WCAG 2.5.3 Label in Name). The extra context is appended as
+                screen-reader-only text instead. */}
+            <a href="https://g.page/r/Cb984Z3qm9PsEAE/review" target="_blank" rel="noopener noreferrer">
+              See Our Reviews<span className="sr-only"> on Google, rated 5 out of 5 stars</span>
               <ChevronRightIcon size={14} />
             </a>
           </div>
@@ -668,17 +672,17 @@ export default async function CityPage({ params }: Props) {
             </h3>
             <div className="vsl-curiosity-grid">
               <div className="vsl-curiosity-card">
-                <div className="vsl-curiosity-number">01</div>
+                <div className="vsl-curiosity-number" aria-hidden="true">01</div>
                 <h4>We&apos;re Your Neighbors</h4>
                 <p>Based in Marlborough, we&apos;re not a faceless corporation &mdash; we&apos;re local contractors who live and work in your community.</p>
               </div>
               <div className="vsl-curiosity-card">
-                <div className="vsl-curiosity-number">02</div>
+                <div className="vsl-curiosity-number" aria-hidden="true">02</div>
                 <h4>Premium Materials Only</h4>
                 <p>We use only Sherwin-Williams and Benjamin Moore paints. Why? Because lower-grade paint means repainting in 3 years. Ours lasts 7-10+.</p>
               </div>
               <div className="vsl-curiosity-card">
-                <div className="vsl-curiosity-number">03</div>
+                <div className="vsl-curiosity-number" aria-hidden="true">03</div>
                 <h4>No Surprises, Ever</h4>
                 <p>We tell you the full scope upfront. No &quot;we found more work&quot; excuses, no surprises mid-project. Just clear communication and reliable follow-through.</p>
               </div>
@@ -1018,7 +1022,8 @@ export default async function CityPage({ params }: Props) {
                 href="https://g.page/r/Cb984Z3qm9PsEAE/review"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: '#CC0000', textDecoration: 'none', fontWeight: 700 }}
+                /* #CC0000 on the #0F172A panel is 3.03:1; the on-dark red clears 5.2. */
+                style={{ color: '#FF4D4D', textDecoration: 'none', fontWeight: 700 }}
               >
                 Read all reviews on Google ↗
               </a>
@@ -1052,7 +1057,10 @@ export default async function CityPage({ params }: Props) {
                 step: '1',
                 title: 'Free Consultation & Detailed Estimate',
                 description: `We visit your ${city.name} property, discuss your vision, assess the scope of work, and provide a comprehensive written estimate. We'll explain every line item, answer your questions, and never pressure you to sign on the spot. Take your time-we're confident you'll choose us.`,
-                duration: 'Same-day or next-day appointments available'
+                // Was 'Same-day or next-day appointments available', which
+                // contradicted the 24-48 hour promise made lower down the
+                // same page. One promise, from lib/siteConfig.responseTime.
+                duration: 'Appointments scheduled within 24-48 hours'
               },
               {
                 step: '2',
@@ -1285,7 +1293,11 @@ export default async function CityPage({ params }: Props) {
                     <PhoneIcon size={18} />
                     (508) 690-8886
                   </a>
-                  <a href="#quote-form" className="city-cta-btn-outline">
+                  {/* -light variant: this box has a #FEF3F2 background, and the
+                      base .city-cta-btn-outline is white-on-transparent (built
+                      for the dark sections). Without it the button rendered at
+                      1.09:1 - invisible. */}
+                  <a href="#quote-form" className="city-cta-btn-outline city-cta-btn-outline-light">
                     Get Your Free Estimate
                     <ChevronRightIcon size={18} />
                   </a>
@@ -1305,7 +1317,7 @@ export default async function CityPage({ params }: Props) {
               Your {city.name} Home Deserves the Best - Let&apos;s Talk
             </h2>
             <p className="city-cta-subtitle">
-              Licensed, $2M insured & 5-star rated. Same-day response on all estimates. No obligation.
+              Licensed, $2M insured & 5-star rated. Estimates scheduled within 24-48 hours. No obligation.
             </p>
             <div className="city-cta-buttons">
               <a href="tel:+15086908886" className="city-cta-btn-white">

@@ -46,7 +46,7 @@ export default function ThankYouPage() {
       </header>
 
       {/* Main Content */}
-      <main style={{ minHeight: '100vh', background: '#0F172A' }}>
+      <main id="main-content" style={{ minHeight: '100vh', background: '#0F172A' }}>
         {/* Hero Section */}
         <section style={{
           paddingTop: '120px',
@@ -214,7 +214,7 @@ export default function ThankYouPage() {
                 {[
                   { icon: Star, text: '5.0 Google Rating' },
                   { icon: Shield, text: 'Licensed & Insured' },
-                  { icon: Clock, text: '24hr Response Time' }
+                  { icon: Clock, text: '24-48 Hour Response Time' }
                 ].map((item, idx) => (
                   <div key={idx} style={{
                     display: 'flex',

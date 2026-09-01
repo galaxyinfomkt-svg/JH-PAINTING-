@@ -85,7 +85,7 @@ export const cityContentMap: Record<string, CityContent> = {
       },
       {
         question: 'How quickly can you start a project in Marlborough?',
-        answer: 'Being based in Marlborough means we can often start within days, not weeks. For Marlborough residents, we offer same-day estimates and priority scheduling. During our peak season (May-September), we recommend booking 2-3 weeks in advance, but we always try to accommodate urgent requests for our hometown neighbors.'
+        answer: 'Being based in Marlborough means we can often start within days, not weeks. For Marlborough residents, we offer priority scheduling, with estimates typically booked within 24-48 hours. During our peak season (May-September), we recommend booking 2-3 weeks in advance, but we always try to accommodate urgent requests for our hometown neighbors.'
       },
       {
         question: 'What paint brands do you use for Marlborough homes?',
@@ -152,7 +152,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Hudson, MA 01749?',
-        answer: 'Absolutely! Hudson is one of our closest service areas, just 3.1 miles from our Marlborough headquarters. We have many loyal customers in Hudson and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Hudson is one of our closest service areas, just 3.1 miles from our Marlborough headquarters. We have many loyal customers in Hudson and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'How do you handle riverside properties near Assabet River Rail Trail?',
@@ -227,7 +227,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Southborough, MA 01772?',
-        answer: 'Absolutely! Southborough is one of our closest service areas, just 3.2 miles from our Marlborough headquarters. We have many loyal customers in Southborough and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Southborough is one of our closest service areas, just 3.2 miles from our Marlborough headquarters. We have many loyal customers in Southborough and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'What areas of Southborough do you service most?',
@@ -302,7 +302,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Framingham, MA 01701?',
-        answer: 'Absolutely! Framingham is one of our closest service areas, just 8.2 miles from our Marlborough headquarters. We have many loyal customers in Framingham and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Framingham is one of our closest service areas, just 8.2 miles from our Marlborough headquarters. We have many loyal customers in Framingham and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'What areas of Framingham do you service most?',
@@ -1038,7 +1038,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Shrewsbury, MA 01545?',
-        answer: 'Absolutely! Shrewsbury is one of our closest service areas, just 9.3 miles from our Marlborough headquarters. We have many loyal customers in Shrewsbury and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Shrewsbury is one of our closest service areas, just 9.3 miles from our Marlborough headquarters. We have many loyal customers in Shrewsbury and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'Do you paint homes near Lake Quinsigamond in Shrewsbury?',
@@ -1176,7 +1176,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Ashland, MA 01721?',
-        answer: 'Absolutely! Ashland is one of our closest service areas, just 7.4 miles from our Marlborough headquarters. We have many loyal customers in Ashland and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Ashland is one of our closest service areas, just 7.4 miles from our Marlborough headquarters. We have many loyal customers in Ashland and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'What areas of Ashland do you service most?',
@@ -1245,7 +1245,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Westborough, MA 01581?',
-        answer: 'Absolutely! Westborough is one of our closest service areas, just 6.6 miles from our Marlborough headquarters. We have many loyal customers in Westborough and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Westborough is one of our closest service areas, just 6.6 miles from our Marlborough headquarters. We have many loyal customers in Westborough and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'What areas of Westborough do you service most?',
@@ -1314,7 +1314,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Hopkinton, MA 01748?',
-        answer: 'Absolutely! Hopkinton is one of our closest service areas, just 8.4 miles from our Marlborough headquarters. We have many loyal customers in Hopkinton and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Hopkinton is one of our closest service areas, just 8.4 miles from our Marlborough headquarters. We have many loyal customers in Hopkinton and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'What areas of Hopkinton do you service most?',
@@ -1383,7 +1383,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Sudbury, MA 01776?',
-        answer: 'Absolutely! Sudbury is one of our closest service areas, just 7.0 miles from our Marlborough headquarters. We have many loyal customers in Sudbury and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Sudbury is one of our closest service areas, just 7.0 miles from our Marlborough headquarters. We have many loyal customers in Sudbury and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'What areas of Sudbury do you service most?',
@@ -1521,7 +1521,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Berlin, MA 01503?',
-        answer: 'Absolutely! Berlin is one of our closest service areas, just 5.2 miles from our Marlborough headquarters. We have many loyal customers in Berlin and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Berlin is one of our closest service areas, just 5.2 miles from our Marlborough headquarters. We have many loyal customers in Berlin and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'How do you handle riverside properties near Assabet River National Wildlife Refuge?',
@@ -1590,7 +1590,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Northborough, MA 01532?',
-        answer: 'Absolutely! Northborough is one of our closest service areas, just 5.3 miles from our Marlborough headquarters. We have many loyal customers in Northborough and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Northborough is one of our closest service areas, just 5.3 miles from our Marlborough headquarters. We have many loyal customers in Northborough and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'How do you handle riverside properties near Assabet River Rail Trail?',
@@ -1659,7 +1659,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Cordaville, MA 01772?',
-        answer: 'Absolutely! Cordaville is one of our closest service areas, just 5.6 miles from our Marlborough headquarters. We have many loyal customers in Cordaville and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Cordaville is one of our closest service areas, just 5.6 miles from our Marlborough headquarters. We have many loyal customers in Cordaville and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'What areas of Cordaville do you service most?',
@@ -1728,7 +1728,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Stow, MA 01775?',
-        answer: 'Absolutely! Stow is one of our closest service areas, just 6.4 miles from our Marlborough headquarters. We have many loyal customers in Stow and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Stow is one of our closest service areas, just 6.4 miles from our Marlborough headquarters. We have many loyal customers in Stow and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'Do you paint homes near Lake Boon in Stow?',
@@ -1797,7 +1797,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Framingham Center, MA 01701?',
-        answer: 'Absolutely! Framingham Center is one of our closest service areas, just 6.6 miles from our Marlborough headquarters. We have many loyal customers in Framingham Center and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Framingham Center is one of our closest service areas, just 6.6 miles from our Marlborough headquarters. We have many loyal customers in Framingham Center and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'Do you work on historic homes near Framingham Centre Common?',
@@ -1866,7 +1866,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Bolton, MA 01740?',
-        answer: 'Absolutely! Bolton is one of our closest service areas, just 6.6 miles from our Marlborough headquarters. We have many loyal customers in Bolton and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Bolton is one of our closest service areas, just 6.6 miles from our Marlborough headquarters. We have many loyal customers in Bolton and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'What areas of Bolton do you service most?',
@@ -1935,7 +1935,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Maynard, MA 01754?',
-        answer: 'Absolutely! Maynard is one of our closest service areas, just 7.6 miles from our Marlborough headquarters. We have many loyal customers in Maynard and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Maynard is one of our closest service areas, just 7.6 miles from our Marlborough headquarters. We have many loyal customers in Maynard and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'How do you handle riverside properties near Assabet River Rail Trail?',
@@ -2004,7 +2004,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Clinton, MA 01510?',
-        answer: 'Absolutely! Clinton is one of our closest service areas, just 8.4 miles from our Marlborough headquarters. We have many loyal customers in Clinton and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Clinton is one of our closest service areas, just 8.4 miles from our Marlborough headquarters. We have many loyal customers in Clinton and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'What areas of Clinton do you service most?',
@@ -2073,7 +2073,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Boylston, MA 01505?',
-        answer: 'Absolutely! Boylston is one of our closest service areas, just 8.6 miles from our Marlborough headquarters. We have many loyal customers in Boylston and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Boylston is one of our closest service areas, just 8.6 miles from our Marlborough headquarters. We have many loyal customers in Boylston and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'What areas of Boylston do you service most?',
@@ -2142,7 +2142,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Wayland, MA 01778?',
-        answer: 'Absolutely! Wayland is one of our closest service areas, just 9.4 miles from our Marlborough headquarters. We have many loyal customers in Wayland and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Wayland is one of our closest service areas, just 9.4 miles from our Marlborough headquarters. We have many loyal customers in Wayland and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'Do you paint homes near Dudley Pond in Wayland?',
@@ -2211,7 +2211,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Cochituate, MA 01778?',
-        answer: 'Absolutely! Cochituate is one of our closest service areas, just 9.5 miles from our Marlborough headquarters. We have many loyal customers in Cochituate and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Cochituate is one of our closest service areas, just 9.5 miles from our Marlborough headquarters. We have many loyal customers in Cochituate and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'Do you paint homes near Lake Cochituate in Cochituate?',
@@ -2280,7 +2280,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve South Lancaster, MA 01561?',
-        answer: 'Absolutely! South Lancaster is one of our closest service areas, just 9.8 miles from our Marlborough headquarters. We have many loyal customers in South Lancaster and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! South Lancaster is one of our closest service areas, just 9.8 miles from our Marlborough headquarters. We have many loyal customers in South Lancaster and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'What areas of South Lancaster do you service most?',
@@ -2349,7 +2349,7 @@ export const cityContentMap: Record<string, CityContent> = {
     faq: [
       {
         question: 'Do you serve Lancaster, MA 01523?',
-        answer: 'Absolutely! Lancaster is one of our closest service areas, just 9.8 miles from our Marlborough headquarters. We have many loyal customers in Lancaster and can often provide same-day estimates. Call (508) 690-8886 for a free estimate!'
+        answer: 'Absolutely! Lancaster is one of our closest service areas, just 9.8 miles from our Marlborough headquarters. We have many loyal customers in Lancaster and can often schedule an estimate within 24-48 hours. Call (508) 690-8886 for a free estimate!'
       },
       {
         question: 'Do you work on historic homes near Lancaster Town Common?',
