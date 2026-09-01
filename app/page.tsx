@@ -293,14 +293,21 @@ export default function HomePage() {
         {/* Hero Section - RS Development Group Style */}
         <section id="home" className="hero hero-simplified">
           <div className="hero-bg">
+            {/* Foto nossa, de uma obra real: a sala e o jantar de uma casa
+                habitada em Southbridge, o "depois" confirmado do par
+                IMG_5497 -> IMG_5765 registrado no catalogo de fotos.
+                Servida de /public em vez do storage do GHL, entao o LCP nao
+                depende de um dominio de terceiro.
+                O recorte 16:9 deixa a parede lisa a esquerda, que e onde o
+                titulo e os selos de confianca ficam. */}
             <Image
-              src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
-              alt={`Professional exterior and interior painting services in Massachusetts by JH Painting Services - licensed painters serving ${CITY_COUNT} cities`}
+              src="/hero/interior-southbridge.webp"
+              alt="Living and dining room of a Southbridge, Massachusetts home after an interior repaint by JH Painting Services, with fresh walls, white trim and refinished hardwood floors"
               fill
               priority
               fetchPriority="high"
               sizes="100vw"
-              quality={60}
+              quality={72}
               style={{ objectFit: 'cover' }}
             />
           </div>
