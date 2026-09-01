@@ -4,10 +4,12 @@ import { useState } from 'react'
 import Image from 'next/image'
 import {
   videos,
+  isSelfHosted,
   videoThumbnail,
   videoEmbedUrl,
   videoSchema,
   YOUTUBE_CHANNEL,
+  type SiteVideo,
 } from '@/app/data/videos'
 
 const PlayIcon = ({ size = 20 }: { size?: number }) => (
@@ -23,9 +25,11 @@ const XIcon = () => (
 const schema = videoSchema(videos)
 
 export default function HomeVideoSection() {
-  const [videoModal, setVideoModal] = useState<{ isOpen: boolean; embed: string; title: string }>({ isOpen: false, embed: '', title: '' })
+  // Guarda o VIDEO, nao a URL de embed: a grade agora mistura YouTube com
+  // arquivo local, e cada um abre de um jeito diferente no modal.
+  const [openVideo, setOpenVideo] = useState<SiteVideo | null>(null)
 
-  const closeVideoModal = () => setVideoModal({ isOpen: false, embed: '', title: '' })
+  const closeVideoModal = () => setOpenVideo(null)
 
   return (
     <>
@@ -48,7 +52,7 @@ export default function HomeVideoSection() {
             {videos.map((video) => (
               <button
                 key={video.id}
-                onClick={() => setVideoModal({ isOpen: true, embed: videoEmbedUrl(video), title: video.title })}
+                onClick={() => setOpenVideo(video)}
                 className="video-card-rs"
                 type="button"
               >
@@ -99,19 +103,34 @@ export default function HomeVideoSection() {
       </section>
 
       {/* Video Modal */}
-      {videoModal.isOpen && (
+      {openVideo && (
         <div className="video-modal-overlay" onClick={closeVideoModal}>
           <div className="video-modal" onClick={(e) => e.stopPropagation()}>
             <button type="button" className="video-modal-close" onClick={closeVideoModal} aria-label="Close video">
               <XIcon />
             </button>
             <div className="video-modal-content">
-              <iframe
-                src={`${videoModal.embed}&autoplay=1`}
-                title={videoModal.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              {isSelfHosted(openVideo) ? (
+                /* Arquivo nosso: <video>, nao <iframe>. Colar "&autoplay=1" no
+                   caminho do MP4 gerava ".../groton-interior.mp4&autoplay=1",
+                   um 404 - nao ha query string onde o "&" se prenda. */
+                // eslint-disable-next-line jsx-a11y/media-has-caption
+                <video
+                  src={openVideo.src}
+                  poster={openVideo.poster}
+                  controls
+                  autoPlay
+                  playsInline
+                  aria-label={openVideo.title}
+                />
+              ) : (
+                <iframe
+                  src={`${videoEmbedUrl(openVideo)}&autoplay=1`}
+                  title={openVideo.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              )}
             </div>
           </div>
         </div>

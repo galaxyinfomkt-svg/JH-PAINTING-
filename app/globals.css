@@ -11341,13 +11341,19 @@ h1, h2, h3, .hero-title {
   padding-top: 177.78%; /* 9:16 aspect ratio for Shorts */
 }
 
-.video-modal-content iframe {
+/* iframe (YouTube) e video (arquivo nosso) ocupam o mesmo espaco no modal. */
+.video-modal-content iframe,
+.video-modal-content video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: none;
+  /* object-fit: contain para nao cortar a filmagem vertical do celular dentro
+     de um modal 16:9 - o video de obra e 9:16. */
+  object-fit: contain;
+  background: #000;
 }
 
 /* For regular YouTube videos, use 16:9 */

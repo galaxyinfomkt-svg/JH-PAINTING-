@@ -143,24 +143,49 @@ export const videos: SiteVideo[] = [
 ]
 
 /** Public channel URL - one place, so the "watch more" links cannot drift. */
+/** Origem do site. Usada so onde o schema exige URL absoluta. */
+export const SITE_ORIGIN = 'https://jhpaintingservices.com'
+
 export const YOUTUBE_CHANNEL = 'https://www.youtube.com/@JHPaintingServices-br9wh'
 
 export const isSelfHosted = (v: SiteVideo): boolean => v.source === 'self-hosted'
 
+/**
+ * Miniatura para RENDERIZAR na pagina.
+ *
+ * Para o arquivo local devolve o caminho relativo de proposito. A versao
+ * absoluta quebrava a home: next/image so aceita host que esteja em
+ * `images.remotePatterns` (next.config.js), e jhpaintingservices.com nao esta
+ * la - nem deveria estar, porque o arquivo e do proprio site. O otimizador
+ * respondia 400 e os cards novos apareciam vazios.
+ *
+ * Quem precisa da URL absoluta e o JSON-LD; use videoThumbnailAbsolute().
+ */
 export const videoThumbnail = (v: SiteVideo): string =>
   isSelfHosted(v)
-    ? (v.poster ? `https://jhpaintingservices.com${v.poster}` : '')
+    ? v.poster ?? ''
+    : `https://img.youtube.com/vi/${v.id}/${v.thumbnail ?? 'hqdefault'}.jpg`
+
+/** Miniatura absoluta, para thumbnailUrl do VideoObject. Schema exige URL completa. */
+export const videoThumbnailAbsolute = (v: SiteVideo): string =>
+  isSelfHosted(v)
+    ? (v.poster ? `${SITE_ORIGIN}${v.poster}` : '')
     : `https://img.youtube.com/vi/${v.id}/${v.thumbnail ?? 'hqdefault'}.jpg`
 
 export const videoWatchUrl = (v: SiteVideo): string =>
-  isSelfHosted(v)
-    ? `https://jhpaintingservices.com${v.src ?? ''}`
-    : `https://www.youtube.com/watch?v=${v.id}`
+  isSelfHosted(v) ? `${SITE_ORIGIN}${v.src ?? ''}` : `https://www.youtube.com/watch?v=${v.id}`
 
+/**
+ * URL de embed. SO faz sentido para YouTube.
+ *
+ * Devolve string vazia para o arquivo local, e quem renderiza deve checar
+ * isSelfHosted() e montar um <video> - um MP4 dentro de <iframe> nao e um
+ * embed, e concatenar parametros nele produzia
+ * ".../groton-interior.mp4&autoplay=1", que e 404 porque nao existe query
+ * string onde o "&" se prender.
+ */
 export const videoEmbedUrl = (v: SiteVideo): string =>
-  isSelfHosted(v)
-    ? `https://jhpaintingservices.com${v.src ?? ''}`
-    : `https://www.youtube-nocookie.com/embed/${v.id}?rel=0&modestbranding=1`
+  isSelfHosted(v) ? '' : `https://www.youtube-nocookie.com/embed/${v.id}?rel=0&modestbranding=1`
 
 /** Videos tagged for a given /services/<slug> page, newest entry order preserved. */
 export const videosForService = (serviceSlug: string): SiteVideo[] =>
@@ -202,7 +227,7 @@ export function videoSchema(list: SiteVideo[] = videos) {
       '@id': `${videoWatchUrl(v)}#video`,
       name: v.title,
       description: v.description,
-      thumbnailUrl: [videoThumbnail(v)],
+      thumbnailUrl: [videoThumbnailAbsolute(v)],
       uploadDate: v.uploadDate,
       duration: v.duration,
       contentUrl: videoWatchUrl(v),
