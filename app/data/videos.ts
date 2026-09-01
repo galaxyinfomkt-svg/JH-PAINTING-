@@ -43,9 +43,33 @@
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
+/**
+ * Um video do site pode vir de duas fontes:
+ *
+ *   'youtube'     - publicado no canal da JH. Bom para descoberta no YouTube,
+ *                   mas o embed custa ~1 MB de JS de terceiro e so entra na
+ *                   pagina depois do clique.
+ *   'self-hosted' - arquivo MP4 em /public/videos. Muito mais rapido, sem
+ *                   terceiro nenhum, e o `duration` do schema sai do proprio
+ *                   arquivo em vez de ser digitado a mao.
+ *
+ * As obras filmadas pela equipe estao no Drive como .MOV de iPhone (4-86 MB
+ * cada). Passe-as por scripts/prepare-videos.sh antes de commitar: ele gera o
+ * MP4 web, o poster e imprime a linha pronta para colar aqui.
+ */
+export type VideoSource = 'youtube' | 'self-hosted'
+
 export interface SiteVideo {
-  /** YouTube video ID (11 chars). */
+  /** YouTube video ID (11 chars) para source 'youtube'; um slug para 'self-hosted'. */
   id: string
+  /** Default 'youtube', para os dois videos que ja existiam. */
+  source?: VideoSource
+  /** self-hosted: caminho do MP4 em /public. Ex: '/videos/hopkinton-interior.mp4' */
+  src?: string
+  /** self-hosted: caminho do frame de capa. Ex: '/videos/hopkinton-interior.jpg' */
+  poster?: string
+  /** Cidade filmada, casando com o slug em app/data/cities.ts. */
+  citySlug?: string
   /** Title as published on YouTube. Used as the accessible name and schema name. */
   title: string
   /** What the video actually shows. Required by VideoObject; keep it factual. */
@@ -69,6 +93,7 @@ export interface SiteVideo {
 export const videos: SiteVideo[] = [
   {
     id: 'F_lreXzNlUI',
+    source: 'youtube',
     title: 'Exterior Painting in Massachusetts',
     description:
       'JH Painting Services crew carrying out exterior house painting on a Massachusetts home, from surface preparation through finish coats.',
@@ -81,6 +106,7 @@ export const videos: SiteVideo[] = [
   },
   {
     id: 'LkT_HLyKibY',
+    source: 'youtube',
     title: 'Interior Painting in Massachusetts',
     description:
       'Interior painting work by JH Painting Services in a Massachusetts home - masking, cutting in, and rolling walls and ceilings.',
@@ -93,18 +119,41 @@ export const videos: SiteVideo[] = [
 /** Public channel URL - one place, so the "watch more" links cannot drift. */
 export const YOUTUBE_CHANNEL = 'https://www.youtube.com/@JHPaintingServices-br9wh'
 
+export const isSelfHosted = (v: SiteVideo): boolean => v.source === 'self-hosted'
+
 export const videoThumbnail = (v: SiteVideo): string =>
-  `https://img.youtube.com/vi/${v.id}/${v.thumbnail ?? 'hqdefault'}.jpg`
+  isSelfHosted(v)
+    ? v.poster ?? ''
+    : `https://img.youtube.com/vi/${v.id}/${v.thumbnail ?? 'hqdefault'}.jpg`
 
 export const videoWatchUrl = (v: SiteVideo): string =>
-  `https://www.youtube.com/watch?v=${v.id}`
+  isSelfHosted(v)
+    ? `https://jhpaintingservices.com${v.src ?? ''}`
+    : `https://www.youtube.com/watch?v=${v.id}`
 
 export const videoEmbedUrl = (v: SiteVideo): string =>
-  `https://www.youtube-nocookie.com/embed/${v.id}?rel=0&modestbranding=1`
+  isSelfHosted(v)
+    ? `https://jhpaintingservices.com${v.src ?? ''}`
+    : `https://www.youtube-nocookie.com/embed/${v.id}?rel=0&modestbranding=1`
 
 /** Videos tagged for a given /services/<slug> page, newest entry order preserved. */
 export const videosForService = (serviceSlug: string): SiteVideo[] =>
   videos.filter((v) => v.service === serviceSlug)
+
+/**
+ * Videos filmados numa cidade especifica.
+ *
+ * E aqui que os arquivos do Drive valem mais. app/data/indexing.ts ja registra
+ * que as paginas de cidade sem prova de primeira mao tendem a ficar em
+ * "Crawled - currently not indexed" por mais variado que seja o texto, e que a
+ * correcao e preencher a prova a partir de obras reais. Existe filmagem de
+ * obra para West Boylston, Hopkinton, Wrentham, Northbridge, Milford e
+ * Sherborn - seis cidades que tem pagina no site e hoje nao tem nenhuma
+ * fotografia em /public/projects. Um video por pagina dessas vale mais que
+ * qualquer reescrita de texto.
+ */
+export const videosForCity = (citySlug: string): SiteVideo[] =>
+  videos.filter((v) => v.citySlug === citySlug)
 
 /**
  * VideoObject JSON-LD for the videos on a page.
@@ -115,7 +164,9 @@ export const videosForService = (serviceSlug: string): SiteVideo[] =>
  * that shows the video starts emitting valid VideoObject automatically.
  */
 export function videoSchema(list: SiteVideo[] = videos) {
-  const eligible = list.filter((v) => v.uploadDate && v.duration)
+  const eligible = list.filter(
+    (v) => v.uploadDate && v.duration && (isSelfHosted(v) ? v.poster && v.src : true)
+  )
   if (eligible.length === 0) return null
 
   return {

@@ -118,7 +118,7 @@ import ReviewsSection from '@/app/components/ReviewsSection'
 import CityProof from '@/app/components/CityProof'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import RelatedCities from '@/app/components/RelatedCities'
-import { BUSINESS, FORM_IDS } from '@/lib/constants'
+import { BUSINESS, FORM_IDS, STATS } from '@/lib/constants'
 import CapacityNotice from '@/app/components/CapacityNotice'
 
 // Dynamic imports for below-fold heavy client components (code splitting)
@@ -560,7 +560,7 @@ export default async function CityPage({ params }: Props) {
             flexWrap: 'wrap'
           }}>
             {[
-              { value: '200+', label: 'Projects Completed' },
+              { value: STATS.projectsLabel, label: 'Projects Completed' },
               { value: '5.0', label: 'Google Rating' },
               { value: '114+', label: 'Cities Served' },
               { value: '100%', label: 'Satisfaction' }
@@ -649,7 +649,7 @@ export default async function CityPage({ params }: Props) {
               {/* Quick Stats */}
               <div className="vsl-quick-stats">
                 <div className="vsl-stat">
-                  <span className="vsl-stat-number">200+</span>
+                  <span className="vsl-stat-number">{STATS.projectsLabel}</span>
                   <span className="vsl-stat-label">Homes Painted</span>
                 </div>
                 <div className="vsl-stat">

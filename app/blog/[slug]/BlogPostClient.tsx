@@ -30,6 +30,7 @@ import {
   Check,
 } from '@/app/components/Icons'
 import { BlogPost } from '../../data/blogPosts'
+import { STATS } from '@/lib/constants'
 
 const menuServices = [
   { name: 'Interior Painting', href: '/services/interior-painting', icon: Paintbrush, description: 'Transform your interior spaces' },
@@ -421,7 +422,7 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
                     <div className="blog-author-box-stats">
                       <span><Star size={14} fill="currentColor" /> 5.0 Google Rating</span>
                       <span><Shield size={14} /> Licensed &amp; Insured</span>
-                      <span><Check size={14} /> 200+ Projects Completed</span>
+                      <span><Check size={14} /> {STATS.projectsLabel} Projects Completed</span>
                     </div>
                   </div>
                 </div>

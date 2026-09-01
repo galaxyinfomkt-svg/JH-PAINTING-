@@ -8,6 +8,7 @@ import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import CapacityNotice from '@/app/components/CapacityNotice'
+import { STATS } from '@/lib/constants'
 
 const services = [
   { name: 'Interior Painting', slug: 'interior-painting', desc: 'Walls, ceilings, trim, doors & accent walls with premium Benjamin Moore & Sherwin-Williams paints.', image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png' },
@@ -156,7 +157,7 @@ export default async function RegionPage({ params }: Props) {
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '3rem', flexWrap: 'wrap' }}>
               {[
                 { value: `${regionCities.length}+`, label: 'Cities Served' },
-                { value: '200+', label: 'Projects Completed' },
+                { value: STATS.projectsLabel, label: 'Projects Completed' },
                 { value: '5.0', label: 'Google Rating' },
                 { value: '7', label: 'Services Available' },
               ].map((stat, idx) => (

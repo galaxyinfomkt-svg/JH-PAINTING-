@@ -49,7 +49,15 @@ export const siteConfig = {
   rating: '5.0',
   reviewCount: '40',
   citiesServed: 117,
-  projectsCompleted: 200,
+  // Confirmado pelo dono da empresa (set/2026). Este e o unico lugar onde o
+  // numero existe: STATS.projectsLabel em lib/constants.ts le daqui, e todas
+  // as paginas que exibem contagem de projetos leem de STATS. Mudar aqui muda
+  // no site inteiro e no JSON-LD ao mesmo tempo.
+  //
+  // Nao confundir com "Documented jobs" em /about: aquele numero conta as
+  // obras das quais temos fotografias em /public/projects, que e uma
+  // afirmacao diferente e propositalmente menor.
+  projectsCompleted: 500,
   // Texto único pra resposta - antes tinha 3 variantes: "Same Day", "24hr", "24-48 hours"
   responseTime: '24-48 hours',
 

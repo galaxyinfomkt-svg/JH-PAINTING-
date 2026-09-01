@@ -187,6 +187,9 @@ const painPoints = [
 ]
 
 const stats = [
+  // NAO ligado a STATS.projectsLabel de proposito: aquele numero e o total
+  // da empresa (500+). Esta e uma sub-contagem por servico, e uma parte nao
+  // pode ser igual ao todo. Precisa do numero real desta especialidade.
   { number: '200+', label: 'Commercial Projects' },
   { number: STATS.yearsLabel, label: 'Years Experience' },
   { number: '100%', label: 'On-Time Delivery' },

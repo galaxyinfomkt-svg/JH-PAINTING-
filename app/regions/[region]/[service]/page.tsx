@@ -8,6 +8,7 @@ import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import CapacityNotice from '@/app/components/CapacityNotice'
+import { STATS } from '@/lib/constants'
 
 const serviceImages: Record<string, { hero: string; showcase: string }> = {
   'interior-painting': {
@@ -637,7 +638,7 @@ export default async function RegionServicePage({ params }: Props) {
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '3rem', flexWrap: 'wrap' }}>
               {[
                 { value: `${regionCities.length}+`, label: 'Cities Served' },
-                { value: '200+', label: 'Projects Completed' },
+                { value: STATS.projectsLabel, label: 'Projects Completed' },
                 { value: '5.0', label: 'Google Rating' },
                 { value: '100%', label: 'Satisfaction' },
               ].map((stat, idx) => (
