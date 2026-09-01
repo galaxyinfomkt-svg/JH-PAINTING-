@@ -12865,3 +12865,35 @@ button.video-card-rs {
   background: rgba(255, 77, 77, 0.12);
   border-color: rgba(255, 77, 77, 0.3);
 }
+
+/* ── CityVideo ──────────────────────────────────────────────────────────────
+   Fica logo abaixo do CityProof, que e escuro. Este bloco e claro de
+   proposito: dois blocos escuros seguidos viram uma laje so e a filmagem
+   deixa de ser lida como uma segunda prova, separada da fotografia.
+   O video e vertical (720x1280, filmado no iPhone), por isso o player tem
+   largura maxima curta: esticar um 9:16 na largura da pagina desperdicaria
+   a dobra inteira. */
+.cityvid { background: #f6f7f9; color: var(--jh-dark); padding: clamp(2.5rem, 5vw, 4rem) 1rem; }
+.cityvid-inner { max-width: 1180px; margin: 0 auto; }
+.cityvid-eyebrow {
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+  color: #b23b30; margin: 0 0 .9rem;
+}
+.cityvid-h {
+  font-size: clamp(1.5rem, 3.6vw, 2.3rem); font-weight: 800; letter-spacing: -.03em;
+  line-height: 1.1; margin: 0 0 .7rem; color: var(--jh-dark); text-wrap: balance;
+}
+.cityvid-lede { color: #5b6270; margin: 0 0 1.6rem; font-size: 1rem; line-height: 1.6; max-width: 60ch; }
+.cityvid-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 340px));
+}
+.cityvid-item { margin: 0; }
+.cityvid-player {
+  width: 100%; aspect-ratio: 9 / 16; display: block;
+  border-radius: 12px; background: #0d1017;
+  border: 1px solid rgba(0, 0, 0, .12);
+}
+.cityvid-cap { margin: .75rem 0 0; font-size: .9rem; line-height: 1.55; color: #5b6270; }

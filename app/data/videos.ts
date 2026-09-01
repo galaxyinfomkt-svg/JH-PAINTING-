@@ -114,6 +114,32 @@ export const videos: SiteVideo[] = [
     isShort: true,
     thumbnail: 'hqdefault',
   },
+  {
+    id: 'groton-interior',
+    source: 'self-hosted',
+    src: '/videos/groton-interior.mp4',
+    poster: '/videos/groton-interior.jpg',
+    title: 'Interior repaint walkthrough in Groton, MA',
+    description:
+      'Walkthrough of an interior repaint by JH Painting Services in Groton, Massachusetts: rooms cleared and masked, doors off their hinges, and the finished hallway, landing and bedrooms.',
+    uploadDate: '2026-09-01',
+    duration: 'PT39S',
+    citySlug: 'groton',
+    service: 'interior-painting',
+  },
+  {
+    id: 'southbridge-interior',
+    source: 'self-hosted',
+    src: '/videos/southbridge-interior.mp4',
+    poster: '/videos/southbridge-interior.jpg',
+    title: 'Interior repaint walkthrough in Southbridge, MA',
+    description:
+      'Walkthrough of an interior repaint by JH Painting Services in an occupied Southbridge, Massachusetts home, covering the living and dining rooms, bedrooms and bathrooms.',
+    uploadDate: '2026-09-01',
+    duration: 'PT38S',
+    citySlug: 'southbridge',
+    service: 'interior-painting',
+  },
 ]
 
 /** Public channel URL - one place, so the "watch more" links cannot drift. */
@@ -123,7 +149,7 @@ export const isSelfHosted = (v: SiteVideo): boolean => v.source === 'self-hosted
 
 export const videoThumbnail = (v: SiteVideo): string =>
   isSelfHosted(v)
-    ? v.poster ?? ''
+    ? (v.poster ? `https://jhpaintingservices.com${v.poster}` : '')
     : `https://img.youtube.com/vi/${v.id}/${v.thumbnail ?? 'hqdefault'}.jpg`
 
 export const videoWatchUrl = (v: SiteVideo): string =>
