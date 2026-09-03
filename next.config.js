@@ -477,22 +477,44 @@ const nextConfig = {
     ]
   },
   images: {
+    /*
+     * remotePatterns COM pathname. Antes cada entrada tinha so `hostname`, e
+     * `/_next/image` e um proxy: qualquer URL que casa com um padrao daqui e
+     * baixada pelo servidor e devolvida DE DENTRO de jhpaintingservices.com.
+     *
+     * Sem `pathname`, `storage.googleapis.com` liberava QUALQUER bucket
+     * publico do Google Cloud - e criar um bucket publico leva um minuto e
+     * nao custa nada. Ou seja:
+     *
+     *   jhpaintingservices.com/_next/image?url=https://storage.googleapis.com
+     *     /bucket-de-alguem/pagina-falsa-do-banco.png&w=1920&q=75
+     *
+     * servia o arquivo de um terceiro sob o nosso dominio, com o nosso
+     * certificado, e ainda ficava em cache por um ano (minimumCacheTTL).
+     * `images.leadconnectorhq.com` era pior no mesmo sentido: qualquer pessoa
+     * abre uma conta GoHighLevel e passa a poder hospedar ali. E assim que um
+     * dominio limpo aparece como "hospedando conteudo malicioso" numa lista de
+     * reputacao sem que ninguem tenha invadido nada.
+     *
+     * Agora cada host esta preso ao caminho que o site realmente usa:
+     *
+     *   storage.googleapis.com  -> so a pasta de midia da NOSSA conta GHL
+     *   img.youtube.com         -> so /vi/<id>/<arquivo>.jpg, as miniaturas
+     *
+     * `images.leadconnectorhq.com` e `assets.cdn.filesafe.space` sairam: nao
+     * ha uma unica referencia a nenhum dos dois em app/ ou lib/. Eram permissao
+     * aberta sem uso.
+     */
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'storage.googleapis.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'images.leadconnectorhq.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'assets.cdn.filesafe.space',
+        pathname: '/msgsndr/0Def8kzJShLPuKrPk5Jw/**',
       },
       {
         protocol: 'https',
         hostname: 'img.youtube.com',
+        pathname: '/vi/**',
       },
     ],
     formats: ['image/avif', 'image/webp'],
@@ -500,7 +522,13 @@ const nextConfig = {
     deviceSizes: [640, 828, 1080, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
     minimumCacheTTL: 31536000, // 1 year cache
-    dangerouslyAllowSVG: true,
+    /*
+     * dangerouslyAllowSVG desligado. O site nao carrega um unico SVG remoto
+     * (nenhum .svg externo em app/ ou lib/ - os icones sao JSX inline), entao
+     * ligar isso so servia para deixar o otimizador aceitar SVG de fora, e SVG
+     * e um formato que executa script. O sandbox de contentSecurityPolicy
+     * abaixo continua valendo como segunda camada.
+     */
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     // Unoptimized option for faster hero loading if needed
     // unoptimized: process.env.NODE_ENV === 'development',
