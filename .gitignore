@@ -32,3 +32,8 @@ next-env.d.ts
 
 # Local Netlify folder
 .netlify
+
+# Despejos de diagnostico do Playwright MCP. Ficam fora do repo por dois
+# motivos: sao artefato de sessao, e o log de rede guarda URLs completas dos
+# desafios do Cloudflare Turnstile, que carregam tokens.
+.playwright-mcp/
