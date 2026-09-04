@@ -125,7 +125,7 @@ export default function Header({ cityName }: HeaderProps = {}) {
         <div className="container">
           <div className="top-bar-content">
             <div className="top-bar-left">
-              <span className="top-bar-item">
+              <span className="top-bar-item top-bar-location">
                 <MapPinIcon size={12} />
                 {cityName ? `Serving ${cityName}, Massachusetts` : BUSINESS.address}
               </span>

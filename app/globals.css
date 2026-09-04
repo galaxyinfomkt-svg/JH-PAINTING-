@@ -585,8 +585,15 @@ body { padding-bottom: 72px; }
     align-items: center;
   }
 
+  /* The bar is one fixed-height line and only fits two items on a phone.
+     The email wins over the location, which still shows in the hero copy
+     and the footer. Both come back above 768px. */
+  .top-bar-location {
+    display: none;
+  }
+
   .top-bar-email {
-    display: none !important;
+    display: flex;
   }
 
   .top-bar-item {

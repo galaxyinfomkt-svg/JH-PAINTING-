@@ -550,7 +550,7 @@ export default function RootLayout({
           .trust-badges-wrapper{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap}
           .trust-badges-logos{display:flex;align-items:center;gap:1rem}
           @media(max-width:992px){.nav{display:none}.header-cta{display:none}.menu-btn,.hamburger-btn{display:flex}}
-          @media(max-width:768px){:root{--top-bar-h:50px}.top-bar-email{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}.service-hero,.city-page-hero{padding-top:130px}.service-hero-content,.city-page-hero-content{padding-top:20px;padding-bottom:40px}.hero-form-iframe{height:600px}.google-reviews-bar-content{gap:.5rem}.trust-badges-wrapper{gap:1rem}}
+          @media(max-width:768px){:root{--top-bar-h:50px}.top-bar-location{display:none}.top-bar-item{font-size:.6875rem}.hero,.hero-simplified{min-height:auto}.service-hero,.city-page-hero{padding-top:130px}.service-hero-content,.city-page-hero-content{padding-top:20px;padding-bottom:40px}.hero-form-iframe{height:600px}.google-reviews-bar-content{gap:.5rem}.trust-badges-wrapper{gap:1rem}}
           @media(max-width:480px){:root{--top-bar-h:46px}}
         `}} />
         {/*
