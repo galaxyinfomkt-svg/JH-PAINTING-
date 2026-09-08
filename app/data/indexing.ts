@@ -85,12 +85,16 @@ export const HIGH_DEMAND_SERVICES = new Set<string>([
  * 47 por dia. Eliminadas as alternativas, sobra a expansao em massa, que e a
  * assinatura documentada de conteudo gerado em escala.
  *
- * PARA REVERTER
- * Voltar para false devolve as 819 paginas ao indice. So faca isso quando as
- * cidades tiverem prova de obra propria, que e o que faz a pagina valer: com
- * foto e video, Southbridge foi indexada em 8 dias.
+ * REVERTIDO NO MESMO DIA, 08/09/2026, POR DECISAO DO DONO
+ * O freio ficou ligado cerca de uma hora. A decisao registrada e manter as
+ * 1042 paginas index aveis. Este cabecalho fica aqui inteiro de proposito: se
+ * o trafego nao voltar nas proximas semanas, a medicao acima e o ponto de
+ * partida, e religar esta flag e a primeira coisa a tentar.
+ *
+ * O que faz uma pagina destas valer de verdade nao e a flag, e prova de obra
+ * na cidade. Com foto e video, Southbridge foi indexada em 8 dias.
  */
-export const REQUIRE_EVIDENCE_FOR_LONG_TAIL = true
+export const REQUIRE_EVIDENCE_FOR_LONG_TAIL = false
 
 /**
  * Population strings look like "20,000+", "3,000+", "72,000+".
