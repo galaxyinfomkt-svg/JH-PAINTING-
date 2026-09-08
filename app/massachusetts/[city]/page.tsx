@@ -1240,47 +1240,17 @@ export default async function CityPage({ params }: Props) {
                 {city.name} homes, whether historic properties or modern constructions, each present their own painting challenges. Older homes often have lead paint concerns, multiple layers of previous paint, and architectural details requiring careful attention. Newer homes may have different substrate materials and finishes. Our experienced crews have worked on all types of {city.name} properties and know exactly how to approach each situation.
               </p>
 
-              <h3 className="city-seo-subtitle">
-                Interior Painting in {city.name}
-              </h3>
-              <p>
-                Transform your {city.name} home's interior with professional painting that enhances your living space. We paint living rooms, bedrooms, kitchens, bathrooms, hallways, ceilings, trim, and doors. Our interior services include complete color consultation, furniture protection, thorough surface preparation, premium paint application, and meticulous cleanup. Whether you're refreshing a single room or repainting your entire home, we deliver stunning results that last.
-              </p>
+              {/* Aqui existiam sete blocos de prosa, um por servico, com cerca
+                  de 2.750 caracteres identicos nas 117 cidades: so o nome da
+                  cidade mudava. Medido em 08/09/2026, 73 dos 94 blocos de texto
+                  da pagina eram iguais palavra por palavra em Framingham, Newton
+                  e Lowell, e 62% do texto se repetia entre cidades.
 
-              <h3 className="city-seo-subtitle">
-                Exterior Painting in {city.name}
-              </h3>
-              <p>
-                Protect your {city.name} home from the elements while boosting curb appeal with professional exterior painting. Massachusetts weather is tough on exterior surfaces-freeze-thaw cycles, snow, ice, rain, and intense summer sun all take their toll. We use premium exterior paints specifically formulated to withstand these conditions, properly prepare all surfaces, and apply the right products for each material type (wood siding, vinyl, stucco, brick, trim).
-              </p>
-
-              <h3 className="city-seo-subtitle">
-                Cabinet Painting & Refinishing in {city.name}
-              </h3>
-              <p>
-                Want to transform your {city.name} kitchen without the hassle of new cabinets? Our cabinet painting service delivers a factory-finish look without the demolition and downtime of replacement. We properly prepare cabinet surfaces, apply primer and multiple coats of durable cabinet-specific paint, and reinstall hardware for a complete transformation. Most kitchen cabinet projects are completed in 5-7 days.
-              </p>
-
-              <h3 className="city-seo-subtitle">
-                Commercial Painting Services in {city.name}
-              </h3>
-              <p>
-                {city.name} businesses trust JH Painting for professional commercial painting that minimizes disruption to operations. We work around your schedule-evenings, weekends, or overnight-to complete projects without affecting your business. From offices and retail spaces to restaurants and medical facilities, we deliver commercial-quality results that enhance your professional image.
-              </p>
-
-              <h3 className="city-seo-subtitle">
-                Carpentry Services in {city.name}
-              </h3>
-              <p>
-                Before any paint touches your {city.name} home, underlying wood damage must be addressed. Our expert carpenters repair rotted window frames, damaged door frames, deteriorating trim, siding, and deck boards throughout {city.county || 'Massachusetts'}. Painting over rot is wasted money - we fix the foundation first so your paint job lasts for years. Licensed and insured for all carpentry work in {city.name}.
-              </p>
-
-              <h3 className="city-seo-subtitle">
-                Power Washing Services in {city.name}
-              </h3>
-              <p>
-                Restore your {city.name} property's curb appeal with professional power washing. We safely clean driveways, siding, decks, patios, fences, and walkways - removing years of dirt, mold, mildew, and algae. Power washing is essential preparation before any exterior painting project. Our team uses the right pressure and cleaning solutions for each surface to deliver dramatic results without damage.
-              </p>
+                  Nada se perdeu ao remove-los: o grid de servicos mais acima
+                  nesta mesma pagina ja lista os sete, com o nome do servico, a
+                  cidade e o link para /massachusetts/<cidade>/<servico>, que e
+                  onde esse conteudo mora de verdade. O bloco era duplicata de
+                  uma secao que ja existia 500 linhas acima. */}
 
               <div className="city-seo-cta-box">
                 <h3 className="city-seo-cta-title">
