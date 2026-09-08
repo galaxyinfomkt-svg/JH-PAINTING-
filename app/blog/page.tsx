@@ -25,6 +25,7 @@ import {
   BookOpen,
 } from '@/app/components/Icons'
 import { blogPosts, blogCategories, getFeaturedPosts } from '../data/blogPosts'
+import { CITY_COUNT } from '@/app/data/cities'
 
 const menuServices = [
   { name: 'Interior Painting', href: '/services/interior-painting', icon: Paintbrush, description: 'Transform your interior spaces' },
@@ -408,7 +409,7 @@ export default function BlogPage() {
                       title="JH Painting Services Location"
                     />
                   </div>
-                  <p className="blog-sidebar-map-text">Serving 114+ cities across Massachusetts</p>
+                  <p className="blog-sidebar-map-text">Serving {CITY_COUNT}+ cities across Massachusetts</p>
                 </div>
 
                 {/* Contact Info */}

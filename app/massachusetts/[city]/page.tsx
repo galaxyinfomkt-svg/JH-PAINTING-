@@ -110,7 +110,7 @@ const DropletsIcon = ({ size = 20 }: { size?: number }) => (
 DropletsIcon.displayName = 'DropletsIcon'
 
 import dynamic from 'next/dynamic'
-import { getCityBySlug, cities, normalizeCitySlug } from '@/app/data/cities'
+import { CITY_COUNT, getCityBySlug, cities, normalizeCitySlug } from '@/app/data/cities'
 import { getCityContent, generateUniqueCityContent } from '@/app/data/cityContent'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
@@ -563,7 +563,7 @@ export default async function CityPage({ params }: Props) {
             {[
               { value: STATS.projectsLabel, label: 'Projects Completed' },
               { value: '5.0', label: 'Google Rating' },
-              { value: '114+', label: 'Cities Served' },
+              { value: `${CITY_COUNT}+`, label: 'Cities Served' },
               { value: '100%', label: 'Satisfaction' }
             ].map((stat, idx) => (
               <div key={idx} style={{ textAlign: 'center' }}>
@@ -1334,36 +1334,16 @@ export default async function CityPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Service Areas Section */}
-      <section className="city-areas-section">
-        <div className="container">
-          <div className="city-areas-content">
-            <div className="city-areas-header">
-              <h2 className="city-areas-title">
-                Serving 114+ Cities Across Massachusetts
-              </h2>
-              <p className="city-areas-subtitle">
-                Professional painting services throughout the state
-              </p>
-            </div>
+      {/* Aqui existia uma grade que linkava as 117 cidades a partir de TODA
+          pagina de cidade: 117 x 117, quase 14 mil links identicos. Isso
+          repartia o peso interno igualmente entre todas e nao dizia nada ao
+          Google sobre quais paginas importam, alem de deixar o grafo de links
+          de cada cidade indistinguivel do das outras 116.
 
-            <div className="city-areas-grid">
-              {cities.map((cityItem, idx) => (
-                <Link
-                  key={idx}
-                  href={`/massachusetts/${normalizeCitySlug(cityItem.slug)}`}
-                  className={`city-areas-link ${cityItem.name === city.name ? 'city-areas-link-active' : ''}`}
-                >
-                  {cityItem.name}
-                </Link>
-              ))}
-              <Link href="/massachusetts" className="city-areas-link-all">
-                View All Cities <ChevronRightIcon size={16} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+          O RelatedCities logo abaixo ja faz o trabalho certo: as cidades da
+          mesma regiao, que sao as que um morador de fato consideraria, mais o
+          hub da regiao. E /massachusetts continua listando as 117, entao
+          nenhuma cidade fica orfa. */}
 
       <RelatedCities citySlug={citySlug} cityName={city.name} />
       </main>

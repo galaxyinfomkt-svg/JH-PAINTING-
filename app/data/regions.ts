@@ -84,7 +84,7 @@ export const regions: Region[] = [
       'marlborough', 'hudson', 'framingham', 'framingham-center', 'natick',
       'ashland', 'hopkinton', 'southborough', 'northborough', 'westborough',
       'sudbury', 'concord', 'west-concord', 'acton', 'maynard', 'stow', 'bolton',
-      'wayland', 'cochituate', 'sherborn', 'holliston', 'weston', 'lincoln',
+      'wayland', 'cochituate', 'sherborn', 'holliston', 'weston', 'lincoln', 'cordaville',
     ],
     painPoints: [
       {
@@ -127,7 +127,7 @@ export const regions: Region[] = [
     citySlugs: [
       'worcester', 'shrewsbury', 'clinton', 'grafton', 'west-boylston',
       'millbury', 'auburn', 'sterling', 'boylston', 'holden', 'paxton',
-      'leicester', 'spencer', 'oxford', 'rutland', 'westminster', 'princeton',
+      'leicester', 'spencer', 'oxford', 'rutland', 'westminster', 'princeton', 'sunderland',
     ],
     painPoints: [
       {
@@ -171,7 +171,7 @@ export const regions: Region[] = [
       'lowell', 'billerica', 'pinehurst', 'chelmsford', 'tewksbury',
       'westford', 'groton', 'pepperell', 'east-pepperell', 'ayer', 'shirley',
       'townsend', 'dunstable', 'tyngsboro', 'littleton-common', 'carlisle',
-      'lunenburg',
+      'lunenburg', 'bedford', 'hamilton',
     ],
     painPoints: [
       {
@@ -214,7 +214,7 @@ export const regions: Region[] = [
     citySlugs: [
       'wellesley', 'needham', 'dover', 'medfield', 'millis', 'millis-clicquot',
       'medway', 'norfolk', 'franklin', 'bellingham', 'wrentham', 'foxborough',
-      'canton', 'sharon', 'walpole', 'westwood', 'norwood', 'dedham',
+      'canton', 'sharon', 'walpole', 'westwood', 'norwood', 'dedham', 'new-bedford',
     ],
     painPoints: [
       {
@@ -299,7 +299,7 @@ export const regions: Region[] = [
     citySlugs: [
       'milford', 'upton', 'northbridge', 'whitinsville', 'sutton', 'mendon',
       'hopedale', 'uxbridge', 'blackstone', 'millville', 'douglas',
-      'east-douglas', 'woonsocket-ri',
+      'east-douglas', 'woonsocket-ri', 'southbridge',
     ],
     painPoints: [
       {
