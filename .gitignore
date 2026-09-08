@@ -37,3 +37,6 @@ next-env.d.ts
 # motivos: sao artefato de sessao, e o log de rede guarda URLs completas dos
 # desafios do Cloudflare Turnstile, que carregam tokens.
 .playwright-mcp/
+
+# Estado do empurrao diario para a Indexing API (vive no cache do Actions)
+google-index-state.json

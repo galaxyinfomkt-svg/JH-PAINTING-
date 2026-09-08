@@ -1,0 +1,62 @@
+name: Daily Google indexing
+
+# Empurra o proximo lote de URLs da JH para a Indexing API do Google, uma vez
+# por dia. A lista sai do proprio sitemap.xml, que ja e filtrado pela politica
+# de indexacao: pagina com noindex nao aparece la e nunca chega aqui.
+#
+# EXPECTATIVA CORRETA: baixa. A Indexing API e documentada so para JobPosting e
+# BroadcastEvent, e a JH nao tem nenhuma das duas. No outro site da mesma conta,
+# 70% das URLs empurradas nunca foram rastreadas. Isto roda para MEDIR o efeito
+# na JH com dado proprio.
+#
+# COTA: 200 por dia POR PROJETO do Google Cloud, dividida com os outros sites da
+# mesma conta de servico. Se comecar a dar 429, e disputa de cota, nao erro.
+#
+# Roda as 03:20 UTC, bem antes do horario em que os outros projetos costumam
+# rodar, para pegar a cota do dia ainda cheia.
+
+on:
+  schedule:
+    - cron: '20 3 * * *'
+  workflow_dispatch: {}
+
+concurrency:
+  group: daily-index
+  cancel-in-progress: false
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Guarda quais URLs ja foram enviadas, para o lote do dia seguinte
+      # continuar de onde parou em vez de repetir as mesmas 200.
+      - name: Restaura o progresso
+        uses: actions/cache@v4
+        with:
+          path: google-index-state.json
+          key: jh-index-state-${{ github.run_id }}
+          restore-keys: |
+            jh-index-state-
+
+      - name: Escreve a chave da conta de servico
+        env:
+          GOOGLE_SA: ${{ secrets.GOOGLE_SA }}
+        run: |
+          if [ -z "$GOOGLE_SA" ]; then
+            echo "::error::segredo GOOGLE_SA nao esta configurado"
+            exit 1
+          fi
+          printf '%s' "$GOOGLE_SA" > google-service-account.json
+
+      - name: Empurra o proximo lote
+        run: node scripts/google-index.mjs
+
+      - name: Apaga a chave
+        if: always()
+        run: rm -f google-service-account.json
