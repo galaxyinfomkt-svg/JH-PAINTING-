@@ -63,10 +63,34 @@ export const HIGH_DEMAND_SERVICES = new Set<string>([
 ])
 
 /**
- * Escape hatch. Leave false to honour the "index everything" decision.
- * Set true if the long tail proves un-indexable and you want crawl budget back.
+ * LIGADO EM 08/09/2026, depois que a escotilha provou ser necessaria.
+ *
+ * O QUE ACONTECEU
+ * Em 11/08 este arquivo tirou o noindex de 524 paginas de template de uma vez,
+ * triplicando a superficie programatica indexavel de 288 para 812. Uma semana
+ * depois, que e um ciclo de rerrastreamento, o site comecou a cair:
+ *
+ *   semana de 11/08   3.231 impressoes   posicao media 23,2
+ *   semana de 18/08   1.253              25,5
+ *   semana de 25/08     278              46,6
+ *   semana de 01/09     157              30,1
+ *
+ * COMO SE SABE QUE FOI ISTO
+ * A queda foi uniforme em TODO tipo de pagina, inclusive o blog (-90%), que o
+ * motor de conteudo nunca tocou: isso e sinal no dominio, nao em pagina. Nao
+ * houve core update confirmado em agosto de 2026. Nao foi penalidade nem
+ * bloqueio: a busca de marca MELHOROU no meio da queda, de posicao 9,3 para
+ * 5,5, e punicao de dominio mataria a marca junto. E nao foi robo sumindo:
+ * descontadas as buscas anomalas de zero clique, a busca real caiu de 236 para
+ * 47 por dia. Eliminadas as alternativas, sobra a expansao em massa, que e a
+ * assinatura documentada de conteudo gerado em escala.
+ *
+ * PARA REVERTER
+ * Voltar para false devolve as 819 paginas ao indice. So faca isso quando as
+ * cidades tiverem prova de obra propria, que e o que faz a pagina valer: com
+ * foto e video, Southbridge foi indexada em 8 dias.
  */
-export const REQUIRE_EVIDENCE_FOR_LONG_TAIL = false
+export const REQUIRE_EVIDENCE_FOR_LONG_TAIL = true
 
 /**
  * Population strings look like "20,000+", "3,000+", "72,000+".
