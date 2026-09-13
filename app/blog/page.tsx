@@ -42,6 +42,23 @@ export default function BlogPage() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
+  /*
+   * Tag ativa, vinda de /blog?tag=<tag>.
+   *
+   * POR QUE ISTO EXISTE
+   * Os 33 posts mostram as tags do artigo como link, 155 links no total, todos
+   * apontando para /blog?tag=<tag>. So que esta pagina nunca soube filtrar por
+   * tag, e o middleware ainda redirecionava /blog?tag=* para /blog. Resultado:
+   * a pessoa clicava em "exterior painting" e caia no blog inteiro, sem filtro
+   * nenhum. Nao era 404 - era pior, porque parecia ter funcionado.
+   *
+   * Lido do window.location e nao de useSearchParams() de proposito: esta
+   * pagina e pre-renderizada, e useSearchParams() obriga a envolver tudo num
+   * Suspense e tira a pagina do HTML estatico. Ler no efeito mantem o HTML
+   * estatico intacto e so aplica o filtro no cliente, que e quando o parametro
+   * existe de verdade.
+   */
+  const [activeTag, setActiveTag] = useState('')
 
   const featuredPosts = getFeaturedPosts(2)
 
@@ -50,6 +67,18 @@ export default function BlogPage() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  useEffect(() => {
+    const tag = new URLSearchParams(window.location.search).get('tag')
+    if (tag) setActiveTag(tag)
+  }, [])
+
+  const clearTag = () => {
+    setActiveTag('')
+    // Tira o ?tag= da barra sem recarregar, para a pagina nao dizer uma coisa
+    // e mostrar outra se a pessoa copiar o endereco depois de limpar o filtro.
+    window.history.replaceState(null, '', '/blog')
+  }
 
   const toggleMenu = () => setMenuOpen(!menuOpen)
   const closeMenu = () => {
@@ -64,7 +93,11 @@ export default function BlogPage() {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-    return matchesCategory && matchesSearch
+    // Tag casa por igualdade, nao por "contem": quem clica em "boston" quer os
+    // posts marcados com boston, nao todo post que mencione Boston no titulo.
+    const matchesTag = activeTag === '' ||
+                       post.tags.some(tag => tag.toLowerCase() === activeTag.toLowerCase())
+    return matchesCategory && matchesSearch && matchesTag
   })
 
   const formatDate = (dateString: string) => {
@@ -244,12 +277,21 @@ export default function BlogPage() {
                   aria-label="Search articles"
                 />
               </div>
+
+              {activeTag !== '' && (
+                <p className="blog-active-tag">
+                  Showing articles tagged <strong>{activeTag}</strong>
+                  <button type="button" onClick={clearTag} className="blog-active-tag-clear">
+                    Show all articles
+                  </button>
+                </p>
+              )}
             </div>
           </div>
         </section>
 
         {/* Featured Posts */}
-        {featuredPosts.length > 0 && searchQuery === '' && selectedCategory === 'all' && (
+        {featuredPosts.length > 0 && searchQuery === '' && selectedCategory === 'all' && activeTag === '' && (
           <section className="blog-featured-section">
             <div className="container">
               <div className="blog-section-header">
