@@ -12598,7 +12598,12 @@ button.video-card-rs {
   font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -.03em;
   line-height: 1.1; margin: 0 0 .75rem; color: #fff; text-wrap: balance;
 }
-.cityproof-lede { color: #8d94a2; margin: 0 0 1.75rem; font-size: 1rem; line-height: 1.6; max-width: 60ch; }
+/* .cityproof-lede virou <div> com varios <p>: os registros de obra agora saem
+   como prosa factual, nao como rotulos soltos. Ver proofNarrative() em
+   CityProof.tsx. */
+.cityproof-lede { color: #8d94a2; margin: 0 0 1.75rem; font-size: 1rem; line-height: 1.7; max-width: 62ch; }
+.cityproof-lede p { margin: 0 0 .85rem; }
+.cityproof-lede p:last-child { margin-bottom: 0; }
 .cityproof-jobs { list-style: none; margin: 0 0 1.75rem; padding: 0; display: grid; gap: .6rem; }
 .cityproof-jobs li {
   display: flex; flex-wrap: wrap; gap: .3rem 1rem; align-items: baseline;
