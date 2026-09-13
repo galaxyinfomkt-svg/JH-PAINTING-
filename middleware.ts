@@ -48,35 +48,92 @@ export function middleware(request: NextRequest) {
   const searchParams = url.searchParams.toString()
 
   /*
-   * URLs terminadas em /null -> 410 Gone.
+   * URLs terminadas em /null -> 301 para a pagina pai.
    *
-   * Os logs da Vercel mostram ~970 destas POR DIA, 131 caminhos distintos:
+   *   /massachusetts/sterling/null  ->  /massachusetts/sterling
+   *   /massachusetts/null           ->  /massachusetts
+   *   /null                         ->  /
    *
-   *   /massachusetts/null                 76
-   *   /massachusetts/whitinsville/null    17
-   *   /massachusetts/sterling/null        14
-   *   ...
-   *
+   * Os logs da Vercel mostram ~970 destas por dia, 131 caminhos distintos.
    * Elas nao existem no HTML servido hoje nem no build de 01/09 - conferi as
    * 1.042 paginas renderizadas dos dois. Sao URLs que algum deploy de agosto
    * emitiu, que os rastreadores enfileiraram e continuam visitando.
    *
-   * 410 e nao 404 de proposito, e e a mesma escolha ja feita logo abaixo para
-   * as URLs de spam: 404 significa "nao achei agora", e o Google volta para
-   * conferir por semanas; 410 significa "nao existe e nao vai voltar", e ele
-   * tira da fila muito mais rapido. Num site cujo problema atual e indexacao,
-   * orcamento de rastreamento gasto em 970 URLs mortas por dia e orcamento que
-   * nao esta sendo gasto nas paginas de cidade que a gente quer indexada.
+   * POR QUE NAO E MAIS 410, QUE FOI O QUE EU FIZ PRIMEIRO
+   * 410 devolve corpo VAZIO. Quem chegasse aqui - e pode ser gente, porque
+   * essas URLs sairam do proprio site e podem estar no historico de alguem ou
+   * num resultado de busca - via uma pagina em branco. Pior que o 404 de
+   * antes, que pelo menos renderiza app/not-found.tsx com cabecalho, telefone
+   * e caminho de volta. Eu tinha otimizado para o rastreador e esquecido do
+   * visitante.
    *
-   * Nenhuma cidade nem servico tem slug "null", entao isto nao pode pegar uma
-   * pagina real.
+   * O redirecionamento resolve os dois lados de uma vez, e resolve melhor:
+   *
+   *   para a pessoa  ela cai exatamente onde queria chegar. Quem pediu
+   *                  /massachusetts/sterling/null queria Sterling, e agora
+   *                  aterrissa na pagina de Sterling, nao numa tela de erro.
+   *                  Numa URL que veio de busca, isso e a diferenca entre um
+   *                  orcamento e uma aba fechada.
+   *   para o Google  301 para uma pagina real consolida o sinal, em vez de so
+   *                  apagar a URL. A regra do Google e essa mesma: redirecione
+   *                  quando existe pagina equivalente, use 404/410 so quando
+   *                  nao existe. Aqui existe.
+   *
+   * O 410 continua logo abaixo para as URLs de spam, e ali ele esta certo:
+   * aquilo e sonda de robo e nao tem destino equivalente nenhum.
+   *
+   * Se a cidade do caminho nao existir, o destino responde o 404 da marca -
+   * que e o mesmo lugar onde a pessoa cairia de qualquer jeito, so que agora
+   * com a pagina inteira em vez de tela branca.
    */
-  if (pathname === '/massachusetts/null' || pathname.endsWith('/null')) {
-    return new NextResponse(null, { status: 410 })
+  if (pathname === '/null' || pathname.endsWith('/null')) {
+    const parent = pathname.slice(0, -'/null'.length) || '/'
+    return NextResponse.redirect(new URL(parent, request.url), 301)
   }
 
-  // Block spam URLs with suspicious query strings
-  // These are typically from bots/attackers probing the site
+  /*
+   * URLs de spam -> 410 Gone. Aqui o 410 esta certo: e sonda de robo, nao ha
+   * pagina equivalente para onde mandar ninguem, e corpo vazio e o que se quer.
+   *
+   * QUATRO DOS CINCO PADROES NUNCA DISPARARAM. Medido, um a um:
+   *
+   *   ?40001/27139590.html          200   <- devia ser 410
+   *   ?2817xmcn10071nco37982.html   200   <- devia ser 410
+   *   ?s={search_term_string}       200   <- devia ser 410
+   *   ?339                          200   <- devia ser 410
+   *   ?chiba/                       410   <- unico que funcionava
+   *
+   * A CAUSA, medida com um cabecalho de depuracao no proprio middleware: o
+   * Next NORMALIZA a query antes do middleware receber a requisicao. Nao ha
+   * como ver a query crua aqui - nem `url.search` nem `request.url` trazem ela:
+   *
+   *   entra                         chega no middleware
+   *   ?40001/27139590.html          ?40001%2F27139590.html=
+   *   ?2817xmcn10071nco37982.html   ?2817xmcn10071nco37982.html=
+   *   ?s={search_term_string}       ?s=%7Bsearch_term_string%7D
+   *   ?339                          ?339=
+   *   ?chiba/                       ?chiba%2F=
+   *
+   * Ou seja: os caracteres viram percent-encode e uma chave sem valor ganha um
+   * "=" grudado no fim. Os padroes foram escritos contra a forma que a pessoa
+   * ve na barra do navegador, e nenhum sobrevive a isso. O ?chiba/ escapava so
+   * porque `/^\?chiba/` nao tem ancora no fim - funcionava por acidente.
+   *
+   * A CORRECAO: desfazer a normalizacao ANTES de comparar, em vez de reescrever
+   * os cinco padroes em percent-encode. Assim eles continuam legiveis como a
+   * URL que aparece no log, e um padrao novo pode ser copiado dali direto sem
+   * ninguem precisar lembrar desta pegadinha.
+   *
+   * decodeURIComponent lanca excecao em sequencia percent malformada (?%ZZ), e
+   * excecao aqui vira 500 na requisicao - por isso o try/catch. Se nao der para
+   * decodificar, compara com a forma normalizada mesmo e segue.
+   */
+  let rawQuery = ''
+  try {
+    rawQuery = searchParams ? `?${decodeURIComponent(searchParams).replace(/=$/, '')}` : ''
+  } catch {
+    rawQuery = searchParams ? `?${searchParams}` : ''
+  }
   const spamPatterns = [
     /^\?[0-9]+\/[0-9]+\.html$/,           // ?40001/27139590.html
     /^\?[0-9]+xmcn[0-9]+nco[0-9]+\.html$/, // ?2817xmcn10071nco37982.html
@@ -85,12 +142,10 @@ export function middleware(request: NextRequest) {
     /^\?[0-9]+$/,                          // ?339
   ]
 
-  // Check if the URL has suspicious query strings
-  if (searchParams) {
-    const fullQuery = `?${searchParams}`
+  if (rawQuery) {
     for (const pattern of spamPatterns) {
-      if (pattern.test(fullQuery)) {
-        // Return 410 Gone for spam URLs - tells search engines to remove from index
+      if (pattern.test(rawQuery)) {
+        // 410 Gone: diz ao buscador para tirar do indice, nao para reconferir
         return new NextResponse(null, { status: 410 })
       }
     }
