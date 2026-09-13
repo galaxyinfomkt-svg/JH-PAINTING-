@@ -4,9 +4,26 @@ const nextConfig = {
   generateBuildId: async () => {
     return `build-${Date.now()}`
   },
-  // Skip TypeScript casing errors on Windows (Git preserves correct casing)
+  /*
+   * Erro de tipo agora DERRUBA o build, em vez de ir para producao calado.
+   *
+   * Estava `ignoreBuildErrors: true`, justificado por erro de caixa alta/baixa
+   * no Windows. O preco disso e que QUALQUER erro de tipo passava direto - e o
+   * build da Vercel roda em Linux, onde o problema de caixa nem existe. Ou
+   * seja: a gente pagava o risco inteiro por um problema que so aparece na
+   * maquina de quem desenvolve.
+   *
+   * Rodei `tsc --noEmit` no projeto antes de mexer: ZERO erro. Entao ligar a
+   * checagem nao quebra nada hoje, e passa a barrar amanha.
+   *
+   * Isso importa aqui por um motivo concreto: os ~970 acessos diarios a URLs
+   * /massachusetts/<cidade>/null que aparecem nos logs da Vercel sao
+   * exatamente a cara de um valor que podia ser null chegando inteiro na
+   * montagem de uma URL. Um erro de tipo que ninguem viu porque o build nunca
+   * reclamou.
+   */
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   experimental: {
     workerThreads: false,
