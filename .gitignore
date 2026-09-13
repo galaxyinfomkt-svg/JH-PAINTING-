@@ -40,3 +40,4 @@ next-env.d.ts
 
 # Estado do empurrao diario para a Indexing API (vive no cache do Actions)
 google-index-state.json
+dup_*.json
