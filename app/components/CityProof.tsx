@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { projectsForCity, formatCompleted } from '@/app/data/projects'
+import { projectsForCity, formatCompleted, type Project } from '@/app/data/projects'
 
 /**
  * First-hand proof block for /massachusetts/[city] and city+service pages.
@@ -13,6 +13,62 @@ import { projectsForCity, formatCompleted } from '@/app/data/projects'
  * Renders nothing at all for towns with no documented work - an empty state
  * would be worse than absence, and fabricating one is out of the question.
  */
+/**
+ * Transforma os registros de obra em PROSA, nao em rotulos soltos.
+ *
+ * POR QUE. Antes esta secao mostrava titulo, espaco e data como fragmentos -
+ * "Cafeteria", "2025-10", "Commercial Painting". Fragmento curto nao e frase, e
+ * o que carrega significado para um buscador (e para a medicao de conteudo
+ * proprio) e a frase inteira. Os mesmos fatos, escritos como texto corrido,
+ * passam a ser conteudo que so esta cidade tem.
+ *
+ * A REGRA CONTINUA A MESMA de projects.ts: so entra o que o registro prova -
+ * cidade, tipo de trabalho, espaco, cliente quando identificavel, mes das
+ * fotos e a QUANTIDADE de fotos, que e contavel. Nada de metragem inventada,
+ * nada de codigo de tinta imaginado, nada de depoimento que ninguem deu.
+ */
+function proofNarrative(
+  shown: Project[],
+  cityName: string,
+  state: string,
+  totalPhotos: number
+): string[] {
+  const out: string[] = []
+  const spaces = shown.map((p) => p.space).filter(Boolean) as string[]
+  const dated = shown.filter((p) => p.completed)
+  const clients = Array.from(new Set(shown.map((p) => p.client).filter(Boolean))) as string[]
+  const trades = Array.from(new Set(shown.map((p) => p.serviceLabel)))
+
+  const join = (xs: string[]) =>
+    xs.length <= 1 ? xs[0] ?? '' : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`
+
+  if (shown.length === 1) {
+    const p = shown[0]
+    const when = p.completed ? `In ${formatCompleted(p.completed)} we` : 'We'
+    const who = p.client ? ` for ${p.client}` : ''
+    const where = p.space ? `, covering the ${p.space.toLowerCase()}` : ''
+    out.push(
+      `${when} carried out ${p.serviceLabel.toLowerCase()} on this ${cityName} property${who}${where}.`
+    )
+  } else {
+    const when = dated.length > 0 ? `In ${formatCompleted(dated[0].completed as string)} ` : ''
+    const who = clients.length > 0 ? ` for ${join(clients)}` : ''
+    out.push(
+      `${when}we completed ${shown.length} separate jobs in ${cityName}${who}, covering ${join(trades.map((t) => t.toLowerCase()))}.`
+    )
+    if (spaces.length > 0) {
+      out.push(
+        `The spaces we worked in were the ${join(spaces.map((x) => x.toLowerCase()))}, each finished as its own stage so the building stayed usable throughout.`
+      )
+    }
+  }
+
+  out.push(
+    `The ${totalPhotos} photographs below were taken on those jobs by our own crew in ${cityName}, ${state}. They are not stock images, and nothing in them was staged for the website.`
+  )
+  return out
+}
+
 export default function CityProof({
   citySlug,
   cityName,
@@ -41,9 +97,11 @@ export default function CityProof({
         <h2 id="cityproof-h" className="cityproof-h">
           Jobs we&apos;ve finished in {cityName}
         </h2>
-        <p className="cityproof-lede">
-          These are our own site photographs from {cityName}, {state} - not stock images.
-        </p>
+        <div className="cityproof-lede">
+          {proofNarrative(shown, cityName, state, photos.length).map((line) => (
+            <p key={line.slice(0, 40)}>{line}</p>
+          ))}
+        </div>
 
         <ul className="cityproof-jobs">
           {shown.map((p) => (
