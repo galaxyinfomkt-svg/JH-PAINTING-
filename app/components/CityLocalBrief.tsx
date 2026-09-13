@@ -47,7 +47,23 @@ import {
  * vizinha aparecem DENTRO do texto corrido - cada um e um token que nenhuma
  * outra pagina do site tem.
  */
-export default function CityLocalBrief({ city }: { city: City }) {
+/**
+ * `service` opcional. Na pagina de cidade ele vem vazio.
+ *
+ * Nas 819 paginas cidade x servico ele e OBRIGATORIO para o bloco valer alguma
+ * coisa, e o motivo e mecanico: se o texto so falasse da cidade, as 7 paginas
+ * de servico daquela cidade teriam as MESMAS frases, e frase repetida em 7
+ * paginas nao e conteudo proprio - nem para a medicao, nem para o Google. Com o
+ * servico dentro da frase, cada uma das 819 combinacoes diz uma coisa que
+ * nenhuma outra URL do site diz.
+ */
+export default function CityLocalBrief({
+  city,
+  service,
+}: {
+  city: City
+  service?: { slug: string; label: string }
+}) {
   const { neighborhoods, landmarks } = localAnchors(city)
   const near = nearbyCities(city, 4)
   const zips = zipNote(city)
@@ -72,7 +88,9 @@ export default function CityLocalBrief({ city }: { city: City }) {
         <div className="city-local-brief">
           {neighborhoods.length > 0 && (
             <p>
-              Our crews work across {city.name}&apos;s {list(neighborhoods)}
+              {service
+                ? `${service.label} crews cover ${city.name}'s ${list(neighborhoods)}`
+                : `Our crews work across ${city.name}'s ${list(neighborhoods)}`}
               {landmarks.length > 0 ? (
                 <>
                   {' '}— if you are near {list(landmarks)}, you are inside the area we cover every week.
@@ -85,8 +103,8 @@ export default function CityLocalBrief({ city }: { city: City }) {
 
           {neighborhoods.length === 0 && landmarks.length > 0 && (
             <p>
-              If your property sits near {list(landmarks)}, it is inside the
-              part of {city.name} our crews cover every week.
+              If your property sits near {list(landmarks)}, it is inside the part of{' '}
+              {city.name} our {service ? service.label.toLowerCase() : ''} crews cover every week.
             </p>
           )}
 
@@ -119,13 +137,15 @@ export default function CityLocalBrief({ city }: { city: City }) {
                   {i < near.length - 2 ? ', ' : i === near.length - 2 ? ' and ' : ''}
                 </span>
               ))}
-              , so a {city.name} job and a neighbouring one can often share the same crew week
-              — which is usually what makes an earlier start date possible.
+              , so a {service ? service.label.toLowerCase() : 'painting'} job in {city.name} and a
+              neighbouring one can often share the same crew week — which is usually what makes an
+              earlier start date possible.
             </p>
           )}
 
           <p className="city-local-brief-note">
-            Everything above comes from our own service records for {city.name}, {state}.
+            Everything above comes from our own service records for{' '}
+            {service ? `${service.label.toLowerCase()} in ` : ''}{city.name}, {state}.
             We do not publish figures we cannot stand behind.
           </p>
         </div>

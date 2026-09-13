@@ -51,6 +51,7 @@ import RelatedCities from '@/app/components/RelatedCities'
 import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import CapacityNotice from '@/app/components/CapacityNotice'
+import CityLocalBrief from '@/app/components/CityLocalBrief'
 
 // Dynamic import for below-fold heavy client component (code splitting)
 const BeforeAfterGrid = dynamic(() => import('@/app/components/BeforeAfterGrid'))
@@ -487,35 +488,10 @@ export default async function CityServicePage({ params }: Props) {
           </div>
         </section>
 
-        {/* Pain Points Section */}
-        <section className="service-section service-section-white">
-          <div className="container">
-            <div className="service-section-header">
-              <h2 className="service-section-title">
-                Common {service.name} Problems in {city.name}
-              </h2>
-              <p className="service-section-subtitle">
-                {city.name} homeowners face unique challenges. We have solutions for each one.
-              </p>
-            </div>
-
-            <div className="service-pain-grid">
-              {(uniqueServiceContent?.painPoints && uniqueServiceContent.painPoints.length > 0
-                ? uniqueServiceContent.painPoints
-                : service.painPoints
-              ).map((item, idx) => (
-                <div key={idx} className="service-pain-card">
-                  <h3 className="service-pain-title">{item.title}</h3>
-                  <p className="service-pain-desc">{item.desc}</p>
-                  <p className="service-pain-solution">
-                    <CheckCircle2 size={18} />
-                    {item.solution}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Bloco factual da cidade, com o servico dentro das frases. Sem o
+            servico, as 7 paginas desta cidade repetiriam o mesmo texto e ele
+            deixaria de ser conteudo proprio. Ver CityLocalBrief.tsx. */}
+        <CityLocalBrief city={city} service={{ slug: serviceSlug, label: service.title ?? serviceSlug }} />
 
         {/* What We Offer */}
         <section className="service-section service-section-gray">
@@ -574,107 +550,6 @@ export default async function CityServicePage({ params }: Props) {
           </div>
         </section>
 
-        {/* Before/After Section */}
-        <section className="before-after-section">
-          <div className="container">
-            <div className="section-header section-header-enhanced">
-              <span className="section-eyebrow">See The Difference</span>
-              <h2>Before & After Transformations</h2>
-              <p>Drag the slider to see the amazing results we deliver for our {city.name} clients.</p>
-            </div>
-
-            <BeforeAfterGrid pairs={beforeAfterPairs} />
-          </div>
-        </section>
-
-        {/* Video Section */}
-        <section className="service-section service-section-dark">
-          <div className="container">
-            <div className="service-section-header">
-              <h2 className="service-section-title service-section-title-light">
-                Watch Our {service.name} Work in {city.name}
-              </h2>
-              <p className="service-section-subtitle service-section-subtitle-light">
-                See how we transform {city.name} homes with professional {service.name.toLowerCase()}
-              </p>
-            </div>
-
-            <div className="service-video-grid">
-              {VIDEOS.map((video, idx) => (
-                <a
-                  key={idx}
-                  href={`https://www.youtube.com/watch?v=${video.id}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="service-video-card"
-                >
-                  <Image
-                    src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-                    alt={`${video.title} - ${city.name}, MA`}
-                    fill
-                    loading="lazy"
-                    quality={75}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
-                  />
-                  <div className="service-video-overlay">
-                    <div className="service-video-play">
-                      <Play size={32} fill="#fff" color="#fff" />
-                    </div>
-                  </div>
-                  <p className="service-video-title">{video.title}</p>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* About Us Section */}
-        <section className="service-section service-section-white">
-          <div className="container">
-            <div className="service-about-grid">
-              <div className="service-about-image-wrapper">
-                <div className="service-about-image">
-                  <Image
-                    src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp"
-                    alt={`Jafet Henrique - Owner of JH Painting Services in ${city.name}, MA`}
-                    fill
-                    loading="lazy"
-                    quality={75}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
-                    style={{ objectPosition: 'top center' }}
-                  />
-                </div>
-                <div className="service-about-experience">
-                  <div className="service-about-experience-number">15+</div>
-                  <div className="service-about-experience-label">Years Experience</div>
-                </div>
-              </div>
-
-              <div className="service-about-content">
-                <span className="service-section-badge">Your {city.name} {service.name} Team</span>
-                <h2>Why {city.name} Homeowners Choose JH Painting for {service.name}</h2>
-                <p>
-                  Owner Jafet Henrique founded JH Painting Services with one mission: deliver exceptional {service.name.toLowerCase()} that {city.name} families can trust. From residential homes to historic landmarks like our <strong>Waltham Church renewal</strong> &mdash; an incredible large-scale transformation &mdash; we bring the same precision, premium materials, and genuine craftsmanship to every {city.name} project.
-                </p>
-                <p>
-                  {uniqueServiceContent?.localContext || `We're proud to serve ${city.name} and the surrounding ${city.county || 'Massachusetts'} communities. Our team understands the unique challenges of ${city.name} homes - from historic properties requiring specialized techniques to modern construction needing proper preparation. Every detail matters, from surface prep to final inspection.`}
-                </p>
-
-                <div className="service-about-features">
-                  {features.map((item, idx) => (
-                    <div key={idx} className="service-about-feature">
-                      <item.icon size={24} />
-                      <span>{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Other Services in This City */}
         <section className="service-section service-section-gray">
           <div className="container">
@@ -701,30 +576,6 @@ export default async function CityServicePage({ params }: Props) {
             </div>
           </div>
         </section>
-
-        {/* Why Choose Us for This Service in This City */}
-        {uniqueServiceContent?.whyChooseUs && uniqueServiceContent.whyChooseUs.length > 0 && (
-          <section className="service-section service-section-white">
-            <div className="container">
-              <div className="service-section-header">
-                <span className="service-section-badge">Why {city.name} Chooses Us</span>
-                <h2 className="service-section-title">Why {city.name} Homeowners Trust JH Painting for {service.name}</h2>
-                <p className="service-section-subtitle">
-                  Local expertise, premium quality, and genuine commitment to your {city.name} home
-                </p>
-              </div>
-
-              <div className="service-offerings-grid">
-                {uniqueServiceContent.whyChooseUs.map((reason, idx) => (
-                  <div key={idx} className="service-offering-item">
-                    <CheckCircle2 size={20} />
-                    <span>{reason}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* FAQ Section - City + Service Specific */}
         {uniqueServiceContent?.faq && uniqueServiceContent.faq.length > 0 && (
