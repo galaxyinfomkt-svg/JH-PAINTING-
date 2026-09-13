@@ -4,6 +4,7 @@ import './globals.css'
 import FloatingButtons from './components/FloatingButtons'
 import MobileStickyCTA from './components/MobileStickyCTA'
 import DeferredScripts from './components/DeferredScripts'
+import { Analytics } from '@vercel/analytics/next'
 import { CITY_COUNT } from './data/cities'
 
 // Optimize font loading - 'optional' prevents font from being render-blocking
@@ -597,6 +598,25 @@ export default function RootLayout({
           82 KiB transfer + parse time.
         */}
         <DeferredScripts />
+        {/*
+          Vercel Web Analytics.
+
+          POR QUE ENTRA AQUI, E NAO EM DeferredScripts
+          O site nao tinha NENHUMA medicao de trafego do lado da Vercel: o
+          painel respondia "Web Analytics not found" porque o pacote nunca foi
+          instalado. Toda a leitura de trafego dependia do Search Console (que
+          atrasa 2-3 dias e so enxerga busca organica) e do GA4 via GTM (que so
+          carrega depois da primeira interacao, por causa do DeferredScripts -
+          ou seja, quem abre uma pagina e sai NAO e contado).
+
+          Este e first-party: o script sai de /_vercel/insights/script.js, do
+          nosso proprio dominio, e o evento vai para /_vercel/insights/event.
+          Por isso passa no CSP sem mudar nada - `script-src 'self'` e
+          `connect-src 'self'` ja cobrem - e por isso ele NAO e adiado: sao
+          ~1 KB e adiar significaria perder justamente a visita que nao
+          interage, que e a que precisamos contar.
+        */}
+        <Analytics />
       </body>
     </html>
   )
