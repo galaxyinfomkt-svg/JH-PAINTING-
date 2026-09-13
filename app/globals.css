@@ -12953,3 +12953,36 @@ button.video-card-rs {
 .blog-active-tag-clear:focus-visible {
   color: #fff;
 }
+
+/*
+ * CityLocalBrief - o bloco factual por cidade.
+ *
+ * Texto corrido de leitura confortavel: os nomes proprios (bairro, ponto de
+ * referencia, CEP, cidade vizinha) precisam ser lidos como frase, nao como
+ * despejo de dados, senao a pagina ganha no indicador e perde no leitor.
+ */
+.city-local-brief {
+  max-width: 68ch;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--jh-text);
+}
+
+.city-local-brief p { margin: 0 0 1.15rem; }
+
+.city-local-brief a {
+  color: var(--jh-red);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.city-local-brief a:hover { color: var(--jh-dark); }
+
+.city-local-brief-note {
+  font-size: 0.92rem;
+  color: var(--jh-text-light);
+  border-left: 3px solid var(--jh-red);
+  padding-left: 1rem;
+  margin-top: 1.75rem;
+}
