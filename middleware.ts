@@ -6,6 +6,34 @@ export function middleware(request: NextRequest) {
   const pathname = url.pathname
   const searchParams = url.searchParams.toString()
 
+  /*
+   * URLs terminadas em /null -> 410 Gone.
+   *
+   * Os logs da Vercel mostram ~970 destas POR DIA, 131 caminhos distintos:
+   *
+   *   /massachusetts/null                 76
+   *   /massachusetts/whitinsville/null    17
+   *   /massachusetts/sterling/null        14
+   *   ...
+   *
+   * Elas nao existem no HTML servido hoje nem no build de 01/09 - conferi as
+   * 1.042 paginas renderizadas dos dois. Sao URLs que algum deploy de agosto
+   * emitiu, que os rastreadores enfileiraram e continuam visitando.
+   *
+   * 410 e nao 404 de proposito, e e a mesma escolha ja feita logo abaixo para
+   * as URLs de spam: 404 significa "nao achei agora", e o Google volta para
+   * conferir por semanas; 410 significa "nao existe e nao vai voltar", e ele
+   * tira da fila muito mais rapido. Num site cujo problema atual e indexacao,
+   * orcamento de rastreamento gasto em 970 URLs mortas por dia e orcamento que
+   * nao esta sendo gasto nas paginas de cidade que a gente quer indexada.
+   *
+   * Nenhuma cidade nem servico tem slug "null", entao isto nao pode pegar uma
+   * pagina real.
+   */
+  if (pathname === '/massachusetts/null' || pathname.endsWith('/null')) {
+    return new NextResponse(null, { status: 410 })
+  }
+
   // Block spam URLs with suspicious query strings
   // These are typically from bots/attackers probing the site
   const spamPatterns = [
@@ -95,7 +123,14 @@ export const config = {
      * - favicon.ico (favicon file)
      * - robots.txt
      * - sitemap.xml
+     * - _vercel (Web Analytics: /_vercel/insights/script.js e /event)
+     *
+     * _vercel entrou junto com o <Analytics /> do layout. Sem ele, CADA
+     * carregamento do script e CADA evento de pageview invocaria este
+     * middleware sem ter nada para fazer - e middleware na Vercel e cobrado
+     * por invocacao. O projeto ja faz 32.425 invocacoes por dia; nao ha
+     * motivo para a propria medicao aumentar essa conta.
      */
-    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)',
+    '/((?!api|_next/static|_next/image|_vercel|favicon.ico|robots.txt|sitemap.xml).*)',
   ],
 }
