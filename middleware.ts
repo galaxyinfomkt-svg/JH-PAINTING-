@@ -1,6 +1,47 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
+/**
+ * Passa a pagina adiante, marcando-a como nao-indexavel quando ela esta sendo
+ * servida por um endereco *.vercel.app em vez do dominio de verdade.
+ *
+ * O PROBLEMA
+ * O deploy de producao responde por QUATRO enderecos ao mesmo tempo:
+ *
+ *   jhpaintingservices.com                            <- o nosso
+ *   www.jhpaintingservices.com                        <- o nosso
+ *   jh-painting-galaxy-mkts-projects.vercel.app       <- gerado pela Vercel
+ *   jh-painting-git-main-...vercel.app                <- gerado pela Vercel
+ *
+ * O projeto nao tem protecao de deploy (conferido: password, SSO e trusted IPs
+ * todos desligados), e next.config.js manda `X-Robots-Tag: index, follow` em
+ * `/(.*)`, ou seja, nos quatro. Resultado: as 1.042 paginas existem, abertas e
+ * mandando indexar, em tres dominios alem do nosso.
+ *
+ * O <link rel="canonical"> de cada pagina aponta para jhpaintingservices.com,
+ * e isso costuma resolver - mas canonical e sugestao, nao ordem, e num site que
+ * hoje esta brigando para ser indexado nao ha por que deixar copia aberta.
+ *
+ * POR QUE A REGRA E `endsWith('.vercel.app')` E NAO UMA LISTA DE PERMITIDOS
+ * De proposito, e a diferenca importa. Uma lista de permitidos ("marque tudo
+ * que nao for jhpaintingservices.com") poe o site inteiro a um Host inesperado
+ * de distancia de um noindex em producao. Esta regra so pode alcancar host
+ * terminado em .vercel.app, entao nao existe entrada possivel que faca ela
+ * atingir o dominio de verdade. Ela tambem cobre sozinha todo preview futuro.
+ *
+ * NAO redireciona, so acrescenta cabecalho: redirecionar exigiria saber em que
+ * direcao a Vercel ja redireciona www <-> apex, e um loop no dominio de
+ * producao derruba o site. Isso fica para o painel.
+ */
+function pass(request: NextRequest): NextResponse {
+  const response = NextResponse.next()
+  const host = (request.headers.get('host') ?? '').toLowerCase().split(':')[0]
+  if (host.endsWith('.vercel.app')) {
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow')
+  }
+  return response
+}
+
 export function middleware(request: NextRequest) {
   const url = request.nextUrl
   const pathname = url.pathname
@@ -97,20 +138,38 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL(`/massachusetts/${cleanSlug}/${service}`, request.url), 301)
   }
 
-  // 301 Redirect: /cities/X-ma → /massachusetts/X  (also handles /cities/X without -ma)
+  /*
+   * 301: /cities/X[-ma|-ri] -> /massachusetts/X[-ri]
+   *
+   * O ramo especial de Rhode Island saiu daqui, porque ele mandava para lugar
+   * nenhum. O codigo dizia:
+   *
+   *     // Skip RI cities - they stay under /cities/ for now
+   *     if (citySlug.endsWith('-ri')) return NextResponse.next()
+   *
+   * So que /cities/ NAO existe mais - nao ha app/cities no projeto. Entao
+   * /cities/woonsocket-ri respondia 404, enquanto a pagina real estava viva em
+   * /massachusetts/woonsocket-ri (200, e no sitemap, junto com as outras sete
+   * URLs de Woonsocket). O comentario descrevia um mundo que deixou de existir
+   * quando as rotas mudaram para /massachusetts/.
+   *
+   * Detalhe que faz a correcao ser segura: a linha abaixo tira SO o "-ma".
+   * `woonsocket-ri` passa inteiro e vira /massachusetts/woonsocket-ri, que e
+   * exatamente a URL canonica da cidade. Nao ha caso de RI que precise de
+   * tratamento proprio.
+   *
+   * A versao com servico (/cities/woonsocket-ri/interior-painting) ja estava
+   * certa: cai na regra de cima, que tambem so tira "-ma", e ja redirecionava
+   * para /massachusetts/woonsocket-ri/interior-painting.
+   */
   const cityOnlyMatch = pathname.match(/^\/cities\/([a-z][a-z0-9-]+)$/)
   if (cityOnlyMatch) {
     const citySlug = cityOnlyMatch[1]
-    // Skip RI cities - they stay under /cities/ for now
-    if (citySlug.endsWith('-ri')) {
-      return NextResponse.next()
-    }
-    // Strip -ma suffix for the new URL
     const cleanSlug = citySlug.endsWith('-ma') ? citySlug.slice(0, -3) : citySlug
     return NextResponse.redirect(new URL(`/massachusetts/${cleanSlug}`, request.url), 301)
   }
 
-  return NextResponse.next()
+  return pass(request)
 }
 
 export const config = {
