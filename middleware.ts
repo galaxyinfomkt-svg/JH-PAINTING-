@@ -145,8 +145,23 @@ export function middleware(request: NextRequest) {
   if (rawQuery) {
     for (const pattern of spamPatterns) {
       if (pattern.test(rawQuery)) {
-        // 410 Gone: diz ao buscador para tirar do indice, nao para reconferir
-        return new NextResponse(null, { status: 410 })
+        /*
+         * 301 para o MESMO caminho sem a query suja - nao 410.
+         *
+         * Era 410, e 410 devolve corpo vazio. Foi o mesmo erro que eu tinha
+         * cometido nas URLs /null: otimizar para o rastreador e deixar quem e
+         * gente numa tela branca. /?339 nao e uma pagina que sumiu - e a HOME
+         * com lixo pendurado na query. Quem abrir aquilo tem que ver a home.
+         *
+         * E para o Google isto tambem e melhor que o 410: a URL suja passa a
+         * apontar para a URL limpa, que ja e a canonica da pagina, entao o
+         * sinal consolida em vez de simplesmente sumir.
+         *
+         * Nao ha risco de loop: o destino e montado so com o pathname, sem
+         * query nenhuma, entao a requisicao seguinte nao casa com padrao
+         * nenhum daqui.
+         */
+        return NextResponse.redirect(new URL(pathname, request.url), 301)
       }
     }
   }
