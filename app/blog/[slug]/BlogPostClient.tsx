@@ -357,7 +357,10 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
                 <div className="blog-article-tags">
                   <span className="blog-article-tags-label"><Tag size={16} /> Tags:</span>
                   {post.tags.map((tag) => (
-                    <Link href={`/blog?tag=${tag}`} key={tag} className="blog-article-tag">
+                    /* encodeURIComponent: as tags tem espaco ("exterior painting"),
+                       e o href saia com o espaco cru - /blog?tag=exterior painting.
+                       Navegador conserta, rastreador nem sempre. */
+                    <Link href={`/blog?tag=${encodeURIComponent(tag)}`} key={tag} className="blog-article-tag">
                       {tag}
                     </Link>
                   ))}

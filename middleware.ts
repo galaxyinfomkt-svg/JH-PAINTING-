@@ -151,11 +151,21 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // Redirect blog tag URLs to main blog page
-  // /blog?tag=cabinet%20painting -> /blog
-  if (pathname === '/blog' && searchParams.includes('tag=')) {
-    return NextResponse.redirect(new URL('/blog', request.url), 301)
-  }
+  /*
+   * O redirect de /blog?tag=* para /blog saiu daqui.
+   *
+   * Ele existia para nao deixar ~104 variantes de query virarem URL rastreavel.
+   * O preco era alto demais: os 33 posts mostram as tags do artigo como link -
+   * 155 links no site - e todos caiam no blog SEM filtro. A pessoa clicava em
+   * "exterior painting" e recebia o blog inteiro, como se o clique nao tivesse
+   * feito nada.
+   *
+   * Agora /blog le o ?tag= e filtra de verdade (app/blog/page.tsx). E o medo
+   * de conteudo duplicado ja estava resolvido sem o redirect: /blog declara
+   * <link rel="canonical" href="https://jhpaintingservices.com/blog">, entao o
+   * Google consolida toda variante de query na URL limpa. Conferido no HTML
+   * servido, com e sem o parametro.
+   */
 
   // Redirect old city+service painter URLs to new /massachusetts/ structure
   // /wellesley-ma-interior-house-painting -> /massachusetts/wellesley/interior-painting

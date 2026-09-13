@@ -12910,3 +12910,46 @@ button.video-card-rs {
   border: 1px solid rgba(0, 0, 0, .12);
 }
 .cityvid-cap { margin: .75rem 0 0; font-size: .9rem; line-height: 1.55; color: #5b6270; }
+
+/*
+ * Aviso de tag ativa no /blog.
+ *
+ * Aparece quando a pessoa chega por /blog?tag=<tag>, vindo do link de tag de um
+ * post. Antes esse clique nao fazia nada visivel - o middleware jogava fora o
+ * parametro e a pessoa recebia o blog inteiro. Agora o filtro funciona, e este
+ * bloco e o que diz que ele esta ligado e como desligar.
+ *
+ * Fica sobre o fundo escuro do hero do blog, entao usa os tokens de texto sobre
+ * escuro em vez das cores de corpo.
+ */
+.blog-active-tag {
+  max-width: 500px;
+  margin: 1rem auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  color: var(--jh-text-on-dark-muted);
+}
+
+.blog-active-tag strong {
+  color: #fff;
+}
+
+.blog-active-tag-clear {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--jh-red-on-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.blog-active-tag-clear:hover,
+.blog-active-tag-clear:focus-visible {
+  color: #fff;
+}
