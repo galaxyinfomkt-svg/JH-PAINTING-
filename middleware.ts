@@ -128,6 +128,19 @@ export function middleware(request: NextRequest) {
    * excecao aqui vira 500 na requisicao - por isso o try/catch. Se nao der para
    * decodificar, compara com a forma normalizada mesmo e segue.
    */
+  // DEBUG PREVIEW - nao vai para main
+  if (pathname === '/__q') {
+    let dec = 'ERRO'
+    try { dec = decodeURIComponent(url.searchParams.toString()) } catch { dec = 'THREW' }
+    return new NextResponse(null, { status: 204, headers: {
+      'x-q-sp': url.searchParams.toString(),
+      'x-q-search': url.search,
+      'x-q-requrl': request.url,
+      'x-q-decoded': dec,
+      'x-q-final': `?${dec.replace(/=$/, '')}`,
+      'x-q-match': String(/^\?[0-9]+xmcn[0-9]+nco[0-9]+\.html$/.test(`?${dec.replace(/=$/, '')}`)),
+    }})
+  }
   let rawQuery = ''
   try {
     rawQuery = searchParams ? `?${decodeURIComponent(searchParams).replace(/=$/, '')}` : ''
