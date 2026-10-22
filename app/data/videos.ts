@@ -123,7 +123,7 @@ export const videos: SiteVideo[] = [
     description:
       'Walkthrough of an interior repaint by JH Painting Services in Groton, Massachusetts: rooms cleared and masked, doors off their hinges, and the finished hallway, landing and bedrooms.',
     uploadDate: '2026-09-01',
-    duration: 'PT39S',
+    duration: 'PT42S',
     citySlug: 'groton',
     service: 'interior-painting',
   },
@@ -136,7 +136,7 @@ export const videos: SiteVideo[] = [
     description:
       'Walkthrough of an interior repaint by JH Painting Services in an occupied Southbridge, Massachusetts home, covering the living and dining rooms, bedrooms and bathrooms.',
     uploadDate: '2026-09-01',
-    duration: 'PT38S',
+    duration: 'PT41S',
     citySlug: 'southbridge',
     service: 'interior-painting',
   },
@@ -227,7 +227,7 @@ export const videos: SiteVideo[] = [
     description:
       'Walkthrough of a finished bathroom repaint by JH Painting Services in Milford, Massachusetts: gray walls, white trim, vanity and tub surround.',
     uploadDate: '2026-10-22',
-    duration: 'PT31S',
+    duration: 'PT34S',
     citySlug: 'milford',
     service: 'interior-painting',
   },
@@ -240,7 +240,7 @@ export const videos: SiteVideo[] = [
     description:
       'Walkthrough of a finished bathroom repaint by JH Painting Services in Sherborn, Massachusetts: white walls and trim with the vanity, tub and hallway closets.',
     uploadDate: '2026-10-22',
-    duration: 'PT28S',
+    duration: 'PT31S',
     citySlug: 'sherborn',
     service: 'interior-painting',
   },
