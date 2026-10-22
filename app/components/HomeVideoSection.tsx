@@ -24,6 +24,18 @@ const XIcon = () => (
 // uploadDate + duration (see app/data/videos.ts).
 const schema = videoSchema(videos)
 
+const HOME_VIDEO_IDS = [
+  'douglas-living-room-before-after',
+  'douglas-dining-room-before-after',
+  'groton-accent-wall-before-after',
+  'northbridge-living-room-before-after',
+  'marlborough-break-room-before-after',
+  'southbridge-interior-before-after',
+]
+const homeVideos = HOME_VIDEO_IDS.map((id) => videos.find((v) => v.id === id)).filter(
+  (v): v is SiteVideo => Boolean(v)
+)
+
 export default function HomeVideoSection() {
   // Guarda o VIDEO, nao a URL de embed: a grade agora mistura YouTube com
   // arquivo local, e cada um abre de um jeito diferente no modal.
@@ -49,9 +61,10 @@ export default function HomeVideoSection() {
           </div>
 
           <div className="video-grid-rs">
-            {/* Six cards: the grid is built for that. Every other video still shows on
-                its own city page via CityVideo, and all of them stay in the schema. */}
-            {videos.slice(0, 6).map((video) => (
+            {/* Six cards, the newest real before/after footage first. Every video
+                still shows on its own city page via CityVideo, and all of them stay
+                in the schema; the YouTube ones are one click away below. */}
+            {homeVideos.map((video) => (
               <button
                 key={video.id}
                 onClick={() => setOpenVideo(video)}

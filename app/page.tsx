@@ -12,6 +12,7 @@ import { siteConfig } from '@/lib/siteConfig'
 import { CITY_COUNT } from '@/app/data/cities'
 import CapacityNotice from '@/app/components/CapacityNotice'
 import HomeGallery from './components/HomeGallery'
+import { sliderPairs } from '@/app/data/projects'
 
 /**
  * HOME page metadata.
@@ -55,6 +56,7 @@ export const metadata: Metadata = generatePageMetadata({
 const HomeVideoSection = dynamic(() => import('./components/HomeVideoSection'))
 const HomeFAQ = dynamic(() => import('./components/HomeFAQ'))
 const HomeBeforeAfter = dynamic(() => import('./components/HomeBeforeAfter'))
+const BeforeAfterCard = dynamic(() => import('./components/BeforeAfterCard'))
 
 // SVG icons - plain functions for server rendering
 const PhoneIcon = () => (
@@ -114,6 +116,8 @@ const EyeIcon = () => (
 )
 
 // Data - 7 services for RS-style grid
+const interiorDetailPair = sliderPairs([['interior-repaint-douglas', 10]])[0]
+
 // Card photos are the crew's own job photos (projects.ts) wherever one exists for
 // that trade. Carpentry has none documented yet and keeps its older image.
 const services = [
@@ -667,16 +671,9 @@ export default function HomePage() {
               </div>
 
               <div className="detail-image" style={{ direction: 'ltr' }}>
-                <Image
-                  src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png"
-                  alt="Interior Painting Massachusetts"
-                  width={600}
-                  height={450}
-                  loading="lazy"
-                  quality={65}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover' }}
-                />
+                {/* A real interior before/after instead of a generic photo: the
+                    Douglas fireplace wall, dark brown to sage (projects.ts). */}
+                <BeforeAfterCard pair={interiorDetailPair} />
               </div>
             </div>
           </div>
