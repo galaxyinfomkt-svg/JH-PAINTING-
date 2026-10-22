@@ -9,7 +9,7 @@ const BeforeAfterCard = dynamic(() => import('./BeforeAfterCard'), {
 })
 
 /* Real pairs first: the crew's own frames, same room and same angle (projects.ts).
-   The church exterior and the deck stay so exterior work is still represented. */
+   The church exterior stays so exterior work is still represented. */
 const beforeAfterPairs: SliderPair[] = [
   ...sliderPairs([
     ['interior-repaint-douglas', 0],
@@ -18,18 +18,13 @@ const beforeAfterPairs: SliderPair[] = [
     ['interior-repaint-douglas', 2],
     ['interior-repaint-groton', 0],
     ['roto-rooter-marlborough-cafeteria', 0],
+    ['deck-restoration-chelmsford', 0],
   ]),
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23bb3443ab4.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg',
     beforeAlt: 'Waltham Church exterior before historic renewal painting',
     afterAlt: 'Waltham Church exterior after incredible transformation by JH Painting'
-  },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a30277f301b94ac7227dc.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp',
-    beforeAlt: 'Deck before power washing and staining',
-    afterAlt: 'Deck after professional power washing and staining'
   }
 ]
 

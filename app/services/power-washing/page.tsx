@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
+import BeforeAfterCard from '@/app/components/BeforeAfterCard'
+import { sliderPairs, galleryFor, type SliderPair } from '@/app/data/projects'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
@@ -199,42 +200,18 @@ const powerWashingSchema = {
   ]
 }
 
-const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp', alt: 'Professional deck power washing services Massachusetts', category: 'Deck Cleaning' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'House exterior power washing Massachusetts', category: 'House Washing' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Exterior cleaning services Waltham MA', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp', alt: 'Professional power washing before painting', category: 'Pre-Paint Prep' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg', alt: 'Church exterior power washing restoration', category: 'Commercial' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Patio and hardscape cleaning Massachusetts', category: 'Patio' },
-]
+/* Real deck and soft-wash jobs, each labelled with its own town (projects.ts). */
+const galleryImages = galleryFor({ services: ['power-washing'] })
 
-// Before/After pairs for slider
-const beforeAfterPairs = [
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a30274e42b930842eea35.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a3027a03db26c93445285.webp',
-    beforeAlt: 'Deck before power washing and staining',
-    afterAlt: 'Deck after professional power washing and staining'
-  },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23bb3443ab4.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg',
-    beforeAlt: 'Historic church exterior before cleaning',
-    afterAlt: 'Historic church exterior after power washing'
-  },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac7eb2da7db4eacd6a2.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp',
-    beforeAlt: 'House exterior before power washing',
-    afterAlt: 'House exterior after professional cleaning'
-  },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a39f37b4d1e5cbf3c1272.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a39f38441b1a824eef7d0.webp',
-    beforeAlt: 'Home exterior before cleaning',
-    afterAlt: 'Home exterior after power washing'
-  }
-]
+// Before/After: real deck jobs from projects.ts, same deck from the same angle.
+const beforeAfterPairs: SliderPair[] = sliderPairs([
+  ['deck-restoration-chelmsford', 0],
+  ['deck-staining-west-warren', 0],
+  ['deck-staining-worcester', 0],
+  ['deck-restoration-chelmsford', 1],
+  ['deck-staining-west-warren', 1],
+  ['deck-staining-worcester', 1],
+])
 
 const painPoints = [
   {
@@ -313,8 +290,8 @@ export default function PowerWashingPage() {
       <section className="service-hero">
         <div className="service-hero-bg">
           <Image
-            src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp"
-            alt="Professional Power Washing Services Massachusetts"
+            src="/hero/deck-chelmsford.webp"
+            alt="Deck in Chelmsford, Massachusetts after JH Painting Services washed, prepped and repainted it"
             fill
             className="object-cover"
             priority
@@ -534,7 +511,10 @@ export default function PowerWashingPage() {
                     quality={75}
                   />
                   <div className="service-gallery-overlay">
-                    <span className="service-gallery-category">{img.category}</span>
+                    <div>
+                      <span className="service-gallery-category">{img.category}</span>
+                      <p className="service-gallery-label">{img.alt}</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -553,13 +533,7 @@ export default function PowerWashingPage() {
 
             <div className="before-after-grid">
               {beforeAfterPairs.map((pair, idx) => (
-                <BeforeAfterSlider
-                  key={idx}
-                  beforeImage={pair.before}
-                  afterImage={pair.after}
-                  beforeAlt={pair.beforeAlt}
-                  afterAlt={pair.afterAlt}
-                />
+                <BeforeAfterCard key={idx} pair={pair} />
               ))}
             </div>
           </div>

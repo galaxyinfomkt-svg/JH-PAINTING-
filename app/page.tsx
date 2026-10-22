@@ -161,7 +161,7 @@ const services = [
   {
     title: 'Power Washing',
     description: 'Restore your property\'s appearance with professional power washing for decks, siding, and driveways.',
-    image: '/projects/pressure-washing/02.webp',
+    image: '/projects/deck-restoration-chelmsford/01.webp',
     href: '/services/power-washing',
   },
 ]

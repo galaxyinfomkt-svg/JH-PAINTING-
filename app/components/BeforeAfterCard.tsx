@@ -18,9 +18,11 @@ export default function BeforeAfterCard({ pair }: { pair: SliderPair }) {
         afterAlt={pair.afterAlt}
         beforeLabel={pair.beforeLabel}
       />
-      {pair.city && pair.citySlug ? (
+      {pair.city ? (
         <figcaption className="ba-card-cap">
-          Project in <Link href={`/massachusetts/${pair.citySlug}`}>{pair.city}, MA</Link>
+          Project in{' '}
+          {/* Linked when the town has its own page; West Warren, for one, does not. */}
+          {pair.citySlug ? <Link href={`/massachusetts/${pair.citySlug}`}>{pair.city}, MA</Link> : `${pair.city}, MA`}
           {pair.caption ? `: ${pair.caption}` : null}
         </figcaption>
       ) : null}

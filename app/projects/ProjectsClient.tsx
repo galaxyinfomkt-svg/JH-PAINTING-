@@ -217,12 +217,12 @@ export default function ProjectsClient() {
                 {open.title}
               </h2>
               <p>
-                {open.city ? (
+                {open.city && open.citySlug ? (
                   <Link href={`/massachusetts/${open.citySlug}`}>
                     {open.city}, {open.state}
                   </Link>
                 ) : (
-                  <span>Massachusetts</span>
+                  <span>{open.city ? `${open.city}, ${open.state}` : 'Massachusetts'}</span>
                 )}
                 <Link href={`/services/${open.service}`}>{open.serviceLabel}</Link>
                 {open.completed ? <span>{formatCompleted(open.completed)}</span> : null}
