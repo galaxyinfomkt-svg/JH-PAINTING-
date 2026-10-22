@@ -1,19 +1,22 @@
 'use client'
 
 import dynamic from 'next/dynamic'
+import { sliderPairs, type SliderPair } from '@/app/data/projects'
 
-const BeforeAfterSlider = dynamic(() => import('./BeforeAfterSlider'), {
+const BeforeAfterCard = dynamic(() => import('./BeforeAfterCard'), {
   ssr: false,
   loading: () => <div style={{ height: '400px', background: '#f3f4f6', borderRadius: '16px' }} />,
 })
 
-const beforeAfterPairs = [
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23ad3443ab5.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg',
-    beforeAlt: 'Waltham Church interior before historic renewal by JH Painting',
-    afterAlt: 'Waltham Church interior after incredible transformation by JH Painting'
-  },
+/* Real pairs first: the crew's own frames, same room and same angle (projects.ts).
+   The church exterior and the deck stay so exterior work is still represented. */
+const beforeAfterPairs: SliderPair[] = [
+  ...sliderPairs([
+    ['interior-repaint-douglas', 0],
+    ['interior-repaint-douglas', 2],
+    ['interior-repaint-groton', 0],
+    ['roto-rooter-marlborough-cafeteria', 0],
+  ]),
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23bb3443ab4.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg',
@@ -21,28 +24,10 @@ const beforeAfterPairs = [
     afterAlt: 'Waltham Church exterior after incredible transformation by JH Painting'
   },
   {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac7eb2da7db4eacd6a2.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp',
-    beforeAlt: 'Residential exterior before painting',
-    afterAlt: 'Residential exterior after professional painting'
-  },
-  {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a30277f301b94ac7227dc.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp',
     beforeAlt: 'Deck before power washing and staining',
     afterAlt: 'Deck after professional power washing and staining'
-  },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a30274e42b930842eea35.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a3027a03db26c93445285.webp',
-    beforeAlt: 'Staircase before refinishing',
-    afterAlt: 'Staircase after professional refinishing'
-  },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a39f37b4d1e5cbf3c1272.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a39f38441b1a824eef7d0.webp',
-    beforeAlt: 'House exterior before painting',
-    afterAlt: 'House exterior after professional painting'
   }
 ]
 
@@ -58,13 +43,7 @@ export default function HomeBeforeAfter() {
 
         <div className="before-after-grid">
           {beforeAfterPairs.map((pair, idx) => (
-            <BeforeAfterSlider
-              key={idx}
-              beforeImage={pair.before}
-              afterImage={pair.after}
-              beforeAlt={pair.beforeAlt}
-              afterAlt={pair.afterAlt}
-            />
+            <BeforeAfterCard key={idx} pair={pair} />
           ))}
         </div>
       </div>

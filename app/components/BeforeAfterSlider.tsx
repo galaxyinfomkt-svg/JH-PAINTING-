@@ -9,6 +9,8 @@ interface BeforeAfterSliderProps {
   beforeAlt: string
   afterAlt: string
   className?: string
+  /** 'Prep' when the first frame was taken after work started (see BeforeAfterPair). */
+  beforeLabel?: 'Before' | 'Prep'
 }
 
 export default function BeforeAfterSlider({
@@ -16,7 +18,8 @@ export default function BeforeAfterSlider({
   afterImage,
   beforeAlt,
   afterAlt,
-  className = ''
+  className = '',
+  beforeLabel = 'Before'
 }: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50)
   const [isDragging, setIsDragging] = useState(false)
@@ -118,7 +121,7 @@ export default function BeforeAfterSlider({
           sizes="(max-width: 768px) 100vw, 50vw"
           loading="lazy"
         />
-        <span className="before-after-label before-after-label-before">Before</span>
+        <span className="before-after-label before-after-label-before">{beforeLabel}</span>
       </div>
 
       {/* Slider Handle */}

@@ -25,6 +25,19 @@ export interface ProjectPhoto {
   h: number
 }
 
+/**
+ * One before/after pair, same room and same angle, both frames from the job's own
+ * photographs. beforeLabel is 'Prep' when the first frame was taken after work had
+ * started (floors covered, doors off) - calling that "before" would overstate it.
+ */
+export interface BeforeAfterPair {
+  before: ProjectPhoto
+  after: ProjectPhoto
+  beforeLabel?: 'Before' | 'Prep'
+  /** What the pair shows, in plain words. Only what is visible in the two frames. */
+  caption: string
+}
+
 export interface Project {
   slug: string
   title: string
@@ -40,10 +53,137 @@ export interface Project {
   space?: string
   /** YYYY-MM the photos were taken. Absent when the originals carry no date. */
   completed?: string
+  /** Card cover. Falls back to photos[0]; set when the strongest finished frame is not first. */
+  cover?: ProjectPhoto
   photos: ProjectPhoto[]
+  pairs?: BeforeAfterPair[]
 }
 
 export const projects: Project[] = [
+  {
+    slug: 'interior-repaint-douglas',
+    title: 'Whole-Home Interior Repaint',
+    city: 'Douglas',
+    citySlug: 'douglas',
+    state: 'MA',
+    service: 'interior-painting',
+    serviceLabel: 'Interior Painting',
+    space: 'Living room, dining room, four bedrooms and master bath',
+    completed: '2026-10',
+    photos: [
+      { src: '/projects/interior-repaint-douglas/01.webp', thumb: '/projects/interior-repaint-douglas/01-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/02.webp', thumb: '/projects/interior-repaint-douglas/02-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/03.webp', thumb: '/projects/interior-repaint-douglas/03-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/04.webp', thumb: '/projects/interior-repaint-douglas/04-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/05.webp', thumb: '/projects/interior-repaint-douglas/05-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/06.webp', thumb: '/projects/interior-repaint-douglas/06-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/07.webp', thumb: '/projects/interior-repaint-douglas/07-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/08.webp', thumb: '/projects/interior-repaint-douglas/08-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/09.webp', thumb: '/projects/interior-repaint-douglas/09-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/10.webp', thumb: '/projects/interior-repaint-douglas/10-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/11.webp', thumb: '/projects/interior-repaint-douglas/11-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/12.webp', thumb: '/projects/interior-repaint-douglas/12-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/13.webp', thumb: '/projects/interior-repaint-douglas/13-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/14.webp', thumb: '/projects/interior-repaint-douglas/14-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/15.webp', thumb: '/projects/interior-repaint-douglas/15-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/16.webp', thumb: '/projects/interior-repaint-douglas/16-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/17.webp', thumb: '/projects/interior-repaint-douglas/17-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/18.webp', thumb: '/projects/interior-repaint-douglas/18-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/19.webp', thumb: '/projects/interior-repaint-douglas/19-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/20.webp', thumb: '/projects/interior-repaint-douglas/20-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/21.webp', thumb: '/projects/interior-repaint-douglas/21-thumb.webp', w: 1200, h: 1600 },
+      { src: '/projects/interior-repaint-douglas/22.webp', thumb: '/projects/interior-repaint-douglas/22-thumb.webp', w: 1200, h: 1600 },
+    ],
+    pairs: [
+      {
+        before: { src: '/projects/interior-repaint-douglas/ba-01-before.webp', thumb: '/projects/interior-repaint-douglas/ba-01-before-thumb.webp', w: 1200, h: 1600 },
+        after: { src: '/projects/interior-repaint-douglas/ba-01-after.webp', thumb: '/projects/interior-repaint-douglas/ba-01-after-thumb.webp', w: 1200, h: 1600 },
+        caption: "Living room: dark brown accent and tan walls, repainted in sage and greige.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-douglas/ba-02-before.webp', thumb: '/projects/interior-repaint-douglas/ba-02-before-thumb.webp', w: 1200, h: 1600 },
+        after: { src: '/projects/interior-repaint-douglas/ba-02-after.webp', thumb: '/projects/interior-repaint-douglas/ba-02-after-thumb.webp', w: 1200, h: 1600 },
+        caption: "Living room under the vaulted ceiling, before and after.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-douglas/ba-03-before.webp', thumb: '/projects/interior-repaint-douglas/ba-03-before-thumb.webp', w: 1200, h: 1600 },
+        after: { src: '/projects/interior-repaint-douglas/ba-03-after.webp', thumb: '/projects/interior-repaint-douglas/ba-03-after-thumb.webp', w: 1200, h: 1600 },
+        caption: "Dining room: red wainscoting repainted sage green, cream walls above.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-douglas/ba-04-before.webp', thumb: '/projects/interior-repaint-douglas/ba-04-before-thumb.webp', w: 1200, h: 1600 },
+        after: { src: '/projects/interior-repaint-douglas/ba-04-after.webp', thumb: '/projects/interior-repaint-douglas/ba-04-after-thumb.webp', w: 1200, h: 1600 },
+        caption: "Dining room toward the French doors, before and after.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-douglas/ba-05-before.webp', thumb: '/projects/interior-repaint-douglas/ba-05-before-thumb.webp', w: 1200, h: 1600 },
+        after: { src: '/projects/interior-repaint-douglas/ba-05-after.webp', thumb: '/projects/interior-repaint-douglas/ba-05-after-thumb.webp', w: 1200, h: 1600 },
+        caption: "Bedroom: tired gray walls refreshed in a lighter neutral.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-douglas/ba-06-before.webp', thumb: '/projects/interior-repaint-douglas/ba-06-before-thumb.webp', w: 1200, h: 1600 },
+        after: { src: '/projects/interior-repaint-douglas/ba-06-after.webp', thumb: '/projects/interior-repaint-douglas/ba-06-after-thumb.webp', w: 1200, h: 1600 },
+        caption: "Bedroom: shelving removed, holes patched, sage and teal repainted in pink with a lilac accent wall.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-douglas/ba-07-before.webp', thumb: '/projects/interior-repaint-douglas/ba-07-before-thumb.webp', w: 1200, h: 1600 },
+        after: { src: '/projects/interior-repaint-douglas/ba-07-after.webp', thumb: '/projects/interior-repaint-douglas/ba-07-after-thumb.webp', w: 1200, h: 1600 },
+        caption: "Bedroom: teal and gray walls patched and repainted in cream with an olive accent wall.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-douglas/ba-08-before.webp', thumb: '/projects/interior-repaint-douglas/ba-08-before-thumb.webp', w: 1200, h: 1600 },
+        after: { src: '/projects/interior-repaint-douglas/ba-08-after.webp', thumb: '/projects/interior-repaint-douglas/ba-08-after-thumb.webp', w: 1200, h: 1600 },
+        caption: "Master bedroom: dark khaki walls repainted in a soft lavender.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-douglas/ba-09-before.webp', thumb: '/projects/interior-repaint-douglas/ba-09-before-thumb.webp', w: 1200, h: 1600 },
+        after: { src: '/projects/interior-repaint-douglas/ba-09-after.webp', thumb: '/projects/interior-repaint-douglas/ba-09-after-thumb.webp', w: 1200, h: 1600 },
+        caption: "Master bathroom: khaki walls repainted in light lavender.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-douglas/ba-10-before.webp', thumb: '/projects/interior-repaint-douglas/ba-10-before-thumb.webp', w: 1200, h: 1600 },
+        after: { src: '/projects/interior-repaint-douglas/ba-10-after.webp', thumb: '/projects/interior-repaint-douglas/ba-10-after-thumb.webp', w: 1200, h: 1600 },
+        caption: "Master bathroom vanity wall, before and after.",
+      },
+    ],
+  },
+  {
+    slug: 'interior-repaint-northbridge',
+    title: 'Living Room Repaint',
+    city: 'Northbridge',
+    citySlug: 'northbridge',
+    state: 'MA',
+    service: 'interior-painting',
+    serviceLabel: 'Interior Painting',
+    space: 'Living room above the wainscoting',
+    completed: '2025-03',
+    photos: [
+      { src: '/projects/interior-repaint-northbridge/01.webp', thumb: '/projects/interior-repaint-northbridge/01-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-northbridge/02.webp', thumb: '/projects/interior-repaint-northbridge/02-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-northbridge/03.webp', thumb: '/projects/interior-repaint-northbridge/03-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-northbridge/04.webp', thumb: '/projects/interior-repaint-northbridge/04-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-northbridge/05.webp', thumb: '/projects/interior-repaint-northbridge/05-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-northbridge/06.webp', thumb: '/projects/interior-repaint-northbridge/06-thumb.webp', w: 1600, h: 2133 },
+      { src: '/projects/interior-repaint-northbridge/07.webp', thumb: '/projects/interior-repaint-northbridge/07-thumb.webp', w: 1600, h: 2133 },
+    ],
+    pairs: [
+      {
+        before: { src: '/projects/interior-repaint-northbridge/ba-01-before.webp', thumb: '/projects/interior-repaint-northbridge/ba-01-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/interior-repaint-northbridge/ba-01-after.webp', thumb: '/projects/interior-repaint-northbridge/ba-01-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "Sage green upper walls repainted light gray above the white wainscoting.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-northbridge/ba-02-before.webp', thumb: '/projects/interior-repaint-northbridge/ba-02-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/interior-repaint-northbridge/ba-02-after.webp', thumb: '/projects/interior-repaint-northbridge/ba-02-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "Looking into the next room, before and after.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-northbridge/ba-03-before.webp', thumb: '/projects/interior-repaint-northbridge/ba-03-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/interior-repaint-northbridge/ba-03-after.webp', thumb: '/projects/interior-repaint-northbridge/ba-03-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "The full length of the room, before and after.",
+      },
+    ],
+  },
   {
     slug: 'interior-repaint-groton',
     title: 'Whole-Home Interior Repaint',
@@ -53,6 +193,26 @@ export const projects: Project[] = [
     service: 'interior-painting',
     serviceLabel: 'Interior Painting',
     space: 'Hallway, landing and bedrooms',
+    cover: { src: '/projects/interior-repaint-groton/cover.webp', thumb: '/projects/interior-repaint-groton/cover-thumb.webp', w: 1600, h: 2133 },
+    pairs: [
+      {
+        before: { src: '/projects/interior-repaint-groton/ba-01-before.webp', thumb: '/projects/interior-repaint-groton/ba-01-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/interior-repaint-groton/ba-01-after.webp', thumb: '/projects/interior-repaint-groton/ba-01-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "Living room: a deep blue accent wall up the full height of the cathedral ceiling.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-groton/ba-02-before.webp', thumb: '/projects/interior-repaint-groton/ba-02-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/interior-repaint-groton/ba-02-after.webp', thumb: '/projects/interior-repaint-groton/ba-02-after-thumb.webp', w: 1600, h: 2133 },
+        beforeLabel: 'Prep',
+        caption: "Bedroom: floors covered and doors off for prep, finished in blue-gray.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-groton/ba-03-before.webp', thumb: '/projects/interior-repaint-groton/ba-03-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/interior-repaint-groton/ba-03-after.webp', thumb: '/projects/interior-repaint-groton/ba-03-after-thumb.webp', w: 1600, h: 2133 },
+        beforeLabel: 'Prep',
+        caption: "Bedroom: prep stage and the finished room in blue-gray.",
+      },
+    ],
     photos: [
       { src: '/projects/interior-repaint-groton/01.webp', thumb: '/projects/interior-repaint-groton/01-thumb.webp', w: 1600, h: 2133 },
       { src: '/projects/interior-repaint-groton/02.webp', thumb: '/projects/interior-repaint-groton/02-thumb.webp', w: 1600, h: 2133 },
@@ -73,6 +233,35 @@ export const projects: Project[] = [
     service: 'interior-painting',
     serviceLabel: 'Interior Painting',
     space: 'Living, dining, bedrooms and baths',
+    cover: { src: '/projects/interior-repaint-southbridge/cover.webp', thumb: '/projects/interior-repaint-southbridge/cover-thumb.webp', w: 1600, h: 2133 },
+    pairs: [
+      {
+        before: { src: '/projects/interior-repaint-southbridge/ba-01-before.webp', thumb: '/projects/interior-repaint-southbridge/ba-01-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/interior-repaint-southbridge/ba-01-after.webp', thumb: '/projects/interior-repaint-southbridge/ba-01-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "Bedroom: beige walls repainted in a clean gray.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-southbridge/ba-02-before.webp', thumb: '/projects/interior-repaint-southbridge/ba-02-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/interior-repaint-southbridge/ba-02-after.webp', thumb: '/projects/interior-repaint-southbridge/ba-02-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "Bedroom repainted while the family lived in the home.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-southbridge/ba-03-before.webp', thumb: '/projects/interior-repaint-southbridge/ba-03-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/interior-repaint-southbridge/ba-03-after.webp', thumb: '/projects/interior-repaint-southbridge/ba-03-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "Hallway walls and trim refreshed.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-southbridge/ba-04-before.webp', thumb: '/projects/interior-repaint-southbridge/ba-04-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/interior-repaint-southbridge/ba-04-after.webp', thumb: '/projects/interior-repaint-southbridge/ba-04-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "Bathroom walls repainted.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-southbridge/ba-05-before.webp', thumb: '/projects/interior-repaint-southbridge/ba-05-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/interior-repaint-southbridge/ba-05-after.webp', thumb: '/projects/interior-repaint-southbridge/ba-05-after-thumb.webp', w: 1600, h: 2133 },
+        beforeLabel: 'Prep',
+        caption: "Bathroom vanity sanded and prepped, then painted white.",
+      },
+    ],
     photos: [
       { src: '/projects/interior-repaint-southbridge/01.webp', thumb: '/projects/interior-repaint-southbridge/01-thumb.webp', w: 1600, h: 2133 },
       { src: '/projects/interior-repaint-southbridge/02.webp', thumb: '/projects/interior-repaint-southbridge/02-thumb.webp', w: 1600, h: 2133 },
@@ -95,6 +284,24 @@ export const projects: Project[] = [
     serviceLabel: 'Commercial Interior Painting',
     space: 'Employee cafeteria',
     completed: '2025-10',
+    cover: { src: '/projects/roto-rooter-marlborough-cafeteria/cover.webp', thumb: '/projects/roto-rooter-marlborough-cafeteria/cover-thumb.webp', w: 1600, h: 2133 },
+    pairs: [
+      {
+        before: { src: '/projects/roto-rooter-marlborough-cafeteria/ba-01-before.webp', thumb: '/projects/roto-rooter-marlborough-cafeteria/ba-01-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/roto-rooter-marlborough-cafeteria/ba-01-after.webp', thumb: '/projects/roto-rooter-marlborough-cafeteria/ba-01-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "Cream walls repainted in a crisp blue.",
+      },
+      {
+        before: { src: '/projects/roto-rooter-marlborough-cafeteria/ba-02-before.webp', thumb: '/projects/roto-rooter-marlborough-cafeteria/ba-02-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/roto-rooter-marlborough-cafeteria/ba-02-after.webp', thumb: '/projects/roto-rooter-marlborough-cafeteria/ba-02-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "The full length of the cafeteria, before and after.",
+      },
+      {
+        before: { src: '/projects/roto-rooter-marlborough-cafeteria/ba-03-before.webp', thumb: '/projects/roto-rooter-marlborough-cafeteria/ba-03-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/roto-rooter-marlborough-cafeteria/ba-03-after.webp', thumb: '/projects/roto-rooter-marlborough-cafeteria/ba-03-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "The entry wall, repainted to carry the company's lettering.",
+      },
+    ],
     photos: [
       { src: '/projects/roto-rooter-marlborough-cafeteria/01.webp', thumb: '/projects/roto-rooter-marlborough-cafeteria/01-thumb.webp', w: 1600, h: 2133 },
       { src: '/projects/roto-rooter-marlborough-cafeteria/02.webp', thumb: '/projects/roto-rooter-marlborough-cafeteria/02-thumb.webp', w: 1600, h: 2133 },
@@ -135,6 +342,19 @@ export const projects: Project[] = [
     serviceLabel: 'Commercial Interior Painting',
     space: 'Office floor',
     completed: '2025-10',
+    cover: { src: '/projects/roto-rooter-marlborough-office/cover.webp', thumb: '/projects/roto-rooter-marlborough-office/cover-thumb.webp', w: 1600, h: 2133 },
+    pairs: [
+      {
+        before: { src: '/projects/roto-rooter-marlborough-office/ba-01-before.webp', thumb: '/projects/roto-rooter-marlborough-office/ba-01-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/roto-rooter-marlborough-office/ba-01-after.webp', thumb: '/projects/roto-rooter-marlborough-office/ba-01-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "Office walls repainted in a warm gold-beige.",
+      },
+      {
+        before: { src: '/projects/roto-rooter-marlborough-office/ba-02-before.webp', thumb: '/projects/roto-rooter-marlborough-office/ba-02-before-thumb.webp', w: 1600, h: 2133 },
+        after: { src: '/projects/roto-rooter-marlborough-office/ba-02-after.webp', thumb: '/projects/roto-rooter-marlborough-office/ba-02-after-thumb.webp', w: 1600, h: 2133 },
+        caption: "The seating area wall, before and after.",
+      },
+    ],
     photos: [
       { src: '/projects/roto-rooter-marlborough-office/01.webp', thumb: '/projects/roto-rooter-marlborough-office/01-thumb.webp', w: 1600, h: 2133 },
       { src: '/projects/roto-rooter-marlborough-office/02.webp', thumb: '/projects/roto-rooter-marlborough-office/02-thumb.webp', w: 1600, h: 2133 },
@@ -297,6 +517,107 @@ export function projectsForService(service: string): Project[] {
   return projects.filter((p) => p.service === service)
 }
 
+/** The props BeforeAfterSlider takes. The older CDN pairs on the service pages use it too. */
+export interface SliderPair {
+  before: string
+  after: string
+  beforeAlt: string
+  afterAlt: string
+  beforeLabel?: 'Before' | 'Prep'
+  /** Set for real pairs: where the job was, so the caption can say so and link the town page. */
+  city?: string
+  citySlug?: string
+  caption?: string
+}
+
+/**
+ * Real pairs from this file, picked by [project slug, pair index], in the shape
+ * BeforeAfterSlider takes. Unknown picks are dropped rather than rendered empty.
+ */
+export function sliderPairs(picks: [string, number][]): SliderPair[] {
+  return picks.flatMap(([slug, i]) => {
+    const p = projects.find((x) => x.slug === slug)
+    const pair = p?.pairs?.[i]
+    if (!p || !pair) return []
+    const where = p.city ? `${p.city}, ${p.state}` : 'Massachusetts'
+    const label = pair.beforeLabel ?? 'Before'
+    return [{
+      before: pair.before.src,
+      after: pair.after.src,
+      beforeLabel: label,
+      city: p.city ?? undefined,
+      citySlug: p.citySlug ?? undefined,
+      caption: pair.caption,
+      beforeAlt: `${p.serviceLabel} in ${where}, ${label.toLowerCase()}: ${pair.caption}`,
+      afterAlt: `${p.serviceLabel} in ${where} by JH Painting Services, after: ${pair.caption}`,
+    }]
+  })
+}
+
+/** One gallery tile. `category` is the town the photo was taken in, never the page's town. */
+export interface GalleryShot {
+  src: string
+  alt: string
+  category: string
+}
+
+/**
+ * Real job photos for a page gallery, each labelled with the town it was taken in.
+ *
+ * Projects in `preferCity` come first, then the rest, newest first. Photos are
+ * taken round-robin (each job's cover, then its next frame...) so one big job
+ * does not fill the whole grid. Returns fewer than `count` when the portfolio
+ * does not hold that many - callers decide whether that is enough to show.
+ *
+ * WHY THE TOWN IS ALWAYS THE PHOTO'S OWN: the old galleries appended the
+ * visited page's town to every alt text, so the Hudson page described the
+ * Waltham church as being in Hudson. A photo from Douglas shown on the Hudson
+ * page says Douglas.
+ */
+export function galleryFor({
+  services,
+  preferCity,
+  count = 6,
+}: {
+  services?: string[]
+  preferCity?: string
+  count?: number
+}): GalleryShot[] {
+  const pool = projects
+    .filter((p) => !services || services.includes(p.service))
+    .map((p, i) => ({ p, i }))
+    .sort((a, b) => {
+      const ca = a.p.citySlug === preferCity ? 0 : 1
+      const cb = b.p.citySlug === preferCity ? 0 : 1
+      if (ca !== cb) return ca - cb
+      return (b.p.completed ?? '').localeCompare(a.p.completed ?? '') || a.i - b.i
+    })
+    .map(({ p }) => p)
+  const frames = pool.map((p) => {
+    const cover = coverOf(p)
+    return [cover, ...p.photos.filter((ph) => ph.src !== cover.src)]
+  })
+  const out: GalleryShot[] = []
+  for (let round = 0; out.length < count && frames.some((f) => f.length > round); round++) {
+    pool.forEach((p, k) => {
+      const ph = frames[k][round]
+      if (!ph || out.length >= count) return
+      const where = p.city ? `${p.city}, ${p.state}` : 'Massachusetts'
+      out.push({
+        src: ph.src,
+        alt: `${p.serviceLabel} by JH Painting Services in ${where}${p.space ? ` - ${p.space.toLowerCase()}` : ''}`,
+        category: where,
+      })
+    })
+  }
+  return out
+}
+
+/** The frame that represents a job on cards and in the home gallery. */
+export function coverOf(p: Project): ProjectPhoto {
+  return p.cover ?? p.photos[0]
+}
+
 export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug)
 }
@@ -311,3 +632,5 @@ export function formatCompleted(ym?: string): string | null {
 }
 
 export const totalProjectPhotos = projects.reduce((s, p) => s + p.photos.length, 0)
+
+export const totalBeforeAfterPairs = projects.reduce((s, p) => s + (p.pairs?.length ?? 0), 0)

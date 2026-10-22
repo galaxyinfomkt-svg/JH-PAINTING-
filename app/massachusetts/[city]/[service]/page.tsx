@@ -47,6 +47,7 @@ import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import CityProof from '@/app/components/CityProof'
+import { galleryFor } from '@/app/data/projects'
 import RelatedCities from '@/app/components/RelatedCities'
 import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
@@ -342,6 +343,11 @@ export default async function CityServicePage({ params }: Props) {
     city.county || 'Massachusetts'
   )
 
+  // Real photos of this trade, this town's jobs first, each labelled with its own
+  // town. Trades with fewer than three documented photos keep the older CDN set.
+  const realGallery = galleryFor({ services: [serviceSlug], preferCity: citySlug })
+  const gallery = realGallery.length >= 3 ? realGallery : galleryImages
+
   // Other services for this city
   const otherServices = Object.entries(servicesData)
     .filter(([slug]) => slug !== serviceSlug)
@@ -520,18 +526,18 @@ export default async function CityServicePage({ params }: Props) {
           <div className="container">
             <div className="service-section-header">
               <span className="service-section-badge">Our Work</span>
-              <h2 className="service-section-title">{service.name} Projects Near {city.name}</h2>
+              <h2 className="service-section-title">Recent {service.name} Projects</h2>
               <p className="service-section-subtitle">
-                Real {service.name.toLowerCase()} transformations from {city.county || 'Massachusetts'} homes like yours
+                Work by our crew around Massachusetts, each photo labelled with the town it was taken in
               </p>
             </div>
 
             <div className="service-gallery-grid">
-              {galleryImages.map((image, idx) => (
+              {gallery.map((image, idx) => (
                 <div key={idx} className="service-gallery-item">
                   <Image
                     src={image.src}
-                    alt={`${image.alt} - ${city.name}, MA`}
+                    alt={image.alt}
                     fill
                     loading="lazy"
                     quality={75}

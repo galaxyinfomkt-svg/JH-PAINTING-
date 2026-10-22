@@ -12991,3 +12991,22 @@ button.video-card-rs {
   padding-left: 1rem;
   margin-top: 1.75rem;
 }
+
+/* ── Real before/after pairs on /projects and in CityProof ────────────────
+   The slider itself is the shared .before-after-slider; these only lay out the
+   pairs and the plain-words caption under each one. */
+.jb-ba { max-width: 1240px; margin: 1.5rem auto 0; }
+.jb-ba-h, .cityproof-ba-h {
+  font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  margin: 0 0 .9rem; color: inherit; opacity: .75;
+}
+.jb-ba-grid, .cityproof-ba {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 1.25rem;
+}
+.jb-ba-grid figure, .cityproof-ba figure { margin: 0; }
+.jb-ba-grid figcaption, .cityproof-ba figcaption { margin-top: .55rem; font-size: .86rem; line-height: 1.4; opacity: .8; }
+.jb-ba + .jb-sv-grid { margin-top: 2rem; }
+.cityproof-ba { margin: 1.5rem 0; }
+.ba-card { margin: 0; min-width: 0; }
+.ba-card-cap { margin-top: .6rem; font-size: .9rem; line-height: 1.45; color: inherit; opacity: .85; }
+.ba-card-cap a { color: var(--jh-red, #CC0000); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }

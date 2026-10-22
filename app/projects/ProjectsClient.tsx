@@ -4,7 +4,8 @@ import { useState, useMemo, useCallback, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import Image from 'next/image'
 import Link from 'next/link'
-import { projects, projectCities, formatCompleted, type Project } from '@/app/data/projects'
+import { projects, projectCities, formatCompleted, coverOf, sliderPairs, type Project } from '@/app/data/projects'
+import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 import { SERVICE_LABELS } from '@/app/data/cityServiceComposer'
 
 /* ────────────────────────────────────────────────────────────────────────────
@@ -152,12 +153,12 @@ export default function ProjectsClient() {
                 <span className="jb-sheet jb-sheet-b" aria-hidden="true" />
                 <span className="jb-cover">
                   <Image
-                    src={p.photos[0].thumb}
+                    src={coverOf(p).thumb}
                     alt={`${p.serviceLabel}${p.space ? `, ${p.space}` : ''} by JH Painting Services${
                       p.city ? ` in ${p.city}, ${p.state}` : ' in Massachusetts'
                     }`}
-                    width={p.photos[0].w}
-                    height={p.photos[0].h}
+                    width={coverOf(p).w}
+                    height={coverOf(p).h}
                     sizes="(max-width: 640px) 92vw, (max-width: 1100px) 45vw, 30vw"
                     /* The first cover is the LCP element on this page. Without
                        priority it inherits next/image's lazy default and the
@@ -176,6 +177,7 @@ export default function ProjectsClient() {
                 <span className="jb-meta">
                   <span>{p.city ? `${p.city}, ${p.state}` : 'Massachusetts'}</span>
                   <i>{p.photos.length} photos</i>
+                  {p.pairs?.length ? <i>{p.pairs.length} before and after</i> : null}
                 </span>
               </span>
             </button>
@@ -231,6 +233,26 @@ export default function ProjectsClient() {
               Close
             </button>
           </div>
+
+          {open.pairs?.length ? (
+            <section className="jb-ba" aria-label="Before and after">
+              <h3 className="jb-ba-h">Before and after, same room, same angle</h3>
+              <div className="jb-ba-grid">
+                {sliderPairs(open.pairs.map((_, i) => [open.slug, i] as [string, number])).map((sp, i) => (
+                  <figure key={sp.after}>
+                    <BeforeAfterSlider
+                      beforeImage={sp.before}
+                      afterImage={sp.after}
+                      beforeAlt={sp.beforeAlt}
+                      afterAlt={sp.afterAlt}
+                      beforeLabel={sp.beforeLabel}
+                    />
+                    <figcaption>{open.pairs?.[i].caption}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
+          ) : null}
 
           <div className="jb-sv-grid">
             {open.photos.map((ph, i) => (

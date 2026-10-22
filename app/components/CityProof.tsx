@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { projectsForCity, formatCompleted, type Project } from '@/app/data/projects'
+import { projectsForCity, formatCompleted, sliderPairs, type Project } from '@/app/data/projects'
+import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
 
 /**
  * First-hand proof block for /massachusetts/[city] and city+service pages.
@@ -86,6 +87,11 @@ export default function CityProof({
 
   const matching = service ? all.filter((p) => p.service === service) : []
   const shown = (matching.length > 0 ? matching : all).slice(0, 3)
+  /* Up to two real before/after pairs from this town. Same room, same angle,
+     the job's own frames - the strongest single proof a town page can carry. */
+  const pairPicks = shown.flatMap((p) => (p.pairs ?? []).map((_, i) => [p.slug, i] as [string, number]))
+  const pairs = sliderPairs(pairPicks.slice(0, 2))
+  const pairCaptions = pairPicks.slice(0, 2).map(([slug, i]) => shown.find((p) => p.slug === slug)?.pairs?.[i].caption)
   const photos = shown.flatMap((p) =>
     p.photos.slice(0, 4).map((ph) => ({ ...ph, project: p }))
   )
@@ -118,6 +124,26 @@ export default function CityProof({
             </li>
           ))}
         </ul>
+
+        {pairs.length > 0 ? (
+          <div className="cityproof-ba-wrap">
+            <h3 className="cityproof-ba-h">Before and after in {cityName}</h3>
+            <div className="cityproof-ba">
+              {pairs.map((sp, i) => (
+                <figure key={sp.after}>
+                  <BeforeAfterSlider
+                    beforeImage={sp.before}
+                    afterImage={sp.after}
+                    beforeAlt={sp.beforeAlt}
+                    afterAlt={sp.afterAlt}
+                    beforeLabel={sp.beforeLabel}
+                  />
+                  <figcaption>{pairCaptions[i]}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <div className="cityproof-grid">
           {photos.map((ph, i) => (

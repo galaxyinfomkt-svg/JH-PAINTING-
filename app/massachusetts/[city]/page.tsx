@@ -116,6 +116,7 @@ import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import CityProof from '@/app/components/CityProof'
+import { galleryFor, projectsForCity } from '@/app/data/projects'
 import CityVideo from '@/app/components/CityVideo'
 import CityLocalBrief from '@/app/components/CityLocalBrief'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
@@ -246,14 +247,6 @@ function generateCitySchema(
   }
 }
 
-const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg', alt: 'Historic Renewal: Waltham Church interior transformation by JH Painting', category: 'Waltham Church' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg', alt: 'Historic Renewal: Waltham Church exterior transformation by JH Painting', category: 'Waltham Church' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp', alt: 'Professional exterior house painting services in Massachusetts', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp', alt: 'Deck staining and power washing services in Massachusetts', category: 'Deck' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Bedroom interior painting services in MA by JH Painting', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Professional interior painting contractors serving Massachusetts', category: 'Interior' },
-]
 
 // Before/After transformation pairs
 const beforeAfterPairs = [
@@ -341,6 +334,11 @@ export default async function CityPage({ params }: Props) {
     citySlug,
     cityContent.faq
   )
+
+  // Real job photos: this town's own jobs first, then other towns, each tile
+  // labelled with the town it was actually taken in.
+  const gallery = galleryFor({ preferCity: citySlug })
+  const hasLocalWork = projectsForCity(citySlug).length > 0
 
   return (
     <>
@@ -626,19 +624,19 @@ export default async function CityPage({ params }: Props) {
               Our Portfolio
             </span>
             <h2 className="city-section-title">
-              {city.name} Project Gallery
+              {hasLocalWork ? `${city.name} Project Gallery` : 'Recent Projects Across Massachusetts'}
             </h2>
             <p className="city-section-subtitle">
-              See the quality transformations we've delivered throughout {city.name} and Massachusetts
+              Our own photographs from finished jobs, each labelled with the town it was taken in
             </p>
           </div>
 
           <div className="city-gallery-grid">
-            {galleryImages.map((img, idx) => (
+            {gallery.map((img, idx) => (
               <div key={idx} className="city-gallery-item">
                 <Image
                   src={img.src}
-                  alt={`${img.alt} - ${city.name}, MA`}
+                  alt={img.alt}
                   fill
                   loading="lazy"
                   quality={75}

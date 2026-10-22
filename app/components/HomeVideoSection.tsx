@@ -49,7 +49,9 @@ export default function HomeVideoSection() {
           </div>
 
           <div className="video-grid-rs">
-            {videos.map((video) => (
+            {/* Six cards: the grid is built for that. Every other video still shows on
+                its own city page via CityVideo, and all of them stay in the schema. */}
+            {videos.slice(0, 6).map((video) => (
               <button
                 key={video.id}
                 onClick={() => setOpenVideo(video)}

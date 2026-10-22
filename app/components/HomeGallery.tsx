@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { projects, formatCompleted, totalProjectPhotos } from '@/app/data/projects'
+import { projects, formatCompleted, totalProjectPhotos, coverOf } from '@/app/data/projects'
 
 /**
  * Home "Project Gallery" - built from app/data/projects.ts, i.e. from the
@@ -48,12 +48,12 @@ import { projects, formatCompleted, totalProjectPhotos } from '@/app/data/projec
 
 /** One representative photo per job, ordered to lead with the flagship work. */
 const FEATURED_SLUGS = [
+  'interior-repaint-douglas',
   'waltham-church-exterior',
   'interior-repaint-groton',
   'roto-rooter-marlborough-cafeteria',
-  'interior-painting-shrewsbury',
-  'interior-room-painting-boston',
   'interior-repaint-southbridge',
+  'interior-repaint-northbridge',
 ]
 
 const featured = FEATURED_SLUGS.map((slug) => projects.find((p) => p.slug === slug)).filter(
@@ -77,7 +77,7 @@ export default function HomeGallery() {
 
         <div className="gallery-grid gallery-grid-proof">
           {featured.map((project) => {
-            const photo = project.photos[0]
+            const photo = coverOf(project)
             const place = project.city ? `${project.city}, ${project.state}` : project.state
             const when = formatCompleted(project.completed)
             return (

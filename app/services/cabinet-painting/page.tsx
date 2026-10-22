@@ -7,7 +7,8 @@ import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
-import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
+import BeforeAfterCard from '@/app/components/BeforeAfterCard'
+import { sliderPairs, type SliderPair } from '@/app/data/projects'
 import CapacityNotice from '@/app/components/CapacityNotice'
 
 
@@ -129,8 +130,12 @@ const galleryImages = [
   { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg', alt: 'Historic church exterior painting in Waltham MA', category: 'Exterior' },
 ]
 
-// Before/After transformation pairs
-const beforeAfterPairs = [
+// Before/After transformation pairs. Real pairs from projects.ts come first:
+// the crew's own frames of the same room from the same angle.
+const beforeAfterPairs: SliderPair[] = [
+  ...sliderPairs([
+    ['interior-repaint-southbridge', 4],
+  ]),
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23ad3443ab5.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg',
@@ -521,13 +526,7 @@ export default function CabinetPaintingPage() {
 
           <div className="before-after-grid">
             {beforeAfterPairs.map((pair, idx) => (
-              <BeforeAfterSlider
-                key={idx}
-                beforeImage={pair.before}
-                afterImage={pair.after}
-                beforeAlt={pair.beforeAlt}
-                afterAlt={pair.afterAlt}
-              />
+              <BeforeAfterCard key={idx} pair={pair} />
             ))}
           </div>
         </div>

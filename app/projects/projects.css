@@ -135,6 +135,7 @@
   text-transform: uppercase; color: var(--dim);
 }
 .jb-meta i { font-style: normal; margin-left: auto; font-variant-numeric: tabular-nums; }
+.jb-meta i + i { margin-left: 0; color: var(--red-text); }
 
 .jb-empty { max-width: 1240px; margin: 2rem auto 5rem; color: var(--mid); }
 
