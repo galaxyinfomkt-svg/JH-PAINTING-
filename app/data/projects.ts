@@ -145,6 +145,16 @@ export const projects: Project[] = [
         after: { src: '/projects/interior-repaint-douglas/ba-10-after.webp', thumb: '/projects/interior-repaint-douglas/ba-10-after-thumb.webp', w: 1200, h: 1600 },
         caption: "Master bathroom vanity wall, before and after.",
       },
+      {
+        before: { src: '/projects/interior-repaint-douglas/ba-11-before.webp', thumb: '/projects/interior-repaint-douglas/ba-11-before-thumb.webp', w: 1200, h: 1600 },
+        after: { src: '/projects/interior-repaint-douglas/ba-11-after.webp', thumb: '/projects/interior-repaint-douglas/ba-11-after-thumb.webp', w: 1200, h: 1600 },
+        caption: "Fireplace wall: the dark brown accent repainted sage green. Before frame taken from the crew's walkthrough video.",
+      },
+      {
+        before: { src: '/projects/interior-repaint-douglas/ba-12-before.webp', thumb: '/projects/interior-repaint-douglas/ba-12-before-thumb.webp', w: 1200, h: 1600 },
+        after: { src: '/projects/interior-repaint-douglas/ba-12-after.webp', thumb: '/projects/interior-repaint-douglas/ba-12-after-thumb.webp', w: 1200, h: 1600 },
+        caption: "Fireplace corner and slider door, before and after. Before frame taken from the crew's walkthrough video.",
+      },
     ],
   },
   {

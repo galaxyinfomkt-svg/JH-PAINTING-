@@ -13,6 +13,8 @@ const BeforeAfterCard = dynamic(() => import('./BeforeAfterCard'), {
 const beforeAfterPairs: SliderPair[] = [
   ...sliderPairs([
     ['interior-repaint-douglas', 0],
+    ['interior-repaint-douglas', 10],
+    ['interior-repaint-douglas', 11],
     ['interior-repaint-douglas', 2],
     ['interior-repaint-groton', 0],
     ['roto-rooter-marlborough-cafeteria', 0],

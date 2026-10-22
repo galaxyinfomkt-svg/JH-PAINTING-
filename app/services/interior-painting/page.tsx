@@ -129,10 +129,11 @@ const galleryImages = galleryFor({ services: ['interior-painting'] })
 const beforeAfterPairs: SliderPair[] = [
   ...sliderPairs([
     ['interior-repaint-douglas', 0],
+    ['interior-repaint-douglas', 10],
+    ['interior-repaint-douglas', 11],
     ['interior-repaint-douglas', 2],
     ['interior-repaint-groton', 0],
     ['interior-repaint-northbridge', 0],
-    ['interior-repaint-douglas', 7],
   ]),
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23ad3443ab5.webp',

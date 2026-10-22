@@ -114,36 +114,38 @@ const EyeIcon = () => (
 )
 
 // Data - 7 services for RS-style grid
+// Card photos are the crew's own job photos (projects.ts) wherever one exists for
+// that trade. Carpentry has none documented yet and keeps its older image.
 const services = [
   {
     title: 'Exterior Painting',
     description: 'Our specialty: complete exterior house painting with power washing, prep work, and two coats of premium weather-resistant paint. 5-year warranty.',
-    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
+    image: '/projects/waltham-church-exterior/01.webp',
     href: '/services/exterior-painting',
     featured: true,
   },
   {
     title: 'Interior Painting',
     description: 'Transform your home\'s interior with premium low-VOC paints and meticulous attention to detail.',
-    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',
+    image: '/projects/interior-repaint-douglas/07.webp',
     href: '/services/interior-painting',
   },
   {
     title: 'Cabinet Refinishing',
     description: 'Upgrade your kitchen with professional cabinet refinishing. A fresh, durable look without the replacement hassle.',
-    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png',
+    image: '/projects/interior-repaint-southbridge/ba-05-after.webp',
     href: '/services/cabinet-painting',
   },
   {
     title: 'Commercial Painting',
     description: 'Professional painting for offices, retail spaces, and restaurants. Minimal disruption to your business.',
-    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg',
+    image: '/projects/roto-rooter-marlborough-cafeteria/cover.webp',
     href: '/services/commercial-painting',
   },
   {
     title: 'Residential Painting',
     description: 'Complete home painting solutions from single rooms to entire house transformations.',
-    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg',
+    image: '/projects/interior-repaint-douglas/17.webp',
     href: '/services/residential-painting',
   },
   {
@@ -155,7 +157,7 @@ const services = [
   {
     title: 'Power Washing',
     description: 'Restore your property\'s appearance with professional power washing for decks, siding, and driveways.',
-    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
+    image: '/projects/pressure-washing/02.webp',
     href: '/services/power-washing',
   },
 ]
