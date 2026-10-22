@@ -165,7 +165,7 @@ const servicesData: Record<string, {
     name: 'Interior Painting',
     title: 'Professional Interior Painting',
     description: 'Transform your interior spaces with expert wall painting, ceiling painting, trim work, and color consultation.',
-    heroImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png',
+    heroImage: '/hero/interior-douglas-fireplace.webp',
     painPoints: [
       { title: 'Scuff Marks & Stains Everywhere?', desc: "Kids, pets, daily life-your walls show it all. Those marks and stains don't go away with cleaning.", solution: 'We prep, prime, and paint for a flawless finish' },
       { title: "Can't Pick the Right Color?", desc: "Thousands of paint colors, endless opinions-it's overwhelming. What if you choose wrong?", solution: 'Free expert color consultation included' },
@@ -201,7 +201,7 @@ const servicesData: Record<string, {
     name: 'Residential Painting',
     title: 'Residential Painting Services',
     description: 'Complete home painting solutions for interior and exterior projects of any size.',
-    heroImage: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg',
+    heroImage: '/hero/interior-douglas-living-room-door.webp',
     painPoints: [
       { title: 'House Looking Tired & Dated?', desc: "Your home deserves to look its best. Faded, chipped, or outdated paint drags down your curb appeal.", solution: 'Complete transformation inside and out' },
       { title: 'Too Busy to Deal With Painting?', desc: "Between work, family, and life, who has time to coordinate a painting project?", solution: 'We handle everything from start to finish' },
@@ -373,7 +373,9 @@ export default async function CityServicePage({ params }: Props) {
           <div className="service-hero-bg">
             <Image
               src={service.heroImage}
-              alt={`${service.name} in ${city.name}, MA`}
+              // The hero is a photo from one real job (e.g. Douglas), not from this
+              // town, so the alt names the service area rather than the photo's place.
+              alt={`${service.name} by JH Painting Services, serving ${city.name}, MA`}
               fill
               className="object-cover"
               priority

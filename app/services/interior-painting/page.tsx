@@ -196,8 +196,8 @@ export default function InteriorPaintingPage() {
       <section className="service-hero">
         <div className="service-hero-bg">
           <Image
-            src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png"
-            alt="Professional Interior Painting Services Massachusetts"
+            src="/hero/interior-douglas-fireplace.webp"
+            alt="Fireplace wall repainted in sage green by JH Painting Services in a Douglas, Massachusetts living room"
             fill
             className="object-cover"
             priority

@@ -235,8 +235,8 @@ export default function ResidentialPaintingPage() {
       <section className="service-hero">
         <div className="service-hero-bg">
           <Image
-            src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png"
-            alt="Professional Residential Painting Services Massachusetts"
+            src="/hero/interior-douglas-living-room-door.webp"
+            alt="Living room of a Douglas, Massachusetts home after a repaint by JH Painting Services, sage walls, white trim and the fireplace corner"
             fill
             className="object-cover"
             priority
