@@ -218,6 +218,32 @@ export const videos: SiteVideo[] = [
     citySlug: 'marlborough',
     service: 'commercial-painting',
   },
+  {
+    id: 'milford-bathroom',
+    source: 'self-hosted',
+    src: '/videos/milford-bathroom.mp4',
+    poster: '/videos/milford-bathroom.jpg',
+    title: 'Bathroom repaint walkthrough in Milford, MA',
+    description:
+      'Walkthrough of a finished bathroom repaint by JH Painting Services in Milford, Massachusetts: gray walls, white trim, vanity and tub surround.',
+    uploadDate: '2026-10-22',
+    duration: 'PT31S',
+    citySlug: 'milford',
+    service: 'interior-painting',
+  },
+  {
+    id: 'sherborn-bathroom',
+    source: 'self-hosted',
+    src: '/videos/sherborn-bathroom.mp4',
+    poster: '/videos/sherborn-bathroom.jpg',
+    title: 'Bathroom repaint walkthrough in Sherborn, MA',
+    description:
+      'Walkthrough of a finished bathroom repaint by JH Painting Services in Sherborn, Massachusetts: white walls and trim with the vanity, tub and hallway closets.',
+    uploadDate: '2026-10-22',
+    duration: 'PT28S',
+    citySlug: 'sherborn',
+    service: 'interior-painting',
+  },
 ]
 
 /** Public channel URL - one place, so the "watch more" links cannot drift. */

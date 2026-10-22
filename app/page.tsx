@@ -119,7 +119,7 @@ const EyeIcon = () => (
 const interiorDetailPair = sliderPairs([['interior-repaint-douglas', 10]])[0]
 
 // Card photos are the crew's own job photos (projects.ts) wherever one exists for
-// that trade. Carpentry has none documented yet and keeps its older image.
+// that trade.
 const services = [
   {
     title: 'Exterior Painting',
@@ -137,7 +137,7 @@ const services = [
   {
     title: 'Cabinet Refinishing',
     description: 'Upgrade your kitchen with professional cabinet refinishing. A fresh, durable look without the replacement hassle.',
-    image: '/projects/interior-repaint-southbridge/ba-05-after.webp',
+    image: '/projects/built-in-painting-wrentham/01.webp',
     href: '/services/cabinet-painting',
   },
   {
@@ -155,7 +155,7 @@ const services = [
   {
     title: 'Carpentry',
     description: 'Expert carpentry services including trim, molding, deck building, and structural repairs.',
-    image: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg',
+    image: '/projects/stair-carpentry/01.webp',
     href: '/services/carpentry',
   },
   {

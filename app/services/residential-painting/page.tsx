@@ -130,6 +130,8 @@ const beforeAfterPairs: SliderPair[] = [
   ...sliderPairs([
     ['interior-repaint-douglas', 5],
     ['interior-repaint-douglas', 6],
+    ['bedroom-repaint-boxborough', 1],
+    ['interior-repaint-west-boylston', 0],
     ['interior-repaint-southbridge', 0],
     ['interior-repaint-northbridge', 1],
   ]),

@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import BeforeAfterSlider from '@/app/components/BeforeAfterSlider'
+import BeforeAfterCard from '@/app/components/BeforeAfterCard'
+import { sliderPairs, galleryFor, type SliderPair } from '@/app/data/projects'
 import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Hammer, Wrench, Home } from '@/app/components/Icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
@@ -128,41 +129,18 @@ const carpentrySchema = {
   ]
 }
 
-const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg', alt: 'Professional carpentry repair services Massachusetts', category: 'Exterior Repair' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b8037a134d179ae6bc.jpeg', alt: 'Window frame repair and replacement Massachusetts', category: 'Window Frames' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Door frame carpentry services MA', category: 'Door Frames' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Trim and molding repair Massachusetts', category: 'Trim Work' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c451129bf2893e381f0b2f.jpeg', alt: 'Deck repair and restoration services MA', category: 'Deck Repair' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67d854f91b97ac367f033dc3.png', alt: 'Siding repair carpentry Massachusetts', category: 'Siding Repair' },
-]
+/* Real carpentry jobs from projects.ts, each labelled with its own town. */
+const galleryImages = galleryFor({ services: ['carpentry'] })
 
 // Before/After pairs for slider
-const beforeAfterPairs = [
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23ad3443ab5.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg',
-    beforeAlt: 'Historic church interior before restoration in Waltham MA',
-    afterAlt: 'Historic church interior after professional restoration in Waltham MA'
-  },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a30277f301b94ac7227dc.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp',
-    beforeAlt: 'Deck before power washing and staining',
-    afterAlt: 'Deck after professional power washing and staining'
-  },
+const beforeAfterPairs: SliderPair[] = [
+  ...sliderPairs([['stair-carpentry', 0]]),
   {
     before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a30274e42b930842eea35.webp',
     after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a3027a03db26c93445285.webp',
     beforeAlt: 'Staircase before refinishing',
     afterAlt: 'Staircase after professional refinishing'
   },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a39f37b4d1e5cbf3c1272.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a39f38441b1a824eef7d0.webp',
-    beforeAlt: 'House exterior before painting',
-    afterAlt: 'House exterior after professional painting'
-  }
 ]
 
 const painPoints = [
@@ -250,8 +228,8 @@ export default function CarpentryPage() {
       <section className="service-hero">
         <div className="service-hero-bg">
           <Image
-            src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
-            alt="Professional Carpentry Services Massachusetts"
+            src="/hero/stairs-north-andover.webp"
+            alt="Basement staircase in North Andover, Massachusetts with new white risers and trim by JH Painting Services"
             fill
             className="object-cover"
             priority
@@ -435,13 +413,7 @@ export default function CarpentryPage() {
 
           <div className="before-after-grid">
             {beforeAfterPairs.map((pair, idx) => (
-              <BeforeAfterSlider
-                key={idx}
-                beforeImage={pair.before}
-                afterImage={pair.after}
-                beforeAlt={pair.beforeAlt}
-                afterAlt={pair.afterAlt}
-              />
+              <BeforeAfterCard key={idx} pair={pair} />
             ))}
           </div>
         </div>

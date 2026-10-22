@@ -8,7 +8,7 @@ import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import BeforeAfterCard from '@/app/components/BeforeAfterCard'
-import { sliderPairs, type SliderPair } from '@/app/data/projects'
+import { sliderPairs, galleryFor, type SliderPair } from '@/app/data/projects'
 import CapacityNotice from '@/app/components/CapacityNotice'
 
 
@@ -121,57 +121,18 @@ const cabinetPaintingSchema = {
   ]
 }
 
-const galleryImages = [
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg', alt: 'Historic church restoration interior painting in Waltham MA', category: 'Interior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68064ed8773e16490df7d065.png', alt: 'Modern gray cabinet refinishing services Waltham MA', category: 'Cabinet Refinishing' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68c45112fded710fe1706ba0.jpeg', alt: 'Professional spray finish cabinet painting Massachusetts', category: 'Spray Finishing' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp', alt: 'Professional exterior painting Massachusetts', category: 'Exterior' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp', alt: 'Professional deck staining and power washing MA', category: 'Deck' },
-  { src: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg', alt: 'Historic church exterior painting in Waltham MA', category: 'Exterior' },
-]
+/* Real cabinet and built-in jobs from projects.ts, each labelled with its own town. */
+const galleryImages = galleryFor({ services: ['cabinet-painting'] })
 
 // Before/After transformation pairs. Real pairs from projects.ts come first:
 // the crew's own frames of the same room from the same angle.
 const beforeAfterPairs: SliderPair[] = [
   ...sliderPairs([
+    ['built-in-painting-wrentham', 0],
+    ['built-in-painting-wrentham', 2],
+    ['built-in-painting-wrentham', 1],
     ['interior-repaint-southbridge', 4],
-  ]),
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23ad3443ab5.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg',
-    beforeAlt: 'Historic church interior before restoration in Waltham MA',
-    afterAlt: 'Historic church interior after professional restoration in Waltham MA'
-  },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2f06a03db23bb3443ab4.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2e93b34b6403a606b8fc.jpg',
-    beforeAlt: 'Historic church exterior before painting in Waltham MA',
-    afterAlt: 'Historic church exterior after professional painting in Waltham MA'
-  },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac7eb2da7db4eacd6a2.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac78441b12824edadfa.webp',
-    beforeAlt: 'Residential exterior before painting',
-    afterAlt: 'Residential exterior after professional painting'
-  },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a30277f301b94ac7227dc.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a2ac77b4d1e274d3ac051.webp',
-    beforeAlt: 'Deck before power washing and staining',
-    afterAlt: 'Deck after professional power washing and staining'
-  },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a30274e42b930842eea35.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a3027a03db26c93445285.webp',
-    beforeAlt: 'Staircase before refinishing',
-    afterAlt: 'Staircase after professional refinishing'
-  },
-  {
-    before: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a39f37b4d1e5cbf3c1272.webp',
-    after: 'https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/696a39f38441b1a824eef7d0.webp',
-    beforeAlt: 'House exterior before painting',
-    afterAlt: 'House exterior after professional painting'
-  }
+  ])
 ]
 
 const painPoints = [
@@ -256,8 +217,8 @@ export default function CabinetPaintingPage() {
       <section className="service-hero">
         <div className="service-hero-bg">
           <Image
-            src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2baaeee4bdc42aec7ca80.jpeg"
-            alt="Professional Cabinet Painting Services Massachusetts"
+            src="/hero/built-ins-wrentham.webp"
+            alt="Built-in library shelving in Wrentham, Massachusetts sprayed white by JH Painting Services"
             fill
             className="object-cover"
             priority

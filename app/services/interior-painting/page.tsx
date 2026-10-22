@@ -132,6 +132,7 @@ const beforeAfterPairs: SliderPair[] = [
     ['interior-repaint-douglas', 10],
     ['interior-repaint-douglas', 11],
     ['interior-repaint-douglas', 2],
+    ['bedroom-repaint-boxborough', 0],
     ['interior-repaint-groton', 0],
     ['interior-repaint-northbridge', 0],
   ]),
