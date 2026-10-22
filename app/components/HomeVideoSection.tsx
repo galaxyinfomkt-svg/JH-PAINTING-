@@ -26,11 +26,11 @@ const schema = videoSchema(videos)
 
 const HOME_VIDEO_IDS = [
   'douglas-living-room-before-after',
-  'douglas-dining-room-before-after',
-  'groton-accent-wall-before-after',
-  'northbridge-living-room-before-after',
+  'boxborough-bedroom-before-after',
+  'wrentham-built-ins-before-after',
+  'chelmsford-deck-before-after',
+  'west-boylston-family-room-before-after',
   'marlborough-break-room-before-after',
-  'southbridge-interior-before-after',
 ]
 const homeVideos = HOME_VIDEO_IDS.map((id) => videos.find((v) => v.id === id)).filter(
   (v): v is SiteVideo => Boolean(v)

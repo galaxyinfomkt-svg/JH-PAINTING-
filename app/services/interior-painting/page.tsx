@@ -7,6 +7,7 @@ import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
+import ServiceVideos from '@/app/components/ServiceVideos'
 import BeforeAfterCard from '@/app/components/BeforeAfterCard'
 import { sliderPairs, galleryFor, type SliderPair } from '@/app/data/projects'
 import CapacityNotice from '@/app/components/CapacityNotice'
@@ -430,35 +431,7 @@ export default function InteriorPaintingPage() {
           </div>
 
           <div className="service-video-grid">
-            {VIDEOS.map((video, idx) => (
-              <a
-                key={idx}
-                href={`https://www.youtube.com/watch?v=${video.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="service-video-card"
-              >
-                <Image
-                  src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-                  /* Decorative: the card's own heading already carries the
-                     video title, so repeating it here made the title announce
-                     twice (Lighthouse image-redundant-alt). */
-                  alt=""
-                  aria-hidden="true"
-                  fill
-                  loading="lazy"
-                  className="object-cover"
-                  quality={75}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="service-video-overlay">
-                  <div className="service-video-play">
-                    <Play size={32} fill="#fff" color="#fff" />
-                  </div>
-                </div>
-                <p className="service-video-title">{video.title}</p>
-              </a>
-            ))}
+            <ServiceVideos service="interior-painting" limit={4} />
           </div>
         </div>
       </section>

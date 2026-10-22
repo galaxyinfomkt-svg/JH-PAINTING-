@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 import BeforeAfterCard from '@/app/components/BeforeAfterCard'
+import ServiceVideos from '@/app/components/ServiceVideos'
 import { sliderPairs, galleryFor, type SliderPair } from '@/app/data/projects'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
@@ -535,6 +536,21 @@ export default function PowerWashingPage() {
               {beforeAfterPairs.map((pair, idx) => (
                 <BeforeAfterCard key={idx} pair={pair} />
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Video Section - before/after footage from our own deck jobs */}
+        <section className="service-section service-section-dark">
+          <div className="container">
+            <div className="service-section-header">
+              <h2 className="service-section-title service-section-title-light">Watch the Deck Transformations</h2>
+              <p className="service-section-subtitle service-section-subtitle-light">
+                Before and after footage from our own deck jobs in Massachusetts
+              </p>
+            </div>
+            <div className="service-video-grid">
+              <ServiceVideos service="power-washing" limit={3} />
             </div>
           </div>
         </section>

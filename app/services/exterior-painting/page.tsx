@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import ServiceVideos from '@/app/components/ServiceVideos'
 import Link from 'next/link'
 import Script from 'next/script'
 import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Sun, Home, Droplets } from '@/app/components/Icons'
@@ -546,37 +547,7 @@ export default function ExteriorPaintingPage() {
           </div>
 
           <div className="service-video-grid">
-            {VIDEOS.slice(0, 2).map((video, idx) => (
-              <a
-                key={idx}
-                href={`https://www.youtube.com/watch?v=${video.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="service-video-card"
-              >
-                <Image
-                  src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-                  /* Decorative: the card's own heading already carries the
-                     video title, so repeating it here made the title announce
-                     twice (Lighthouse image-redundant-alt). */
-                  alt=""
-                  aria-hidden="true"
-                  fill
-                  loading="lazy"
-                  className="object-cover"
-                  quality={75}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="service-video-overlay">
-                  <div className="service-video-play">
-                    <Play size={32} fill="#fff" color="#fff" />
-                  </div>
-                </div>
-                <div className="service-video-title">
-                  <p>{video.title}</p>
-                </div>
-              </a>
-            ))}
+            <ServiceVideos service="exterior-painting" limit={2} />
           </div>
         </div>
       </section>
