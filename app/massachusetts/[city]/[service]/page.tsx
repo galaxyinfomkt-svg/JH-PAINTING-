@@ -528,7 +528,9 @@ export default async function CityServicePage({ params }: Props) {
               <span className="service-section-badge">Our Work</span>
               <h2 className="service-section-title">Recent {service.name} Projects</h2>
               <p className="service-section-subtitle">
-                Work by our crew around Massachusetts, each photo labelled with the town it was taken in
+                {gallery === realGallery
+                  ? 'Work by our crew around Massachusetts, each photo labelled with the town it was taken in'
+                  : `${service.name} and finishing work by our crew across Massachusetts`}
               </p>
             </div>
 

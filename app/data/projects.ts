@@ -593,6 +593,17 @@ export function galleryFor({
       return (b.p.completed ?? '').localeCompare(a.p.completed ?? '') || a.i - b.i
     })
     .map(({ p }) => p)
+  // One job per town before any town gets a second (Marlborough has three jobs
+  // and would otherwise take half the grid). Stable, so the order above holds.
+  const seen = new Set<string>()
+  const firsts: Project[] = []
+  const repeats: Project[] = []
+  pool.forEach((p) => {
+    const key = p.citySlug ?? p.slug
+    if (seen.has(key)) repeats.push(p)
+    else { seen.add(key); firsts.push(p) }
+  })
+  pool.splice(0, pool.length, ...firsts, ...repeats)
   const frames = pool.map((p) => {
     const cover = coverOf(p)
     return [cover, ...p.photos.filter((ph) => ph.src !== cover.src)]
