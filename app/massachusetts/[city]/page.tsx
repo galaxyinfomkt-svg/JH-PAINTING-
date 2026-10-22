@@ -116,6 +116,7 @@ import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import CityProof from '@/app/components/CityProof'
+import HousingBlock from '@/app/components/HousingBlock'
 import { galleryFor, projectsForCity } from '@/app/data/projects'
 import CityVideo from '@/app/components/CityVideo'
 import CityLocalBrief from '@/app/components/CityLocalBrief'
@@ -743,6 +744,7 @@ export default async function CityPage({ params }: Props) {
       {/* First-hand proof: renders only when we hold real photographs from
           this town. See app/data/projects.ts. */}
       <CityProof citySlug={city.slug} cityName={city.name} state={city.state ?? 'MA'} />
+      <HousingBlock citySlug={city.slug} cityName={city.name} />
       <CityVideo citySlug={city.slug} cityName={city.name} state={city.state ?? 'MA'} />
 
       <ReviewsSection />

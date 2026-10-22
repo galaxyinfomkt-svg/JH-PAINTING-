@@ -14,6 +14,7 @@
  * titles were over 60 chars and 46% of descriptions over 160 (worst case 226).
  */
 
+import { housingFaq } from './housing'
 import type { City } from './cities'
 import { getCityState } from './cities'
 import {
@@ -330,6 +331,8 @@ function composeFaq(city: City, serviceSlug: string): { question: string; answer
   const exp = exposureProfile(city)
 
   const faq = [
+    // Census housing facts + nearest documented job: the answers no other page here repeats.
+    ...housingFaq(city.name, city.slug, serviceSlug),
     {
       question: `Do you cover all of ${city.name}, ${st}?`,
       answer: `${zipNote(city) ?? `We cover ${city.name} in full.`}${

@@ -47,6 +47,7 @@ import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import CityProof from '@/app/components/CityProof'
+import HousingBlock from '@/app/components/HousingBlock'
 import { galleryFor } from '@/app/data/projects'
 import RelatedCities from '@/app/components/RelatedCities'
 import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
@@ -664,6 +665,7 @@ export default async function CityServicePage({ params }: Props) {
       {/* Prefers projects of THIS trade in this town, falls back to any
           documented job there. Renders nothing when we have none. */}
       <CityProof citySlug={city.slug} cityName={city.name} state={city.state ?? 'MA'} service={serviceSlug} />
+      <HousingBlock citySlug={city.slug} cityName={city.name} service={serviceSlug} serviceName={service.name} />
 
       <ReviewsSection />
       <Footer />
