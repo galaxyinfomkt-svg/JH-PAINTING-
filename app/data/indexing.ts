@@ -94,7 +94,16 @@ export const HIGH_DEMAND_SERVICES = new Set<string>([
  * O que faz uma pagina destas valer de verdade nao e a flag, e prova de obra
  * na cidade. Com foto e video, Southbridge foi indexada em 8 dias.
  */
-export const REQUIRE_EVIDENCE_FOR_LONG_TAIL = false
+/*
+ * RELIGADO EM 23/10/2026, com aprovacao da agencia.
+ * Search Console (15/10): 658 "Rastreada, nao indexada" + 280 "Descoberta, nao
+ * indexada" - praticamente todas as 812 paginas cidade x servico. Com o freio:
+ * 352 continuam indexaveis (servicos de alta demanda em cidades grandes ou
+ * proximas, mais TODAS as paginas das cidades com obra real em projects.ts) e
+ * ~460 viram noindex,follow e saem do sitemap. Cada obra nova que entra em
+ * projects.ts libera sozinha as paginas da sua cidade.
+ */
+export const REQUIRE_EVIDENCE_FOR_LONG_TAIL = true
 
 /**
  * Population strings look like "20,000+", "3,000+", "72,000+".
