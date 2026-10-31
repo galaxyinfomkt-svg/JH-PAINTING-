@@ -13045,8 +13045,9 @@ button.video-card-rs {
 .hv2-sub-light { text-align: center; color: #e5e7eb; margin: 0 0 2rem; font-size: 1.05rem; }
 .hv2-rule { display: block; width: 64px; height: 3px; background: #CC0000; margin: .4rem auto 2.2rem; border-radius: 2px; }
 
-.hv2-hero { position: relative; background: #0a0e27; color: #fff; overflow: hidden; min-height: clamp(560px, 62vw, 720px); display: flex; align-items: center; padding-top: 8rem; padding-bottom: 3rem; }
-@media (min-width: 1024px) { .hv2-hero { padding-top: 7.5rem; } }
+.hv2-hero { position: relative; background: #0a0e27; color: #fff; overflow: hidden; min-height: clamp(560px, 62vw, 720px); display: flex; align-items: center; padding-top: 9.5rem; padding-bottom: 3rem; }
+/* The header is two bars (red top strip + white nav, ~140px), fixed over the page. */
+@media (min-width: 1024px) { .hv2-hero { padding-top: 11rem; } }
 .hv2-hero-media { position: absolute; top: 0; right: 0; bottom: 0; left: 46%; }
 .hv2-hero-fade { position: absolute; inset: 0; background: linear-gradient(90deg, #0a0e27 0%, #0a0e27 46%, rgba(10,14,39,.55) 52%, rgba(10,14,39,0) 60%); }
 .hv2-hero-inner { position: relative; z-index: 2; width: 100%; }
@@ -13063,7 +13064,8 @@ button.video-card-rs {
 .hv2-btn-red:hover { background: #b00000; }
 .hv2-btn-ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.75); }
 .hv2-btn-ghost:hover { background: rgba(255,255,255,.08); }
-.hv2-rating { margin: 1.4rem 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; font-size: .95rem; }
+.hv2-rating { margin: 1.4rem 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; font-size: .95rem; color: #fff; }
+.hv2-rating strong { color: #fff; }
 .hv2-rating span:last-child { flex-basis: 100%; color: #d1d5db; font-size: .9rem; }
 .hv2-stars { display: inline-flex; gap: 2px; color: #FBBF24; }
 
@@ -13121,6 +13123,9 @@ button.video-card-rs {
   .hv2-form { grid-column: 1 / -1; }
 }
 @media (max-width: 760px) {
+  .hv2-hero .hero-text, .hv2-lead { max-width: 100%; min-width: 0; }
+  .hv2-trust li { flex: 1 1 140px; min-width: 0; }
+  .hv2-btn { flex: 1 1 auto; justify-content: center; }
   .hv2-hero-media { left: 0; opacity: .35; }
   .hv2-hero-fade { background: linear-gradient(180deg, rgba(10,14,39,.7), #0a0e27 85%); }
   .hv2-svc-grid { grid-template-columns: repeat(2, 1fr); }
