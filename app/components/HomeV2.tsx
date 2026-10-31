@@ -94,12 +94,12 @@ export function HV2Hero() {
       <div className="hv2-hero-media">
         {/* Real job photo: Douglas, MA living room after the repaint (projects.ts). */}
         <Image
-          src="/hero/interior-douglas-living-room.webp"
+          src="/hero/interior-douglas-living-room-panel.webp"
           alt="Living room of a Douglas, Massachusetts home after an interior repaint by JH Painting Services, sage and greige walls under a vaulted ceiling"
           fill
           priority
           fetchPriority="high"
-          sizes="(max-width: 900px) 100vw, 60vw"
+          sizes="(max-width: 760px) 100vw, 55vw"
           quality={72}
           style={{ objectFit: 'cover' }}
         />

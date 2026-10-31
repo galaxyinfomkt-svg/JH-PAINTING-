@@ -13045,11 +13045,12 @@ button.video-card-rs {
 .hv2-sub-light { text-align: center; color: #e5e7eb; margin: 0 0 2rem; font-size: 1.05rem; }
 .hv2-rule { display: block; width: 64px; height: 3px; background: #CC0000; margin: .4rem auto 2.2rem; border-radius: 2px; }
 
-.hv2-hero { position: relative; background: #0a0e27; color: #fff; overflow: hidden; min-height: clamp(520px, 62vw, 640px); display: flex; align-items: center; }
-.hv2-hero-media { position: absolute; top: 0; right: 0; bottom: 0; left: 38%; }
-.hv2-hero-fade { position: absolute; inset: 0; background: linear-gradient(90deg, #0a0e27 0%, #0a0e27 38%, rgba(10,14,39,.75) 52%, rgba(10,14,39,.05) 78%); }
-.hv2-hero-inner { position: relative; width: 100%; padding-top: 3rem; padding-bottom: 3rem; }
-.hv2-hero .hero-text { max-width: 560px; }
+.hv2-hero { position: relative; background: #0a0e27; color: #fff; overflow: hidden; min-height: clamp(560px, 62vw, 720px); display: flex; align-items: center; padding-top: 8rem; padding-bottom: 3rem; }
+@media (min-width: 1024px) { .hv2-hero { padding-top: 7.5rem; } }
+.hv2-hero-media { position: absolute; top: 0; right: 0; bottom: 0; left: 46%; }
+.hv2-hero-fade { position: absolute; inset: 0; background: linear-gradient(90deg, #0a0e27 0%, #0a0e27 46%, rgba(10,14,39,.55) 52%, rgba(10,14,39,0) 60%); }
+.hv2-hero-inner { position: relative; z-index: 2; width: 100%; }
+.hv2-hero .hero-text { max-width: 540px; }
 .hv2-h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.07; font-weight: 800; margin: 0 0 1.2rem; color: #fff; }
 .hv2-h1 span { color: #E01E1E; display: block; }
 .hv2-lead { font-size: clamp(1rem, 1.6vw, 1.2rem); color: #e5e7eb; margin: 0 0 1.6rem; max-width: 480px; line-height: 1.55; }
