@@ -70,7 +70,7 @@ export default function ReviewsWidget() {
   return (
     <div
       ref={containerRef}
-      style={{ minHeight: '600px', position: 'relative' }}
+      style={{ minHeight: loaded ? undefined : '600px', position: 'relative' }}
     >
       {showIframe && (
         <iframe

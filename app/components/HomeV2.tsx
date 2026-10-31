@@ -82,12 +82,6 @@ const RESULTS = [
 ]
 
 // Literal Google reviews (excerpts marked with an ellipsis), first name + initial only.
-const REVIEWS = [
-  { name: 'Sue L.', initials: 'SL', text: 'Jafet and his team were extremely polite, responsive and thoughtful- even removing shoes without being asked before entering the house. They showed up exactly on time and were so quiet and efficient.' },
-  { name: 'Nick A.', initials: 'NA', text: 'Great service and amazing work. Jafet was very precise with the work done and reasonable price. The quality of work exceeded expectations.' },
-  { name: 'Julie C.', initials: 'JC', text: 'They did a wonderful job on my house! They were very clean, professional and friendly.' },
-]
-
 export function HV2Hero() {
   return (
     <section id="home" className="hv2-hero">
@@ -236,22 +230,10 @@ export function HV2About() {
 
 export function HV2Reviews() {
   return (
-    <section id="reviews" className="hv2-section hv2-soft">
+    <section id="reviews" className="hv2-section hv2-soft" style={{ paddingBottom: '1rem' }}>
       <div className="hv2-wrap">
         <p className="hv2-eyebrow">Our Customers</p>
         <h2 className="hv2-h2">What Homeowners Say About Us</h2>
-        <div className="hv2-rev-grid">
-          {REVIEWS.map((r) => (
-            <figure key={r.name} className="hv2-rev">
-              <Stars size={20} />
-              <blockquote>&ldquo;{r.text}&rdquo;</blockquote>
-              <figcaption>
-                <span className="hv2-avatar" aria-hidden="true">{r.initials}</span>
-                <span><strong>{r.name}</strong><em>Google review</em></span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
       </div>
     </section>
   )

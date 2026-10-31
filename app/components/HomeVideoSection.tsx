@@ -60,7 +60,7 @@ export default function HomeVideoSection() {
             <p>Watch our expert team tackle painting projects across Massachusetts.</p>
           </div>
 
-          <div className="video-grid-rs">
+          <div className="video-grid-rs video-grid-home">
             {/* Six cards, the newest real before/after footage first. Every video
                 still shows on its own city page via CityVideo, and all of them stay
                 in the schema; the YouTube ones are one click away below. */}
@@ -77,7 +77,7 @@ export default function HomeVideoSection() {
                   aria-hidden="true"
                   fill
                   loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 576px) 100vw, (max-width: 1100px) 50vw, 33vw"
                   style={{ objectFit: 'cover' }}
                 />
                 {/*

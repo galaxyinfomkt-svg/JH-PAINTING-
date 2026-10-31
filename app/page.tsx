@@ -206,7 +206,7 @@ export default function HomePage() {
       <HomeHeader />
 
       {/* Main Content */}
-      <main id="main-content">
+      <main id="main-content" className="home-v2">
         {/* Home v2 layout (client mockup, Oct 2026) - see app/components/HomeV2.tsx */}
         <HV2Hero />
         {/* Google Reviews Bar */}
@@ -281,8 +281,8 @@ export default function HomePage() {
         <HV2Results />
         <HV2About />
         <HV2Reviews />
-        {/* Live Google reviews (kept from v1, under the three quoted reviews) */}
-        <section className="section reviews-section" style={{ paddingTop: 0, background: '#f6f7fa' }}>
+        {/* Live Google reviews from the GHL widget (only review source on the home) */}
+        <section className="section reviews-section" style={{ paddingTop: 0, paddingBottom: '2.5rem', background: '#f6f7fa' }}>
           <div className="container">
             {/*
               Static social-proof banner - SSR'd, no third-party JS, no lazy
@@ -322,10 +322,8 @@ export default function HomePage() {
               </a>
             </div>
 
-            {/* Reserve height to prevent CLS while the widget loads */}
-            <div style={{ minHeight: '800px' }}>
-              <ReviewsWidget />
-            </div>
+            {/* ReviewsWidget reserves its own height until the iframe loads */}
+            <ReviewsWidget />
           </div>
         </section>
 
