@@ -144,7 +144,7 @@ export function HV2Services() {
           {SERVICES.map((s) => (
             <Link key={s.key} href={s.href} className="hv2-svc">
               <span className="hv2-svc-img">
-                <Image src={s.image} alt={`${s.title} by JH Painting Services`} fill sizes="(max-width: 640px) 50vw, 16vw" quality={60} loading="lazy" style={{ objectFit: 'cover' }} />
+                <Image src={s.image} alt={`${s.title} by JH Painting Services`} fill sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw" quality={70} loading="lazy" style={{ objectFit: 'cover' }} />
               </span>
               <span className="hv2-svc-icon">{ICONS[s.key]}</span>
               <span className="hv2-svc-title">{s.title}</span>
@@ -170,11 +170,11 @@ export function HV2Results() {
             <Link key={r.label} href={r.href} className="hv2-res">
               <span className="hv2-res-frame">
                 <span className="hv2-res-half">
-                  <Image src={r.before} alt={`Before: ${r.alt}`} fill sizes="(max-width: 640px) 45vw, 12vw" quality={60} loading="lazy" style={{ objectFit: 'cover' }} />
+                  <Image src={r.before} alt={`Before: ${r.alt}`} fill sizes="(max-width: 760px) 50vw, 25vw" quality={70} loading="lazy" style={{ objectFit: 'cover' }} />
                   <em className="hv2-tag hv2-tag-before">Before</em>
                 </span>
                 <span className="hv2-res-half">
-                  <Image src={r.after} alt={`After: ${r.alt}`} fill sizes="(max-width: 640px) 45vw, 12vw" quality={60} loading="lazy" style={{ objectFit: 'cover' }} />
+                  <Image src={r.after} alt={`After: ${r.alt}`} fill sizes="(max-width: 760px) 50vw, 25vw" quality={70} loading="lazy" style={{ objectFit: 'cover' }} />
                   <em className="hv2-tag hv2-tag-after">After</em>
                 </span>
               </span>
