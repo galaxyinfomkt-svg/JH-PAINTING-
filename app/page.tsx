@@ -1,18 +1,14 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import HomeHeader from './components/HomeHeader'
 import LazyIframe from './components/LazyIframe'
 import ReviewsWidget from './components/ReviewsWidget'
-import LazyHeroForm from './components/LazyHeroForm'
 import Footer from './components/Footer'
 import { generatePageMetadata } from '@/lib/seo'
 import { siteConfig } from '@/lib/siteConfig'
 import { CITY_COUNT } from '@/app/data/cities'
-import CapacityNotice from '@/app/components/CapacityNotice'
 import HomeGallery from './components/HomeGallery'
-import { sliderPairs } from '@/app/data/projects'
+import { HV2Hero, HV2Services, HV2Results, HV2About, HV2Reviews, HV2Cta } from './components/HomeV2'
 
 /**
  * HOME page metadata.
@@ -21,6 +17,30 @@ import { sliderPairs } from '@/app/data/projects'
  * THE PHONE NUMBER - that's the lever that makes Google render the tel right
  * inside the snippet (Wolfs Siding gets its (774) 484-1895 the same way).
  */
+const PhoneIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+)
+
+const MailIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+)
+
+const MapPinIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+)
+
+const ClockIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+)
+
+const StarIcon = ({ size = 16, fill }: { size?: number; fill?: string }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill={fill || "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+)
+
+const ChevronRightIcon = ({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+)
+
 export const metadata: Metadata = generatePageMetadata({
   // Title trimmed to 56 chars so the phone makes it into the SERP and
   // nothing truncates. Brand last is intentional - Google often boosts
@@ -55,117 +75,8 @@ export const metadata: Metadata = generatePageMetadata({
 // Dynamic imports for below-fold sections - reduces initial JS bundle and TBT
 const HomeVideoSection = dynamic(() => import('./components/HomeVideoSection'))
 const HomeFAQ = dynamic(() => import('./components/HomeFAQ'))
-const HomeBeforeAfter = dynamic(() => import('./components/HomeBeforeAfter'))
-const BeforeAfterCard = dynamic(() => import('./components/BeforeAfterCard'))
 
 // SVG icons - plain functions for server rendering
-const PhoneIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-)
-
-const MailIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-)
-
-const MapPinIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-)
-
-const CheckIcon = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-)
-
-const StarIcon = ({ size = 16, fill }: { size?: number; fill?: string }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill={fill || "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-)
-
-const ShieldIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
-)
-
-const ClockIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-)
-
-const DollarIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-)
-
-const ChevronRightIcon = ({ size = 16 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-)
-
-const PaintbrushIcon = ({ size = 20 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14.622 17.897-10.68-2.913"/><path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"/><path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"/></svg>
-)
-
-const HardHatIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><path d="M14 6a6 6 0 0 1 6 6v3"/></svg>
-)
-
-const AwardIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
-)
-
-const ClipboardIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
-)
-
-const EyeIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-)
-
-// Data - 7 services for RS-style grid
-const interiorDetailPair = sliderPairs([['interior-repaint-douglas', 10]])[0]
-
-// Card photos are the crew's own job photos (projects.ts) wherever one exists for
-// that trade.
-const services = [
-  {
-    title: 'Exterior Painting',
-    description: 'Our specialty: complete exterior house painting with power washing, prep work, and two coats of premium weather-resistant paint. 5-year warranty.',
-    image: '/projects/waltham-church-exterior/01.webp',
-    href: '/services/exterior-painting',
-    featured: true,
-  },
-  {
-    title: 'Interior Painting',
-    description: 'Transform your home\'s interior with premium low-VOC paints and meticulous attention to detail.',
-    image: '/projects/interior-repaint-douglas/07.webp',
-    href: '/services/interior-painting',
-  },
-  {
-    title: 'Cabinet Refinishing',
-    description: 'Upgrade your kitchen with professional cabinet refinishing. A fresh, durable look without the replacement hassle.',
-    image: '/projects/built-in-painting-wrentham/01.webp',
-    href: '/services/cabinet-painting',
-  },
-  {
-    title: 'Commercial Painting',
-    description: 'Professional painting for offices, retail spaces, and restaurants. Minimal disruption to your business.',
-    image: '/projects/roto-rooter-marlborough-cafeteria/cover.webp',
-    href: '/services/commercial-painting',
-  },
-  {
-    title: 'Residential Painting',
-    description: 'Complete home painting solutions from single rooms to entire house transformations.',
-    image: '/projects/interior-repaint-douglas/17.webp',
-    href: '/services/residential-painting',
-  },
-  {
-    title: 'Carpentry',
-    description: 'Expert carpentry services including trim, molding, deck building, and structural repairs.',
-    image: '/projects/stair-carpentry/01.webp',
-    href: '/services/carpentry',
-  },
-  {
-    title: 'Power Washing',
-    description: 'Restore your property\'s appearance with professional power washing for decks, siding, and driveways.',
-    image: '/projects/deck-restoration-chelmsford/01.webp',
-    href: '/services/power-washing',
-  },
-]
-
 // The hardcoded `galleryImages` array that used to live here is gone. It held
 // six GoHighLevel CDN URLs whose alt text named specific projects the images
 // were not of. app/components/HomeGallery.tsx now builds this section from
@@ -196,7 +107,7 @@ const homePageSchema = {
       dateModified: '2026-05-14',
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.hero-text h1', '.hero-description-short', '.service-summary'],
+        cssSelector: ['.hero-text h1', '.hero-description-short'],
       },
       significantLink: [
         'https://jhpaintingservices.com/services/exterior-painting',
@@ -296,102 +207,8 @@ export default function HomePage() {
 
       {/* Main Content */}
       <main id="main-content">
-        {/* Hero Section - RS Development Group Style */}
-        <section id="home" className="hero hero-simplified">
-          <div className="hero-bg">
-            {/* Foto nossa, de uma obra real: a sala de estar da casa de Douglas,
-                MA, depois da pintura (outubro de 2026, par "living room" em
-                projects.ts). Escolhida pelo cliente para a capa da home.
-                Servida de /public em vez do storage do GHL, entao o LCP nao
-                depende de um dominio de terceiro. */}
-            <Image
-              src="/hero/interior-douglas-living-room.webp"
-              alt="Living room of a Douglas, Massachusetts home after an interior repaint by JH Painting Services, sage and greige walls under a vaulted ceiling with an arched window"
-              fill
-              priority
-              fetchPriority="high"
-              sizes="100vw"
-              quality={72}
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
-          <div className="hero-overlay" />
-
-          <div className="hero-content container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 500px), 1fr))', gap: '3rem', alignItems: 'center' }}>
-              <div className="hero-text">
-                {/* Service area badge - RS style */}
-                <p style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1.25rem', background: 'rgba(204,0,0,0.9)', borderRadius: '100px', color: '#fff', fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
-                  Serving {CITY_COUNT} Massachusetts cities
-                </p>
-
-                {/* 5-Star rating badge */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                  <div style={{ display: 'flex', gap: '2px', color: '#CC0000' }}>
-                    <StarIcon size={18} fill="#CC0000" />
-                    <StarIcon size={18} fill="#CC0000" />
-                    <StarIcon size={18} fill="#CC0000" />
-                    <StarIcon size={18} fill="#CC0000" />
-                    <StarIcon size={18} fill="#CC0000" />
-                  </div>
-                  <span style={{ color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>5.0 Rating | 40+ Reviews</span>
-                </div>
-
-                {/* Headline */}
-                <h1 className="hero-title-emotional">
-                  Exterior & Interior<br />
-                  <span className="hero-title-accent">Painters in Massachusetts</span>
-                </h1>
-
-                <p className="hero-description-short" style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', maxWidth: '560px' }}>
-                  Massachusetts' trusted exterior painting specialists. Premium Benjamin Moore & Sherwin-Williams paints. Licensed, $2M insured, EPA Lead-Safe certified. From complete home exteriors to interiors and cabinets. 5-year warranty on exterior work.
-                </p>
-
-                {/* Dual CTA - RS style (Gold + White border) */}
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-                  <a href="tel:+15086908886" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2rem', background: '#CC0000', color: '#fff', borderRadius: '8px', fontSize: '1.125rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 10px 40px rgba(204,0,0,0.35)', transition: 'all 0.3s ease', border: 'none' }}>
-                    <PhoneIcon />
-                    Call (508) 690-8886
-                  </a>
-                  <a href="#quote-form" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem', background: 'transparent', color: '#fff', borderRadius: '8px', fontSize: '1rem', fontWeight: 600, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)', backdropFilter: 'blur(10px)' }}>
-                    Get Free Estimate
-                    <ChevronRightIcon size={18} />
-                  </a>
-                </div>
-
-                {/* Trust indicators - RS style */}
-                <div className="hero-trust-compact">
-                  <span className="hero-trust-item">
-                    <ShieldIcon />
-                    Licensed & Insured
-                  </span>
-                  <span className="hero-trust-divider">|</span>
-                  <span className="hero-trust-item">
-                    <ClockIcon />
-                    24-48 Hour Response
-                  </span>
-                  <span className="hero-trust-divider">|</span>
-                  <span className="hero-trust-item">
-                    <DollarIcon />
-                    Free Estimates
-                  </span>
-                </div>
-              </div>
-
-              {/* Quote Form Card */}
-              <div id="quote-form" className="hero-form-card">
-                <CapacityNotice />
-                <LazyHeroForm
-                  priority
-                  className="hero-form-iframe"
-                  src="https://api.leadconnectorhq.com/widget/form/gmVSZsO5e3S0pbXmmnPn"
-                  title="Get Your Free Painting Estimate"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
+        {/* Home v2 layout (client mockup, Oct 2026) - see app/components/HomeV2.tsx */}
+        <HV2Hero />
         {/* Google Reviews Bar */}
         <div className="google-reviews-bar">
           <div className="container">
@@ -460,272 +277,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Services Section - RS 3-Column Grid with 7 Services */}
-        <section id="services" className="section section-modern">
+        <HV2Services />
+        <HV2Results />
+        <HV2About />
+        <HV2Reviews />
+        {/* Live Google reviews (kept from v1, under the three quoted reviews) */}
+        <section className="section reviews-section" style={{ paddingTop: 0, background: '#f6f7fa' }}>
           <div className="container">
-            <div className="services-section-header section-header-enhanced">
-              <span className="section-eyebrow">What We Offer</span>
-              <h2>Our Professional <span>Services</span></h2>
-              <p>From expert <strong>painting and finishing work</strong> to complete home exteriors, we deliver quality craftsmanship on every project.</p>
-              <div className="underline"></div>
-            </div>
-
-            <div className="services-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))' }}>
-              {services.map((service, index) => (
-                <Link href={service.href} key={index} className="service-card service-card-enhanced">
-                  {service.featured && <span className="service-card-featured">Featured Service</span>}
-                  <div className="service-card-image">
-                    {/* Service-card images: Lighthouse flagged 828×517 served
-                       for 662×441 actual display. Reducing quality 75→55
-                       (acceptable for grid thumbnails) + tightening sizes
-                       breakpoints saves ~30 KiB per image. */}
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      width={600}
-                      height={400}
-                      loading="lazy"
-                      quality={55}
-                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
-                      style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                    />
-                  </div>
-                  <div className="service-card-content">
-                    <h3>{service.title}</h3>
-                    <p>{service.description}</p>
-                    <span className="service-link">
-                      Learn More <ChevronRightIcon size={16} />
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* About Section - RS Dark Style with Stats */}
-        <section id="about" className="section section-modern about-section-dark">
-          <div className="container">
-            <div className="about-grid">
-              <div className="about-content">
-                <div className="about-underline"></div>
-                <h2>About <span>JH Painting Services</span></h2>
-                <p>
-                  Founded by <strong>Jafet</strong>, JH Painting Services is a premier painting contractor based in Marlborough, Massachusetts. With years of hands-on experience in the painting industry, Jafet and his team have built a reputation on delivering exceptional craftsmanship, dependable communication, and reliable service to homeowners across the state.
-                </p>
-                <p>
-                  Under Jafet&apos;s leadership, our team specializes in <strong>exterior and interior painting</strong> - the foundation of every beautiful home. From complete home transformations to single room refreshes, we ensure that every project is completed with attention to detail and using quality materials.
-                </p>
-                <p>
-                  Beyond painting, we offer comprehensive home improvement services including cabinet refinishing, floor restoration, and deck staining. Whether you&apos;re updating your home&apos;s curb appeal, refreshing a single room, or planning a full renovation, we have the skills and experience to deliver outstanding results.
-                </p>
-
-                {/* Stats Grid - RS Style */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginTop: '2rem' }}>
-                  {[
-                    { value: String(CITY_COUNT), label: 'Cities Served' },
-                    { value: '40+', label: 'Google Reviews' },
-                    { value: '100%', label: 'Licensed' },
-                    { value: '24-48h', label: 'Response Time' },
-                  ].map((stat, i) => (
-                    <div key={i} style={{ textAlign: 'center', padding: '1.25rem 0.75rem', background: 'rgba(204,0,0,0.1)', border: '1px solid rgba(204,0,0,0.2)', borderRadius: '12px' }}>
-                      <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#CC0000', lineHeight: 1.2 }}>{stat.value}</div>
-                      <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.7)', fontWeight: 500, marginTop: '0.25rem' }}>{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="about-image-wrapper">
-                <div className="about-image">
-                  <Image
-                    src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/67796bfa6419fdb816930bc8.webp"
-                    alt="Jafet - Owner of JH Painting Services Massachusetts"
-                    width={600}
-                    height={600}
-                    loading="lazy"
-                    quality={75}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    style={{ objectFit: 'contain', borderRadius: '16px', width: '100%', height: 'auto' }}
-                  />
-                </div>
-                <div className="trusted-contractor-badge">
-                  <div className="trusted-contractor-badge-icon">
-                    <AwardIcon />
-                  </div>
-                  <div className="trusted-contractor-badge-content">
-                    <span className="trusted-contractor-badge-title">Trusted Contractor</span>
-                    <span className="trusted-contractor-badge-subtitle">Massachusetts Licensed</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Process Section - RS 4-Step Style */}
-        <section className="section section-modern">
-          <div className="container">
-            <div className="section-header section-header-enhanced">
-              <span className="section-eyebrow">How It Works</span>
-              <h2>Our Process</h2>
-              <p>From initial consultation to final walkthrough, we make the painting process simple and stress-free.</p>
-            </div>
-
-            <div className="process-grid-home" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1.5rem' }}>
-              {[
-                { num: '01', icon: PhoneIcon, title: 'Free Consultation', desc: 'Call or text us. We\'ll discuss your project goals, timeline, and provide expert recommendations.' },
-                { num: '02', icon: ClipboardIcon, title: 'Detailed Estimate', desc: 'We provide a clear, written estimate with the full scope of work. No surprises, no guesswork.' },
-                { num: '03', icon: HardHatIcon, title: 'Expert Painting', desc: 'Our skilled team handles everything-prep, painting, and cleanup with premium materials.' },
-                { num: '04', icon: EyeIcon, title: 'Final Walkthrough', desc: 'We walk through every detail with you. If anything isn\'t perfect, we make it right. Guaranteed.' },
-              ].map((step, index) => (
-                <div key={index} className="process-card-home process-step-enhanced">
-                  {/* Decorative watermark numeral - see note in globals.css */}
-                  <div className="process-card-home-num" aria-hidden="true">{step.num}</div>
-                  <div className="process-card-home-icon">
-                    <step.icon />
-                  </div>
-                  <h3>{step.title}</h3>
-                  <p>{step.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Expert Painting Services - RS Featured Section */}
-        <section id="exterior-painting" className="section detail-section detail-section-rs">
-          <div className="container">
-            <div className="detail-grid">
-              <div className="detail-image-wrapper">
-                <span className="detail-badge">
-                  <StarIcon size={14} fill="currentColor" />
-                  Our Specialty
-                </span>
-                <Image
-                  src="https://storage.googleapis.com/msgsndr/0Def8kzJShLPuKrPk5Jw/media/68d2b4b9fd1a287291990c89.jpeg"
-                  alt="Waltham Church Exterior Painting by JH Painting Services"
-                  width={600}
-                  height={450}
-                  loading="lazy"
-                  quality={65}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '16px' }}
-                />
-              </div>
-
-              <div className="detail-content">
-                <h2>
-                  <PaintbrushIcon size={28} />
-                  Exterior House Painting
-                </h2>
-                <p>
-                  From homes to historic landmarks like the Waltham Church, JH Painting Services delivers professional exterior painting that transforms any property and protects it from New England&apos;s harsh weather conditions. Our Waltham Church project showcased our ability to handle large-scale exterior work with precision and care.
-                </p>
-                <p>
-                  Our comprehensive process includes thorough surface preparation-power washing, scraping, sanding, caulking, and priming-followed by two coats of premium grade A paint. We specialize in:
-                </p>
-
-                <ul className="detail-list">
-                  <li><CheckIcon /> Power Washing</li>
-                  <li><CheckIcon /> Scraping & Sanding</li>
-                  <li><CheckIcon /> Caulking Gaps</li>
-                  <li><CheckIcon /> Premium Primer</li>
-                  <li><CheckIcon /> Two Coats of Paint</li>
-                  <li><CheckIcon /> Trim & Shutters</li>
-                </ul>
-
-                <a href="#contact" className="btn btn-primary">
-                  Get Your Free Estimate
-                  <ChevronRightIcon size={18} />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Interior Painting Detail */}
-        <section id="interior-painting" className="section detail-section" style={{ background: 'var(--jh-gray-50)' }}>
-          <div className="container">
-            <div className="detail-grid" style={{ direction: 'rtl' }}>
-              <div className="detail-content" style={{ direction: 'ltr' }}>
-                <span className="section-eyebrow">Transform Your Space</span>
-                <h2>Interior Painting Services</h2>
-                <p>
-                  Ready to refresh your living space? We provide expert interior painting services throughout Massachusetts with premium low-VOC paints that are safe for your family.
-                </p>
-                <p>
-                  Our meticulous process includes furniture protection, wall preparation, precision cutting-in, and smooth rolling techniques. We offer free color consultations.
-                </p>
-
-                <ul className="detail-list" style={{ direction: 'ltr' }}>
-                  <li><CheckIcon /> Walls & Ceilings</li>
-                  <li><CheckIcon /> Trim & Baseboards</li>
-                  <li><CheckIcon /> Doors & Frames</li>
-                  <li><CheckIcon /> Accent Walls</li>
-                  <li><CheckIcon /> Drywall Repair</li>
-                  <li><CheckIcon /> Color Consultation</li>
-                </ul>
-
-                <a href="#contact" className="btn btn-secondary">Get Your Free Estimate</a>
-              </div>
-
-              <div className="detail-image" style={{ direction: 'ltr' }}>
-                {/* A real interior before/after instead of a generic photo: the
-                    Douglas fireplace wall, dark brown to sage (projects.ts). */}
-                <BeforeAfterCard pair={interiorDetailPair} />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us - RS Style with Gold Icons */}
-        <section className="section section-modern">
-          <div className="container">
-            <div className="section-header section-header-enhanced">
-              <span className="section-eyebrow">Why Choose Us</span>
-              <h2>Why Choose JH Painting Services</h2>
-              <p>Massachusetts trusts us for expert painting services.</p>
-            </div>
-
-            <div className="why-grid">
-              {[
-                { icon: ShieldIcon, title: 'Licensed & Insured', desc: 'Fully licensed with $2M general liability insurance and workers compensation' },
-                { icon: StarIcon, title: '5-Star Rated', desc: '40+ verified 5-star Google reviews from satisfied homeowners' },
-                { icon: ClockIcon, title: 'On-Time Completion', desc: 'We respect your schedule and deliver every project on time' },
-                { icon: DollarIcon, title: 'Free Estimates', desc: 'Detailed written estimates with the full scope of work, no obligation' },
-              ].map((item, index) => (
-                <div key={index} className="why-card why-card-enhanced">
-                  <div className="why-icon">
-                    <item.icon />
-                  </div>
-                  {/* was <h4> directly under an <h2> - a skipped level. The
-                      card's visual size comes from .why-card CSS, not the tag. */}
-                  <h3>{item.title}</h3>
-                  <p>{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Video Section */}
-        <HomeVideoSection />
-
-        {/* Gallery Section - real job photographs, see HomeGallery */}
-        <HomeGallery />
-
-        {/* Before/After Section - ORIGINAL PRESERVED */}
-        <HomeBeforeAfter />
-
-        {/* Reviews Section */}
-        <section id="reviews" className="section reviews-section">
-          <div className="container">
-            <div className="section-header">
-              <h2>What Our Customers Say</h2>
-              <p>Trusted by homeowners across Massachusetts.</p>
-            </div>
-
             {/*
               Static social-proof banner - SSR'd, no third-party JS, no lazy
               loading. Gives the user (and Google crawlers) immediate proof
@@ -770,6 +328,13 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+
+        {/* Video Section */}
+        <HomeVideoSection />
+
+        {/* Gallery Section - real job photographs, see HomeGallery */}
+        <HomeGallery />
 
         {/* Why Choose Us - Service Overview for AI citation */}
         <section className="section section-modern" style={{ background: '#fff' }}>
@@ -936,26 +501,7 @@ export default function HomePage() {
         {/* FAQ Section */}
         <HomeFAQ />
 
-        {/* CTA Section - RS Gold Banner Style */}
-        <section className="cta-section cta-section-enhanced" style={{ background: '#CC0000' }}>
-          <div className="container">
-            <div className="cta-content" style={{ color: '#fff' }}>
-              <h2 style={{ color: '#fff' }}>Ready to Transform Your Home?</h2>
-              {/* 0.85 alpha over #CC0000 composites to #f7d9d9 = 4.45:1, just under the bar. */}
-              <p style={{ color: 'rgba(255,255,255,0.95)' }}>Licensed & $2M insured. 5-star rated. Estimates scheduled within 24-48 hours.</p>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                <a href="tel:+15086908886" className="btn btn-lg" style={{ background: '#fff', color: '#CC0000', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
-                  <PhoneIcon />
-                  Call (508) 690-8886
-                </a>
-                <a href="#quote-form" className="btn btn-lg" style={{ background: 'transparent', color: '#fff', border: '2px solid #fff' }}>
-                  Get Free Estimate
-                  <ChevronRightIcon size={18} />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <HV2Cta />
       </main>
 
       <Footer />
