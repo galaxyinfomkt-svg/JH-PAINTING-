@@ -13039,7 +13039,7 @@ button.video-card-rs {
 .hv2-dark { background: #0a0e27; }
 .hv2-eyebrow { text-align: center; color: #CC0000; font-weight: 700; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 .5rem; }
 .hv2-eyebrow-light { color: #e5e7eb; font-weight: 600; font-size: .85rem; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 .9rem; }
-.hv2-left { text-align: left; }
+.hv2-left, .hv2-h2.hv2-left, .hv2-eyebrow.hv2-left { text-align: left; }
 .hv2-h2 { text-align: center; font-size: clamp(1.6rem, 3.4vw, 2.3rem); font-weight: 800; color: #0a0e27; margin: 0 0 .6rem; line-height: 1.2; }
 .hv2-h2-light { color: #fff; }
 .hv2-sub-light { text-align: center; color: #e5e7eb; margin: 0 0 2rem; font-size: 1.05rem; }
@@ -13099,7 +13099,7 @@ button.video-card-rs {
 .hv2-form { background: #f6f7fa; border-radius: 14px; padding: 1.4rem; box-shadow: 0 6px 22px rgba(10,14,39,.08); }
 .hv2-form h3 { margin: 0 0 .3rem; font-size: 1.35rem; color: #0a0e27; }
 .hv2-form-sub { margin: 0 0 1rem; font-size: .9rem; color: #4b5563; }
-.hv2-form-iframe { width: 100%; min-height: 560px; border: 0; }
+.hv2-form-iframe { width: 100%; min-height: 470px; border: 0; }
 
 .hv2-rev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2rem; }
 .hv2-rev { margin: 0; background: #fff; border-radius: 12px; padding: 1.4rem; box-shadow: 0 4px 16px rgba(10,14,39,.06); display: flex; flex-direction: column; gap: .9rem; }

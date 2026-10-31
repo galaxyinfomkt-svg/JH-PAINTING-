@@ -252,9 +252,6 @@ export function HV2Reviews() {
             </figure>
           ))}
         </div>
-        <p className="hv2-res-more hv2-dark-link">
-          <a href="https://g.page/r/Cb984Z3qm9PsEAE/review" target="_blank" rel="noopener noreferrer">5.0 from 40+ Google reviews. Read them on Google ↗</a>
-        </p>
       </div>
     </section>
   )
