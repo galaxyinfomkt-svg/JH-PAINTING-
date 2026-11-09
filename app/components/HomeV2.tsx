@@ -86,16 +86,16 @@ export function HV2Hero() {
   return (
     <section id="home" className="hv2-hero">
       <div className="hv2-hero-media">
-        {/* Real job photo: Douglas, MA living room after the repaint (projects.ts). */}
+        {/* Home cover chosen by the client (Nov 2026). Not a documented job, so the alt text doesn't claim one. */}
         <Image
-          src="/hero/interior-douglas-living-room-panel.webp"
-          alt="Living room of a Douglas, Massachusetts home after an interior repaint by JH Painting Services, sage and greige walls under a vaulted ceiling"
+          src="/hero/exterior-house-painting-marlborough-ma.webp"
+          alt="White farmhouse-style home with black shutters and trim at dusk - exterior house painting in Marlborough, MA and across Massachusetts by JH Painting Services"
           fill
           priority
           fetchPriority="high"
           sizes="(max-width: 760px) 100vw, 55vw"
           quality={72}
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover', objectPosition: '60% center' }}
         />
       </div>
       <div className="hv2-hero-fade" />
