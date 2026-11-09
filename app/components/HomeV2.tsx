@@ -88,13 +88,13 @@ export function HV2Hero() {
       <div className="hv2-hero-media">
         {/* Home cover chosen by the client (Nov 2026). Not a documented job, so the alt text doesn't claim one. */}
         <Image
-          src="/hero/exterior-house-painting-marlborough-ma.webp"
+          src="/hero/exterior-house-painting-marlborough-ma-hd.webp"
           alt="White farmhouse-style home with black shutters and trim at dusk - exterior house painting in Marlborough, MA and across Massachusetts by JH Painting Services"
           fill
           priority
           fetchPriority="high"
-          sizes="(max-width: 760px) 100vw, 55vw"
-          quality={72}
+          sizes="(max-width: 760px) 100vw, 65vw"
+          quality={90}
           style={{ objectFit: 'cover', objectPosition: '60% center' }}
         />
       </div>
