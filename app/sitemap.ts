@@ -30,15 +30,15 @@ import { shouldIndexCityService } from './data/indexing'
  */
 const MODIFIED = {
   /** Home, /about, /contact, /projects, /massachusetts hub. */
-  core: '2026-08-29T00:00:00.000Z',
-  /** The seven /services/* pages. Last touched by the capacity notice. */
-  services: '2026-08-19T00:00:00.000Z',
+  core: '2026-11-09T00:00:00.000Z',
+  /** The seven /services/* pages. Real job photos + before/after added 2026-10-22. */
+  services: '2026-10-22T00:00:00.000Z',
   /** /projects and the photographs behind it. */
-  projects: '2026-08-29T00:00:00.000Z',
-  /** City and city+service pages. Southbridge added with its job photos on the 29th. */
-  cities: '2026-08-29T00:00:00.000Z',
+  projects: '2026-10-22T00:00:00.000Z',
+  /** City and city+service pages. Census housing data + nearest real job added to every city page 2026-10-22. */
+  cities: '2026-10-22T00:00:00.000Z',
   /** Region hubs and region+service pages, same engine swap. */
-  regions: '2026-08-11T00:00:00.000Z',
+  regions: '2026-09-01T00:00:00.000Z',
 } as const
 
 export default function sitemap(): MetadataRoute.Sitemap {
