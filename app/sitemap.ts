@@ -38,7 +38,8 @@ const MODIFIED = {
   /** City and city+service pages. 'Planning {service} in {city}' block (ACS + 10-year weather + 3 nearest jobs) added 2026-11-25. */
   cities: '2026-11-25T00:00:00.000Z',
   /** Region hubs and region+service pages, same engine swap. */
-  regions: '2026-09-01T00:00:00.000Z',
+  /** Region-specific copy for commercial, residential, carpentry and power washing added 2026-11-25. */
+  regions: '2026-11-25T00:00:00.000Z',
 } as const
 
 export default function sitemap(): MetadataRoute.Sitemap {

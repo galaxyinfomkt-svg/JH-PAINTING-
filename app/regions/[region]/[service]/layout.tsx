@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { regions, getRegionBySlug } from '@/app/data/regions'
 import { generatePageMetadata, composeTitle, fitDescription } from '@/lib/seo'
+import { REGION_SERVICE_COPY } from '@/app/data/regionServiceCopy'
 
 const services = [
   { name: 'Interior Painting', slug: 'interior-painting' },
@@ -47,7 +48,9 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
     // dropped in priority order instead of being truncated by Google.
     title: composeTitle(`${service.name} in ${region.name}`, [', MA', ' | JH Painting']),
     description: fitDescription(
-      `Professional ${service.name.toLowerCase()} across ${region.name}. Serving ${region.citySlugs.length}+ cities. Licensed & $2M insured. 40+ 5-star reviews.`,
+      REGION_SERVICE_COPY[service.slug]?.[region.slug]
+        ? `${service.name} in ${region.name}: ${REGION_SERVICE_COPY[service.slug][region.slug].features[0]}. Licensed & $2M insured.`
+        : `Professional ${service.name.toLowerCase()} across ${region.name}. Serving ${region.citySlugs.length}+ cities. Licensed & $2M insured. 40+ 5-star reviews.`,
       'Call (508) 690-8886'
     ),
     path: `/regions/${region.slug}/${service.slug}`,

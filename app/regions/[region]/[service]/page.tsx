@@ -9,6 +9,7 @@ import ReviewsSection from '@/app/components/ReviewsSection'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import CapacityNotice from '@/app/components/CapacityNotice'
 import { STATS } from '@/lib/constants'
+import { REGION_SERVICE_COPY } from '@/app/data/regionServiceCopy'
 
 const serviceImages: Record<string, { hero: string; showcase: string }> = {
   'interior-painting': {
@@ -548,7 +549,12 @@ export default async function RegionServicePage({ params }: Props) {
     .map(slug => getCityBySlug(slug))
     .filter(Boolean)
 
-  const content = service.getRegionContent(region.name, region.slug)
+  // Commercial, residential, carpentry and power washing used one template per
+  // service with the region name swapped in. Their region-specific copy lives in
+  // app/data/regionServiceCopy.ts; the process steps stay shared.
+  const baseContent = service.getRegionContent(region.name, region.slug)
+  const regionCopy = REGION_SERVICE_COPY[service.slug]?.[region.slug]
+  const content = regionCopy ? { ...baseContent, ...regionCopy } : baseContent
   const otherServices = servicesData.filter(s => s.slug !== serviceSlug)
   const images = serviceImages[serviceSlug] || serviceImages['interior-painting']
 
