@@ -319,7 +319,7 @@ function glance(h: Housing, c: Climate | undefined, serviceSlug: string): string
   const frost = c ? `last spring frost in ${c.lastSpringFrost}, first fall frost in ${c.firstFallFrost}` : null
   switch (serviceSlug) {
     case 'exterior-painting':
-      return `At a glance for exterior work: ${stock} housing, largely ${era}${frost ? `, with the ${frost}` : ''}.`
+      return `At a glance for exterior work: ${stock}, largely ${era}${frost ? `, with the ${frost}` : ''}.`
     case 'interior-painting':
       return `At a glance for interior work: ${roomsWord(h.medianRooms)} homes, largely ${era}, ${stock}, ${tenureWord(h.pctOwnerOccupied)}.`
     case 'cabinet-painting':
@@ -327,7 +327,7 @@ function glance(h: Housing, c: Climate | undefined, serviceSlug: string): string
     case 'carpentry':
       return `At a glance for repairs: largely ${era}, ${stock}${snowWord(c) ? `, ${snowWord(c)}` : ''}${c ? ` and a last frost in ${c.lastSpringFrost}` : ''}.`
     case 'power-washing':
-      return `At a glance for washing: ${stock} housing, largely ${era}${c ? `, washing season from ${c.lastSpringFrost} to ${c.firstFallFrost}` : ''}.`
+      return `At a glance for washing: ${stock}, largely ${era}${c ? `, washing season from ${c.lastSpringFrost} to ${c.firstFallFrost}` : ''}.`
     case 'commercial-painting':
       return `At a glance for commercial work: ${tenureWord(h.pctOwnerOccupied)}, housing ${stock}, largely ${era}, in a ${valueWord(h.medianHomeValue)} market.`
     default:
