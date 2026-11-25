@@ -14,7 +14,7 @@
  * titles were over 60 chars and 46% of descriptions over 160 (worst case 226).
  */
 
-import { housingFaq } from './housing'
+import { housingFaq, housingFor } from './housing'
 import type { City } from './cities'
 import { getCityState } from './cities'
 import {
@@ -322,13 +322,33 @@ function composeWhyChooseUs(city: City, serviceSlug: string): string[] {
   return out
 }
 
+/** Lead-safe question answered with this town's own build years (ACS B25034). */
+function leadFaq(city: City): { question: string; answer: string }[] {
+  const h = housingFor(city.slug)
+  if (!h) return []
+  const p80 = h.pctBuiltBefore1980
+  const p40 = h.pctBuiltBefore1940
+  const where = h.dataFor ? `${h.dataFor}, the town that includes ${city.name}` : city.name
+  const tier =
+    p40 >= 35
+      ? `In a town where so much of the housing is pre-war, we treat every painted surface as lead-containing until a test says otherwise.`
+      : p80 >= 60
+      ? `Most homes here are old enough to be covered, so we ask for the build year when you book and test painted surfaces before any sanding or scraping.`
+      : p80 >= 35
+      ? `It depends on the street: older neighbourhoods are covered, newer subdivisions are not, so we check the build year before quoting the prep.`
+      : `Most homes here were built after the 1978 lead paint ban, so lead-safe setup usually is not needed; we still confirm the build year before sanding.`
+  return [
+    {
+      question: `Is my ${city.name} home likely to need lead-safe work?`,
+      answer: `${p80}% of homes in ${where} were built before 1980 and ${p40}% before 1940 (U.S. Census, ACS 2019-2023). The EPA RRP rule covers any painted surface in a home built before 1978. ${tier} We are EPA Lead-Safe certified.`,
+    },
+  ]
+}
+
 /** FAQ answered with this city's actual numbers. */
 function composeFaq(city: City, serviceSlug: string): { question: string; answer: string }[] {
   const st = getCityState(city)
-  const label = (SERVICE_LABELS[serviceSlug] ?? serviceSlug).toLowerCase()
-  const z = city.zipCodes ?? []
   const hoods = city.neighborhoods ?? []
-  const exp = exposureProfile(city)
 
   const faq = [
     // Census housing facts + nearest documented job: the answers no other page here repeats.
@@ -343,18 +363,10 @@ function composeFaq(city: City, serviceSlug: string): { question: string; answer
           : 'so we schedule work here in blocks rather than single-room visits.'
       }`,
     },
-    {
-      question: `What makes ${label} different in ${city.name} than elsewhere?`,
-      answer: exp.detail,
-    },
-    {
-      question: `How do you handle access and staging on ${city.name} properties?`,
-      answer: accessProfile(city),
-    },
-    {
-      question: `Is my ${city.name} home likely to need lead-safe work?`,
-      answer: `Any building put up before 1978 may contain lead paint, and disturbing it is regulated under the EPA RRP rule regardless of which town you're in. We're EPA Lead-Safe certified and we test before disturbing painted surfaces on older ${city.name} properties rather than assuming. If your home is newer, that step simply doesn't apply.`,
-    },
+    // The exposure and access answers used to sit here, but CityLocalBrief prints
+    // the same two paragraphs on the same page, word for word, so they were dropped.
+    // The lead answer was identical on all 819 pages; it now uses this town's build years.
+    ...leadFaq(city),
   ]
   return faq
 }

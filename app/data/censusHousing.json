@@ -11,7 +11,14 @@
    "medianHomeValue": 485400,
    "lat": 42.349617,
    "lon": -71.547214,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 17,
+   "pctFivePlusUnits": 28,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 17,
+   "pctBuiltSince2000": 13,
+   "medianRooms": 5.1
   },
   "hudson": {
    "housingUnits": 8560,
@@ -23,7 +30,14 @@
    "medianHomeValue": 480300,
    "lat": 42.389071,
    "lon": -71.545864,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 14,
+   "pctFivePlusUnits": 20,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 18,
+   "pctBuiltSince2000": 21,
+   "medianRooms": 5.9
   },
   "southborough": {
    "housingUnits": 3821,
@@ -35,7 +49,14 @@
    "medianHomeValue": 796700,
    "lat": 42.299625,
    "lon": -71.528427,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 4,
+   "pctFivePlusUnits": 4,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 17,
+   "medianRooms": 8.0
   },
   "berlin": {
    "housingUnits": 1502,
@@ -47,7 +68,14 @@
    "medianHomeValue": 566800,
    "lat": 42.384929,
    "lon": -71.633889,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 24,
+   "pctTwoToFourUnits": 12,
+   "pctFivePlusUnits": 13,
+   "peakDecade": "2000s",
+   "pctPeakDecade": 22,
+   "pctBuiltSince2000": 43,
+   "medianRooms": 6.1
   },
   "northborough": {
    "housingUnits": 5913,
@@ -59,7 +87,14 @@
    "medianHomeValue": 598500,
    "lat": 42.323342,
    "lon": -71.646236,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 6,
+   "pctFivePlusUnits": 8,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 18,
+   "pctBuiltSince2000": 19,
+   "medianRooms": 7.0
   },
   "cordaville": {
    "housingUnits": 3821,
@@ -71,7 +106,14 @@
    "medianHomeValue": 796700,
    "lat": 42.299625,
    "lon": -71.528427,
-   "dataFor": "Southborough"
+   "dataFor": "Southborough",
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 4,
+   "pctFivePlusUnits": 4,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 17,
+   "medianRooms": 8.0
   },
   "stow": {
    "housingUnits": 2761,
@@ -83,7 +125,14 @@
    "medianHomeValue": 657900,
    "lat": 42.429688,
    "lon": -71.512514,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 5,
+   "pctFivePlusUnits": 9,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 15,
+   "pctBuiltSince2000": 22,
+   "medianRooms": 7.3
   },
   "westborough": {
    "housingUnits": 8407,
@@ -95,7 +144,14 @@
    "medianHomeValue": 637900,
    "lat": 42.268426,
    "lon": -71.613309,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 11,
+   "pctFivePlusUnits": 33,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 19,
+   "pctBuiltSince2000": 19,
+   "medianRooms": 5.5
   },
   "framingham-center": {
    "housingUnits": 28416,
@@ -107,7 +163,14 @@
    "medianHomeValue": 600600,
    "lat": 42.307905,
    "lon": -71.436196,
-   "dataFor": "Framingham"
+   "dataFor": "Framingham",
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 12,
+   "pctFivePlusUnits": 31,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 21,
+   "pctBuiltSince2000": 8,
+   "medianRooms": 5.5
   },
   "bolton": {
    "housingUnits": 2083,
@@ -119,7 +182,14 @@
    "medianHomeValue": 722300,
    "lat": 42.439933,
    "lon": -71.601885,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 3,
+   "pctTwoToFourUnits": 1,
+   "pctFivePlusUnits": 3,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 18,
+   "pctBuiltSince2000": 28,
+   "medianRooms": 8.2
   },
   "sudbury": {
    "housingUnits": 6446,
@@ -131,7 +201,14 @@
    "medianHomeValue": 939400,
    "lat": 42.383367,
    "lon": -71.42107,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 2,
+   "pctFivePlusUnits": 5,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 19,
+   "pctBuiltSince2000": 23,
+   "medianRooms": 10.0
   },
   "ashland": {
    "housingUnits": 7995,
@@ -143,7 +220,14 @@
    "medianHomeValue": 586000,
    "lat": 42.257755,
    "lon": -71.473526,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 14,
+   "pctTwoToFourUnits": 15,
+   "pctFivePlusUnits": 15,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 19,
+   "pctBuiltSince2000": 25,
+   "medianRooms": 5.8
   },
   "maynard": {
    "housingUnits": 4845,
@@ -155,7 +239,14 @@
    "medianHomeValue": 494200,
    "lat": 42.425955,
    "lon": -71.456256,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 14,
+   "pctFivePlusUnits": 15,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 19,
+   "pctBuiltSince2000": 9,
+   "medianRooms": 5.7
   },
   "framingham": {
    "housingUnits": 28416,
@@ -167,7 +258,14 @@
    "medianHomeValue": 600600,
    "lat": 42.307905,
    "lon": -71.436196,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 12,
+   "pctFivePlusUnits": 31,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 21,
+   "pctBuiltSince2000": 8,
+   "medianRooms": 5.5
   },
   "hopkinton": {
    "housingUnits": 6907,
@@ -179,7 +277,14 @@
    "medianHomeValue": 726100,
    "lat": 42.224096,
    "lon": -71.540489,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 15,
+   "pctTwoToFourUnits": 4,
+   "pctFivePlusUnits": 11,
+   "peakDecade": "2010s",
+   "pctPeakDecade": 21,
+   "pctBuiltSince2000": 32,
+   "medianRooms": 7.6
   },
   "clinton": {
    "housingUnits": 7017,
@@ -191,7 +296,14 @@
    "medianHomeValue": 348000,
    "lat": 42.411887,
    "lon": -71.690005,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 11,
+   "pctTwoToFourUnits": 22,
+   "pctFivePlusUnits": 25,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 14,
+   "pctBuiltSince2000": 11,
+   "medianRooms": 5.1
   },
   "boylston": {
    "housingUnits": 1964,
@@ -203,7 +315,14 @@
    "medianHomeValue": 578700,
    "lat": 42.355049,
    "lon": -71.716157,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 6,
+   "pctTwoToFourUnits": 5,
+   "pctFivePlusUnits": 3,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 18,
+   "pctBuiltSince2000": 21,
+   "medianRooms": 6.3
   },
   "shrewsbury": {
    "housingUnits": 15318,
@@ -215,7 +334,14 @@
    "medianHomeValue": 555500,
    "lat": 42.284767,
    "lon": -71.714228,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 5,
+   "pctFivePlusUnits": 20,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 21,
+   "pctBuiltSince2000": 15,
+   "medianRooms": 6.2
   },
   "wayland": {
    "housingUnits": 5103,
@@ -227,7 +353,14 @@
    "medianHomeValue": 936900,
    "lat": 42.360427,
    "lon": -71.361099,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 9,
+   "pctTwoToFourUnits": 6,
+   "pctFivePlusUnits": 5,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 23,
+   "pctBuiltSince2000": 16,
+   "medianRooms": 7.7
   },
   "cochituate": {
    "housingUnits": 2529,
@@ -239,7 +372,14 @@
    "medianHomeValue": 862000,
    "lat": 42.327726,
    "lon": -71.352313,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 8,
+   "pctFivePlusUnits": 6,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 26,
+   "pctBuiltSince2000": 11,
+   "medianRooms": 7.1
   },
   "south-lancaster": {
    "housingUnits": 830,
@@ -251,7 +391,14 @@
    "medianHomeValue": 370200,
    "lat": 42.437021,
    "lon": -71.697093,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 6,
+   "pctFivePlusUnits": 13,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 30,
+   "pctBuiltSince2000": 2,
+   "medianRooms": 6.3
   },
   "lancaster": {
    "housingUnits": 3020,
@@ -263,7 +410,14 @@
    "medianHomeValue": 467400,
    "lat": 42.483569,
    "lon": -71.675585,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 6,
+   "pctFivePlusUnits": 5,
+   "peakDecade": "2000s",
+   "pctPeakDecade": 18,
+   "pctBuiltSince2000": 21,
+   "medianRooms": 6.3
   },
   "harvard": {
    "housingUnits": 2182,
@@ -275,7 +429,14 @@
    "medianHomeValue": 798300,
    "lat": 42.504256,
    "lon": -71.588513,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 4,
+   "pctTwoToFourUnits": 2,
+   "pctFivePlusUnits": 8,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 19,
+   "pctBuiltSince2000": 17,
+   "medianRooms": 7.9
   },
   "west-concord": {
    "housingUnits": 2498,
@@ -287,7 +448,14 @@
    "medianHomeValue": 881800,
    "lat": 42.451857,
    "lon": -71.403179,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 8,
+   "pctFivePlusUnits": 36,
+   "peakDecade": "2010s",
+   "pctPeakDecade": 16,
+   "pctBuiltSince2000": 29,
+   "medianRooms": 6.0
   },
   "natick": {
    "housingUnits": 15889,
@@ -299,7 +467,14 @@
    "medianHomeValue": 740700,
    "lat": 42.284822,
    "lon": -71.348811,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 4,
+   "pctTwoToFourUnits": 11,
+   "pctFivePlusUnits": 28,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 16,
+   "pctBuiltSince2000": 17,
+   "medianRooms": 6.0
   },
   "acton": {
    "housingUnits": 9201,
@@ -311,7 +486,14 @@
    "medianHomeValue": 757500,
    "lat": 42.483953,
    "lon": -71.438495,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 5,
+   "pctFivePlusUnits": 22,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 19,
+   "pctBuiltSince2000": 17,
+   "medianRooms": 6.9
   },
   "sherborn": {
    "housingUnits": 1575,
@@ -323,7 +505,14 @@
    "medianHomeValue": 944400,
    "lat": 42.231947,
    "lon": -71.372963,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 3,
+   "pctFivePlusUnits": 3,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 9,
+   "medianRooms": 8.4
   },
   "holliston": {
    "housingUnits": 5774,
@@ -335,7 +524,14 @@
    "medianHomeValue": 620500,
    "lat": 42.195951,
    "lon": -71.45343,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 7,
+   "pctFivePlusUnits": 9,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 26,
+   "pctBuiltSince2000": 14,
+   "medianRooms": 7.1
   },
   "grafton": {
    "housingUnits": 7982,
@@ -347,7 +543,14 @@
    "medianHomeValue": 481500,
    "lat": 42.209151,
    "lon": -71.683644,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 15,
+   "pctTwoToFourUnits": 11,
+   "pctFivePlusUnits": 10,
+   "peakDecade": "2000s",
+   "pctPeakDecade": 15,
+   "pctBuiltSince2000": 21,
+   "medianRooms": 6.1
   },
   "west-boylston": {
    "housingUnits": 2972,
@@ -359,7 +562,14 @@
    "medianHomeValue": 399200,
    "lat": 42.369417,
    "lon": -71.785036,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 12,
+   "pctTwoToFourUnits": 7,
+   "pctFivePlusUnits": 10,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 25,
+   "pctBuiltSince2000": 20,
+   "medianRooms": 5.9
   },
   "upton": {
    "housingUnits": 3023,
@@ -371,7 +581,14 @@
    "medianHomeValue": 561300,
    "lat": 42.176526,
    "lon": -71.603588,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 2,
+   "pctTwoToFourUnits": 9,
+   "pctFivePlusUnits": 5,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 18,
+   "pctBuiltSince2000": 15,
+   "medianRooms": 7.4
   },
   "weston": {
    "housingUnits": 3814,
@@ -383,7 +600,14 @@
    "medianHomeValue": 1586100,
    "lat": 42.360502,
    "lon": -71.303433,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 4,
+   "pctTwoToFourUnits": 3,
+   "pctFivePlusUnits": 5,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 15,
+   "pctBuiltSince2000": 17,
+   "medianRooms": 10.0
   },
   "sterling": {
    "housingUnits": 3298,
@@ -395,7 +619,14 @@
    "medianHomeValue": 467400,
    "lat": 42.447924,
    "lon": -71.776045,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 5,
+   "pctFivePlusUnits": 3,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 17,
+   "pctBuiltSince2000": 23,
+   "medianRooms": 6.9
   },
   "concord": {
    "housingUnits": 6612,
@@ -407,7 +638,14 @@
    "medianHomeValue": 1134500,
    "lat": 42.462911,
    "lon": -71.364496,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 7,
+   "pctFivePlusUnits": 17,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 14,
+   "pctBuiltSince2000": 21,
+   "medianRooms": 7.7
   },
   "lincoln": {
    "housingUnits": 2868,
@@ -419,7 +657,14 @@
    "medianHomeValue": 1180100,
    "lat": 42.425506,
    "lon": -71.310812,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 18,
+   "pctTwoToFourUnits": 10,
+   "pctFivePlusUnits": 10,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 22,
+   "medianRooms": 6.5
   },
   "wellesley": {
    "housingUnits": 9428,
@@ -431,7 +676,14 @@
    "medianHomeValue": 1513400,
    "lat": 42.305932,
    "lon": -71.282917,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 3,
+   "pctTwoToFourUnits": 6,
+   "pctFivePlusUnits": 9,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 14,
+   "pctBuiltSince2000": 18,
+   "medianRooms": 8.1
   },
   "littleton-common": {
    "housingUnits": 1198,
@@ -443,7 +695,14 @@
    "medianHomeValue": 551800,
    "lat": 42.534482,
    "lon": -71.472129,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 7,
+   "pctFivePlusUnits": 3,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 25,
+   "pctBuiltSince2000": 23,
+   "medianRooms": 7.0
   },
   "worcester": {
    "housingUnits": 85371,
@@ -455,7 +714,14 @@
    "medianHomeValue": 339500,
    "lat": 42.269478,
    "lon": -71.807783,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 6,
+   "pctTwoToFourUnits": 34,
+   "pctFivePlusUnits": 28,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 11,
+   "pctBuiltSince2000": 8,
+   "medianRooms": 5.1
   },
   "shirley": {
    "housingUnits": 2512,
@@ -467,7 +733,14 @@
    "medianHomeValue": 412700,
    "lat": 42.573654,
    "lon": -71.640986,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 1,
+   "pctFivePlusUnits": 13,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 19,
+   "pctBuiltSince2000": 19,
+   "medianRooms": 6.3
   },
   "milford": {
    "housingUnits": 11757,
@@ -479,7 +752,14 @@
    "medianHomeValue": 442500,
    "lat": 42.158692,
    "lon": -71.521419,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 9,
+   "pctTwoToFourUnits": 21,
+   "pctFivePlusUnits": 12,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 18,
+   "pctBuiltSince2000": 12,
+   "medianRooms": 5.8
   },
   "northbridge": {
    "housingUnits": 7041,
@@ -491,7 +771,14 @@
    "medianHomeValue": 429600,
    "lat": 42.128937,
    "lon": -71.655787,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 14,
+   "pctTwoToFourUnits": 17,
+   "pctFivePlusUnits": 14,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 14,
+   "pctBuiltSince2000": 16,
+   "medianRooms": 6.0
   },
   "ayer": {
    "housingUnits": 3876,
@@ -503,7 +790,14 @@
    "medianHomeValue": 417800,
    "lat": 42.566573,
    "lon": -71.575135,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 10,
+   "pctTwoToFourUnits": 20,
+   "pctFivePlusUnits": 19,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 11,
+   "pctBuiltSince2000": 23,
+   "medianRooms": 5.3
   },
   "hopedale": {
    "housingUnits": 2320,
@@ -515,7 +809,14 @@
    "medianHomeValue": 456000,
    "lat": 42.123007,
    "lon": -71.531404,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 24,
+   "pctTwoToFourUnits": 12,
+   "pctFivePlusUnits": 9,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 24,
+   "pctBuiltSince2000": 13,
+   "medianRooms": 6.7
   },
   "dover": {
    "housingUnits": 1951,
@@ -527,7 +828,14 @@
    "medianHomeValue": 1285800,
    "lat": 42.23416,
    "lon": -71.291167,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 3,
+   "pctTwoToFourUnits": 0,
+   "pctFivePlusUnits": 1,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 29,
+   "pctBuiltSince2000": 19,
+   "medianRooms": 10.0
   },
   "millbury": {
    "housingUnits": 5603,
@@ -539,7 +847,14 @@
    "medianHomeValue": 415600,
    "lat": 42.192246,
    "lon": -71.777649,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 19,
+   "pctFivePlusUnits": 9,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 11,
+   "pctBuiltSince2000": 16,
+   "medianRooms": 6.0
   },
   "millis": {
    "housingUnits": 3580,
@@ -551,7 +866,14 @@
    "medianHomeValue": 570300,
    "lat": 42.173103,
    "lon": -71.363756,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 12,
+   "pctFivePlusUnits": 12,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 13,
+   "medianRooms": 6.7
   },
   "waltham": {
    "housingUnits": 26898,
@@ -563,7 +885,14 @@
    "medianHomeValue": 705700,
    "lat": 42.388921,
    "lon": -71.242268,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 23,
+   "pctFivePlusUnits": 32,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 15,
+   "pctBuiltSince2000": 14,
+   "medianRooms": 5.0
   },
   "carlisle": {
    "housingUnits": 1787,
@@ -575,7 +904,14 @@
    "medianHomeValue": 1055600,
    "lat": 42.536807,
    "lon": -71.361324,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 1,
+   "pctTwoToFourUnits": 2,
+   "pctFivePlusUnits": 3,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 26,
+   "pctBuiltSince2000": 7,
+   "medianRooms": 8.4
   },
   "millis-clicquot": {
    "housingUnits": 1918,
@@ -587,7 +923,14 @@
    "medianHomeValue": 487700,
    "lat": 42.166821,
    "lon": -71.34923,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 6,
+   "pctTwoToFourUnits": 12,
+   "pctFivePlusUnits": 22,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 25,
+   "pctBuiltSince2000": 8,
+   "medianRooms": 5.8
   },
   "medway": {
    "housingUnits": 4601,
@@ -599,7 +942,14 @@
    "medianHomeValue": 588900,
    "lat": 42.156203,
    "lon": -71.430345,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 3,
+   "pctTwoToFourUnits": 6,
+   "pctFivePlusUnits": 8,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 19,
+   "pctBuiltSince2000": 9,
+   "medianRooms": 7.4
   },
   "holden": {
    "housingUnits": 7145,
@@ -611,7 +961,14 @@
    "medianHomeValue": 433300,
    "lat": 42.355801,
    "lon": -71.862574,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 2,
+   "pctFivePlusUnits": 11,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 23,
+   "medianRooms": 6.5
   },
   "leominster": {
    "housingUnits": 18957,
@@ -623,7 +980,14 @@
    "medianHomeValue": 345000,
    "lat": 42.520876,
    "lon": -71.770611,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 20,
+   "pctFivePlusUnits": 26,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 15,
+   "pctBuiltSince2000": 11,
+   "medianRooms": 5.3
   },
   "medfield": {
    "housingUnits": 4679,
@@ -635,7 +999,14 @@
    "medianHomeValue": 869400,
    "lat": 42.184599,
    "lon": -71.305307,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 4,
+   "pctTwoToFourUnits": 4,
+   "pctFivePlusUnits": 9,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 24,
+   "pctBuiltSince2000": 15,
+   "medianRooms": 8.0
   },
   "needham": {
    "housingUnits": 11754,
@@ -647,7 +1018,14 @@
    "medianHomeValue": 1146000,
    "lat": 42.281593,
    "lon": -71.242414,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 4,
+   "pctFivePlusUnits": 14,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 23,
+   "medianRooms": 7.7
   },
   "mendon": {
    "housingUnits": 2226,
@@ -659,7 +1037,14 @@
    "medianHomeValue": 605500,
    "lat": 42.09387,
    "lon": -71.544519,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 3,
+   "pctFivePlusUnits": 0,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 27,
+   "pctBuiltSince2000": 24,
+   "medianRooms": 7.6
   },
   "westford": {
    "housingUnits": 9181,
@@ -671,7 +1056,14 @@
    "medianHomeValue": 689400,
    "lat": 42.585541,
    "lon": -71.44025,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 9,
+   "pctTwoToFourUnits": 3,
+   "pctFivePlusUnits": 9,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 20,
+   "medianRooms": 7.0
   },
   "bedford": {
    "housingUnits": 5905,
@@ -683,7 +1075,14 @@
    "medianHomeValue": 878200,
    "lat": 42.499332,
    "lon": -71.281901,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 9,
+   "pctFivePlusUnits": 18,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 28,
+   "medianRooms": 6.8
   },
   "newton": {
    "housingUnits": 33531,
@@ -695,7 +1094,14 @@
    "medianHomeValue": 1202500,
    "lat": 42.331768,
    "lon": -71.2084,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 21,
+   "pctFivePlusUnits": 16,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 12,
+   "pctBuiltSince2000": 11,
+   "medianRooms": 6.8
   },
   "whitinsville": {
    "housingUnits": 3146,
@@ -707,7 +1113,14 @@
    "medianHomeValue": 440100,
    "lat": 42.1188,
    "lon": -71.672496,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 20,
+   "pctTwoToFourUnits": 24,
+   "pctFivePlusUnits": 12,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 16,
+   "pctBuiltSince2000": 13,
+   "medianRooms": 5.8
   },
   "sutton": {
    "housingUnits": 3386,
@@ -719,7 +1132,14 @@
    "medianHomeValue": 523000,
    "lat": 42.132051,
    "lon": -71.750318,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 4,
+   "pctFivePlusUnits": 2,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 22,
+   "medianRooms": 6.6
   },
   "lexington": {
    "housingUnits": 12672,
@@ -731,7 +1151,14 @@
    "medianHomeValue": 1147900,
    "lat": 42.445222,
    "lon": -71.230015,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 9,
+   "pctTwoToFourUnits": 5,
+   "pctFivePlusUnits": 13,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 17,
+   "pctBuiltSince2000": 21,
+   "medianRooms": 7.4
   },
   "groton": {
    "housingUnits": 3782,
@@ -743,7 +1170,14 @@
    "medianHomeValue": 673500,
    "lat": 42.611636,
    "lon": -71.564743,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 6,
+   "pctTwoToFourUnits": 8,
+   "pctFivePlusUnits": 7,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 23,
+   "pctBuiltSince2000": 18,
+   "medianRooms": 7.7
   },
   "auburn": {
    "housingUnits": 7106,
@@ -755,7 +1189,14 @@
    "medianHomeValue": 363100,
    "lat": 42.198867,
    "lon": -71.845722,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 4,
+   "pctTwoToFourUnits": 9,
+   "pctFivePlusUnits": 9,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 21,
+   "pctBuiltSince2000": 10,
+   "medianRooms": 5.7
   },
   "princeton": {
    "housingUnits": 1409,
@@ -767,7 +1208,14 @@
    "medianHomeValue": 496400,
    "lat": 42.454125,
    "lon": -71.87754,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 0,
+   "pctTwoToFourUnits": 4,
+   "pctFivePlusUnits": 1,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 24,
+   "pctBuiltSince2000": 14,
+   "medianRooms": 7.5
   },
   "bellingham": {
    "housingUnits": 6555,
@@ -779,7 +1227,14 @@
    "medianHomeValue": 425900,
    "lat": 42.076682,
    "lon": -71.47449,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 6,
+   "pctFivePlusUnits": 11,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 18,
+   "pctBuiltSince2000": 19,
+   "medianRooms": 5.9
   },
   "watertown": {
    "housingUnits": 17059,
@@ -791,7 +1246,14 @@
    "medianHomeValue": 737600,
    "lat": 42.369451,
    "lon": -71.177925,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 10,
+   "pctTwoToFourUnits": 41,
+   "pctFivePlusUnits": 30,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 11,
+   "pctBuiltSince2000": 12,
+   "medianRooms": 5.2
   },
   "westwood": {
    "housingUnits": 5721,
@@ -803,7 +1265,14 @@
    "medianHomeValue": 985800,
    "lat": 42.219645,
    "lon": -71.216768,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 1,
+   "pctTwoToFourUnits": 2,
+   "pctFivePlusUnits": 19,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 14,
+   "pctBuiltSince2000": 16,
+   "medianRooms": 7.5
   },
   "belmont": {
    "housingUnits": 10833,
@@ -815,7 +1284,14 @@
    "medianHomeValue": 1108800,
    "lat": 42.395317,
    "lon": -71.180284,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 6,
+   "pctTwoToFourUnits": 38,
+   "pctFivePlusUnits": 10,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 10,
+   "pctBuiltSince2000": 9,
+   "medianRooms": 6.4
   },
   "lunenburg": {
    "housingUnits": 4702,
@@ -827,7 +1303,14 @@
    "medianHomeValue": 442800,
    "lat": 42.582607,
    "lon": -71.720464,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 3,
+   "pctTwoToFourUnits": 10,
+   "pctFivePlusUnits": 9,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 17,
+   "pctBuiltSince2000": 24,
+   "medianRooms": 6.1
   },
   "uxbridge": {
    "housingUnits": 5564,
@@ -839,7 +1322,14 @@
    "medianHomeValue": 415500,
    "lat": 42.061166,
    "lon": -71.643628,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 13,
+   "pctTwoToFourUnits": 18,
+   "pctFivePlusUnits": 8,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 15,
+   "pctBuiltSince2000": 24,
+   "medianRooms": 6.5
   },
   "norfolk": {
    "housingUnits": 3464,
@@ -851,7 +1341,14 @@
    "medianHomeValue": 694300,
    "lat": 42.116244,
    "lon": -71.329274,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 2,
+   "pctFivePlusUnits": 1,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 23,
+   "pctBuiltSince2000": 22,
+   "medianRooms": 7.8
   },
   "chelmsford": {
    "housingUnits": 13978,
@@ -863,7 +1360,14 @@
    "medianHomeValue": 565000,
    "lat": 42.597055,
    "lon": -71.3697,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 5,
+   "pctFivePlusUnits": 19,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 25,
+   "pctBuiltSince2000": 10,
+   "medianRooms": 6.3
   },
   "paxton": {
    "housingUnits": 1727,
@@ -875,7 +1379,14 @@
    "medianHomeValue": 464700,
    "lat": 42.311693,
    "lon": -71.940282,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 3,
+   "pctTwoToFourUnits": 7,
+   "pctFivePlusUnits": 2,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 21,
+   "pctBuiltSince2000": 13,
+   "medianRooms": 7.3
   },
   "franklin": {
    "housingUnits": 12889,
@@ -887,7 +1398,14 @@
    "medianHomeValue": 567100,
    "lat": 42.084858,
    "lon": -71.410571,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 10,
+   "pctTwoToFourUnits": 8,
+   "pctFivePlusUnits": 19,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 22,
+   "pctBuiltSince2000": 20,
+   "medianRooms": 6.4
   },
   "leicester": {
    "housingUnits": 4343,
@@ -899,7 +1417,14 @@
    "medianHomeValue": 377800,
    "lat": 42.238427,
    "lon": -71.91234,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 4,
+   "pctTwoToFourUnits": 7,
+   "pctFivePlusUnits": 8,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 16,
+   "pctBuiltSince2000": 22,
+   "medianRooms": 6.1
   },
   "billerica": {
    "housingUnits": 15824,
@@ -911,7 +1436,14 @@
    "medianHomeValue": 570500,
    "lat": 42.559674,
    "lon": -71.260948,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 5,
+   "pctFivePlusUnits": 17,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 21,
+   "pctBuiltSince2000": 19,
+   "medianRooms": 6.4
   },
   "arlington": {
    "housingUnits": 20599,
@@ -923,7 +1455,14 @@
    "medianHomeValue": 885000,
    "lat": 42.418722,
    "lon": -71.163912,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 30,
+   "pctFivePlusUnits": 24,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 13,
+   "pctBuiltSince2000": 6,
+   "medianRooms": 5.8
   },
   "pinehurst": {
    "housingUnits": 2374,
@@ -935,7 +1474,14 @@
    "medianHomeValue": 585600,
    "lat": 42.533516,
    "lon": -71.233491,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 4,
+   "pctTwoToFourUnits": 2,
+   "pctFivePlusUnits": 2,
+   "peakDecade": "1960s",
+   "pctPeakDecade": 22,
+   "pctBuiltSince2000": 12,
+   "medianRooms": 6.6
   },
   "rutland": {
    "housingUnits": 3257,
@@ -947,7 +1493,14 @@
    "medianHomeValue": 439200,
    "lat": 42.388285,
    "lon": -71.969865,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 9,
+   "pctTwoToFourUnits": 4,
+   "pctFivePlusUnits": 6,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 19,
+   "pctBuiltSince2000": 31,
+   "medianRooms": 6.9
   },
   "norwood": {
    "housingUnits": 13961,
@@ -959,7 +1512,14 @@
    "medianHomeValue": 613500,
    "lat": 42.187364,
    "lon": -71.195971,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 21,
+   "pctFivePlusUnits": 28,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 12,
+   "medianRooms": 5.2
   },
   "dedham": {
    "housingUnits": 10648,
@@ -971,7 +1531,14 @@
    "medianHomeValue": 630400,
    "lat": 42.246872,
    "lon": -71.179462,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 10,
+   "pctFivePlusUnits": 19,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 22,
+   "pctBuiltSince2000": 17,
+   "medianRooms": 6.0
   },
   "fitchburg": {
    "housingUnits": 17945,
@@ -983,7 +1550,14 @@
    "medianHomeValue": 295500,
    "lat": 42.601977,
    "lon": -71.81587,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 6,
+   "pctTwoToFourUnits": 29,
+   "pctFivePlusUnits": 20,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 12,
+   "pctBuiltSince2000": 9,
+   "medianRooms": 5.2
   },
   "burlington": {
    "housingUnits": 10533,
@@ -995,7 +1569,14 @@
    "medianHomeValue": 679400,
    "lat": 42.503227,
    "lon": -71.201713,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 3,
+   "pctTwoToFourUnits": 2,
+   "pctFivePlusUnits": 25,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 24,
+   "pctBuiltSince2000": 23,
+   "medianRooms": 6.2
   },
   "walpole": {
    "housingUnits": 9851,
@@ -1007,7 +1588,14 @@
    "medianHomeValue": 647600,
    "lat": 42.146286,
    "lon": -71.255604,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 6,
+   "pctFivePlusUnits": 14,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 16,
+   "pctBuiltSince2000": 16,
+   "medianRooms": 6.7
   },
   "east-douglas": {
    "housingUnits": 1159,
@@ -1019,7 +1607,14 @@
    "medianHomeValue": 400900,
    "lat": 42.081104,
    "lon": -71.719485,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 2,
+   "pctTwoToFourUnits": 20,
+   "pctFivePlusUnits": 19,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 16,
+   "pctBuiltSince2000": 9,
+   "medianRooms": 6.0
   },
   "brookline": {
    "housingUnits": 28695,
@@ -1031,7 +1626,14 @@
    "medianHomeValue": 1233100,
    "lat": 42.323853,
    "lon": -71.142003,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 25,
+   "pctFivePlusUnits": 52,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 10,
+   "pctBuiltSince2000": 7,
+   "medianRooms": 4.8
   },
   "jamaica-plain": {
    "housingUnits": 307840,
@@ -1043,7 +1645,14 @@
    "medianHomeValue": 710400,
    "lat": 42.338551,
    "lon": -71.018253,
-   "dataFor": "Boston"
+   "dataFor": "Boston",
+   "pctAttached": 6,
+   "pctTwoToFourUnits": 36,
+   "pctFivePlusUnits": 46,
+   "peakDecade": "2010s",
+   "pctPeakDecade": 9,
+   "pctBuiltSince2000": 17,
+   "medianRooms": 4.3
   },
   "east-pepperell": {
    "housingUnits": 801,
@@ -1055,7 +1664,14 @@
    "medianHomeValue": 415200,
    "lat": 42.66253,
    "lon": -71.562103,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 17,
+   "pctTwoToFourUnits": 16,
+   "pctFivePlusUnits": 10,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 45,
+   "pctBuiltSince2000": 7,
+   "medianRooms": 6.3
   },
   "woburn": {
    "housingUnits": 16982,
@@ -1067,7 +1683,14 @@
    "medianHomeValue": 641800,
    "lat": 42.488703,
    "lon": -71.154383,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 9,
+   "pctTwoToFourUnits": 17,
+   "pctFivePlusUnits": 26,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 17,
+   "pctBuiltSince2000": 14,
+   "medianRooms": 5.4
   },
   "pepperell": {
    "housingUnits": 4507,
@@ -1079,7 +1702,14 @@
    "medianHomeValue": 459800,
    "lat": 42.670643,
    "lon": -71.602858,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 9,
+   "pctFivePlusUnits": 7,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 22,
+   "pctBuiltSince2000": 13,
+   "medianRooms": 6.7
   },
   "winchester": {
    "housingUnits": 8283,
@@ -1091,7 +1721,14 @@
    "medianHomeValue": 1181700,
    "lat": 42.452752,
    "lon": -71.144319,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 8,
+   "pctFivePlusUnits": 14,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 15,
+   "pctBuiltSince2000": 10,
+   "medianRooms": 7.6
   },
   "millville": {
    "housingUnits": 1262,
@@ -1103,7 +1740,14 @@
    "medianHomeValue": 418000,
    "lat": 42.036642,
    "lon": -71.578779,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 11,
+   "pctTwoToFourUnits": 16,
+   "pctFivePlusUnits": 2,
+   "peakDecade": "2000s",
+   "pctPeakDecade": 19,
+   "pctBuiltSince2000": 21,
+   "medianRooms": 6.5
   },
   "wrentham": {
    "housingUnits": 4656,
@@ -1115,7 +1759,14 @@
    "medianHomeValue": 599500,
    "lat": 42.052671,
    "lon": -71.356858,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 4,
+   "pctTwoToFourUnits": 8,
+   "pctFivePlusUnits": 9,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 17,
+   "pctBuiltSince2000": 22,
+   "medianRooms": 7.0
   },
   "cambridge": {
    "housingUnits": 54612,
@@ -1127,7 +1778,14 @@
    "medianHomeValue": 1040500,
    "lat": 42.376043,
    "lon": -71.11868,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 6,
+   "pctTwoToFourUnits": 29,
+   "pctFivePlusUnits": 54,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 10,
+   "pctBuiltSince2000": 19,
+   "medianRooms": 4.1
   },
   "douglas": {
    "housingUnits": 3517,
@@ -1139,7 +1797,14 @@
    "medianHomeValue": 439800,
    "lat": 42.053072,
    "lon": -71.752241,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 1,
+   "pctTwoToFourUnits": 7,
+   "pctFivePlusUnits": 6,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 19,
+   "pctBuiltSince2000": 25,
+   "medianRooms": 6.4
   },
   "dunstable": {
    "housingUnits": 1167,
@@ -1151,7 +1816,14 @@
    "medianHomeValue": 624300,
    "lat": 42.676149,
    "lon": -71.499772,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 1,
+   "pctTwoToFourUnits": 2,
+   "pctFivePlusUnits": 0,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 23,
+   "pctBuiltSince2000": 19,
+   "medianRooms": 7.8
   },
   "lowell": {
    "housingUnits": 44110,
@@ -1163,7 +1835,14 @@
    "medianHomeValue": 395100,
    "lat": 42.638995,
    "lon": -71.32102,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 8,
+   "pctTwoToFourUnits": 27,
+   "pctFivePlusUnits": 35,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 11,
+   "pctBuiltSince2000": 10,
+   "medianRooms": 4.8
   },
   "blackstone": {
    "housingUnits": 4079,
@@ -1175,7 +1854,14 @@
    "medianHomeValue": 394600,
    "lat": 42.039991,
    "lon": -71.532406,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 20,
+   "pctFivePlusUnits": 9,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 17,
+   "pctBuiltSince2000": 12,
+   "medianRooms": 5.7
   },
   "oxford": {
    "housingUnits": 5118,
@@ -1187,7 +1873,14 @@
    "medianHomeValue": 345000,
    "lat": 42.12826,
    "lon": -71.8671,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 13,
+   "pctFivePlusUnits": 10,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 17,
+   "pctBuiltSince2000": 11,
+   "medianRooms": 5.8
   },
   "somerville": {
    "housingUnits": 37583,
@@ -1199,7 +1892,14 @@
    "medianHomeValue": 899400,
    "lat": 42.390445,
    "lon": -71.101033,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 53,
+   "pctFivePlusUnits": 30,
+   "peakDecade": "2010s",
+   "pctPeakDecade": 8,
+   "pctBuiltSince2000": 11,
+   "medianRooms": 4.6
   },
   "medford": {
    "housingUnits": 25879,
@@ -1211,7 +1911,14 @@
    "medianHomeValue": 715500,
    "lat": 42.423844,
    "lon": -71.109231,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 35,
+   "pctFivePlusUnits": 26,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 10,
+   "pctBuiltSince2000": 13,
+   "medianRooms": 5.4
   },
   "westminster": {
    "housingUnits": 3469,
@@ -1223,7 +1930,14 @@
    "medianHomeValue": 394000,
    "lat": 42.5546,
    "lon": -71.90544,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 4,
+   "pctTwoToFourUnits": 7,
+   "pctFivePlusUnits": 2,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 17,
+   "pctBuiltSince2000": 16,
+   "medianRooms": 6.5
   },
   "wilmington": {
    "housingUnits": 8032,
@@ -1235,7 +1949,14 @@
    "medianHomeValue": 646200,
    "lat": 42.564647,
    "lon": -71.164516,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 4,
+   "pctTwoToFourUnits": 3,
+   "pctFivePlusUnits": 10,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 18,
+   "pctBuiltSince2000": 20,
+   "medianRooms": 6.9
   },
   "townsend": {
    "housingUnits": 3484,
@@ -1247,7 +1968,14 @@
    "medianHomeValue": 391700,
    "lat": 42.665002,
    "lon": -71.711937,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 2,
+   "pctTwoToFourUnits": 4,
+   "pctFivePlusUnits": 10,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 30,
+   "pctBuiltSince2000": 13,
+   "medianRooms": 6.4
   },
   "tyngsboro": {
    "housingUnits": 4363,
@@ -1259,7 +1987,14 @@
    "medianHomeValue": 533300,
    "lat": 42.667762,
    "lon": -71.42882,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 14,
+   "pctTwoToFourUnits": 6,
+   "pctFivePlusUnits": 9,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 33,
+   "pctBuiltSince2000": 27,
+   "medianRooms": 6.5
   },
   "spencer": {
    "housingUnits": 5788,
@@ -1271,7 +2006,14 @@
    "medianHomeValue": 368300,
    "lat": 42.247211,
    "lon": -71.991867,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 1,
+   "pctTwoToFourUnits": 25,
+   "pctFivePlusUnits": 14,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 16,
+   "pctBuiltSince2000": 12,
+   "medianRooms": 5.6
   },
   "woonsocket-ri": {
    "housingUnits": 19436,
@@ -1283,7 +2025,14 @@
    "medianHomeValue": 268000,
    "lat": 42.001708,
    "lon": -71.499947,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 2,
+   "pctTwoToFourUnits": 41,
+   "pctFivePlusUnits": 32,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 13,
+   "pctBuiltSince2000": 8,
+   "medianRooms": 4.7
   },
   "tewksbury": {
    "housingUnits": 12317,
@@ -1295,7 +2044,14 @@
    "medianHomeValue": 543800,
    "lat": 42.612088,
    "lon": -71.227845,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 12,
+   "pctTwoToFourUnits": 3,
+   "pctFivePlusUnits": 15,
+   "peakDecade": "1980s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 18,
+   "medianRooms": 6.3
   },
   "canton": {
    "housingUnits": 9955,
@@ -1307,7 +2063,14 @@
    "medianHomeValue": 665500,
    "lat": 42.175737,
    "lon": -71.125385,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 7,
+   "pctTwoToFourUnits": 5,
+   "pctFivePlusUnits": 30,
+   "peakDecade": "1990s",
+   "pctPeakDecade": 13,
+   "pctBuiltSince2000": 24,
+   "medianRooms": 6.2
   },
   "sharon": {
    "housingUnits": 6660,
@@ -1319,7 +2082,14 @@
    "medianHomeValue": 697900,
    "lat": 42.108463,
    "lon": -71.185182,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 3,
+   "pctTwoToFourUnits": 5,
+   "pctFivePlusUnits": 10,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 20,
+   "pctBuiltSince2000": 10,
+   "medianRooms": 7.4
   },
   "stoneham": {
    "housingUnits": 9832,
@@ -1331,7 +2101,14 @@
    "medianHomeValue": 629000,
    "lat": 42.474208,
    "lon": -71.097665,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 4,
+   "pctTwoToFourUnits": 12,
+   "pctFivePlusUnits": 30,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 14,
+   "pctBuiltSince2000": 12,
+   "medianRooms": 5.9
   },
   "boston": {
    "housingUnits": 307840,
@@ -1343,7 +2120,14 @@
    "medianHomeValue": 710400,
    "lat": 42.338551,
    "lon": -71.018253,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 6,
+   "pctTwoToFourUnits": 36,
+   "pctFivePlusUnits": 46,
+   "peakDecade": "2010s",
+   "pctPeakDecade": 9,
+   "pctBuiltSince2000": 17,
+   "medianRooms": 4.3
   },
   "foxborough": {
    "housingUnits": 7414,
@@ -1355,7 +2139,14 @@
    "medianHomeValue": 581900,
    "lat": 42.061338,
    "lon": -71.245802,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 5,
+   "pctTwoToFourUnits": 10,
+   "pctFivePlusUnits": 20,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 15,
+   "pctBuiltSince2000": 17,
+   "medianRooms": 6.1
   },
   "southbridge": {
    "housingUnits": 7644,
@@ -1367,7 +2158,14 @@
    "medianHomeValue": 267000,
    "lat": 42.059737,
    "lon": -72.033908,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 2,
+   "pctTwoToFourUnits": 40,
+   "pctFivePlusUnits": 21,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 13,
+   "pctBuiltSince2000": 6,
+   "medianRooms": 5.3
   },
   "hamilton": {
    "housingUnits": 2872,
@@ -1379,7 +2177,14 @@
    "medianHomeValue": 687600,
    "lat": 42.626223,
    "lon": -70.85723,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 3,
+   "pctTwoToFourUnits": 8,
+   "pctFivePlusUnits": 7,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 26,
+   "pctBuiltSince2000": 4,
+   "medianRooms": 6.5
   },
   "new-bedford": {
    "housingUnits": 44468,
@@ -1391,7 +2196,14 @@
    "medianHomeValue": 324400,
    "lat": 41.661303,
    "lon": -70.937913,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 2,
+   "pctTwoToFourUnits": 47,
+   "pctFivePlusUnits": 21,
+   "peakDecade": "1950s",
+   "pctPeakDecade": 10,
+   "pctBuiltSince2000": 5,
+   "medianRooms": 5.3
   },
   "sunderland": {
    "housingUnits": 1930,
@@ -1403,7 +2215,14 @@
    "medianHomeValue": 391200,
    "lat": 42.466691,
    "lon": -72.546751,
-   "dataFor": null
+   "dataFor": null,
+   "pctAttached": 4,
+   "pctTwoToFourUnits": 11,
+   "pctFivePlusUnits": 41,
+   "peakDecade": "1970s",
+   "pctPeakDecade": 29,
+   "pctBuiltSince2000": 21,
+   "medianRooms": 4.4
   }
  }
 }

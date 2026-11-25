@@ -119,6 +119,7 @@ import CityProof from '@/app/components/CityProof'
 import HousingBlock from '@/app/components/HousingBlock'
 import { galleryFor, projectsForCity } from '@/app/data/projects'
 import CityVideo from '@/app/components/CityVideo'
+import ServicePlan from '@/app/components/ServicePlan'
 import CityLocalBrief from '@/app/components/CityLocalBrief'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
 import RelatedCities from '@/app/components/RelatedCities'
@@ -672,6 +673,7 @@ export default async function CityPage({ params }: Props) {
           cities.ts. Ver o cabecalho de CityLocalBrief.tsx para a medicao que
           motivou isto. */}
       <CityLocalBrief city={city} />
+      <ServicePlan citySlug={city.slug} cityName={city.name} />
 
       {/* Expanded FAQ Section */}
       <section className="city-section city-section-dark">

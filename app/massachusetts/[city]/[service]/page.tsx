@@ -48,6 +48,7 @@ import Footer from '@/app/components/Footer'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import CityProof from '@/app/components/CityProof'
 import HousingBlock from '@/app/components/HousingBlock'
+import ServicePlan from '@/app/components/ServicePlan'
 import { galleryFor } from '@/app/data/projects'
 import RelatedCities from '@/app/components/RelatedCities'
 import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
@@ -502,6 +503,10 @@ export default async function CityServicePage({ params }: Props) {
             deixaria de ser conteudo proprio. Ver CityLocalBrief.tsx. */}
         <CityLocalBrief city={city} service={{ slug: serviceSlug, label: service.title ?? serviceSlug }} />
 
+        {/* Era, building mix, size, value and weather of THIS town applied to THIS
+            service, plus the nearest real jobs. See app/data/servicePlan.ts. */}
+        <ServicePlan citySlug={city.slug} cityName={city.name} service={serviceSlug} serviceName={service.name} />
+
         {/* What We Offer */}
         <section className="service-section service-section-gray">
           <div className="container">
@@ -517,7 +522,7 @@ export default async function CityServicePage({ params }: Props) {
               {service.offerings.map((offering, idx) => (
                 <div key={idx} className="service-offering-item">
                   <CheckCircle2 size={20} />
-                  <span>{offering} in {city.name}</span>
+                  <span>{offering}</span>
                 </div>
               ))}
             </div>
@@ -576,8 +581,7 @@ export default async function CityServicePage({ params }: Props) {
               {otherServices.map(([slug, svc]) => {
                 return (
                 <Link key={slug} href={`/massachusetts/${citySlug}/${slug}`} className="service-other-card">
-                  <h3>{svc.name}</h3>
-                  <p>{svc.description}</p>
+                  <h3>{svc.name} in {city.name}</h3>
                   <span className="service-other-link">
                     Learn More <ChevronRight size={16} />
                   </span>
