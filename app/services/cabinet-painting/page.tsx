@@ -4,6 +4,8 @@ import Script from 'next/script'
 import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Palette, DollarSign, Timer } from '@/app/components/Icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import ServiceTownIndex from '@/app/components/ServiceTownIndex'
+import { CITY_COUNT } from '@/app/data/cities'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
@@ -161,7 +163,7 @@ const stats = [
   { number: STATS.projectsLabel, label: 'Cabinets Refinished' },
   { number: '5★', label: 'Average Rating' },
   { number: '5-7', label: 'Days Average' },
-  { number: '114', label: 'Cities Served' }
+  { number: String(CITY_COUNT), label: 'Cities Served' }
 ]
 
 const services = [
@@ -586,6 +588,7 @@ export default function CabinetPaintingPage() {
       </main>
 
       <ReviewsSection />
+      <ServiceTownIndex service="cabinet-painting" serviceName="Cabinet Painting" />
       <Footer />
     </>
   )

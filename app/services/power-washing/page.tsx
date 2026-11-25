@@ -6,6 +6,7 @@ import ServiceVideos from '@/app/components/ServiceVideos'
 import { sliderPairs, galleryFor, type SliderPair } from '@/app/data/projects'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import ServiceTownIndex from '@/app/components/ServiceTownIndex'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
@@ -647,6 +648,7 @@ export default function PowerWashingPage() {
       </main>
 
       <ReviewsSection />
+      <ServiceTownIndex service="power-washing" serviceName="Power Washing" />
       <Footer />
     </>
   )

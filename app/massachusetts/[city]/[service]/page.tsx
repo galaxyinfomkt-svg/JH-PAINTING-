@@ -73,7 +73,8 @@ function generateCityServiceSchema(
   serviceName: string,
   serviceSlug: string,
   citySlug: string,
-  countyName: string
+  countyName: string,
+  faq: { question: string; answer: string }[]
 ) {
   return {
     "@context": "https://schema.org",
@@ -106,51 +107,20 @@ function generateCityServiceSchema(
           { "@type": "ListItem", "position": 3, "name": `${cityName}, MA`, "item": `https://jhpaintingservices.com/massachusetts/${citySlug}/${serviceSlug}` }
         ]
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": `How do I get a free estimate for ${serviceName.toLowerCase()} in ${cityName}?`,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": `Getting a free ${serviceName.toLowerCase()} estimate in ${cityName} is easy! Call JH Painting at (508) 690-8886 or fill out our online form. We'll visit your ${cityName} property, assess the scope of work, and provide a detailed written quote - typically within 24-48 hours. Every estimate is free with no obligation.`
-            }
-          },
-          {
-            "@type": "Question",
-            "name": `Are you licensed for ${serviceName.toLowerCase()} in ${cityName}?`,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": `Yes! JH Painting Services is fully licensed and insured to provide ${serviceName.toLowerCase()} in ${cityName} and throughout Massachusetts. We carry comprehensive liability insurance and workers' compensation coverage for all employees.`
-            }
-          },
-          {
-            "@type": "Question",
-            "name": `Do you offer free estimates for ${serviceName.toLowerCase()} in ${cityName}?`,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": `Absolutely! We provide free, no-obligation estimates for all ${serviceName.toLowerCase()} projects in ${cityName}. Call (508) 690-8886 or fill out our online form to schedule your free consultation. We typically respond within 24 hours.`
-            }
-          },
-          {
-            "@type": "Question",
-            "name": `How long does ${serviceName.toLowerCase()} take in ${cityName}?`,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": `Project timelines vary based on scope. A single room typically takes 1-2 days. A full interior takes 4-7 days. Exterior painting for an average ${cityName} home takes 5-10 days depending on weather and prep work. We provide accurate timelines in our estimates.`
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What paint brands do you use?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We exclusively use premium paints from Sherwin-Williams and Benjamin Moore. These industry-leading brands offer superior coverage, durability, and color retention. For exteriors, we use paints specifically formulated to withstand Massachusetts' harsh winters and humid summers."
-            }
-          }
-        ]
-      }
+      // FAQPage must mirror the FAQ the visitor can read. It used to carry five
+      // generic questions that appeared nowhere on the page (Google's structured
+      // data guidelines treat that as a mismatch). Now built from the same list
+      // the page renders.
+      ...(faq.length
+        ? [{
+            "@type": "FAQPage",
+            "mainEntity": faq.map((f) => ({
+              "@type": "Question",
+              "name": f.question,
+              "acceptedAnswer": { "@type": "Answer", "text": f.answer },
+            })),
+          }]
+        : []),
     ]
   }
 }
@@ -342,7 +312,8 @@ export default async function CityServicePage({ params }: Props) {
     service.name,
     serviceSlug,
     citySlug,
-    city.county || 'Massachusetts'
+    city.county || 'Massachusetts',
+    uniqueServiceContent?.faq ?? []
   )
 
   // Real photos of this trade, this town's jobs first, each labelled with its own

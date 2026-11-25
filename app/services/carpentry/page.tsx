@@ -7,6 +7,7 @@ import { sliderPairs, galleryFor, type SliderPair } from '@/app/data/projects'
 import { Phone, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, MapPin, Hammer, Wrench, Home } from '@/app/components/Icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import ServiceTownIndex from '@/app/components/ServiceTownIndex'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
@@ -634,6 +635,7 @@ export default function CarpentryPage() {
       </main>
 
       <ReviewsSection />
+      <ServiceTownIndex service="carpentry" serviceName="Carpentry" />
       <Footer />
     </>
   )

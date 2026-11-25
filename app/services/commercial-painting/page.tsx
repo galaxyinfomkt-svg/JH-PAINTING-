@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { Phone, MapPin, CheckCircle2, Star, Clock, Shield, Award, Play, ChevronRight, Users, Heart, Sparkles, Building2, Briefcase, TrendingUp } from '@/app/components/Icons'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import ServiceTownIndex from '@/app/components/ServiceTownIndex'
 import ReviewsSection from '@/app/components/ReviewsSection'
 import { BUSINESS, VIDEOS, FORM_IDS, STATS } from '@/lib/constants'
 import LazyHeroForm from '@/app/components/LazyHeroForm'
@@ -512,6 +513,7 @@ export default function CommercialPaintingPage() {
 
       {/* Footer */}
       <ReviewsSection />
+      <ServiceTownIndex service="commercial-painting" serviceName="Commercial Painting" />
       <Footer />
     </>
   )
