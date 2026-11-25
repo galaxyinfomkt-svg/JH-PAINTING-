@@ -127,7 +127,7 @@ export const regions: Region[] = [
     citySlugs: [
       'worcester', 'shrewsbury', 'clinton', 'grafton', 'west-boylston',
       'millbury', 'auburn', 'sterling', 'boylston', 'holden', 'paxton',
-      'leicester', 'spencer', 'oxford', 'rutland', 'westminster', 'princeton', 'sunderland',
+      'leicester', 'spencer', 'oxford', 'rutland', 'westminster', 'princeton',
     ],
     painPoints: [
       {
@@ -171,7 +171,7 @@ export const regions: Region[] = [
       'lowell', 'billerica', 'pinehurst', 'chelmsford', 'tewksbury',
       'westford', 'groton', 'pepperell', 'east-pepperell', 'ayer', 'shirley',
       'townsend', 'dunstable', 'tyngsboro', 'littleton-common', 'carlisle',
-      'lunenburg', 'bedford', 'hamilton',
+      'lunenburg', 'bedford',
     ],
     painPoints: [
       {
@@ -214,7 +214,7 @@ export const regions: Region[] = [
     citySlugs: [
       'wellesley', 'needham', 'dover', 'medfield', 'millis', 'millis-clicquot',
       'medway', 'norfolk', 'franklin', 'bellingham', 'wrentham', 'foxborough',
-      'canton', 'sharon', 'walpole', 'westwood', 'norwood', 'dedham', 'new-bedford',
+      'canton', 'sharon', 'walpole', 'westwood', 'norwood', 'dedham',
     ],
     painPoints: [
       {

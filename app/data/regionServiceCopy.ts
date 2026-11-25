@@ -63,7 +63,7 @@ export const REGION_SERVICE_COPY: Copy = {
     },
     'norfolk-south': {
       headline: 'Commercial Painting Across Norfolk County and the I-95 Corridor',
-      intro: `Norfolk-south housing is mostly detached and about 69% owner-occupied, with home values ranging from the low $300,000s to well over $1.5 million depending on the town. Commercial work follows the business centres: Norwood, Dedham and Canton along Route 1 and I-95, Franklin and Foxborough further south, and the town centres of Needham and Wellesley, where storefronts and offices expect work done outside opening hours.`,
+      intro: `About 70% of Norfolk-south homes are detached and 78% owner-occupied, with median home values running from about $426,000 to over $1.5 million depending on the town. Commercial work follows the business centres: Norwood, Dedham and Canton along Route 1 and I-95, Franklin and Foxborough further south, and the town centres of Needham and Wellesley, where storefronts and offices expect work done outside opening hours.`,
       features: [
         'Retail and office repaints along Route 1 in Norwood and Dedham, outside opening hours',
         'Medical and professional offices in Needham, Wellesley and Westwood with low-odour products',
@@ -115,7 +115,7 @@ export const REGION_SERVICE_COPY: Copy = {
     },
     'worcester-area': {
       headline: 'Residential Painting for Worcester and Surrounding Towns',
-      intro: `The Worcester area mixes Worcester's triple-deckers and Victorians with the raised ranches and colonials of the surrounding towns: the 1970s were the busiest building decade in seven of the region's towns, the 1950s in five. Home values here are lower than in MetroWest (a median around $415,000 across the towns), which is why many owners repaint rather than renovate. Our Shrewsbury and West Boylston interior jobs are documented on our projects page.`,
+      intro: `The Worcester area mixes Worcester's triple-deckers and Victorians with the raised ranches and colonials of the surrounding towns: the 1970s were the busiest building decade in six of the region's towns, the 1950s in five. Home values here are lower than in MetroWest (a median around $415,000 across the towns), which is why many owners repaint rather than renovate. Our Shrewsbury and West Boylston interior jobs are documented on our projects page.`,
       features: [
         'Triple-decker owners: one unit, the porches or the whole building',
         'Raised ranches and 1970s colonials with T1-11 siding and stained trim',
@@ -125,7 +125,7 @@ export const REGION_SERVICE_COPY: Copy = {
     },
     'north-middlesex': {
       headline: 'Residential Painting for Chelmsford, Westford, Lowell and North Middlesex',
-      intro: `The 1980s were the busiest building decade in six North Middlesex towns, so a lot of homes here are colonials and townhouse condos with cedar or early vinyl siding and finger-jointed pine trim. Lowell is the exception: older two- and three-families and mill-era housing. About 59% of homes across the region are detached and 70% owner-occupied. Our Groton interior job and Chelmsford job are documented on our projects page.`,
+      intro: `The 1980s were the busiest building decade in six North Middlesex towns, so a lot of homes here are colonials and townhouse condos with cedar or early vinyl siding and finger-jointed pine trim. Lowell is the exception: older two- and three-families and mill-era housing. About 58% of homes across the region are detached and 70% owner-occupied. Our Groton interior job and Chelmsford job are documented on our projects page.`,
       features: [
         '1980s colonials: finger-jointed trim cut back and replaced at the miters before paint',
         'Townhouse condos with interior-only scopes and association rules for the exterior',
@@ -135,12 +135,12 @@ export const REGION_SERVICE_COPY: Copy = {
     },
     'norfolk-south': {
       headline: 'Residential Painting for Wellesley, Needham, Franklin and Norfolk County',
-      intro: `Norfolk-south covers a wide range: median home values run from the low $300,000s to over $1.5 million across its towns. Post-war capes and ranches are the most common (the 1950s were the busiest decade in eight towns), alongside large newer colonials in Franklin and Medway and high-end homes in Wellesley, Dover and Needham where the finish has to match the house. Our Wrentham built-in library shelving job is documented on our projects page.`,
+      intro: `Norfolk-south covers a wide range: median home values run from about $426,000 to over $1.5 million across its towns. Post-war capes and ranches are the most common (the 1950s were the busiest decade in seven towns), alongside large newer colonials in Franklin and Medway and high-end homes in Wellesley, Dover and Needham where the finish has to match the house. Our Wrentham built-in library shelving job is documented on our projects page.`,
       features: [
         'Sprayed trim and doors for a factory-level finish in Wellesley, Dover and Needham homes',
         'Post-war capes and ranches in Norwood, Dedham and Needham, inside and out',
         'Newer colonials in Franklin, Medway and Bellingham: open plans and two-story foyers',
-        'Lighter snow than the rest of our area (about 30 to 40 inches a year), so exterior prep focuses on sun and moisture',
+        'About 38 to 40 inches of snow a year, less than central Massachusetts, so exterior prep focuses as much on sun and moisture as on frost',
       ],
     },
     'north-central': {
@@ -187,7 +187,7 @@ export const REGION_SERVICE_COPY: Copy = {
     },
     'worcester-area': {
       headline: 'Carpentry and Rot Repair for Worcester-Area Homes',
-      intro: `The Worcester area gets more weather than the towns east of it: about 42 to 54 inches of snow and up to about 103 freeze-thaw days a year. That cycle opens joints and drives water into end grain, so rot shows up at sills, porch floors and the bottom of T1-11 siding on the many 1970s raised ranches here. Worcester's triple-deckers add porch stacks that also have to pass inspection.`,
+      intro: `The Worcester area gets more weather than the towns east of it: about 42 to 54 inches of snow and up to about 95 freeze-thaw days a year. That cycle opens joints and drives water into end grain, so rot shows up at sills, porch floors and the bottom of T1-11 siding on the many 1970s raised ranches here. Worcester's triple-deckers add porch stacks that also have to pass inspection.`,
       features: [
         'Triple-decker porch decking, railings and stairs repaired to pass inspection',
         'T1-11 plywood replaced where the bottom edge has delaminated',
@@ -207,7 +207,7 @@ export const REGION_SERVICE_COPY: Copy = {
     },
     'norfolk-south': {
       headline: 'Carpentry and Trim Repair Across Norfolk County',
-      intro: `Norfolk-south has the mildest weather in our area: about 30 to 40 inches of snow a year, and as few as 65 freeze-thaw days in some towns. Rot here is driven more by trapped moisture than by frost, so it shows up behind gutters, at window sills and on shaded decks. The post-war capes and ranches that dominate eight of its towns need sill and fascia work; newer colonials need trim and deck repairs.`,
+      intro: `Norfolk-south gets less snow than central Massachusetts, about 38 to 40 inches a year, with 87 to 91 freeze-thaw days. Rot here is driven as much by trapped moisture as by frost, so it shows up behind gutters, at window sills and on shaded decks. The post-war capes and ranches that dominate seven of its towns need sill and fascia work; newer colonials need trim and deck repairs.`,
       features: [
         'Window sills, fascia and soffit on post-war capes and ranches',
         'Exterior trim and doors on high-end homes matched to the original profiles',
@@ -279,7 +279,7 @@ export const REGION_SERVICE_COPY: Copy = {
     },
     'norfolk-south': {
       headline: 'Power Washing Across Norfolk County',
-      intro: `Norfolk-south is wet (about 128 to 133 rain or snow days a year) but mild, with the least snow in our area. That favours mildew over frost damage, especially on shaded siding and decks under trees. High-end homes here often have cedar, fiber cement or composite decking, which is washed within the manufacturer's rules so warranties stay valid.`,
+      intro: `Norfolk-south is wet (about 128 to 133 rain or snow days a year) and gets less snow than central Massachusetts. That favours mildew over frost damage, especially on shaded siding and decks under trees. High-end homes here often have cedar, fiber cement or composite decking, which is washed within the manufacturer's rules so warranties stay valid.`,
       features: [
         'Shaded siding and decks cleared of mildew and algae',
         'Fiber cement and composite decking washed within manufacturer limits',
