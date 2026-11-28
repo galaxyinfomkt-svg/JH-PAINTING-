@@ -5,6 +5,7 @@ import FloatingButtons from './components/FloatingButtons'
 import MobileStickyCTA from './components/MobileStickyCTA'
 import DeferredScripts from './components/DeferredScripts'
 import { Analytics } from '@vercel/analytics/next'
+import Script from 'next/script'
 import { CITY_COUNT } from './data/cities'
 
 // Optimize font loading - 'optional' prevents font from being render-blocking
@@ -598,6 +599,20 @@ export default function RootLayout({
           82 KiB transfer + parse time.
         */}
         <DeferredScripts />
+        {/*
+          GHL External Tracking (Rastreamento externo do HighLevel).
+
+          Fora do DeferredScripts de proposito: la ele so carregava apos a
+          primeira interacao (ou 20s), entao visitas que saem sem rolar nao
+          eram contadas e o "Solucionar problemas" do GHL nao achava o codigo.
+          lazyOnload injeta depois do evento load, no idle do navegador - nao
+          bloqueia render nem LCP, e nao depende de interacao.
+        */}
+        <Script
+          src="https://link.msgsndr.com/js/external-tracking.js"
+          data-tracking-id="tk_17bc6e6f297d4ffc8b66e30609380978"
+          strategy="lazyOnload"
+        />
         {/*
           Vercel Web Analytics.
 

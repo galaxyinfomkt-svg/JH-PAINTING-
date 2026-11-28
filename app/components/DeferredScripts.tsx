@@ -12,15 +12,12 @@ import { useEffect, useRef } from 'react'
  *
  * Scripts handled here (each previously in <head> or as a sync iframe):
  *   - Google Tag Manager - inlined IIFE
- *   - GHL external-tracking - 82 KiB (was loading from BOTH beeprohub and
- *     msgsndr; one was a duplicate - removed)
  *   - LeadConnector chat widget loader - pulls /chat-widget/* cascade
  *
  * The reviews widget resize script lives in ReviewsWidget.tsx instead - it has
  * to load before its iframe mounts, which can't be guaranteed from here.
  */
 
-const TRACKING_ID = 'tk_17bc6e6f297d4ffc8b66e30609380978'
 const CHAT_WIDGET_ID = '69626d9e5c8c5ba64720801a'
 
 function injectScript(src: string, attrs?: Record<string, string>): void {
@@ -55,12 +52,9 @@ export default function DeferredScripts() {
         "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KB89D6QQ');"
       )
 
-      // 2) GHL external-tracking - deferred 200ms so GTM bootstraps first
-      setTimeout(() => {
-        injectScript('https://link.msgsndr.com/js/external-tracking.js', {
-          'data-tracking-id': TRACKING_ID,
-        })
-      }, 200)
+      // 2) GHL external-tracking NAO entra mais aqui: fica em app/layout.tsx
+      //    com next/script lazyOnload, para contar quem sai sem interagir e
+      //    para o verificador do GHL detectar o codigo.
 
       // 3) LeadConnector chat widget - deferred 500ms; widget loader pulls
       //    a cascade of /chat-widget/* assets that we don't want during
